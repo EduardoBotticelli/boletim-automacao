@@ -23,7 +23,7 @@ LOG_PATH = os.path.join(OUTPUT_DIR, "log_execucao.json")
 
 FIRECRAWL_API_KEY = os.environ.get("FIRECRAWL_API_KEY")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-1.5-flash")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 
 if not FIRECRAWL_API_KEY:
     print("❌ ERRO: FIRECRAWL_API_KEY não encontrada nos secrets.")
