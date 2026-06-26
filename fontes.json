@@ -1,0 +1,27 @@
+[
+  {
+    "fonte": "Planalto | Resenha Diária",
+    "categoria": "Legislação Federal",
+    "url": "http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria"
+  },
+  {
+    "fonte": "Destaques do D.O.U.",
+    "categoria": "Legislação Federal",
+    "url": "https://www.in.gov.br/servicos/diario-oficial-da-uniao/destaques-do-diario-oficial-da-uniao"
+  },
+  {
+    "fonte": "Receita Federal | Normas",
+    "categoria": "Tributário",
+    "url": "http://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action"
+  },
+  {
+    "fonte": "Ministério da Fazenda | Notícias",
+    "categoria": "Tributário/Econômico",
+    "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias"
+  },
+  {
+    "fonte": "ANPD | Notícias",
+    "categoria": "Proteção de Dados",
+    "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias"
+  }
+]
