@@ -184,7 +184,15 @@ model = genai.GenerativeModel(
     }
 )
 
-prompt_final = f"""{prompt_base}
+prompt_final = (
+    prompt_base
+    + "\n\n## Contexto desta execucao\n\n"
+    + "data_execucao: " + hoje.isoformat() + "\n"
+    + "janela_inicio: " + janela_inicio + "\n"
+    + "janela_fim: " + janela_fim + "\n\n"
+    + "## Dossier das fontes\n\n"
+    + json.dumps(dossier, ensure_ascii=False, indent=2)
+)
 
 ## Contexto desta execução
 
