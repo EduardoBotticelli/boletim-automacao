@@ -1,15 +1,25 @@
 {
   "data_execucao": "2026-06-27",
-  "executado_em": "2026-06-27T20:06:08.272640-03:00",
+  "executado_em": "2026-06-27T20:27:47.516389-03:00",
   "janela": {
     "inicio": "2026-06-26T00:00",
-    "fim": "2026-06-27T20:06"
+    "fim": "2026-06-27T20:27"
   },
   "fontes_processadas": [
     {
       "fonte": "Planalto | Resenha Diaria",
       "status": "ok",
       "tamanho_chars": 10000
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "status": "ok",
+      "tamanho_chars": 9406
+    },
+    {
+      "fonte": "CCEE | Noticias",
+      "status": "ok",
+      "tamanho_chars": 1769
     },
     {
       "fonte": "Destaques do D.O.U.",
@@ -30,11 +40,6 @@
       "fonte": "ANPD | Notícias",
       "status": "ok",
       "tamanho_chars": 10000
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "status": "ok",
-      "tamanho_chars": 7762
     },
     {
       "fonte": "CVM | Notícias",
@@ -70,11 +75,6 @@
       "fonte": "ANEEL | Últimas Notícias",
       "status": "ok",
       "tamanho_chars": 10000
-    },
-    {
-      "fonte": "CCEE | Notícias",
-      "status": "ok",
-      "tamanho_chars": 5009
     },
     {
       "fonte": "Secretaria de Prêmios e Apostas | Notícias",
@@ -123,9 +123,9 @@
     }
   ],
   "resultado": {
-    "itens_aceitos": 33,
+    "itens_aceitos": 64,
     "itens_descartados_pos_validacao": 0,
-    "fontes_sem_resultado": 6,
+    "fontes_sem_resultado": 1,
     "fontes_sem_publicacao_hoje": 5,
     "fontes_com_erro_tecnico": 0
   }
