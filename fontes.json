@@ -20,11 +20,6 @@
     "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias"
   },
   {
-    "fonte": "Banco Central | Normas",
-    "categoria": "Financeiro e Mercado de Capitais",
-    "url": "https://www.bcb.gov.br/estabilidadefinanceira/buscanormas"
-  },
-  {
     "fonte": "CVM | Notícias",
     "categoria": "Financeiro e Mercado de Capitais",
     "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias"
@@ -58,11 +53,6 @@
     "fonte": "ANEEL | Últimas Notícias",
     "categoria": "Energia e Recursos",
     "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias"
-  },
-  {
-    "fonte": "CCEE | Notícias",
-    "categoria": "Energia e Recursos",
-    "url": "https://www.ccee.org.br/busca-ccee?q=&dtIni=&dtFim=&structure=ccee-noticias&ordenacao=Mais%20recentes"
   },
   {
     "fonte": "Secretaria de Prêmios e Apostas | Notícias",
