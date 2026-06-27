@@ -1,30 +1,40 @@
 {
-  "data_execucao": "2026-06-26",
+  "data_execucao": "2026-06-27",
+  "executado_em": "2026-06-27T18:44:40.067409-03:00",
+  "janela": {
+    "inicio": "2026-06-26T00:00",
+    "fim": "2026-06-27T18:44"
+  },
   "fontes_processadas": [
     {
       "fonte": "Planalto | Resenha Diária",
       "status": "ok",
-      "tamanho_chars": 8000
+      "tamanho_chars": 8536
     },
     {
       "fonte": "Destaques do D.O.U.",
       "status": "ok",
-      "tamanho_chars": 8000
+      "tamanho_chars": 247
     },
     {
       "fonte": "Receita Federal | Normas",
       "status": "ok",
-      "tamanho_chars": 8000
+      "tamanho_chars": 10000
     },
     {
       "fonte": "Ministério da Fazenda | Notícias",
       "status": "ok",
-      "tamanho_chars": 8000
+      "tamanho_chars": 10000
     },
     {
       "fonte": "ANPD | Notícias",
       "status": "ok",
-      "tamanho_chars": 8000
+      "tamanho_chars": 10000
     }
-  ]
+  ],
+  "resultado": {
+    "itens_aceitos": 11,
+    "itens_descartados_pos_validacao": 0,
+    "fontes_sem_resultado": 3
+  }
 }
