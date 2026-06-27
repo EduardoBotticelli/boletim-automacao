@@ -1,20 +1,20 @@
 {
   "data_execucao": "2026-06-27",
-  "executado_em": "2026-06-27T18:57:14.906327-03:00",
+  "executado_em": "2026-06-27T20:06:08.272640-03:00",
   "janela": {
     "inicio": "2026-06-26T00:00",
-    "fim": "2026-06-27T18:57"
+    "fim": "2026-06-27T20:06"
   },
   "fontes_processadas": [
     {
-      "fonte": "Planalto | Resenha Diária",
+      "fonte": "Planalto | Resenha Diaria",
       "status": "ok",
-      "tamanho_chars": 8536
+      "tamanho_chars": 10000
     },
     {
       "fonte": "Destaques do D.O.U.",
       "status": "ok",
-      "tamanho_chars": 247
+      "tamanho_chars": 4852
     },
     {
       "fonte": "Receita Federal | Normas",
@@ -123,8 +123,10 @@
     }
   ],
   "resultado": {
-    "itens_aceitos": 40,
+    "itens_aceitos": 33,
     "itens_descartados_pos_validacao": 0,
-    "fontes_sem_resultado": 7
+    "fontes_sem_resultado": 6,
+    "fontes_sem_publicacao_hoje": 5,
+    "fontes_com_erro_tecnico": 0
   }
 }
