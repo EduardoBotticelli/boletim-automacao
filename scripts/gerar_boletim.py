@@ -51,18 +51,34 @@ print("Boletim - execucao em " + agora.strftime("%Y-%m-%d %H:%M") + " BRT")
 print("Janela: " + janela_inicio + " ate " + janela_fim)
 print("Dia da semana: " + ["seg", "ter", "qua", "qui", "sex", "sab", "dom"][dia_semana])
 
-# Carregar fontes + Planalto dinamico
+# Carregar fontes + URLs dinamicas com janela temporal
 with open(FONTES_PATH, "r", encoding="utf-8") as f:
     fontes = json.load(f)
 
+# Formato DD/MM/AAAA URL-encoded (usado por BCB e CCEE)
+data_ini_url = janela_inicio_dt.strftime("%d/%m/%Y").replace("/", "%2F")
+data_fim_url = agora.strftime("%d/%m/%Y").replace("/", "%2F")
+
+# Planalto - URL do mes corrente
 meses_planalto = ["janeiro", "fevereiro", "marco", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
 mes_atual = meses_planalto[hoje.month - 1]
 url_planalto = "http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/" + mes_atual + "-resenha-diaria"
 
+# BCB - busca de normas com filtro de data
+url_bcb = "https://www.bcb.gov.br/estabilidadefinanceira/buscanormas?dataInicioBusca=" + data_ini_url + "&dataFimBusca=" + data_fim_url + "&tipoDocumento=Todos"
+
+# CCEE - busca de noticias com filtro de data
+url_ccee = "https://www.ccee.org.br/busca-ccee?q=&dtIni=" + data_ini_url + "&dtFim=" + data_fim_url + "&structure=ccee-noticias&ordenacao=Mais%20recentes"
+
+# Inserir fontes dinamicas no inicio da lista
 fontes.insert(0, {"fonte": "Planalto | Resenha Diaria", "categoria": "Legislacao Federal", "url": url_planalto})
+fontes.insert(1, {"fonte": "Banco Central | Normas", "categoria": "Financeiro e Mercado de Capitais", "url": url_bcb})
+fontes.insert(2, {"fonte": "CCEE | Noticias", "categoria": "Energia e Recursos", "url": url_ccee})
 
 print(str(len(fontes)) + " fontes a processar")
 print("Planalto dinamico: " + url_planalto)
+print("BCB dinamico: " + url_bcb)
+print("CCEE dinamico: " + url_ccee)
 print("")
 
 # Carregar prompt
