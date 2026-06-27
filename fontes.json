@@ -16,12 +16,102 @@
   },
   {
     "fonte": "Ministério da Fazenda | Notícias",
-    "categoria": "Tributário/Econômico",
+    "categoria": "Tributário",
     "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias"
   },
   {
     "fonte": "ANPD | Notícias",
-    "categoria": "Proteção de Dados",
+    "categoria": "Regulatório e Setorial",
     "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias"
+  },
+  {
+    "fonte": "Banco Central | Normas",
+    "categoria": "Financeiro e Mercado de Capitais",
+    "url": "https://www.bcb.gov.br/estabilidadefinanceira/buscanormas"
+  },
+  {
+    "fonte": "CVM | Notícias",
+    "categoria": "Financeiro e Mercado de Capitais",
+    "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias"
+  },
+  {
+    "fonte": "B3 | Ofícios e Comunicados",
+    "categoria": "Financeiro e Mercado de Capitais",
+    "url": "http://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/"
+  },
+  {
+    "fonte": "CGU | Notícias",
+    "categoria": "Regulatório e Setorial",
+    "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias"
+  },
+  {
+    "fonte": "ANP | Notícias",
+    "categoria": "Energia e Recursos",
+    "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados"
+  },
+  {
+    "fonte": "MME | Notícias",
+    "categoria": "Energia e Recursos",
+    "url": "https://www.gov.br/mme/pt-br/assuntos/noticias"
+  },
+  {
+    "fonte": "ONS | Notícias",
+    "categoria": "Energia e Recursos",
+    "url": "https://www.ons.org.br/paginas/imprensa/noticias"
+  },
+  {
+    "fonte": "ANEEL | Últimas Notícias",
+    "categoria": "Energia e Recursos",
+    "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias"
+  },
+  {
+    "fonte": "CCEE | Notícias",
+    "categoria": "Energia e Recursos",
+    "url": "https://www.ccee.org.br/busca-ccee?q=&dtIni=&dtFim=&structure=ccee-noticias&ordenacao=Mais%20recentes"
+  },
+  {
+    "fonte": "Secretaria de Prêmios e Apostas | Notícias",
+    "categoria": "Regulatório e Setorial",
+    "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias"
+  },
+  {
+    "fonte": "Ministério do Meio Ambiente | Notícias",
+    "categoria": "Regulatório e Setorial",
+    "url": "https://www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias"
+  },
+  {
+    "fonte": "Ministério da Agricultura | Notícias",
+    "categoria": "Regulatório e Setorial",
+    "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias"
+  },
+  {
+    "fonte": "ANVISA | Notícias",
+    "categoria": "Regulatório e Setorial",
+    "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa"
+  },
+  {
+    "fonte": "INPI | Notícias",
+    "categoria": "Regulatório e Setorial",
+    "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/"
+  },
+  {
+    "fonte": "SENACON | Notícias",
+    "categoria": "Regulatório e Setorial",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias"
+  },
+  {
+    "fonte": "COAF | Notícias",
+    "categoria": "Tributário",
+    "url": "https://www.gov.br/coaf/pt-br/assuntos/noticias/ultimas-noticias"
+  },
+  {
+    "fonte": "ANM | Notícias",
+    "categoria": "Energia e Recursos",
+    "url": "https://www.gov.br/anm/pt-br/assuntos/noticias"
+  },
+  {
+    "fonte": "EPE | Notícias",
+    "categoria": "Energia e Recursos",
+    "url": "https://www.epe.gov.br/pt/imprensa/noticias"
   }
 ]
