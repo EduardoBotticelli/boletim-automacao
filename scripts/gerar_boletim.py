@@ -2,12 +2,6 @@
 Boletim Jurídico/Regulatório - Geração automática
 Arquitetura: Firecrawl (scrape) -> Gemini (curadoria) -> JSON
 
-Mudanças nesta versão:
-- onlyMainContent=True no Firecrawl (remove boilerplate)
-- Janela temporal dinâmica (cobre fim de semana às segundas)
-- Validação pós-Gemini contra a janela
-"""
-
 import os
 import json
 import datetime
@@ -31,6 +25,8 @@ FIRECRAWL_API_KEY = os.environ.get("FIRECRAWL_API_KEY")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 
+MIN_CONTEUDO_CHARS = 500  # abaixo disso, considera erro técnico (página vazia/quebrada)
+
 if not FIRECRAWL_API_KEY:
     print("❌ ERRO: FIRECRAWL_API_KEY não encontrada.")
     sys.exit(1)
@@ -41,7 +37,7 @@ if not GEMINI_API_KEY:
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # ---------------------------------------------------------------------------
-# 2) Calcular janela temporal (fuso BRT)
+# 2) Janela temporal (fuso BRT)
 # ---------------------------------------------------------------------------
 
 BRT = ZoneInfo("America/Sao_Paulo")
@@ -49,11 +45,7 @@ agora = datetime.datetime.now(BRT)
 hoje = agora.date()
 dia_semana = hoje.weekday()  # 0=segunda, 6=domingo
 
-# Lógica da janela:
-# - Segunda-feira (dia_semana==0): janela = sexta 00:00 até agora (cobre fds)
-# - Outros dias úteis: janela = ontem 00:00 até agora (24h+ pra cobrir publicações tardias)
-if dia_semana == 0:  # segunda
-    janela_inicio = (hoje - datetime.timedelta(days=3)).replace().strftime("%Y-%m-%d") + "T00:00"
+if dia_semana == 0:  # segunda: pega sex-sáb-dom-seg
     janela_inicio_dt = datetime.datetime.combine(
         hoje - datetime.timedelta(days=3),
         datetime.time(0, 0),
@@ -65,28 +57,47 @@ else:
         datetime.time(0, 0),
         tzinfo=BRT
     )
-    janela_inicio = janela_inicio_dt.strftime("%Y-%m-%dT%H:%M")
 
+janela_inicio = janela_inicio_dt.strftime("%Y-%m-%dT%H:%M")
 janela_fim = agora.strftime("%Y-%m-%dT%H:%M")
 
 print(f"🚀 Boletim - execução em {agora.strftime('%Y-%m-%d %H:%M')} BRT")
-print(f"📅 Janela temporal: {janela_inicio} até {janela_fim}")
-print(f"   (dia da semana: {['segunda','terça','quarta','quinta','sexta','sábado','domingo'][dia_semana]})")
+print(f"📅 Janela: {janela_inicio} até {janela_fim}")
+print(f"   (dia: {['seg','ter','qua','qui','sex','sáb','dom'][dia_semana]})")
 
 # ---------------------------------------------------------------------------
-# 3) Carregar fontes e prompt
+# 3) Carregar fontes + adicionar Planalto dinamicamente
 # ---------------------------------------------------------------------------
 
 with open(FONTES_PATH, "r", encoding="utf-8") as f:
     fontes = json.load(f)
 
+# Adiciona Planalto com URL do mês corrente (sem acento nos meses, como o Planalto usa)
+meses_planalto = [
+    "janeiro", "fevereiro", "marco", "abril", "maio", "junho",
+    "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+]
+mes_atual = meses_planalto[hoje.month - 1]
+url_planalto = f"http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/{mes_atual}-resenha-diaria"
+
+planalto_fonte = {
+    "fonte": "Planalto | Resenha Diária",
+    "categoria": "Legislação Federal",
+    "url": url_planalto
+}
+fontes.insert(0, planalto_fonte)  # adiciona no início
+
+print(f"📚 {len(fontes)} fontes a processar (Planalto dinâmico: {url_planalto})\n")
+
+# ---------------------------------------------------------------------------
+# 4) Carregar prompt
+# ---------------------------------------------------------------------------
+
 with open(PROMPT_PATH, "r", encoding="utf-8") as f:
     prompt_base = f.read()
 
-print(f"📚 {len(fontes)} fontes a processar\n")
-
 # ---------------------------------------------------------------------------
-# 4) Scraping com Firecrawl (otimizado)
+# 5) Scraping com Firecrawl
 # ---------------------------------------------------------------------------
 
 firecrawl = Firecrawl(api_key=FIRECRAWL_API_KEY)
@@ -105,26 +116,42 @@ for i, fonte in enumerate(fontes, 1):
     print(f"  [{i}/{len(fontes)}] {nome}")
 
     try:
-        # onlyMainContent=True remove menu, rodapé, ads
         result = firecrawl.scrape(
             url,
             formats=["markdown"],
             only_main_content=True
         )
-        conteudo = (result.markdown or "")[:10000]  # subiu para 10k já que tirou boilerplate
+        conteudo = (result.markdown or "")[:10000]
 
-        dossier.append({
-            "fonte": nome,
-            "categoria": categoria,
-            "url": url,
-            "conteudo": conteudo
-        })
-        log["fontes_processadas"].append({
-            "fonte": nome,
-            "status": "ok",
-            "tamanho_chars": len(conteudo)
-        })
-        print(f"      ✅ {len(conteudo)} caracteres (main content)")
+        # Verifica se o conteúdo é suficiente
+        if len(conteudo) < MIN_CONTEUDO_CHARS:
+            print(f"      ⚠️ Conteúdo curto ({len(conteudo)} chars) - marcando como erro técnico")
+            dossier.append({
+                "fonte": nome,
+                "categoria": categoria,
+                "url": url,
+                "conteudo": "",
+                "erro_tecnico": f"Conteúdo muito curto ({len(conteudo)} chars) - página possivelmente vazia, fora do ar ou bloqueando scraping"
+            })
+            log["fontes_processadas"].append({
+                "fonte": nome,
+                "status": "erro_tecnico",
+                "tamanho_chars": len(conteudo),
+                "detalhe": "conteúdo abaixo do mínimo"
+            })
+        else:
+            dossier.append({
+                "fonte": nome,
+                "categoria": categoria,
+                "url": url,
+                "conteudo": conteudo
+            })
+            log["fontes_processadas"].append({
+                "fonte": nome,
+                "status": "ok",
+                "tamanho_chars": len(conteudo)
+            })
+            print(f"      ✅ {len(conteudo)} chars")
 
     except Exception as e:
         erro_msg = str(e)[:200]
@@ -134,7 +161,7 @@ for i, fonte in enumerate(fontes, 1):
             "categoria": categoria,
             "url": url,
             "conteudo": "",
-            "erro": erro_msg
+            "erro_tecnico": erro_msg
         })
         log["fontes_processadas"].append({
             "fonte": nome,
@@ -143,7 +170,7 @@ for i, fonte in enumerate(fontes, 1):
         })
 
 # ---------------------------------------------------------------------------
-# 5) Curadoria com Gemini
+# 6) Curadoria com Gemini
 # ---------------------------------------------------------------------------
 
 print("\n🤖 Enviando dossier para o Gemini...")
@@ -178,7 +205,7 @@ except Exception as e:
     sys.exit(1)
 
 # ---------------------------------------------------------------------------
-# 6) Parse e validação
+# 7) Parse e validação
 # ---------------------------------------------------------------------------
 
 try:
@@ -191,15 +218,40 @@ except json.JSONDecodeError:
         "erro": "JSON inválido retornado pelo Gemini",
         "resposta_bruta": texto,
         "itens": [],
-        "fontes_sem_resultado": []
+        "fontes_sem_resultado": [],
+        "fontes_sem_publicacao_hoje": [],
+        "fontes_com_erro_tecnico": []
     }
 
-# Garante campos obrigatórios
 boletim_json["data_execucao"] = hoje.isoformat()
 boletim_json["janela_aplicada"] = {"inicio": janela_inicio, "fim": janela_fim}
 
+# Garante existência das 3 categorias de "fontes sem item"
+for chave in ["fontes_sem_resultado", "fontes_sem_publicacao_hoje", "fontes_com_erro_tecnico"]:
+    if chave not in boletim_json:
+        boletim_json[chave] = []
+
+# Reforço pós-Gemini: fontes com erro_tecnico no dossier vão obrigatoriamente para fontes_com_erro_tecnico
+fontes_com_erro_no_dossier = [
+    {"fonte": d["fonte"], "motivo": d.get("erro_tecnico", "erro técnico")}
+    for d in dossier if "erro_tecnico" in d
+]
+# Remove dessas listas qualquer fonte que já esteja em fontes_com_erro_tecnico (evita duplicidade)
+nomes_com_erro = {f["fonte"] for f in fontes_com_erro_no_dossier}
+boletim_json["fontes_sem_resultado"] = [
+    f for f in boletim_json["fontes_sem_resultado"] if f.get("fonte") not in nomes_com_erro
+]
+boletim_json["fontes_sem_publicacao_hoje"] = [
+    f for f in boletim_json["fontes_sem_publicacao_hoje"] if f.get("fonte") not in nomes_com_erro
+]
+# Mescla erros técnicos
+nomes_ja_em_erro = {f["fonte"] for f in boletim_json["fontes_com_erro_tecnico"]}
+for f in fontes_com_erro_no_dossier:
+    if f["fonte"] not in nomes_ja_em_erro:
+        boletim_json["fontes_com_erro_tecnico"].append(f)
+
 # ---------------------------------------------------------------------------
-# 7) Validação pós-Gemini (rede de segurança contra datas fora da janela)
+# 8) Validação temporal pós-Gemini
 # ---------------------------------------------------------------------------
 
 itens_originais = boletim_json.get("itens", [])
@@ -209,12 +261,10 @@ itens_descartados = []
 for item in itens_originais:
     data_str = item.get("data_publicacao", "").strip()
 
-    # Item sem data: incluir (decisão do usuário)
     if not data_str:
         itens_validados.append(item)
         continue
 
-    # Tenta parsear a data
     try:
         if "T" in data_str:
             dt = datetime.datetime.fromisoformat(data_str).replace(tzinfo=BRT)
@@ -225,34 +275,31 @@ for item in itens_originais:
                 tzinfo=BRT
             )
 
-        # Verifica se está na janela (com tolerância: aceita o dia todo)
         data_item_dia = dt.date()
-        janela_inicio_dia = janela_inicio_dt.date()
-        janela_fim_dia = agora.date()
-
-        if janela_inicio_dia <= data_item_dia <= janela_fim_dia:
+        if janela_inicio_dt.date() <= data_item_dia <= agora.date():
             itens_validados.append(item)
         else:
             itens_descartados.append({
                 "titulo": item.get("titulo", "")[:80],
                 "data": data_str,
-                "motivo": f"fora da janela ({janela_inicio_dia} a {janela_fim_dia})"
+                "motivo": f"fora da janela ({janela_inicio_dt.date()} a {agora.date()})"
             })
     except (ValueError, TypeError):
-        # Data malformada: incluir mesmo assim
         item["data_publicacao"] = ""
         itens_validados.append(item)
 
 boletim_json["itens"] = itens_validados
 
 # ---------------------------------------------------------------------------
-# 8) Salvar arquivos
+# 9) Salvar
 # ---------------------------------------------------------------------------
 
 log["resultado"] = {
     "itens_aceitos": len(itens_validados),
     "itens_descartados_pos_validacao": len(itens_descartados),
-    "fontes_sem_resultado": len(boletim_json.get("fontes_sem_resultado", []))
+    "fontes_sem_resultado": len(boletim_json.get("fontes_sem_resultado", [])),
+    "fontes_sem_publicacao_hoje": len(boletim_json.get("fontes_sem_publicacao_hoje", [])),
+    "fontes_com_erro_tecnico": len(boletim_json.get("fontes_com_erro_tecnico", []))
 }
 if itens_descartados:
     log["itens_descartados"] = itens_descartados
@@ -266,5 +313,7 @@ with open(LOG_PATH, "w", encoding="utf-8") as f:
 print(f"\n📄 Boletim salvo: {OUTPUT_PATH}")
 print(f"   ✅ {len(itens_validados)} itens aceitos")
 print(f"   🗑️  {len(itens_descartados)} itens descartados (fora da janela)")
-print(f"   ⚠️  {len(boletim_json.get('fontes_sem_resultado', []))} fontes sem resultado")
-print("✅ Concluído com sucesso")
+print(f"   📭 {log['resultado']['fontes_sem_publicacao_hoje']} fontes sem publicação hoje")
+print(f"   ⚠️  {log['resultado']['fontes_sem_resultado']} fontes sem resultado (outro motivo)")
+print(f"   🔴 {log['resultado']['fontes_com_erro_tecnico']} fontes com erro técnico")
+print("✅ Concluído")
