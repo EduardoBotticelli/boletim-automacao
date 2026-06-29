@@ -33,6 +33,9 @@ jobs:
           GEMINI_MODEL: gemini-2.5-flash
         run: python scripts/gerar_boletim.py
 
+      - name: Gerar HTML do boletim
+        run: python scripts/gerar_html.py
+
       - name: Commit do resultado
         run: |
           git config user.name "github-actions[bot]"
