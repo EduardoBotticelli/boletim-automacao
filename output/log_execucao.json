@@ -1,9 +1,9 @@
 {
   "data_execucao": "2026-06-29",
-  "executado_em": "2026-06-29T11:48:21.843543-03:00",
+  "executado_em": "2026-06-29T17:11:42.335445-03:00",
   "janela": {
     "inicio": "2026-06-26T00:00",
-    "fim": "2026-06-29T11:48"
+    "fim": "2026-06-29T17:11"
   },
   "fontes_processadas": [
     {
@@ -79,7 +79,7 @@
     {
       "fonte": "Secretaria de Prêmios e Apostas | Notícias",
       "status": "ok",
-      "tamanho_chars": 10000
+      "tamanho_chars": 8726
     },
     {
       "fonte": "Ministério do Meio Ambiente | Notícias",
@@ -123,7 +123,7 @@
     }
   ],
   "resultado": {
-    "itens_aceitos": 89,
+    "itens_aceitos": 85,
     "itens_descartados_pos_validacao": 0,
     "fontes_sem_resultado": 3,
     "fontes_sem_publicacao_hoje": 1,
