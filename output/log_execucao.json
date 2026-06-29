@@ -1,9 +1,9 @@
 {
-  "data_execucao": "2026-06-27",
-  "executado_em": "2026-06-27T20:27:47.516389-03:00",
+  "data_execucao": "2026-06-29",
+  "executado_em": "2026-06-29T11:48:21.843543-03:00",
   "janela": {
     "inicio": "2026-06-26T00:00",
-    "fim": "2026-06-27T20:27"
+    "fim": "2026-06-29T11:48"
   },
   "fontes_processadas": [
     {
@@ -14,17 +14,17 @@
     {
       "fonte": "Banco Central | Normas",
       "status": "ok",
-      "tamanho_chars": 9406
+      "tamanho_chars": 10000
     },
     {
       "fonte": "CCEE | Noticias",
       "status": "ok",
-      "tamanho_chars": 1769
+      "tamanho_chars": 2124
     },
     {
       "fonte": "Destaques do D.O.U.",
       "status": "ok",
-      "tamanho_chars": 4852
+      "tamanho_chars": 4850
     },
     {
       "fonte": "Receita Federal | Normas",
@@ -119,14 +119,14 @@
     {
       "fonte": "EPE | Notícias",
       "status": "ok",
-      "tamanho_chars": 9489
+      "tamanho_chars": 9923
     }
   ],
   "resultado": {
-    "itens_aceitos": 64,
+    "itens_aceitos": 89,
     "itens_descartados_pos_validacao": 0,
-    "fontes_sem_resultado": 1,
-    "fontes_sem_publicacao_hoje": 5,
+    "fontes_sem_resultado": 3,
+    "fontes_sem_publicacao_hoje": 1,
     "fontes_com_erro_tecnico": 0
   }
 }
