@@ -2,7 +2,7 @@
   "data_execucao": "2026-06-30",
   "janela_aplicada": {
     "inicio": "2026-06-29T00:00",
-    "fim": "2026-06-30T16:07"
+    "fim": "2026-06-30T16:35"
   },
   "itens": [
     {
@@ -12,7 +12,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Promulga a Declaração de Reconhecimento da Competência do Comitê contra a Tortura, de que trata o Artigo 22 da Convenção contra a Tortura e Outros Tratamentos ou Penas Cruéis, Desumanos ou Degradantes, firmada em Nova Iorque, em 10 de dezembro de 1984.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Promulgação de tratado internacional com impacto em direitos humanos e direito internacional.",
+      "motivo_relevancia": "Promulga declaração internacional com impacto em direitos humanos e obrigações estatais.",
       "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13040.htm"
     },
     {
@@ -22,7 +22,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Promulga o Acordo Bilateral de Serviços Aéreos entre o Governo da República Federativa do Brasil e o Governo da República de Singapura, firmado em Brasília, em 25 de novembro de 2008.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Promulgação de acordo internacional com impacto em relações comerciais e aviação civil.",
+      "motivo_relevancia": "Promulga acordo internacional que afeta o setor de serviços aéreos.",
       "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13039.htm"
     },
     {
@@ -32,7 +32,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Promulga o Acordo entre o Governo da República Federativa do Brasil e o Governo da República Italiana sobre a Proteção Mútua de Informações Classificadas, firmado em Brasília, em 4 de julho de 2023.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Promulgação de acordo internacional sobre proteção de informações classificadas, relevante para segurança e relações exteriores.",
+      "motivo_relevancia": "Promulga acordo internacional sobre segurança e troca de informações classificadas.",
       "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13038.htm"
     },
     {
@@ -42,7 +42,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Promulga o Acordo entre a República Federativa do Brasil e o Reino dos Países Baixos sobre Troca e Proteção Mútua de Informações Classificadas, firmado em Brasília, em 9 de outubro de 2023.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Promulgação de acordo internacional sobre proteção de informações classificadas, relevante para segurança e relações exteriores.",
+      "motivo_relevancia": "Promulga acordo internacional sobre segurança e troca de informações classificadas.",
       "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13037.htm"
     },
     {
@@ -52,7 +52,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Promulga o Acordo entre o Governo da República Federativa do Brasil e o Governo da Federação da Rússia sobre Proteção Mútua de Informações Classificadas, firmado em Moscou, em 13 de agosto de 2008.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Promulgação de acordo internacional sobre proteção de informações classificadas, relevante para segurança e relações exteriores.",
+      "motivo_relevancia": "Promulga acordo internacional sobre segurança e troca de informações classificadas.",
       "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13036.htm"
     },
     {
@@ -62,7 +62,7 @@
       "data_publicacao": "2026-06-29",
       "resumo": "Institui o Programa Extraordinário de Reequilíbrio Financeiro de Tomadores de Crédito Adimplentes – Desenrola Adimplentes e dá outras providências.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Nova Medida Provisória com impacto direto na economia e no setor financeiro, afetando tomadores de crédito.",
+      "motivo_relevancia": "Institui programa de renegociação de dívidas com amplo impacto econômico e social.",
       "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/mpv/mpv1373.htm"
     },
     {
@@ -72,17 +72,17 @@
       "data_publicacao": "2026-06-29",
       "resumo": "Cria a Rota Turística da Fé, no Estado do Ceará.",
       "relevancia": "Baixa",
-      "motivo_relevancia": "Legislação de impacto regional e setorial específico, sem grande repercussão corporativa.",
+      "motivo_relevancia": "Criação de rota turística de impacto regional e específico.",
       "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15445.htm"
     },
     {
       "fonte": "Planalto | Resenha Diaria",
       "categoria": "Legislacao Federal",
-      "titulo": "Lei nº 15.444, de 26.6.2026 - Cria a Rota Turística das Cidades Coloniais Alagoanas",
+      "titulo": "Lei nº 15.444, de 26.6.2026 - Cria a Rota Turística das Cidades Coloniais Alagoanas, no Estado de Alagoas",
       "data_publicacao": "2026-06-29",
       "resumo": "Cria a Rota Turística das Cidades Coloniais Alagoanas, no Estado de Alagoas.",
       "relevancia": "Baixa",
-      "motivo_relevancia": "Legislação de impacto regional e setorial específico, sem grande repercussão corporativa.",
+      "motivo_relevancia": "Criação de rota turística de impacto regional e específico.",
       "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15444.htm"
     },
     {
@@ -92,17 +92,17 @@
       "data_publicacao": "2026-06-29",
       "resumo": "Inclui no Calendário Turístico Oficial do Brasil as datas das romarias do Município de Juazeiro do Norte, na região do Cariri, no Estado do Ceará.",
       "relevancia": "Baixa",
-      "motivo_relevancia": "Legislação de impacto regional e setorial específico, sem grande repercussão corporativa.",
+      "motivo_relevancia": "Inclusão em calendário turístico, de caráter institucional e cultural.",
       "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15443.htm"
     },
     {
       "fonte": "Planalto | Resenha Diaria",
       "categoria": "Legislacao Federal",
-      "titulo": "Lei nº 15.442, de 26.6.2026 - Altera a Lei nº 14.308, de 8 de março de 2022, para instituir campanhas de conscientização sobre os sintomas dos principais tipos de câncer infantil",
+      "titulo": "Lei nº 15.442, de 26.6.2026 - Institui campanhas de conscientização sobre os sintomas dos principais tipos de câncer infantil",
       "data_publicacao": "2026-06-29",
       "resumo": "Altera a Lei nº 14.308, de 8 de março de 2022, para instituir campanhas de conscientização sobre os sintomas dos principais tipos de câncer infantil para permitir seu diagnóstico precoce.",
       "relevancia": "Média",
-      "motivo_relevancia": "Legislação de saúde pública, com impacto social relevante.",
+      "motivo_relevancia": "Alteração legislativa com impacto na saúde pública e campanhas de conscientização.",
       "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15442.htm"
     },
     {
@@ -112,17 +112,17 @@
       "data_publicacao": "2026-06-29",
       "resumo": "Fixa o limite máximo permitido de chumbo em tintas e em materiais similares de revestimento de superfícies; e revoga a Lei nº 11.762, de 1º de agosto de 2008.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Nova legislação com impacto direto na indústria de tintas e materiais de construção, exigindo adequação de produtos.",
+      "motivo_relevancia": "Regulamentação de produto com impacto direto na saúde pública e indústria.",
       "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15441.htm"
     },
     {
       "fonte": "Planalto | Resenha Diaria",
       "categoria": "Legislacao Federal",
-      "titulo": "Lei nº 15.440, de 26.6.2026 - Altera a Lei nº 6.360, de 23 de setembro de 1976 (Lei de Vigilância Sanitária sobre Produtos Farmacêuticos), para exigir a comprovação da certificação em Boas Práticas de Fabricação (BPF) no registro de medicamentos e insumos farmacêuticos",
+      "titulo": "Lei nº 15.440, de 26.6.2026 - Exige comprovação de BPF no registro de medicamentos e insumos farmacêuticos",
       "data_publicacao": "2026-06-29",
-      "resumo": "Altera a Lei nº 6.360, de 23 de setembro de 1976 (Lei de Vigilância Sanitária sobre Produtos Farmacêuticos), para exigir a comprovação da certificação em Boas Práticas de Fabricação (BPF) no registro de medicamentos e insumos farmacêuticos de fabricação nacional ou estrangeira.",
+      "resumo": "Altera a Lei nº 6.360, de 23 de setembro de 1976, para exigir a comprovação da certificação em Boas Práticas de Fabricação (BPF) no registro de medicamentos e insumos farmacêuticos de fabricação nacional ou estrangeira.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Alteração legislativa com impacto direto na indústria farmacêutica, exigindo certificação de BPF para registro de produtos.",
+      "motivo_relevancia": "Alteração legislativa que impacta a indústria farmacêutica e a segurança de medicamentos.",
       "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15440.htm"
     },
     {
@@ -132,67 +132,67 @@
       "data_publicacao": "2026-06-29",
       "resumo": "Dispõe sobre os direitos de pessoas com diabetes mellitus tipo 1 e sobre ações voltadas à promoção de sua participação plena e efetiva na sociedade em igualdade de condições com as demais pessoas.",
       "relevancia": "Média",
-      "motivo_relevancia": "Legislação de saúde pública e direitos sociais, com impacto relevante para a população afetada.",
+      "motivo_relevancia": "Lei que estabelece direitos específicos para pessoas com diabetes tipo 1.",
       "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15439.htm"
     },
     {
       "fonte": "Planalto | Resenha Diaria",
       "categoria": "Legislacao Federal",
-      "titulo": "Lei Complementar nº 232, de 26.6.2026 - Estabelece condições à concessão de isenção do Imposto sobre Serviços de Qualquer Natureza (ISS) para fatos geradores relacionados à organização ou à realização da Copa do Mundo Feminina da FIFA 2027",
+      "titulo": "Lei Complementar nº 232, de 26.6.2026 - Isenção de ISS para Copa do Mundo Feminina da FIFA 2027",
       "data_publicacao": "2026-06-29",
       "resumo": "Estabelece condições à concessão de isenção do Imposto sobre Serviços de Qualquer Natureza (ISS) para fatos geradores relacionados à organização ou à realização da Copa do Mundo Feminina da FIFA 2027.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Legislação tributária específica com impacto para empresas envolvidas na organização de grandes eventos.",
+      "motivo_relevancia": "Lei complementar com impacto tributário significativo para um evento de grande porte.",
       "url": "http://www.planalto.gov.br/ccivil_03/leis/lcp/Lcp232.htm"
     },
     {
       "fonte": "Planalto | Resenha Diaria",
       "categoria": "Legislacao Federal",
-      "titulo": "Medida Provisória nº 1.372, de 26.6.2026 - Abre crédito extraordinário, em favor do Ministério de Minas e Energia",
+      "titulo": "Medida Provisória nº 1.372, de 26.6.2026 - Abre crédito extraordinário para o Ministério de Minas e Energia",
       "data_publicacao": "2026-06-29",
       "resumo": "Abre crédito extraordinário, em favor do Ministério de Minas e Energia, no valor de R$ 550.000.000,00, para o fim que especifica.",
-      "relevancia": "Média",
-      "motivo_relevancia": "Ato orçamentário que destina recursos significativos para o setor de energia.",
+      "relevancia": "Alta",
+      "motivo_relevancia": "Abertura de crédito extraordinário para ministério estratégico, com impacto orçamentário.",
       "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/mpv/mpv1372.htm"
     },
     {
       "fonte": "Planalto | Resenha Diaria",
       "categoria": "Legislacao Federal",
-      "titulo": "Decreto nº 13.035, de 26.6.2026 - Autoriza a nomeação de candidatos aprovados em concursos para o INEP",
+      "titulo": "Decreto nº 13.035, de 26.6.2026 - Autoriza nomeação de candidatos aprovados em concursos para o INEP",
       "data_publicacao": "2026-06-29",
       "resumo": "Autoriza a nomeação de candidatos aprovados e não classificados dentro do quantitativo de vagas originalmente previsto nos concursos públicos para o provimento de cargos do Quadro de Pessoal do Instituto Nacional de Estudos.",
       "relevancia": "Baixa",
-      "motivo_relevancia": "Ato administrativo interno sem impacto direto para clientes corporativos.",
+      "motivo_relevancia": "Ato administrativo de gestão de pessoal, sem impacto direto em clientes corporativos.",
       "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13035.htm"
     },
     {
       "fonte": "Banco Central | Normas",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.492, 30/6/2026 - Divulga as taxas de juros \"Pm\" e \"PMm\" vigentes em julho de 2026",
+      "titulo": "Comunicado n° 45.492, 30/6/2026 - Divulga as taxas de juros \"Pm\" e \"PMm\" vigentes em julho de 2026.",
       "data_publicacao": "2026-06-30T10:38",
       "resumo": "Divulga as taxas de juros \"Pm\" e \"PMm\" vigentes em julho de 2026.",
-      "relevancia": "Alta",
-      "motivo_relevancia": "Informação relevante para o mercado financeiro, impactando cálculos de juros e operações.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Divulgação de taxas de juros que impactam o mercado financeiro.",
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45492"
     },
     {
       "fonte": "Banco Central | Normas",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.491, 30/6/2026 - Divulga a taxa de juros \"Jm\" e o fator de ajuste \"a5\" vigentes em julho de 2026",
+      "titulo": "Comunicado n° 45.491, 30/6/2026 - Divulga a taxa de juros \"Jm\" e o fator de ajuste \"a5\" vigentes em julho de 2026.",
       "data_publicacao": "2026-06-30T09:40",
       "resumo": "Divulga a taxa de juros \"Jm\" e o fator de ajuste \"a5\" vigentes em julho de 2026.",
-      "relevancia": "Alta",
-      "motivo_relevancia": "Informação relevante para o mercado financeiro, impactando cálculos de juros e operações.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Divulgação de taxas de juros e fatores de ajuste que impactam o mercado financeiro.",
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45491"
     },
     {
       "fonte": "Banco Central | Normas",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.490, 30/6/2026 - Divulga a Taxa de Juros de Longo Prazo (TJLP) para o terceiro trimestre de 2026",
+      "titulo": "Comunicado n° 45.490, 30/6/2026 - Divulga a Taxa de Juros de Longo Prazo (TJLP) para o terceiro trimestre de 2026.",
       "data_publicacao": "2026-06-30T09:39",
       "resumo": "Divulga a Taxa de Juros de Longo Prazo (TJLP) para o terceiro trimestre de 2026.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Informação crucial para o mercado financeiro, influenciando investimentos e financiamentos de longo prazo.",
+      "motivo_relevancia": "Definição da TJLP, que influencia diretamente financiamentos de longo prazo e investimentos.",
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45490"
     },
     {
@@ -202,77 +202,77 @@
       "data_publicacao": "2026-06-30T09:37",
       "resumo": "Divulga pedido de cancelamento da autorização para funcionamento da Edenred Soluções de Mobilidade e Instituição de Pagamento HU S.A., CNPJ 18.587.586/0001-06, com sede em Campo Bom (RS).",
       "relevancia": "Média",
-      "motivo_relevancia": "Regulação de instituição financeira, com impacto na operação da empresa e no mercado de pagamentos.",
+      "motivo_relevancia": "Ato regulatório que afeta a operação de uma instituição de pagamento específica.",
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45489"
     },
     {
       "fonte": "Banco Central | Normas",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.488, 30/6/2026 - Divulga, para fins de recebimento de eventuais objeções, nomes de pessoas eleitas ou nomeadas para ocupar cargos de administração em instituições autorizadas a funcionar",
+      "titulo": "Comunicado n° 45.488, 30/6/2026 - Divulga nomes de pessoas eleitas ou nomeadas para cargos de administração em instituições autorizadas a funcionar",
       "data_publicacao": "2026-06-30T09:35",
       "resumo": "Divulga, para fins de recebimento de eventuais objeções, nomes de pessoas eleitas ou nomeadas para ocupar cargos de administração em instituições autorizadas a funcionar.",
       "relevancia": "Baixa",
-      "motivo_relevancia": "Ato administrativo interno do regulador, de interesse restrito a partes envolvidas.",
+      "motivo_relevancia": "Ato administrativo referente a nomeações internas, de interesse restrito.",
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45488"
     },
     {
       "fonte": "Banco Central | Normas",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.487, 30/6/2026 - Divulga nome aprovado de pessoas eleitas/nomeadas para cargos de órgãos estatutários ou contratuais de sociedades autorizadas a funcionar pelo Banco Central do Brasil",
+      "titulo": "Comunicado n° 45.487, 30/6/2026 - Divulga nome aprovado de pessoas eleitas/nomeadas para cargos de órgãos estatutários ou contratuais",
       "data_publicacao": "2026-06-30T09:34",
       "resumo": "Divulga nome aprovado de pessoas eleitas/nomeadas para cargos de órgãos estatutários ou contratuais de sociedades autorizadas a funcionar pelo Banco Central do Brasil.",
       "relevancia": "Baixa",
-      "motivo_relevancia": "Ato administrativo interno do regulador, de interesse restrito a partes envolvidas.",
+      "motivo_relevancia": "Ato administrativo referente a nomeações internas, de interesse restrito.",
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45487"
     },
     {
       "fonte": "Banco Central | Normas",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.486, 30/6/2026 - Divulga as Taxas Básicas Financeiras (TBF), os Redutores \"R\" e as Taxas Referenciais (TR) relativos a 27, 28 e 29 de junho de 2026",
+      "titulo": "Comunicado n° 45.486, 30/6/2026 - Divulga as Taxas Básicas Financeiras (TBF), os Redutores \"R\" e as Taxas Referenciais (TR) relativos a 27, 28 e 29 de junho de 2026.",
       "data_publicacao": "2026-06-30T09:03",
       "resumo": "Divulga as Taxas Básicas Financeiras (TBF), os Redutores \"R\" e as Taxas Referenciais (TR) relativos a 27, 28 e 29 de junho de 2026.",
-      "relevancia": "Alta",
-      "motivo_relevancia": "Informação relevante para o mercado financeiro, impactando cálculos de juros e operações.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Divulgação de taxas de referência importantes para o mercado financeiro.",
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45486"
     },
     {
       "fonte": "Banco Central | Normas",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.485, 29/6/2026 - Divulga condições para a realização de operações compromissadas com instituições financeiras participantes do módulo Oferta Pública (Ofpub)",
+      "titulo": "Comunicado n° 45.485, 29/6/2026 - Divulga condições para a realização de operações compromissadas com instituições financeiras",
       "data_publicacao": "2026-06-29T18:33",
       "resumo": "Divulga condições para a realização de operações compromissadas com instituições financeiras participantes do módulo Oferta Pública (Ofpub).",
       "relevancia": "Alta",
-      "motivo_relevancia": "Regulação de operações financeiras, com impacto direto para instituições financeiras e o mercado.",
+      "motivo_relevancia": "Estabelece condições para operações financeiras, impactando instituições e o mercado.",
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45485"
     },
     {
       "fonte": "Banco Central | Normas",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.484, 29/6/2026 - Divulga, para fins de recebimento de eventuais objeções, nomes de pessoas eleitas ou nomeadas para ocupar cargos de administração em instituições autorizadas a funcionar",
+      "titulo": "Comunicado n° 45.484, 29/6/2026 - Divulga nomes de pessoas eleitas ou nomeadas para cargos de administração em instituições autorizadas a funcionar",
       "data_publicacao": "2026-06-29T09:30",
       "resumo": "Divulga, para fins de recebimento de eventuais objeções, nomes de pessoas eleitas ou nomeadas para ocupar cargos de administração em instituições autorizadas a funcionar.",
       "relevancia": "Baixa",
-      "motivo_relevancia": "Ato administrativo interno do regulador, de interesse restrito a partes envolvidas.",
+      "motivo_relevancia": "Ato administrativo referente a nomeações internas, de interesse restrito.",
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45484"
     },
     {
       "fonte": "Banco Central | Normas",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.483, 29/6/2026 - Divulga nome aprovado de pessoas eleitas/nomeadas para cargos de órgãos estatutários ou contratuais de sociedades autorizadas a funcionar pelo Banco Central do Brasil",
+      "titulo": "Comunicado n° 45.483, 29/6/2026 - Divulga nome aprovado de pessoas eleitas/nomeadas para cargos de órgãos estatutários ou contratuais",
       "data_publicacao": "2026-06-29T09:29",
       "resumo": "Divulga nome aprovado de pessoas eleitas/nomeadas para cargos de órgãos estatutários ou contratuais de sociedades autorizadas a funcionar pelo Banco Central do Brasil.",
       "relevancia": "Baixa",
-      "motivo_relevancia": "Ato administrativo interno do regulador, de interesse restrito a partes envolvidas.",
+      "motivo_relevancia": "Ato administrativo referente a nomeações internas, de interesse restrito.",
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45483"
     },
     {
       "fonte": "Banco Central | Normas",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.482, 29/6/2026 - Divulga a Taxa Básica Financeira (TBF), o Redutor \"R\" e a Taxa Referencial (TR) relativos a 26 de junho de 2026",
+      "titulo": "Comunicado n° 45.482, 29/6/2026 - Divulga a Taxa Básica Financeira (TBF), o Redutor \"R\" e a Taxa Referencial (TR) relativos a 26 de junho de 2026.",
       "data_publicacao": "2026-06-29T09:03",
       "resumo": "Divulga a Taxa Básica Financeira (TBF), o Redutor \"R\" e a Taxa Referencial (TR) relativos a 26 de junho de 2026.",
-      "relevancia": "Alta",
-      "motivo_relevancia": "Informação relevante para o mercado financeiro, impactando cálculos de juros e operações.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Divulgação de taxas de referência importantes para o mercado financeiro.",
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45482"
     },
     {
@@ -280,9 +280,9 @@
       "categoria": "Energia e Recursos",
       "titulo": "Confira destaques da participação da CCEE no Enase 2026 em nossa cobertura especial do evento",
       "data_publicacao": "2026-06-29",
-      "resumo": "Câmara protagonizou debates sobre abertura do mercado, segurança e gestão de pessoas.",
+      "resumo": "A Câmara protagonizou debates sobre abertura do mercado, segurança e gestão de pessoas no Enase 2026.",
       "relevancia": "Baixa",
-      "motivo_relevancia": "Notícia institucional sobre participação em evento, de interesse limitado.",
+      "motivo_relevancia": "Notícia institucional sobre participação em evento do setor.",
       "url": "https://www.ccee.org.br/-/confira-os-destaques-da-participacao-da-ccee-no-enase-2026-com-nossa-cobertura-especial-do-evento"
     },
     {
@@ -291,8 +291,8 @@
       "titulo": "Tesouro publica Balanço do Setor Público Nacional referente a 2025 com dados da União, estados, municípios e DF",
       "data_publicacao": "2026-06-30",
       "resumo": "Números foram extraídos do Sistema de Informações Contábeis e Fiscais do Setor Público Brasileiro (Siconfi) até 10 de maio de 2026.",
-      "relevancia": "Alta",
-      "motivo_relevancia": "Divulgação de dados fiscais e financeiros do setor público, com impacto na análise econômica e fiscal.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Divulgação de balanço fiscal com dados de entes federativos, relevante para análise econômica.",
       "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/junho/tesouro-publica-balanco-do-setor-publico-nacional-referente-a-2025-com-dados-da-uniao-estados-municipios-e-df"
     },
     {
@@ -302,7 +302,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Maior inclusão nas operações não se traduz, na mesma medida, em participação no capital movimentado.",
       "relevancia": "Média",
-      "motivo_relevancia": "Análise de tendências no mercado de criptoativos, com implicações sociais e de mercado.",
+      "motivo_relevancia": "Notícia sobre tendência de mercado e inclusão financeira em criptoativos.",
       "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/junho/mulheres-ampliam-presenca-nas-operacoes-com-criptoativos-atingindo-41-do-total-de-transacoes-em-2024"
     },
     {
@@ -312,7 +312,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Encontro analisou os efeitos dos choques externos recentes nas economias do bloco e estabeleceu propostas de estratégia de mitigação, especialmente no agronegócio.",
       "relevancia": "Média",
-      "motivo_relevancia": "Notícia institucional sobre relações internacionais e política econômica regional.",
+      "motivo_relevancia": "Participação em evento internacional com foco em relações econômicas e financeiras.",
       "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/junho/secretario-da-receita-federal-representa-o-ministro-da-fazenda-na-cupula-dos-ministros-da-fazenda-e-presidentes-dos-bancos-centrais-do-mercosul"
     },
     {
@@ -322,7 +322,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Mais de 11 mil produtores rurais foram alertados e têm até 31 de julho para regularizar pendências.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Ação de fiscalização tributária com impacto direto em produtores rurais, exigindo conformidade fiscal.",
+      "motivo_relevancia": "Ação de fiscalização da Receita Federal com impacto direto em produtores rurais.",
       "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/junho/receita-federal-realiza-acao-de-conformidade-declara-agro-2013-livro-caixa-digital-do-produtor-rural"
     },
     {
@@ -330,9 +330,9 @@
       "categoria": "Tributário",
       "titulo": "Governo e setor de óleo e gás debatem regras do monitoramento de emissões para o mercado regulado de carbono",
       "data_publicacao": "2026-06-30",
-      "resumo": "Oficina promovida pelo Ministério da Fazenda e Instituto Brasileiro de Petróleo, Gás e Biocombustíveis (IBP) reuniu as principais empresas do setor no Rio de Janeiro (RJ).",
+      "resumo": "Oficina promovida pelo Ministério da Fazenda e IBP reuniu as principais empresas do setor no Rio de Janeiro (RJ).",
       "relevancia": "Alta",
-      "motivo_relevancia": "Discussão sobre regulação ambiental e mercado de carbono, com impacto direto no setor de óleo e gás.",
+      "motivo_relevancia": "Debate sobre regulamentação de mercado de carbono com impacto no setor de óleo e gás.",
       "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/junho/governo-e-setor-de-oleo-e-gas-debatem-regras-do-monitoramento-de-emissoes-para-o-mercado-regulado-de-carbono"
     },
     {
@@ -341,8 +341,8 @@
       "titulo": "Governo Central tem déficit primário de R$ 53,3 bilhões em maio",
       "data_publicacao": "2026-06-30",
       "resumo": "Resultado do Tesouro Nacional foi divulgado na segunda-feira (29/6).",
-      "relevancia": "Alta",
-      "motivo_relevancia": "Divulgação de dados econômicos e fiscais do Governo Central, com impacto na análise macroeconômica.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Divulgação de resultado fiscal do Governo Central, importante para análise econômica.",
       "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/junho/governo-central-tem-deficit-primario-de-r-53-3-bilhoes-em-maio"
     },
     {
@@ -352,7 +352,7 @@
       "data_publicacao": "2026-06-29",
       "resumo": "Pacote inclui Desenrola Adimplentes, Fies Empreendedor e novas regras para uso do FGTS como garantia no Crédito do Trabalhador.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Anúncio de novas políticas econômicas com impacto direto no acesso a crédito e renegociação de dívidas.",
+      "motivo_relevancia": "Anúncio de pacote de medidas econômicas com impacto direto no crédito e adimplência.",
       "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/junho/governo-federal-anuncia-medidas-de-incentivo-a-adimplencia-e-amplia-acesso-a-credito-com-juros-menores"
     },
     {
@@ -361,8 +361,8 @@
       "titulo": "Arrecadação federal chega a R$ 266,793 bilhões em maio",
       "data_publicacao": "2026-06-29",
       "resumo": "Resultado tem alta real de 10,7% em relação a maio de 2025 e é o maior para o mês na série histórica.",
-      "relevancia": "Alta",
-      "motivo_relevancia": "Divulgação de dados de arrecadação federal, com impacto na análise econômica e fiscal.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Divulgação de dados de arrecadação federal, importante para análise fiscal.",
       "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/junho/arrecadacao-federal-chega-a-r-266-793-bilhoes-em-maio"
     },
     {
@@ -372,17 +372,17 @@
       "data_publicacao": "2026-06-30T09:15",
       "resumo": "A partir desta terça (30), sociedade ajudará a definir prioridades regulatórias relacionadas aos direitos dos usuários, aos deveres das plataformas digitais e à proteção das mulheres no ambiente digital.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Abertura de tomada de subsídios para novas regras que impactarão diretamente plataformas digitais e a proteção de dados.",
+      "motivo_relevancia": "Abertura de tomada de subsídios para regulamentação de plataformas digitais, com impacto em direitos de usuários e deveres de empresas.",
       "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-abre-tomada-de-subsidios-sobre-novas-regras-aplicaveis-as-plataformas-digitais"
     },
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "040-2026-VNC-Ofício Circular - Alteração no Manual de Administração de Risco da Câmara B3 – Funcionalidade para determinar exclusão do benefício de margem para posições de BTB doador",
+      "titulo": "040-2026-VNC-Ofício Circular - Alteração no Manual de Administração de Risco da Câmara B3",
       "data_publicacao": "2026-06-30",
-      "resumo": "A nova funcionalidade passa a vigorar em 06/07/2026. Ela permite aos participantes da Câmara B3 definirem quais contratos de empréstimo doador não poderão gerar benefícios no cálculo de margem requerida de seus clientes.",
+      "resumo": "A nova funcionalidade permite aos participantes da Câmara B3 definirem quais contratos de empréstimo doador não poderão gerar benefícios no cálculo de margem requerida de seus clientes.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Alteração regulatória com impacto direto nas operações e gestão de risco de participantes do mercado financeiro.",
+      "motivo_relevancia": "Alteração em manual de administração de risco com impacto direto em participantes da Câmara B3.",
       "url": "https://www.b3.com.br/data/files/A0/B1/98/AD/B591F910ADC36BE9AC094EA8/OC%20040-2026-VNC%20NOVA%20FUNCIONALIDADE%20DE%20DEFINICAO%20BENEFICIO%20DE%20MARGEM%20PARA%20BTB%20DOADOR_PT.pdf"
     },
     {
@@ -392,7 +392,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Autorização de Escrituração e Registro de Duplicatas Escriturais e alteração dos normativos do Balcão B3.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Alteração regulatória que impacta a escrituração e registro de duplicatas, relevante para o mercado de crédito e financeiro.",
+      "motivo_relevancia": "Autorização para escrituração e registro de duplicatas escriturais, impactando o mercado de crédito.",
       "url": "https://www.b3.com.br/data/files/A6/F0/73/E2/DD91F910ADC36BE9AC094EA8/OC%20033-2026-VPC%20ESCRITURACAO%20E%20REGISTRO%20DE%20DUPLICATAS%20ESCRITURAIS_PT.pdf"
     },
     {
@@ -402,7 +402,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "O período de isenção da taxa cobrada para acesso ao sistema BTB será estendido até dia 31/12/2026.",
       "relevancia": "Média",
-      "motivo_relevancia": "Atualização administrativa que impacta os custos de acesso a uma plataforma de mercado.",
+      "motivo_relevancia": "Extensão de isenção de taxa, impactando custos de acesso à plataforma.",
       "url": "https://www.b3.com.br/data/files/6D/53/BB/BA/CB91F910ADC36BE9AC094EA8/OC%20032-2026-VPC%20EXTENSAO%20DO%20PERIODO%20DE%20ISENCAO%20DAS%20CREDENCIAIS%20DE%20ACESSO%20AO%20TERMINAL%20BTB%20E%20A%20API%20BTB%20DA%20PLATAFORMA%20BTB_PT.pdf"
     },
     {
@@ -412,7 +412,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Incluiremos novos ativos selecionados na segunda fase da expansão dos ativos do mercado à vista na oferta Retail Liquidity Provider (RLP).",
       "relevancia": "Alta",
-      "motivo_relevancia": "Expansão de oferta de mercado que pode impactar investidores e a liquidez de ativos.",
+      "motivo_relevancia": "Expansão de ativos elegíveis em oferta de liquidez, impactando o mercado de capitais.",
       "url": "https://www.b3.com.br/data/files/EC/E0/BB/40/FC81F910ADC36BE9AC094EA8/OC%20031-2026-VPC%20OC%20EXPANSAO%20DO%20RLP%20FASE%202_PT.pdf"
     },
     {
@@ -422,7 +422,7 @@
       "data_publicacao": "2026-06-30T16:02",
       "resumo": "Documento incorpora novos instrumentos, atualiza entendimentos jurídicos e traz maior previsibilidade à aplicação de sanções previstas na Lei Anticorrupção.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Atualização de guia fundamental para empresas sobre a Lei Anticorrupção, com impacto direto em conformidade e responsabilidade.",
+      "motivo_relevancia": "Lançamento de manual com orientações atualizadas sobre a Lei Anticorrupção, impactando diretamente empresas e compliance.",
       "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/2026/06/cgu-lanca-nova-edicao-do-manual-de-responsabilizacao-de-empresas-com-orientacoes-atualizadas-sobre-a-lei-anticorrupcao"
     },
     {
@@ -430,9 +430,9 @@
       "categoria": "Regulatório e Setorial",
       "titulo": "Governo do Brasil amplia acesso à informação com plataforma que agrega dados da administração federal",
       "data_publicacao": "2026-06-30T15:58",
-      "resumo": "Informa.BR permite a busca centralizada de dados públicos federais, com auxílio de IA; novidade criada pela CGU facilita o controle social e fortalece a democracia ao concentrar tudo em um só balcão online.",
+      "resumo": "Informa.BR permite a busca centralizada de dados públicos federais, com auxílio de IA; novidade criada pela CGU facilita o controle social e fortalece a democracia.",
       "relevancia": "Média",
-      "motivo_relevancia": "Iniciativa de transparência e acesso à informação, com uso de tecnologia para facilitar o controle social.",
+      "motivo_relevancia": "Lançamento de plataforma de acesso à informação, fortalecendo a transparência e controle social.",
       "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/2026/06/governo-do-brasil-amplia-acesso-a-informacao-com-plataforma-que-agrega-dados-da-administracao-federal"
     },
     {
@@ -442,7 +442,7 @@
       "data_publicacao": "2026-06-30T15:47",
       "resumo": "Sociedade poderá contribuir com proposta de regulamentação que busca ampliar a previsibilidade e a segurança jurídica nos processos administrativos previstos na Lei Anticorrupção.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Consulta pública sobre tema jurídico relevante para empresas, buscando maior previsibilidade e segurança jurídica.",
+      "motivo_relevancia": "Abertura de consulta pública sobre tema jurídico relevante para a responsabilização de empresas.",
       "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/2026/06/cgu-abre-consulta-publica-sobre-desconsideracao-da-personalidade-juridica-em-processos-de-responsabilizacao-de-empresas"
     },
     {
@@ -451,8 +451,8 @@
       "titulo": "ANP terá Reunião de Diretoria hoje (30/6), às 18h30",
       "data_publicacao": "2026-06-30",
       "resumo": "Serão discutidas as minutas de resolução sobre caracterização de elevação abusiva de preços de combustíveis.",
-      "relevancia": "Alta",
-      "motivo_relevancia": "Discussão de regulação de preços de combustíveis, com potencial impacto direto no setor e consumidores.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Anúncio de reunião de diretoria que discutirá minutas de resolução sobre preços de combustíveis.",
       "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-tera-reuniao-de-diretoria-hoje-30-6-as-18h30"
     },
     {
@@ -462,7 +462,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Dados estão em quadros, tabelas, gráficos, cartogramas e textos, divididos em cinco seções.",
       "relevancia": "Média",
-      "motivo_relevancia": "Divulgação de dados consolidados do setor regulado, útil para análise de mercado e planejamento.",
+      "motivo_relevancia": "Divulgação de dados anuais consolidados do setor regulado, relevante para análise setorial.",
       "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-divulga-dados-consolidados-do-setor-regulado-em-2025"
     },
     {
@@ -472,7 +472,7 @@
       "data_publicacao": "2026-06-29",
       "resumo": "Valores referentes à produção de abril foram distribuídos hoje (29/06) a estados e municípios.",
       "relevancia": "Média",
-      "motivo_relevancia": "Informação sobre distribuição de royalties, relevante para estados e municípios produtores de petróleo e gás.",
+      "motivo_relevancia": "Distribuição de royalties com impacto financeiro em entes federativos.",
       "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/royalties-valores-referentes-a-producao-de-abril-foram-distribuidos-hoje-29-06-a-estados-e-municipios"
     },
     {
@@ -482,7 +482,7 @@
       "data_publicacao": "2026-06-29",
       "resumo": "Nova regulamentação estabelece padrões mínimos de eficiência para lâmpadas e luminárias LED, impulsionando a economia de energia, a sustentabilidade e a modernização do mercado brasileiro de iluminação.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Nova regulamentação com impacto direto na indústria de iluminação e na política de eficiência energética.",
+      "motivo_relevancia": "Primeira regulamentação para lâmpadas e luminárias LED, com impacto na indústria e consumo de energia.",
       "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/brasil-avanca-na-eficiencia-energetica-com-primeira-regulamentacao-para-lampadas-e-luminarias-led"
     },
     {
@@ -492,7 +492,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Interessados podem enviar sugestões sobre requisitos mínimos em medidores inteligentes.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Consulta pública sobre regulação técnica de medidores, com impacto para fabricantes e distribuidoras de energia.",
+      "motivo_relevancia": "Abertura de consulta pública sobre requisitos para medidores inteligentes, impactando o setor elétrico e consumidores.",
       "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026/medidores-de-energia-eletrica-aneel-abre-segunda-fase-da-consulta-publica"
     },
     {
@@ -502,7 +502,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Multas para a comercializadora em contratos com duas cooperativas somam R$5,8 milhões.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Decisão regulatória com impacto financeiro e contratual significativo para empresas do setor elétrico.",
+      "motivo_relevancia": "Decisão regulatória de rescisão de contratos por inadimplência, com impacto no mercado de energia.",
       "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026/agencia-define-rescisao-dos-contratos-entre-gold-comercializadora-e-distribuidoras-devido-a-inadimplencia-contratual"
     },
     {
@@ -512,7 +512,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "O evento aconteceu na manhã desta terça-feira, 30/6, no Centro de Ensino Fundamental Polivalente.",
       "relevancia": "Baixa",
-      "motivo_relevancia": "Notícia institucional sobre evento educacional, de interesse limitado.",
+      "motivo_relevancia": "Evento educacional institucional.",
       "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026/blitz-onee-em-brasilia-promove-competicao-educacional-do-setor-eletrico-nas-escolas"
     },
     {
@@ -522,7 +522,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Os novos índices passam a vigorar a partir de 29/6.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Revisão tarifária com impacto direto nos custos de energia para consumidores e na receita da distribuidora.",
+      "motivo_relevancia": "Aprovação de revisão tarifária com impacto direto nos consumidores e na distribuidora.",
       "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026/aneel-aprova-revisao-tarifaria-periodica-da-companhia-campolarguense-de-energia"
     },
     {
@@ -532,7 +532,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Os novos índices passam a valer a partir de 4/7.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Aprovação de novas tarifas com impacto direto nos custos de energia para consumidores e na receita da distribuidora.",
+      "motivo_relevancia": "Aprovação de novas tarifas com impacto direto nos consumidores e na distribuidora.",
       "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026/energisa-tocantins-tem-novas-tarifas-aprovadas-pela-aneel"
     },
     {
@@ -541,8 +541,8 @@
       "titulo": "ANEEL inicia campanha educativa para evitar incêndios próximos a linhas de transmissão nesta terça-feira (30/6)",
       "data_publicacao": "2026-06-30",
       "resumo": "Os incêndios aumentam durante o período seco no país, que vai de junho a outubro. Denunciar focos de incêndio, evitar práticas de risco e apoiar políticas de preservação ambiental são fundamentais.",
-      "relevancia": "Média",
-      "motivo_relevancia": "Campanha de conscientização sobre segurança operacional e prevenção de acidentes no setor elétrico.",
+      "relevancia": "Baixa",
+      "motivo_relevancia": "Campanha educativa de caráter preventivo.",
       "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026/aneel-inicia-campanha-educativa-para-evitar-incendios-proximos-a-linhas-de-transmissao-inicia-nesta-terca-feira-30-6"
     },
     {
@@ -551,18 +551,18 @@
       "titulo": "Curso gratuito orienta consumidores sobre prevenção ao endividamento com apostas",
       "data_publicacao": "2026-06-30T12:07",
       "resumo": "Iniciativa da SPA em parceria com Senacon e UnB inicia em 28 de julho.",
-      "relevancia": "Média",
-      "motivo_relevancia": "Iniciativa de educação financeira com foco em prevenção de endividamento, relevante para consumidores e setor de apostas.",
-      "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias"
+      "relevancia": "Baixa",
+      "motivo_relevancia": "Iniciativa de educação financeira, de caráter informativo.",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/junho/curso-gratuito-orienta-consumidores-sobre-prevencao-ao-endividamento-com-apostas"
     },
     {
       "fonte": "Ministério do Meio Ambiente | Notícias",
       "categoria": "Regulatório e Setorial",
       "titulo": "Brasil passa a monitorar a qualidade do ar em todas as regiões do país com novas estações na região Norte",
       "data_publicacao": "2026-06-30T15:25",
-      "resumo": "Inauguração das estações de Rio Branco e Porto Velho marcam a chegada da rede de monitoramento à região Norte; dados serão disponibilizados em tempo real pelo MonitorAr, sistema do MMA que mostra a qualidade do ar no país.",
-      "relevancia": "Alta",
-      "motivo_relevancia": "Expansão do monitoramento ambiental, com impacto na política de qualidade do ar e saúde pública.",
+      "resumo": "Inauguração das estações de Rio Branco e Porto Velho marcam a chegada da rede de monitoramento à região Norte; dados serão disponibilizados em tempo real pelo MonitorAr.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Expansão da rede de monitoramento da qualidade do ar, com impacto ambiental e de saúde pública.",
       "url": "https://www.gov.br/mma/pt-br/noticias/brasil-passa-a-monitorar-a-qualidade-do-ar-em-todas-as-regioes-do-pais-com-novas-estacoes-na-regiao-norte"
     },
     {
@@ -570,9 +570,9 @@
       "categoria": "Regulatório e Setorial",
       "titulo": "Ministérios e BNDES realizam o 1º Fórum Econômico da Transformação Ecológica Brasileira, no Rio",
       "data_publicacao": "2026-06-29T12:05",
-      "resumo": "Encontro reúne os ministros do Meio Ambiente, da Fazenda e do Desenvolvimento, Indústria, Comércio e Serviços, o presidente do BNDES e o presidente da COP30 para debater investimentos e financiamento em cinco frentes da transição para uma economia de baixo carbono.",
+      "resumo": "Encontro reúne ministros e presidente do BNDES para debater investimentos e financiamento em cinco frentes da transição para uma economia de baixo carbono.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Evento de alto nível sobre política econômica e ambiental, com foco em investimentos e financiamento para a transição ecológica.",
+      "motivo_relevancia": "Realização de fórum com foco em investimentos e financiamento para a transição ecológica.",
       "url": "https://www.gov.br/mma/pt-br/noticias/ministerios-e-bndes-realizam-o-1o-forum-economico-da-transformacao-ecologica-brasileira-no-rio"
     },
     {
@@ -580,9 +580,9 @@
       "categoria": "Regulatório e Setorial",
       "titulo": "MMA e PNUD divulgam resultados do Programa Brasileiro de Redução do Consumo de HFCs",
       "data_publicacao": "2026-06-29T11:05",
-      "resumo": "MMA e PNUD divulgam resultados do Programa Brasileiro de Redução do Consumo de HFCs.",
+      "resumo": "Divulgação de resultados do Programa Brasileiro de Redução do Consumo de HFCs.",
       "relevancia": "Média",
-      "motivo_relevancia": "Divulgação de resultados de programa ambiental, relevante para políticas de clima e indústria.",
+      "motivo_relevancia": "Divulgação de resultados de programa ambiental, com impacto na redução de gases.",
       "url": "https://www.gov.br/mma/pt-br/noticias/mma-e-pnud-divulgam-resultados-do-programa-brasileiro-de-reducao-do-consumo-de-hfcs"
     },
     {
@@ -592,7 +592,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Com o slogan “Crédito que fortalece o campo. Campo que alimenta o mundo”, a nova edição amplia os recursos para custeio, comercialização e investimentos na produção agropecuária.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Lançamento de política de financiamento agrícola com volume expressivo, impactando diretamente o agronegócio.",
+      "motivo_relevancia": "Lançamento do Plano Safra com volume expressivo de recursos para o agronegócio.",
       "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/2026/plano-safra-26-27-destina-r-525-bilhoes-para-fortalecer-a-agricultura-empresarial"
     },
     {
@@ -602,7 +602,7 @@
       "data_publicacao": "2026-06-29",
       "resumo": "Boletim n.º 1 divulgado nesta segunda-feira (29) é resultado do trabalho conjunto entre o INMET, INPE, ANA, CEMADEN, SGB e SEDEC, órgãos nacionais oficiais.",
       "relevancia": "Média",
-      "motivo_relevancia": "Informações climáticas com impacto significativo no setor agrícola e planejamento de safra.",
+      "motivo_relevancia": "Divulgação de boletim sobre El Niño e seus impactos na agricultura.",
       "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/2026/el-nino-2026-saiba-detalhes-sobre-o-monitoramento-previsoes-e-os-possiveis-impactos-do-fenomeno-no-brasil"
     },
     {
@@ -612,7 +612,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Atualização de assuntos de petição para IFAs agonistas do GLP-1 importados.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Atualização regulatória com impacto direto na importação e registro de insumos farmacêuticos ativos.",
+      "motivo_relevancia": "Atualização regulatória para insumos farmacêuticos ativos, impactando a indústria farmacêutica.",
       "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/atualizacao-de-assuntos-de-peticao-para-ifas-agonistas-do-glp-1-importados"
     },
     {
@@ -622,7 +622,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Iniciativa contribui para qualificação das informações sobre medicamentos e organização do estoque regulatório.",
       "relevancia": "Média",
-      "motivo_relevancia": "Atualização regulatória que visa aprimorar informações de medicamentos, impactando a indústria farmacêutica.",
+      "motivo_relevancia": "Conclusão de etapa de revisão de bulas, com impacto na qualificação de informações sobre medicamentos.",
       "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/revisao-de-bula-padrao-anvisa-conclui-etapa-do-chamamento-e-define-encaminhamento-de-mais-de-350-peticoes"
     },
     {
@@ -630,9 +630,9 @@
       "categoria": "Regulatório e Setorial",
       "titulo": "Anvisa publica documentação técnica para integração de sistemas de prescrição eletrônica ao SNCR",
       "data_publicacao": "2026-06-30",
-      "resumo": "Material reúne requisitos técnicos, API e acesso ao ambiente de treinamento para desenvolvedores e empresas que desejam integrar suas plataformas ao Sistema Nacional de Controle de Receituários (SNCR), bem como os modelos de receituários eletrônicos.",
+      "resumo": "Material reúne requisitos técnicos, API e acesso ao ambiente de treinamento para desenvolvedores e empresas que desejam integrar suas plataformas ao Sistema Nacional de Controle de Receituários (SNCR).",
       "relevancia": "Alta",
-      "motivo_relevancia": "Publicação de requisitos técnicos para integração de sistemas, com impacto para desenvolvedores de software e setor de saúde.",
+      "motivo_relevancia": "Publicação de documentação técnica para integração de sistemas de prescrição eletrônica, modernizando o controle de receituários.",
       "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/anvisa-publica-documentacao-tecnica-para-integracao-de-sistemas-de-prescricao-eletronica-ao-sncr"
     },
     {
@@ -642,7 +642,7 @@
       "data_publicacao": "2026-06-30",
       "resumo": "Produto era fabricado e vendido sem registro e sem autorização.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Ação de fiscalização com proibição de produto irregular, relevante para segurança do consumidor e conformidade regulatória.",
+      "motivo_relevancia": "Ação de fiscalização com proibição e apreensão de produto sem registro, protegendo a saúde pública.",
       "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-proibe-querosene-petrus-e-determina-apreensao"
     },
     {
@@ -652,7 +652,7 @@
       "data_publicacao": "2026-06-29",
       "resumo": "A análise passa a ser feita pela Gerência de Avaliação de Produtos Biológicos.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Atualização de orientações para avaliação de biossimilares, impactando a indústria farmacêutica e o registro de medicamentos.",
+      "motivo_relevancia": "Atualização de orientações para avaliação de biossimilares, impactando a indústria farmacêutica.",
       "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-atualiza-orientacoes-para-avaliacao-de-estudos-farmacocineticos-de-biossimilares"
     },
     {
@@ -661,8 +661,8 @@
       "titulo": "Webinário discute cenário de vigilância e resposta ao vírus Bundibugyo",
       "data_publicacao": "2026-06-29",
       "resumo": "Evento on-line será realizado na quinta-feira (2/7), a partir das 9h.",
-      "relevancia": "Média",
-      "motivo_relevancia": "Evento sobre vigilância em saúde, relevante para profissionais da área e políticas de saúde pública.",
+      "relevancia": "Baixa",
+      "motivo_relevancia": "Anúncio de webinário sobre tema de saúde pública.",
       "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/webinario-discute-cenario-de-vigilancia-e-resposta-ao-virus-bundibugyo"
     },
     {
@@ -672,7 +672,7 @@
       "data_publicacao": "2026-06-29",
       "resumo": "Recolhimento voluntário do produto será feito pelo fabricante. Teste de eficácia reprovou o cosmético.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Ação de fiscalização com suspensão de produto, relevante para segurança do consumidor e conformidade regulatória.",
+      "motivo_relevancia": "Ação de fiscalização com suspensão de lote de produto por ineficácia, protegendo o consumidor.",
       "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-suspende-lote-de-repelente-da-marca-repele"
     },
     {
@@ -680,9 +680,9 @@
       "categoria": "Regulatório e Setorial",
       "titulo": "Seção I - Comunicados da RPI 2895 foi atualizada",
       "data_publicacao": "2026-06-30T15:44",
-      "resumo": "Seção I - Comunicados da RPI 2895 foi atualizada.",
+      "resumo": "A Seção I dos Comunicados da RPI 2895 foi atualizada.",
       "relevancia": "Média",
-      "motivo_relevancia": "Atualização de comunicados da Revista da Propriedade Industrial, relevante para profissionais da área.",
+      "motivo_relevancia": "Atualização de comunicados da Revista da Propriedade Industrial, de interesse para profissionais da área.",
       "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/secao-i-comunicados-da-rpi-2895-foi-atualizada"
     },
     {
@@ -690,9 +690,9 @@
       "categoria": "Regulatório e Setorial",
       "titulo": "Sistema de restituição de taxas está temporariamente indisponível",
       "data_publicacao": "2026-06-30T14:03",
-      "resumo": "Sistema de restituição de taxas está temporariamente indisponível.",
+      "resumo": "O sistema de restituição de taxas do INPI está temporariamente indisponível.",
       "relevancia": "Média",
-      "motivo_relevancia": "Aviso de indisponibilidade de serviço, com impacto operacional para usuários do INPI.",
+      "motivo_relevancia": "Indisponibilidade de sistema de restituição de taxas, impactando usuários do INPI.",
       "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/sistema-de-restituicao-de-taxas-esta-temporariamente-indisponivel"
     },
     {
@@ -702,7 +702,7 @@
       "data_publicacao": "2026-06-29T10:27",
       "resumo": "INPI abre credenciamento para profissionais que farão buscas de anterioridade em pedidos de patente.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Abertura de credenciamento para serviço essencial em propriedade intelectual, relevante para advogados e empresas.",
+      "motivo_relevancia": "Abertura de credenciamento para serviço essencial no processo de patentes.",
       "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/inpi-abre-credenciamento-para-profissionais-que-farao-buscas-de-anterioridade-em-pedidos-de-patente"
     },
     {
@@ -712,57 +712,57 @@
       "data_publicacao": "2026-06-30T13:43",
       "resumo": "INPI promove curso sobre valoração de ativos de PI a partir de agosto.",
       "relevancia": "Baixa",
-      "motivo_relevancia": "Notícia sobre capacitação, de interesse para profissionais da área, mas não de alta repercussão.",
+      "motivo_relevancia": "Anúncio de curso de capacitação.",
       "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/inpi-promove-curso-sobre-valoracao-de-ativos-de-pi-a-partir-de-agosto"
     },
     {
       "fonte": "SENACON | Notícias",
       "categoria": "Regulatório e Setorial",
       "titulo": "Paraná recebe Defensoras Populares e conclui implementação da iniciativa em dez estados",
-      "data_publicacao": "2026-06-29T11:03",
+      "data_publicacao": "2026-06-29",
       "resumo": "Programa do MJSP forma lideranças comunitárias, amplia o acesso à Justiça e fortalece a prevenção à violência de gênero.",
-      "relevancia": "Baixa",
-      "motivo_relevancia": "Notícia institucional sobre programa social, de interesse limitado para clientes corporativos.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Expansão de programa de acesso à justiça e prevenção à violência de gênero.",
       "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/parana-recebe-defensoras-populares-e-conclui-implementacao-da-iniciativa-em-dez-estados"
     },
     {
       "fonte": "SENACON | Notícias",
       "categoria": "Regulatório e Setorial",
       "titulo": "Diopi capacita profissionais de segurança pública para operação de drones",
-      "data_publicacao": "2026-06-29T10:08",
+      "data_publicacao": "2026-06-29",
       "resumo": "Curso prepara policiais para o uso de aeronaves remotamente pilotadas em investigações, patrulhamento ostensivo e operações nas regiões Sul e Sudeste.",
-      "relevancia": "Baixa",
-      "motivo_relevancia": "Notícia institucional sobre capacitação, de interesse limitado para clientes corporativos.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Capacitação de profissionais de segurança pública em tecnologia de drones.",
       "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/diopi-capacita-profissionais-de-seguranca-publica-para-operacao-de-drones"
     },
     {
       "fonte": "SENACON | Notícias",
       "categoria": "Regulatório e Setorial",
       "titulo": "MJSP destaca ações integradas de enfrentamento ao feminicídio em evento no Ceará",
-      "data_publicacao": "2026-06-29T10:05",
+      "data_publicacao": "2026-06-29",
       "resumo": "Representantes dos três níveis de governo, da sociedade civil e especialistas debateram estratégias para fortalecer políticas públicas de prevenção e enfrentamento à violência contra as mulheres.",
       "relevancia": "Média",
-      "motivo_relevancia": "Notícia sobre política pública de segurança social, com impacto relevante para a sociedade.",
+      "motivo_relevancia": "Debate sobre estratégias de combate ao feminicídio.",
       "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/mjsp-destaca-acoes-integradas-de-enfrentamento-ao-feminicidio-em-evento-no-ceara"
     },
     {
       "fonte": "SENACON | Notícias",
       "categoria": "Regulatório e Setorial",
       "titulo": "Blitz do Autismo fortalece conscientização e aproxima a segurança pública da comunidade",
-      "data_publicacao": "2026-06-29T09:50",
+      "data_publicacao": "2026-06-29",
       "resumo": "Ação em homenagem ao Dia do Orgulho Autista reuniu diferentes instituições e promoveu atividades de conscientização na capital federal.",
       "relevancia": "Baixa",
-      "motivo_relevancia": "Notícia institucional sobre evento social, de interesse limitado para clientes corporativos.",
+      "motivo_relevancia": "Ação de conscientização social.",
       "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/blitz-do-autismo-fortalece-conscientizacao-e-aproxima-a-seguranca-publica-da-comunidade"
     },
     {
       "fonte": "SENACON | Notícias",
       "categoria": "Regulatório e Setorial",
       "titulo": "MJSP reforça cooperação entre União, estados e municípios em seminário sobre fortalecimento do Susp",
-      "data_publicacao": "2026-06-29T16:09",
+      "data_publicacao": "2026-06-29",
       "resumo": "Secretário nacional de Segurança Pública destaca resultados da integração federativa e defende ampliação da cooperação no combate à criminalidade.",
       "relevancia": "Média",
-      "motivo_relevancia": "Notícia sobre política pública de segurança, com foco na cooperação federativa.",
+      "motivo_relevancia": "Seminário sobre cooperação federativa em segurança pública.",
       "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/mjsp-reforca-cooperacao-entre-uniao-estados-e-municipios-em-seminario-sobre-fortalecimento-do-susp"
     },
     {
@@ -772,7 +772,7 @@
       "data_publicacao": "2026-06-30T15:57",
       "resumo": "Resolução da Diretoria Colegiada determina pagamento de CFEM por plataforma, encerrando processo que demandava análise de 10 mil boletos todos os meses.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Mudança na forma de recolhimento de royalties, com impacto direto para empresas do setor de mineração.",
+      "motivo_relevancia": "Digitalização do recolhimento de royalties, impactando empresas de mineração e gestão tributária.",
       "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/recolhimento-de-royalties-da-mineracao-passara-a-ser-digital-a-partir-de-7-7"
     },
     {
@@ -780,9 +780,9 @@
       "categoria": "Energia e Recursos",
       "titulo": "Resenha Mensal: em maio de 2026, comércio lidera alta de 2,1% no consumo nacional de eletricidade",
       "data_publicacao": "2026-06-30",
-      "resumo": "A mais recente edição da Resenha Mensal mostra que o consumo nacional de energia elétrica foi de 48.021 gigawatts-hora (GWh) em maio de 2026, aumento de 2,1% comparado a maio de 2025. As classes residencial, comercial e outros tiveram aumentos no consumo de 4,2%, 5,1% e 1,2%, respectivamente. Somente a classe industrial apresentou queda no consumo, de 0,7%.",
-      "relevancia": "Alta",
-      "motivo_relevancia": "Divulgação de dados de consumo de eletricidade, relevante para análise do setor de energia e economia.",
+      "resumo": "A mais recente edição da Resenha Mensal mostra que o consumo nacional de energia elétrica foi de 48.021 gigawatts-hora (GWh) em maio de 2026, aumento de 2,1% comparado a maio de 2025.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Divulgação de dados de consumo de eletricidade, relevante para o setor de energia.",
       "url": "https://www.epe.gov.br/pt/imprensa/noticias/resenha-mensal-em-maio-de-2026-comercio-lidera-alta-de-2-1-no-consumo-nacional-de-eletricidade"
     },
     {
@@ -791,8 +791,8 @@
       "titulo": "EPE participa de workshop sobre os resultados preliminares do Plano Estadual de Energia de Goiás",
       "data_publicacao": "2026-06-29",
       "resumo": "A Empresa de Pesquisa Energética (EPE) participou, no dia 25 de junho, em Goiânia (GO), do 1º Workshop sobre os Resultados Preliminares do Plano Estadual de Energia de Goiás (PEEG).",
-      "relevancia": "Média",
-      "motivo_relevancia": "Notícia institucional sobre participação em workshop de planejamento energético, relevante para o setor.",
+      "relevancia": "Baixa",
+      "motivo_relevancia": "Notícia institucional sobre participação em workshop.",
       "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-participa-de-workshop-sobre-os-resultados-preliminares-do-plano-estadual-de-energia-de-goias"
     },
     {
@@ -800,9 +800,9 @@
       "categoria": "Energia e Recursos",
       "titulo": "EPE participa do 11º Seminário de Meio Ambiente e Responsabilidade Social do Setor Elétrico",
       "data_publicacao": "2026-06-29",
-      "resumo": "A Empresa de Pesquisa Energética (EPE) participou da 11ª edição do Seminário de Meio Ambiente e Responsabilidade Social do Setor Elétrico (SMARS 2026), realizada entre 23 e 25 de junho, no Rio de Janeiro, pela seção brasileira da Comissão Internacional de Energia Elétrica (CIGRE-Brasil).",
+      "resumo": "A Empresa de Pesquisa Energética (EPE) participou da 11ª edição do Seminário de Meio Ambiente e Responsabilidade Social do Setor Elétrico (SMARS 2026), realizada entre 23 e 25 de junho, no Rio de Janeiro.",
       "relevancia": "Baixa",
-      "motivo_relevancia": "Notícia institucional sobre participação em seminário, de interesse limitado.",
+      "motivo_relevancia": "Notícia institucional sobre participação em seminário.",
       "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-participa-do-11-seminario-de-meio-ambiente-e-responsabilidade-social-do-setor-eletrico"
     }
   ],
@@ -823,11 +823,11 @@
   "fontes_sem_resultado": [
     {
       "fonte": "Destaques do D.O.U.",
-      "motivo": "Conteúdo da fonte é uma interface de busca, não uma lista de notícias ou atos recentes."
+      "motivo": "Interface de busca do DOU, não fornece itens curados diretamente. Legislação federal coberta por Planalto."
     },
     {
       "fonte": "Receita Federal | Normas",
-      "motivo": "Conteúdo da fonte é uma interface de busca de normas, não uma lista de notícias ou atos recentes."
+      "motivo": "Interface de busca de normas, não fornece itens curados diretamente."
     }
   ],
   "fontes_com_erro_tecnico": []
