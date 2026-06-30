@@ -1,9 +1,9 @@
 {
   "data_execucao": "2026-06-30",
-  "executado_em": "2026-06-30T10:10:14.547987-03:00",
+  "executado_em": "2026-06-30T16:07:36.312941-03:00",
   "janela": {
     "inicio": "2026-06-29T00:00",
-    "fim": "2026-06-30T10:10"
+    "fim": "2026-06-30T16:07"
   },
   "fontes_processadas": [
     {
@@ -14,7 +14,7 @@
     {
       "fonte": "Banco Central | Normas",
       "status": "ok",
-      "tamanho_chars": 9493
+      "tamanho_chars": 9744
     },
     {
       "fonte": "CCEE | Noticias",
@@ -49,7 +49,7 @@
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "status": "ok",
-      "tamanho_chars": 9862
+      "tamanho_chars": 10000
     },
     {
       "fonte": "CGU | Notícias",
@@ -119,14 +119,14 @@
     {
       "fonte": "EPE | Notícias",
       "status": "ok",
-      "tamanho_chars": 9923
+      "tamanho_chars": 10000
     }
   ],
   "resultado": {
-    "itens_aceitos": 42,
+    "itens_aceitos": 80,
     "itens_descartados_pos_validacao": 0,
     "fontes_sem_resultado": 2,
-    "fontes_sem_publicacao_hoje": 9,
+    "fontes_sem_publicacao_hoje": 3,
     "fontes_com_erro_tecnico": 0
   }
 }
