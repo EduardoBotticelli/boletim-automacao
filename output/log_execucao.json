@@ -1,9 +1,9 @@
 {
   "data_execucao": "2026-07-02",
-  "executado_em": "2026-07-02T09:59:36.673933-03:00",
+  "executado_em": "2026-07-02T17:09:50.633937-03:00",
   "janela": {
     "inicio": "2026-07-01T00:00",
-    "fim": "2026-07-02T09:59"
+    "fim": "2026-07-02T17:09"
   },
   "fontes_processadas": [
     {
@@ -19,12 +19,13 @@
     {
       "fonte": "CCEE | Noticias",
       "status": "ok",
-      "tamanho_chars": 2116
+      "tamanho_chars": 3024
     },
     {
       "fonte": "Destaques do D.O.U.",
-      "status": "ok",
-      "tamanho_chars": 2817
+      "status": "erro_tecnico",
+      "tamanho_chars": 372,
+      "detalhe": "conteudo abaixo do minimo"
     },
     {
       "fonte": "Receita Federal | Normas",
@@ -49,7 +50,7 @@
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "status": "ok",
-      "tamanho_chars": 10000
+      "tamanho_chars": 9841
     },
     {
       "fonte": "CGU | Notícias",
@@ -69,7 +70,7 @@
     {
       "fonte": "ONS | Notícias",
       "status": "ok",
-      "tamanho_chars": 5306
+      "tamanho_chars": 5379
     },
     {
       "fonte": "ANEEL | Últimas Notícias",
@@ -79,7 +80,7 @@
     {
       "fonte": "Secretaria de Prêmios e Apostas | Notícias",
       "status": "ok",
-      "tamanho_chars": 10000
+      "tamanho_chars": 9079
     },
     {
       "fonte": "Ministério do Meio Ambiente | Notícias",
@@ -118,15 +119,15 @@
     },
     {
       "fonte": "EPE | Notícias",
-      "status": "ok",
-      "tamanho_chars": 10000
+      "status": "erro",
+      "erro": "Internal Server Error: Failed to scrape. Scrape aborted after exceeding retry limit (document_antibot). - No additional error details provided."
     }
   ],
   "resultado": {
-    "itens_aceitos": 81,
+    "itens_aceitos": 121,
     "itens_descartados_pos_validacao": 0,
-    "fontes_sem_resultado": 2,
-    "fontes_sem_publicacao_hoje": 3,
-    "fontes_com_erro_tecnico": 0
+    "fontes_sem_resultado": 1,
+    "fontes_sem_publicacao_hoje": 1,
+    "fontes_com_erro_tecnico": 2
   }
 }
