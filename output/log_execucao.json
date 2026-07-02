@@ -1,15 +1,15 @@
 {
-  "data_execucao": "2026-07-01",
-  "executado_em": "2026-07-01T10:35:25.151861-03:00",
+  "data_execucao": "2026-07-02",
+  "executado_em": "2026-07-02T09:59:36.673933-03:00",
   "janela": {
-    "inicio": "2026-06-30T00:00",
-    "fim": "2026-07-01T10:35"
+    "inicio": "2026-07-01T00:00",
+    "fim": "2026-07-02T09:59"
   },
   "fontes_processadas": [
     {
       "fonte": "Planalto | Resenha Diaria",
       "status": "ok",
-      "tamanho_chars": 8479
+      "tamanho_chars": 10000
     },
     {
       "fonte": "Banco Central | Normas",
@@ -19,12 +19,12 @@
     {
       "fonte": "CCEE | Noticias",
       "status": "ok",
-      "tamanho_chars": 1882
+      "tamanho_chars": 2116
     },
     {
       "fonte": "Destaques do D.O.U.",
       "status": "ok",
-      "tamanho_chars": 2797
+      "tamanho_chars": 2817
     },
     {
       "fonte": "Receita Federal | Normas",
@@ -69,7 +69,7 @@
     {
       "fonte": "ONS | Notícias",
       "status": "ok",
-      "tamanho_chars": 5322
+      "tamanho_chars": 5306
     },
     {
       "fonte": "ANEEL | Últimas Notícias",
@@ -123,9 +123,9 @@
     }
   ],
   "resultado": {
-    "itens_aceitos": 80,
+    "itens_aceitos": 81,
     "itens_descartados_pos_validacao": 0,
-    "fontes_sem_resultado": 1,
+    "fontes_sem_resultado": 2,
     "fontes_sem_publicacao_hoje": 3,
     "fontes_com_erro_tecnico": 0
   }
