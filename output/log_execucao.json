@@ -1,9 +1,9 @@
 {
-  "data_execucao": "2026-07-08",
-  "executado_em": "2026-07-08T09:22:36.410530-03:00",
+  "data_execucao": "2026-07-09",
+  "executado_em": "2026-07-09T10:51:01.485166-03:00",
   "janela": {
-    "inicio": "2026-07-07T00:00",
-    "fim": "2026-07-08T09:22"
+    "inicio": "2026-07-08T00:00",
+    "fim": "2026-07-09T10:51"
   },
   "fontes_processadas": [
     {
@@ -14,12 +14,12 @@
     {
       "fonte": "Banco Central | Normas",
       "status": "ok",
-      "tamanho_chars": 8251
+      "tamanho_chars": 10000
     },
     {
       "fonte": "CCEE | Noticias",
       "status": "ok",
-      "tamanho_chars": 2210
+      "tamanho_chars": 1907
     },
     {
       "fonte": "Destaques do D.O.U.",
@@ -69,7 +69,7 @@
     {
       "fonte": "ONS | Notícias",
       "status": "ok",
-      "tamanho_chars": 2456
+      "tamanho_chars": 5130
     },
     {
       "fonte": "ANEEL | Últimas Notícias",
@@ -123,61 +123,61 @@
     }
   ],
   "resultado": {
-    "itens_aceitos": 38,
+    "itens_aceitos": 36,
     "itens_descartados_pos_validacao": 0,
     "fontes_sem_resultado": 1,
-    "fontes_sem_publicacao_hoje": 5,
-    "fontes_com_erro_tecnico": 3,
+    "fontes_sem_publicacao_hoje": 8,
+    "fontes_com_erro_tecnico": 2,
     "itens_sem_mapeamento_para_boletins": 0,
     "fontes_sem_mapeamento": [],
     "itens_por_boletim": {
       "trabalhista": {
-        "total": 9,
+        "total": 14,
         "alta": 1,
-        "media": 3,
-        "baixa": 5
+        "media": 5,
+        "baixa": 8
       },
       "tributario": {
-        "total": 16,
+        "total": 28,
         "alta": 6,
-        "media": 5,
-        "baixa": 5
+        "media": 14,
+        "baixa": 8
       },
       "empresarial": {
-        "total": 22,
-        "alta": 10,
-        "media": 7,
-        "baixa": 5
-      },
-      "regulatorio": {
-        "total": 18,
-        "alta": 8,
-        "media": 4,
+        "total": 27,
+        "alta": 6,
+        "media": 15,
         "baixa": 6
       },
+      "regulatorio": {
+        "total": 27,
+        "alta": 7,
+        "media": 12,
+        "baixa": 8
+      },
       "imobiliario": {
-        "total": 15,
-        "alta": 3,
+        "total": 12,
+        "alta": 0,
         "media": 4,
         "baixa": 8
       },
       "ambiental": {
-        "total": 15,
-        "alta": 3,
-        "media": 4,
+        "total": 13,
+        "alta": 0,
+        "media": 5,
         "baixa": 8
       },
       "propriedade-intelectual": {
-        "total": 17,
-        "alta": 2,
-        "media": 8,
-        "baixa": 7
+        "total": 13,
+        "alta": 3,
+        "media": 4,
+        "baixa": 6
       },
       "contencioso": {
-        "total": 16,
-        "alta": 6,
-        "media": 5,
-        "baixa": 5
+        "total": 26,
+        "alta": 5,
+        "media": 13,
+        "baixa": 8
       }
     }
   }
