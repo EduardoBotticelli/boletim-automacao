@@ -1,187 +1,199 @@
 {
-  "data_execucao": "2026-07-09",
+  "data_execucao": "2026-07-10",
   "janela_aplicada": {
-    "inicio": "2026-07-08T00:00",
-    "fim": "2026-07-09T10:51"
+    "inicio": "2026-07-09T00:00",
+    "fim": "2026-07-10T10:13"
   },
   "itens": [
     {
-      "fonte": "Planalto | Resenha Diaria",
-      "categoria": "Legislacao Federal",
-      "titulo": "Lei nº 15.463, de 8.7.2026",
-      "data_publicacao": "2026-07-09",
-      "resumo": "Institui o Dia Nacional dos Congados e Reinados, a ser comemorado anualmente em 7 de outubro.",
-      "relevancia": "Baixa",
-      "motivo_relevancia": "Institui data comemorativa, sem impacto direto a clientes corporativos.",
-      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15463.htm",
-      "boletins": [
-        "trabalhista",
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "imobiliario",
-        "ambiental",
-        "propriedade-intelectual",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "Planalto | Resenha Diaria",
-      "categoria": "Legislacao Federal",
-      "titulo": "Lei nº 15.462, de 8.7.2026",
-      "data_publicacao": "2026-07-09",
-      "resumo": "Altera a Lei de Diretrizes e Bases da Educação Nacional (Lei nº 9.394/1996) para especificar atividades de aperfeiçoamento profissional continuado dos profissionais da educação básica pública.",
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.538, 10/7/2026",
+      "data_publicacao": "2026-07-10T09:42",
+      "resumo": "Divulga nome de pessoas com interesse em exercer o controle de Instituição de Pagamento.",
       "relevancia": "Média",
-      "motivo_relevancia": "Alteração de legislação educacional com impacto em profissionais da educação.",
-      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15462.htm",
+      "motivo_relevancia": "Divulgação de nomes de interessados em controle de Instituição de Pagamento, relevante para o mercado financeiro.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45538",
       "boletins": [
-        "trabalhista",
         "tributario",
         "empresarial",
         "regulatorio",
-        "imobiliario",
-        "ambiental",
-        "propriedade-intelectual",
         "contencioso"
       ]
     },
     {
-      "fonte": "Planalto | Resenha Diaria",
-      "categoria": "Legislacao Federal",
-      "titulo": "Lei nº 15.461, de 7.7.2026",
-      "data_publicacao": "2026-07-08",
-      "resumo": "Confere o título de Capital Nacional da Maior Onda do Brasil ao Município de Jaguaruna, no Estado de Santa Catarina.",
-      "relevancia": "Baixa",
-      "motivo_relevancia": "Confere título honorífico a município, sem impacto direto a clientes corporativos.",
-      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15461.htm",
-      "boletins": [
-        "trabalhista",
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "imobiliario",
-        "ambiental",
-        "propriedade-intelectual",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "Planalto | Resenha Diaria",
-      "categoria": "Legislacao Federal",
-      "titulo": "Lei nº 15.460, de 7.7.2026",
-      "data_publicacao": "2026-07-08",
-      "resumo": "Institui o Dia Nacional do Vinho, a ser comemorado no primeiro domingo do mês de junho.",
-      "relevancia": "Baixa",
-      "motivo_relevancia": "Institui data comemorativa, sem impacto direto a clientes corporativos.",
-      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15460.htm",
-      "boletins": [
-        "trabalhista",
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "imobiliario",
-        "ambiental",
-        "propriedade-intelectual",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "Planalto | Resenha Diaria",
-      "categoria": "Legislacao Federal",
-      "titulo": "Lei nº 15.459, de 7.7.2026",
-      "data_publicacao": "2026-07-08",
-      "resumo": "Altera a Lei nº 7.405, de 12 de novembro de 1985, para estabelecer a utilização do Símbolo Internacional de Acessibilidade.",
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.537, 10/7/2026",
+      "data_publicacao": "2026-07-10T09:39",
+      "resumo": "Divulga nome de pessoas com interesse em exercer o controle de Instituição de Pagamento.",
       "relevancia": "Média",
-      "motivo_relevancia": "Alteração de lei para estabelecer símbolo de acessibilidade, com potencial impacto em infraestrutura e serviços.",
-      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15459.htm",
+      "motivo_relevancia": "Divulgação de nomes de interessados em controle de Instituição de Pagamento, relevante para o mercado financeiro.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45537",
       "boletins": [
-        "trabalhista",
         "tributario",
         "empresarial",
         "regulatorio",
-        "imobiliario",
-        "ambiental",
-        "propriedade-intelectual",
         "contencioso"
       ]
     },
     {
-      "fonte": "Planalto | Resenha Diaria",
-      "categoria": "Legislacao Federal",
-      "titulo": "Decreto nº 13.060, de 7.7.2026",
-      "data_publicacao": "2026-07-08",
-      "resumo": "Altera o Decreto nº 10.172/2019 para modificar a composição do Conselho Fiscal do Serviço Autônomo Embratur – Agência Brasileira de Promoção Internacional do Turismo.",
-      "relevancia": "Baixa",
-      "motivo_relevancia": "Alteração de composição de conselho fiscal de autarquia, de natureza administrativa interna.",
-      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13060.htm",
-      "boletins": [
-        "trabalhista",
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "imobiliario",
-        "ambiental",
-        "propriedade-intelectual",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "Planalto | Resenha Diaria",
-      "categoria": "Legislacao Federal",
-      "titulo": "Decreto nº 13.059, de 7.7.2026",
-      "data_publicacao": "2026-07-08",
-      "resumo": "Remaneja, em caráter temporário, cargo em comissão e funções de confiança para o Ministério das Relações Exteriores.",
-      "relevancia": "Baixa",
-      "motivo_relevancia": "Remanejamento de cargos administrativos, de natureza interna.",
-      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13059.htm",
-      "boletins": [
-        "trabalhista",
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "imobiliario",
-        "ambiental",
-        "propriedade-intelectual",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "Planalto | Resenha Diaria",
-      "categoria": "Legislacao Federal",
-      "titulo": "Decreto nº 13.058, de 7.7.2026",
-      "data_publicacao": "2026-07-08",
-      "resumo": "Altera o Decreto nº 11.198/2022, que aprova a Estrutura Regimental e o Quadro Demonstrativo de Cargos e Funções do Departamento Nacional de Obras Contra as Secas (DNOCS), e remaneja e transforma cargos.",
-      "relevancia": "Baixa",
-      "motivo_relevancia": "Alteração de estrutura regimental e remanejamento de cargos, de natureza administrativa interna.",
-      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13058.htm",
-      "boletins": [
-        "trabalhista",
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "imobiliario",
-        "ambiental",
-        "propriedade-intelectual",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "Planalto | Resenha Diaria",
-      "categoria": "Legislacao Federal",
-      "titulo": "Decreto nº 13.057, de 7.7.2026",
-      "data_publicacao": "2026-07-08",
-      "resumo": "Altera o Decreto nº 2.338/1997, que aprova o Regulamento da Agência Nacional de Telecomunicações (Anatel), e remaneja e transforma cargos em comissão e funções de confiança.",
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.536, 10/7/2026",
+      "data_publicacao": "2026-07-10T09:34",
+      "resumo": "Divulga nomes de pessoas eleitas ou nomeadas para cargos de administração em instituições autorizadas a funcionar, para fins de objeções.",
       "relevancia": "Média",
-      "motivo_relevancia": "Alteração de regulamento de agência reguladora (Anatel) e remanejamento de cargos, com potencial impacto setorial.",
-      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13057.htm",
+      "motivo_relevancia": "Divulgação de nomes para cargos de administração em instituições financeiras, relevante para o setor regulado.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45536",
       "boletins": [
-        "trabalhista",
         "tributario",
         "empresarial",
         "regulatorio",
-        "imobiliario",
-        "ambiental",
-        "propriedade-intelectual",
+        "contencioso"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.535, 10/7/2026",
+      "data_publicacao": "2026-07-10T09:06",
+      "resumo": "Divulga a Taxa Básica Financeira (TBF), o Redutor \"R\" e a Taxa Referencial (TR) relativos a 9 de julho de 2026.",
+      "relevancia": "Alta",
+      "motivo_relevancia": "Divulgação de taxas de referência importantes para o mercado financeiro.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45535",
+      "boletins": [
+        "tributario",
+        "empresarial",
+        "regulatorio",
+        "contencioso"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.534, 9/7/2026",
+      "data_publicacao": "2026-07-09T18:31",
+      "resumo": "Divulga condições para a realização de operações compromissadas com instituições financeiras participantes do módulo Oferta Pública (Ofpub).",
+      "relevancia": "Alta",
+      "motivo_relevancia": "Estabelece condições para operações financeiras, com impacto direto em instituições do mercado.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45534",
+      "boletins": [
+        "tributario",
+        "empresarial",
+        "regulatorio",
+        "contencioso"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.533, 9/7/2026",
+      "data_publicacao": "2026-07-09T18:30",
+      "resumo": "Divulga as condições de oferta pública para a realização de operações de swap para fins de rolagem do vencimento de 03/08/2026.",
+      "relevancia": "Alta",
+      "motivo_relevancia": "Define condições para operações de swap, impactando o mercado de câmbio e derivativos.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45533",
+      "boletins": [
+        "tributario",
+        "empresarial",
+        "regulatorio",
+        "contencioso"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Instrução Normativa BCB n° 761, 9/7/2026",
+      "data_publicacao": "2026-07-09T16:33",
+      "resumo": "Divulga orientações sobre medidas reforçadas para instituições financeiras em operações com países com deficiências nas recomendações do Gafi.",
+      "relevancia": "Alta",
+      "motivo_relevancia": "Instrução normativa com impacto regulatório direto sobre compliance e prevenção à lavagem de dinheiro para instituições financeiras.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Instru%C3%A7%C3%A3o%20Normativa%20BCB&numero=761",
+      "boletins": [
+        "tributario",
+        "empresarial",
+        "regulatorio",
+        "contencioso"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Instrução Normativa BCB n° 760, 9/7/2026",
+      "data_publicacao": "2026-07-09T13:46",
+      "resumo": "Divulga a versão 9.0 do Manual de Experiência do Cliente no Open Finance.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Atualização de manual técnico do Open Finance, com impacto operacional para as instituições.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Instru%C3%A7%C3%A3o%20Normativa%20BCB&numero=760",
+      "boletins": [
+        "tributario",
+        "empresarial",
+        "regulatorio",
+        "contencioso"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Instrução Normativa BCB n° 759, 9/7/2026",
+      "data_publicacao": "2026-07-09T13:26",
+      "resumo": "Divulga a versão 8.0 do Manual de Escopo de Dados e Serviços do Open Finance.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Atualização de manual técnico do Open Finance, com impacto operacional para as instituições.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Instru%C3%A7%C3%A3o%20Normativa%20BCB&numero=759",
+      "boletins": [
+        "tributario",
+        "empresarial",
+        "regulatorio",
+        "contencioso"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.532, 9/7/2026",
+      "data_publicacao": "2026-07-09T11:44",
+      "resumo": "Divulga o resultado de leilões de swap.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Informação sobre o resultado de leilões de swap, relevante para o mercado financeiro.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45532",
+      "boletins": [
+        "tributario",
+        "empresarial",
+        "regulatorio",
+        "contencioso"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.531, 9/7/2026",
+      "data_publicacao": "2026-07-09T11:30",
+      "resumo": "Divulga a realização de leilão de Swap Cambial Tradicional para fins de rolagem.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Anúncio de leilão de swap cambial, relevante para o mercado financeiro.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45531",
+      "boletins": [
+        "tributario",
+        "empresarial",
+        "regulatorio",
+        "contencioso"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.530, 9/7/2026",
+      "data_publicacao": "2026-07-09T11:30",
+      "resumo": "Divulga a realização de leilão de Swap Cambial Tradicional para fins de rolagem.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Anúncio de leilão de swap cambial, relevante para o mercado financeiro.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45530",
+      "boletins": [
+        "tributario",
+        "empresarial",
+        "regulatorio",
         "contencioso"
       ]
     },
@@ -192,7 +204,7 @@
       "data_publicacao": "2026-07-09T10:21",
       "resumo": "Divulga nome de pessoa com interesse em participar do controle de Instituição de Pagamento.",
       "relevancia": "Média",
-      "motivo_relevancia": "Divulgação de interesse em controle de instituição de pagamento, relevante para o setor financeiro.",
+      "motivo_relevancia": "Divulgação de nome de interessado em controle de Instituição de Pagamento, relevante para o mercado financeiro.",
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45529",
       "boletins": [
         "tributario",
@@ -208,7 +220,7 @@
       "data_publicacao": "2026-07-09T09:36",
       "resumo": "Divulga, para fins de recebimento de eventuais objeções, nomes de pessoas eleitas ou nomeadas para ocupar cargos de administração em instituições autorizadas a funcionar.",
       "relevancia": "Média",
-      "motivo_relevancia": "Divulgação de nomes para cargos de administração em instituições financeiras, importante para governança corporativa.",
+      "motivo_relevancia": "Divulgação de nomes para cargos de administração em instituições financeiras, relevante para o setor regulado.",
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45528",
       "boletins": [
         "tributario",
@@ -218,352 +230,116 @@
       ]
     },
     {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.527, 9/7/2026",
-      "data_publicacao": "2026-07-09T09:35",
-      "resumo": "Divulga nome aprovado de pessoas eleitas/nomeadas para cargos de órgãos estatutários ou contratuais de sociedades autorizadas a funcionar pelo Banco Central do Brasil.",
-      "relevancia": "Média",
-      "motivo_relevancia": "Divulgação de nomes aprovados para cargos em instituições financeiras, importante para governança corporativa.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45527",
-      "boletins": [
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.526, 9/7/2026",
-      "data_publicacao": "2026-07-09T09:02",
-      "resumo": "Divulga a Taxa Básica Financeira (TBF), o Redutor 'R' e a Taxa Referencial (TR) relativos a 8 de julho de 2026.",
-      "relevancia": "Alta",
-      "motivo_relevancia": "Divulgação de taxas financeiras de referência, com impacto direto no mercado e operações financeiras.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45526",
-      "boletins": [
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.525, 8/7/2026",
-      "data_publicacao": "2026-07-08T18:31",
-      "resumo": "Divulga as condições de oferta pública para a realização de operações de swap para fins de rolagem do vencimento de 03/08/2026.",
-      "relevancia": "Alta",
-      "motivo_relevancia": "Condições de oferta pública para operações de swap, relevante para o mercado financeiro e gestão de dívida.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45525",
-      "boletins": [
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.524, 8/7/2026",
-      "data_publicacao": "2026-07-08T18:30",
-      "resumo": "Divulga condições para a realização de operações compromissadas com instituições financeiras participantes do módulo Oferta Pública (Ofpub).",
-      "relevancia": "Alta",
-      "motivo_relevancia": "Condições para operações compromissadas, com impacto direto nas instituições financeiras e no mercado.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45524",
-      "boletins": [
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.523, 8/7/2026",
-      "data_publicacao": "2026-07-08T17:40",
-      "resumo": "Divulga nome de pessoas com interesse em exercer o controle de Instituição de Pagamento.",
-      "relevancia": "Média",
-      "motivo_relevancia": "Divulgação de interesse em controle de instituição de pagamento, relevante para o setor financeiro.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45523",
-      "boletins": [
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Instrução Normativa BCB n° 758, 8/7/2026",
-      "data_publicacao": "2026-07-08T16:43",
-      "resumo": "Altera o Manual de Crédito Rural (MCR) para ajustar prazos e orientar instituições financeiras sobre procedimentos de reversão de desclassificação no Sicor.",
-      "relevancia": "Alta",
-      "motivo_relevancia": "Alteração de norma que afeta o crédito rural, com impacto direto em instituições financeiras e produtores.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Instru%C3%A7%C3%A3o%20Normativa%20BCB&numero=758",
-      "boletins": [
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.522, 8/7/2026",
-      "data_publicacao": "2026-07-08T11:46",
-      "resumo": "Divulga o resultado de leilões de swap.",
-      "relevancia": "Média",
-      "motivo_relevancia": "Divulgação de resultados de leilões de swap, com relevância para o mercado financeiro.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45522",
-      "boletins": [
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.521, 8/7/2026",
-      "data_publicacao": "2026-07-08T11:30",
-      "resumo": "Divulga a realização de leilão de Swap Cambial Tradicional para fins de rolagem.",
-      "relevancia": "Média",
-      "motivo_relevancia": "Divulgação de leilão de swap cambial, com impacto no mercado de câmbio.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45521",
-      "boletins": [
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.520, 8/7/2026",
-      "data_publicacao": "2026-07-08T11:30",
-      "resumo": "Divulga a realização de leilão de Swap Cambial Tradicional para fins de rolagem.",
-      "relevancia": "Média",
-      "motivo_relevancia": "Divulgação de leilão de swap cambial, com impacto no mercado de câmbio.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45520",
-      "boletins": [
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Instrução Normativa BCB n° 757, 8/7/2026",
-      "data_publicacao": "2026-07-08T10:39",
-      "resumo": "Estabelece procedimentos para a prestação de informações ao Banco Central do Brasil relativas a contas de depósito em moeda estrangeira.",
-      "relevancia": "Alta",
-      "motivo_relevancia": "Norma que estabelece procedimentos para informações sobre contas em moeda estrangeira, com impacto em instituições financeiras e compliance.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Instru%C3%A7%C3%A3o%20Normativa%20BCB&numero=757",
-      "boletins": [
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.519, 8/7/2026",
-      "data_publicacao": "2026-07-08T09:53",
-      "resumo": "Divulga, para fins de recebimento de eventuais objeções, nomes de pessoas eleitas ou nomeadas para ocupar cargos de administração em instituições autorizadas a funcionar.",
-      "relevancia": "Média",
-      "motivo_relevancia": "Divulgação de nomes para cargos de administração em instituições financeiras, importante para governança corporativa.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45519",
-      "boletins": [
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.518, 8/7/2026",
-      "data_publicacao": "2026-07-08T09:46",
-      "resumo": "Divulga nome aprovado de pessoas eleitas/nomeadas para cargos de órgãos estatutários ou contratuais de sociedades autorizadas a funcionar pelo Banco Central do Brasil.",
-      "relevancia": "Média",
-      "motivo_relevancia": "Divulgação de nomes aprovados para cargos em instituições financeiras, importante para governança corporativa.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45518",
-      "boletins": [
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "contencioso"
-      ]
-    },
-    {
-      "fonte": "CCEE | Noticias",
+      "fonte": "ANP | Notícias",
       "categoria": "Energia e Recursos",
-      "titulo": "Encontro CCEE: Tecnologia, inovação e inteligência artificial marcam programação da tarde do evento",
-      "data_publicacao": "2026-07-08",
-      "resumo": "Especialistas apresentaram soluções que apoiam a transformação digital do mercado de energia e preparam a infraestrutura tecnológica para a abertura do setor.",
+      "titulo": "Inscrições para Jornada Empreendedora PRH-ANP 2026 podem ser feitas até 17 de julho",
+      "data_publicacao": "2026-07-09",
+      "resumo": "Inscrições abertas para a Jornada Empreendedora do PRH-ANP 2026, com prazo até 17 de julho.",
       "relevancia": "Baixa",
-      "motivo_relevancia": "Notícia institucional sobre evento, sem impacto regulatório ou legislativo direto.",
-      "url": "https://www.ccee.org.br/-/encontro-ccee-tecnologia-inovacao-e-inteligencia-artificial-marcam-programacao-da-tarde-do-evento",
+      "motivo_relevancia": "Notícia sobre evento de capacitação, de interesse geral mas com baixo impacto regulatório direto.",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/inscricoes-para-jornada-empreendedora-prh-anp-2026-podem-ser-feitas-ate-17-de-julho",
       "boletins": [
+        "regulatorio",
         "imobiliario",
         "ambiental"
       ]
     },
     {
-      "fonte": "Destaques do D.O.U.",
-      "categoria": "Legislação Federal",
-      "titulo": "RETIFICAÇÃO",
+      "fonte": "ANP | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ANP estará presente na Rio Innovation Week",
       "data_publicacao": "2026-07-09",
-      "resumo": "Retificação no Decreto nº 13.015, de 10 de junho de 2026, referente às assinaturas.",
+      "resumo": "A Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP) participará da Rio Innovation Week, realizando dois seminários.",
       "relevancia": "Baixa",
-      "motivo_relevancia": "Retificação de decreto anterior, de natureza administrativa.",
-      "url": "https://in.gov.br/web/dou/-/retificacao-717843244",
+      "motivo_relevancia": "Notícia sobre participação em evento, de caráter institucional.",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-estara-presente-na-rio-innovation-week",
       "boletins": [
-        "trabalhista",
-        "tributario",
         "regulatorio",
-        "contencioso"
+        "imobiliario",
+        "ambiental"
       ]
     },
     {
-      "fonte": "Destaques do D.O.U.",
-      "categoria": "Legislação Federal",
-      "titulo": "DESPACHOS DO PRESIDENTE DA REPÚBLICA",
+      "fonte": "ANP | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ANP publica cartilha com orientações para postos de combustíveis",
       "data_publicacao": "2026-07-09",
-      "resumo": "Despachos presidenciais referentes à restituição de autógrafos de Projetos de Lei ao Congresso Nacional, que se transformam nas Leis nº 15.462 e nº 15.463, de 8 de julho de 2026.",
-      "relevancia": "Baixa",
-      "motivo_relevancia": "Despachos administrativos sobre o processo legislativo, sem impacto direto a clientes corporativos.",
-      "url": "https://in.gov.br/web/dou/-/despachos-do-presidente-da-republica-717834500",
+      "resumo": "A ANP atualizou e publicou uma cartilha com orientações para postos de combustíveis, detalhando procedimentos da legislação vigente.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Publicação de orientações regulatórias para o setor de combustíveis, impactando operadores.",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-publica-cartilha-com-orientacoes-para-postos-de-combustiveis",
       "boletins": [
-        "trabalhista",
-        "tributario",
         "regulatorio",
-        "contencioso"
+        "imobiliario",
+        "ambiental"
       ]
     },
     {
-      "fonte": "Ministério da Fazenda | Notícias",
-      "categoria": "Tributário",
-      "titulo": "Receita Federal envia comunicações a contribuintes com Selo Sintonia A+",
-      "data_publicacao": "2026-07-08",
-      "resumo": "Público com essa classificação será informado sobre eventual existência de débitos em aberto pela Receita Federal.",
+      "fonte": "ANP | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ANP realiza 2ª edição do workshop Net Zero ANP, sobre hidrogênio de bai",
+      "data_publicacao": "",
+      "resumo": "A ANP realiza a segunda edição do workshop Net Zero ANP, focado em hidrogênio de baixo carbono.",
       "relevancia": "Média",
-      "motivo_relevancia": "Comunicações da Receita Federal sobre débitos, relevante para compliance fiscal de empresas.",
-      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/julho/receita-federal-envia-comunicacoes-a-contribuintes-com-selo-sintonia-a",
+      "motivo_relevancia": "Workshop sobre tema estratégico (hidrogênio de baixo carbono) para o setor de energia. Data não clara, incluído por padrão.",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-realiza-2a-edicao-do-workshop-net-zero-anp-sobre-hidrogenio-de-bai",
       "boletins": [
-        "trabalhista",
-        "tributario",
-        "empresarial"
-      ]
-    },
-    {
-      "fonte": "Ministério da Fazenda | Notícias",
-      "categoria": "Tributário",
-      "titulo": "Receita Federal divulga orientações sobre Adicional da CSLL prevista nas Regras GloBE",
-      "data_publicacao": "2026-07-08",
-      "resumo": "Entidades constituintes devem atentar para normas sobre o pagamento, prestação de informações na DCTFWeb e entrega da obrigação acessória, conforme as Regras GloBE.",
-      "relevancia": "Alta",
-      "motivo_relevancia": "Orientações sobre adicional da CSLL e regras GloBE, com impacto direto em empresas e obrigações fiscais.",
-      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/julho/receita-federal-divulga-orientacoes-sobre-adicional-da-csll-prevista-nas-regras-globe",
-      "boletins": [
-        "trabalhista",
-        "tributario",
-        "empresarial"
-      ]
-    },
-    {
-      "fonte": "Ministério da Fazenda | Notícias",
-      "categoria": "Tributário",
-      "titulo": "Ação integrada combate organização criminosa responsável pela exploração de bets ilegais na Paraíba",
-      "data_publicacao": "2026-07-08",
-      "resumo": "Operação conjunta resultou no bloqueio de R$ 100 milhões em combate à exploração de apostas ilegais na Paraíba.",
-      "relevancia": "Média",
-      "motivo_relevancia": "Notícia sobre operação de combate a crimes financeiros, relevante para o ambiente de negócios e compliance.",
-      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/julho/acao-integrada-combate-organizacao-criminosa-responsavel-pela-exploracao-de-bets-ilegais-na-paraiba",
-      "boletins": [
-        "trabalhista",
-        "tributario",
-        "empresarial"
-      ]
-    },
-    {
-      "fonte": "ANPD | Notícias",
-      "categoria": "Regulatório e Setorial",
-      "titulo": "ANPD instaura processo de sanção contra OS por falha na proteção de dados de 500 mil pacientes",
-      "data_publicacao": "2026-07-08T10:40",
-      "resumo": "Ataque cibernético expôs dados sensíveis de pacientes de unidades geridas pelo Instituto Saúde e Cidadania (Isac), levando à instauração de processo de sanção pela ANPD.",
-      "relevancia": "Alta",
-      "motivo_relevancia": "Instauração de processo de sanção por falha grave na proteção de dados sensíveis, com repercussão para empresas que tratam dados pessoais.",
-      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-instaura-processo-de-sancao-contra-organizacao-social-por-falha-na-protecao-de-dados-de-500-mil-pacientes-de-unidades-publicas-de-saude",
-      "boletins": [
-        "propriedade-intelectual"
-      ]
-    },
-    {
-      "fonte": "CVM | Notícias",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Presidente da CVM participa de reunião com representantes da Abrasca",
-      "data_publicacao": "2026-07-08",
-      "resumo": "Reunião abordou temas relacionados ao mercado de capitais, com a participação do presidente da CVM e representantes da Abrasca.",
-      "relevancia": "Média",
-      "motivo_relevancia": "Notícia institucional sobre reunião com representantes do mercado de capitais, indicando discussões relevantes para o setor.",
-      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/presidente-da-cvm-participa-de-reuniao-com-representantes-da-abrasca",
-      "boletins": [
-        "empresarial",
-        "propriedade-intelectual",
-        "contencioso"
+        "regulatorio",
+        "imobiliario",
+        "ambiental"
       ]
     },
     {
       "fonte": "MME | Notícias",
       "categoria": "Energia e Recursos",
-      "titulo": "Sistema Interligado Nacional: saiba como a rede conecta a geração e o consumo de energia elétrica no Brasil",
-      "data_publicacao": "2026-07-08",
-      "resumo": "Entenda como a rede que conecta usinas, linhas de transmissão e distribuidoras ajuda a garantir o abastecimento de energia elétrica no país.",
-      "relevancia": "Baixa",
-      "motivo_relevancia": "Notícia explicativa sobre o funcionamento do Sistema Interligado Nacional, de caráter informativo.",
-      "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/sistema-interligado-nacional-saiba-como-a-rede-conecta-a-geracao-e-o-consumo-de-energia-eletrica-no-brasil",
+      "titulo": "Resolução do CMSE estabelece novas diretrizes para despacho de geração térmica",
+      "data_publicacao": "2026-07-09",
+      "resumo": "Resolução do Comitê de Monitoramento do Setor Elétrico (CMSE) publicada no DOU estabelece novas diretrizes para despacho de geração térmica.",
+      "relevancia": "Alta",
+      "motivo_relevancia": "Nova resolução com diretrizes para o despacho de geração térmica, impactando o setor elétrico.",
+      "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/resolucao-do-cmse-estabelece-novas-diretrizes-para-despacho-de-geracao-termica",
       "boletins": [
         "imobiliario",
         "ambiental"
       ]
     },
     {
-      "fonte": "Ministério da Agricultura | Notícias",
-      "categoria": "Regulatório e Setorial",
-      "titulo": "Aberturas de mercado para o Brasil na Nigéria e na Mauritânia",
-      "data_publicacao": "2026-07-08",
-      "resumo": "O Ministério da Agricultura e o Ministério das Relações Exteriores anunciam a abertura de novos mercados para produtos brasileiros na Nigéria e na Mauritânia.",
+      "fonte": "MME | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "MME abre consulta pública sobre Plano de Ação Nacional para a Mineração Artesanal e em Pequena Escala de Ouro",
+      "data_publicacao": "2026-07-09",
+      "resumo": "O Ministério de Minas e Energia (MME) abriu consulta pública para o Plano de Ação Nacional para a Mineração Artesanal e em Pequena Escala de Ouro.",
       "relevancia": "Média",
-      "motivo_relevancia": "Abertura de novos mercados para exportações brasileiras, com impacto no agronegócio.",
-      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/aberturas-de-mercado-para-o-brasil-na-nigeria-e-na-mauritan",
+      "motivo_relevancia": "Abertura de consulta pública sobre plano de ação para mineração, relevante para o setor.",
+      "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/mme-abre-consulta-publica-sobre-plano-de-acao-nacional-para-a-mineracao-artesanal-e-em-pequena-escala-de-ouro",
       "boletins": [
+        "imobiliario",
+        "ambiental"
+      ]
+    },
+    {
+      "fonte": "MME | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "EPE e MME publicam Caderno de Requisitos de Energia e Potência do PDE 2032",
+      "data_publicacao": "",
+      "resumo": "A EPE e o MME publicam o Caderno de Requisitos de Energia e Potência do Plano Decenal de Expansão de Energia (PDE) 2032.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Publicação de caderno técnico sobre planejamento energético, relevante para o setor. Data não clara, incluído por padrão.",
+      "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/epe-e-mme-publicam-caderno-de-requisitos-de-energia-e-potencia-do-pde-2032",
+      "boletins": [
+        "imobiliario",
         "ambiental"
       ]
     },
     {
       "fonte": "ANVISA | Notícias",
       "categoria": "Regulatório e Setorial",
-      "titulo": "Confira os destaques da 12ª Reunião Ordinária Pública da Diretoria da Anvisa",
-      "data_publicacao": "2026-07-08",
-      "resumo": "A atualização da composição das vacinas contra a Covid-19 em uso no Brasil foi um dos itens aprovados na 12ª Reunião Ordinária Pública da Diretoria da Anvisa.",
+      "titulo": "Anvisa determina apreensão de lotes falsificados de Mounjaro",
+      "data_publicacao": "2026-07-10",
+      "resumo": "A Anvisa determinou a apreensão de lotes falsificados do medicamento Mounjaro e proibiu a comercialização de produtos sem registro.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Destaques de reunião da diretoria com aprovação de atualização de vacinas, com impacto na saúde pública e setor farmacêutico.",
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/confira-os-destaques-da-12a-reuniao-ordinaria-publica-da-diretoria-da-anvisa",
+      "motivo_relevancia": "Medida de fiscalização com impacto direto na saúde pública e no mercado farmacêutico.",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-determina-apreensao-de-lotes-falsificados-de-mounjaro-1",
       "boletins": [
         "regulatorio",
         "propriedade-intelectual"
@@ -572,12 +348,40 @@
     {
       "fonte": "ANVISA | Notícias",
       "categoria": "Regulatório e Setorial",
-      "titulo": "Anvisa aprova medicamento para tratar doença de Chagas em pacientes pediátricos",
-      "data_publicacao": "2026-07-08",
-      "resumo": "A Anvisa aprovou um novo medicamento indicado para o tratamento da doença de Chagas em pacientes pediátricos, na faixa etária de 0 a 17 anos.",
+      "titulo": "Anvisa convida Visas a participarem de pesquisas estratégicas",
+      "data_publicacao": "2026-07-09",
+      "resumo": "A Anvisa lançou duas pesquisas para aprimorar os instrumentos de inspeção em serviços de saúde e de interesse para a saúde.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Lançamento de pesquisas para aprimorar a fiscalização sanitária, relevante para o setor de saúde.",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-convida-visas-a-participarem-de-pesquisas-estrategicas",
+      "boletins": [
+        "regulatorio",
+        "propriedade-intelectual"
+      ]
+    },
+    {
+      "fonte": "ANVISA | Notícias",
+      "categoria": "Regulatório e Setorial",
+      "titulo": "Anvisa determina recolhimento de suplementos alimentares irregulares",
+      "data_publicacao": "2026-07-09",
+      "resumo": "A Anvisa determinou o recolhimento de suplementos alimentares da marca Alivemed por indícios de composição em desacordo com a regulamentação.",
       "relevancia": "Alta",
-      "motivo_relevancia": "Aprovação de novo medicamento para doença de Chagas em pediatria, com impacto na saúde pública e setor farmacêutico.",
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-aprova-medicamento-para-tratar-doenca-de-chagas-em-pacientes-pediatricos",
+      "motivo_relevancia": "Medida de fiscalização com impacto direto na comercialização de suplementos alimentares.",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-determina-recolhimento-de-suplementos-alimentares-irregulares-1",
+      "boletins": [
+        "regulatorio",
+        "propriedade-intelectual"
+      ]
+    },
+    {
+      "fonte": "ANVISA | Notícias",
+      "categoria": "Regulatório e Setorial",
+      "titulo": "Venda, distribuição, propaganda e uso de suplementos da Bioghen fabricados até 9/4 seguem proibidos",
+      "data_publicacao": "2026-07-09",
+      "resumo": "A Anvisa manteve a proibição de venda, distribuição, propaganda e uso de suplementos da Bioghen fabricados até 9/4, após avaliar pedido de revisão.",
+      "relevancia": "Alta",
+      "motivo_relevancia": "Manutenção de proibição de produtos, com impacto direto na empresa e no mercado de suplementos.",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/venda-distribuicao-propaganda-e-uso-de-suplementos-da-bioghen-fabricados-ate-9-4-seguem-proibidos",
       "boletins": [
         "regulatorio",
         "propriedade-intelectual"
@@ -586,13 +390,28 @@
     {
       "fonte": "EPE | Notícias",
       "categoria": "Energia e Recursos",
-      "titulo": "Em webinário, EPE apresenta base integrada de geração e transmissão de energia",
-      "data_publicacao": "2026-07-08",
-      "resumo": "A EPE lançou em webinário uma base de dados integrada de geração e transmissão de energia, resultado de cooperação técnica para detalhar a rede elétrica.",
-      "relevancia": "Média",
-      "motivo_relevancia": "Lançamento de ferramenta de dados para o setor de energia, relevante para planejamento e análise de mercado.",
-      "url": "https://www.epe.gov.br/pt/imprensa/noticias/em-webinario-epe-apresenta-base-integrada-de-geracao-e-transmissao-de-energia",
+      "titulo": "EPE prevê expansões do Sistema Interligado Nacional no PET/PELP do 1º semestre de 2026",
+      "data_publicacao": "2026-07-09",
+      "resumo": "O PET/PELP apresenta estatísticas referentes à expansão planejada, contextualizando os principais destaques dos estados, com informações sobre as próximas obras a serem licitadas e seus investimentos e benefícios, bem como proporciona uma visão geral sobre os estudos de planejamento em andamento, a serem contemplados nas próximas edições do documento.",
+      "relevancia": "Alta",
+      "motivo_relevancia": "Previsões de expansão do Sistema Interligado Nacional, com impacto no planejamento e investimentos do setor elétrico.",
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-preve-expansoes-do-sistema-interligado-nacional-no-pet-pelp-do-1-semestre-de-2026",
       "boletins": [
+        "imobiliario",
+        "ambiental"
+      ]
+    },
+    {
+      "fonte": "ANM | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Royalties da mineração injetam mais de R$ 477 milhões em estados e municípios produtores",
+      "data_publicacao": "",
+      "resumo": "Royalties da mineração injetaram mais de R$ 477 milhões em estados e municípios produtores.",
+      "relevancia": "Média",
+      "motivo_relevancia": "Notícia sobre o impacto financeiro dos royalties da mineração, relevante para o setor e entes federativos. Data não clara, incluído por padrão.",
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/royalties-da-mineracao-injetam-mais-de-r-477-milhoes-em-estados-e-municipios-produtores/materia-imagm.png/@@images/1189bdeb-4d5a-4252-b",
+      "boletins": [
+        "regulatorio",
         "imobiliario",
         "ambiental"
       ]
@@ -600,52 +419,76 @@
   ],
   "fontes_sem_publicacao_hoje": [
     {
-      "fonte": "B3 | Ofícios e Comunicados",
-      "motivo": "Nenhuma publicação encontrada na janela temporal."
+      "fonte": "CCEE | Noticias",
+      "motivo": "Nenhum resultado encontrado na janela temporal."
     },
     {
-      "fonte": "ANP | Notícias",
-      "motivo": "Nenhuma publicação encontrada na janela temporal."
+      "fonte": "Ministério da Fazenda | Notícias",
+      "motivo": "Nenhum resultado encontrado na janela temporal."
+    },
+    {
+      "fonte": "ANPD | Notícias",
+      "motivo": "Nenhum resultado encontrado na janela temporal."
+    },
+    {
+      "fonte": "CVM | Notícias",
+      "motivo": "Nenhum resultado encontrado na janela temporal."
+    },
+    {
+      "fonte": "B3 | Ofícios e Comunicados",
+      "motivo": "Nenhum resultado encontrado na janela temporal."
     },
     {
       "fonte": "ONS | Notícias",
-      "motivo": "Nenhuma publicação encontrada na janela temporal."
+      "motivo": "Nenhum item encontrado na fonte."
     },
     {
       "fonte": "ANEEL | Últimas Notícias",
-      "motivo": "Nenhuma publicação encontrada na janela temporal."
+      "motivo": "Nenhum resultado encontrado na janela temporal."
     },
     {
       "fonte": "Secretaria de Prêmios e Apostas | Notícias",
-      "motivo": "A fonte explicitamente indica 'Nenhum resultado foi encontrado'."
-    },
-    {
-      "fonte": "COAF | Notícias",
-      "motivo": "Nenhuma publicação encontrada na janela temporal."
+      "motivo": "Nenhum resultado encontrado na fonte."
     },
     {
       "fonte": "INPI | Notícias",
-      "motivo": "A única publicação recente está fora da janela temporal (após 2026-07-09T10:51)."
+      "motivo": "Nenhum resultado encontrado na janela temporal."
     },
     {
-      "fonte": "ANM | Notícias",
-      "motivo": "A única publicação recente está fora da janela temporal (após 2026-07-09T10:51)."
+      "fonte": "Ministério da Agricultura | Notícias",
+      "motivo": "Nenhum resultado encontrado na janela temporal."
     }
   ],
   "fontes_sem_resultado": [
     {
+      "fonte": "Destaques do D.O.U.",
+      "motivo": "Página de busca, não lista publicações diretamente."
+    },
+    {
       "fonte": "Receita Federal | Normas",
-      "motivo": "A fonte é uma interface de busca e não apresenta conteúdo recente diretamente extraível."
-    }
-  ],
-  "fontes_com_erro_tecnico": [
+      "motivo": "Página de busca, não lista publicações diretamente."
+    },
     {
       "fonte": "CGU | Notícias",
       "motivo": "Conteúdo restrito, requer autenticação."
     },
     {
+      "fonte": "COAF | Notícias",
+      "motivo": "Conteúdo não carregado ('Carregando') ou não disponível."
+    },
+    {
       "fonte": "Ministério do Meio Ambiente | Notícias",
       "motivo": "Conteúdo restrito, requer autenticação."
+    },
+    {
+      "fonte": "SENACON | Notícias",
+      "motivo": "Conteúdo restrito, requer autenticação."
+    }
+  ],
+  "fontes_com_erro_tecnico": [
+    {
+      "fonte": "Planalto | Resenha Diaria",
+      "motivo": "Internal Server Error: Failed to scrape. All scraping engines failed to retrieve content from this URL. Engines tried: [index, fire-engine;chrome-cdp, fire-engine(retry);chrome-cdp, fire-engine;tlscli"
     }
   ],
   "boletins_config": {
@@ -787,52 +630,52 @@
   },
   "estatisticas_por_boletim": {
     "trabalhista": {
-      "total": 14,
-      "alta": 1,
-      "media": 5,
-      "baixa": 8
+      "total": 0,
+      "alta": 0,
+      "media": 0,
+      "baixa": 0
     },
     "tributario": {
-      "total": 28,
-      "alta": 6,
-      "media": 14,
-      "baixa": 8
+      "total": 14,
+      "alta": 4,
+      "media": 10,
+      "baixa": 0
     },
     "empresarial": {
-      "total": 27,
-      "alta": 6,
-      "media": 15,
-      "baixa": 6
+      "total": 14,
+      "alta": 4,
+      "media": 10,
+      "baixa": 0
     },
     "regulatorio": {
-      "total": 27,
+      "total": 23,
       "alta": 7,
-      "media": 12,
-      "baixa": 8
+      "media": 14,
+      "baixa": 2
     },
     "imobiliario": {
-      "total": 12,
-      "alta": 0,
-      "media": 4,
-      "baixa": 8
+      "total": 9,
+      "alta": 2,
+      "media": 5,
+      "baixa": 2
     },
     "ambiental": {
-      "total": 13,
-      "alta": 0,
+      "total": 9,
+      "alta": 2,
       "media": 5,
-      "baixa": 8
+      "baixa": 2
     },
     "propriedade-intelectual": {
-      "total": 13,
+      "total": 4,
       "alta": 3,
-      "media": 4,
-      "baixa": 6
+      "media": 1,
+      "baixa": 0
     },
     "contencioso": {
-      "total": 26,
-      "alta": 5,
-      "media": 13,
-      "baixa": 8
+      "total": 14,
+      "alta": 4,
+      "media": 10,
+      "baixa": 0
     }
   }
 }

@@ -1,15 +1,15 @@
 {
-  "data_execucao": "2026-07-09",
-  "executado_em": "2026-07-09T10:51:01.485166-03:00",
+  "data_execucao": "2026-07-10",
+  "executado_em": "2026-07-10T10:13:20.093911-03:00",
   "janela": {
-    "inicio": "2026-07-08T00:00",
-    "fim": "2026-07-09T10:51"
+    "inicio": "2026-07-09T00:00",
+    "fim": "2026-07-10T10:13"
   },
   "fontes_processadas": [
     {
       "fonte": "Planalto | Resenha Diaria",
-      "status": "ok",
-      "tamanho_chars": 10000
+      "status": "erro",
+      "erro": "Internal Server Error: Failed to scrape. All scraping engines failed to retrieve content from this URL. Engines tried: [index, fire-engine;chrome-cdp, fire-engine(retry);chrome-cdp, fire-engine;tlscli"
     },
     {
       "fonte": "Banco Central | Normas",
@@ -19,12 +19,12 @@
     {
       "fonte": "CCEE | Noticias",
       "status": "ok",
-      "tamanho_chars": 1907
+      "tamanho_chars": 1511
     },
     {
       "fonte": "Destaques do D.O.U.",
       "status": "ok",
-      "tamanho_chars": 10000
+      "tamanho_chars": 2817
     },
     {
       "fonte": "Receita Federal | Normas",
@@ -69,7 +69,7 @@
     {
       "fonte": "ONS | Notícias",
       "status": "ok",
-      "tamanho_chars": 5130
+      "tamanho_chars": 2064
     },
     {
       "fonte": "ANEEL | Últimas Notícias",
@@ -79,7 +79,7 @@
     {
       "fonte": "Secretaria de Prêmios e Apostas | Notícias",
       "status": "ok",
-      "tamanho_chars": 739
+      "tamanho_chars": 10000
     },
     {
       "fonte": "Ministério do Meio Ambiente | Notícias",
@@ -109,7 +109,7 @@
     {
       "fonte": "COAF | Notícias",
       "status": "ok",
-      "tamanho_chars": 10000
+      "tamanho_chars": 2125
     },
     {
       "fonte": "ANM | Notícias",
@@ -123,61 +123,61 @@
     }
   ],
   "resultado": {
-    "itens_aceitos": 36,
+    "itens_aceitos": 27,
     "itens_descartados_pos_validacao": 0,
-    "fontes_sem_resultado": 1,
-    "fontes_sem_publicacao_hoje": 8,
-    "fontes_com_erro_tecnico": 2,
+    "fontes_sem_resultado": 6,
+    "fontes_sem_publicacao_hoje": 10,
+    "fontes_com_erro_tecnico": 1,
     "itens_sem_mapeamento_para_boletins": 0,
     "fontes_sem_mapeamento": [],
     "itens_por_boletim": {
       "trabalhista": {
-        "total": 14,
-        "alta": 1,
-        "media": 5,
-        "baixa": 8
+        "total": 0,
+        "alta": 0,
+        "media": 0,
+        "baixa": 0
       },
       "tributario": {
-        "total": 28,
-        "alta": 6,
-        "media": 14,
-        "baixa": 8
+        "total": 14,
+        "alta": 4,
+        "media": 10,
+        "baixa": 0
       },
       "empresarial": {
-        "total": 27,
-        "alta": 6,
-        "media": 15,
-        "baixa": 6
+        "total": 14,
+        "alta": 4,
+        "media": 10,
+        "baixa": 0
       },
       "regulatorio": {
-        "total": 27,
+        "total": 23,
         "alta": 7,
-        "media": 12,
-        "baixa": 8
+        "media": 14,
+        "baixa": 2
       },
       "imobiliario": {
-        "total": 12,
-        "alta": 0,
-        "media": 4,
-        "baixa": 8
+        "total": 9,
+        "alta": 2,
+        "media": 5,
+        "baixa": 2
       },
       "ambiental": {
-        "total": 13,
-        "alta": 0,
+        "total": 9,
+        "alta": 2,
         "media": 5,
-        "baixa": 8
+        "baixa": 2
       },
       "propriedade-intelectual": {
-        "total": 13,
+        "total": 4,
         "alta": 3,
-        "media": 4,
-        "baixa": 6
+        "media": 1,
+        "baixa": 0
       },
       "contencioso": {
-        "total": 26,
-        "alta": 5,
-        "media": 13,
-        "baixa": 8
+        "total": 14,
+        "alta": 4,
+        "media": 10,
+        "baixa": 0
       }
     }
   }
