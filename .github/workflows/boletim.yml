@@ -2,8 +2,8 @@ name: Gerar Boletim Jurídico
 
 on:
   workflow_dispatch:  # permite rodar manualmente
-  schedule:
-    - cron: "0 11 * * 1-5"  # 08h BRT (11h UTC), seg a sex
+ # schedule:
+ #  - cron: "0 11 * * 1-5"  # 08h BRT (11h UTC), seg a sex
 
 permissions:
   contents: write
