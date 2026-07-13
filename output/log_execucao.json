@@ -1,15 +1,15 @@
 {
-  "data_execucao": "2026-07-10",
-  "executado_em": "2026-07-10T10:13:20.093911-03:00",
+  "data_execucao": "2026-07-13",
+  "executado_em": "2026-07-13T10:25:17.884473-03:00",
   "janela": {
-    "inicio": "2026-07-09T00:00",
-    "fim": "2026-07-10T10:13"
+    "inicio": "2026-07-10T00:00",
+    "fim": "2026-07-13T10:25"
   },
   "fontes_processadas": [
     {
       "fonte": "Planalto | Resenha Diaria",
-      "status": "erro",
-      "erro": "Internal Server Error: Failed to scrape. All scraping engines failed to retrieve content from this URL. Engines tried: [index, fire-engine;chrome-cdp, fire-engine(retry);chrome-cdp, fire-engine;tlscli"
+      "status": "ok",
+      "tamanho_chars": 10000
     },
     {
       "fonte": "Banco Central | Normas",
@@ -24,7 +24,7 @@
     {
       "fonte": "Destaques do D.O.U.",
       "status": "ok",
-      "tamanho_chars": 2817
+      "tamanho_chars": 10000
     },
     {
       "fonte": "Receita Federal | Normas",
@@ -69,7 +69,7 @@
     {
       "fonte": "ONS | Notícias",
       "status": "ok",
-      "tamanho_chars": 2064
+      "tamanho_chars": 5297
     },
     {
       "fonte": "ANEEL | Últimas Notícias",
@@ -109,7 +109,7 @@
     {
       "fonte": "COAF | Notícias",
       "status": "ok",
-      "tamanho_chars": 2125
+      "tamanho_chars": 10000
     },
     {
       "fonte": "ANM | Notícias",
@@ -123,11 +123,11 @@
     }
   ],
   "resultado": {
-    "itens_aceitos": 27,
+    "itens_aceitos": 0,
     "itens_descartados_pos_validacao": 0,
-    "fontes_sem_resultado": 6,
-    "fontes_sem_publicacao_hoje": 10,
-    "fontes_com_erro_tecnico": 1,
+    "fontes_sem_resultado": 0,
+    "fontes_sem_publicacao_hoje": 0,
+    "fontes_com_erro_tecnico": 0,
     "itens_sem_mapeamento_para_boletins": 0,
     "fontes_sem_mapeamento": [],
     "itens_por_boletim": {
@@ -138,45 +138,45 @@
         "baixa": 0
       },
       "tributario": {
-        "total": 14,
-        "alta": 4,
-        "media": 10,
+        "total": 0,
+        "alta": 0,
+        "media": 0,
         "baixa": 0
       },
       "empresarial": {
-        "total": 14,
-        "alta": 4,
-        "media": 10,
+        "total": 0,
+        "alta": 0,
+        "media": 0,
         "baixa": 0
       },
       "regulatorio": {
-        "total": 23,
-        "alta": 7,
-        "media": 14,
-        "baixa": 2
+        "total": 0,
+        "alta": 0,
+        "media": 0,
+        "baixa": 0
       },
       "imobiliario": {
-        "total": 9,
-        "alta": 2,
-        "media": 5,
-        "baixa": 2
+        "total": 0,
+        "alta": 0,
+        "media": 0,
+        "baixa": 0
       },
       "ambiental": {
-        "total": 9,
-        "alta": 2,
-        "media": 5,
-        "baixa": 2
+        "total": 0,
+        "alta": 0,
+        "media": 0,
+        "baixa": 0
       },
       "propriedade-intelectual": {
-        "total": 4,
-        "alta": 3,
-        "media": 1,
+        "total": 0,
+        "alta": 0,
+        "media": 0,
         "baixa": 0
       },
       "contencioso": {
-        "total": 14,
-        "alta": 4,
-        "media": 10,
+        "total": 0,
+        "alta": 0,
+        "media": 0,
         "baixa": 0
       }
     }
