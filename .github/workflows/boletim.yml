@@ -34,7 +34,7 @@ jobs:
         run: python scripts/gerar_boletim.py
 
       - name: Gerar Word do boletim
-        run: python scripts/gerar_email_html.py
+        run: python scripts/gerar_html.py
 
       - name: Commit do resultado
         run: |
