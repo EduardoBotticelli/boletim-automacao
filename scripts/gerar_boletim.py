@@ -1,9 +1,11 @@
 """
 Boletim Juridico/Regulatorio - Geracao automatica
-Arquitetura: Firecrawl (scrape) -> Gemini (curadoria) -> mapeamento por area -> JSON
+Arquitetura: Firecrawl (scrape) -> Gemini (curadoria com Filtro 2) -> JSON
 
-VERSAO COM MAPEAMENTO POR AREA (Fase 1)
-Cada item recebe um campo 'boletins' com a lista de areas de destino.
+VERSAO COM 9 BOLETINS + FILTRO 2 (classificacao tematica)
+- Filtro 1: fonte -> boletim (matriz da Alice/Fe)
+- Filtro 2: item -> boletim (Gemini decide pelo tema)
+Item so aparece em boletim se PASSAR nos dois filtros (fonte mapeada E tema confere).
 """
 
 import os
@@ -27,51 +29,117 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 MIN_CONTEUDO_CHARS = 500
 
-# Matriz de mapeamento: nome-da-fonte-no-json -> lista de boletins destino
-# Baseado no arquivo "Boletim - esqueleto 1.docx" da Alice
+# Os 9 boletins da versao revisada (Alice + Fe)
+BOLETINS_DISPONIVEIS = [
+    "trabalhista-empresarial",
+    "direito-tributario",
+    "societario-ma",
+    "mercado-capitais-fundos",
+    "regulatorio-oleo-gas",
+    "imobiliario-infraestrutura",
+    "ambiental-esg",
+    "propriedade-intelectual",
+    "contencioso-civel",
+]
+
+# FILTRO 1: matriz fonte -> boletins onde a fonte esta disponivel
+# Baseado no arquivo revisado "Boletim - esqueleto_Rev.docx"
 FONTE_PARA_BOLETINS = {
-    "Planalto | Resenha Diaria": ["trabalhista", "tributario", "empresarial", "regulatorio", "imobiliario", "ambiental", "propriedade-intelectual", "contencioso"],
-    "Destaques do D.O.U.": ["trabalhista", "tributario", "regulatorio", "contencioso"],
-    "Ministério da Fazenda | Notícias": ["trabalhista", "tributario", "empresarial"],
-    "CGU | Notícias": ["trabalhista", "regulatorio"],
-    "Receita Federal | Normas": ["tributario"],
-    "Banco Central | Normas": ["tributario", "empresarial", "regulatorio", "contencioso"],
-    "COAF | Notícias": ["tributario", "empresarial"],
-    "CVM | Notícias": ["empresarial", "propriedade-intelectual", "contencioso"],
-    "B3 | Ofícios e Comunicados": ["empresarial"],
-    "ANP | Notícias": ["regulatorio", "imobiliario", "ambiental"],
-    "ANEEL | Últimas Notícias": ["regulatorio", "imobiliario", "ambiental"],
-    "ANM | Notícias": ["regulatorio", "imobiliario", "ambiental"],
-    "ANVISA | Notícias": ["regulatorio", "propriedade-intelectual"],
-    "SENACON | Notícias": ["regulatorio", "propriedade-intelectual"],
-    "Secretaria de Prêmios e Apostas | Notícias": ["regulatorio"],
-    "ONS | Notícias": ["imobiliario", "ambiental"],
-    "CCEE | Noticias": ["imobiliario", "ambiental"],
-    "EPE | Notícias": ["imobiliario", "ambiental"],
-    "MME | Notícias": ["imobiliario", "ambiental"],
-    "Ministério do Meio Ambiente | Notícias": ["ambiental"],
-    "Ministério da Agricultura | Notícias": ["ambiental"],
-    "INPI | Notícias": ["propriedade-intelectual"],
-    "ANPD | Notícias": ["propriedade-intelectual"],
+    "Planalto | Resenha Diaria": [
+        "trabalhista-empresarial", "direito-tributario", "societario-ma",
+        "mercado-capitais-fundos", "regulatorio-oleo-gas", "imobiliario-infraestrutura",
+        "ambiental-esg", "propriedade-intelectual", "contencioso-civel"
+    ],
+    "Destaques do D.O.U.": [
+        "trabalhista-empresarial", "direito-tributario",
+        "regulatorio-oleo-gas", "contencioso-civel"
+    ],
+    "Ministério da Fazenda | Notícias": [
+        "trabalhista-empresarial", "direito-tributario", "societario-ma",
+        "mercado-capitais-fundos", "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura", "ambiental-esg",
+        "propriedade-intelectual", "contencioso-civel"
+    ],
+    "CGU | Notícias": [
+        "trabalhista-empresarial", "regulatorio-oleo-gas"
+    ],
+    "Receita Federal | Normas": [
+        "direito-tributario"
+    ],
+    "Banco Central | Normas": [
+        "direito-tributario", "societario-ma", "mercado-capitais-fundos"
+    ],
+    "COAF | Notícias": [
+        "direito-tributario", "mercado-capitais-fundos"
+    ],
+    "CVM | Notícias": [
+        "mercado-capitais-fundos"
+    ],
+    "B3 | Ofícios e Comunicados": [
+        "mercado-capitais-fundos"
+    ],
+    "ANP | Notícias": [
+        "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg"
+    ],
+    "ANEEL | Últimas Notícias": [
+        "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg"
+    ],
+    "ANM | Notícias": [
+        "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg"
+    ],
+    "ANVISA | Notícias": [
+        "regulatorio-oleo-gas"
+    ],
+    "SENACON | Notícias": [
+        "regulatorio-oleo-gas", "propriedade-intelectual", "contencioso-civel"
+    ],
+    "Secretaria de Prêmios e Apostas | Notícias": [
+        "regulatorio-oleo-gas"
+    ],
+    "ONS | Notícias": [
+        "imobiliario-infraestrutura", "ambiental-esg"
+    ],
+    "CCEE | Noticias": [
+        "imobiliario-infraestrutura", "ambiental-esg"
+    ],
+    "EPE | Notícias": [
+        "imobiliario-infraestrutura", "ambiental-esg"
+    ],
+    "MME | Notícias": [
+        "imobiliario-infraestrutura", "ambiental-esg"
+    ],
+    "Ministério do Meio Ambiente | Notícias": [
+        "ambiental-esg"
+    ],
+    "Ministério da Agricultura | Notícias": [
+        "ambiental-esg"
+    ],
+    "INPI | Notícias": [
+        "propriedade-intelectual"
+    ],
+    "ANPD | Notícias": [
+        "propriedade-intelectual"
+    ],
     # Fontes por e-mail (integracao futura):
-    # "Tributário.com": ["tributario", "contencioso"],
-    # "Latin Lawyer": ["empresarial"],
-    # "Agência iNFRA": ["empresarial", "imobiliario"],
-    # "iNFRA Energia": ["imobiliario"],
-    # "IRIB": ["imobiliario"],
-    # "RC Ambiental": ["ambiental"],
+    # "Tributário.com": ["direito-tributario"],
+    # "Latin Lawyer": ["societario-ma", "mercado-capitais-fundos"],
+    # "Agência iNFRA": ["societario-ma", "imobiliario-infraestrutura"],
+    # "iNFRA Energia": ["regulatorio-oleo-gas", "imobiliario-infraestrutura"],
+    # "IRIB": ["imobiliario-infraestrutura"],
+    # "RC Ambiental": ["ambiental-esg"],
 }
 
-# Fontes por e-mail que ainda nao coletamos (usado no aviso do boletim)
+# Fontes por e-mail pendentes por boletim (pra aviso no HTML)
 FONTES_EMAIL_PENDENTES = {
-    "trabalhista": [],
-    "tributario": ["Tributário.com"],
-    "empresarial": ["Latin Lawyer", "Agência iNFRA"],
-    "regulatorio": [],
-    "imobiliario": ["Agência iNFRA", "iNFRA Energia", "IRIB"],
-    "ambiental": ["RC Ambiental"],
+    "trabalhista-empresarial": [],
+    "direito-tributario": ["Tributário.com"],
+    "societario-ma": ["Latin Lawyer", "Agência iNFRA"],
+    "mercado-capitais-fundos": ["Latin Lawyer"],
+    "regulatorio-oleo-gas": ["iNFRA Energia"],
+    "imobiliario-infraestrutura": ["Agência iNFRA", "iNFRA Energia", "IRIB"],
+    "ambiental-esg": ["RC Ambiental"],
     "propriedade-intelectual": [],
-    "contencioso": ["Tributário.com"],
+    "contencioso-civel": ["Tributário.com"],
 }
 
 if not FIRECRAWL_API_KEY:
@@ -101,7 +169,7 @@ print("Boletim - execucao em " + agora.strftime("%Y-%m-%d %H:%M") + " BRT")
 print("Janela: " + janela_inicio + " ate " + janela_fim)
 print("Dia da semana: " + ["seg", "ter", "qua", "qui", "sex", "sab", "dom"][dia_semana])
 
-# Carregar fontes + URLs dinamicas com janela temporal
+# Carregar fontes + URLs dinamicas
 with open(FONTES_PATH, "r", encoding="utf-8") as f:
     fontes = json.load(f)
 
@@ -121,7 +189,6 @@ fontes.insert(2, {"fonte": "CCEE | Noticias", "categoria": "Energia e Recursos",
 print(str(len(fontes)) + " fontes a processar")
 print("")
 
-# Carregar prompt
 with open(PROMPT_PATH, "r", encoding="utf-8") as f:
     prompt_base = f.read()
 
@@ -155,7 +222,7 @@ for i, fonte in enumerate(fontes, 1):
         dossier.append({"fonte": nome, "categoria": categoria, "url": url, "conteudo": "", "erro_tecnico": erro_msg})
         log["fontes_processadas"].append({"fonte": nome, "status": "erro", "erro": erro_msg})
 
-# Configurar e chamar Gemini
+# Chamar Gemini
 print("")
 print("Enviando dossier para o Gemini...")
 
@@ -171,7 +238,6 @@ except Exception as e:
     print("Erro no Gemini: " + str(e))
     sys.exit(1)
 
-# Parse JSON do Gemini
 try:
     boletim_json = json.loads(texto)
     print("Gemini retornou JSON valido")
@@ -186,7 +252,7 @@ for chave in ["fontes_sem_resultado", "fontes_sem_publicacao_hoje", "fontes_com_
     if chave not in boletim_json:
         boletim_json[chave] = []
 
-# Reforco: garantir categoria certa para erros tecnicos
+# Reforco: garantir categoria correta para erros tecnicos
 fontes_com_erro_no_dossier = [{"fonte": d["fonte"], "motivo": d.get("erro_tecnico", "erro tecnico")} for d in dossier if "erro_tecnico" in d]
 nomes_com_erro = set(f["fonte"] for f in fontes_com_erro_no_dossier)
 
@@ -225,49 +291,59 @@ for item in itens_originais:
         item["data_publicacao"] = ""
         itens_validados.append(item)
 
-# NOVO: enriquecimento com mapeamento fonte -> boletins
-sem_mapeamento = set()
+# APLICAR FILTRO 1 + FILTRO 2 combinados
+# Filtro 1: fonte deve estar mapeada para o boletim
+# Filtro 2: Gemini classificou item como pertencente ao boletim
+# Resultado final: intersecao dos dois
+
+filtro2_removido_por_boletim = {}  # log: quando Gemini quis mas F1 barrou
 for item in itens_validados:
     fonte_item = item.get("fonte", "")
-    boletins_destino = FONTE_PARA_BOLETINS.get(fonte_item, [])
-    item["boletins"] = boletins_destino
-    if not boletins_destino:
-        sem_mapeamento.add(fonte_item)
+    boletins_permitidos_por_fonte = set(FONTE_PARA_BOLETINS.get(fonte_item, []))
+    boletins_sugeridos_por_gemini = set(item.get("boletins_confirmados", []))
+    
+    # Intersecao: item so entra se AMBOS os filtros aprovarem
+    boletins_finais = list(boletins_permitidos_por_fonte & boletins_sugeridos_por_gemini)
+    
+    # Log de bloqueios (Gemini quis colocar mas Filtro 1 impediu)
+    boletins_bloqueados = boletins_sugeridos_por_gemini - boletins_permitidos_por_fonte
+    if boletins_bloqueados:
+        titulo_curto = item.get("titulo", "")[:60]
+        for b in boletins_bloqueados:
+            filtro2_removido_por_boletim.setdefault(b, []).append(titulo_curto)
+    
+    item["boletins"] = boletins_finais  # campo final (compat com gerar_email_html.py)
 
 boletim_json["itens"] = itens_validados
 
-# Metadados dos boletins
+# Metadados
 boletim_json["boletins_config"] = {
-    "boletins_disponiveis": ["trabalhista", "tributario", "empresarial", "regulatorio", "imobiliario", "ambiental", "propriedade-intelectual", "contencioso"],
+    "boletins_disponiveis": BOLETINS_DISPONIVEIS,
     "fontes_email_pendentes": FONTES_EMAIL_PENDENTES,
-    "mapeamento_fonte_boletim": FONTE_PARA_BOLETINS
+    "mapeamento_fonte_boletim": FONTE_PARA_BOLETINS,
 }
 
 # Estatisticas por boletim
 stats_por_boletim = {}
-for slug in boletim_json["boletins_config"]["boletins_disponiveis"]:
+for slug in BOLETINS_DISPONIVEIS:
     itens_do_boletim = [i for i in itens_validados if slug in i.get("boletins", [])]
-    stats_por_boletim[slug] = {
-        "total": len(itens_do_boletim),
-        "alta": len([i for i in itens_do_boletim if i.get("relevancia") == "Alta"]),
-        "media": len([i for i in itens_do_boletim if i.get("relevancia") in ["Media", "Média"]]),
-        "baixa": len([i for i in itens_do_boletim if i.get("relevancia") == "Baixa"]),
-    }
+    stats_por_boletim[slug] = {"total": len(itens_do_boletim)}
 boletim_json["estatisticas_por_boletim"] = stats_por_boletim
 
-# Salvar arquivos
+# Log
 log["resultado"] = {
     "itens_aceitos": len(itens_validados),
     "itens_descartados_pos_validacao": len(itens_descartados),
     "fontes_sem_resultado": len(boletim_json.get("fontes_sem_resultado", [])),
     "fontes_sem_publicacao_hoje": len(boletim_json.get("fontes_sem_publicacao_hoje", [])),
     "fontes_com_erro_tecnico": len(boletim_json.get("fontes_com_erro_tecnico", [])),
-    "itens_sem_mapeamento_para_boletins": len(sem_mapeamento),
-    "fontes_sem_mapeamento": sorted(list(sem_mapeamento)),
-    "itens_por_boletim": stats_por_boletim
+    "itens_por_boletim": stats_por_boletim,
+    "filtro2_bloqueios": {k: len(v) for k, v in filtro2_removido_por_boletim.items()},
 }
 if itens_descartados:
     log["itens_descartados"] = itens_descartados
+if filtro2_removido_por_boletim:
+    log["filtro2_bloqueios_detalhe"] = filtro2_removido_por_boletim
 
 with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
     json.dump(boletim_json, f, ensure_ascii=False, indent=2)
@@ -279,17 +355,13 @@ print("")
 print("Boletim salvo em: " + OUTPUT_PATH)
 print("  Itens aceitos: " + str(len(itens_validados)))
 print("  Itens descartados: " + str(len(itens_descartados)))
-print("  Fontes sem publicacao hoje: " + str(log["resultado"]["fontes_sem_publicacao_hoje"]))
-print("  Fontes sem resultado: " + str(log["resultado"]["fontes_sem_resultado"]))
-print("  Fontes com erro tecnico: " + str(log["resultado"]["fontes_com_erro_tecnico"]))
 print("")
-print("Distribuicao por boletim:")
-for slug in boletim_json["boletins_config"]["boletins_disponiveis"]:
-    s = stats_por_boletim[slug]
-    print("  " + slug + ": " + str(s["total"]) + " itens (Alta:" + str(s["alta"]) + " Media:" + str(s["media"]) + " Baixa:" + str(s["baixa"]) + ")")
-if sem_mapeamento:
-    print("")
-    print("AVISO: fontes sem mapeamento para boletim:")
-    for f in sorted(sem_mapeamento):
-        print("  - " + f)
+print("Distribuicao por boletim (F1 + F2):")
+for slug in BOLETINS_DISPONIVEIS:
+    total = stats_por_boletim[slug]["total"]
+    bloqueios = len(filtro2_removido_por_boletim.get(slug, []))
+    extra = ""
+    if bloqueios > 0:
+        extra = " (F1 bloqueou " + str(bloqueios) + " sugestoes do F2)"
+    print("  " + slug + ": " + str(total) + " itens" + extra)
 print("Concluido")
