@@ -1,17 +1,24 @@
 """
-Gera boletim.html a partir de boletim.json
-Estilo: inspirado no boletim oficial Lobo de Rizzo (verde escuro / branding)
-Uso: este script roda APOS gerar_boletim.py no mesmo workflow
+Gera 9 e-mails HTML de validacao a partir de boletim.json (um por boletim).
+
+Cada HTML e um e-mail completo pronto pra colar no corpo do Outlook, com:
+- Cabecalho verde LDR
+- Bloco de contexto explicando que e uma VALIDACAO
+- Explicacao do criterio de filtragem (Filtro 1 + Filtro 2 + descricoes site)
+- Boletim propriamente dito com os itens agrupados por fonte
+- Rodape com pedido de feedback
+
+Uso: roda APOS gerar_boletim.py no mesmo workflow.
+Saida: output/email_<slug>.html
 """
 
 import os
 import json
 import datetime
-from zoneinfo import ZoneInfo
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INPUT_PATH = os.path.join(BASE_DIR, "output", "boletim.json")
-OUTPUT_HTML = os.path.join(BASE_DIR, "output", "boletim.html")
+OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 
 if not os.path.exists(INPUT_PATH):
     raise SystemExit("ERRO: boletim.json nao encontrado em " + INPUT_PATH)
@@ -20,13 +27,28 @@ with open(INPUT_PATH, "r", encoding="utf-8") as f:
     boletim = json.load(f)
 
 data_exec_iso = boletim.get("data_execucao", "")
-itens = boletim.get("itens", [])
+todos_itens = boletim.get("itens", [])
 sem_publicacao = boletim.get("fontes_sem_publicacao_hoje", [])
 sem_resultado = boletim.get("fontes_sem_resultado", [])
 com_erro = boletim.get("fontes_com_erro_tecnico", [])
 janela = boletim.get("janela_aplicada", {})
+config = boletim.get("boletins_config", {})
+fontes_email_pendentes = config.get("fontes_email_pendentes", {})
+mapeamento_fonte = config.get("mapeamento_fonte_boletim", {})
 
-# Formatar data por extenso em portugues
+# Nomes bonitos por slug
+NOMES_BONITOS = {
+    "trabalhista-empresarial": "Trabalhista Empresarial",
+    "direito-tributario": "Direito Tributario",
+    "societario-ma": "Societario, Fusoes e Aquisicoes",
+    "mercado-capitais-fundos": "Mercado de Capitais e Fundos de Investimento",
+    "regulatorio-oleo-gas": "Regulatorio e Oleo e Gas",
+    "imobiliario-infraestrutura": "Negocios Imobiliarios e Infraestrutura",
+    "ambiental-esg": "Ambiental e ESG",
+    "propriedade-intelectual": "Propriedade Intelectual, Tecnologia e Privacidade",
+    "contencioso-civel": "Contencioso Civel",
+}
+
 meses_pt = ["janeiro", "fevereiro", "marco", "abril", "maio", "junho",
             "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
 try:
@@ -37,231 +59,173 @@ except Exception:
     data_extenso = data_exec_iso
     data_curta = data_exec_iso
 
-# Agrupar itens por categoria
-categorias = {}
-ordem_categorias = []
-for item in itens:
-    cat = item.get("categoria", "Outros")
-    if cat not in categorias:
-        categorias[cat] = []
-        ordem_categorias.append(cat)
-    categorias[cat].append(item)
 
-# Top destaques (5 itens de Alta relevancia)
-destaques = [i for i in itens if i.get("relevancia") == "Alta"][:5]
-
-# Contadores
-n_total = len(itens)
-n_alta = sum(1 for i in itens if i.get("relevancia") == "Alta")
-n_media = sum(1 for i in itens if i.get("relevancia") == "Media" or i.get("relevancia") == "Média")
-n_baixa = sum(1 for i in itens if i.get("relevancia") == "Baixa")
-
-# Helpers HTML
 def escape_html(s):
     if s is None:
         return ""
-    return (str(s)
-            .replace("&", "&amp;")
-            .replace("<", "&lt;")
-            .replace(">", "&gt;")
-            .replace('"', "&quot;"))
+    return (str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;"))
 
-def badge_relevancia(rel):
-    rel_norm = rel.replace("Média", "Media") if rel else ""
-    cores = {
-        "Alta": "#c0392b",
-        "Media": "#d68910",
-        "Baixa": "#7f8c8d"
-    }
-    cor = cores.get(rel_norm, "#7f8c8d")
-    return '<span style="background:' + cor + ';color:#fff;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">' + escape_html(rel or "") + '</span>'
 
 def render_item(item):
+    """Card de item sem badge de tipo/relevancia — apenas titulo, resumo, data, link."""
     titulo = escape_html(item.get("titulo", ""))
     resumo = escape_html(item.get("resumo", ""))
     url = escape_html(item.get("url", "#"))
     data_pub = escape_html(item.get("data_publicacao", "") or "data nao identificada")
-    motivo = escape_html(item.get("motivo_relevancia", ""))
-    rel = item.get("relevancia", "")
+    motivo = escape_html(item.get("motivo_filtragem", ""))
+
     return '''
-    <div style="background:#fff;border-left:4px solid #1a4d2e;padding:16px 20px;margin:12px 0;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:12px;flex-wrap:wrap;">
-            <h3 style="margin:0;font-size:15px;color:#1a1a1a;font-weight:600;line-height:1.4;flex:1;">''' + titulo + '''</h3>
-            <div style="white-space:nowrap;">''' + badge_relevancia(rel) + '''</div>
+    <div style="background:#fff;border-left:4px solid #1a4d2e;padding:14px 18px;margin:10px 0;border-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,0.06);">
+        <h3 style="margin:0 0 6px 0;font-size:14.5px;color:#1a1a1a;font-weight:600;line-height:1.4;">''' + titulo + '''</h3>
+        <p style="margin:4px 0 8px 0;font-size:13px;color:#4a4a4a;line-height:1.5;">''' + resumo + '''</p>
+        <div style="font-size:12px;color:#7a7a7a;border-top:1px solid #eee;padding-top:6px;">
+            <span style="margin-right:14px;"><strong>Publicado:</strong> ''' + data_pub + '''</span>
+            ''' + url + '''Acessar materia &raquo;</a>
         </div>
-        <p style="margin:6px 0 10px 0;font-size:13.5px;color:#4a4a4a;line-height:1.6;">''' + resumo + '''</p>
-        <div style="font-size:12px;color:#7a7a7a;border-top:1px solid #eee;padding-top:8px;">
-            <span style="display:inline-block;margin-right:14px;"><strong>Publicado:</strong> ''' + data_pub + '''</span>
-            <a href="''' + url + '''" style="color:#1a4d2e;text-decoration:none;font-weight:600;">Acessar materia &raquo;</a>
-        </div>
-        <div style="font-size:11.5px;color:#999;margin-top:6px;font-style:italic;">''' + motivo + '''</div>
+        <div style="font-size:11px;color:#999;margin-top:4px;font-style:italic;">Motivo da filtragem: ''' + motivo + '''</div>
     </div>
     '''
 
-# Montar HTML
-html_parts = []
 
-html_parts.append('''<!DOCTYPE html>
+def gerar_email_html(slug, nome_boletim, itens, fontes_desta_area, aviso_email_pendente):
+    """Gera 1 email HTML completo pra este boletim."""
+    parts = []
+
+    parts.append('''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Boletim Juridico - ''' + data_curta + '''</title>
+<title>Boletim ''' + escape_html(nome_boletim) + ''' - Validacao</title>
 </head>
 <body style="margin:0;padding:0;background:#f0f2f5;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:#2c3e50;">
 <div style="max-width:780px;margin:0 auto;background:#fafafa;">
 
-<!-- CAPA -->
-<div style="background:linear-gradient(135deg,#0d3320 0%,#1a4d2e 50%,#2d8659 100%);padding:48px 36px;color:#fff;position:relative;">
-    <div style="position:absolute;top:24px;right:36px;background:#2d8659;width:80px;height:80px;border-radius:50%;opacity:0.4;"></div>
-    <div style="position:absolute;top:60px;right:80px;background:#5cb88a;width:40px;height:40px;border-radius:50%;opacity:0.3;"></div>
-    <h1 style="margin:0;font-size:48px;font-weight:300;letter-spacing:-1px;color:#fff;">Boletim</h1>
-    <div style="height:3px;width:60px;background:#5cb88a;margin:16px 0;"></div>
-    <p style="margin:8px 0 0 0;font-size:13px;color:#a8d8b9;letter-spacing:1px;text-transform:uppercase;">Curadoria automatizada de fontes oficiais</p>
+<!-- CABECALHO VERDE LDR -->
+<div style="background:linear-gradient(135deg,#0d3320 0%,#1a4d2e 50%,#2d8659 100%);padding:32px 32px 24px 32px;color:#fff;">
+    <div style="font-size:11px;color:#a8d8b9;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">Versao de validacao</div>
+    <h1 style="margin:0;font-size:32px;font-weight:300;letter-spacing:-0.5px;color:#fff;">Boletim</h1>
+    <div style="height:2px;width:40px;background:#5cb88a;margin:10px 0;"></div>
+    <p style="margin:6px 0 0 0;font-size:16px;color:#fff;font-weight:500;">''' + escape_html(nome_boletim) + '''</p>
+    <p style="margin:4px 0 0 0;font-size:13px;color:#a8d8b9;">''' + data_extenso + '''</p>
 </div>
 
-<!-- BARRA DA DATA -->
-<div style="background:#2c2c2c;color:#fff;padding:18px 36px;text-align:right;">
-    <span style="font-size:16px;font-weight:300;">''' + data_extenso + '''</span>
-    <span style="color:#5cb88a;margin:0 12px;">|</span>
-    <span style="font-size:13px;color:#bbb;">Rascunho automatizado</span>
+<!-- BLOCO DE CONTEXTO (destaque amarelo) -->
+<div style="background:#fef5e7;border-left:4px solid #d68910;padding:18px 24px;color:#5d4400;font-size:13.5px;line-height:1.6;">
+    <p style="margin:0 0 10px 0;"><strong>Fe, boa tarde.</strong></p>
+    <p style="margin:0 0 10px 0;">Este e um <strong>teste de validacao</strong> do sistema automatizado de curadoria de boletins juridicos. Envio para voce ver como o boletim de <strong>''' + escape_html(nome_boletim) + '''</strong> ficaria com a nova estrutura e o novo criterio de filtragem por tema.</p>
+    <p style="margin:0 0 6px 0;"><strong>Gostaria da sua avaliacao sobre:</strong></p>
+    <ul style="margin:6px 0 12px 20px;padding:0;">
+        <li style="margin-bottom:4px;">Os itens que apareceram fazem sentido para essa area?</li>
+        <li style="margin-bottom:4px;">Algum item importante ficou de fora?</li>
+        <li style="margin-bottom:4px;">Ha vocabulario tipico da area que o sistema poderia reconhecer melhor?</li>
+    </ul>
 </div>
 
-<!-- ESTATISTICAS -->
-<div style="background:#fff;padding:24px 36px;border-bottom:1px solid #e5e5e5;display:flex;justify-content:space-around;text-align:center;flex-wrap:wrap;gap:12px;">
-    <div style="min-width:90px;">
-        <div style="font-size:32px;font-weight:300;color:#1a4d2e;">''' + str(n_total) + '''</div>
-        <div style="font-size:11px;text-transform:uppercase;color:#888;letter-spacing:1px;">Itens totais</div>
-    </div>
-    <div style="min-width:90px;">
-        <div style="font-size:32px;font-weight:300;color:#c0392b;">''' + str(n_alta) + '''</div>
-        <div style="font-size:11px;text-transform:uppercase;color:#888;letter-spacing:1px;">Alta relevancia</div>
-    </div>
-    <div style="min-width:90px;">
-        <div style="font-size:32px;font-weight:300;color:#d68910;">''' + str(n_media) + '''</div>
-        <div style="font-size:11px;text-transform:uppercase;color:#888;letter-spacing:1px;">Media</div>
-    </div>
-    <div style="min-width:90px;">
-        <div style="font-size:32px;font-weight:300;color:#7f8c8d;">''' + str(n_baixa) + '''</div>
-        <div style="font-size:11px;text-transform:uppercase;color:#888;letter-spacing:1px;">Baixa</div>
-    </div>
+<!-- COMO FUNCIONA O CRITERIO -->
+<div style="background:#fff;padding:18px 24px;border-bottom:1px solid #e5e5e5;font-size:12.5px;color:#555;line-height:1.6;">
+    <p style="margin:0 0 8px 0;color:#1a4d2e;"><strong>Como funciona o criterio de filtragem</strong></p>
+    <p style="margin:0 0 6px 0;">O sistema aplica <strong>2 filtros combinados</strong> para decidir se um item entra neste boletim:</p>
+    <p style="margin:0 0 4px 0;"><strong>1. Filtro por fonte:</strong> apenas fontes mapeadas para esta area (definidas por Alice/Fe na revisao) podem contribuir com itens.</p>
+    <p style="margin:0 0 4px 0;"><strong>2. Filtro por tema:</strong> dentro dessas fontes, a IA classifica cada item usando as <strong>descricoes oficiais das areas de atuacao do LDR</strong> (site institucional) combinadas com palavras-chave especificas.</p>
+    <p style="margin:8px 0 0 0;font-style:italic;color:#888;">Assim, um item so aparece aqui se a fonte estiver mapeada para esta area <strong>e</strong> o conteudo realmente tratar de tema pertinente.</p>
+</div>
+
+<!-- FONTES CONFIGURADAS PARA ESTA AREA -->
+<div style="background:#f4f7f5;padding:14px 24px;border-bottom:1px solid #e5e5e5;font-size:12px;color:#666;">
+    <strong style="color:#1a4d2e;">Fontes disponibilizadas para este boletim ('''+ str(len(fontes_desta_area)) + '''):</strong><br>
+    ''' + escape_html(", ".join(fontes_desta_area) if fontes_desta_area else "Nenhuma") + '''
 </div>
 ''')
 
-# SECAO DESTAQUES
-if destaques:
-    html_parts.append('''
-<div style="background:#1a4d2e;padding:20px 36px;color:#fff;">
-    <h2 style="margin:0;font-size:22px;font-weight:400;letter-spacing:-0.5px;">Destaques do dia</h2>
-    <p style="margin:4px 0 0 0;font-size:13px;color:#a8d8b9;">Selecionados por alta relevancia para o escritorio</p>
+    # Aviso sobre fontes por email pendentes
+    if aviso_email_pendente:
+        parts.append('''
+<div style="background:#fff3cd;border-left:4px solid #d68910;padding:12px 20px;color:#7d5a10;font-size:12.5px;">
+    <strong>Aviso:</strong> As seguintes fontes desta area chegam por e-mail e ainda nao estao integradas ao sistema (integracao futura): ''' + escape_html(", ".join(aviso_email_pendente)) + '''.
 </div>
-<div style="padding:20px 28px 8px 28px;">
 ''')
-    for item in destaques:
-        titulo = escape_html(item.get("titulo", ""))
-        resumo = escape_html(item.get("resumo", ""))
-        url = escape_html(item.get("url", "#"))
-        fonte = escape_html(item.get("fonte", ""))
-        html_parts.append('''
-    <div style="background:#fff;border:1px solid #d4e6d9;padding:14px 18px;margin:10px 0;border-radius:6px;">
-        <div style="font-size:11px;color:#1a4d2e;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">''' + fonte + '''</div>
-        <a href="''' + url + '''" style="color:#1a1a1a;text-decoration:none;">
-            <h3 style="margin:0 0 6px 0;font-size:15px;font-weight:600;line-height:1.4;">''' + titulo + '''</h3>
-        </a>
-        <p style="margin:0;font-size:13px;color:#555;line-height:1.5;">''' + resumo + '''</p>
-    </div>
-''')
-    html_parts.append('</div>')
 
-# INDICE
-html_parts.append('''
-<div style="background:#1a4d2e;padding:20px 36px;color:#fff;">
-    <h2 style="margin:0;font-size:22px;font-weight:400;letter-spacing:-0.5px;">Indice por categoria</h2>
+    # BOLETIM VAZIO
+    if not itens:
+        parts.append('''
+<div style="padding:40px 28px;text-align:center;color:#888;background:#fff;">
+    <p style="font-size:15px;margin:0 0 6px 0;">Nenhum item classificado para este boletim na janela temporal atual.</p>
+    <p style="font-size:12.5px;margin:0;font-style:italic;">Isso pode ocorrer em dias sem publicacoes tematicas ou por o filtro ter sido restritivo demais (justamente o que queremos validar com voce).</p>
 </div>
-<div style="padding:18px 28px;background:#fff;border-bottom:1px solid #e5e5e5;">
-    <ul style="list-style:none;padding:0;margin:0;">
 ''')
-for cat in ordem_categorias:
-    cat_id = cat.lower().replace(" ", "-").replace("/", "-").replace("ç", "c").replace("ã", "a").replace("é", "e").replace("ó", "o")
-    qtd = len(categorias[cat])
-    html_parts.append('<li style="padding:8px 0;border-bottom:1px dotted #ddd;"><a href="#' + cat_id + '" style="color:#1a4d2e;text-decoration:none;font-weight:600;font-size:14px;">' + escape_html(cat) + '</a> <span style="color:#888;font-size:12px;float:right;">' + str(qtd) + ' itens</span></li>')
-html_parts.append('</ul></div>')
+    else:
+        # ITENS AGRUPADOS POR FONTE
+        parts.append('<div style="background:#fff;padding:0 24px 20px 24px;">')
 
-# SECOES POR CATEGORIA
-for cat in ordem_categorias:
-    cat_id = cat.lower().replace(" ", "-").replace("/", "-").replace("ç", "c").replace("ã", "a").replace("é", "e").replace("ó", "o")
-    html_parts.append('''
-<div id="''' + cat_id + '''" style="background:#1a4d2e;padding:18px 36px;color:#fff;margin-top:24px;">
-    <h2 style="margin:0;font-size:20px;font-weight:400;letter-spacing:-0.5px;">''' + escape_html(cat) + '''</h2>
+        fontes_com_itens = {}
+        ordem_fontes = []
+        for item in itens:
+            fonte = item.get("fonte", "Sem fonte")
+            if fonte not in fontes_com_itens:
+                fontes_com_itens[fonte] = []
+                ordem_fontes.append(fonte)
+            fontes_com_itens[fonte].append(item)
+
+        for fonte in ordem_fontes:
+            parts.append('<div style="margin:20px 0 6px 0;font-size:12.5px;font-weight:700;color:#1a4d2e;letter-spacing:0.5px;text-transform:uppercase;border-bottom:2px solid #1a4d2e;padding-bottom:4px;">' + escape_html(fonte) + ' (' + str(len(fontes_com_itens[fonte])) + ')</div>')
+            for item in fontes_com_itensparts.append(render_item(item))
+
+        parts.append('</div>')
+
+    # RODAPE
+    janela_ini = escape_html(janela.get("inicio", ""))
+    janela_fim = escape_html(janela.get("fim", ""))
+
+    parts.append('''
+<div style="background:#f4f7f5;padding:16px 24px;border-top:1px solid #e5e5e5;font-size:11.5px;color:#888;line-height:1.6;">
+    <p style="margin:0 0 4px 0;"><strong>Janela analisada:</strong> ''' + janela_ini + ''' ate ''' + janela_fim + '''</p>
+    <p style="margin:0;">Sistema em fase de validacao. Feedback sao muito bem-vindos e serao usados para calibrar o filtro.</p>
 </div>
-<div style="padding:8px 28px 16px 28px;background:#f7f8fa;">
-''')
 
-    # Agrupar itens dentro da categoria por fonte
-    fontes_na_cat = {}
-    ordem_fontes = []
-    for item in categorias[cat]:
-        fonte = item.get("fonte", "Sem fonte")
-        if fonte not in fontes_na_cat:
-            fontes_na_cat[fonte] = []
-            ordem_fontes.append(fonte)
-        fontes_na_cat[fonte].append(item)
-
-    for fonte in ordem_fontes:
-        html_parts.append('<div style="margin:18px 0 8px 0;font-size:13px;font-weight:600;color:#1a4d2e;letter-spacing:0.5px;text-transform:uppercase;border-bottom:2px solid #1a4d2e;padding-bottom:6px;">' + escape_html(fonte) + '</div>')
-        for item in fontes_na_cat[fonte]:
-            html_parts.append(render_item(item))
-
-    html_parts.append('</div>')
-
-# SECAO DE TRANSPARENCIA
-html_parts.append('''
-<div style="background:#2c2c2c;padding:20px 36px;color:#fff;margin-top:24px;">
-    <h2 style="margin:0;font-size:18px;font-weight:400;">Transparencia da coleta</h2>
-</div>
-<div style="padding:18px 28px;background:#fff;font-size:13px;color:#555;">
-''')
-
-if sem_publicacao:
-    html_parts.append('<p style="margin:8px 0 4px 0;color:#1a4d2e;font-weight:600;">Fontes sem publicacao na janela:</p><ul style="margin:4px 0 12px 20px;color:#666;font-size:12.5px;">')
-    for f in sem_publicacao:
-        html_parts.append('<li>' + escape_html(f.get("fonte", "")) + ' - ' + escape_html(f.get("motivo", "")) + '</li>')
-    html_parts.append('</ul>')
-
-if sem_resultado:
-    html_parts.append('<p style="margin:8px 0 4px 0;color:#d68910;font-weight:600;">Fontes sem resultado relevante:</p><ul style="margin:4px 0 12px 20px;color:#666;font-size:12.5px;">')
-    for f in sem_resultado:
-        html_parts.append('<li>' + escape_html(f.get("fonte", "")) + ' - ' + escape_html(f.get("motivo", "")) + '</li>')
-    html_parts.append('</ul>')
-
-if com_erro:
-    html_parts.append('<p style="margin:8px 0 4px 0;color:#c0392b;font-weight:600;">Fontes com erro tecnico:</p><ul style="margin:4px 0 12px 20px;color:#666;font-size:12.5px;">')
-    for f in com_erro:
-        html_parts.append('<li>' + escape_html(f.get("fonte", "")) + ' - ' + escape_html(f.get("motivo", "")) + '</li>')
-    html_parts.append('</ul>')
-
-janela_ini = escape_html(janela.get("inicio", ""))
-janela_fim = escape_html(janela.get("fim", ""))
-html_parts.append('<p style="margin:14px 0 4px 0;font-size:12px;color:#888;border-top:1px solid #eee;padding-top:10px;"><strong>Janela analisada:</strong> ' + janela_ini + ' ate ' + janela_fim + '</p>')
-html_parts.append('</div>')
-
-# RODAPE
-html_parts.append('''
-<div style="background:#0d3320;padding:24px 36px;color:#a8d8b9;text-align:center;font-size:12px;">
-    <p style="margin:4px 0;">Rascunho gerado automaticamente para validacao interna.</p>
-    <p style="margin:4px 0;">Curadoria por IA + revisao humana recomendada antes da distribuicao.</p>
-    <p style="margin:12px 0 4px 0;color:#5cb88a;font-size:11px;letter-spacing:1px;text-transform:uppercase;">Boletim Juridico - Pipeline automatizado</p>
+<div style="background:#0d3320;padding:18px 24px;color:#a8d8b9;text-align:center;font-size:11px;letter-spacing:1px;">
+    <p style="margin:0;">Boletim juridico automatizado &middot; Lobo de Rizzo Advogados</p>
+    <p style="margin:6px 0 0 0;font-style:italic;">Duvidas ou sugestoes: responder este e-mail</p>
 </div>
 
 </div>
 </body>
 </html>''')
 
-# Salvar
-os.makedirs(os.path.dirname(OUTPUT_HTML), exist_ok=True)
-with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
-    f.write("".join(html_parts))
+    return "".join(parts)
 
-print("HTML gerado: " + OUTPUT_HTML)
-print("  " + str(n_total) + " itens em " + str(len(ordem_categorias)) + " categorias")
-print("  " + str(len(destaques)) + " destaques de alta relevancia")
+
+# ---- EXECUCAO ----
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+slugs = config.get("boletins_disponiveis", [])
+resumo_geracao = {}
+
+for slug in slugs:
+    itens_do_boletim = [i for i in todos_itens if slug in i.get("boletins", [])]
+    aviso = fontes_email_pendentes.get(slug, [])
+    nome_bonito = NOMES_BONITOS.get(slug, slug.title())
+
+    # Descobrir quais fontes estao mapeadas para este boletim
+    fontes_desta_area = [fonte for fonte, boletins in mapeamento_fonte.items() if slug in boletins]
+
+    html = gerar_email_html(
+        slug=slug,
+        nome_boletim=nome_bonito,
+        itens=itens_do_boletim,
+        fontes_desta_area=fontes_desta_area,
+        aviso_email_pendente=aviso,
+    )
+
+    path = os.path.join(OUTPUT_DIR, "email_" + slug + ".html")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(html)
+
+    resumo_geracao[slug] = len(itens_do_boletim)
+    print("Email " + slug + ": " + path + " (" + str(len(itens_do_boletim)) + " itens)")
+
+print("")
+print("Concluido - " + str(len(slugs)) + " e-mails HTML gerados em " + OUTPUT_DIR)
+print("")
+print("Resumo:")
+for slug in slugs:
+    print("  " + slug + ": " + str(resumo_geracao[slug]) + " itens")
