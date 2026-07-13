@@ -1,143 +1,1044 @@
 {
   "data_execucao": "2026-07-13",
-  "erro": "JSON invalido retornado pelo Gemini",
-  "resposta_bruta": "{\n  \"data_execucao\": \"2026-07-13\",\n  \"janela_aplicada\": {\n    \"inicio\": \"2026-07-10T00:00\",\n    \"fim\": \"2026-07-13T10:25\"\n  },\n  \"itens\": [\n    {\n      \"fonte\": \"Planalto | Resenha Diaria\",\n      \"categoria\": \"Legislacao Federal\",\n      \"titulo\": \"Lei nº 15.466, de 9.7.2026 - Cria o Banco Nacional de Boas Práticas na Prevenção e no Combate à Violência contra a Mulher.\",\n      \"data_publicacao\": \"2026-07-10\",\n      \"resumo\": \"Cria o Banco Nacional de Boas Práticas na Prevenção e no Combate à Violência contra a Mulher.\",\n      \"relevancia\": \"Alta\",\n      \"motivo_relevancia\": \"Criação de um novo banco de dados com impacto social e jurídico relevante para a proteção da mulher.\",\n      \"url\": \"http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15466.htm\"\n    },\n    {\n      \"fonte\": \"Planalto | Resenha Diaria\",\n      \"categoria\": \"Legislacao Federal\",\n      \"titulo\": \"Lei nº 15.465, de 9.7.2026 - Altera a Lei nº 12.136, de 18 de dezembro de 2009, para instituir o Mês Nacional de Conscientização e Divulgação da Fibrose Cística – Setembro Roxo.\",\n      \"data_publicacao\": \"2026-07-10\",\n      \"resumo\": \"Altera a Lei nº 12.136/2009 para instituir o Mês Nacional de Conscientização e Divulgação da Fibrose Cística – Setembro Roxo.\",\n      \"relevancia\": \"Baixa\",\n      \"motivo_relevancia\": \"Instituição de data comemorativa, de caráter mais informativo e institucional.\",\n      \"url\": \"http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15465.htm\"\n    },\n    {\n      \"fonte\": \"Planalto | Resenha Diaria\",\n      \"categoria\": \"Legislacao Federal\",\n      \"titulo\": \"Lei nº 15.464, de 9.7.2026 - Confere o título de Capital Nacional do Açafrão ao Município de Mara Rosa, no Estado de Goiás.\",\n      \"data_publicacao\": \"2026-07-10\",\n      \"resumo\": \"Confere o título de Capital Nacional do Açafrão ao Município de Mara Rosa, no Estado de Goiás.\",\n      \"relevancia\": \"Baixa\",\n      \"motivo_relevancia\": \"Concessão de título honorífico a município, de caráter local e institucional.\",\n      \"url\": \"http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15464.htm\"\n    },\n    {\n      \"fonte\": \"Planalto | Resenha Diaria\",\n      \"categoria\": \"Legislacao Federal\",\n      \"titulo\": \"Decreto nº 13.064, de 9.7.2026 - Autoriza a nomeação de candidatos aprovados e não classificados dentro do quantitativo de vagas originalmente previsto no concurso público para o provimento de cargos do Quadro de Pessoal do Instituto Nacional do Seguro Social.\",\n      \"data_publicacao\": \"2026-07-10\",\n      \"resumo\": \"Autoriza a nomeação de candidatos aprovados em concurso público para cargos do INSS, além das vagas inicialmente previstas.\",\n      \"relevancia\": \"Média\",\n      \"motivo_relevancia\": \"Impacta a administração pública e o provimento de cargos em autarquia federal.\",\n      \"url\": \"http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13064.htm\"\n    },\n    {\n      \"fonte\": \"Planalto | Resenha Diaria\",\n      \"categoria\": \"Legislacao Federal\",\n      \"titulo\": \"Decreto nº 13.063, de 9.7.2026 - Autoriza a nomeação de candidatos aprovados e não classificados dentro do quantitativo de vagas originalmente previsto nos concursos públicos para o provimento de cargos do Quadro de Pessoal do Ministério das Relações Exteriores e da Superintendência Nacional de Previdência Complementar.\",\n      \"data_publicacao\": \"2026-07-10\",\n      \"resumo\": \"Autoriza nomeação de candidatos aprovados em concursos para MRE e Superintendência Nacional de Previdência Complementar.\",\n      \"relevancia\": \"Média\",\n      \"motivo_relevancia\": \"Impacta a administração pública e o provimento de cargos em órgãos federais, incluindo área de previdência complementar.\",\n      \"url\": \"http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13063.htm\"\n    },\n    {\n      \"fonte\": \"Planalto | Resenha Diaria\",\n      \"categoria\": \"Legislacao Federal\",\n      \"titulo\": \"Decreto nº 13.062, de 9.7.2026 - Altera o Decreto nº 12.254, de 19 de novembro de 2024, que aprova a Estrutura Regimental e o Quadro Demonstrativo dos Cargos em Comissão e das Funções de Confiança do Ministério do Meio Ambiente e Mudança do Clima, e remaneja e transforma cargos em comissão e funções de confiança.\",\n      \"data_publicacao\": \"2026-07-10\",\n      \"resumo\": \"Altera a estrutura regimental e o quadro de cargos do Ministério do Meio Ambiente e Mudança do Clima.\",\n      \"relevancia\": \"Média\",\n      \"motivo_relevancia\": \"Modifica a organização administrativa de um ministério federal, com potencial impacto em políticas setoriais.\",\n      \"url\": \"http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13062.htm\"\n    },\n    {\n      \"fonte\": \"Planalto | Resenha Diaria\",\n      \"categoria\": \"Legislacao Federal\",\n      \"titulo\": \"Decreto nº 13.061, de 9.7.2026 - Altera o Decreto nº 11.348, de 1º de janeiro de 2023, que aprova a Estrutura Regimental e o Quadro Demonstrativo dos Cargos em Comissão e das Funções de Confiança do Ministério da Justiça e Segurança Pública, e remaneja e transforma cargos em comissão e funções de confiança.\",\n      \"data_publicacao\": \"2026-07-10\",\n      \"resumo\": \"Altera a estrutura regimental e o quadro de cargos do Ministério da Justiça e Segurança Pública.\",\n      \"relevancia\": \"Média\",\n      \"motivo_relevancia\": \"Modifica a organização administrativa de um ministério federal, com potencial impacto em políticas setoriais.\",\n      \"url\": \"http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13061.htm\"\n    },\n    {\n      \"fonte\": \"Planalto | Resenha Diaria\",\n      \"categoria\": \"Legislacao Federal\",\n      \"titulo\": \"Lei nº 15.463, de 8.7.2026 - Institui o Dia Nacional dos Congados e Reinados.\",\n      \"data_publicacao\": \"2026-07-09\",\n      \"resumo\": \"Institui o Dia Nacional dos Congados e Reinados, celebrando a cultura afro-brasileira.\",\n      \"relevancia\": \"Baixa\",\n      \"motivo_relevancia\": \"Instituição de data comemorativa, de caráter mais informativo e institucional.\",\n      \"url\": \"http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15463.htm\"\n    },\n    {\n      \"fonte\": \"Planalto | Resenha Diaria\",\n      \"categoria\": \"Legislacao Federal\",\n      \"titulo\": \"Lei nº 15.462, de 8.7.2026 - Altera a Lei nº 9.394, de 20 de dezembro de 1996 (Lei de Diretrizes e Bases da Educação Nacional), para especificar as atividades a serem consideradas no aperfeiçoamento profissional continuado dos profissionais da educação básica pública.\",\n      \"data_publicacao\": \"2026-07-09\",\n      \"resumo\": \"Altera a LDB para especificar atividades de aperfeiçoamento profissional contínuo para educadores da educação básica pública.\",\n      \"relevancia\": \"Média\",\n      \"motivo_relevancia\": \"Impacta a legislação educacional e o desenvolvimento profissional de servidores públicos.\",\n      \"url\": \"http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15462.htm\"\n    },\n    {\n      \"fonte\": \"Planalto | Resenha Diaria\",\n      \"categoria\": \"Legislacao Federal\",\n      \"titulo\": \"Lei nº 15.461, de 7.7.2026 - Confere o título de Capital Nacional da Maior Onda do Brasil ao Município de Jaguaruna, no Estado de Santa Catarina.\",\n      \"data_publicacao\": \"2026-07-08\",\n      \"resumo\": \"Confere o título de Capital Nacional da Maior Onda do Brasil ao Município de Jaguaruna, em Santa Catarina.\",\n      \"relevancia\": \"Baixa\",\n      \"motivo_relevancia\": \"Concessão de título honorífico a município, de caráter local e institucional.\",\n      \"url\": \"http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15461.htm\"\n    },\n    {\n      \"fonte\": \"Planalto | Resenha Diaria\",\n      \"categoria\": \"Legislacao Federal\",\n      \"titulo\": \"Lei nº 15.460, de",
-  "itens": [],
-  "fontes_sem_resultado": [],
-  "fontes_sem_publicacao_hoje": [],
-  "fontes_com_erro_tecnico": [],
   "janela_aplicada": {
     "inicio": "2026-07-10T00:00",
-    "fim": "2026-07-13T10:25"
+    "fim": "2026-07-13T18:33"
   },
+  "itens": [
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.553, 13/7/2026",
+      "data_publicacao": "2026-07-13T15:04",
+      "resumo": "Divulga nome de pessoa com interesse em assumir a condição de controlador de Sociedade de Crédito Direto (SCD), conforme pedido de autorização para funcionamento de 21 de agosto de 2025.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "motivo_filtragem": "Trata de autorização para funcionamento de SCD, diretamente relacionado à área de Bancário e Meios de Pagamento.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45553",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.552, 13/7/2026",
+      "data_publicacao": "2026-07-13T11:48",
+      "resumo": "Divulga o resultado de leilões de swap.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "motivo_filtragem": "Divulgação de resultado de leilões de swap, operação de mercado de capitais.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45552",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.551, 13/7/2026",
+      "data_publicacao": "2026-07-13T11:30",
+      "resumo": "Divulga a realização de leilão de Swap Cambial Tradicional para fins de rolagem.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "motivo_filtragem": "Divulgação de leilão de swap cambial, operação de mercado de capitais.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45551",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.550, 13/7/2026",
+      "data_publicacao": "2026-07-13T11:30",
+      "resumo": "Divulga a realização de leilão de Swap Cambial Tradicional para fins de rolagem.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "motivo_filtragem": "Divulgação de leilão de swap cambial, operação de mercado de capitais.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45550",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.549, 13/7/2026",
+      "data_publicacao": "2026-07-13T09:54",
+      "resumo": "Divulga, para fins de recebimento de eventuais objeções, nomes de pessoas eleitas ou nomeadas para ocupar cargos de administração em instituições autorizadas a funcionar.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos",
+        "societario-ma"
+      ],
+      "motivo_filtragem": "Trata da nomeação de administradores em instituições financeiras, relevante para governança e regulação bancária.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45549",
+      "boletins": [
+        "mercado-capitais-fundos",
+        "societario-ma"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.548, 13/7/2026",
+      "data_publicacao": "2026-07-13T09:41",
+      "resumo": "Divulga nome aprovado de pessoas eleitas/nomeadas para cargos de órgãos estatutários ou contratuais de sociedades autorizadas a funcionar pelo Banco Central do Brasil.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos",
+        "societario-ma"
+      ],
+      "motivo_filtragem": "Divulgação de aprovação de administradores em instituições financeiras, relevante para governança e regulação bancária.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45548",
+      "boletins": [
+        "mercado-capitais-fundos",
+        "societario-ma"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.547, 13/7/2026",
+      "data_publicacao": "2026-07-13T09:19",
+      "resumo": "Divulga a Taxa Básica Financeira (TBF), o Redutor \"R\" e a Taxa Referencial (TR) relativos a 10 de julho de 2026.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "motivo_filtragem": "Divulgação de taxas financeiras pelo BCB, de interesse do mercado financeiro.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45547",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.546, 10/7/2026",
+      "data_publicacao": "2026-07-10T18:30",
+      "resumo": "Divulga as condições de oferta pública para a realização de operações de swap para fins de rolagem do vencimento de 03/08/2026.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "motivo_filtragem": "Divulgação de condições de oferta pública de swap, operação de mercado de capitais.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45546",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.545, 10/7/2026",
+      "data_publicacao": "2026-07-10T18:30",
+      "resumo": "Divulga condições para a realização de operações compromissadas com instituições financeiras participantes do módulo Oferta Pública (Ofpub).",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "motivo_filtragem": "Condições para operações compromissadas com instituições financeiras, relevante para o mercado de capitais e bancário.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45545",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Resolução CMN n° 5.327, 10/7/2026",
+      "data_publicacao": "2026-07-10T18:01",
+      "resumo": "Altera a Resolução CMN nº 4.897, de 25 de março de 2021, para ajustar as condições do Proex Financiamento.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos",
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Alteração de resolução do CMN sobre financiamento, impactando instituições financeiras e regulação.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20CMN&numero=5327",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Resolução CMN n° 5.328, 10/7/2026",
+      "data_publicacao": "2026-07-10T18:01",
+      "resumo": "Altera a Resolução CMN nº 5.325, de 3 de julho de 2026, que estabelece as condições, os encargos financeiros, os prazos e as demais normas regulamentadoras aplicáveis às linhas de financiamento para beneficiários adimplentes do Fundo de Financiamento Estudantil – Fies.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos",
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Alteração de resolução do CMN sobre financiamento estudantil, impactando instituições financeiras e regulação.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20CMN&numero=5328",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Instrução Normativa BCB n° 762, 10/7/2026",
+      "data_publicacao": "2026-07-10T12:36",
+      "resumo": "Altera as Instruções Normativas BCB ns. 428 e 430, ambas de 1º de dezembro de 2023, que definem as rubricas contábeis dos grupos Compensação Ativa e Patrimônio Líquido do elenco de contas do Padrão Contábil das Instituições Reguladas pelo Banco Central do Brasil (Cosif).",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos",
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Alteração de normas contábeis para instituições reguladas pelo BCB, relevante para regulação bancária.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Instru%C3%A7%C3%A3o%20Normativa%20BCB&numero=762",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.544, 10/7/2026",
+      "data_publicacao": "2026-07-10T11:46",
+      "resumo": "Divulga o resultado de leilões de swap.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "motivo_filtragem": "Divulgação de resultado de leilões de swap, operação de mercado de capitais.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45544",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "CCEE | Noticias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Inscrições abertas: conquiste a Certificação de Operadores do Mercado 2026",
+      "data_publicacao": "2026-07-13",
+      "resumo": "Exame promovido pela CCEE Academy abre novas oportunidades para profissionais do setor elétrico e traz novidades no processo de recertificação.",
+      "boletins_confirmados": [
+        "imobiliario-infraestrutura",
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Notícia sobre certificação de operadores do mercado elétrico, relevante para o setor de energia e regulação setorial.",
+      "url": "https://www.ccee.org.br/-/inscricoes-abertas-conquiste-a-certificacao-de-operadores-do-mercado-2026",
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "REPUBLICAÇÃO LEI Nº 15.141, DE 2 DE JUNHO DE 2025",
+      "data_publicacao": "2026-07-13",
+      "resumo": "Cria a Carreira de Desenvolvimento Socioeconômico, a Carreira de Desenvolvimento das Políticas de Justiça e Defesa e a Carreira de Fiscalização da Comissão de Valores Mobiliários, altera a remuneração de servidores e empregados públicos do Poder Executivo federal, altera a remuneração de cargos em comissão, de funções de confiança e de gratificações.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos",
+        "trabalhista-empresarial"
+      ],
+      "motivo_filtragem": "Criação de carreira e alteração de remuneração para servidores, incluindo da CVM, relevante para mercado de capitais e aspectos trabalhistas/remuneratórios.",
+      "url": "https://www.in.gov.br/web/dou/-/republicacao-718418981",
+      "boletins": [
+        "trabalhista-empresarial"
+      ]
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "DECRETO LEGISLATIVO Nº 241, DE 2026",
+      "data_publicacao": "2026-07-13",
+      "resumo": "Aprova o ato que renova a permissão outorgada à CSR - Central Sistema de Radiodifusão Ltda. para explorar serviço de radiodifusão.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Renovação de permissão para serviço de radiodifusão, tema regulatório.",
+      "url": "https://www.in.gov.br/web/dou/-/decreto-legislativo-n-241-de-2026-718426635",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "DECRETO LEGISLATIVO Nº 212, DE 2026",
+      "data_publicacao": "2026-07-13",
+      "resumo": "Aprova o ato que renova a permissão outorgada à Rede Curitibana de Radiodifusão Ltda. para explorar serviço de radiodifusão.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Renovação de permissão para serviço de radiodifusão, tema regulatório.",
+      "url": "https://www.in.gov.br/web/dou/-/decreto-legislativo-n-212-de-2026-718428163",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "DECRETO LEGISLATIVO Nº 219, DE 2026",
+      "data_publicacao": "2026-07-13",
+      "resumo": "Aprova o ato que renova a autorização outorgada à Associação Comunitária Unidos para Sempre para executar serviço de radiodifusão.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Renovação de autorização para serviço de radiodifusão, tema regulatório.",
+      "url": "https://www.in.gov.br/web/dou/-/decreto-legislativo-n-219-de-2026-718430632",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "DECRETO LEGISLATIVO Nº 232, DE 2026",
+      "data_publicacao": "2026-07-13",
+      "resumo": "Aprova o ato que renova a permissão outorgada à Fundação José Fernandes de Melo para explorar serviço de radiodifusão.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Renovação de permissão para serviço de radiodifusão, tema regulatório.",
+      "url": "https://www.in.gov.br/web/dou/-/decreto-legislativo-n-232-de-2026-718434778",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "DECRETO LEGISLATIVO Nº 242, DE 2026",
+      "data_publicacao": "2026-07-13",
+      "resumo": "Aprova o ato que renova a permissão outorgada à Fundação José Fernandes de Melo para explorar serviço de radiodifusão.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Renovação de permissão para serviço de radiodifusão, tema regulatório.",
+      "url": "https://www.in.gov.br/web/dou/-/decreto-legislativo-n-242-de-2026-718439494",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "Ministério da Fazenda | Notícias",
+      "categoria": "Tributário",
+      "titulo": "Ministério da Fazenda amplia exigências de publicidade de apostas no país",
+      "data_publicacao": "2026-07-13",
+      "resumo": "As novas regras incluem a exibição obrigatória de frases advertências sobre a temática.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "contencioso-civel"
+      ],
+      "motivo_filtragem": "Ampliação de exigências regulatórias para publicidade de apostas, impactando o setor regulado e o direito do consumidor.",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/julho/ministerio-da-fazenda-amplia-exigencias-de-publicidade-de-apostas-no-pais",
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "contencioso-civel"
+      ]
+    },
+    {
+      "fonte": "Ministério da Fazenda | Notícias",
+      "categoria": "Tributário",
+      "titulo": "Entrega da declaração pelos contribuintes que possuem imóveis rurais começa em 10 de agosto e vai até 30/9",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Confira quem deve apresentar, como enviar e as regras de pagamento da Declaração do Imposto sobre a Propriedade Territorial Rural.",
+      "boletins_confirmados": [
+        "direito-tributario",
+        "imobiliario-infraestrutura"
+      ],
+      "motivo_filtragem": "Notícia sobre a Declaração do Imposto sobre a Propriedade Territorial Rural (DITR), relevante para direito tributário e negócios imobiliários rurais.",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/julho/entrega-da-declaracao-pelos-contribuintes-que-possuem-imoveis-rurais-comeca-em-10-de-agosto-e-vai-ate-30-9",
+      "boletins": [
+        "direito-tributario",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "Ministério da Fazenda | Notícias",
+      "categoria": "Tributário",
+      "titulo": "Prazo para municípios aderirem ao PEM 2025 termina em 31 de agosto",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Municípios e consórcios públicos intermunicipais podem regularizar seus débitos previdenciários junto à União em ótimas condições.",
+      "boletins_confirmados": [
+        "direito-tributario"
+      ],
+      "motivo_filtragem": "Notícia sobre regularização de débitos previdenciários de municípios, diretamente relacionado ao direito tributário.",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/julho/prazo-para-municipios-aderirem-as-vantagens-oferecidas-pelo-pem-2025-termina-em-31-de-agosto",
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "fonte": "ANPD | Notícias",
+      "categoria": "Regulatório e Setorial",
+      "titulo": "ANPD publica resultado preliminar das inscrições do 4º Prêmio Danilo Doneda de Artigos Científicos",
+      "data_publicacao": "2026-07-10T11:01",
+      "resumo": "Foram recebidos 71 artigos científicos e o certame avança para mais uma etapa seguindo o cronograma previsto no edital.",
+      "boletins_confirmados": [
+        "propriedade-intelectual"
+      ],
+      "motivo_filtragem": "Notícia da ANPD sobre prêmio de artigos científicos, indiretamente relacionado à proteção de dados.",
+      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-lista-de-inscricoes-homologadas-do-4o-premio-danilo-doneda-de-artigos-cientificos",
+      "boletins": [
+        "propriedade-intelectual"
+      ]
+    },
+    {
+      "fonte": "CVM | Notícias",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Sessão de Julgamento em 14/7",
+      "data_publicacao": "2026-07-13",
+      "resumo": "Processos serão julgados a partir das 15h.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos",
+        "contencioso-civel"
+      ],
+      "motivo_filtragem": "Anúncio de sessão de julgamento da CVM, relevante para o mercado de capitais e contencioso.",
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/sessao-de-julgamento-em-14-7",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "CVM | Notícias",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "CVM e Anbima ampliam matriz objeto de acordo de cooperação sobre análise de ofertas públicas",
+      "data_publicacao": "2026-07-13",
+      "resumo": "Ampliação do escopo de análise entrou em vigor em 30/6/2026.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos",
+        "societario-ma"
+      ],
+      "motivo_filtragem": "Acordo de cooperação entre CVM e Anbima sobre ofertas públicas, diretamente relacionado ao mercado de capitais e companhias abertas.",
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-e-anbima-ampliam-matriz-objeto-de-acordo-de-cooperacao-sobre-analise-de-ofertas-publicas",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "CVM | Notícias",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Indisponibilidade temporária de acesso ao Sistema Empresas.NET",
+      "data_publicacao": "2026-07-13",
+      "resumo": "Sistema estará fora do ar das 9h às 18h do dia 18/7.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos",
+        "propriedade-intelectual"
+      ],
+      "motivo_filtragem": "Aviso sobre indisponibilidade de sistema da CVM, relevante para companhias abertas e tecnologia.",
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/indisponibilidade-temporaria-de-acesso-ao-sistema-empresas.net",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "CVM | Notícias",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Suspensa oferta de Certificados de Recebíveis Imobiliários (CRI) da Riza Securitizadora S.A.",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Área técnica da CVM identificou irregularidades na documentação da oferta no rito automático.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos",
+        "imobiliario-infraestrutura"
+      ],
+      "motivo_filtragem": "Suspensão de oferta de CRI por irregularidades, relevante para mercado de capitais e negócios imobiliários.",
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/suspensa-oferta-de-certificados-de-recebiveis-imobiliarios-cri-da-riza-securitizadora-s-a",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "CVM | Notícias",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Área técnica da CVM orienta sobre pedidos de migração de registro de companhia aberta para condição de companhia de menor porte",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Ofício Circular trata dos procedimentos necessários que as Entidades Administradores devem adotar.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos",
+        "societario-ma"
+      ],
+      "motivo_filtragem": "Orientação da CVM sobre migração de registro de companhias, relevante para mercado de capitais e governança societária.",
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/area-tecnica-da-cvm-orienta-sobre-pedidos-de-migracao-de-registro-de-companhia-aberta-para-a-condicao-de-companhia-de-menor-porte",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "ANP | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "\"ANP com VC - Postos\": aplicativo disponibiliza dados de postos e canal de denúncias ao consumidor",
+      "data_publicacao": "2026-07-13",
+      "resumo": "Aplicativo disponibiliza dados de postos de combustíveis e canal de denúncias ao consumidor.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "contencioso-civel"
+      ],
+      "motivo_filtragem": "Lançamento de aplicativo da ANP para consumidores, relevante para regulação de óleo e gás e direito do consumidor.",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-com-vc-postos-aplicativo-disponibiliza-dados-de-postos-e-canal-de-denuncias-ao-consumidor",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "ANP | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Entre os dias 6 a 10/7, a ANP realizou 260 ações de fiscalização com foco em preços abusivos",
+      "data_publicacao": "2026-07-10",
+      "resumo": "A Agência seguiu com as fiscalizações de rotina sobre qualidade, quantidade e outros aspectos. Houve ações em 15 estados.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "contencioso-civel"
+      ],
+      "motivo_filtragem": "Ações de fiscalização da ANP sobre preços abusivos, relevante para regulação de óleo e gás e defesa do consumidor.",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/entre-os-dias-6-a-10-7-a-anp-realizou-260-acoes-de-fiscalizacao-com-foco-em-precos-abusivos",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "ANP | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ANP fará consulta pública sobre critério de distribuição de percentual de royalties aos municípios afetados por embarque e desembarque",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Revisão de norma sobre o tema atende a decreto de fevereiro deste ano que incluiu terminais aquaviários entre esses tipos de instalações.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "motivo_filtragem": "Consulta pública da ANP sobre distribuição de royalties, impactando a regulação de óleo e gás e infraestrutura.",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-fara-consulta-publica-sobre-criterio-de-distribuicao-de-percentual-de-royalties-aos-municipios-afetados-por-embarque-e-desembarque",
+      "boletins": [
+        "imobiliario-infraestrutura",
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "ANP | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ANP determina revisão de cronograma para adequação de unidade de tratamento de gás a resolução",
+      "data_publicacao": "2026-07-10",
+      "resumo": "ANP determina revisão de cronograma para adequação de unidade de tratamento de gás a resolução.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Determinação da ANP para adequação de unidade de tratamento de gás, relevante para regulação de óleo e gás.",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-determina-revisao-de-cronograma-para-adequacao-de-unidade-de-tratamento-de-gas-a-resolucao",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "ANP | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Gás natural: ANP aprova atuação de ofício para solucionar controvérsia sobre acesso ao escoamento e processamento",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Medida busca garantir a comercialização do gás da União e promover o acesso não discriminatório às infraestruturas essenciais.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "contencioso-civel"
+      ],
+      "motivo_filtragem": "Aprovação da ANP para solucionar controvérsia sobre acesso a infraestrutura de gás natural, relevante para regulação e solução de conflitos.",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/gas-natural-anp-aprova-atuacao-de-oficio-para-solucionar-controversia-sobre-acesso-ao-escoamento-e-processamento",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "ANP | Notícias",
+      "categoria": "Biodiesel",
+      "titulo": "ANP revisará regras para usos voluntários de biodiesel",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Alteração adequará uso de biodiesel no diesel em teores superiores à mistura obrigatória, em aderência à Lei do Combustível do Futuro.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "ambiental-esg"
+      ],
+      "motivo_filtragem": "Revisão de regras da ANP para biodiesel, relevante para regulação e sustentabilidade/ESG.",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-revisara-regras-para-usos-voluntarios-de-biodiesel",
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "ambiental-esg"
+      ]
+    },
+    {
+      "fonte": "ANP | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Acesso de terceiros a gasodutos de escoamento e instalações de processamento de gás natural será tema de consulta e audiência públicas",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Minuta de resolução ficará em consulta por 45 dias e incorpora diretrizes previstas na regulamentação da Nova Lei do Gás.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "motivo_filtragem": "Consulta pública da ANP sobre acesso a gasodutos e instalações de gás natural, relevante para regulação e infraestrutura.",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/acesso-de-terceiros-a-gasodutos-de-escoamento-e-instalacoes-de-processamento-de-gas-natural-sera-tema-de-consulta-e-audiencia-publicas",
+      "boletins": [
+        "imobiliario-infraestrutura",
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "MME | Notícias",
+      "categoria": "ENERGIA ELÉTRICA",
+      "titulo": "Como a energia chega até sua casa: conheça as etapas do setor elétrico brasileiro",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Da geração nas usinas à distribuição nos municípios, a energia percorre diferentes etapas antes de chegar ao consumidor.",
+      "boletins_confirmados": [
+        "imobiliario-infraestrutura"
+      ],
+      "motivo_filtragem": "Artigo explicativo sobre o setor elétrico, relevante para a área de energia e infraestrutura.",
+      "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/como-a-energia-chega-ate-sua-casa-conheca-as-etapas-do-setor-eletrico-brasileiro",
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "ONS | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ONS: três subsistemas têm previsão de Energia Armazenada acima de 80% no final de julho",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Operador segue acompanhando as condições dos reservatórios para apoiar a implementação das estratégias corretas na coordenação do sistema.",
+      "boletins_confirmados": [
+        "imobiliario-infraestrutura",
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Notícia sobre previsão de energia armazenada, relevante para o setor elétrico e sua regulação.",
+      "url": "https://www.ons.org.br/paginas/noticias/details.aspx?i=12972",
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "ONS | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ONS destaca próximas etapas do 3º Mecanismo Competitivo de Resposta da Demanda por Disponibilidade",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Participantes inscritos e homologados receberão credenciais de acesso à plataforma e poderão realizar simulação antes da etapa competitiva.",
+      "boletins_confirmados": [
+        "imobiliario-infraestrutura",
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Notícia sobre mecanismo competitivo de resposta da demanda, relevante para o setor elétrico e regulação.",
+      "url": "https://www.ons.org.br/paginas/noticias/details.aspx?i=12970",
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "ONS | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ONS apresenta os resultados do Plano da Operação Energética 2026-2030",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Relatório reforça a necessidade de fontes flexíveis no SIN e da realização de novos leilões de capacidade, além de apresentar novo capítulo de avaliação do curtailment.",
+      "boletins_confirmados": [
+        "imobiliario-infraestrutura",
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Apresentação de plano de operação energética, com foco em leilões e fontes flexíveis, relevante para energia e regulação.",
+      "url": "https://www.ons.org.br/paginas/noticias/details.aspx?i=12967",
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "Ministério da Agricultura | Notícias",
+      "categoria": "PGPM",
+      "titulo": "Publicada portaria que define preços mínimos para os produtos de verão e regionais das safras 2026/27 e 2027",
+      "data_publicacao": "2026-07-13",
+      "resumo": "Portaria define preços mínimos para produtos agrícolas de verão e regionais das safras 2026/27 e 2027.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Publicação de portaria que define preços mínimos para produtos agrícolas, relevante para regulação setorial.",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/publicada-portaria-que-define-precos-minimos-para-os-produtos-de-verao-e-regionais-das-safras-2026-27-e-2027",
+      "boletins": []
+    },
+    {
+      "fonte": "Ministério da Agricultura | Notícias",
+      "categoria": "ZARC",
+      "titulo": "Zarc do milho é atualizado com nova classificação de solos e séries climáticas",
+      "data_publicacao": "2026-07-11",
+      "resumo": "Zoneamento Agrícola de Risco Climático (Zarc) do milho é atualizado com nova classificação de solos e séries climáticas.",
+      "boletins_confirmados": [
+        "ambiental-esg",
+        "imobiliario-infraestrutura"
+      ],
+      "motivo_filtragem": "Atualização de zoneamento agrícola, relevante para questões ambientais/ESG e imóveis rurais.",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/zarc-do-milho-e-atualizado-com-nova-classificacao-de-solos-e-series-climaticas",
+      "boletins": [
+        "ambiental-esg"
+      ]
+    },
+    {
+      "fonte": "Ministério da Agricultura | Notícias",
+      "categoria": "NOTA OFICIAL",
+      "titulo": "Julho registra disponibilização de mais de 5,4 milhões de doses de vacinas contra clostridioses",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Disponibilização de mais de 5,4 milhões de doses de vacinas contra clostridioses para o setor agropecuário.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Notícia sobre disponibilização de vacinas para pecuária, relevante para regulação setorial.",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/julho-registra-disponibilizacao-de-mais-de-5-4-milhoes-de-doses-de-vacinas-contra-clostridioses",
+      "boletins": []
+    },
+    {
+      "fonte": "Ministério da Agricultura | Notícias",
+      "categoria": "BALANÇA COMERCIAL",
+      "titulo": "Mapa divulga balança comercial do agro em julho de 2026",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Ministério da Agricultura divulga dados da balança comercial do agronegócio referentes a julho de 2026.",
+      "boletins_confirmados": [
+        "direito-tributario"
+      ],
+      "motivo_filtragem": "Divulgação de balança comercial do agronegócio, relevante para comércio exterior e tributação.",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/mapa-divulga-balanca-comercial-do-agro-em-julho-de-2026",
+      "boletins": []
+    },
+    {
+      "fonte": "Ministério da Agricultura | Notícias",
+      "categoria": "AVISO DE PAUTA",
+      "titulo": "Ministro André de Paula cumpre missão oficial à Nigéria",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Ministro André de Paula cumpre missão oficial à Nigéria para tratar de assuntos relacionados ao agronegócio.",
+      "boletins_confirmados": [
+        "direito-tributario"
+      ],
+      "motivo_filtragem": "Missão oficial do ministro, com potencial impacto em comércio exterior e projetos internacionais.",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/ministro-andre-de-paula-cumpre-missao-oficial-a-nigeria",
+      "boletins": []
+    },
+    {
+      "fonte": "Ministério da Agricultura | Notícias",
+      "categoria": "DESEMPENHO",
+      "titulo": "Mapa divulga boletim de desempenho na safra 2025/2026",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Ministério da Agricultura divulga boletim de desempenho da safra 2025/2026.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Divulgação de boletim de desempenho da safra, relevante para o setor agrícola e regulação.",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/mapa-divulga-boletim-de-desempenho-na-safra-2025-2026",
+      "boletins": []
+    },
+    {
+      "fonte": "ANVISA | Notícias",
+      "categoria": "REGISTRO",
+      "titulo": "Anvisa registra nova vacina contra a influenza",
+      "data_publicacao": "2026-07-13",
+      "resumo": "Imunizante, indicado a partir dos 6 meses de idade, previne contra doença causada pelos subtipos A e B do vírus.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Registro de nova vacina pela Anvisa, diretamente relacionado à regulação sanitária.",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-registra-nova-vacina-contra-a-influenza",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "ANVISA | Notícias",
+      "categoria": "COOPERAÇÃO INTERNACIONAL",
+      "titulo": "Anvisa recebe delegação do Instituto de Salud Pública do Chile para intercâmbio técnico sobre dispositivos médicos",
+      "data_publicacao": "2026-07-13",
+      "resumo": "Visita abordou as diferentes etapas do ciclo regulatório de dispositivos médicos no Brasil, desde a autorização de empresas e o registro sanitário até a inspeção e as ações de vigilância pós-mercado.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Intercâmbio técnico sobre dispositivos médicos e ciclo regulatório, relevante para a regulação sanitária e compliance.",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-recebe-delegacao-do-instituto-de-salud-publica-do-chile-para-intercambio-tecnico-sobre-dispositivos-medicos",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "ANVISA | Notícias",
+      "categoria": "INTERNACIONAL",
+      "titulo": "Anvisa assina novo Memorando de Entendimento com agência de Moçambique",
+      "data_publicacao": "2026-07-13",
+      "resumo": "Acordo foca em ações estratégicas, como avaliação de produtos sujeito à vigilância sanitária e intercâmbio de informações regulatórias.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "direito-tributario"
+      ],
+      "motivo_filtragem": "Acordo de cooperação internacional da Anvisa, relevante para regulação sanitária e projetos internacionais.",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-assina-novo-memorando-de-entendimento-com-agencia-de-mocambique",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "ANVISA | Notícias",
+      "categoria": "SERVIÇOS DE INTERESSE À SAÚDE",
+      "titulo": "Anvisa atualiza norma sobre exigências sanitárias em creches",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Decisão representa a primeira etapa da atualização regulatória sobre o tema.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "motivo_filtragem": "Atualização de norma da Anvisa sobre exigências sanitárias em creches, relevante para regulação setorial.",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-atualiza-norma-sobre-exigencias-sanitarias-em-creches",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "ANVISA | Notícias",
+      "categoria": "FISCALIZAÇÃO",
+      "titulo": "Anvisa determina apreensão de lotes falsificados de Mounjaro",
+      "data_publicacao": "2026-07-10",
+      "resumo": "Medida também proíbe medicamentos sem registro sanitário na Agência.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "contencioso-civel"
+      ],
+      "motivo_filtragem": "Apreensão de medicamentos falsificados pela Anvisa, relevante para regulação sanitária e contencioso.",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-determina-apreensao-de-lotes-falsificados-de-mounjaro-1",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "INPI | Notícias",
+      "categoria": "Regulatório e Setorial",
+      "titulo": "PI em Questão debaterá o Neurodireito e suas implicações legais e éticas",
+      "data_publicacao": "2026-07-10T15:29",
+      "resumo": "Evento debaterá o Neurodireito e suas implicações legais e éticas, tema emergente na interseção de tecnologia e propriedade intelectual.",
+      "boletins_confirmados": [
+        "propriedade-intelectual"
+      ],
+      "motivo_filtragem": "Debate sobre Neurodireito, tema emergente na interseção de tecnologia e propriedade intelectual.",
+      "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/pi-em-questao-debatera-o-neurodireito-e-suas-implicacoes-legais-e-eticas",
+      "boletins": [
+        "propriedade-intelectual"
+      ]
+    },
+    {
+      "fonte": "INPI | Notícias",
+      "categoria": "Regulatório e Setorial",
+      "titulo": "Curso Geral de PI à distância abre inscrições no dia 13/7",
+      "data_publicacao": "2026-07-10T11:28",
+      "resumo": "Curso Geral de Propriedade Intelectual à distância abre inscrições no dia 13 de julho.",
+      "boletins_confirmados": [
+        "propriedade-intelectual"
+      ],
+      "motivo_filtragem": "Anúncio de curso sobre Propriedade Intelectual, relevante para a área.",
+      "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/curso-geral-de-pi-a-distancia-abre-inscricoes-no-dia-13-7",
+      "boletins": [
+        "propriedade-intelectual"
+      ]
+    },
+    {
+      "fonte": "INPI | Notícias",
+      "categoria": "Regulatório e Setorial",
+      "titulo": "Academia abre prazo para envio de trabalhos ao XVIII ENAPID",
+      "data_publicacao": "2026-07-10T11:12",
+      "resumo": "Academia do INPI abre prazo para envio de trabalhos ao XVIII Encontro Nacional de Propriedade Intelectual.",
+      "boletins_confirmados": [
+        "propriedade-intelectual"
+      ],
+      "motivo_filtragem": "Anúncio de evento acadêmico sobre Propriedade Intelectual, relevante para a área.",
+      "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/academia-abre-prazo-para-envio-de-trabalhos-ao-xviii-enapid",
+      "boletins": [
+        "propriedade-intelectual"
+      ]
+    },
+    {
+      "fonte": "ANM | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Dia do Engenheiro de Minas destaca a importância da profissão",
+      "data_publicacao": "2026-07-10T10:44",
+      "resumo": "Atividade envolve conhecimento técnico, planejamento e inovação para o aproveitamento responsável dos recursos minerais.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "motivo_filtragem": "Notícia sobre a profissão de engenheiro de minas, relevante para o setor de mineração e regulação.",
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/dia-do-engenheiro-de-minas-destaca-a-importancia-da-profissao",
+      "boletins": [
+        "imobiliario-infraestrutura",
+        "regulatorio-oleo-gas"
+      ]
+    }
+  ],
+  "fontes_sem_publicacao_hoje": [
+    {
+      "fonte": "Planalto | Resenha Diaria",
+      "motivo": "Sem publicações na janela"
+    },
+    {
+      "fonte": "Receita Federal | Normas",
+      "motivo": "Sem publicações na janela"
+    },
+    {
+      "fonte": "B3 | Ofícios e Comunicados",
+      "motivo": "Sem publicações na janela"
+    },
+    {
+      "fonte": "ANEEL | Últimas Notícias",
+      "motivo": "Sem publicações na janela"
+    },
+    {
+      "fonte": "Secretaria de Prêmios e Apostas | Notícias",
+      "motivo": "Sem publicações na janela"
+    },
+    {
+      "fonte": "COAF | Notícias",
+      "motivo": "Sem publicações na janela"
+    },
+    {
+      "fonte": "EPE | Notícias",
+      "motivo": "Sem publicações na janela"
+    }
+  ],
+  "fontes_sem_resultado": [
+    {
+      "fonte": "CGU | Notícias",
+      "motivo": "Conteúdo Restrito"
+    },
+    {
+      "fonte": "Ministério do Meio Ambiente | Notícias",
+      "motivo": "Conteúdo Restrito"
+    },
+    {
+      "fonte": "SENACON | Notícias",
+      "motivo": "Conteúdo Restrito"
+    }
+  ],
+  "fontes_com_erro_tecnico": [],
   "boletins_config": {
     "boletins_disponiveis": [
-      "trabalhista",
-      "tributario",
-      "empresarial",
-      "regulatorio",
-      "imobiliario",
-      "ambiental",
+      "trabalhista-empresarial",
+      "direito-tributario",
+      "societario-ma",
+      "mercado-capitais-fundos",
+      "regulatorio-oleo-gas",
+      "imobiliario-infraestrutura",
+      "ambiental-esg",
       "propriedade-intelectual",
-      "contencioso"
+      "contencioso-civel"
     ],
     "fontes_email_pendentes": {
-      "trabalhista": [],
-      "tributario": [
+      "trabalhista-empresarial": [],
+      "direito-tributario": [
         "Tributário.com"
       ],
-      "empresarial": [
+      "societario-ma": [
         "Latin Lawyer",
         "Agência iNFRA"
       ],
-      "regulatorio": [],
-      "imobiliario": [
+      "mercado-capitais-fundos": [
+        "Latin Lawyer"
+      ],
+      "regulatorio-oleo-gas": [
+        "iNFRA Energia"
+      ],
+      "imobiliario-infraestrutura": [
         "Agência iNFRA",
         "iNFRA Energia",
         "IRIB"
       ],
-      "ambiental": [
+      "ambiental-esg": [
         "RC Ambiental"
       ],
       "propriedade-intelectual": [],
-      "contencioso": [
+      "contencioso-civel": [
         "Tributário.com"
       ]
     },
     "mapeamento_fonte_boletim": {
       "Planalto | Resenha Diaria": [
-        "trabalhista",
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "imobiliario",
-        "ambiental",
+        "trabalhista-empresarial",
+        "direito-tributario",
+        "societario-ma",
+        "mercado-capitais-fundos",
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg",
         "propriedade-intelectual",
-        "contencioso"
+        "contencioso-civel"
       ],
       "Destaques do D.O.U.": [
-        "trabalhista",
-        "tributario",
-        "regulatorio",
-        "contencioso"
+        "trabalhista-empresarial",
+        "direito-tributario",
+        "regulatorio-oleo-gas",
+        "contencioso-civel"
       ],
       "Ministério da Fazenda | Notícias": [
-        "trabalhista",
-        "tributario",
-        "empresarial"
+        "trabalhista-empresarial",
+        "direito-tributario",
+        "societario-ma",
+        "mercado-capitais-fundos",
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg",
+        "propriedade-intelectual",
+        "contencioso-civel"
       ],
       "CGU | Notícias": [
-        "trabalhista",
-        "regulatorio"
+        "trabalhista-empresarial",
+        "regulatorio-oleo-gas"
       ],
       "Receita Federal | Normas": [
-        "tributario"
+        "direito-tributario"
       ],
       "Banco Central | Normas": [
-        "tributario",
-        "empresarial",
-        "regulatorio",
-        "contencioso"
+        "direito-tributario",
+        "societario-ma",
+        "mercado-capitais-fundos"
       ],
       "COAF | Notícias": [
-        "tributario",
-        "empresarial"
+        "direito-tributario",
+        "mercado-capitais-fundos"
       ],
       "CVM | Notícias": [
-        "empresarial",
-        "propriedade-intelectual",
-        "contencioso"
+        "mercado-capitais-fundos"
       ],
       "B3 | Ofícios e Comunicados": [
-        "empresarial"
+        "mercado-capitais-fundos"
       ],
       "ANP | Notícias": [
-        "regulatorio",
-        "imobiliario",
-        "ambiental"
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
       ],
       "ANEEL | Últimas Notícias": [
-        "regulatorio",
-        "imobiliario",
-        "ambiental"
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
       ],
       "ANM | Notícias": [
-        "regulatorio",
-        "imobiliario",
-        "ambiental"
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
       ],
       "ANVISA | Notícias": [
-        "regulatorio",
-        "propriedade-intelectual"
+        "regulatorio-oleo-gas"
       ],
       "SENACON | Notícias": [
-        "regulatorio",
-        "propriedade-intelectual"
+        "regulatorio-oleo-gas",
+        "propriedade-intelectual",
+        "contencioso-civel"
       ],
       "Secretaria de Prêmios e Apostas | Notícias": [
-        "regulatorio"
+        "regulatorio-oleo-gas"
       ],
       "ONS | Notícias": [
-        "imobiliario",
-        "ambiental"
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
       ],
       "CCEE | Noticias": [
-        "imobiliario",
-        "ambiental"
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
       ],
       "EPE | Notícias": [
-        "imobiliario",
-        "ambiental"
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
       ],
       "MME | Notícias": [
-        "imobiliario",
-        "ambiental"
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
       ],
       "Ministério do Meio Ambiente | Notícias": [
-        "ambiental"
+        "ambiental-esg"
       ],
       "Ministério da Agricultura | Notícias": [
-        "ambiental"
+        "ambiental-esg"
       ],
       "INPI | Notícias": [
         "propriedade-intelectual"
@@ -148,53 +1049,32 @@
     }
   },
   "estatisticas_por_boletim": {
-    "trabalhista": {
-      "total": 0,
-      "alta": 0,
-      "media": 0,
-      "baixa": 0
+    "trabalhista-empresarial": {
+      "total": 1
     },
-    "tributario": {
-      "total": 0,
-      "alta": 0,
-      "media": 0,
-      "baixa": 0
+    "direito-tributario": {
+      "total": 2
     },
-    "empresarial": {
-      "total": 0,
-      "alta": 0,
-      "media": 0,
-      "baixa": 0
+    "societario-ma": {
+      "total": 2
     },
-    "regulatorio": {
-      "total": 0,
-      "alta": 0,
-      "media": 0,
-      "baixa": 0
+    "mercado-capitais-fundos": {
+      "total": 18
     },
-    "imobiliario": {
-      "total": 0,
-      "alta": 0,
-      "media": 0,
-      "baixa": 0
+    "regulatorio-oleo-gas": {
+      "total": 19
     },
-    "ambiental": {
-      "total": 0,
-      "alta": 0,
-      "media": 0,
-      "baixa": 0
+    "imobiliario-infraestrutura": {
+      "total": 9
+    },
+    "ambiental-esg": {
+      "total": 2
     },
     "propriedade-intelectual": {
-      "total": 0,
-      "alta": 0,
-      "media": 0,
-      "baixa": 0
+      "total": 4
     },
-    "contencioso": {
-      "total": 0,
-      "alta": 0,
-      "media": 0,
-      "baixa": 0
+    "contencioso-civel": {
+      "total": 1
     }
   }
 }

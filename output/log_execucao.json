@@ -1,9 +1,9 @@
 {
   "data_execucao": "2026-07-13",
-  "executado_em": "2026-07-13T10:25:17.884473-03:00",
+  "executado_em": "2026-07-13T18:33:53.559216-03:00",
   "janela": {
     "inicio": "2026-07-10T00:00",
-    "fim": "2026-07-13T10:25"
+    "fim": "2026-07-13T18:33"
   },
   "fontes_processadas": [
     {
@@ -19,7 +19,7 @@
     {
       "fonte": "CCEE | Noticias",
       "status": "ok",
-      "tamanho_chars": 1511
+      "tamanho_chars": 1843
     },
     {
       "fonte": "Destaques do D.O.U.",
@@ -123,62 +123,88 @@
     }
   ],
   "resultado": {
-    "itens_aceitos": 0,
+    "itens_aceitos": 55,
     "itens_descartados_pos_validacao": 0,
-    "fontes_sem_resultado": 0,
-    "fontes_sem_publicacao_hoje": 0,
+    "fontes_sem_resultado": 3,
+    "fontes_sem_publicacao_hoje": 7,
     "fontes_com_erro_tecnico": 0,
-    "itens_sem_mapeamento_para_boletins": 0,
-    "fontes_sem_mapeamento": [],
     "itens_por_boletim": {
-      "trabalhista": {
-        "total": 0,
-        "alta": 0,
-        "media": 0,
-        "baixa": 0
+      "trabalhista-empresarial": {
+        "total": 1
       },
-      "tributario": {
-        "total": 0,
-        "alta": 0,
-        "media": 0,
-        "baixa": 0
+      "direito-tributario": {
+        "total": 2
       },
-      "empresarial": {
-        "total": 0,
-        "alta": 0,
-        "media": 0,
-        "baixa": 0
+      "societario-ma": {
+        "total": 2
       },
-      "regulatorio": {
-        "total": 0,
-        "alta": 0,
-        "media": 0,
-        "baixa": 0
+      "mercado-capitais-fundos": {
+        "total": 18
       },
-      "imobiliario": {
-        "total": 0,
-        "alta": 0,
-        "media": 0,
-        "baixa": 0
+      "regulatorio-oleo-gas": {
+        "total": 19
       },
-      "ambiental": {
-        "total": 0,
-        "alta": 0,
-        "media": 0,
-        "baixa": 0
+      "imobiliario-infraestrutura": {
+        "total": 9
+      },
+      "ambiental-esg": {
+        "total": 2
       },
       "propriedade-intelectual": {
-        "total": 0,
-        "alta": 0,
-        "media": 0,
-        "baixa": 0
+        "total": 4
       },
-      "contencioso": {
-        "total": 0,
-        "alta": 0,
-        "media": 0,
-        "baixa": 0
+      "contencioso-civel": {
+        "total": 1
       }
+    },
+    "filtro2_bloqueios": {
+      "regulatorio-oleo-gas": 10,
+      "mercado-capitais-fundos": 1,
+      "contencioso-civel": 5,
+      "societario-ma": 2,
+      "propriedade-intelectual": 1,
+      "imobiliario-infraestrutura": 2,
+      "direito-tributario": 3
     }
+  },
+  "filtro2_bloqueios_detalhe": {
+    "regulatorio-oleo-gas": [
+      "Resolução CMN n° 5.327, 10/7/2026",
+      "Resolução CMN n° 5.328, 10/7/2026",
+      "Instrução Normativa BCB n° 762, 10/7/2026",
+      "Inscrições abertas: conquiste a Certificação de Operadores d",
+      "ONS: três subsistemas têm previsão de Energia Armazenada aci",
+      "ONS destaca próximas etapas do 3º Mecanismo Competitivo de R",
+      "ONS apresenta os resultados do Plano da Operação Energética ",
+      "Publicada portaria que define preços mínimos para os produto",
+      "Julho registra disponibilização de mais de 5,4 milhões de do",
+      "Mapa divulga boletim de desempenho na safra 2025/2026"
+    ],
+    "mercado-capitais-fundos": [
+      "REPUBLICAÇÃO LEI Nº 15.141, DE 2 DE JUNHO DE 2025"
+    ],
+    "contencioso-civel": [
+      "Sessão de Julgamento em 14/7",
+      "\"ANP com VC - Postos\": aplicativo disponibiliza dados de pos",
+      "Entre os dias 6 a 10/7, a ANP realizou 260 ações de fiscaliz",
+      "Gás natural: ANP aprova atuação de ofício para solucionar co",
+      "Anvisa determina apreensão de lotes falsificados de Mounjaro"
+    ],
+    "societario-ma": [
+      "CVM e Anbima ampliam matriz objeto de acordo de cooperação s",
+      "Área técnica da CVM orienta sobre pedidos de migração de reg"
+    ],
+    "propriedade-intelectual": [
+      "Indisponibilidade temporária de acesso ao Sistema Empresas.N"
+    ],
+    "imobiliario-infraestrutura": [
+      "Suspensa oferta de Certificados de Recebíveis Imobiliários (",
+      "Zarc do milho é atualizado com nova classificação de solos e"
+    ],
+    "direito-tributario": [
+      "Mapa divulga balança comercial do agro em julho de 2026",
+      "Ministro André de Paula cumpre missão oficial à Nigéria",
+      "Anvisa assina novo Memorando de Entendimento com agência de "
+    ]
   }
 }
