@@ -147,7 +147,8 @@ def gerar_email_html(nome_boletim, itens, fontes_desta_area, aviso_email_pendent
         for fonte in ordem_fontes:
             qtd = len(fontes_com_itens[fonte])
             parts.append('<div style="margin:20px 0 6px 0;font-size:12.5px;font-weight:700;color:#1a4d2e;letter-spacing:0.5px;text-transform:uppercase;border-bottom:2px solid #1a4d2e;padding-bottom:4px;">' + escape_html(fonte) + ' (' + str(qtd) + ')</div>')
-            for item in fontes_com_itens[frts.append(render_item(item))
+            for item in fontes_com_itens[fonte]:
+                parts.append(render_item(item))
 
         parts.append('</div>')
 
