@@ -7,7 +7,7 @@
   {
     "fonte": "Receita Federal | Normas",
     "categoria": "Tributário",
-    "url": "http://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action"
+    "url": "http://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1"
   },
   {
     "fonte": "Ministério da Fazenda | Notícias",
