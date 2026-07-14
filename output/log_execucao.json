@@ -1,9 +1,9 @@
 {
-  "data_execucao": "2026-07-13",
-  "executado_em": "2026-07-13T18:33:53.559216-03:00",
+  "data_execucao": "2026-07-14",
+  "executado_em": "2026-07-14T19:05:51.201607-03:00",
   "janela": {
-    "inicio": "2026-07-10T00:00",
-    "fim": "2026-07-13T18:33"
+    "inicio": "2026-07-13T00:00",
+    "fim": "2026-07-14T19:05"
   },
   "fontes_processadas": [
     {
@@ -19,7 +19,7 @@
     {
       "fonte": "CCEE | Noticias",
       "status": "ok",
-      "tamanho_chars": 1843
+      "tamanho_chars": 2128
     },
     {
       "fonte": "Destaques do D.O.U.",
@@ -39,7 +39,7 @@
     {
       "fonte": "ANPD | Notícias",
       "status": "ok",
-      "tamanho_chars": 10000
+      "tamanho_chars": 1289
     },
     {
       "fonte": "CVM | Notícias",
@@ -49,7 +49,7 @@
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "status": "ok",
-      "tamanho_chars": 9866
+      "tamanho_chars": 9678
     },
     {
       "fonte": "CGU | Notícias",
@@ -125,86 +125,69 @@
   "resultado": {
     "itens_aceitos": 55,
     "itens_descartados_pos_validacao": 0,
-    "fontes_sem_resultado": 3,
-    "fontes_sem_publicacao_hoje": 7,
+    "fontes_sem_resultado": 4,
+    "fontes_sem_publicacao_hoje": 4,
     "fontes_com_erro_tecnico": 0,
     "itens_por_boletim": {
       "trabalhista-empresarial": {
-        "total": 1
+        "total": 0
       },
       "direito-tributario": {
-        "total": 2
+        "total": 3
       },
       "societario-ma": {
-        "total": 2
+        "total": 3
       },
       "mercado-capitais-fundos": {
-        "total": 18
+        "total": 20
       },
       "regulatorio-oleo-gas": {
-        "total": 19
+        "total": 12
       },
       "imobiliario-infraestrutura": {
-        "total": 9
+        "total": 6
       },
       "ambiental-esg": {
-        "total": 2
+        "total": 3
       },
       "propriedade-intelectual": {
-        "total": 4
+        "total": 2
       },
       "contencioso-civel": {
         "total": 1
       }
     },
     "filtro2_bloqueios": {
-      "regulatorio-oleo-gas": 10,
-      "mercado-capitais-fundos": 1,
+      "imobiliario-infraestrutura": 3,
       "contencioso-civel": 5,
-      "societario-ma": 2,
-      "propriedade-intelectual": 1,
-      "imobiliario-infraestrutura": 2,
-      "direito-tributario": 3
+      "societario-ma": 1,
+      "propriedade-intelectual": 2,
+      "regulatorio-oleo-gas": 2
     }
   },
   "filtro2_bloqueios_detalhe": {
-    "regulatorio-oleo-gas": [
-      "Resolução CMN n° 5.327, 10/7/2026",
-      "Resolução CMN n° 5.328, 10/7/2026",
-      "Instrução Normativa BCB n° 762, 10/7/2026",
-      "Inscrições abertas: conquiste a Certificação de Operadores d",
-      "ONS: três subsistemas têm previsão de Energia Armazenada aci",
-      "ONS destaca próximas etapas do 3º Mecanismo Competitivo de R",
-      "ONS apresenta os resultados do Plano da Operação Energética ",
-      "Publicada portaria que define preços mínimos para os produto",
-      "Julho registra disponibilização de mais de 5,4 milhões de do",
-      "Mapa divulga boletim de desempenho na safra 2025/2026"
-    ],
-    "mercado-capitais-fundos": [
-      "REPUBLICAÇÃO LEI Nº 15.141, DE 2 DE JUNHO DE 2025"
+    "imobiliario-infraestrutura": [
+      "Resolução CMN n° 5.329, 14/7/2026",
+      "037-2026-VPC-Ofício Circular",
+      "Publicada portaria que define preços mínimos para os produto"
     ],
     "contencioso-civel": [
       "Sessão de Julgamento em 14/7",
+      "ANP firma acordo com os Procons do Acre e do Amapá para fisc",
       "\"ANP com VC - Postos\": aplicativo disponibiliza dados de pos",
-      "Entre os dias 6 a 10/7, a ANP realizou 260 ações de fiscaliz",
-      "Gás natural: ANP aprova atuação de ofício para solucionar co",
-      "Anvisa determina apreensão de lotes falsificados de Mounjaro"
+      "Consulta Pública discutirá revisão da Metodologia do Fator X",
+      "Agência aprova rescisão dos contratos entre comercializadora"
     ],
     "societario-ma": [
-      "CVM e Anbima ampliam matriz objeto de acordo de cooperação s",
-      "Área técnica da CVM orienta sobre pedidos de migração de reg"
+      "043-2026-VNC-Ofício Circular"
     ],
     "propriedade-intelectual": [
-      "Indisponibilidade temporária de acesso ao Sistema Empresas.N"
+      "040-2026-VNC-Comunicado Externo",
+      "\"ANP com VC - Postos\": aplicativo disponibiliza dados de pos"
     ],
-    "imobiliario-infraestrutura": [
-      "Suspensa oferta de Certificados de Recebíveis Imobiliários (",
-      "Zarc do milho é atualizado com nova classificação de solos e"
-    ],
-    "direito-tributario": [
-      "Mapa divulga balança comercial do agro em julho de 2026",
-      "Ministro André de Paula cumpre missão oficial à Nigéria",
-      "Anvisa assina novo Memorando de Entendimento com agência de "
+    "regulatorio-oleo-gas": [
+      "Consulta pública do POTEE 2026 está aberta para contribuiçõe",
+      "EPE recebe representante de Moçambique para reunião sobre pl"
     ]
   }
 }
