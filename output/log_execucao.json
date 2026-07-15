@@ -1,9 +1,9 @@
 {
   "data_execucao": "2026-07-15",
-  "executado_em": "2026-07-15T20:00:43.571370-03:00",
+  "executado_em": "2026-07-15T20:26:05.890759-03:00",
   "janela": {
     "inicio": "2026-07-14T00:00",
-    "fim": "2026-07-15T20:00"
+    "fim": "2026-07-15T20:26"
   },
   "fontes_processadas": [
     {
@@ -123,47 +123,176 @@
     }
   ],
   "resultado": {
-    "itens_aceitos": 0,
+    "itens_aceitos": 54,
     "itens_descartados_pos_validacao": 0,
-    "fontes_sem_resultado": 0,
-    "fontes_sem_publicacao_hoje": 0,
+    "fontes_sem_resultado": 4,
+    "fontes_sem_publicacao_hoje": 4,
     "fontes_com_erro_tecnico": 0,
     "itens_por_boletim": {
       "trabalhista-empresarial": {
         "total": 0
       },
       "direito-tributario": {
-        "total": 0
+        "total": 3
       },
       "societario-ma": {
         "total": 0
       },
       "mercado-capitais-fundos": {
-        "total": 0
+        "total": 20
       },
       "regulatorio-oleo-gas": {
-        "total": 0
+        "total": 10
       },
       "imobiliario-infraestrutura": {
-        "total": 0
+        "total": 10
       },
       "ambiental-esg": {
-        "total": 0
+        "total": 2
       },
       "propriedade-intelectual": {
-        "total": 0
+        "total": 2
       },
       "contencioso-civel": {
-        "total": 0
+        "total": 2
       }
     },
-    "filtro2_bloqueios": {},
+    "filtro2_bloqueios": {
+      "regulatorio-oleo-gas": 4,
+      "ambiental-esg": 1,
+      "societario-ma": 1,
+      "propriedade-intelectual": 3,
+      "imobiliario-infraestrutura": 1,
+      "contencioso-civel": 3,
+      "direito-tributario": 1
+    },
     "auditoria": {
-      "total_itens": 0,
-      "itens_com_alguma_rejeicao": 0,
-      "itens_com_bloqueio_f1": 0,
-      "rejeicoes_por_boletim": {},
-      "top_palavras_chave_detectadas": []
+      "total_itens": 54,
+      "itens_com_alguma_rejeicao": 54,
+      "itens_com_bloqueio_f1": 14,
+      "rejeicoes_por_boletim": {
+        "trabalhista-empresarial": 54,
+        "direito-tributario": 51,
+        "societario-ma": 54,
+        "mercado-capitais-fundos": 34,
+        "regulatorio-oleo-gas": 44,
+        "imobiliario-infraestrutura": 44,
+        "ambiental-esg": 52,
+        "propriedade-intelectual": 52,
+        "contencioso-civel": 52
+      },
+      "top_palavras_chave_detectadas": [
+        {
+          "palavra": "bcb",
+          "ocorrencias": 13
+        },
+        {
+          "palavra": "b3",
+          "ocorrencias": 6
+        },
+        {
+          "palavra": "derivativos",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "aneel",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "oferta pública",
+          "ocorrencias": 4
+        },
+        {
+          "palavra": "mapa",
+          "ocorrencias": 4
+        },
+        {
+          "palavra": "consulta pública",
+          "ocorrencias": 4
+        },
+        {
+          "palavra": "swap",
+          "ocorrencias": 3
+        },
+        {
+          "palavra": "energia",
+          "ocorrencias": 3
+        },
+        {
+          "palavra": "agricultura e pecuária",
+          "ocorrencias": 3
+        },
+        {
+          "palavra": "instituição financeira",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "leilão",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "swap cambial",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "ccee",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "setor elétrico",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "receita federal",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "irpf",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "imposto de renda",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "polícia federal",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "apostas ilegais",
+          "ocorrencias": 2
+        }
+      ]
     }
+  },
+  "filtro2_bloqueios_detalhe": {
+    "regulatorio-oleo-gas": [
+      "Confira nossa videorreportagem com os destaques da participa",
+      "Garanta sua vaga nos próximos cursos especializados da CCEE ",
+      "Consulta pública do POTEE 2026 está aberta para contribuiçõe",
+      "EPE recebe representante de Moçambique para reunião sobre pl"
+    ],
+    "ambiental-esg": [
+      "PORTARIA MAPA Nº 937, DE 14 DE JULHO DE 2026"
+    ],
+    "societario-ma": [
+      "043-2026-VNC-Ofício Circular - Tratamento das carteiras de í"
+    ],
+    "propriedade-intelectual": [
+      "040-2026-VNC-Comunicado Externo - Market Data B3 – Atualizaç",
+      "038-2026-VPC-Ofício Circular - Início da Produção Assistida ",
+      "006-2026-VPE-Comunicado Externo - Balcão B3 – Regime de cont"
+    ],
+    "imobiliario-infraestrutura": [
+      "037-2026-VPC-Ofício Circular - Mudança no Índice de Energia "
+    ],
+    "contencioso-civel": [
+      "ANP firma acordo com os Procons do Acre e do Amapá para fisc",
+      "Agência aprova rescisão dos contratos entre comercializadora",
+      "Polícia Federal realiza operação contra esquema de apostas i"
+    ],
+    "direito-tributario": [
+      "Confira o repasse da CFEM referente à arrecadação de junho"
+    ]
   }
 }
