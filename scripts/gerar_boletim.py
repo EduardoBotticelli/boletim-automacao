@@ -2,9 +2,10 @@
 Boletim Juridico/Regulatorio - Geracao automatica
 Arquitetura: Firecrawl (scrape) -> Gemini (curadoria com Filtro 2) -> JSON
 
-VERSAO COM 9 BOLETINS + FILTRO 2 (classificacao tematica)
+VERSAO COM 9 BOLETINS + FILTRO 2 + AUDITORIA
 - Filtro 1: fonte -> boletim (matriz da Alice/Fe)
 - Filtro 2: item -> boletim (Gemini decide pelo tema)
+- Auditoria: cada item registra boletins_rejeitados e palavras_chave_detectadas
 Item so aparece em boletim se PASSAR nos dois filtros (fonte mapeada E tema confere).
 """
 
@@ -12,6 +13,7 @@ import os
 import json
 import datetime
 import sys
+from collections import Counter
 from zoneinfo import ZoneInfo
 from firecrawl import Firecrawl
 import google.generativeai as genai
@@ -43,7 +45,6 @@ BOLETINS_DISPONIVEIS = [
 ]
 
 # FILTRO 1: matriz fonte -> boletins onde a fonte esta disponivel
-# Baseado no arquivo revisado "Boletim - esqueleto_Rev.docx"
 FONTE_PARA_BOLETINS = {
     "Planalto | Resenha Diaria": [
         "trabalhista-empresarial", "direito-tributario", "societario-ma",
@@ -120,13 +121,6 @@ FONTE_PARA_BOLETINS = {
     "ANPD | Notícias": [
         "propriedade-intelectual"
     ],
-    # Fontes por e-mail (integracao futura):
-    # "Tributário.com": ["direito-tributario"],
-    # "Latin Lawyer": ["societario-ma", "mercado-capitais-fundos"],
-    # "Agência iNFRA": ["societario-ma", "imobiliario-infraestrutura"],
-    # "iNFRA Energia": ["regulatorio-oleo-gas", "imobiliario-infraestrutura"],
-    # "IRIB": ["imobiliario-infraestrutura"],
-    # "RC Ambiental": ["ambiental-esg"],
 }
 
 # Fontes por e-mail pendentes por boletim (pra aviso no HTML)
@@ -291,27 +285,58 @@ for item in itens_originais:
         item["data_publicacao"] = ""
         itens_validados.append(item)
 
-# APLICAR FILTRO 1 + FILTRO 2 combinados
+# APLICAR FILTRO 1 + FILTRO 2 combinados + AUDITORIA
 # Filtro 1: fonte deve estar mapeada para o boletim
 # Filtro 2: Gemini classificou item como pertencente ao boletim
 # Resultado final: intersecao dos dois
+# Auditoria: preservar boletins_rejeitados e palavras_chave_detectadas do Gemini,
+# e adicionar rejeicoes do F1 ao mesmo campo (audit trail completo)
 
 filtro2_removido_por_boletim = {}  # log: quando Gemini quis mas F1 barrou
+itens_com_f1_bloqueio = 0
+itens_com_qualquer_rejeicao = 0
+palavras_chave_counter = Counter()
+rejeicoes_por_boletim = Counter()
+
 for item in itens_validados:
     fonte_item = item.get("fonte", "")
     boletins_permitidos_por_fonte = set(FONTE_PARA_BOLETINS.get(fonte_item, []))
     boletins_sugeridos_por_gemini = set(item.get("boletins_confirmados", []))
-    
+
     # Intersecao: item so entra se AMBOS os filtros aprovarem
     boletins_finais = list(boletins_permitidos_por_fonte & boletins_sugeridos_por_gemini)
-    
-    # Log de bloqueios (Gemini quis colocar mas Filtro 1 impediu)
-    boletins_bloqueados = boletins_sugeridos_por_gemini - boletins_permitidos_por_fonte
-    if boletins_bloqueados:
+
+    # Log de bloqueios F1 (Gemini quis colocar mas Filtro 1 impediu)
+    boletins_bloqueados_f1 = boletins_sugeridos_por_gemini - boletins_permitidos_por_fonte
+    if boletins_bloqueados_f1:
+        itens_com_f1_bloqueio += 1
         titulo_curto = item.get("titulo", "")[:60]
-        for b in boletins_bloqueados:
+        for b in boletins_bloqueados_f1:
             filtro2_removido_por_boletim.setdefault(b, []).append(titulo_curto)
-    
+
+    # PRESERVAR / NORMALIZAR campos de auditoria vindos do Gemini
+    if "boletins_rejeitados" not in item or not isinstance(item["boletins_rejeitados"], list):
+        item["boletins_rejeitados"] = []
+    if "palavras_chave_detectadas" not in item or not isinstance(item["palavras_chave_detectadas"], list):
+        item["palavras_chave_detectadas"] = []
+
+    # ADICIONAR rejeicoes do F1 ao audit trail
+    for b in boletins_bloqueados_f1:
+        item["boletins_rejeitados"].append({
+            "boletim": b,
+            "motivo": "Filtro 1: fonte '" + fonte_item + "' nao esta mapeada para este boletim"
+        })
+
+    # Estatisticas de auditoria
+    if item["boletins_rejeitados"]:
+        itens_com_qualquer_rejeicao += 1
+    for pc in item["palavras_chave_detectadas"]:
+        if isinstance(pc, str):
+            palavras_chave_counter[pc.lower().strip()] += 1
+    for rej in item["boletins_rejeitados"]:
+        if isinstance(rej, dict) and "boletim" in rej:
+            rejeicoes_por_boletim[rej["boletim"]] += 1
+
     item["boletins"] = boletins_finais  # campo final (compat com gerar_email_html.py)
 
 boletim_json["itens"] = itens_validados
@@ -330,6 +355,16 @@ for slug in BOLETINS_DISPONIVEIS:
     stats_por_boletim[slug] = {"total": len(itens_do_boletim)}
 boletim_json["estatisticas_por_boletim"] = stats_por_boletim
 
+# Auditoria consolidada (top 20 palavras-chave mais detectadas)
+top_palavras = palavras_chave_counter.most_common(20)
+boletim_json["auditoria"] = {
+    "total_itens": len(itens_validados),
+    "itens_com_alguma_rejeicao": itens_com_qualquer_rejeicao,
+    "itens_com_bloqueio_f1": itens_com_f1_bloqueio,
+    "rejeicoes_por_boletim": dict(rejeicoes_por_boletim),
+    "top_palavras_chave_detectadas": [{"palavra": p, "ocorrencias": c} for p, c in top_palavras],
+}
+
 # Log
 log["resultado"] = {
     "itens_aceitos": len(itens_validados),
@@ -339,6 +374,7 @@ log["resultado"] = {
     "fontes_com_erro_tecnico": len(boletim_json.get("fontes_com_erro_tecnico", [])),
     "itens_por_boletim": stats_por_boletim,
     "filtro2_bloqueios": {k: len(v) for k, v in filtro2_removido_por_boletim.items()},
+    "auditoria": boletim_json["auditoria"],
 }
 if itens_descartados:
     log["itens_descartados"] = itens_descartados
@@ -355,6 +391,8 @@ print("")
 print("Boletim salvo em: " + OUTPUT_PATH)
 print("  Itens aceitos: " + str(len(itens_validados)))
 print("  Itens descartados: " + str(len(itens_descartados)))
+print("  Itens com rejeicao F1: " + str(itens_com_f1_bloqueio))
+print("  Itens com alguma rejeicao (F1+F2): " + str(itens_com_qualquer_rejeicao))
 print("")
 print("Distribuicao por boletim (F1 + F2):")
 for slug in BOLETINS_DISPONIVEIS:
@@ -364,4 +402,11 @@ for slug in BOLETINS_DISPONIVEIS:
     if bloqueios > 0:
         extra = " (F1 bloqueou " + str(bloqueios) + " sugestoes do F2)"
     print("  " + slug + ": " + str(total) + " itens" + extra)
+
+if top_palavras:
+    print("")
+    print("Top 10 palavras-chave detectadas:")
+    for p, c in top_palavras[:10]:
+        print("  " + p + ": " + str(c))
+
 print("Concluido")
