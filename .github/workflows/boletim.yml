@@ -36,6 +36,9 @@ jobs:
       - name: Gerar Word do boletim
         run: python scripts/gerar_html.py
 
+      - name: Gerar auditoria HTML
+        run: python scripts/gerar_auditoria_html.py
+
       - name: Commit do resultado
         run: |
           git config user.name "github-actions[bot]"
