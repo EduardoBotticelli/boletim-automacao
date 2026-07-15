@@ -13,6 +13,7 @@ import os
 import json
 import datetime
 import sys
+import time
 from collections import Counter
 from zoneinfo import ZoneInfo
 from firecrawl import Firecrawl
@@ -225,12 +226,30 @@ model = genai.GenerativeModel(GEMINI_MODEL, generation_config={"temperature": 0.
 
 prompt_final = prompt_base + "\n\n## Contexto desta execucao\n\ndata_execucao: " + hoje.isoformat() + "\njanela_inicio: " + janela_inicio + "\njanela_fim: " + janela_fim + "\n\n## Dossier das fontes\n\n" + json.dumps(dossier, ensure_ascii=False, indent=2)
 
-try:
-    response = model.generate_content(prompt_final)
-    texto = response.text
-except Exception as e:
-    print("Erro no Gemini: " + str(e))
-    sys.exit(1)
+texto = ""
+ultimo_erro_gemini = ""
+for tentativa in range(1, 4):
+    try:
+        response = model.generate_content(prompt_final)
+        texto = response.text
+        break
+    except Exception as e:
+        ultimo_erro_gemini = str(e)
+        print("Erro no Gemini (tentativa " + str(tentativa) + "/3): " + ultimo_erro_gemini)
+        if tentativa < 3:
+            time.sleep(3 * tentativa)
+
+if not texto:
+    print("Falha ao consultar Gemini apos 3 tentativas - gerando boletim vazio para nao interromper o workflow")
+    texto = json.dumps({
+        "data_execucao": hoje.isoformat(),
+        "erro": "Falha na consulta ao Gemini",
+        "detalhe_erro": ultimo_erro_gemini[:500],
+        "itens": [],
+        "fontes_sem_resultado": [],
+        "fontes_sem_publicacao_hoje": [],
+        "fontes_com_erro_tecnico": [],
+    }, ensure_ascii=False)
 
 try:
     boletim_json = json.loads(texto)
