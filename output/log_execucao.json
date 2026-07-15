@@ -1,9 +1,9 @@
 {
-  "data_execucao": "2026-07-14",
-  "executado_em": "2026-07-14T19:05:51.201607-03:00",
+  "data_execucao": "2026-07-15",
+  "executado_em": "2026-07-15T19:20:39.960377-03:00",
   "janela": {
-    "inicio": "2026-07-13T00:00",
-    "fim": "2026-07-14T19:05"
+    "inicio": "2026-07-14T00:00",
+    "fim": "2026-07-15T19:20"
   },
   "fontes_processadas": [
     {
@@ -19,7 +19,7 @@
     {
       "fonte": "CCEE | Noticias",
       "status": "ok",
-      "tamanho_chars": 2128
+      "tamanho_chars": 2124
     },
     {
       "fonte": "Destaques do D.O.U.",
@@ -39,7 +39,7 @@
     {
       "fonte": "ANPD | Notícias",
       "status": "ok",
-      "tamanho_chars": 1289
+      "tamanho_chars": 10000
     },
     {
       "fonte": "CVM | Notícias",
@@ -123,7 +123,7 @@
     }
   ],
   "resultado": {
-    "itens_aceitos": 55,
+    "itens_aceitos": 53,
     "itens_descartados_pos_validacao": 0,
     "fontes_sem_resultado": 4,
     "fontes_sem_publicacao_hoje": 4,
@@ -139,55 +139,158 @@
         "total": 3
       },
       "mercado-capitais-fundos": {
-        "total": 20
+        "total": 18
       },
       "regulatorio-oleo-gas": {
-        "total": 12
+        "total": 11
       },
       "imobiliario-infraestrutura": {
-        "total": 6
+        "total": 7
       },
       "ambiental-esg": {
-        "total": 3
-      },
-      "propriedade-intelectual": {
         "total": 2
       },
+      "propriedade-intelectual": {
+        "total": 3
+      },
       "contencioso-civel": {
-        "total": 1
+        "total": 2
       }
     },
     "filtro2_bloqueios": {
       "imobiliario-infraestrutura": 3,
-      "contencioso-civel": 5,
-      "societario-ma": 1,
+      "societario-ma": 2,
       "propriedade-intelectual": 2,
-      "regulatorio-oleo-gas": 2
+      "regulatorio-oleo-gas": 3,
+      "contencioso-civel": 4,
+      "direito-tributario": 1
+    },
+    "auditoria": {
+      "total_itens": 53,
+      "itens_com_alguma_rejeicao": 53,
+      "itens_com_bloqueio_f1": 13,
+      "rejeicoes_por_boletim": {
+        "trabalhista-empresarial": 53,
+        "direito-tributario": 50,
+        "societario-ma": 50,
+        "mercado-capitais-fundos": 35,
+        "regulatorio-oleo-gas": 42,
+        "imobiliario-infraestrutura": 46,
+        "ambiental-esg": 51,
+        "propriedade-intelectual": 50,
+        "contencioso-civel": 51
+      },
+      "top_palavras_chave_detectadas": [
+        {
+          "palavra": "instituicao financeira",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "oferta publica",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "swap",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "derivativos",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "energia eletrica",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "aneel",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "consulta publica",
+          "ocorrencias": 4
+        },
+        {
+          "palavra": "regulacao setorial",
+          "ocorrencias": 4
+        },
+        {
+          "palavra": "b3",
+          "ocorrencias": 4
+        },
+        {
+          "palavra": "conselho de administracao",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "diretoria",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "governanca corporativa",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "credito estruturado",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "imovel rural",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "mercado de carbono",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "contencioso civel",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "ciberseguranca",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "anpd",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "anp",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "direito do consumidor",
+          "ocorrencias": 2
+        }
+      ]
     }
   },
   "filtro2_bloqueios_detalhe": {
     "imobiliario-infraestrutura": [
       "Resolução CMN n° 5.329, 14/7/2026",
-      "037-2026-VPC-Ofício Circular",
-      "Publicada portaria que define preços mínimos para os produto"
-    ],
-    "contencioso-civel": [
-      "Sessão de Julgamento em 14/7",
-      "ANP firma acordo com os Procons do Acre e do Amapá para fisc",
-      "\"ANP com VC - Postos\": aplicativo disponibiliza dados de pos",
-      "Consulta Pública discutirá revisão da Metodologia do Fator X",
-      "Agência aprova rescisão dos contratos entre comercializadora"
+      "PORTARIA MAPA Nº 937, DE 14 DE JULHO DE 2026",
+      "037-2026-VPC-Ofício Circular - Mudança no Índice de Energia "
     ],
     "societario-ma": [
-      "043-2026-VNC-Ofício Circular"
+      "INSTRUÇÃO NORMATIVA SECOM/PR Nº 14, DE 14 DE JULHO DE 2026",
+      "043-2026-VNC-Ofício Circular - Tratamento das carteiras de í"
     ],
     "propriedade-intelectual": [
-      "040-2026-VNC-Comunicado Externo",
-      "\"ANP com VC - Postos\": aplicativo disponibiliza dados de pos"
+      "040-2026-VNC-Comunicado Externo - Market Data B3 – Atualizaç",
+      "Polícia Federal realiza operação contra esquema de apostas i"
     ],
     "regulatorio-oleo-gas": [
+      "037-2026-VPC-Ofício Circular - Mudança no Índice de Energia ",
       "Consulta pública do POTEE 2026 está aberta para contribuiçõe",
       "EPE recebe representante de Moçambique para reunião sobre pl"
+    ],
+    "contencioso-civel": [
+      "ANP firma acordo com os Procons do Acre e do Amapá para fisc",
+      "Agência aprova rescisão dos contratos entre comercializadora",
+      "Polícia Federal realiza operação contra esquema de apostas i",
+      "Soroterapia: promessas na internet NÃO substituem evidências"
+    ],
+    "direito-tributario": [
+      "Confira o repasse da CFEM referente à arrecadação de junho"
     ]
   }
 }

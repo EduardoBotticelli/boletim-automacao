@@ -1,31 +1,636 @@
 {
-  "data_execucao": "2026-07-14",
+  "data_execucao": "2026-07-15",
   "janela_aplicada": {
-    "inicio": "2026-07-13T00:00",
-    "fim": "2026-07-14T19:05"
+    "inicio": "2026-07-14T00:00",
+    "fim": "2026-07-15T19:20"
   },
   "itens": [
     {
       "fonte": "Planalto | Resenha Diaria",
       "categoria": "Legislacao Federal",
-      "titulo": "Lei nº 15.468, de 13.7.2026",
-      "data_publicacao": "2026-07-13",
-      "resumo": "Altera a Lei de Diretrizes e Bases da Educação Nacional para incluir educação política e direitos da cidadania como componente curricular obrigatório da educação básica.",
+      "titulo": "Lei nº 15.468, de 13.7.2026 - Altera a Lei de Diretrizes e Bases da Educação Nacional para incluir educação política e direitos da cidadania",
+      "data_publicacao": "2026-07-14",
+      "resumo": "Altera a Lei de Diretrizes e Bases da Educação Nacional para tornar a educação política e direitos da cidadania componente curricular obrigatório da educação básica.",
       "boletins_confirmados": [],
-      "motivo_filtragem": "Tema de educação básica, sem aderência direta às áreas de atuação do escritório.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho ou previdência empresarial."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Não se refere a operações societárias, governança corporativa ou compliance empresarial."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro, capitais ou fundos de investimento."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial específica ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG corporativo."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos, arbitragem ou contencioso judicial/administrativo."
+        }
+      ],
+      "palavras_chave_detectadas": [],
+      "motivo_filtragem": "Lei de caráter geral sobre educação, sem aderência às áreas de atuação do escritório.",
       "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15468.htm",
       "boletins": []
     },
     {
       "fonte": "Planalto | Resenha Diaria",
       "categoria": "Legislacao Federal",
-      "titulo": "Lei nº 15.467, de 13.7.2026",
-      "data_publicacao": "2026-07-13",
-      "resumo": "Institui a Semana Nacional da Ética e da Cidadania, a ser comemorada anualmente na primeira semana de maio.",
+      "titulo": "Lei nº 15.467, de 13.7.2026 - Institui a Semana Nacional da Ética e da Cidadania",
+      "data_publicacao": "2026-07-14",
+      "resumo": "Institui a Semana Nacional da Ética e da Cidadania no calendário nacional.",
       "boletins_confirmados": [],
-      "motivo_filtragem": "Tema geral de ética e cidadania, sem aderência direta às áreas de atuação do escritório.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho ou previdência empresarial."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Não se refere a operações societárias, governança corporativa ou compliance empresarial."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro, capitais ou fundos de investimento."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial específica ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG corporativo."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos, arbitragem ou contencioso judicial/administrativo."
+        }
+      ],
+      "palavras_chave_detectadas": [],
+      "motivo_filtragem": "Lei de caráter geral sobre ética e cidadania, sem aderência às áreas de atuação do escritório.",
       "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15467.htm",
       "boletins": []
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.574, 15/7/2026",
+      "data_publicacao": "2026-07-15T18:32",
+      "resumo": "Divulga condições para a realização de operações compromissadas com instituições financeiras participantes do módulo Oferta Pública (Ofpub).",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em operações financeiras, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "instituicao financeira",
+        "oferta publica"
+      ],
+      "motivo_filtragem": "Trata de condições para operações financeiras e oferta pública, aderente à descrição de Mercado de Capitais.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45574",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.573, 15/7/2026",
+      "data_publicacao": "2026-07-15T18:30",
+      "resumo": "Divulga as condições de oferta pública para a realização de operações de swap para fins de rolagem do vencimento de 03/08/2026.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em operações financeiras, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "oferta publica",
+        "swap",
+        "derivativos"
+      ],
+      "motivo_filtragem": "Aborda oferta pública e operações de swap, temas centrais de Mercado de Capitais.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45573",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.572, 15/7/2026",
+      "data_publicacao": "2026-07-15T16:12",
+      "resumo": "Prorroga o prazo para conclusão de inquérito.",
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Assunto genérico, sem relação com direito do trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Assunto genérico, sem relação com direito tributário."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Assunto genérico, sem relação com direito societário ou M&A."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Assunto genérico de prorrogação de inquérito, sem detalhe financeiro ou regulatório específico."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Assunto genérico, sem relação com regulação setorial."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Assunto genérico, sem relação com imobiliário ou infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Assunto genérico, sem relação com ambiental ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Assunto genérico, sem relação com PI, tecnologia ou privacidade."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Assunto genérico de prorrogação de inquérito, sem especificar a natureza do contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [],
+      "motivo_filtragem": "Conteúdo muito genérico para classificação em qualquer boletim específico.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45572",
+      "boletins": []
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.571, 15/7/2026",
+      "data_publicacao": "2026-07-15T11:46",
+      "resumo": "Divulga o resultado de leilões de swap.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em operações financeiras, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "swap",
+        "derivativos"
+      ],
+      "motivo_filtragem": "Trata de resultados de leilões de swap, relevante para Mercado de Capitais.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45571",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.570, 15/7/2026",
+      "data_publicacao": "2026-07-15T11:30",
+      "resumo": "Divulga a realização de leilão de Swap Cambial Tradicional para fins de rolagem.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em operações financeiras, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "swap",
+        "derivativos"
+      ],
+      "motivo_filtragem": "Anuncia leilão de swap cambial, relevante para Mercado de Capitais.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45570",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.569, 15/7/2026",
+      "data_publicacao": "2026-07-15T11:30",
+      "resumo": "Divulga a realização de leilão de Swap Cambial Tradicional para fins de rolagem.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em operações financeiras, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "swap",
+        "derivativos"
+      ],
+      "motivo_filtragem": "Anuncia leilão de swap cambial, relevante para Mercado de Capitais.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45569",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.568, 15/7/2026",
+      "data_publicacao": "2026-07-15T09:38",
+      "resumo": "Divulga nome de pessoas com interesse em assumir a condição de controladores de Administradora de Consórcio.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos",
+        "societario-ma"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "instituicao financeira",
+        "controlador",
+        "autorizacao regulatoria"
+      ],
+      "motivo_filtragem": "Trata de autorização para controladores de administradora de consórcio, com aspectos de mercado de capitais e governança societária.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45568",
+      "boletins": [
+        "mercado-capitais-fundos",
+        "societario-ma"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.567, 15/7/2026",
+      "data_publicacao": "2026-07-15T09:37",
+      "resumo": "Divulga, para fins de recebimento de eventuais objeções, nomes de pessoas eleitas ou nomeadas para ocupar cargos de administração em instituições autorizadas a funcionar.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos",
+        "societario-ma"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "instituicao financeira",
+        "conselho de administracao",
+        "diretoria",
+        "governanca corporativa"
+      ],
+      "motivo_filtragem": "Refere-se a nomeações em cargos de administração de instituições financeiras, relevante para governança e regulação do mercado.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45567",
+      "boletins": [
+        "mercado-capitais-fundos",
+        "societario-ma"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.566, 15/7/2026",
+      "data_publicacao": "2026-07-15T09:36",
+      "resumo": "Divulga nome aprovado de pessoas eleitas/nomeadas para cargos de órgãos estatutários ou contratuais de sociedades autorizadas a funcionar pelo Banco Central do Brasil.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos",
+        "societario-ma"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "instituicao financeira",
+        "conselho de administracao",
+        "diretoria",
+        "governanca corporativa"
+      ],
+      "motivo_filtragem": "Trata de aprovação de nomes para cargos estatutários em sociedades reguladas pelo BCB, com implicações societárias e de mercado.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45566",
+      "boletins": [
+        "mercado-capitais-fundos",
+        "societario-ma"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.565, 15/7/2026",
+      "data_publicacao": "2026-07-15T09:04",
+      "resumo": "Divulga a Taxa Básica Financeira (TBF), o Redutor \"R\" e a Taxa Referencial (TR) relativos a 14 de julho de 2026.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em taxas financeiras, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "taxa de juros",
+        "BCB"
+      ],
+      "motivo_filtragem": "Divulgação de taxas financeiras básicas, relevante para o mercado financeiro.",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45565",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
     },
     {
       "fonte": "Banco Central | Normas",
@@ -36,7 +641,45 @@
       "boletins_confirmados": [
         "mercado-capitais-fundos"
       ],
-      "motivo_filtragem": "Trata de condições para operações financeiras e instituições financeiras, aderente a mercado de capitais.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em operações financeiras, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "instituicao financeira",
+        "oferta publica"
+      ],
+      "motivo_filtragem": "Trata de condições para operações financeiras e oferta pública, aderente à descrição de Mercado de Capitais.",
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45564",
       "boletins": [
         "mercado-capitais-fundos"
@@ -51,7 +694,46 @@
       "boletins_confirmados": [
         "mercado-capitais-fundos"
       ],
-      "motivo_filtragem": "Refere-se a condições de oferta pública e operações de swap, relevante para mercado de capitais.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em operações financeiras, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "oferta publica",
+        "swap",
+        "derivativos"
+      ],
+      "motivo_filtragem": "Aborda oferta pública e operações de swap, temas centrais de Mercado de Capitais.",
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45563",
       "boletins": [
         "mercado-capitais-fundos"
@@ -62,12 +744,52 @@
       "categoria": "Financeiro e Mercado de Capitais",
       "titulo": "Resolução CMN n° 5.329, 14/7/2026",
       "data_publicacao": "2026-07-14T18:05",
-      "resumo": "Define encargos financeiros para financiamentos rurais com recursos de Fundos Constitucionais de Financiamento e ajusta normas do Manual de Crédito Rural.",
+      "resumo": "Define os encargos financeiros para financiamentos rurais com recursos dos Fundos Constitucionais de Financiamento.",
       "boletins_confirmados": [
         "mercado-capitais-fundos",
         "imobiliario-infraestrutura"
       ],
-      "motivo_filtragem": "Define encargos financeiros e normas para financiamentos rurais com fundos, relevante para mercado de capitais e financiamento de projetos imobiliários/rurais.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em financiamentos rurais, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Filtro 1: fonte 'Banco Central | Normas' nao esta mapeada para este boletim"
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "financiamento",
+        "credito estruturado",
+        "fundos de investimento",
+        "imovel rural"
+      ],
+      "motivo_filtragem": "Define encargos para financiamentos rurais, relevante para fundos de investimento e negócios imobiliários (rurais).",
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20CMN&numero=5329",
       "boletins": [
         "mercado-capitais-fundos"
@@ -78,256 +800,458 @@
       "categoria": "Financeiro e Mercado de Capitais",
       "titulo": "Comunicado n° 45.562, 14/7/2026",
       "data_publicacao": "2026-07-14T17:18",
-      "resumo": "Divulga a data de início das operações dos sistemas de escrituração de duplicatas escriturais, conforme Resolução BCB nº 339/2023.",
-      "boletins_confirmados": [
-        "mercado-capitais-fundos"
+      "resumo": "Divulga a data de início das operações dos...",
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Conteúdo truncado, impossível determinar a relevância temática."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Conteúdo truncado, impossível determinar a relevância temática."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Conteúdo truncado, impossível determinar a relevância temática."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Conteúdo truncado, impossível determinar a relevância temática."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Conteúdo truncado, impossível determinar a relevância temática."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Conteúdo truncado, impossível determinar a relevância temática."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Conteúdo truncado, impossível determinar a relevância temática."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Conteúdo truncado, impossível determinar a relevância temática."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Conteúdo truncado, impossível determinar a relevância temática."
+        }
       ],
-      "motivo_filtragem": "Trata do início de operações de sistemas de escrituração de duplicatas, relevante para o mercado financeiro e meios de pagamento.",
+      "palavras_chave_detectadas": [],
+      "motivo_filtragem": "Conteúdo truncado, impossível classificar o item.",
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45562",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
+      "boletins": []
     },
     {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.561, 14/7/2026",
-      "data_publicacao": "2026-07-14T11:46",
-      "resumo": "Divulga o resultado de leilões de swap.",
-      "boletins_confirmados": [
-        "mercado-capitais-fundos"
+      "fonte": "CCEE | Noticias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Confira nossa videorreportagem com os destaques da participação da CCEE no EVEx Brasil 2026",
+      "data_publicacao": "2026-07-15",
+      "resumo": "Videorreportagem sobre a participação da CCEE no EVEx Brasil 2026, evento que debateu o futuro do setor elétrico ibero-americano.",
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Notícia institucional, sem conteúdo de M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Notícia institucional, sem conteúdo de mercado financeiro ou de capitais."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Notícia institucional sobre evento, sem conteúdo regulatório ou legal específico."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Notícia institucional sobre evento, sem conteúdo de projetos de infraestrutura ou imobiliários."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Notícia institucional, sem conteúdo específico de ambiental ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
       ],
-      "motivo_filtragem": "Divulga resultados de leilões de swap, relevante para o mercado de capitais.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45561",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.560, 14/7/2026",
-      "data_publicacao": "2026-07-14T11:30",
-      "resumo": "Divulga a realização de leilão de Swap Cambial Tradicional para fins de rolagem.",
-      "boletins_confirmados": [
-        "mercado-capitais-fundos"
-      ],
-      "motivo_filtragem": "Divulga a realização de leilão de swap cambial, relevante para o mercado de capitais.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45560",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.559, 14/7/2026",
-      "data_publicacao": "2026-07-14T11:30",
-      "resumo": "Divulga a realização de leilão de Swap Cambial Tradicional para fins de rolagem.",
-      "boletins_confirmados": [
-        "mercado-capitais-fundos"
-      ],
-      "motivo_filtragem": "Divulga a realização de leilão de swap cambial, relevante para o mercado de capitais.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45559",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.558, 14/7/2026",
-      "data_publicacao": "2026-07-14T09:47",
-      "resumo": "Divulga nomes de pessoas eleitas ou nomeadas para cargos de administração em instituições autorizadas a funcionar, para recebimento de objeções.",
-      "boletins_confirmados": [
-        "mercado-capitais-fundos",
-        "societario-ma"
-      ],
-      "motivo_filtragem": "Trata de nomeações para cargos de administração em instituições financeiras, relevante para governança e regulação bancária.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45558",
-      "boletins": [
-        "mercado-capitais-fundos",
-        "societario-ma"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.557, 14/7/2026",
-      "data_publicacao": "2026-07-14T09:46",
-      "resumo": "Divulga nome aprovado de pessoas eleitas/nomeadas para cargos de órgãos estatutários ou contratuais de sociedades autorizadas a funcionar pelo Banco Central do Brasil.",
-      "boletins_confirmados": [
-        "mercado-capitais-fundos",
-        "societario-ma"
-      ],
-      "motivo_filtragem": "Divulga aprovação de nomes para cargos em sociedades autorizadas pelo BCB, relevante para governança e regulação bancária.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45557",
-      "boletins": [
-        "mercado-capitais-fundos",
-        "societario-ma"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.556, 14/7/2026",
-      "data_publicacao": "2026-07-14T09:07",
-      "resumo": "Divulga as Taxas Básicas Financeiras (TBF), os Redutores 'R' e as Taxas Referenciais (TR) relativos a 11, 12 e 13 de julho de 2026.",
-      "boletins_confirmados": [
-        "mercado-capitais-fundos"
-      ],
-      "motivo_filtragem": "Divulga taxas financeiras de referência, relevante para o mercado financeiro.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45556",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.555, 13/7/2026",
-      "data_publicacao": "2026-07-13T18:30",
-      "resumo": "Divulga as condições de oferta pública para a realização de operações de swap para fins de rolagem do vencimento de 03/08/2026.",
-      "boletins_confirmados": [
-        "mercado-capitais-fundos"
-      ],
-      "motivo_filtragem": "Refere-se a condições de oferta pública e operações de swap, relevante para mercado de capitais.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45555",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.554, 13/7/2026",
-      "data_publicacao": "2026-07-13T18:30",
-      "resumo": "Divulga condições para a realização de operações compromissadas com instituições financeiras participantes do módulo Oferta Pública (Ofpub).",
-      "boletins_confirmados": [
-        "mercado-capitais-fundos"
-      ],
-      "motivo_filtragem": "Trata de condições para operações financeiras e instituições financeiras, aderente a mercado de capitais.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45554",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado n° 45.553, 13/7/2026",
-      "data_publicacao": "2026-07-13T15:04",
-      "resumo": "Divulga nome de pessoa com interesse em assumir a condição de controlador de Sociedade de Crédito Direto, conforme pedido de autorização para funcionamento.",
-      "boletins_confirmados": [
-        "mercado-capitais-fundos",
-        "societario-ma"
-      ],
-      "motivo_filtragem": "Divulga interesse em controle de SCD e pedido de autorização, relevante para regulação bancária e M&A.",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45553",
-      "boletins": [
-        "mercado-capitais-fundos",
-        "societario-ma"
-      ]
+      "palavras_chave_detectadas": [],
+      "motivo_filtragem": "Notícia institucional sobre evento, sem conteúdo jurídico relevante para as áreas do escritório.",
+      "url": "https://www.ccee.org.br/-/confira-nossa-videorreportagem-com-os-destaques-da-participacao-da-ccee-no-evex-brasil-2026",
+      "boletins": []
     },
     {
       "fonte": "CCEE | Noticias",
       "categoria": "Energia e Recursos",
       "titulo": "Garanta sua vaga nos próximos cursos especializados da CCEE Academy",
       "data_publicacao": "2026-07-14",
-      "resumo": "Capacitações presenciais em São Paulo abordam backoffice e geração própria no setor elétrico.",
+      "resumo": "Divulgação de cursos especializados da CCEE Academy sobre backoffice e geração própria.",
       "boletins_confirmados": [],
-      "motivo_filtragem": "Notícia sobre cursos internos da CCEE, sem relevância direta para as áreas de atuação do escritório.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Notícia institucional, sem conteúdo de M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Notícia institucional, sem conteúdo de mercado financeiro ou de capitais."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Notícia institucional sobre cursos, sem conteúdo regulatório ou legal específico."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Notícia institucional sobre cursos, sem conteúdo de projetos de infraestrutura ou imobiliários."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Notícia institucional, sem conteúdo específico de ambiental ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [],
+      "motivo_filtragem": "Notícia institucional sobre cursos, sem conteúdo jurídico relevante para as áreas do escritório.",
       "url": "https://www.ccee.org.br/-/garanta-sua-vaga-nos-proximos-cursos-especializados-da-ccee-academy",
       "boletins": []
     },
     {
-      "fonte": "CCEE | Noticias",
-      "categoria": "Energia e Recursos",
-      "titulo": "Inscrições abertas: conquiste a Certificação de Operadores do Mercado 2026",
-      "data_publicacao": "2026-07-13",
-      "resumo": "Exame promovido pela CCEE Academy abre novas oportunidades para profissionais do setor elétrico e traz novidades no processo de recertificação.",
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "PORTARIA AGU Nº 247, DE 14 DE JULHO DE 2025",
+      "data_publicacao": "2026-07-15",
+      "resumo": "Transforma a Procuradoria Seccional Federal em Caruaru/PE em Escritório Avançado, vinculado à Procuradoria Regional Federal da 5ª Região.",
       "boletins_confirmados": [],
-      "motivo_filtragem": "Notícia sobre certificação profissional, sem relevância direta para as áreas de atuação do escritório.",
-      "url": "https://www.ccee.org.br/-/inscricoes-abertas-conquiste-a-certificacao-de-operadores-do-mercado-2026",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Trata de reorganização interna de órgão público, não de operação societária privada."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial específica ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [],
+      "motivo_filtragem": "Reorganização administrativa interna de órgão público, sem impacto direto nas áreas de atuação do escritório.",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-agu-n-247-de-14-de-julho-de-2025-718995525",
       "boletins": []
     },
     {
       "fonte": "Destaques do D.O.U.",
       "categoria": "Legislação Federal",
-      "titulo": "LEI Nº 15.468, DE 13 DE JULHO DE 2026",
-      "data_publicacao": "2026-07-14",
-      "resumo": "Altera a Lei de Diretrizes e Bases da Educação Nacional para incluir educação política e direitos da cidadania como componente curricular obrigatório da educação básica.",
-      "boletins_confirmados": [],
-      "motivo_filtragem": "Lei sobre educação básica, sem aderência direta às áreas de atuação do escritório.",
-      "url": "https://www.in.gov.br/web/dou/-/lei-n-15.468-de-13-de-julho-de-2026-718704159",
+      "titulo": "INSTRUÇÃO NORMATIVA SECOM/PR Nº 14, DE 14 DE JULHO DE 2026",
+      "data_publicacao": "2026-07-15",
+      "resumo": "Altera a Instrução Normativa nº 2, de 23 de dezembro de 2019, que disciplina o patrocínio dos órgãos e entidades do Poder Executivo federal.",
+      "boletins_confirmados": [
+        "societario-ma"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial específica ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Filtro 1: fonte 'Destaques do D.O.U.' nao esta mapeada para este boletim"
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "compliance corporativo"
+      ],
+      "motivo_filtragem": "Altera regras de patrocínio de órgãos públicos, com potencial impacto em compliance para empresas.",
+      "url": "https://www.in.gov.br/web/dou/-/instrucao-normativa-secom/pr-n-14-de-14-de-julho-de-2026-718993990",
       "boletins": []
     },
     {
       "fonte": "Destaques do D.O.U.",
       "categoria": "Legislação Federal",
-      "titulo": "LEI Nº 15.467, DE 13 DE JULHO DE 2026",
-      "data_publicacao": "2026-07-14",
-      "resumo": "Institui a Semana Nacional da Ética e da Cidadania, a ser comemorada anualmente na primeira semana de maio.",
-      "boletins_confirmados": [],
-      "motivo_filtragem": "Lei sobre tema geral de ética e cidadania, sem aderência direta às áreas de atuação do escritório.",
-      "url": "https://www.in.gov.br/web/dou/-/lei-n-15.467-de-13-de-julho-de-2026-718710955",
+      "titulo": "PORTARIA MAPA Nº 937, DE 14 DE JULHO DE 2026",
+      "data_publicacao": "2026-07-15",
+      "resumo": "Altera a Portaria MAPA nº 888, de 26 de março de 2026, que institui o Núcleo Permanente de Apoio à Implementação do Plano de Desenvolvimento Agropecuário e Agroindustrial do MATOPIBA.",
+      "boletins_confirmados": [
+        "imobiliario-infraestrutura"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Não se refere a operações societárias ou governança corporativa."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Filtro 1: fonte 'Destaques do D.O.U.' nao esta mapeada para este boletim"
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "agronegocio",
+        "imovel rural"
+      ],
+      "motivo_filtragem": "Altera portaria sobre desenvolvimento agropecuário, relevante para negócios imobiliários rurais e agronegócio.",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-mapa-n-937-de-14-de-julho-de-2026-718995499",
       "boletins": []
     },
     {
       "fonte": "Destaques do D.O.U.",
       "categoria": "Legislação Federal",
-      "titulo": "DESPACHOS DO PRESIDENTE DA REPÚBLICA",
-      "data_publicacao": "2026-07-14",
-      "resumo": "Mensagens de restituição ao Congresso Nacional de autógrafos de Projetos de Lei que se transformam nas Leis nº 15.467 e 15.468, de 13 de julho de 2026.",
+      "titulo": "PortariA SFA-GO/MAPA nº 143, de 13 de julho de 2026",
+      "data_publicacao": "2026-07-15",
+      "resumo": "Portaria administrativa da Superintendência de Agricultura e Pecuária do Estado de Goiás, sem detalhes específicos no resumo.",
       "boletins_confirmados": [],
-      "motivo_filtragem": "Despachos presidenciais sobre sanção de leis já listadas, sem nova informação relevante para as áreas do escritório.",
-      "url": "https://www.in.gov.br/web/dou/-/despachos-do-presidente-da-republica-718705395",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Conteúdo genérico, sem relação com direito do trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Conteúdo genérico, sem relação com direito tributário."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Conteúdo genérico, sem relação com direito societário ou M&A."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Conteúdo genérico, sem relação com mercado financeiro ou de capitais."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Portaria administrativa genérica, sem conteúdo regulatório setorial específico."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Conteúdo genérico, sem relação com imobiliário ou infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Conteúdo genérico, sem relação com ambiental ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Conteúdo genérico, sem relação com PI, tecnologia ou privacidade."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Conteúdo genérico, sem relação com solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [],
+      "motivo_filtragem": "Conteúdo muito genérico para classificação em qualquer boletim específico.",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-go/mapa-n-143-de-13-de-julho-de-2026-718994084",
       "boletins": []
     },
     {
       "fonte": "Destaques do D.O.U.",
       "categoria": "Legislação Federal",
-      "titulo": "PORTARIA IN/CC/PR Nº 40, DE 13 DE JULHO DE 2026",
-      "data_publicacao": "2026-07-14",
-      "resumo": "Realoca cargos e função comissionados executivos no âmbito da Imprensa Nacional da Casa Civil da Presidência da República.",
+      "titulo": "PortariA SFA-GO/MAPA nº 144, de 13 de julho de 2026",
+      "data_publicacao": "2026-07-15",
+      "resumo": "Portaria administrativa da Superintendência de Agricultura e Pecuária do Estado de Goiás, sem detalhes específicos no resumo.",
       "boletins_confirmados": [],
-      "motivo_filtragem": "Portaria sobre realocação de cargos na Imprensa Nacional, sem aderência às áreas de atuação do escritório.",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-in/cc/pr-n-40-de-13-de-julho-de-2026-718705474",
-      "boletins": []
-    },
-    {
-      "fonte": "Destaques do D.O.U.",
-      "categoria": "Legislação Federal",
-      "titulo": "RETIFICAÇÃO",
-      "data_publicacao": "2026-07-14",
-      "resumo": "Retificação da Portaria IN/CC/PR nº 36, de 25 de junho de 2026, alterando o prazo de entrada em vigor para sete dias úteis.",
-      "boletins_confirmados": [],
-      "motivo_filtragem": "Retificação de portaria anterior, sem conteúdo temático relevante para as áreas do escritório.",
-      "url": "https://www.in.gov.br/web/dou/-/retificacao-718710134",
-      "boletins": []
-    },
-    {
-      "fonte": "Destaques do D.O.U.",
-      "categoria": "Legislação Federal",
-      "titulo": "PORTARIA MAPA Nº 936, DE 13 DE JU",
-      "data_publicacao": "2026-07-14",
-      "resumo": "Título e resumo incompletos, impossível classificar com precisão.",
-      "boletins_confirmados": [],
-      "motivo_filtragem": "Título e resumo incompletos, impossível classificar com precisão.",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-mapa-n-936-de-13-de-julho-de-2026-718705474",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Conteúdo genérico, sem relação com direito do trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Conteúdo genérico, sem relação com direito tributário."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Conteúdo genérico, sem relação com direito societário ou M&A."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Conteúdo genérico, sem relação com mercado financeiro ou de capitais."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Portaria administrativa genérica, sem conteúdo regulatório setorial específico."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Conteúdo genérico, sem relação com imobiliário ou infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Conteúdo genérico, sem relação com ambiental ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Conteúdo genérico, sem relação com PI, tecnologia ou privacidade."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Conteúdo genérico, sem relação com solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [],
+      "motivo_filtragem": "Conteúdo muito genérico para classificação em qualquer boletim específico.",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-go/mapa-n-144-de-13-de-julho-de-2026-719006192",
       "boletins": []
     },
     {
       "fonte": "Ministério da Fazenda | Notícias",
       "categoria": "Tributário",
-      "titulo": "Receita Federal atualiza regras cadastrais do CNPJ",
-      "data_publicacao": "2026-07-13",
-      "resumo": "Nova instrução normativa da Receita Federal atualiza critérios para análise das informações registradas no CNPJ.",
+      "titulo": "Prisma Fiscal de julho atualiza projeções para o resultado primário do governo central em 2026",
+      "data_publicacao": "2026-07-15",
+      "resumo": "Mediana para o déficit primário do governo central em 2026 passa de R$ 59,016 bilhões para R$ 58,077 bilhões.",
       "boletins_confirmados": [
         "direito-tributario"
       ],
-      "motivo_filtragem": "Notícia sobre atualização de regras cadastrais do CNPJ pela Receita Federal, relevante para direito tributário.",
-      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/julho/receita-federal-atualiza-regras-cadastrais-do-cnpj",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em projeções fiscais, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Foco em projeções fiscais, não em mercado financeiro ou de capitais diretamente."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "gestao fiscal"
+      ],
+      "motivo_filtragem": "Notícia sobre projeções fiscais, relevante para o cenário tributário.",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/julho/prisma-fiscal-de-julho-atualiza-projecoes-para-o-resultado-primario-do-governo-central-em-2026",
       "boletins": [
         "direito-tributario"
       ]
@@ -335,15 +1259,105 @@
     {
       "fonte": "Ministério da Fazenda | Notícias",
       "categoria": "Tributário",
-      "titulo": "Receita Federal ajusta regras do contencioso administrativo para devedores contumazes",
-      "data_publicacao": "2026-07-13",
-      "resumo": "Portaria RFB 702/2026 amplia a competência das turmas recursais da DRJ-R para apreciação de casos de devedores contumazes.",
+      "titulo": "Aberta consulta pública sobre regras para a transferência internacional de créditos de carbono",
+      "data_publicacao": "2026-07-15",
+      "resumo": "Consulta pública define critérios para transferências internacionais de créditos de carbono, com sugestões até 6 de agosto.",
+      "boletins_confirmados": [
+        "ambiental-esg",
+        "direito-tributario"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em créditos de carbono, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais diretamente."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "mercado de carbono",
+        "credito de carbono",
+        "consulta publica",
+        "tributacao internacional"
+      ],
+      "motivo_filtragem": "Consulta pública sobre regras de transferência internacional de créditos de carbono, com aspectos ambientais/ESG e tributários.",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/julho/aberta-consulta-publica-sobre-regras-para-a-transferencia-internacional-de-creditos-de-carbono",
+      "boletins": [
+        "ambiental-esg",
+        "direito-tributario"
+      ]
+    },
+    {
+      "fonte": "Ministério da Fazenda | Notícias",
+      "categoria": "Tributário",
+      "titulo": "Receita Federal publica dois novos editais de negociação de débitos em contencioso administrativo",
+      "data_publicacao": "2026-07-15",
+      "resumo": "Receita Federal publica editais para negociação de dívidas tributárias em contencioso administrativo, com adesões até 30 de outubro.",
       "boletins_confirmados": [
         "direito-tributario",
         "contencioso-civel"
       ],
-      "motivo_filtragem": "Ajuste de regras para contencioso administrativo tributário, relevante para direito tributário e contencioso cível.",
-      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/julho/receita-federal-ajusta-regras-do-contencioso-administrativo-para-devedores-contumazes",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em débitos tributários, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais diretamente."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "autuacao fiscal",
+        "credito tributario",
+        "contencioso tributario",
+        "parcelamento",
+        "contencioso administrativo"
+      ],
+      "motivo_filtragem": "Publicação de editais para negociação de débitos tributários em contencioso administrativo, relevante para direito tributário e contencioso cível.",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/julho/receita-federal-publica-dois-novos-editais-de-negociacao-de-debitos-em-contencioso-administrativo",
       "boletins": [
         "contencioso-civel",
         "direito-tributario"
@@ -352,32 +1366,259 @@
     {
       "fonte": "Ministério da Fazenda | Notícias",
       "categoria": "Tributário",
-      "titulo": "Receita Federal vai antecipar atividades para implantação do CNPJ Alfanumérico",
-      "data_publicacao": "2026-07-13",
-      "resumo": "Necessidade técnica altera o período de disponibilidade da base do CNPJ para a implementação do novo formato alfanumérico.",
-      "boletins_confirmados": [
-        "direito-tributario"
+      "titulo": "Receita Federal disponibiliza painéis com estatísticas das declarações do Imposto de Renda de Pessoa Física",
+      "data_publicacao": "2026-07-15",
+      "resumo": "Painéis com estatísticas consolidadas das declarações de IRPF são disponibilizados pela Receita Federal, preservando o sigilo fiscal.",
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Divulgação de estatísticas, não de nova norma ou desenvolvimento legal tributário."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Não se refere a operações societárias ou governança corporativa."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial específica ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
       ],
-      "motivo_filtragem": "Notícia sobre implantação de novo formato de CNPJ pela Receita Federal, relevante para direito tributário.",
-      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/julho/receita-federal-vai-antecipar-atividades-para-implantacao-do-cnpj-alfanumerico",
-      "boletins": [
-        "direito-tributario"
-      ]
+      "palavras_chave_detectadas": [],
+      "motivo_filtragem": "Notícia informativa sobre estatísticas, sem conteúdo jurídico relevante.",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/julho/receita-federal-disponibiliza-paineis-com-estatisticas-das-declaracoes-do-imposto-de-renda-de-pessoa-fisica",
+      "boletins": []
     },
     {
       "fonte": "Ministério da Fazenda | Notícias",
       "categoria": "Tributário",
-      "titulo": "Ministério da Fazenda amplia exigências de publicidade de apostas no país",
-      "data_publicacao": "2026-07-13",
-      "resumo": "Novas regras incluem a exibição obrigatória de frases advertências sobre a temática da publicidade de apostas.",
-      "boletins_confirmados": [
-        "regulatorio-oleo-gas",
-        "propriedade-intelectual"
+      "titulo": "Lote especial de restituição automática do Imposto de Renda será pago nesta quarta-feira (15/7)",
+      "data_publicacao": "2026-07-15",
+      "resumo": "Cerca de 3,5 milhões de contribuintes receberão restituição automática do IRPF, creditada via Pix.",
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Notícia operacional sobre pagamento de restituição, não de nova norma ou desenvolvimento legal tributário."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Não se refere a operações societárias ou governança corporativa."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial específica ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
       ],
-      "motivo_filtragem": "Ampliação de exigências regulatórias para publicidade de apostas, relevante para regulação setorial e, potencialmente, tecnologia/e-commerce.",
-      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/julho/ministerio-da-fazenda-amplia-exigencias-de-publicidade-de-apostas-no-pais",
+      "palavras_chave_detectadas": [],
+      "motivo_filtragem": "Notícia operacional sobre pagamento de restituição, sem conteúdo jurídico relevante.",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/julho/lote-especial-de-restituicao-automatica-do-imposto-de-renda-sera-pago-nesta-quarta-feira-15-7",
+      "boletins": []
+    },
+    {
+      "fonte": "Ministério da Fazenda | Notícias",
+      "categoria": "Tributário",
+      "titulo": "Polícia Federal realiza operação contra esquema de apostas ilegais",
+      "data_publicacao": "2026-07-15",
+      "resumo": "Operação da Polícia Federal combate esquema de apostas ilegais que utilizava influenciadores digitais para divulgar sites irregulares.",
+      "boletins_confirmados": [
+        "contencioso-civel",
+        "propriedade-intelectual",
+        "regulatorio-oleo-gas"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Foco em operação policial e ilegalidade, não em aspectos tributários diretos."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Não se refere a operações societárias ou governança corporativa."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais diretamente."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "contencioso civel",
+        "ciberseguranca",
+        "regulacao setorial"
+      ],
+      "motivo_filtragem": "Operação contra apostas ilegais, com aspectos de contencioso, tecnologia (influenciadores digitais) e regulatório (apostas).",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/julho/policia-federal-realiza-operacao-contra-esquema-de-apostas-ilegais",
       "boletins": [
         "regulatorio-oleo-gas",
+        "propriedade-intelectual",
+        "contencioso-civel"
+      ]
+    },
+    {
+      "fonte": "ANPD | Notícias",
+      "categoria": "Regulatório e Setorial",
+      "titulo": "Encerradas inscrições para o 3º Encontro ANPD de Encarregados",
+      "data_publicacao": "2026-07-15T16:35",
+      "resumo": "Inscrições para o 3º Encontro ANPD de Encarregados foram encerradas. Evento será em 19 de agosto em Brasília, com transmissão online.",
+      "boletins_confirmados": [
+        "propriedade-intelectual"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Notícia institucional, sem conteúdo de M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "ANPD",
+        "LGPD",
+        "encarregado",
+        "DPO"
+      ],
+      "motivo_filtragem": "Notícia sobre evento para encarregados de dados, relevante para privacidade e LGPD.",
+      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/encerradas-inscricoes-para-o-3-encontro-anpd-encarregados",
+      "boletins": [
+        "propriedade-intelectual"
+      ]
+    },
+    {
+      "fonte": "ANPD | Notícias",
+      "categoria": "Regulatório e Setorial",
+      "titulo": "ANPD publica versão em inglês do Glossário de Proteção de Dados Pessoais e Privacidade",
+      "data_publicacao": "2026-07-14T14:55",
+      "resumo": "A ANPD publicou a versão em inglês do Glossário de Proteção de Dados Pessoais e Privacidade, voltado a entidades e especialistas internacionais.",
+      "boletins_confirmados": [
+        "propriedade-intelectual"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Não se refere a operações societárias ou governança corporativa."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "ANPD",
+        "protecao de dados",
+        "privacidade"
+      ],
+      "motivo_filtragem": "Publicação de glossário de termos de proteção de dados, relevante para a área de PI/Tecnologia e Privacidade.",
+      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-versao-em-ingles-do-glossario-de-protecao-de-dados-pessoais-e-privacidade",
+      "boletins": [
         "propriedade-intelectual"
       ]
     },
@@ -386,65 +1627,104 @@
       "categoria": "Financeiro e Mercado de Capitais",
       "titulo": "CVM recebe reforço de 30 novos servidores, e Medida Provisória cria mais 50 vagas de Inspetor Federal",
       "data_publicacao": "2026-07-14",
-      "resumo": "Contratações integram Plano Emergencial de Reestruturação da Autarquia, com criação de novas vagas de Inspetor Federal.",
-      "boletins_confirmados": [],
-      "motivo_filtragem": "Notícia sobre contratação de servidores para a CVM, sem relevância direta para as áreas de atuação do escritório.",
+      "resumo": "A CVM recebe 30 novos servidores e uma Medida Provisória cria mais 50 vagas de Inspetor Federal, integrando o Plano Emergencial de Reestruturação da Autarquia.",
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em reforço institucional da CVM, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "CVM",
+        "medida provisoria"
+      ],
+      "motivo_filtragem": "Notícia institucional da CVM, mas a menção à Medida Provisória pode ter impacto regulatório no mercado de capitais.",
       "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-recebe-reforco-de-30-novos-servidores-e-medida-provisoria-cria-mais-50-vagas-de-inspetor-federal",
-      "boletins": []
-    },
-    {
-      "fonte": "CVM | Notícias",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Sessão de Julgamento em 14/7",
-      "data_publicacao": "2026-07-13",
-      "resumo": "Processos serão julgados pela CVM a partir das 15h do dia 14 de julho.",
-      "boletins_confirmados": [
-        "mercado-capitais-fundos",
-        "contencioso-civel"
-      ],
-      "motivo_filtragem": "Anúncio de sessão de julgamento da CVM, relevante para o mercado de capitais e contencioso.",
-      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/sessao-de-julgamento-em-14-7",
       "boletins": [
         "mercado-capitais-fundos"
       ]
-    },
-    {
-      "fonte": "CVM | Notícias",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "CVM e Anbima ampliam matriz objeto de acordo de cooperação sobre análise de ofertas públicas",
-      "data_publicacao": "2026-07-13",
-      "resumo": "Acordo de cooperação entre CVM e Anbima amplia o escopo de análise de ofertas públicas, em vigor desde 30/6/2026.",
-      "boletins_confirmados": [
-        "mercado-capitais-fundos"
-      ],
-      "motivo_filtragem": "Acordo entre CVM e Anbima sobre ofertas públicas, diretamente relevante para o mercado de capitais.",
-      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-e-anbima-ampliam-matriz-objeto-de-acordo-de-cooperacao-sobre-analise-de-ofertas-publicas",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "fonte": "CVM | Notícias",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Indisponibilidade temporária de acesso ao Sistema Empresas.NET",
-      "data_publicacao": "2026-07-13",
-      "resumo": "Sistema Empresas.NET estará fora do ar das 9h às 18h do dia 18/7 para manutenção.",
-      "boletins_confirmados": [],
-      "motivo_filtragem": "Aviso operacional sobre indisponibilidade de sistema da CVM, sem relevância temática para as áreas do escritório.",
-      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/indisponibilidade-temporaria-de-acesso-ao-sistema-empresas.net",
-      "boletins": []
     },
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "043-2026-VNC-Ofício Circular",
+      "titulo": "043-2026-VNC-Ofício Circular - Tratamento das carteiras de índices da B3 em virtude da OPA da T4F ENTRETENIMENTO S.A.",
       "data_publicacao": "2026-07-14",
-      "resumo": "Tratamento das carteiras de índices da B3 em virtude da Oferta Pública Unificada de Aquisição de Ações (OPA) da T4F ENTRETENIMENTO S.A.",
+      "resumo": "Ofício Circular da B3 sobre o tratamento das carteiras de índices devido à Oferta Pública Unificada de Aquisição de Ações (OPA) da T4F ENTRETENIMENTO S.A.",
       "boletins_confirmados": [
         "mercado-capitais-fundos",
         "societario-ma"
       ],
-      "motivo_filtragem": "Ofício circular da B3 sobre tratamento de carteiras de índices devido a uma OPA, relevante para mercado de capitais e societário/M&A.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Filtro 1: fonte 'B3 | Ofícios e Comunicados' nao esta mapeada para este boletim"
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "OPA",
+        "B3",
+        "companhia aberta"
+      ],
+      "motivo_filtragem": "Ofício circular sobre tratamento de carteiras de índices devido a uma OPA, relevante para mercado de capitais e operações societárias.",
       "url": "https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel0a",
       "boletins": [
         "mercado-capitais-fundos"
@@ -453,14 +1733,53 @@
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "040-2026-VNC-Comunicado Externo",
+      "titulo": "040-2026-VNC-Comunicado Externo - Market Data B3 – Atualização de especificação técnica e arquivo de templates",
       "data_publicacao": "2026-07-14",
       "resumo": "Novas versões das especificações técnicas do Market Data B3 (UMDF Binário, UMDF FIX/FAST e Conflated) estão disponíveis.",
       "boletins_confirmados": [
         "mercado-capitais-fundos",
         "propriedade-intelectual"
       ],
-      "motivo_filtragem": "Atualização técnica de dados de mercado da B3, relevante para mercado de capitais e tecnologia.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em dados e tecnologia de mercado, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Filtro 1: fonte 'B3 | Ofícios e Comunicados' nao esta mapeada para este boletim"
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "B3",
+        "tecnologia",
+        "dados"
+      ],
+      "motivo_filtragem": "Atualização técnica de Market Data da B3, com relevância para mercado de capitais e tecnologia/dados.",
       "url": "https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel1a",
       "boletins": [
         "mercado-capitais-fundos"
@@ -469,13 +1788,52 @@
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "039-2026-VNC-Comunicado Externo",
+      "titulo": "039-2026-VNC-Comunicado Externo - Alteração do tamanho mínimo para registro de ofertas diretas",
       "data_publicacao": "2026-07-14",
-      "resumo": "Alteração do tamanho mínimo para registro de ofertas diretas nos produtos ETF de Renda Variável, LAND3, MTSA3, BBDC3.",
+      "resumo": "A B3 irá adequar o tamanho mínimo de ofertas diretas para produtos como ETF de Renda Variável, LAND3, MTSA3 e BBDC3.",
       "boletins_confirmados": [
         "mercado-capitais-fundos"
       ],
-      "motivo_filtragem": "Alteração de regras para registro de ofertas diretas, relevante para o mercado de capitais.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em ofertas diretas de mercado, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "oferta publica",
+        "ETF",
+        "B3"
+      ],
+      "motivo_filtragem": "Alteração de regras para registro de ofertas diretas, impactando o mercado de capitais.",
       "url": "https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel2a",
       "boletins": [
         "mercado-capitais-fundos"
@@ -484,14 +1842,52 @@
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "038-2026-VPC-Ofício Circular",
+      "titulo": "038-2026-VPC-Ofício Circular - Início da Produção Assistida de Duplicatas Escriturais",
       "data_publicacao": "2026-07-14",
       "resumo": "A fase de produção assistida do sistema de duplicatas escriturais terá início em 15/07/2026.",
       "boletins_confirmados": [
         "mercado-capitais-fundos"
       ],
-      "motivo_filtragem": "Início de produção assistida de duplicatas escriturais, relevante para o mercado financeiro e crédito.",
-      "url": "https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel3a",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em instrumentos financeiros, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "valores mobiliarios",
+        "credito estruturado"
+      ],
+      "motivo_filtragem": "Início de produção de duplicatas escriturais, relevante para instrumentos financeiros e mercado de capitais.",
+      "url": "https://www.b3.com.br/data/files/2A/33/AF/61/3A26F910CEC024F9AC094EA8/OC%20038-2026-VPC%20INICIO%20DA%20PRODUCAO%20ASSISTIDA%20DE%20DUPLICATAS%20ESCRITURAIS_PT.pdf",
       "boletins": [
         "mercado-capitais-fundos"
       ]
@@ -499,15 +1895,55 @@
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "037-2026-VPC-Ofício Circular",
+      "titulo": "037-2026-VPC-Ofício Circular - Mudança no Índice de Energia Elétrica",
       "data_publicacao": "2026-07-14",
-      "resumo": "Mudanças na metodologia do Índice de Energia Elétrica, com alteração do método de ponderação para valor de mercado do free float.",
+      "resumo": "O Índice de Energia Elétrica passará por mudanças em sua metodologia a partir de 20/07/2026, com foco na ponderação por valor de mercado do free float.",
       "boletins_confirmados": [
         "mercado-capitais-fundos",
-        "imobiliario-infraestrutura"
+        "imobiliario-infraestrutura",
+        "regulatorio-oleo-gas"
       ],
-      "motivo_filtragem": "Mudança na metodologia de índice de energia elétrica, relevante para mercado de capitais e setor de energia.",
-      "url": "https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel4a",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em índice de mercado, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG diretamente."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Filtro 1: fonte 'B3 | Ofícios e Comunicados' nao esta mapeada para este boletim"
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Filtro 1: fonte 'B3 | Ofícios e Comunicados' nao esta mapeada para este boletim"
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "energia eletrica",
+        "B3",
+        "mercado de capitais"
+      ],
+      "motivo_filtragem": "Mudança na metodologia de índice de energia elétrica, com impacto em mercado de capitais, infraestrutura e regulatório de energia.",
+      "url": "https://www.b3.com.br/data/files/EB/17/63/AD/F016F910CEC024F9AC094EA8/OC%20037-2026-VPC%20MUDANCA%20NO%20%C3%8DNDICE%20DE%20ENERGIA%20ELETRICA_PT.pdf",
       "boletins": [
         "mercado-capitais-fundos"
       ]
@@ -515,77 +1951,265 @@
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "006-2026-VPE-Comunicado Externo",
+      "titulo": "006-2026-VPE-Comunicado Externo - Balcão B3 – Regime de contingência programada no ambiente de produção",
       "data_publicacao": "2026-07-14",
-      "resumo": "O Sistema do Balcão B3 entrará em regime de contingência total no ambiente de produção no dia 27/08/2026.",
+      "resumo": "O Sistema do Balcão B3 entrará em regime de contingência total no ambiente de produção no dia 27/08/2026 para envio de mensagens LDL0005.",
       "boletins_confirmados": [],
-      "motivo_filtragem": "Aviso operacional sobre regime de contingência da B3, sem relevância temática para as áreas do escritório.",
-      "url": "https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel5a",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Notícia operacional, sem conteúdo de M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Notícia operacional sobre contingência, sem impacto regulatório ou legal direto."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não se relaciona a regulação setorial de energia ou óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [],
+      "motivo_filtragem": "Notícia operacional da B3, sem conteúdo jurídico relevante para as áreas do escritório.",
+      "url": "https://www.b3.com.br/data/files/8E/07/2E/FB/3016F910CEC024F9AC094EA8/CE%20006-2026-VPE%20BALCAO%20B3%20-%20REGIME%20DE%20CONTINGENCIA%20PROGRAMADA%20NO%20AMBIENTE%20DE%20PRODUCAO_PT.pdf",
       "boletins": []
+    },
+    {
+      "fonte": "ANP | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Oferta Permanente: empresas inscritas têm até 21/7 para declararem interesse em blocos e setores para ciclos em andamento",
+      "data_publicacao": "2026-07-15",
+      "resumo": "Empresas inscritas na Oferta Permanente da ANP têm até 21/7 para declarar interesse em blocos e setores para os 4º Ciclo de Partilha e 6º Ciclo de Concessão.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em licitações e concessões, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais diretamente."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG diretamente."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "ANP",
+        "exploracao e producao",
+        "oleo e gas",
+        "rodada de licitacoes"
+      ],
+      "motivo_filtragem": "Notícia sobre prazo para declaração de interesse em blocos de exploração, relevante para regulatório de óleo e gás e infraestrutura.",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/oferta-permanente-empresas-inscritas-tem-ate-21-7-para-declararem-interesse-em-blocos-e-setores-para-ciclos-em-andamento",
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
     },
     {
       "fonte": "ANP | Notícias",
       "categoria": "Energia e Recursos",
       "titulo": "ANP firma acordo com os Procons do Acre e do Amapá para fiscalização do abastecimento nos estados",
       "data_publicacao": "2026-07-14",
-      "resumo": "A ANP estabelece parcerias com Procons para fiscalização do abastecimento de combustíveis, visando proteger o consumidor.",
+      "resumo": "A ANP firmou acordo com os Procons do Acre e do Amapá para fiscalizar o abastecimento de combustíveis, ampliando parcerias com órgãos públicos.",
       "boletins_confirmados": [
         "regulatorio-oleo-gas",
         "contencioso-civel"
       ],
-      "motivo_filtragem": "Acordo da ANP para fiscalização de abastecimento, relevante para regulação de óleo e gás e direito do consumidor.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em fiscalização e direito do consumidor, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura diretamente."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Filtro 1: fonte 'ANP | Notícias' nao esta mapeada para este boletim"
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "ANP",
+        "fiscalizacao regulatoria",
+        "direito do consumidor",
+        "combustiveis"
+      ],
+      "motivo_filtragem": "Acordo para fiscalização de abastecimento de combustíveis, com aspectos regulatórios e de direito do consumidor.",
       "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-firma-acordo-com-os-procons-do-acre-e-do-amapa-para-fiscalizacao-do-abastecimento-nos-estados",
       "boletins": [
         "regulatorio-oleo-gas"
       ]
     },
     {
-      "fonte": "ANP | Notícias",
+      "fonte": "MME | Notícias",
       "categoria": "Energia e Recursos",
-      "titulo": "\"ANP com VC - Postos\": aplicativo disponibiliza dados de postos e canal de denúncias ao consumidor",
-      "data_publicacao": "2026-07-13",
-      "resumo": "Aplicativo da ANP oferece dados de postos e canal de denúncias, promovendo transparência e proteção ao consumidor.",
-      "boletins_confirmados": [
-        "regulatorio-oleo-gas",
-        "propriedade-intelectual",
-        "contencioso-civel"
+      "titulo": "Terras raras: o que são e para o que servem?",
+      "data_publicacao": "2026-07-15",
+      "resumo": "Artigo informativo sobre terras raras, suas aplicações e características, essenciais para diversas tecnologias.",
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Notícia informativa, sem conteúdo de M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Notícia informativa, sem conteúdo regulatório ou legal específico de mineração."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Notícia informativa sobre terras raras, sem conteúdo regulatório ou legal específico de mineração."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG diretamente."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados diretamente."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
       ],
-      "motivo_filtragem": "Lançamento de aplicativo da ANP para consumidores, relevante para regulação de óleo e gás, tecnologia e direito do consumidor.",
-      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-com-vc-postos-aplicativo-disponibiliza-dados-de-postos-e-canal-de-denuncias-ao-consumidor",
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
+      "palavras_chave_detectadas": [],
+      "motivo_filtragem": "Notícia informativa sobre minerais, sem conteúdo jurídico relevante para as áreas do escritório.",
+      "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/terras-raras-o-que-sao-e-para-o-que-servem",
+      "boletins": []
     },
     {
       "fonte": "MME | Notícias",
       "categoria": "Energia e Recursos",
       "titulo": "Consulta pública do POTEE 2026 está aberta para contribuições da sociedade",
       "data_publicacao": "2026-07-14",
-      "resumo": "Documento reúne recomendações técnicas para reforço e expansão das instalações de transmissão do Sistema Interligado Nacional.",
+      "resumo": "Consulta pública do Plano de Otimização de Transmissão de Energia Elétrica (POTEE) 2026 está aberta para contribuições sobre reforço e expansão da transmissão.",
       "boletins_confirmados": [
         "imobiliario-infraestrutura",
         "regulatorio-oleo-gas"
       ],
-      "motivo_filtragem": "Consulta pública sobre expansão de transmissão de energia, relevante para infraestrutura e regulação.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em planejamento energético, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais diretamente."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG diretamente."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Filtro 1: fonte 'MME | Notícias' nao esta mapeada para este boletim"
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "consulta publica",
+        "transmissao de energia",
+        "energia eletrica",
+        "infraestrutura"
+      ],
+      "motivo_filtragem": "Consulta pública sobre plano de transmissão de energia, relevante para infraestrutura e regulatório de energia.",
       "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/consulta-publica-do-potee-2026-esta-aberta-para-contribuicoes-da-sociedade",
       "boletins": [
-        "imobiliario-infraestrutura"
-      ]
-    },
-    {
-      "fonte": "MME | Notícias",
-      "categoria": "Energia e Recursos",
-      "titulo": "Segurança alimentar: entenda o papel da mineração neste processo",
-      "data_publicacao": "2026-07-13",
-      "resumo": "A mineração fornece recursos fundamentais para o desenvolvimento da agricultura e segurança alimentar do país.",
-      "boletins_confirmados": [
-        "imobiliario-infraestrutura",
-        "ambiental-esg"
-      ],
-      "motivo_filtragem": "Artigo sobre o papel da mineração na segurança alimentar, relevante para mineração e aspectos ESG.",
-      "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/seguranca-alimentar-entenda-o-papel-da-mineracao-neste-processo",
-      "boletins": [
-        "ambiental-esg",
         "imobiliario-infraestrutura"
       ]
     },
@@ -594,11 +2218,50 @@
       "categoria": "Energia e Recursos",
       "titulo": "Aprovada Consulta Pública para estabelecer regras de participação no Prêmio ANEEL de Inovação 2026",
       "data_publicacao": "2026-07-14",
-      "resumo": "A ANEEL aprovou consulta pública para definir regras de participação no Prêmio ANEEL de Inovação 2026.",
+      "resumo": "A ANEEL aprovou consulta pública para definir regras de participação no Prêmio ANEEL de Inovação 2026, com contribuições de 17 de julho a 15 de agosto.",
       "boletins_confirmados": [
         "regulatorio-oleo-gas"
       ],
-      "motivo_filtragem": "Aprovação de consulta pública pela ANEEL, relevante para regulação do setor de energia.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em regulação de energia, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura diretamente."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados diretamente."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "ANEEL",
+        "consulta publica",
+        "regulacao setorial"
+      ],
+      "motivo_filtragem": "Aprovação de consulta pública sobre regras de participação em prêmio da ANEEL, com aspecto regulatório.",
       "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aprovada-consulta-publica-para-estabelecer-regras-de-participacao-no-premio-aneel-de-inovacao-2026",
       "boletins": [
         "regulatorio-oleo-gas"
@@ -614,7 +2277,43 @@
         "regulatorio-oleo-gas",
         "imobiliario-infraestrutura"
       ],
-      "motivo_filtragem": "Aprovação de revisão tarifária pela ANEEL, relevante para regulação e infraestrutura de energia.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em regulação tarifária, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais diretamente."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG diretamente."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "ANEEL",
+        "revisao tarifaria",
+        "regulacao tarifaria",
+        "energia eletrica"
+      ],
+      "motivo_filtragem": "Aprovação de revisão tarifária pela ANEEL, relevante para regulatório de energia e infraestrutura.",
       "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/revisao-tarifaria-periodica-da-energisa-sul-sudeste-e-aprovada-pela-aneel",
       "boletins": [
         "regulatorio-oleo-gas",
@@ -626,12 +2325,51 @@
       "categoria": "Energia e Recursos",
       "titulo": "Consulta Pública discutirá revisão da Metodologia do Fator X",
       "data_publicacao": "2026-07-14",
-      "resumo": "Consulta Pública para discutir a revisão da Metodologia do Fator X, que incentiva empresas a reduzir custos e melhorar serviços.",
+      "resumo": "Consulta Pública discutirá a revisão da Metodologia do Fator X, que incentiva empresas a reduzir custos e melhorar a qualidade do serviço.",
       "boletins_confirmados": [
-        "regulatorio-oleo-gas",
-        "contencioso-civel"
+        "regulatorio-oleo-gas"
       ],
-      "motivo_filtragem": "Consulta pública sobre metodologia de incentivo para empresas e consumidores, relevante para regulação e direito do consumidor.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em regulação de energia, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura diretamente."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "ANEEL",
+        "consulta publica",
+        "regulacao economica",
+        "regulacao tarifaria"
+      ],
+      "motivo_filtragem": "Consulta pública sobre revisão da metodologia do Fator X, com impacto regulatório e econômico.",
       "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/consulta-publica-discutira-revisao-da-metodologia-do-fator-x",
       "boletins": [
         "regulatorio-oleo-gas"
@@ -642,12 +2380,48 @@
       "categoria": "Energia e Recursos",
       "titulo": "ANEEL estende o prazo de concessão da UHE Jirau (RO)",
       "data_publicacao": "2026-07-14",
-      "resumo": "A ANEEL estendeu o prazo de concessão da Usina Hidrelétrica de Jirau, de dezembro de 2045 para agosto de 2047.",
+      "resumo": "A ANEEL estendeu o prazo de concessão da Usina Hidrelétrica (UHE) Jirau, em Rondônia, de dezembro de 2045 para agosto de 2047.",
       "boletins_confirmados": [
         "imobiliario-infraestrutura",
         "regulatorio-oleo-gas"
       ],
-      "motivo_filtragem": "Extensão de prazo de concessão de usina hidrelétrica pela ANEEL, relevante para infraestrutura e regulação.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em concessão de energia, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais diretamente."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG diretamente."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "ANEEL",
+        "concessao",
+        "energia eletrica",
+        "infraestrutura"
+      ],
+      "motivo_filtragem": "Extensão de prazo de concessão de usina hidrelétrica, relevante para infraestrutura e regulatório de energia.",
       "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-estende-o-prazo-de-concessao-da-uhe-jirau-ro",
       "boletins": [
         "regulatorio-oleo-gas",
@@ -659,13 +2433,50 @@
       "categoria": "Energia e Recursos",
       "titulo": "Agência aprova rescisão dos contratos entre comercializadora e agentes de distribuição",
       "data_publicacao": "2026-07-14",
-      "resumo": "A ANEEL aprovou a rescisão de contratos entre comercializadora e agentes de distribuição devido a inadimplência contratual.",
+      "resumo": "A ANEEL aprovou a rescisão de contratos entre uma comercializadora e agentes de distribuição devido a inadimplência contratual.",
       "boletins_confirmados": [
         "imobiliario-infraestrutura",
         "regulatorio-oleo-gas",
         "contencioso-civel"
       ],
-      "motivo_filtragem": "Aprovação de rescisão contratual pela ANEEL devido a inadimplência, relevante para energia, regulação e contencioso.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em rescisão contratual no setor elétrico, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais diretamente."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Filtro 1: fonte 'ANEEL | Últimas Notícias' nao esta mapeada para este boletim"
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "ANEEL",
+        "contrato de distribuicao",
+        "comercializadora",
+        "inadimplemento contratual",
+        "contencioso contratual"
+      ],
+      "motivo_filtragem": "Aprovação de rescisão contratual entre agentes do setor elétrico, com aspectos de infraestrutura, regulatório e contencioso.",
       "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/agencia-aprova-rescisao-dos-contratos-entre-comercializadora-e-agentes-de-distribuicao",
       "boletins": [
         "regulatorio-oleo-gas",
@@ -673,19 +2484,113 @@
       ]
     },
     {
-      "fonte": "Ministério da Agricultura | Notícias",
+      "fonte": "Secretaria de Prêmios e Apostas | Notícias",
       "categoria": "Regulatório e Setorial",
-      "titulo": "Publicada portaria que define preços mínimos para os produtos de verão e regionais das safras 2026/27 e 2027",
-      "data_publicacao": "2026-07-13",
-      "resumo": "Portaria define preços mínimos para produtos agrícolas de verão e regionais para as safras 2026/27 e 2027.",
+      "titulo": "Polícia Federal realiza operação contra esquema de apostas ilegais",
+      "data_publicacao": "2026-07-15T12:50",
+      "resumo": "Operação da Polícia Federal combate esquema de apostas ilegais que utilizava influenciadores digitais para divulgar sites irregulares.",
       "boletins_confirmados": [
-        "ambiental-esg",
-        "imobiliario-infraestrutura"
+        "contencioso-civel",
+        "propriedade-intelectual",
+        "regulatorio-oleo-gas"
       ],
-      "motivo_filtragem": "Portaria que define preços mínimos para produtos agrícolas, com impacto indireto em sustentabilidade e uso de terras rurais.",
-      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/publicada-portaria-que-define-precos-minimos-para-os-produtos-de-verao-e-regionais-das-safras-2026-27-e-2027",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Foco em operação policial e ilegalidade, não em aspectos tributários diretos."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Não se refere a operações societárias ou governança corporativa."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais diretamente."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Filtro 1: fonte 'Secretaria de Prêmios e Apostas | Notícias' nao esta mapeada para este boletim"
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Filtro 1: fonte 'Secretaria de Prêmios e Apostas | Notícias' nao esta mapeada para este boletim"
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "contencioso civel",
+        "ciberseguranca",
+        "regulacao setorial"
+      ],
+      "motivo_filtragem": "Operação contra apostas ilegais, com aspectos de contencioso, tecnologia (influenciadores digitais) e regulatório (apostas).",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/julho/policia-federal-realiza-operacao-contra-esquema-de-apostas-ilegais",
       "boletins": [
-        "ambiental-esg"
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "ANVISA | Notícias",
+      "categoria": "Regulatório e Setorial",
+      "titulo": "OMS publica lista de autoridades regulatórias para dispositivos médicos",
+      "data_publicacao": "2026-07-15",
+      "resumo": "A OMS publicou uma lista de autoridades regulatórias para dispositivos médicos, incluindo a Anvisa entre as 12 agências reconhecidas.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em regulação de saúde, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG diretamente."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "ANVISA",
+        "dispositivo medico",
+        "regulacao setorial"
+      ],
+      "motivo_filtragem": "Notícia sobre reconhecimento da Anvisa pela OMS para dispositivos médicos, relevante para regulatório de saúde.",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/oms-publica-lista-de-autoridades-ulatorias-para-dispositivos-medicos",
+      "boletins": [
+        "regulatorio-oleo-gas"
       ]
     },
     {
@@ -693,85 +2598,109 @@
       "categoria": "Regulatório e Setorial",
       "titulo": "Soroterapia: promessas na internet NÃO substituem evidências científicas",
       "data_publicacao": "2026-07-14",
-      "resumo": "Anvisa alerta sobre promessas de soroterapia na internet que não possuem evidências científicas.",
-      "boletins_confirmados": [],
-      "motivo_filtragem": "Notícia de alerta ao consumidor sobre saúde, sem aderência direta às áreas de atuação do escritório.",
+      "resumo": "Anvisa alerta sobre promessas de soroterapia na internet que não possuem evidências científicas, destacando riscos de hipervitaminose.",
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "contencioso-civel"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em saúde e consumidor, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados diretamente."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Filtro 1: fonte 'ANVISA | Notícias' nao esta mapeada para este boletim"
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "ANVISA",
+        "vigilancia sanitaria",
+        "direito do consumidor"
+      ],
+      "motivo_filtragem": "Alerta sobre soroterapia e promessas na internet, com aspectos de vigilância sanitária e direito do consumidor.",
       "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/soroterapia-promessas-na-internet-nao-substituem-evidencias-cientificas",
-      "boletins": []
-    },
-    {
-      "fonte": "ANVISA | Notícias",
-      "categoria": "Regulatório e Setorial",
-      "titulo": "Autorizado, importado, experimental ou falsificado? Anvisa explica as diferenças entre os medicamentos",
-      "data_publicacao": "2026-07-13",
-      "resumo": "Anvisa esclarece as diferenças entre medicamentos autorizados, importados, experimentais e falsificados, e como identificá-los.",
-      "boletins_confirmados": [
-        "regulatorio-oleo-gas"
-      ],
-      "motivo_filtragem": "Esclarecimentos da Anvisa sobre medicamentos, relevante para regulação setorial e compliance.",
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/autorizado-importado-experimental-ou-falsificado-anvisa-explica-as-diferencas-entre-os-medicamentos",
       "boletins": [
         "regulatorio-oleo-gas"
       ]
     },
     {
-      "fonte": "ANVISA | Notícias",
-      "categoria": "Regulatório e Setorial",
-      "titulo": "Anvisa registra nova vacina contra a influenza",
-      "data_publicacao": "2026-07-13",
-      "resumo": "Anvisa registra nova vacina contra a influenza, indicada a partir dos 6 meses de idade.",
+      "fonte": "ANM | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Confira o repasse da CFEM referente à arrecadação de junho",
+      "data_publicacao": "2026-07-15T13:28",
+      "resumo": "Relatório da ANM apresenta os valores da Compensação Financeira pela Exploração de Recursos Minerais (CFEM) distribuídos em julho a estados, Distrito Federal e municípios produtores.",
       "boletins_confirmados": [
-        "regulatorio-oleo-gas"
+        "imobiliario-infraestrutura",
+        "direito-tributario"
       ],
-      "motivo_filtragem": "Registro de nova vacina pela Anvisa, relevante para regulação setorial e autorizações.",
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-registra-nova-vacina-contra-a-influenza",
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "fonte": "ANVISA | Notícias",
-      "categoria": "Regulatório e Setorial",
-      "titulo": "Anvisa recebe delegação do Instituto de Salud Pública do Chile para intercâmbio técnico sobre dispositivos médicos",
-      "data_publicacao": "2026-07-13",
-      "resumo": "Anvisa recebeu delegação chilena para intercâmbio técnico sobre o ciclo regulatório de dispositivos médicos no Brasil.",
-      "boletins_confirmados": [
-        "regulatorio-oleo-gas"
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em royalties de mineração, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais diretamente."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Foco em mineração, não em óleo e gás."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG diretamente."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Filtro 1: fonte 'ANM | Notícias' nao esta mapeada para este boletim"
+        }
       ],
-      "motivo_filtragem": "Intercâmbio técnico da Anvisa sobre regulação de dispositivos médicos, relevante para regulação setorial.",
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-recebe-delegacao-do-instituto-de-salud-publica-do-chile-para-intercambio-tecnico-sobre-dispositivos-medicos",
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "fonte": "ANVISA | Notícias",
-      "categoria": "Regulatório e Setorial",
-      "titulo": "Anvisa assina novo Memorando de Entendimento com agência de Moçambique",
-      "data_publicacao": "2026-07-13",
-      "resumo": "Anvisa assina Memorando de Entendimento com agência de Moçambique para avaliação de produtos e intercâmbio de informações regulatórias.",
-      "boletins_confirmados": [
-        "regulatorio-oleo-gas"
+      "palavras_chave_detectadas": [
+        "mineracao",
+        "royalties",
+        "tributo"
       ],
-      "motivo_filtragem": "Acordo de cooperação internacional da Anvisa sobre vigilância sanitária e informações regulatórias, relevante para regulação setorial.",
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-assina-novo-memorando-de-entendimento-com-agencia-de-mocambique",
+      "motivo_filtragem": "Notícia sobre repasse de CFEM, relevante para mineração (infraestrutura) e tributário (royalties).",
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/repasse-da-cfem-arrecadada-em-junho-soma-mais-de-r-461-milhoes",
       "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "fonte": "INPI | Notícias",
-      "categoria": "Regulatório e Setorial",
-      "titulo": "Retomado trâmite prioritário de patentes de Técnica de Comunicação Elétrica (H04 )",
-      "data_publicacao": "2026-07-13T17:23",
-      "resumo": "O INPI retomou o trâmite prioritário para patentes relacionadas à Técnica de Comunicação Elétrica (H04).",
-      "boletins_confirmados": [
-        "propriedade-intelectual"
-      ],
-      "motivo_filtragem": "Retomada de trâmite prioritário de patentes no INPI, diretamente relevante para propriedade intelectual.",
-      "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/retoramado-tramite-prioritario-de-patentes-de-tecnica-de-comunicacao-eletrica-h04",
-      "boletins": [
-        "propriedade-intelectual"
+        "imobiliario-infraestrutura"
       ]
     },
     {
@@ -779,11 +2708,51 @@
       "categoria": "Energia e Recursos",
       "titulo": "Mineralização de carbono é tema de nova publicação da EPE",
       "data_publicacao": "2026-07-14",
-      "resumo": "Publicação da EPE aborda os fundamentos da mineralização de carbono como alternativa de armazenamento permanente de CO₂.",
+      "resumo": "Publicação da EPE aborda a mineralização de carbono, um processo que converte dióxido de carbono em minerais estáveis, como alternativa de armazenamento permanente.",
       "boletins_confirmados": [
         "ambiental-esg"
       ],
-      "motivo_filtragem": "Publicação sobre mineralização de carbono e armazenamento de CO2, diretamente relevante para temas ambientais e ESG.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários diretamente."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em sustentabilidade, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais diretamente."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Foco em soluções ambientais, não em regulação setorial de óleo e gás."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não trata de negócios imobiliários ou projetos de infraestrutura diretamente."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "mercado de carbono",
+        "mudanca climatica",
+        "descarbonizacao",
+        "captura e armazenamento de carbono"
+      ],
+      "motivo_filtragem": "Publicação sobre mineralização de carbono como alternativa de armazenamento, relevante para ambiental e ESG.",
       "url": "https://www.epe.gov.br/pt/imprensa/noticias/mineralizacao-de-carbono-e-tema-de-nova-publicacao-da-epe",
       "boletins": [
         "ambiental-esg"
@@ -794,12 +2763,50 @@
       "categoria": "Energia e Recursos",
       "titulo": "EPE recebe representante de Moçambique para reunião sobre planejamento energético",
       "data_publicacao": "2026-07-14",
-      "resumo": "A EPE recebeu representante de Moçambique para discutir planejamento energético e cooperação internacional.",
+      "resumo": "A EPE recebeu o diretor nacional do Gabinete de Estudos Económicos e Estratégicos de Moçambique para reunião sobre planejamento energético.",
       "boletins_confirmados": [
         "imobiliario-infraestrutura",
         "regulatorio-oleo-gas"
       ],
-      "motivo_filtragem": "Reunião sobre planejamento energético, relevante para infraestrutura e regulação do setor de energia.",
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não trata de relações de trabalho."
+        },
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não aborda temas fiscais ou tributários."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Foco em planejamento energético, não em M&A ou governança societária."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Não trata de mercado financeiro ou de capitais diretamente."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não aborda questões ambientais ou ESG."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não se refere a propriedade intelectual, tecnologia ou privacidade de dados."
+        },
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Não trata de solução de conflitos ou contencioso."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Filtro 1: fonte 'EPE | Notícias' nao esta mapeada para este boletim"
+        }
+      ],
+      "palavras_chave_detectadas": [
+        "planejamento energetico",
+        "energia eletrica"
+      ],
+      "motivo_filtragem": "Reunião sobre planejamento energético, relevante para infraestrutura e regulatório de energia.",
       "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-recebe-representante-de-mocambique-para-reuniao-sobre-planejamento-energetico",
       "boletins": [
         "imobiliario-infraestrutura"
@@ -808,38 +2815,38 @@
   ],
   "fontes_sem_publicacao_hoje": [
     {
-      "fonte": "ANPD | Notícias",
-      "motivo": "Nenhuma notícia publicada dentro da janela temporal."
+      "fonte": "ONS | Notícias",
+      "motivo": "Nenhuma publicação encontrada na janela temporal de 2026-07-14T00:00 a 2026-07-15T19:20."
     },
     {
-      "fonte": "ONS | Notícias",
-      "motivo": "Nenhuma notícia publicada dentro da janela temporal."
+      "fonte": "Ministério da Agricultura | Notícias",
+      "motivo": "Nenhuma publicação encontrada na janela temporal de 2026-07-14T00:00 a 2026-07-15T19:20."
+    },
+    {
+      "fonte": "INPI | Notícias",
+      "motivo": "Nenhuma publicação encontrada na janela temporal de 2026-07-14T00:00 a 2026-07-15T19:20."
     },
     {
       "fonte": "COAF | Notícias",
-      "motivo": "Nenhuma notícia publicada dentro da janela temporal."
-    },
-    {
-      "fonte": "ANM | Notícias",
-      "motivo": "Nenhuma notícia publicada dentro da janela temporal."
+      "motivo": "Nenhuma publicação encontrada na janela temporal de 2026-07-14T00:00 a 2026-07-15T19:20."
     }
   ],
   "fontes_sem_resultado": [
     {
       "fonte": "Receita Federal | Normas",
-      "motivo": "A página é uma interface de busca e não apresenta normas publicadas dentro da janela temporal."
+      "motivo": "O conteúdo retornado é uma interface de busca, não uma lista de resultados para a janela especificada."
     },
     {
       "fonte": "CGU | Notícias",
-      "motivo": "A página apresenta conteúdo restrito e não foi possível extrair notícias."
+      "motivo": "Acesso ao conteúdo restrito, impossível extrair informações."
     },
     {
       "fonte": "Ministério do Meio Ambiente | Notícias",
-      "motivo": "A página apresenta conteúdo restrito e não foi possível extrair notícias."
+      "motivo": "Acesso ao conteúdo restrito, impossível extrair informações."
     },
     {
       "fonte": "SENACON | Notícias",
-      "motivo": "A página apresenta conteúdo restrito e não foi possível extrair notícias."
+      "motivo": "Acesso ao conteúdo restrito, impossível extrair informações."
     }
   ],
   "fontes_com_erro_tecnico": [],
@@ -1001,22 +3008,120 @@
       "total": 3
     },
     "mercado-capitais-fundos": {
-      "total": 20
+      "total": 18
     },
     "regulatorio-oleo-gas": {
-      "total": 12
+      "total": 11
     },
     "imobiliario-infraestrutura": {
-      "total": 6
+      "total": 7
     },
     "ambiental-esg": {
-      "total": 3
-    },
-    "propriedade-intelectual": {
       "total": 2
     },
+    "propriedade-intelectual": {
+      "total": 3
+    },
     "contencioso-civel": {
-      "total": 1
+      "total": 2
     }
+  },
+  "auditoria": {
+    "total_itens": 53,
+    "itens_com_alguma_rejeicao": 53,
+    "itens_com_bloqueio_f1": 13,
+    "rejeicoes_por_boletim": {
+      "trabalhista-empresarial": 53,
+      "direito-tributario": 50,
+      "societario-ma": 50,
+      "mercado-capitais-fundos": 35,
+      "regulatorio-oleo-gas": 42,
+      "imobiliario-infraestrutura": 46,
+      "ambiental-esg": 51,
+      "propriedade-intelectual": 50,
+      "contencioso-civel": 51
+    },
+    "top_palavras_chave_detectadas": [
+      {
+        "palavra": "instituicao financeira",
+        "ocorrencias": 5
+      },
+      {
+        "palavra": "oferta publica",
+        "ocorrencias": 5
+      },
+      {
+        "palavra": "swap",
+        "ocorrencias": 5
+      },
+      {
+        "palavra": "derivativos",
+        "ocorrencias": 5
+      },
+      {
+        "palavra": "energia eletrica",
+        "ocorrencias": 5
+      },
+      {
+        "palavra": "aneel",
+        "ocorrencias": 5
+      },
+      {
+        "palavra": "consulta publica",
+        "ocorrencias": 4
+      },
+      {
+        "palavra": "regulacao setorial",
+        "ocorrencias": 4
+      },
+      {
+        "palavra": "b3",
+        "ocorrencias": 4
+      },
+      {
+        "palavra": "conselho de administracao",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "diretoria",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "governanca corporativa",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "credito estruturado",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "imovel rural",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "mercado de carbono",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "contencioso civel",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "ciberseguranca",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "anpd",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "anp",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "direito do consumidor",
+        "ocorrencias": 2
+      }
+    ]
   }
 }
