@@ -1,9 +1,9 @@
 {
-  "data_execucao": "2026-07-15",
-  "executado_em": "2026-07-15T20:26:05.890759-03:00",
+  "data_execucao": "2026-07-21",
+  "executado_em": "2026-07-21T19:48:44.639050-03:00",
   "janela": {
-    "inicio": "2026-07-14T00:00",
-    "fim": "2026-07-15T20:26"
+    "inicio": "2026-07-20T00:00",
+    "fim": "2026-07-21T19:48"
   },
   "fontes_processadas": [
     {
@@ -19,7 +19,7 @@
     {
       "fonte": "CCEE | Noticias",
       "status": "ok",
-      "tamanho_chars": 2124
+      "tamanho_chars": 2026
     },
     {
       "fonte": "Destaques do D.O.U.",
@@ -49,7 +49,7 @@
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "status": "ok",
-      "tamanho_chars": 9678
+      "tamanho_chars": 9576
     },
     {
       "fonte": "CGU | Notícias",
@@ -69,7 +69,7 @@
     {
       "fonte": "ONS | Notícias",
       "status": "ok",
-      "tamanho_chars": 5297
+      "tamanho_chars": 2064
     },
     {
       "fonte": "ANEEL | Últimas Notícias",
@@ -79,7 +79,7 @@
     {
       "fonte": "Secretaria de Prêmios e Apostas | Notícias",
       "status": "ok",
-      "tamanho_chars": 10000
+      "tamanho_chars": 3525
     },
     {
       "fonte": "Ministério do Meio Ambiente | Notícias",
@@ -123,79 +123,75 @@
     }
   ],
   "resultado": {
-    "itens_aceitos": 54,
+    "itens_aceitos": 47,
     "itens_descartados_pos_validacao": 0,
     "fontes_sem_resultado": 4,
-    "fontes_sem_publicacao_hoje": 4,
+    "fontes_sem_publicacao_hoje": 1,
     "fontes_com_erro_tecnico": 0,
     "itens_por_boletim": {
       "trabalhista-empresarial": {
-        "total": 0
+        "total": 4
       },
       "direito-tributario": {
         "total": 3
       },
       "societario-ma": {
-        "total": 0
+        "total": 3
       },
       "mercado-capitais-fundos": {
-        "total": 20
+        "total": 19
       },
       "regulatorio-oleo-gas": {
-        "total": 10
+        "total": 12
       },
       "imobiliario-infraestrutura": {
-        "total": 10
+        "total": 1
       },
       "ambiental-esg": {
         "total": 2
       },
       "propriedade-intelectual": {
-        "total": 2
+        "total": 5
       },
       "contencioso-civel": {
-        "total": 2
+        "total": 0
       }
     },
     "filtro2_bloqueios": {
+      "imobiliario-infraestrutura": 2,
+      "propriedade-intelectual": 4,
       "regulatorio-oleo-gas": 4,
-      "ambiental-esg": 1,
-      "societario-ma": 1,
-      "propriedade-intelectual": 3,
-      "imobiliario-infraestrutura": 1,
-      "contencioso-civel": 3,
+      "negocios-imobiliarios-infraestrutura": 6,
+      "contencioso-civel": 2,
       "direito-tributario": 1
     },
     "auditoria": {
-      "total_itens": 54,
-      "itens_com_alguma_rejeicao": 54,
+      "total_itens": 47,
+      "itens_com_alguma_rejeicao": 47,
       "itens_com_bloqueio_f1": 14,
       "rejeicoes_por_boletim": {
-        "trabalhista-empresarial": 54,
-        "direito-tributario": 51,
-        "societario-ma": 54,
-        "mercado-capitais-fundos": 34,
-        "regulatorio-oleo-gas": 44,
-        "imobiliario-infraestrutura": 44,
-        "ambiental-esg": 52,
-        "propriedade-intelectual": 52,
-        "contencioso-civel": 52
+        "trabalhista-empresarial": 43,
+        "direito-tributario": 44,
+        "societario-ma": 44,
+        "mercado-capitais-fundos": 28,
+        "ambiental-esg": 45,
+        "propriedade-intelectual": 42,
+        "contencioso-civel": 47,
+        "regulatorio-oleo-gas": 35,
+        "imobiliario-infraestrutura": 40,
+        "negocios-imobiliarios-infraestrutura": 6
       },
       "top_palavras_chave_detectadas": [
         {
           "palavra": "bcb",
-          "ocorrencias": 13
+          "ocorrencias": 10
         },
         {
-          "palavra": "b3",
-          "ocorrencias": 6
+          "palavra": "anvisa",
+          "ocorrencias": 7
         },
         {
-          "palavra": "derivativos",
-          "ocorrencias": 5
-        },
-        {
-          "palavra": "aneel",
+          "palavra": "tecnologia",
           "ocorrencias": 5
         },
         {
@@ -203,96 +199,103 @@
           "ocorrencias": 4
         },
         {
-          "palavra": "mapa",
+          "palavra": "banco central",
           "ocorrencias": 4
         },
         {
-          "palavra": "consulta pública",
-          "ocorrencias": 4
-        },
-        {
-          "palavra": "swap",
+          "palavra": "regulamentação",
           "ocorrencias": 3
         },
         {
-          "palavra": "energia",
+          "palavra": "registro",
           "ocorrencias": 3
         },
         {
-          "palavra": "agricultura e pecuária",
+          "palavra": "inpi",
           "ocorrencias": 3
         },
         {
-          "palavra": "instituição financeira",
+          "palavra": "lei de licitações",
           "ocorrencias": 2
         },
         {
-          "palavra": "leilão",
+          "palavra": "contratos administrativos",
           "ocorrencias": 2
         },
         {
-          "palavra": "swap cambial",
+          "palavra": "crédito extraordinário",
           "ocorrencias": 2
         },
         {
-          "palavra": "ccee",
+          "palavra": "ministério da previdência social",
           "ocorrencias": 2
         },
         {
-          "palavra": "setor elétrico",
+          "palavra": "previdência",
           "ocorrencias": 2
         },
         {
-          "palavra": "receita federal",
+          "palavra": "cargos em comissão",
           "ocorrencias": 2
         },
         {
-          "palavra": "irpf",
+          "palavra": "funções de confiança",
           "ocorrencias": 2
         },
         {
-          "palavra": "imposto de renda",
+          "palavra": "administração pública",
           "ocorrencias": 2
         },
         {
-          "palavra": "polícia federal",
+          "palavra": "forças armadas",
           "ocorrencias": 2
         },
         {
-          "palavra": "apostas ilegais",
+          "palavra": "eleições",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "apoio logístico",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "operações de swap",
           "ocorrencias": 2
         }
       ]
     }
   },
   "filtro2_bloqueios_detalhe": {
-    "regulatorio-oleo-gas": [
-      "Confira nossa videorreportagem com os destaques da participa",
-      "Garanta sua vaga nos próximos cursos especializados da CCEE ",
-      "Consulta pública do POTEE 2026 está aberta para contribuiçõe",
-      "EPE recebe representante de Moçambique para reunião sobre pl"
-    ],
-    "ambiental-esg": [
-      "PORTARIA MAPA Nº 937, DE 14 DE JULHO DE 2026"
-    ],
-    "societario-ma": [
-      "043-2026-VNC-Ofício Circular - Tratamento das carteiras de í"
+    "imobiliario-infraestrutura": [
+      "Instrução Normativa BCB n° 765, 21/7/2026",
+      "LEI Nº 15.471, DE 20 DE JULHO DE 2026"
     ],
     "propriedade-intelectual": [
-      "040-2026-VNC-Comunicado Externo - Market Data B3 – Atualizaç",
-      "038-2026-VPC-Ofício Circular - Início da Produção Assistida ",
-      "006-2026-VPE-Comunicado Externo - Balcão B3 – Regime de cont"
+      "Comunicado n° 45.609, 21/7/2026",
+      "Confira as apresentações e a gravação do EncontroCCEE: Opera",
+      "CVM publica Plano de Dados Abertos 2026-2028",
+      "Reunião de representantes da CVM com Impa Tech debate Acordo"
     ],
-    "imobiliario-infraestrutura": [
-      "037-2026-VPC-Ofício Circular - Mudança no Índice de Energia "
+    "regulatorio-oleo-gas": [
+      "Confira as apresentações e a gravação do EncontroCCEE: Opera",
+      "Participe do Encontro do PLD, na próxima quarta-feira (22), ",
+      "Mapa publica editais para credenciamento de laboratórios",
+      "Entenda como o Brasil organiza a geração, transmissão e o co"
+    ],
+    "negocios-imobiliarios-infraestrutura": [
+      "Confira as apresentações e a gravação do EncontroCCEE: Opera",
+      "Participe do Encontro do PLD, na próxima quarta-feira (22), ",
+      "DESPACHO DO PRESIDENTE DA REPÚBLICA",
+      "Estratégia Nacional do Complexo Econômico-Industrial da Saúd",
+      "Descubra como aplicar a eficiência energética no seu dia a d",
+      "Entenda como o Brasil organiza a geração, transmissão e o co"
     ],
     "contencioso-civel": [
-      "ANP firma acordo com os Procons do Acre e do Amapá para fisc",
-      "Agência aprova rescisão dos contratos entre comercializadora",
-      "Polícia Federal realiza operação contra esquema de apostas i"
+      "Anvisa promove webinar sobre medidas acautelatórias no Proce",
+      "Concluído o ciclo 2025/2026 de repasses da CFEM a municípios"
     ],
     "direito-tributario": [
-      "Confira o repasse da CFEM referente à arrecadação de junho"
+      "Concluído o ciclo 2025/2026 de repasses da CFEM a municípios"
     ]
   }
 }
