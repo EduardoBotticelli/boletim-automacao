@@ -1,10 +1,10 @@
 """
 Gera os 9 boletins finais (email_*.html) a partir da revisao.
 
-VERSAO 4: Identidade visual baseada nos banners oficiais do LDR.
+VERSAO 4.1: Identidade visual baseada nos banners oficiais do LDR.
 - Verde escuro (#0d3320) + verde vibrante (#22c55e) da identidade
 - Layout inspirado nos boletins do Marketing
-- Compatibilidade Outlook via bgcolor + VML
+- Corrigido problema de quebra de tags HTML e VML no Outlook
 """
 import os
 import json
@@ -193,11 +193,11 @@ def renderizar_item(noticia, primeiro=False):
     html += resumo
     html += '</div>'
 
-    # Botao "Ler noticia completa" com estilo LDR
+    # Botao "Ler noticia completa" com estilo LDR (Sintaxe Corrigida)
     if url:
         html += '<table role="presentation" cellpadding="0" cellspacing="0" border="0">\n'
-        html += '<tr><td>'
-        html += '' + url + ':inline-block;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:600;color:' + COR_VERDE_ESCURO + ';text-decoration:none;padding:8px 0 0 0;border-bottom:2px solid ' + COR_VERDE_VIBRANTE + ';">'
+        html += '<tr><td style="padding-top:4px;">'
+        html += '<a href="' + url + '" style="display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:600;color:' + COR_VERDE_ESCURO + ';text-decoration:none;padding:8px 0 0 0;border-bottom:2px solid ' + COR_VERDE_VIBRANTE + ';">'
         html += 'Ler noticia completa &rarr;'
         html += '</a>'
         html += '</td></tr>\n'
@@ -212,16 +212,10 @@ def renderizar_header(nome_bonito, data_extenso, contador):
     """
     Header inspirado no banner oficial do LDR.
     Verde escuro solido + detalhe verde vibrante (linha divisora).
+    (VML Removido)
     """
     html = '<tr>\n'
     html += '<td bgcolor="' + COR_VERDE_ESCURO + '" style="background-color:' + COR_VERDE_ESCURO + ';padding:0;">\n'
-
-    # VML fallback pro Outlook desktop
-    html += '<!--[if mso]>\n'
-    html += '<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:680px;">\n'
-    html += '<v:fill type="tile" color="' + COR_VERDE_ESCURO + '" />\n'
-    html += '<v:textbox inset="0,0,0,0">\n'
-    html += '<![endif]-->\n'
 
     html += '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="' + COR_VERDE_ESCURO + '" style="background-color:' + COR_VERDE_ESCURO + ';">\n'
     html += '<tr>\n'
@@ -252,12 +246,7 @@ def renderizar_header(nome_bonito, data_extenso, contador):
     html += '</td>\n'
     html += '</tr>\n'
     html += '</table>\n'
-
-    html += '<!--[if mso]>\n'
-    html += '</v:textbox>\n'
-    html += '</v:rect>\n'
-    html += '<![endif]-->\n'
-
+    
     html += '</td>\n'
     html += '</tr>\n'
     return html
@@ -267,6 +256,7 @@ def renderizar_footer():
     """
     Footer inspirado no banner 3 (verde oliva/acinzentado).
     Simples, com aviso de circulacao interna e endereco.
+    (VML Removido)
     """
     html = ''
 
@@ -283,12 +273,6 @@ def renderizar_footer():
     # Rodape verde oliva (banner 3)
     html += '<tr>\n'
     html += '<td bgcolor="' + COR_VERDE_OLIVA + '" style="background-color:' + COR_VERDE_OLIVA + ';padding:0;">\n'
-
-    html += '<!--[if mso]>\n'
-    html += '<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:680px;">\n'
-    html += '<v:fill type="tile" color="' + COR_VERDE_OLIVA + '" />\n'
-    html += '<v:textbox inset="0,0,0,0">\n'
-    html += '<![endif]-->\n'
 
     html += '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="' + COR_VERDE_OLIVA + '" style="background-color:' + COR_VERDE_OLIVA + ';">\n'
     html += '<tr>\n'
@@ -319,12 +303,7 @@ def renderizar_footer():
     html += '</td>\n'
     html += '</tr>\n'
     html += '</table>\n'
-
-    html += '<!--[if mso]>\n'
-    html += '</v:textbox>\n'
-    html += '</v:rect>\n'
-    html += '<![endif]-->\n'
-
+    
     html += '</td>\n'
     html += '</tr>\n'
 
@@ -360,8 +339,10 @@ def renderizar_boletim(slug, nome_bonito, noticias, data_extenso):
     html += '<head>\n'
     html += '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n'
     html += '<meta name="viewport" content="width=device-width, initial-scale=1.0" />\n'
-    html += '<meta name="color-scheme" content="light" />\n'
-    html += '<meta name="supported-color-schemes" content="light" />\n'
+    
+    # Adicionado suporte de meta-tags para Dark Mode
+    html += '<meta name="color-scheme" content="light dark" />\n'
+    html += '<meta name="supported-color-schemes" content="light dark" />\n'
     html += '<title>' + escape_html(nome_completo) + '</title>\n'
     html += '<!--[if mso]>\n'
     html += '<xml>\n'
@@ -377,6 +358,11 @@ def renderizar_boletim(slug, nome_bonito, noticias, data_extenso):
     html += 'table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }\n'
     html += 'img { border:0; -ms-interpolation-mode:bicubic; }\n'
     html += 'a { color:' + COR_VERDE_ESCURO + '; }\n'
+    
+    # Regra CSS para ajustar a cor do link no Dark Mode
+    html += '@media (prefers-color-scheme: dark) {\n'
+    html += '  a { color: ' + COR_VERDE_VIBRANTE + ' !important; }\n'
+    html += '}\n'
     html += '</style>\n'
     html += '</head>\n'
     html += '<body bgcolor="' + COR_CINZA_FUNDO + '" style="margin:0;padding:0;background-color:' + COR_CINZA_FUNDO + ';">\n'
@@ -411,7 +397,7 @@ def salvar_boletim(slug, conteudo_html):
 def main():
     print("=" * 60)
     print("Gerador de Boletins Finais (pos-revisao Alice)")
-    print("Versao 4 - Identidade visual LDR (baseada em banners)")
+    print("Versao 4.1 - Identidade visual LDR (Layout corrigido)")
     print("=" * 60)
 
     print("\nCarregando boletim original...")
@@ -453,7 +439,7 @@ def main():
         print("  " + os.path.basename(path) + " (" + str(len(noticias)) + " noticias)")
 
     print("\n" + "=" * 60)
-    print("Concluido. Layout inspirado nos banners oficiais LDR.")
+    print("Concluido. Layout inspecionado e corrigido.")
     print("Compativel com Outlook Desktop, Web e demais clientes.")
     print("=" * 60)
 
