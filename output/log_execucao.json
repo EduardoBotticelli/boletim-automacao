@@ -1,9 +1,9 @@
 {
-  "data_execucao": "2026-07-21",
-  "executado_em": "2026-07-21T19:48:44.639050-03:00",
+  "data_execucao": "2026-07-24",
+  "executado_em": "2026-07-24T19:16:50.137435-03:00",
   "janela": {
-    "inicio": "2026-07-20T00:00",
-    "fim": "2026-07-21T19:48"
+    "inicio": "2026-07-23T00:00",
+    "fim": "2026-07-24T19:16"
   },
   "fontes_processadas": [
     {
@@ -19,7 +19,7 @@
     {
       "fonte": "CCEE | Noticias",
       "status": "ok",
-      "tamanho_chars": 2026
+      "tamanho_chars": 2766
     },
     {
       "fonte": "Destaques do D.O.U.",
@@ -49,12 +49,7 @@
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "status": "ok",
-      "tamanho_chars": 9576
-    },
-    {
-      "fonte": "CGU | Notícias",
-      "status": "ok",
-      "tamanho_chars": 10000
+      "tamanho_chars": 9649
     },
     {
       "fonte": "ANP | Notícias",
@@ -69,20 +64,10 @@
     {
       "fonte": "ONS | Notícias",
       "status": "ok",
-      "tamanho_chars": 2064
+      "tamanho_chars": 5328
     },
     {
       "fonte": "ANEEL | Últimas Notícias",
-      "status": "ok",
-      "tamanho_chars": 10000
-    },
-    {
-      "fonte": "Secretaria de Prêmios e Apostas | Notícias",
-      "status": "ok",
-      "tamanho_chars": 3525
-    },
-    {
-      "fonte": "Ministério do Meio Ambiente | Notícias",
       "status": "ok",
       "tamanho_chars": 10000
     },
@@ -109,7 +94,7 @@
     {
       "fonte": "COAF | Notícias",
       "status": "ok",
-      "tamanho_chars": 10000
+      "tamanho_chars": 1136
     },
     {
       "fonte": "ANM | Notícias",
@@ -120,182 +105,231 @@
       "fonte": "EPE | Notícias",
       "status": "ok",
       "tamanho_chars": 10000
+    },
+    {
+      "fonte": "ANTAQ | Notícias",
+      "status": "ok",
+      "tamanho_chars": 10000
+    },
+    {
+      "fonte": "CNPE | Comunicações",
+      "status": "ok",
+      "tamanho_chars": 10000
+    },
+    {
+      "fonte": "Kollemata | Decretos",
+      "status": "ok",
+      "tamanho_chars": 5473
     }
   ],
   "resultado": {
-    "itens_aceitos": 47,
+    "itens_aceitos": 65,
     "itens_descartados_pos_validacao": 0,
-    "fontes_sem_resultado": 4,
-    "fontes_sem_publicacao_hoje": 1,
-    "fontes_com_erro_tecnico": 0,
+    "fontes_ativas": 23,
+    "fontes_inativas": 3,
+    "fontes_sem_resultado": 0,
+    "fontes_sem_publicacao_hoje": 7,
+    "fontes_com_erro_tecnico": 1,
     "itens_por_boletim": {
       "trabalhista-empresarial": {
-        "total": 4
+        "total": 0
       },
       "direito-tributario": {
-        "total": 3
+        "total": 4
       },
       "societario-ma": {
-        "total": 3
+        "total": 2
       },
       "mercado-capitais-fundos": {
         "total": 19
       },
       "regulatorio-oleo-gas": {
-        "total": 12
+        "total": 26
       },
       "imobiliario-infraestrutura": {
-        "total": 1
+        "total": 15
       },
       "ambiental-esg": {
-        "total": 2
+        "total": 7
       },
       "propriedade-intelectual": {
-        "total": 5
+        "total": 3
       },
       "contencioso-civel": {
-        "total": 0
+        "total": 2
       }
     },
     "filtro2_bloqueios": {
-      "imobiliario-infraestrutura": 2,
+      "regulatorio-oleo-gas": 12,
+      "trabalhista-empresarial": 1,
       "propriedade-intelectual": 4,
-      "regulatorio-oleo-gas": 4,
-      "negocios-imobiliarios-infraestrutura": 6,
-      "contencioso-civel": 2,
-      "direito-tributario": 1
+      "mercado-capitais-fundos": 5,
+      "societario-ma": 1,
+      "ambiental-esg": 3,
+      "contencioso-civel": 6,
+      "direito-tributario": 1,
+      "imobiliario-infraestrutura": 5
     },
     "auditoria": {
-      "total_itens": 47,
-      "itens_com_alguma_rejeicao": 47,
-      "itens_com_bloqueio_f1": 14,
+      "total_itens": 65,
+      "itens_com_alguma_rejeicao": 65,
+      "itens_com_bloqueio_f1": 33,
       "rejeicoes_por_boletim": {
-        "trabalhista-empresarial": 43,
-        "direito-tributario": 44,
-        "societario-ma": 44,
-        "mercado-capitais-fundos": 28,
-        "ambiental-esg": 45,
-        "propriedade-intelectual": 42,
-        "contencioso-civel": 47,
-        "regulatorio-oleo-gas": 35,
-        "imobiliario-infraestrutura": 40,
-        "negocios-imobiliarios-infraestrutura": 6
+        "trabalhista-empresarial": 65,
+        "direito-tributario": 61,
+        "societario-ma": 63,
+        "mercado-capitais-fundos": 46,
+        "imobiliario-infraestrutura": 50,
+        "propriedade-intelectual": 62,
+        "contencioso-civel": 63,
+        "regulatorio-oleo-gas": 39,
+        "ambiental-esg": 58
       },
       "top_palavras_chave_detectadas": [
         {
-          "palavra": "bcb",
-          "ocorrencias": 10
+          "palavra": "regulacao setorial",
+          "ocorrencias": 17
         },
         {
-          "palavra": "anvisa",
+          "palavra": "bcb",
+          "ocorrencias": 14
+        },
+        {
+          "palavra": "energia eletrica",
+          "ocorrencias": 8
+        },
+        {
+          "palavra": "anp",
           "ocorrencias": 7
         },
         {
-          "palavra": "tecnologia",
+          "palavra": "derivativos",
+          "ocorrencias": 6
+        },
+        {
+          "palavra": "anvisa",
+          "ocorrencias": 6
+        },
+        {
+          "palavra": "energia",
           "ocorrencias": 5
         },
         {
-          "palavra": "oferta pública",
+          "palavra": "instituicao financeira",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "oferta publica",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "swap",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "combustiveis",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "infraestrutura",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "vigilancia sanitaria",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "sustentabilidade",
           "ocorrencias": 4
         },
         {
-          "palavra": "banco central",
+          "palavra": "gas natural",
           "ocorrencias": 4
         },
         {
-          "palavra": "regulamentação",
+          "palavra": "valores mobiliarios",
+          "ocorrencias": 4
+        },
+        {
+          "palavra": "direito do consumidor",
+          "ocorrencias": 4
+        },
+        {
+          "palavra": "food law",
           "ocorrencias": 3
         },
         {
-          "palavra": "registro",
+          "palavra": "petroleo",
           "ocorrencias": 3
         },
         {
-          "palavra": "inpi",
+          "palavra": "financiamentos estruturados",
           "ocorrencias": 3
-        },
-        {
-          "palavra": "lei de licitações",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "contratos administrativos",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "crédito extraordinário",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "ministério da previdência social",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "previdência",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "cargos em comissão",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "funções de confiança",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "administração pública",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "forças armadas",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "eleições",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "apoio logístico",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "operações de swap",
-          "ocorrencias": 2
         }
       ]
     }
   },
+  "fontes_inativas_defeso": [
+    "CGU | Notícias",
+    "Secretaria de Prêmios e Apostas | Notícias",
+    "Ministério do Meio Ambiente | Notícias"
+  ],
   "filtro2_bloqueios_detalhe": {
-    "imobiliario-infraestrutura": [
-      "Instrução Normativa BCB n° 765, 21/7/2026",
-      "LEI Nº 15.471, DE 20 DE JULHO DE 2026"
+    "regulatorio-oleo-gas": [
+      "Comunicado n° 45.631, 24/7/2026",
+      "Comunicado n° 45.630, 24/7/2026",
+      "Resolução CMN n° 5.331, 23/7/2026",
+      "Resolução CMN n° 5.330, 23/7/2026",
+      "Videorreportagem traz destaques do EncontroCCEE: Operação e ",
+      "Confira a apresentação e o vídeo do Encontro do PLD realizad",
+      "ONS: reservatórios de três regiões tem previsão de Energia A",
+      "ONS apresenta ao CMSE resultados das avaliações da antecipaç",
+      "ONS promove 3ª Semana Regulatória para discutir desafios da ",
+      "China disponibiliza procedimentos para exportação de polpas ",
+      "Publicada portaria que regulamenta a equalização de juros da",
+      "EPE apresenta no IEEE PES General Meeting estudo que recomen"
+    ],
+    "trabalhista-empresarial": [
+      "Conheça ações para Pessoas com Deficiência e prepare-se para"
     ],
     "propriedade-intelectual": [
-      "Comunicado n° 45.609, 21/7/2026",
-      "Confira as apresentações e a gravação do EncontroCCEE: Opera",
-      "CVM publica Plano de Dados Abertos 2026-2028",
-      "Reunião de representantes da CVM com Impa Tech debate Acordo"
+      "Stablecoins respondem por cerca de 80% do volume declarado d",
+      "042-2026-VNC-Comunicado Externo - Parâmetros de negociação d",
+      "Cachaça de alambique do Circuito das Águas Paulista recebe I",
+      "Anvisa alerta para restrições temporárias em seus sistemas p"
     ],
-    "regulatorio-oleo-gas": [
-      "Confira as apresentações e a gravação do EncontroCCEE: Opera",
-      "Participe do Encontro do PLD, na próxima quarta-feira (22), ",
-      "Mapa publica editais para credenciamento de laboratórios",
-      "Entenda como o Brasil organiza a geração, transmissão e o co"
+    "mercado-capitais-fundos": [
+      "Stablecoins respondem por cerca de 80% do volume declarado d",
+      "Publicada portaria que regulamenta a equalização de juros da",
+      "Senacon instaura processos para apurar possível descumprimen",
+      "Resolução reconhece, no âmbito da política energética nacion",
+      "Resolução aprovada pelo colegiado prevê monitoramento periód"
     ],
-    "negocios-imobiliarios-infraestrutura": [
-      "Confira as apresentações e a gravação do EncontroCCEE: Opera",
-      "Participe do Encontro do PLD, na próxima quarta-feira (22), ",
-      "DESPACHO DO PRESIDENTE DA REPÚBLICA",
-      "Estratégia Nacional do Complexo Econômico-Industrial da Saúd",
-      "Descubra como aplicar a eficiência energética no seu dia a d",
-      "Entenda como o Brasil organiza a geração, transmissão e o co"
+    "societario-ma": [
+      "Receita Federal comunica clubes de futebol e SAFs sobre pend"
+    ],
+    "ambiental-esg": [
+      "Reunião entre representantes da CVM e do Instituto Clima e S",
+      "Vem aí o XXXIII Encontro Cooperaportos",
+      "Resolução do colegiado atualiza percentual de etanol na gaso"
     ],
     "contencioso-civel": [
-      "Anvisa promove webinar sobre medidas acautelatórias no Proce",
-      "Concluído o ciclo 2025/2026 de repasses da CFEM a municípios"
+      "Entre os dias 20 e 24/7, a ANP realizou 208 ações de fiscali",
+      "ANEEL multa Neoenergia Coelba por irregularidades envolvendo",
+      "Retatrutida ainda NÃO está aprovada para uso em nenhum lugar",
+      "Ricota fresca da marca Vaidosa será recolhida voluntariament",
+      "Anvisa proíbe fabricação e venda de cosméticos irregulares",
+      "Anvisa determina apreensão de saneantes de origem desconheci"
     ],
     "direito-tributario": [
-      "Concluído o ciclo 2025/2026 de repasses da CFEM a municípios"
+      "Publicada portaria que regulamenta a equalização de juros da"
+    ],
+    "imobiliario-infraestrutura": [
+      "Definida data de audiência pública sobre concessão do Sistem",
+      "Vem aí o XXXIII Encontro Cooperaportos",
+      "Resolução do Conselho estabelece medidas para fortalecer a f",
+      "Medida atualiza o conjunto de normas da política energética ",
+      "Resolução reconhece, no âmbito da política energética nacion"
     ]
   }
 }
