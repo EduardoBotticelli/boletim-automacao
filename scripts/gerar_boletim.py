@@ -6,6 +6,7 @@ VERSAO COM 9 BOLETINS + FILTRO 2 + AUDITORIA
 - Filtro 1: fonte -> boletim (matriz da Alice/Fe)
 - Filtro 2: item -> boletim (Gemini decide pelo tema)
 - Auditoria: cada item registra boletins_rejeitados e palavras_chave_detectadas
+- Fontes com "ativo": false sao puladas (ex: em defeso eleitoral)
 Item so aparece em boletim se PASSAR nos dois filtros (fonte mapeada E tema confere).
 """
 
@@ -45,6 +46,14 @@ BOLETINS_DISPONIVEIS = [
     "contencioso-civel",
 ]
 
+# Fontes atualmente em defeso eleitoral (desativadas no fontes.json com "ativo": false)
+# Mantidas aqui para exibir aviso no boletim/site.
+FONTES_EM_DEFESO = [
+    "CGU | Notícias",
+    "Ministério do Meio Ambiente | Notícias",
+    "Secretaria de Prêmios e Apostas | Notícias",
+]
+
 # FILTRO 1: matriz fonte -> boletins onde a fonte esta disponivel
 FONTE_PARA_BOLETINS = {
     "Planalto | Resenha Diaria": [
@@ -75,7 +84,7 @@ FONTE_PARA_BOLETINS = {
         "direito-tributario", "mercado-capitais-fundos"
     ],
     "CVM | Notícias": [
-        "mercado-capitais-fundos"
+        "mercado-capitais-fundos", "imobiliario-infraestrutura"
     ],
     "B3 | Ofícios e Comunicados": [
         "mercado-capitais-fundos"
@@ -93,11 +102,9 @@ FONTE_PARA_BOLETINS = {
         "regulatorio-oleo-gas"
     ],
     "SENACON | Notícias": [
-        "regulatorio-oleo-gas", "propriedade-intelectual", "contencioso-civel"
+        "propriedade-intelectual", "contencioso-civel"
     ],
-    "Secretaria de Prêmios e Apostas | Notícias": [
-        "regulatorio-oleo-gas"
-    ],
+    "Secretaria de Prêmios e Apostas | Notícias": [],
     "ONS | Notícias": [
         "imobiliario-infraestrutura", "ambiental-esg"
     ],
@@ -108,19 +115,28 @@ FONTE_PARA_BOLETINS = {
         "imobiliario-infraestrutura", "ambiental-esg"
     ],
     "MME | Notícias": [
-        "imobiliario-infraestrutura", "ambiental-esg"
+        "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg"
     ],
     "Ministério do Meio Ambiente | Notícias": [
         "ambiental-esg"
     ],
     "Ministério da Agricultura | Notícias": [
-        "ambiental-esg"
+        "ambiental-esg", "imobiliario-infraestrutura"
     ],
     "INPI | Notícias": [
         "propriedade-intelectual"
     ],
     "ANPD | Notícias": [
         "propriedade-intelectual"
+    ],
+    "ANTAQ | Notícias": [
+        "regulatorio-oleo-gas"
+    ],
+    "CNPE | Comunicações": [
+        "regulatorio-oleo-gas"
+    ],
+    "Kollemata | Decretos": [
+        "imobiliario-infraestrutura"
     ],
 }
 
@@ -131,7 +147,7 @@ FONTES_EMAIL_PENDENTES = {
     "societario-ma": ["Latin Lawyer", "Agência iNFRA"],
     "mercado-capitais-fundos": ["Latin Lawyer"],
     "regulatorio-oleo-gas": ["iNFRA Energia"],
-    "imobiliario-infraestrutura": ["Agência iNFRA", "iNFRA Energia", "IRIB"],
+    "imobiliario-infraestrutura": ["Agência iNFRA", "iNFRA Energia", "IRIB", "Latin Lawyer"],
     "ambiental-esg": ["RC Ambiental"],
     "propriedade-intelectual": [],
     "contencioso-civel": ["Tributário.com"],
@@ -177,11 +193,17 @@ url_planalto = "http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diar
 url_bcb = "https://www.bcb.gov.br/estabilidadefinanceira/buscanormas?dataInicioBusca=" + data_ini_url + "&dataFimBusca=" + data_fim_url + "&tipoDocumento=Todos"
 url_ccee = "https://www.ccee.org.br/busca-ccee?q=&dtIni=" + data_ini_url + "&dtFim=" + data_fim_url + "&structure=ccee-noticias&ordenacao=Mais%20recentes"
 
-fontes.insert(0, {"fonte": "Planalto | Resenha Diaria", "categoria": "Legislacao Federal", "url": url_planalto})
-fontes.insert(1, {"fonte": "Banco Central | Normas", "categoria": "Financeiro e Mercado de Capitais", "url": url_bcb})
-fontes.insert(2, {"fonte": "CCEE | Noticias", "categoria": "Energia e Recursos", "url": url_ccee})
+fontes.insert(0, {"fonte": "Planalto | Resenha Diaria", "categoria": "Legislacao Federal", "url": url_planalto, "ativo": True})
+fontes.insert(1, {"fonte": "Banco Central | Normas", "categoria": "Financeiro e Mercado de Capitais", "url": url_bcb, "ativo": True})
+fontes.insert(2, {"fonte": "CCEE | Noticias", "categoria": "Energia e Recursos", "url": url_ccee, "ativo": True})
 
-print(str(len(fontes)) + " fontes a processar")
+# Filtrar fontes ativas (pula as com "ativo": false, ex: defeso eleitoral)
+fontes_ativas = [f for f in fontes if f.get("ativo", True)]
+fontes_inativas = [f for f in fontes if not f.get("ativo", True)]
+
+print(str(len(fontes_ativas)) + " fontes ativas a processar")
+if fontes_inativas:
+    print(str(len(fontes_inativas)) + " fontes inativas (puladas): " + ", ".join(f["fonte"] for f in fontes_inativas))
 print("")
 
 with open(PROMPT_PATH, "r", encoding="utf-8") as f:
@@ -192,11 +214,11 @@ firecrawl = Firecrawl(api_key=FIRECRAWL_API_KEY)
 dossier = []
 log = {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": janela_inicio, "fim": janela_fim}, "fontes_processadas": []}
 
-for i, fonte in enumerate(fontes, 1):
+for i, fonte in enumerate(fontes_ativas, 1):
     nome = fonte["fonte"]
     url = fonte["url"]
     categoria = fonte["categoria"]
-    print("  [" + str(i) + "/" + str(len(fontes)) + "] " + nome)
+    print("  [" + str(i) + "/" + str(len(fontes_ativas)) + "] " + nome)
 
     try:
         result = firecrawl.scrape(url, formats=["markdown"], only_main_content=True)
@@ -305,13 +327,7 @@ for item in itens_originais:
         itens_validados.append(item)
 
 # APLICAR FILTRO 1 + FILTRO 2 combinados + AUDITORIA
-# Filtro 1: fonte deve estar mapeada para o boletim
-# Filtro 2: Gemini classificou item como pertencente ao boletim
-# Resultado final: intersecao dos dois
-# Auditoria: preservar boletins_rejeitados e palavras_chave_detectadas do Gemini,
-# e adicionar rejeicoes do F1 ao mesmo campo (audit trail completo)
-
-filtro2_removido_por_boletim = {}  # log: quando Gemini quis mas F1 barrou
+filtro2_removido_por_boletim = {}
 itens_com_f1_bloqueio = 0
 itens_com_qualquer_rejeicao = 0
 palavras_chave_counter = Counter()
@@ -322,10 +338,8 @@ for item in itens_validados:
     boletins_permitidos_por_fonte = set(FONTE_PARA_BOLETINS.get(fonte_item, []))
     boletins_sugeridos_por_gemini = set(item.get("boletins_confirmados", []))
 
-    # Intersecao: item so entra se AMBOS os filtros aprovarem
     boletins_finais = list(boletins_permitidos_por_fonte & boletins_sugeridos_por_gemini)
 
-    # Log de bloqueios F1 (Gemini quis colocar mas Filtro 1 impediu)
     boletins_bloqueados_f1 = boletins_sugeridos_por_gemini - boletins_permitidos_por_fonte
     if boletins_bloqueados_f1:
         itens_com_f1_bloqueio += 1
@@ -333,20 +347,17 @@ for item in itens_validados:
         for b in boletins_bloqueados_f1:
             filtro2_removido_por_boletim.setdefault(b, []).append(titulo_curto)
 
-    # PRESERVAR / NORMALIZAR campos de auditoria vindos do Gemini
     if "boletins_rejeitados" not in item or not isinstance(item["boletins_rejeitados"], list):
         item["boletins_rejeitados"] = []
     if "palavras_chave_detectadas" not in item or not isinstance(item["palavras_chave_detectadas"], list):
         item["palavras_chave_detectadas"] = []
 
-    # ADICIONAR rejeicoes do F1 ao audit trail
     for b in boletins_bloqueados_f1:
         item["boletins_rejeitados"].append({
             "boletim": b,
             "motivo": "Filtro 1: fonte '" + fonte_item + "' nao esta mapeada para este boletim"
         })
 
-    # Estatisticas de auditoria
     if item["boletins_rejeitados"]:
         itens_com_qualquer_rejeicao += 1
     for pc in item["palavras_chave_detectadas"]:
@@ -356,7 +367,7 @@ for item in itens_validados:
         if isinstance(rej, dict) and "boletim" in rej:
             rejeicoes_por_boletim[rej["boletim"]] += 1
 
-    item["boletins"] = boletins_finais  # campo final (compat com gerar_email_html.py)
+    item["boletins"] = boletins_finais
 
 boletim_json["itens"] = itens_validados
 
@@ -365,6 +376,7 @@ boletim_json["boletins_config"] = {
     "boletins_disponiveis": BOLETINS_DISPONIVEIS,
     "fontes_email_pendentes": FONTES_EMAIL_PENDENTES,
     "mapeamento_fonte_boletim": FONTE_PARA_BOLETINS,
+    "fontes_em_defeso": FONTES_EM_DEFESO,
 }
 
 # Estatisticas por boletim
@@ -374,7 +386,7 @@ for slug in BOLETINS_DISPONIVEIS:
     stats_por_boletim[slug] = {"total": len(itens_do_boletim)}
 boletim_json["estatisticas_por_boletim"] = stats_por_boletim
 
-# Auditoria consolidada (top 20 palavras-chave mais detectadas)
+# Auditoria consolidada
 top_palavras = palavras_chave_counter.most_common(20)
 boletim_json["auditoria"] = {
     "total_itens": len(itens_validados),
@@ -388,6 +400,8 @@ boletim_json["auditoria"] = {
 log["resultado"] = {
     "itens_aceitos": len(itens_validados),
     "itens_descartados_pos_validacao": len(itens_descartados),
+    "fontes_ativas": len(fontes_ativas),
+    "fontes_inativas": len(fontes_inativas),
     "fontes_sem_resultado": len(boletim_json.get("fontes_sem_resultado", [])),
     "fontes_sem_publicacao_hoje": len(boletim_json.get("fontes_sem_publicacao_hoje", [])),
     "fontes_com_erro_tecnico": len(boletim_json.get("fontes_com_erro_tecnico", [])),
@@ -395,6 +409,8 @@ log["resultado"] = {
     "filtro2_bloqueios": {k: len(v) for k, v in filtro2_removido_por_boletim.items()},
     "auditoria": boletim_json["auditoria"],
 }
+if fontes_inativas:
+    log["fontes_inativas_defeso"] = [f["fonte"] for f in fontes_inativas]
 if itens_descartados:
     log["itens_descartados"] = itens_descartados
 if filtro2_removido_por_boletim:
