@@ -1,19 +1,4 @@
-"""
-Radares Lobo de Rizzo - geracao automatica.
-Arquitetura: Firecrawl (coleta) -> cascata Gemini (Filtro 2) -> JSON.
-
-VERSAO 2026.08.3
-- Mantem os 9 slugs tecnicos existentes.
-- Filtro 1: fonte -> Radares permitidos pela matriz editorial.
-- Filtro 2: conteudo -> Radares sugeridos pelo Gemini.
-- Usa cascata de modelos Gemini com duas tentativas por modelo.
-- Preserva o ultimo boletim.json valido se todos os modelos falharem.
-- Grava boletim.json e log_execucao.json de forma atomica.
-- Controla o limite por minuto do Firecrawl e repete erros 429.
-- Normaliza listas de fontes devolvidas pelo Gemini como strings ou objetos.
-- Usa o SDK atual google-genai.
-"""
-
+"""Gera os Radares Lobo de Rizzo com Firecrawl, cascata Gemini e auditoria."""
 import datetime
 import json
 import os
@@ -45,7 +30,6 @@ CASCATA_MODELOS = [
 ]
 TENTATIVAS_POR_MODELO = 2
 ESPERAS_GEMINI_SEGUNDOS = [10, 30]
-
 MIN_CONTEUDO_CHARS = 500
 MAX_CONTEUDO_CHARS = 10000
 INTERVALO_ENTRE_SCRAPES_SEGUNDOS = 6.5
@@ -53,8 +37,8 @@ MAX_TENTATIVAS_SCRAPE = 3
 ESPERA_RATE_LIMIT_SEGUNDOS = 65
 
 DESCRICAO_RADARES = (
-    "Informativo com atualizacoes legislativas, regulamentacoes, "
-    "consultas publicas e publicacoes de orgaos reguladores."
+    "Informativo com atualizações legislativas, regulamentações, "
+    "consultas públicas e publicações de órgãos reguladores."
 )
 
 BOLETINS_DISPONIVEIS = [
@@ -71,97 +55,70 @@ BOLETINS_DISPONIVEIS = [
 
 NOMES_RADARES = {
     "trabalhista-empresarial": "Radar Trabalhista Empresarial",
-    "direito-tributario": "Radar Tributario",
-    "societario-ma": "Radar Societario, Fusoes e Aquisicoes",
+    "direito-tributario": "Radar Tributário",
+    "societario-ma": "Radar Societário, Fusões e Aquisições",
     "mercado-capitais-fundos": "Radar Mercado de Capitais e Fundos de Investimento",
-    "regulatorio-oleo-gas": "Radar Regulatorio e Oleo e Gas",
-    "imobiliario-infraestrutura": "Radar Negocios Imobiliarios e Infraestrutura",
+    "regulatorio-oleo-gas": "Radar Regulatório e Óleo e Gás",
+    "imobiliario-infraestrutura": "Radar Negócios Imobiliários e Infraestrutura",
     "ambiental-esg": "Radar Ambiental e ESG",
     "propriedade-intelectual": "Radar Propriedade Intelectual, Tecnologia e Privacidade",
-    "contencioso-civel": "Radar Solucao de Conflitos",
+    "contencioso-civel": "Radar Solução de Conflitos",
 }
 
 CLUSTERS_POR_BOLETIM = {
     "trabalhista-empresarial": ["Amber", "Pink"],
-    "direito-tributario": ["Tributario Consultivo", "Tributario Contencioso"],
+    "direito-tributario": ["Tributário Consultivo", "Tributário Contencioso"],
     "societario-ma": ["White", "Purple", "Due Diligence"],
     "mercado-capitais-fundos": ["Financeiro Green", "Fundos"],
-    "regulatorio-oleo-gas": ["Regulatorio", "Oleo & Gas Blue"],
-    "imobiliario-infraestrutura": ["Imobiliario", "Infraestrutura"],
+    "regulatorio-oleo-gas": ["Regulatório", "Óleo & Gás Blue"],
+    "imobiliario-infraestrutura": ["Imobiliário", "Infraestrutura"],
     "ambiental-esg": ["Ambiental"],
     "propriedade-intelectual": ["Propriedade Intelectual"],
     "contencioso-civel": ["Contencioso Carbon", "Contencioso Gold"],
 }
 
 FONTES_EM_DEFESO = [
-    "CGU | Noticias",
-    "Ministerio do Meio Ambiente | Noticias",
-    "Secretaria de Premios e Apostas | Noticias",
+    "CGU | Notícias",
+    "Ministério do Meio Ambiente | Notícias",
+    "Secretaria de Prêmios e Apostas | Notícias",
 ]
 
 FONTES_PENDENTES_INTEGRACAO = {
     "regulatorio-oleo-gas": [
-        "CADE - Diario Oficial da Uniao (Secoes 1 e 3)",
-        "MEC - Diario Oficial da Uniao (Secoes 1 e 3)",
-        "MDIC - Diario Oficial da Uniao (Secao 1)",
-        "ANATEL",
-        "SUSEP",
-        "ANTT",
-        "Portal da Legislacao",
-        "Portal da Camara dos Deputados",
-        "Portal do Senado Federal",
-        "Consulta Publica da ANP",
-        "Consulta Previa da ANP",
-        "ANP - Pautas e atas de reunioes de diretoria",
-        "Consulta Publica do MME",
-        "Agencia Eixos",
+        "CADE - Diário Oficial da União (Seções 1 e 3)",
+        "MEC - Diário Oficial da União (Seções 1 e 3)",
+        "MDIC - Diário Oficial da União (Seção 1)",
+        "ANATEL", "SUSEP", "ANTT", "Portal da Legislação",
+        "Portal da Câmara dos Deputados", "Portal do Senado Federal",
+        "Consulta Pública da ANP", "Consulta Prévia da ANP",
+        "ANP - Pautas e atas de reuniões de diretoria",
+        "Consulta Pública do MME", "Agência Eixos",
     ]
 }
 
+# Chaves técnicas normalizadas, sem acentos, para preservar o Filtro 1.
 FONTE_PARA_BOLETINS = {
     "Planalto | Resenha Diaria": BOLETINS_DISPONIVEIS.copy(),
-    "Destaques do D.O.U.": [
-        "trabalhista-empresarial", "direito-tributario",
-        "regulatorio-oleo-gas", "contencioso-civel",
-    ],
+    "Destaques do D.O.U.": ["trabalhista-empresarial", "direito-tributario", "regulatorio-oleo-gas", "contencioso-civel"],
     "Ministerio da Fazenda | Noticias": BOLETINS_DISPONIVEIS.copy(),
     "CGU | Noticias": ["trabalhista-empresarial", "regulatorio-oleo-gas"],
     "Receita Federal | Normas": ["direito-tributario"],
-    "Banco Central | Normas": [
-        "direito-tributario", "societario-ma", "mercado-capitais-fundos",
-    ],
+    "Banco Central | Normas": ["direito-tributario", "societario-ma", "mercado-capitais-fundos"],
     "COAF | Noticias": ["direito-tributario", "mercado-capitais-fundos"],
-    "CVM | Noticias": [
-        "mercado-capitais-fundos", "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-    ],
+    "CVM | Noticias": ["mercado-capitais-fundos", "regulatorio-oleo-gas", "imobiliario-infraestrutura"],
     "B3 | Oficios e Comunicados": ["mercado-capitais-fundos"],
-    "ANP | Noticias": [
-        "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg",
-    ],
-    "ANEEL | Ultimas Noticias": [
-        "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg",
-    ],
-    "ANM | Noticias": [
-        "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg",
-    ],
+    "ANP | Noticias": ["regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg"],
+    "ANEEL | Ultimas Noticias": ["regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg"],
+    "ANM | Noticias": ["regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg"],
     "ANVISA | Noticias": ["regulatorio-oleo-gas"],
-    "SENACON | Noticias": [
-        "regulatorio-oleo-gas", "propriedade-intelectual", "contencioso-civel",
-    ],
+    "SENACON | Noticias": ["regulatorio-oleo-gas", "propriedade-intelectual", "contencioso-civel"],
     "Secretaria de Premios e Apostas | Noticias": [],
     "ONS | Noticias": ["imobiliario-infraestrutura", "ambiental-esg"],
     "CCEE | Noticias": ["imobiliario-infraestrutura", "ambiental-esg"],
-    "EPE | Noticias": [
-        "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg",
-    ],
-    "MME | Noticias": [
-        "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg",
-    ],
+    "EPE | Noticias": ["regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg"],
+    "MME | Noticias": ["regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg"],
     "Ministerio do Meio Ambiente | Noticias": ["ambiental-esg"],
-    "Ministerio da Agricultura | Noticias": [
-        "imobiliario-infraestrutura", "ambiental-esg",
-    ],
+    "Ministerio da Agricultura | Noticias": ["imobiliario-infraestrutura", "ambiental-esg"],
     "INPI | Noticias": ["propriedade-intelectual"],
     "ANPD | Noticias": ["propriedade-intelectual"],
     "ANTAQ | Noticias": ["regulatorio-oleo-gas"],
@@ -171,13 +128,11 @@ FONTE_PARA_BOLETINS = {
 
 FONTES_EMAIL_PENDENTES = {
     "trabalhista-empresarial": [],
-    "direito-tributario": ["Tributario.com"],
+    "direito-tributario": ["Tributário.com"],
     "societario-ma": ["Latin Lawyer"],
     "mercado-capitais-fundos": ["Latin Lawyer"],
-    "regulatorio-oleo-gas": ["Agencia iNFRA", "iNFRA Energia", "Agencia Eixos"],
-    "imobiliario-infraestrutura": [
-        "Agencia iNFRA", "iNFRA Energia", "IRIB", "Latin Lawyer",
-    ],
+    "regulatorio-oleo-gas": ["Agência iNFRA", "iNFRA Energia", "Agência Eixos"],
+    "imobiliario-infraestrutura": ["Agência iNFRA", "iNFRA Energia", "IRIB", "Latin Lawyer"],
     "ambiental-esg": ["RC Ambiental"],
     "propriedade-intelectual": [],
     "contencioso-civel": [],
@@ -193,27 +148,21 @@ ALIASES_FONTES = {
     "ANVISA | Notícias": "ANVISA | Noticias",
     "SENACON | Notícias": "SENACON | Noticias",
     "Secretaria de Prêmios e Apostas | Notícias": "Secretaria de Premios e Apostas | Noticias",
-    "ONS | Notícias": "ONS | Noticias",
-    "EPE | Notícias": "EPE | Noticias",
+    "ONS | Notícias": "ONS | Noticias", "EPE | Notícias": "EPE | Noticias",
     "MME | Notícias": "MME | Noticias",
     "Ministério do Meio Ambiente | Notícias": "Ministerio do Meio Ambiente | Noticias",
     "Ministério da Agricultura | Notícias": "Ministerio da Agricultura | Noticias",
-    "INPI | Notícias": "INPI | Noticias",
-    "ANPD | Notícias": "ANPD | Noticias",
-    "COAF | Notícias": "COAF | Noticias",
-    "CVM | Notícias": "CVM | Noticias",
-    "ANTAQ | Notícias": "ANTAQ | Noticias",
-    "CNPE | Comunicações": "CNPE | Comunicacoes",
+    "INPI | Notícias": "INPI | Noticias", "ANPD | Notícias": "ANPD | Noticias",
+    "COAF | Notícias": "COAF | Noticias", "CVM | Notícias": "CVM | Noticias",
+    "ANTAQ | Notícias": "ANTAQ | Noticias", "CNPE | Comunicações": "CNPE | Comunicacoes",
 }
 
 
 def exigir_secrets():
     if not FIRECRAWL_API_KEY:
-        print("ERRO: FIRECRAWL_API_KEY nao encontrada.")
-        sys.exit(1)
+        raise SystemExit("ERRO: FIRECRAWL_API_KEY não encontrada.")
     if not GEMINI_API_KEY:
-        print("ERRO: GEMINI_API_KEY nao encontrada.")
-        sys.exit(1)
+        raise SystemExit("ERRO: GEMINI_API_KEY não encontrada.")
 
 
 def normalizar_nome_fonte(nome):
@@ -223,15 +172,13 @@ def normalizar_nome_fonte(nome):
 def normalizar_lista_objetos(valor, motivo_padrao):
     if not isinstance(valor, list):
         return []
-    resultado = []
-    vistos = set()
+    resultado, vistos = [], set()
     for item in valor:
         if isinstance(item, dict):
             fonte = str(item.get("fonte", "")).strip()
             motivo = str(item.get("motivo", motivo_padrao)).strip() or motivo_padrao
         elif isinstance(item, str):
-            fonte = item.strip()
-            motivo = motivo_padrao
+            fonte, motivo = item.strip(), motivo_padrao
         else:
             continue
         if fonte and fonte not in vistos:
@@ -247,12 +194,7 @@ def eh_rate_limit(erro):
 
 def erro_gemini_recuperavel(erro):
     texto = str(erro).lower()
-    marcadores = [
-        "429", "500", "502", "503", "504", "unavailable", "high demand",
-        "resource_exhausted", "deadline_exceeded", "timeout", "temporarily",
-        "not found", "not_found", "model is not found", "model not found",
-        "not supported", "permission denied for model",
-    ]
+    marcadores = ["429", "500", "502", "503", "504", "unavailable", "high demand", "resource_exhausted", "deadline_exceeded", "timeout", "temporarily", "not found", "not_found", "model not found", "not supported", "permission denied for model"]
     return any(marcador in texto for marcador in marcadores)
 
 
@@ -264,120 +206,65 @@ def scrape_com_retry(firecrawl, url):
     ultimo_erro = None
     for tentativa in range(1, MAX_TENTATIVAS_SCRAPE + 1):
         try:
-            return firecrawl.scrape(
-                url,
-                formats=["markdown"],
-                only_main_content=True,
-            )
+            return firecrawl.scrape(url, formats=["markdown"], only_main_content=True)
         except Exception as erro:
             ultimo_erro = erro
             if not eh_rate_limit(erro) or tentativa == MAX_TENTATIVAS_SCRAPE:
                 raise
-            print(
-                "      Limite do Firecrawl atingido. Nova tentativa "
-                + str(tentativa + 1) + "/" + str(MAX_TENTATIVAS_SCRAPE)
-            )
+            print(f"      Limite do Firecrawl atingido. Nova tentativa {tentativa + 1}/{MAX_TENTATIVAS_SCRAPE}")
             time.sleep(ESPERA_RATE_LIMIT_SEGUNDOS)
     raise ultimo_erro
 
 
 def gerar_com_cascata(cliente, prompt_final):
     tentativas_log = []
-    ultimo_erro = ""
-
     for modelo in CASCATA_MODELOS:
         for tentativa in range(1, TENTATIVAS_POR_MODELO + 1):
-            print(
-                "Gemini: modelo " + modelo
-                + " - tentativa " + str(tentativa)
-                + "/" + str(TENTATIVAS_POR_MODELO)
-            )
+            print(f"Gemini: modelo {modelo} - tentativa {tentativa}/{TENTATIVAS_POR_MODELO}")
             try:
                 resposta = cliente.models.generate_content(
                     model=modelo,
                     contents=prompt_final,
-                    config=types.GenerateContentConfig(
-                        temperature=0.2,
-                        response_mime_type="application/json",
-                    ),
+                    config=types.GenerateContentConfig(temperature=0.2, response_mime_type="application/json"),
                 )
                 texto = resposta.text or ""
                 if not texto.strip():
                     raise RuntimeError("Resposta vazia do modelo")
-
-                json_teste = json.loads(texto)
-                if not isinstance(json_teste, dict):
-                    raise ValueError("Resposta JSON nao e um objeto")
-                if not isinstance(json_teste.get("itens"), list):
-                    raise ValueError("Resposta JSON nao contem lista valida em 'itens'")
-
-                tentativas_log.append({
-                    "modelo": modelo,
-                    "tentativa": tentativa,
-                    "status": "sucesso",
-                })
+                teste = json.loads(texto)
+                if not isinstance(teste, dict) or not isinstance(teste.get("itens"), list):
+                    raise ValueError("Resposta JSON sem estrutura mínima válida")
+                tentativas_log.append({"modelo": modelo, "tentativa": tentativa, "status": "sucesso"})
                 return texto, modelo, tentativas_log
-
             except json.JSONDecodeError as erro:
-                ultimo_erro = resumir_erro(erro)
-                tentativas_log.append({
-                    "modelo": modelo,
-                    "tentativa": tentativa,
-                    "status": "json_invalido",
-                    "erro": ultimo_erro,
-                })
-                print("  JSON invalido: " + ultimo_erro)
-
+                mensagem = resumir_erro(erro)
+                tentativas_log.append({"modelo": modelo, "tentativa": tentativa, "status": "json_invalido", "erro": mensagem})
+                print("  JSON inválido: " + mensagem)
             except Exception as erro:
-                ultimo_erro = resumir_erro(erro)
+                mensagem = resumir_erro(erro)
                 recuperavel = erro_gemini_recuperavel(erro)
-                tentativas_log.append({
-                    "modelo": modelo,
-                    "tentativa": tentativa,
-                    "status": "erro",
-                    "recuperavel": recuperavel,
-                    "erro": ultimo_erro,
-                })
-                print("  Erro: " + ultimo_erro)
+                tentativas_log.append({"modelo": modelo, "tentativa": tentativa, "status": "erro", "recuperavel": recuperavel, "erro": mensagem})
+                print("  Erro: " + mensagem)
                 if not recuperavel:
                     return "", "", tentativas_log
-
             if tentativa < TENTATIVAS_POR_MODELO:
-                indice_espera = min(tentativa - 1, len(ESPERAS_GEMINI_SEGUNDOS) - 1)
-                espera = ESPERAS_GEMINI_SEGUNDOS[indice_espera]
-                print("  Aguardando " + str(espera) + " segundos antes de repetir...")
+                espera = ESPERAS_GEMINI_SEGUNDOS[min(tentativa - 1, len(ESPERAS_GEMINI_SEGUNDOS) - 1)]
+                print(f"  Aguardando {espera} segundos antes de repetir...")
                 time.sleep(espera)
-
-        print("  Avancando para o proximo modelo da cascata...")
-
+        print("  Avançando para o próximo modelo da cascata...")
     return "", "", tentativas_log
 
 
 def carregar_fontes(janela_inicio_dt, agora, hoje):
     with open(FONTES_PATH, "r", encoding="utf-8") as arquivo:
         fontes = json.load(arquivo)
-
     data_ini_url = janela_inicio_dt.strftime("%d/%m/%Y").replace("/", "%2F")
     data_fim_url = agora.strftime("%d/%m/%Y").replace("/", "%2F")
-    meses = [
-        "janeiro", "fevereiro", "marco", "abril", "maio", "junho",
-        "julho", "agosto", "setembro", "outubro", "novembro", "dezembro",
-    ]
-    url_planalto = (
-        "http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/"
-        + meses[hoje.month - 1] + "-resenha-diaria"
-    )
-    url_bcb = (
-        "https://www.bcb.gov.br/estabilidadefinanceira/buscanormas?dataInicioBusca="
-        + data_ini_url + "&dataFimBusca=" + data_fim_url + "&tipoDocumento=Todos"
-    )
-    url_ccee = (
-        "https://www.ccee.org.br/busca-ccee?q=&dtIni=" + data_ini_url
-        + "&dtFim=" + data_fim_url
-        + "&structure=ccee-noticias&ordenacao=Mais%20recentes"
-    )
+    meses = ["janeiro", "fevereiro", "marco", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
+    url_planalto = "http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/" + meses[hoje.month - 1] + "-resenha-diaria"
+    url_bcb = "https://www.bcb.gov.br/estabilidadefinanceira/buscanormas?dataInicioBusca=" + data_ini_url + "&dataFimBusca=" + data_fim_url + "&tipoDocumento=Todos"
+    url_ccee = "https://www.ccee.org.br/busca-ccee?q=&dtIni=" + data_ini_url + "&dtFim=" + data_fim_url + "&structure=ccee-noticias&ordenacao=Mais%20recentes"
     dinamicas = [
-        {"fonte": "Planalto | Resenha Diaria", "categoria": "Legislacao Federal", "url": url_planalto, "ativo": True},
+        {"fonte": "Planalto | Resenha Diaria", "categoria": "Legislação Federal", "url": url_planalto, "ativo": True},
         {"fonte": "Banco Central | Normas", "categoria": "Financeiro e Mercado de Capitais", "url": url_bcb, "ativo": True},
         {"fonte": "CCEE | Noticias", "categoria": "Energia e Recursos", "url": url_ccee, "ativo": True},
     ]
@@ -401,62 +288,44 @@ def salvar_json_atomico(caminho, dados):
 def main():
     exigir_secrets()
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-
     brt = ZoneInfo("America/Sao_Paulo")
     agora = datetime.datetime.now(brt)
     hoje = agora.date()
     dias_retroativos = 3 if hoje.weekday() == 0 else 1
-    janela_inicio_dt = datetime.datetime.combine(
-        hoje - datetime.timedelta(days=dias_retroativos),
-        datetime.time(0, 0),
-        tzinfo=brt,
-    )
+    janela_inicio_dt = datetime.datetime.combine(hoje - datetime.timedelta(days=dias_retroativos), datetime.time(0, 0), tzinfo=brt)
     janela_inicio = janela_inicio_dt.strftime("%Y-%m-%dT%H:%M")
     janela_fim = agora.strftime("%Y-%m-%dT%H:%M")
-
-    print("Radares - execucao em " + agora.strftime("%Y-%m-%d %H:%M") + " BRT")
-    print("Janela: " + janela_inicio + " ate " + janela_fim)
+    print("Radares - execução em " + agora.strftime("%Y-%m-%d %H:%M") + " BRT")
+    print("Janela: " + janela_inicio + " até " + janela_fim)
 
     fontes = carregar_fontes(janela_inicio_dt, agora, hoje)
-    fontes_ativas = [fonte for fonte in fontes if fonte.get("ativo", True)]
-    fontes_inativas = [fonte for fonte in fontes if not fonte.get("ativo", True)]
-    print(str(len(fontes_ativas)) + " fontes ativas a processar")
+    fontes_ativas = [f for f in fontes if f.get("ativo", True)]
+    fontes_inativas = [f for f in fontes if not f.get("ativo", True)]
+    print(f"{len(fontes_ativas)} fontes ativas a processar")
     if fontes_inativas:
-        print(
-            str(len(fontes_inativas)) + " fontes inativas: "
-            + ", ".join(fonte["fonte"] for fonte in fontes_inativas)
-        )
+        print(f"{len(fontes_inativas)} fontes inativas: " + ", ".join(f["fonte"] for f in fontes_inativas))
 
     with open(PROMPT_PATH, "r", encoding="utf-8") as arquivo:
         prompt_base = arquivo.read()
 
     firecrawl = Firecrawl(api_key=FIRECRAWL_API_KEY)
     dossier = []
-    log = {
-        "data_execucao": hoje.isoformat(),
-        "executado_em": agora.isoformat(),
-        "janela": {"inicio": janela_inicio, "fim": janela_fim},
-        "modelos_gemini_configurados": CASCATA_MODELOS,
-        "fontes_processadas": [],
-    }
+    log = {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": janela_inicio, "fim": janela_fim}, "modelos_gemini_configurados": CASCATA_MODELOS, "fontes_processadas": []}
 
     for indice, fonte in enumerate(fontes_ativas, 1):
-        nome = fonte["fonte"]
-        url = fonte["url"]
-        categoria = fonte["categoria"]
-        print("  [" + str(indice) + "/" + str(len(fontes_ativas)) + "] " + nome)
+        nome, url, categoria = fonte["fonte"], fonte["url"], fonte["categoria"]
+        print(f"  [{indice}/{len(fontes_ativas)}] {nome}")
         try:
             resultado = scrape_com_retry(firecrawl, url)
             conteudo = (resultado.markdown or "")[:MAX_CONTEUDO_CHARS]
             if len(conteudo) < MIN_CONTEUDO_CHARS:
-                detalhe = "Conteudo muito curto (" + str(len(conteudo)) + " chars)"
+                detalhe = f"Conteúdo muito curto ({len(conteudo)} chars)"
                 dossier.append({"fonte": nome, "categoria": categoria, "url": url, "conteudo": "", "erro_tecnico": detalhe})
                 log["fontes_processadas"].append({"fonte": nome, "status": "erro_tecnico", "tamanho_chars": len(conteudo), "detalhe": detalhe})
-                print("      " + detalhe)
             else:
                 dossier.append({"fonte": nome, "categoria": categoria, "url": url, "conteudo": conteudo})
                 log["fontes_processadas"].append({"fonte": nome, "status": "ok", "tamanho_chars": len(conteudo)})
-                print("      OK - " + str(len(conteudo)) + " chars")
+                print(f"      OK - {len(conteudo)} chars")
         except Exception as erro:
             mensagem = resumir_erro(erro, 300)
             dossier.append({"fonte": nome, "categoria": categoria, "url": url, "conteudo": "", "erro_tecnico": mensagem})
@@ -468,16 +337,7 @@ def main():
 
     print("\nEnviando dossier para a cascata Gemini...")
     cliente = genai.Client(api_key=GEMINI_API_KEY)
-    prompt_final = (
-        prompt_base
-        + "\n\n## Contexto desta execucao\n\n"
-        + "data_execucao: " + hoje.isoformat()
-        + "\njanela_inicio: " + janela_inicio
-        + "\njanela_fim: " + janela_fim
-        + "\n\n## Dossier das fontes\n\n"
-        + json.dumps(dossier, ensure_ascii=False, indent=2)
-    )
-
+    prompt_final = prompt_base + "\n\n## Contexto desta execução\n\n" + f"data_execucao: {hoje.isoformat()}\njanela_inicio: {janela_inicio}\njanela_fim: {janela_fim}\n\n## Dossier das fontes\n\n" + json.dumps(dossier, ensure_ascii=False, indent=2)
     try:
         texto, modelo_utilizado, tentativas_gemini = gerar_com_cascata(cliente, prompt_final)
     finally:
@@ -485,63 +345,32 @@ def main():
 
     log["tentativas_gemini"] = tentativas_gemini
     if not texto:
-        log["resultado"] = {
-            "status": "falha_gemini",
-            "boletim_anterior_preservado": os.path.exists(OUTPUT_PATH),
-        }
+        log["resultado"] = {"status": "falha_gemini", "boletim_anterior_preservado": os.path.exists(OUTPUT_PATH)}
         salvar_json_atomico(LOG_PATH, log)
-        print("ERRO: todos os modelos da cascata Gemini falharam.")
-        print("O boletim.json anterior foi preservado e nao sera sobrescrito.")
-        sys.exit(1)
+        raise SystemExit("ERRO: todos os modelos falharam. O boletim.json anterior foi preservado.")
 
-    boletim_json = json.loads(texto)
-    if not isinstance(boletim_json, dict) or not isinstance(boletim_json.get("itens"), list):
-        log["resultado"] = {
-            "status": "resposta_gemini_invalida",
-            "modelo": modelo_utilizado,
-            "boletim_anterior_preservado": os.path.exists(OUTPUT_PATH),
-        }
+    boletim = json.loads(texto)
+    if not isinstance(boletim, dict) or not isinstance(boletim.get("itens"), list):
+        log["resultado"] = {"status": "resposta_gemini_invalida", "modelo": modelo_utilizado, "boletim_anterior_preservado": os.path.exists(OUTPUT_PATH)}
         salvar_json_atomico(LOG_PATH, log)
-        print("ERRO: a resposta final do Gemini nao possui a estrutura minima esperada.")
-        sys.exit(1)
+        raise SystemExit("ERRO: resposta final do Gemini sem estrutura mínima válida.")
 
-    boletim_json["data_execucao"] = hoje.isoformat()
-    boletim_json["janela_aplicada"] = {"inicio": janela_inicio, "fim": janela_fim}
-    boletim_json["modelo_gemini_utilizado"] = modelo_utilizado
-    boletim_json["fontes_sem_resultado"] = normalizar_lista_objetos(
-        boletim_json.get("fontes_sem_resultado", []),
-        "A pagina foi acessada, mas nao foi possivel identificar conteudo utilizavel.",
-    )
-    boletim_json["fontes_sem_publicacao_hoje"] = normalizar_lista_objetos(
-        boletim_json.get("fontes_sem_publicacao_hoje", []),
-        "Nenhuma publicacao foi identificada dentro da janela.",
-    )
-    boletim_json["fontes_com_erro_tecnico"] = normalizar_lista_objetos(
-        boletim_json.get("fontes_com_erro_tecnico", []),
-        "Erro tecnico informado durante a coleta.",
-    )
+    boletim["data_execucao"] = hoje.isoformat()
+    boletim["janela_aplicada"] = {"inicio": janela_inicio, "fim": janela_fim}
+    boletim["modelo_gemini_utilizado"] = modelo_utilizado
+    boletim["fontes_sem_resultado"] = normalizar_lista_objetos(boletim.get("fontes_sem_resultado", []), "A página foi acessada, mas não foi possível identificar conteúdo utilizável.")
+    boletim["fontes_sem_publicacao_hoje"] = normalizar_lista_objetos(boletim.get("fontes_sem_publicacao_hoje", []), "Nenhuma publicação foi identificada dentro da janela.")
+    boletim["fontes_com_erro_tecnico"] = normalizar_lista_objetos(boletim.get("fontes_com_erro_tecnico", []), "Erro técnico informado durante a coleta.")
 
-    erros_dossier = [
-        {"fonte": item["fonte"], "motivo": item.get("erro_tecnico", "erro tecnico")}
-        for item in dossier if "erro_tecnico" in item
-    ]
-    nomes_com_erro = {item["fonte"] for item in erros_dossier}
-    boletim_json["fontes_sem_resultado"] = [
-        item for item in boletim_json["fontes_sem_resultado"]
-        if item["fonte"] not in nomes_com_erro
-    ]
-    boletim_json["fontes_sem_publicacao_hoje"] = [
-        item for item in boletim_json["fontes_sem_publicacao_hoje"]
-        if item["fonte"] not in nomes_com_erro
-    ]
-    erros_existentes = {item["fonte"] for item in boletim_json["fontes_com_erro_tecnico"]}
-    for item in erros_dossier:
-        if item["fonte"] not in erros_existentes:
-            boletim_json["fontes_com_erro_tecnico"].append(item)
+    erros_dossier = [{"fonte": x["fonte"], "motivo": x.get("erro_tecnico", "Erro técnico") } for x in dossier if "erro_tecnico" in x]
+    nomes_com_erro = {x["fonte"] for x in erros_dossier}
+    boletim["fontes_sem_resultado"] = [x for x in boletim["fontes_sem_resultado"] if x["fonte"] not in nomes_com_erro]
+    boletim["fontes_sem_publicacao_hoje"] = [x for x in boletim["fontes_sem_publicacao_hoje"] if x["fonte"] not in nomes_com_erro]
+    erros_existentes = {x["fonte"] for x in boletim["fontes_com_erro_tecnico"]}
+    boletim["fontes_com_erro_tecnico"].extend(x for x in erros_dossier if x["fonte"] not in erros_existentes)
 
-    itens_validados = []
-    itens_descartados = []
-    for item in boletim_json["itens"]:
+    itens_validados, itens_descartados = [], []
+    for item in boletim["itens"]:
         if not isinstance(item, dict):
             continue
         data_str = str(item.get("data_publicacao", "")).strip()
@@ -558,57 +387,42 @@ def main():
             item["data_publicacao"] = ""
             itens_validados.append(item)
 
-    bloqueios_detalhe = {}
-    itens_com_bloqueio = 0
-    itens_com_rejeicao = 0
-    palavras_counter = Counter()
-    rejeicoes_counter = Counter()
-
+    bloqueios_detalhe, itens_com_bloqueio, itens_com_rejeicao = {}, 0, 0
+    palavras_counter, rejeicoes_counter = Counter(), Counter()
     for item in itens_validados:
         fonte_original = str(item.get("fonte", ""))
-        fonte_mapeamento = normalizar_nome_fonte(fonte_original)
-        permitidos = set(FONTE_PARA_BOLETINS.get(fonte_mapeamento, []))
+        permitidos = set(FONTE_PARA_BOLETINS.get(normalizar_nome_fonte(fonte_original), []))
         confirmados = item.get("boletins_confirmados", [])
         if not isinstance(confirmados, list):
             confirmados = []
-        sugeridos = {slug for slug in confirmados if slug in BOLETINS_DISPONIVEIS}
-        finais = ordenar_slugs(permitidos & sugeridos)
-        bloqueados = sugeridos - permitidos
-
+        sugeridos = {s for s in confirmados if s in BOLETINS_DISPONIVEIS}
+        finais, bloqueados = ordenar_slugs(permitidos & sugeridos), sugeridos - permitidos
         if bloqueados:
             itens_com_bloqueio += 1
             for slug in ordenar_slugs(bloqueados):
                 bloqueios_detalhe.setdefault(slug, []).append(item.get("titulo", "")[:60])
 
         rejeitados = item.get("boletins_rejeitados", [])
-        if not isinstance(rejeitados, list):
-            rejeitados = []
-        rejeitados = [r for r in rejeitados if isinstance(r, dict)]
+        rejeitados = [r for r in rejeitados if isinstance(r, dict)] if isinstance(rejeitados, list) else []
         existentes = {r.get("boletim") for r in rejeitados}
         for slug in ordenar_slugs(bloqueados):
             if slug not in existentes:
-                rejeitados.append({
-                    "boletim": slug,
-                    "motivo": "Filtro 1: fonte '" + fonte_original + "' nao esta mapeada para este Radar",
-                })
+                rejeitados.append({"boletim": slug, "motivo": f"Filtro 1: fonte '{fonte_original}' não está mapeada para este Radar"})
         item["boletins_rejeitados"] = rejeitados
-
         palavras = item.get("palavras_chave_detectadas", [])
-        if not isinstance(palavras, list):
-            palavras = []
-        item["palavras_chave_detectadas"] = palavras
+        item["palavras_chave_detectadas"] = palavras if isinstance(palavras, list) else []
         if rejeitados:
             itens_com_rejeicao += 1
-        for palavra in palavras:
-            if isinstance(palavra, str) and palavra.strip():
-                palavras_counter[palavra.lower().strip()] += 1
-        for rejeicao in rejeitados:
-            if rejeicao.get("boletim"):
-                rejeicoes_counter[rejeicao["boletim"]] += 1
+        for p in item["palavras_chave_detectadas"]:
+            if isinstance(p, str) and p.strip():
+                palavras_counter[p.lower().strip()] += 1
+        for r in rejeitados:
+            if r.get("boletim"):
+                rejeicoes_counter[r["boletim"]] += 1
         item["boletins"] = finais
 
-    boletim_json["itens"] = itens_validados
-    boletim_json["boletins_config"] = {
+    boletim["itens"] = itens_validados
+    boletim["boletins_config"] = {
         "descricao": DESCRICAO_RADARES,
         "boletins_disponiveis": BOLETINS_DISPONIVEIS,
         "nomes_radares": NOMES_RADARES,
@@ -619,59 +433,47 @@ def main():
         "fontes_em_defeso": FONTES_EM_DEFESO,
     }
 
-    stats = {}
-    for slug in BOLETINS_DISPONIVEIS:
-        stats[slug] = {
-            "nome": NOMES_RADARES[slug],
-            "clusters": CLUSTERS_POR_BOLETIM[slug],
-            "total": sum(1 for item in itens_validados if slug in item.get("boletins", [])),
-        }
-    boletim_json["estatisticas_por_boletim"] = stats
-    boletim_json["auditoria"] = {
+    stats = {slug: {"nome": NOMES_RADARES[slug], "clusters": CLUSTERS_POR_BOLETIM[slug], "total": sum(1 for item in itens_validados if slug in item.get("boletins", []))} for slug in BOLETINS_DISPONIVEIS}
+    boletim["estatisticas_por_boletim"] = stats
+    boletim["auditoria"] = {
         "total_itens": len(itens_validados),
         "itens_com_alguma_rejeicao": itens_com_rejeicao,
         "itens_com_bloqueio_f1": itens_com_bloqueio,
         "rejeicoes_por_boletim": dict(rejeicoes_counter),
-        "top_palavras_chave_detectadas": [
-            {"palavra": p, "ocorrencias": c} for p, c in palavras_counter.most_common(20)
-        ],
+        "top_palavras_chave_detectadas": [{"palavra": p, "ocorrencias": c} for p, c in palavras_counter.most_common(20)],
     }
 
     log["resultado"] = {
-        "status": "sucesso",
-        "modelo_gemini_utilizado": modelo_utilizado,
-        "itens_aceitos": len(itens_validados),
-        "itens_descartados_pos_validacao": len(itens_descartados),
-        "fontes_ativas": len(fontes_ativas),
-        "fontes_inativas": len(fontes_inativas),
-        "fontes_sem_resultado": len(boletim_json["fontes_sem_resultado"]),
-        "fontes_sem_publicacao_hoje": len(boletim_json["fontes_sem_publicacao_hoje"]),
-        "fontes_com_erro_tecnico": len(boletim_json["fontes_com_erro_tecnico"]),
+        "status": "sucesso", "modelo_gemini_utilizado": modelo_utilizado,
+        "itens_aceitos": len(itens_validados), "itens_descartados_pos_validacao": len(itens_descartados),
+        "fontes_ativas": len(fontes_ativas), "fontes_inativas": len(fontes_inativas),
+        "fontes_sem_resultado": len(boletim["fontes_sem_resultado"]),
+        "fontes_sem_publicacao_hoje": len(boletim["fontes_sem_publicacao_hoje"]),
+        "fontes_com_erro_tecnico": len(boletim["fontes_com_erro_tecnico"]),
         "itens_por_boletim": stats,
         "filtro1_bloqueios": {slug: len(titulos) for slug, titulos in bloqueios_detalhe.items()},
-        "auditoria": boletim_json["auditoria"],
+        "auditoria": boletim["auditoria"],
     }
     if fontes_inativas:
-        log["fontes_inativas_defeso"] = [fonte["fonte"] for fonte in fontes_inativas]
+        log["fontes_inativas_defeso"] = [f["fonte"] for f in fontes_inativas]
     if itens_descartados:
         log["itens_descartados"] = itens_descartados
     if bloqueios_detalhe:
         log["filtro1_bloqueios_detalhe"] = bloqueios_detalhe
 
-    salvar_json_atomico(OUTPUT_PATH, boletim_json)
+    salvar_json_atomico(OUTPUT_PATH, boletim)
     salvar_json_atomico(LOG_PATH, log)
-
     print("\nRadar salvo em: " + OUTPUT_PATH)
     print("  Modelo Gemini utilizado: " + modelo_utilizado)
-    print("  Itens aceitos: " + str(len(itens_validados)))
-    print("  Itens descartados: " + str(len(itens_descartados)))
-    print("  Itens com bloqueio F1: " + str(itens_com_bloqueio))
-    print("\nDistribuicao por Radar (F1 + F2):")
+    print(f"  Itens aceitos: {len(itens_validados)}")
+    print(f"  Itens descartados: {len(itens_descartados)}")
+    print(f"  Itens com bloqueio F1: {itens_com_bloqueio}")
+    print("\nDistribuição por Radar (F1 + F2):")
     for slug in BOLETINS_DISPONIVEIS:
         bloqueios = len(bloqueios_detalhe.get(slug, []))
-        extra = "" if not bloqueios else " (F1 bloqueou " + str(bloqueios) + " sugestoes do F2)"
-        print("  " + NOMES_RADARES[slug] + ": " + str(stats[slug]["total"]) + " itens" + extra)
-    print("Concluido")
+        extra = "" if not bloqueios else f" (F1 bloqueou {bloqueios} sugestões do F2)"
+        print(f"  {NOMES_RADARES[slug]}: {stats[slug]['total']} itens{extra}")
+    print("Concluído")
 
 
 if __name__ == "__main__":
