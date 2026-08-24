@@ -3,8 +3,7 @@ name: Gerar Radares Jurídicos
 on:
   workflow_dispatch:
 
-  # Para reativar a execução automática de segunda a sexta-feira,
-  # remova os comentários das linhas abaixo.
+  # Para reativar a execução automática:
   #
   # schedule:
   #   - cron: "0 11 * * 1-5"
@@ -42,6 +41,7 @@ jobs:
         run: |
           python -m py_compile scripts/gerar_boletim.py
           python -m py_compile scripts/gerar_html.py
+          python -m py_compile scripts/gerar_auditoria_html.py
 
       - name: Gerar curadoria dos Radares
         env:
@@ -54,10 +54,15 @@ jobs:
         run: |
           python scripts/gerar_html.py
 
+      - name: Gerar auditoria consolidada
+        run: |
+          python scripts/gerar_auditoria_html.py
+
       - name: Verificar arquivos gerados
         run: |
           test -f output/boletim.json
           test -f output/log_execucao.json
+          test -f output/auditoria.html
 
           test -f output/validacao_trabalhista-empresarial.html
           test -f output/validacao_direito-tributario.html
@@ -69,7 +74,7 @@ jobs:
           test -f output/validacao_propriedade-intelectual.html
           test -f output/validacao_contencioso-civel.html
 
-          echo "Arquivos da curadoria e da validação encontrados com sucesso."
+          echo "Curadoria, validações e auditoria encontradas."
 
       - name: Exibir resumo da execução
         run: |
@@ -77,18 +82,30 @@ jobs:
           import json
           from pathlib import Path
 
-          boletim_path = Path("output/boletim.json")
-          boletim = json.loads(boletim_path.read_text(encoding="utf-8"))
+          boletim = json.loads(
+              Path("output/boletim.json").read_text(encoding="utf-8")
+          )
 
-          modelo = boletim.get("modelo_gemini_utilizado", "não informado")
+          modelo = boletim.get(
+              "modelo_gemini_utilizado",
+              "não informado",
+          )
           itens = boletim.get("itens", [])
-          estatisticas = boletim.get("estatisticas_por_boletim", {})
+          estatisticas = boletim.get(
+              "estatisticas_por_boletim",
+              {},
+          )
+          auditoria = boletim.get("auditoria", {})
 
           print("=" * 60)
           print("RESUMO DA EXECUÇÃO")
           print("=" * 60)
           print(f"Modelo Gemini utilizado: {modelo}")
           print(f"Total de itens processados: {len(itens)}")
+          print(
+              "Itens com bloqueio do Filtro 1: "
+              + str(auditoria.get("itens_com_bloqueio_f1", 0))
+          )
           print("")
           print("Distribuição por Radar:")
 
@@ -114,6 +131,7 @@ jobs:
           path: |
             output/boletim.json
             output/log_execucao.json
+            output/auditoria.html
             output/validacao_*.html
 
       - name: Commit do resultado
@@ -123,6 +141,7 @@ jobs:
 
           git add output/boletim.json
           git add output/log_execucao.json
+          git add output/auditoria.html
           git add output/validacao_*.html
 
           if git diff --staged --quiet; then
@@ -130,5 +149,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Atualiza curadoria dos Radares - $(date +'%Y-%m-%d')"
+          git commit -m "Atualiza curadoria e auditoria dos Radares - $(date +'%Y-%m-%d')"
           git push
