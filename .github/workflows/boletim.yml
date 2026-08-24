@@ -2,8 +2,20 @@ name: Gerar Radares Jurídicos
 
 on:
   workflow_dispatch:
+    inputs:
+      executar_teste_dou:
+        description: "Executar a prova de conceito do DOU para o cluster Regulatório"
+        required: false
+        default: true
+        type: boolean
+      data_dou_teste:
+        description: "Data da edição do DOU para o teste, no formato DD-MM-AAAA"
+        required: false
+        default: "24-08-2026"
+        type: string
 
-  # Para reativar a execução automática:
+  # Para reativar a execução automática de segunda a sexta-feira,
+  # remova os comentários das linhas abaixo.
   #
   # schedule:
   #   - cron: "0 11 * * 1-5"
@@ -18,7 +30,7 @@ concurrency:
 jobs:
   gerar-radares:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
 
     steps:
       - name: Checkout do repositório
@@ -42,6 +54,7 @@ jobs:
           python -m py_compile scripts/gerar_boletim.py
           python -m py_compile scripts/gerar_html.py
           python -m py_compile scripts/gerar_auditoria_html.py
+          python -m py_compile scripts/testar_dou_regulatorio.py
 
       - name: Gerar curadoria dos Radares
         env:
@@ -58,7 +71,17 @@ jobs:
         run: |
           python scripts/gerar_auditoria_html.py
 
-      - name: Verificar arquivos gerados
+      - name: Testar extração do DOU para o cluster Regulatório
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.executar_teste_dou }}
+        env:
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          DOU_DATA: ${{ inputs.data_dou_teste }}
+          DOU_SECAO: "do1"
+        run: |
+          python scripts/testar_dou_regulatorio.py
+
+      - name: Verificar arquivos principais gerados
         run: |
           test -f output/boletim.json
           test -f output/log_execucao.json
@@ -75,6 +98,13 @@ jobs:
           test -f output/validacao_contencioso-civel.html
 
           echo "Curadoria, validações e auditoria encontradas."
+
+      - name: Verificar arquivos do teste do DOU
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.executar_teste_dou }}
+        run: |
+          test -f output/teste_dou_regulatorio.json
+          test -f output/teste_dou_regulatorio.html
+          echo "Arquivos da prova de conceito do DOU encontrados."
 
       - name: Exibir resumo da execução
         run: |
@@ -119,10 +149,36 @@ jobs:
 
               print(f"  {nome}: {total}")
 
+          teste_dou = Path("output/teste_dou_regulatorio.json")
+          if teste_dou.exists():
+              resultado_dou = json.loads(
+                  teste_dou.read_text(encoding="utf-8")
+              )
+              print("")
+              print("Prova de conceito do DOU:")
+              print(
+                  "  Publicações regulatórias identificadas: "
+                  + str(
+                      resultado_dou.get(
+                          "total_publicacoes_regulatorias",
+                          0,
+                      )
+                  )
+              )
+              print(
+                  "  Modelo Gemini do teste: "
+                  + str(
+                      resultado_dou.get(
+                          "modelo_gemini_utilizado",
+                          "não informado",
+                      )
+                  )
+              )
+
           print("=" * 60)
           PY
 
-      - name: Disponibilizar arquivos como artifact
+      - name: Disponibilizar arquivos principais como artifact
         uses: actions/upload-artifact@v4
         with:
           name: radares-validacao-${{ github.run_number }}
@@ -134,7 +190,18 @@ jobs:
             output/auditoria.html
             output/validacao_*.html
 
-      - name: Commit do resultado
+      - name: Disponibilizar prova de conceito do DOU como artifact
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.executar_teste_dou }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: teste-dou-regulatorio-${{ github.run_number }}
+          if-no-files-found: error
+          retention-days: 14
+          path: |
+            output/teste_dou_regulatorio.json
+            output/teste_dou_regulatorio.html
+
+      - name: Commit dos resultados oficiais
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -145,7 +212,7 @@ jobs:
           git add output/validacao_*.html
 
           if git diff --staged --quiet; then
-            echo "Nenhuma alteração para registrar."
+            echo "Nenhuma alteração oficial para registrar."
             exit 0
           fi
 
