@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auditoria dos Radares</title>
+  <style>
+    :root {
+      --verde-escuro: #0d3320;
+      --verde-medio: #1a4d2e;
+      --verde-vibrante: #22c55e;
+      --verde-claro: #a8d8b9;
+      --fundo: #f0f2f1;
+      --card: #ffffff;
+      --linha: #e5e7eb;
+      --texto: #1f2937;
+      --texto-suave: #6b7280;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--fundo); color:var(--texto); font-family:Arial,Helvetica,sans-serif; }
+    .pagina { width:min(1180px, calc(100% - 32px)); margin:28px auto 52px; }
+    .cabecalho { background:var(--verde-escuro); color:#fff; padding:34px 38px; border-radius:12px; box-shadow:0 8px 24px rgba(13,51,32,.14); }
+    .cabecalho .rotulo { color:var(--verde-claro); text-transform:uppercase; letter-spacing:2px; font-size:11px; font-weight:700; }
+    .cabecalho h1 { margin:12px 0 10px; font-size:32px; line-height:1.15; }
+    .cabecalho p { margin:0; max-width:760px; color:var(--verde-claro); font-size:13px; line-height:1.6; }
+    .barra { width:62px; height:4px; background:var(--verde-vibrante); margin-top:20px; }
+    .indice { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:9px; margin:20px 0; }
+    .indice a { display:block; background:#fff; border:1px solid var(--linha); border-radius:8px; padding:11px 13px; color:var(--verde-escuro); text-decoration:none; font-size:12px; font-weight:700; }
+    .indice a:hover { border-color:var(--verde-vibrante); }
+    .secao { background:var(--card); border:1px solid var(--linha); border-radius:10px; margin:16px 0; overflow:hidden; box-shadow:0 2px 8px rgba(31,41,55,.04); }
+    .secao-cabecalho { display:flex; gap:14px; align-items:flex-start; padding:19px 22px; border-bottom:1px solid var(--linha); background:#f8faf9; }
+    .numero { display:inline-flex; align-items:center; justify-content:center; min-width:38px; height:30px; border-radius:6px; background:var(--verde-escuro); color:#fff; font-size:11px; font-weight:700; letter-spacing:1px; }
+    .secao h2 { margin:0; color:var(--verde-escuro); font-size:18px; }
+    .secao-resumo { margin-top:5px; color:var(--texto-suave); font-size:11px; }
+    .secao-conteudo { padding:18px 22px; }
+    .tabela-wrap { overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; font-size:12px; }
+    th { text-align:left; color:var(--verde-medio); background:#f5f8f6; border-bottom:2px solid var(--verde-claro); padding:10px; white-space:nowrap; }
+    td { padding:10px; border-bottom:1px solid var(--linha); vertical-align:top; line-height:1.45; }
+    tbody tr:last-child td { border-bottom:0; }
+    .curta { width:150px; }
+    .numero-coluna { width:110px; text-align:right; }
+    .vazio { color:var(--texto-suave); text-align:center; padding:18px; font-size:12px; font-style:italic; }
+    .grade-links { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:10px; }
+    .link-validacao { display:flex; flex-direction:column; gap:6px; border:1px solid var(--linha); border-left:4px solid var(--verde-vibrante); border-radius:8px; padding:14px; color:var(--verde-escuro); text-decoration:none; background:#fff; }
+    .link-validacao span { font-size:12px; font-weight:700; line-height:1.35; }
+    .link-validacao small { color:var(--texto-suave); font-size:10px; }
+    .link-ausente { border-left-color:#b91c1c; opacity:.72; }
+    .rodape { text-align:center; color:var(--texto-suave); font-size:10px; letter-spacing:.5px; margin-top:24px; }
+    @media (max-width:700px) {
+      .pagina { width:min(100% - 18px, 1180px); margin-top:10px; }
+      .cabecalho { padding:25px 22px; border-radius:8px; }
+      .cabecalho h1 { font-size:25px; }
+      .secao-cabecalho, .secao-conteudo { padding:15px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="pagina">
+    <header class="cabecalho">
+      <div class="rotulo">Auditoria consolidada</div>
+      <h1>Auditoria dos Radares</h1>
+      <p>Painel técnico da execução da curadoria automatizada.</p>
+      <div class="barra"></div>
+    </header>
+    <nav class="indice" aria-label="Índice da auditoria">
+      <a href="#secao-1">01. Fontes processadas</a><a href="#secao-2">02. Fontes sem resultado</a><a href="#secao-3">03. Fontes sem publicação</a><a href="#secao-4">04. Erros técnicos</a><a href="#secao-5">05. Fontes em defeso</a><a href="#secao-6">06. Totais por Radar</a><a href="#secao-7">07. Bloqueios do Filtro 1</a><a href="#secao-8">08. Itens bloqueados</a><a href="#secao-9">09. Rejeições por Radar</a><a href="#secao-10">10. Principais palavras-chave</a><a href="#secao-11">11. Itens sem classificação</a><a href="#secao-12">12. Páginas de validação</a>
+    </nav>
+    
+    <section class="secao" id="secao-1">
+      <div class="secao-cabecalho">
+        <span class="numero">01</span>
+        <div>
+          <h2>Fontes processadas</h2>
+          <div class="secao-resumo">23 fontes</div>
+        </div>
+      </div>
+      <div class="secao-conteudo"><div class="tabela-wrap"><table><thead><tr><th class="">Fonte</th><th class="curta">Status</th><th class="numero-coluna">Caracteres</th></tr></thead><tbody><tr><td class="">Planalto | Resenha Diaria</td><td class="curta">ok</td><td class="numero-coluna">10000</td></tr><tr><td class="">Banco Central | Normas</td><td class="curta">ok</td><td class="numero-coluna">10000</td></tr><tr><td class="">CCEE | Noticias</td><td class="curta">ok</td><td class="numero-coluna">4034</td></tr><tr><td class="">Destaques do D.O.U.</td><td class="curta">ok</td><td class="numero-coluna">10000</td></tr><tr><td class="">Receita Federal | Normas</td><td class="curta">ok</td><td class="numero-coluna">10000</td></tr><tr><td class="">Ministério da Fazenda | Notícias</td><td class="curta">ok</td><td class="numero-coluna">10000</td></tr><tr><td class="">ANPD | Notícias</td><td class="curta">ok</td><td class="numero-coluna">10000</td></tr><tr><td class="">CVM | Notícias</td><td class="curta">ok</td><td class="numero-coluna">10000</td></tr><tr><td class="">B3 | Ofícios e Comunicados</td><td class="curta">ok</td><td class="numero-coluna">9621</td></tr><tr><td class="">ANP | Notícias</td><td class="curta">ok</td><td class="numero-coluna">10000</td></tr><tr><td class="">MME | Notícias</td><td class="curta">ok</td><td class="numero-coluna">10000</td></tr><tr><td class="">ONS | Notícias</td><td class="curta">ok</td><td class="numero-coluna">5151</td></tr><tr><td class="">ANEEL | Últimas Notícias</td><td class="curta">ok</td><td class="numero-coluna">10000</td></tr><tr><td class="">Ministério da Agricultura | Notícias</td><td class="curta">ok</td><td class="numero-coluna">10000</td></tr><tr><td class="">ANVISA | Notícias</td><td class="curta">ok</td><td class="numero-coluna">1967</td></tr><tr><td class="">INPI | Notícias</td><td class="curta">ok</td><td class="numero-coluna">10000</td></tr><tr><td class="">SENACON | Notícias</td><td class="curta">ok</td><td class="numero-coluna">10000</td></tr><tr><td class="">COAF | Notícias</td><td class="curta">ok</td><td class="numero-coluna">893</td></tr><tr><td class="">ANM | Notícias</td><td class="curta">ok</td><td class="numero-coluna">10000</td></tr><tr><td class="">EPE | Notícias</td><td class="curta">ok</td><td class="numero-coluna">9822</td></tr><tr><td class="">ANTAQ | Notícias</td><td class="curta">ok</td><td class="numero-coluna">10000</td></tr><tr><td class="">CNPE | Comunicações</td><td class="curta">ok</td><td class="numero-coluna">10000</td></tr><tr><td class="">Kollemata | Decretos</td><td class="curta">ok</td><td class="numero-coluna">4417</td></tr></tbody></table></div></div>
+    </section>
+    
+    <section class="secao" id="secao-2">
+      <div class="secao-cabecalho">
+        <span class="numero">02</span>
+        <div>
+          <h2>Fontes sem resultado</h2>
+          <div class="secao-resumo">2 fontes</div>
+        </div>
+      </div>
+      <div class="secao-conteudo"><div class="tabela-wrap"><table><thead><tr><th class="">Fonte</th><th class="">Motivo</th></tr></thead><tbody><tr><td class="">Receita Federal | Normas</td><td class="">A página foi acessada, mas não foi possível identificar conteúdo utilizável.</td></tr><tr><td class="">ANVISA | Notícias</td><td class="">A página foi acessada, mas não foi possível identificar conteúdo utilizável.</td></tr></tbody></table></div></div>
+    </section>
+    
+    <section class="secao" id="secao-3">
+      <div class="secao-cabecalho">
+        <span class="numero">03</span>
+        <div>
+          <h2>Fontes sem publicação</h2>
+          <div class="secao-resumo">5 fontes</div>
+        </div>
+      </div>
+      <div class="secao-conteudo"><div class="tabela-wrap"><table><thead><tr><th class="">Fonte</th><th class="">Motivo</th></tr></thead><tbody><tr><td class="">B3 | Ofícios e Comunicados</td><td class="">Nenhuma publicação foi identificada dentro da janela.</td></tr><tr><td class="">MME | Notícias</td><td class="">Nenhuma publicação foi identificada dentro da janela.</td></tr><tr><td class="">INPI | Notícias</td><td class="">Nenhuma publicação foi identificada dentro da janela.</td></tr><tr><td class="">CNPE | Comunicações</td><td class="">Nenhuma publicação foi identificada dentro da janela.</td></tr><tr><td class="">Kollemata | Decretos</td><td class="">Nenhuma publicação foi identificada dentro da janela.</td></tr></tbody></table></div></div>
+    </section>
+    
+    <section class="secao" id="secao-4">
+      <div class="secao-cabecalho">
+        <span class="numero">04</span>
+        <div>
+          <h2>Erros técnicos</h2>
+          <div class="secao-resumo">1 fontes</div>
+        </div>
+      </div>
+      <div class="secao-conteudo"><div class="tabela-wrap"><table><thead><tr><th class="">Fonte</th><th class="">Motivo</th></tr></thead><tbody><tr><td class="">COAF | Notícias</td><td class="">Erro técnico informado durante a coleta.</td></tr></tbody></table></div></div>
+    </section>
+    
+    <section class="secao" id="secao-5">
+      <div class="secao-cabecalho">
+        <span class="numero">05</span>
+        <div>
+          <h2>Fontes em defeso</h2>
+          <div class="secao-resumo">3 fontes</div>
+        </div>
+      </div>
+      <div class="secao-conteudo"><div class="tabela-wrap"><table><thead><tr><th class="">Fonte</th></tr></thead><tbody><tr><td class="">CGU | Notícias</td></tr><tr><td class="">Ministério do Meio Ambiente | Notícias</td></tr><tr><td class="">Secretaria de Prêmios e Apostas | Notícias</td></tr></tbody></table></div></div>
+    </section>
+    
+    <section class="secao" id="secao-6">
+      <div class="secao-cabecalho">
+        <span class="numero">06</span>
+        <div>
+          <h2>Totais por Radar</h2>
+          
+        </div>
+      </div>
+      <div class="secao-conteudo"><div class="tabela-wrap"><table><thead><tr><th class="">Radar</th><th class="numero-coluna">Total</th></tr></thead><tbody><tr><td class="">Radar Trabalhista Empresarial</td><td class="numero-coluna">0</td></tr><tr><td class="">Radar Tributário</td><td class="numero-coluna">3</td></tr><tr><td class="">Radar Societário, Fusões e Aquisições</td><td class="numero-coluna">1</td></tr><tr><td class="">Radar Mercado de Capitais e Fundos de Investimento</td><td class="numero-coluna">4</td></tr><tr><td class="">Radar Regulatório e Óleo e Gás</td><td class="numero-coluna">5</td></tr><tr><td class="">Radar Negócios Imobiliários e Infraestrutura</td><td class="numero-coluna">5</td></tr><tr><td class="">Radar Ambiental e ESG</td><td class="numero-coluna">2</td></tr><tr><td class="">Radar Propriedade Intelectual, Tecnologia e Privacidade</td><td class="numero-coluna">3</td></tr><tr><td class="">Radar Solução de Conflitos</td><td class="numero-coluna">3</td></tr></tbody></table></div></div>
+    </section>
+    
+    <section class="secao" id="secao-7">
+      <div class="secao-cabecalho">
+        <span class="numero">07</span>
+        <div>
+          <h2>Bloqueios do Filtro 1</h2>
+          <div class="secao-resumo">3 itens com bloqueio</div>
+        </div>
+      </div>
+      <div class="secao-conteudo"><div class="tabela-wrap"><table><thead><tr><th class="">Radar bloqueado</th><th class="numero-coluna">Quantidade</th></tr></thead><tbody><tr><td class="">Radar Societário, Fusões e Aquisições</td><td class="numero-coluna">1</td></tr><tr><td class="">Radar Negócios Imobiliários e Infraestrutura</td><td class="numero-coluna">2</td></tr></tbody></table></div></div>
+    </section>
+    
+    <section class="secao" id="secao-8">
+      <div class="secao-cabecalho">
+        <span class="numero">08</span>
+        <div>
+          <h2>Itens bloqueados</h2>
+          <div class="secao-resumo">3 registros</div>
+        </div>
+      </div>
+      <div class="secao-conteudo"><div class="tabela-wrap"><table><thead><tr><th class="">Radar bloqueado</th><th class="">Item</th></tr></thead><tbody><tr><td class="">Radar Societário, Fusões e Aquisições</td><td class="">ANEEL anui transferência de Controle Societário Direto e Ind</td></tr><tr><td class="">Radar Negócios Imobiliários e Infraestrutura</td><td class="">Decisão Plenária - ADI 7866</td></tr><tr><td class="">Radar Negócios Imobiliários e Infraestrutura</td><td class="">Pauta da 617ª Reunião Ordinária da Diretoria Colegiada está </td></tr></tbody></table></div></div>
+    </section>
+    
+    <section class="secao" id="secao-9">
+      <div class="secao-cabecalho">
+        <span class="numero">09</span>
+        <div>
+          <h2>Rejeições por Radar</h2>
+          
+        </div>
+      </div>
+      <div class="secao-conteudo"><div class="tabela-wrap"><table><thead><tr><th class="">Radar</th><th class="numero-coluna">Rejeições</th></tr></thead><tbody><tr><td class="">Radar Trabalhista Empresarial</td><td class="numero-coluna">0</td></tr><tr><td class="">Radar Tributário</td><td class="numero-coluna">2</td></tr><tr><td class="">Radar Societário, Fusões e Aquisições</td><td class="numero-coluna">2</td></tr><tr><td class="">Radar Mercado de Capitais e Fundos de Investimento</td><td class="numero-coluna">1</td></tr><tr><td class="">Radar Regulatório e Óleo e Gás</td><td class="numero-coluna">1</td></tr><tr><td class="">Radar Negócios Imobiliários e Infraestrutura</td><td class="numero-coluna">2</td></tr><tr><td class="">Radar Ambiental e ESG</td><td class="numero-coluna">0</td></tr><tr><td class="">Radar Propriedade Intelectual, Tecnologia e Privacidade</td><td class="numero-coluna">0</td></tr><tr><td class="">Radar Solução de Conflitos</td><td class="numero-coluna">1</td></tr></tbody></table></div></div>
+    </section>
+    
+    <section class="secao" id="secao-10">
+      <div class="secao-cabecalho">
+        <span class="numero">10</span>
+        <div>
+          <h2>Principais palavras-chave</h2>
+          <div class="secao-resumo">20 palavras ou expressões</div>
+        </div>
+      </div>
+      <div class="secao-conteudo"><div class="tabela-wrap"><table><thead><tr><th class="">Palavra-chave</th><th class="numero-coluna">Ocorrências</th></tr></thead><tbody><tr><td class="">anp</td><td class="numero-coluna">4</td></tr><tr><td class="">mercosul</td><td class="numero-coluna">2</td></tr><tr><td class="">stf</td><td class="numero-coluna">2</td></tr><tr><td class="">anpd</td><td class="numero-coluna">2</td></tr><tr><td class="">cvm</td><td class="numero-coluna">2</td></tr><tr><td class="">regulação</td><td class="numero-coluna">2</td></tr><tr><td class="">consulta pública</td><td class="numero-coluna">2</td></tr><tr><td class="">aneel</td><td class="numero-coluna">2</td></tr><tr><td class="">comércio eletrônico</td><td class="numero-coluna">1</td></tr><tr><td class="">comércio de serviços</td><td class="numero-coluna">1</td></tr><tr><td class="">iban</td><td class="numero-coluna">1</td></tr><tr><td class="">transferências internacionais</td><td class="numero-coluna">1</td></tr><tr><td class="">contas bancárias</td><td class="numero-coluna">1</td></tr><tr><td class="">sociedade de crédito direto</td><td class="numero-coluna">1</td></tr><tr><td class="">scd</td><td class="numero-coluna">1</td></tr><tr><td class="">controladores</td><td class="numero-coluna">1</td></tr><tr><td class="">consulta externa</td><td class="numero-coluna">1</td></tr><tr><td class="">modelo energético</td><td class="numero-coluna">1</td></tr><tr><td class="">setor elétrico</td><td class="numero-coluna">1</td></tr><tr><td class="">pld</td><td class="numero-coluna">1</td></tr></tbody></table></div></div>
+    </section>
+    
+    <section class="secao" id="secao-11">
+      <div class="secao-cabecalho">
+        <span class="numero">11</span>
+        <div>
+          <h2>Itens sem classificação</h2>
+          <div class="secao-resumo">2 itens</div>
+        </div>
+      </div>
+      <div class="secao-conteudo"><div class="tabela-wrap"><table><thead><tr><th class="">Fonte</th><th class="">Item</th><th class="curta">Data</th></tr></thead><tbody><tr><td class="">Planalto | Resenha Diaria</td><td class="">Decreto nº 13.103, de 21 de agosto de 2026</td><td class="curta">24/08/2026</td></tr><tr><td class="">ANTAQ | Notícias</td><td class="">Pauta da 617ª Reunião Ordinária da Diretoria Colegiada está disponível</td><td class="curta">21/08/2026</td></tr></tbody></table></div></div>
+    </section>
+    
+    <section class="secao" id="secao-12">
+      <div class="secao-cabecalho">
+        <span class="numero">12</span>
+        <div>
+          <h2>Páginas de validação</h2>
+          <div class="secao-resumo">9 páginas</div>
+        </div>
+      </div>
+      <div class="secao-conteudo"><div class="grade-links">
+        <a class="link-validacao link-ok" href="validacao_trabalhista-empresarial.html">
+          <span>Radar Trabalhista Empresarial</span>
+          <small>Disponível</small>
+        </a>
+        
+        <a class="link-validacao link-ok" href="validacao_direito-tributario.html">
+          <span>Radar Tributário</span>
+          <small>Disponível</small>
+        </a>
+        
+        <a class="link-validacao link-ok" href="validacao_societario-ma.html">
+          <span>Radar Societário, Fusões e Aquisições</span>
+          <small>Disponível</small>
+        </a>
+        
+        <a class="link-validacao link-ok" href="validacao_mercado-capitais-fundos.html">
+          <span>Radar Mercado de Capitais e Fundos de Investimento</span>
+          <small>Disponível</small>
+        </a>
+        
+        <a class="link-validacao link-ok" href="validacao_regulatorio-oleo-gas.html">
+          <span>Radar Regulatório e Óleo e Gás</span>
+          <small>Disponível</small>
+        </a>
+        
+        <a class="link-validacao link-ok" href="validacao_imobiliario-infraestrutura.html">
+          <span>Radar Negócios Imobiliários e Infraestrutura</span>
+          <small>Disponível</small>
+        </a>
+        
+        <a class="link-validacao link-ok" href="validacao_ambiental-esg.html">
+          <span>Radar Ambiental e ESG</span>
+          <small>Disponível</small>
+        </a>
+        
+        <a class="link-validacao link-ok" href="validacao_propriedade-intelectual.html">
+          <span>Radar Propriedade Intelectual, Tecnologia e Privacidade</span>
+          <small>Disponível</small>
+        </a>
+        
+        <a class="link-validacao link-ok" href="validacao_contencioso-civel.html">
+          <span>Radar Solução de Conflitos</span>
+          <small>Disponível</small>
+        </a>
+        </div></div>
+    </section>
+    
+    <footer class="rodape">RADARES LOBO DE RIZZO &middot; AUDITORIA INTERNA</footer>
+  </main>
+</body>
+</html>

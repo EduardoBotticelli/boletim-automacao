@@ -1,9 +1,9 @@
 {
   "data_execucao": "2026-08-24",
-  "executado_em": "2026-08-24T15:15:30.963890-03:00",
+  "executado_em": "2026-08-24T17:50:29.998976-03:00",
   "janela": {
     "inicio": "2026-08-21T00:00",
-    "fim": "2026-08-24T15:15"
+    "fim": "2026-08-24T17:50"
   },
   "modelos_gemini_configurados": [
     "gemini-3.7-flash",
@@ -26,7 +26,7 @@
     {
       "fonte": "CCEE | Noticias",
       "status": "ok",
-      "tamanho_chars": 2892
+      "tamanho_chars": 4034
     },
     {
       "fonte": "Destaques do D.O.U.",
@@ -153,7 +153,7 @@
   "resultado": {
     "status": "sucesso",
     "modelo_gemini_utilizado": "gemini-3.6-flash",
-    "itens_aceitos": 44,
+    "itens_aceitos": 24,
     "itens_descartados_pos_validacao": 0,
     "fontes_ativas": 23,
     "fontes_inativas": 3,
@@ -184,7 +184,7 @@
           "Purple",
           "Due Diligence"
         ],
-        "total": 0
+        "total": 1
       },
       "mercado-capitais-fundos": {
         "nome": "Radar Mercado de Capitais e Fundos de Investimento",
@@ -200,7 +200,7 @@
           "Regulatório",
           "Óleo & Gás Blue"
         ],
-        "total": 16
+        "total": 5
       },
       "imobiliario-infraestrutura": {
         "nome": "Radar Negócios Imobiliários e Infraestrutura",
@@ -208,14 +208,14 @@
           "Imobiliário",
           "Infraestrutura"
         ],
-        "total": 14
+        "total": 5
       },
       "ambiental-esg": {
         "nome": "Radar Ambiental e ESG",
         "clusters": [
           "Ambiental"
         ],
-        "total": 5
+        "total": 2
       },
       "propriedade-intelectual": {
         "nome": "Radar Propriedade Intelectual, Tecnologia e Privacidade",
@@ -234,65 +234,28 @@
       }
     },
     "filtro1_bloqueios": {
-      "regulatorio-oleo-gas": 9,
-      "imobiliario-infraestrutura": 1,
-      "propriedade-intelectual": 1,
+      "imobiliario-infraestrutura": 2,
       "societario-ma": 1
     },
     "auditoria": {
-      "total_itens": 44,
-      "itens_com_alguma_rejeicao": 44,
-      "itens_com_bloqueio_f1": 12,
+      "total_itens": 24,
+      "itens_com_alguma_rejeicao": 9,
+      "itens_com_bloqueio_f1": 3,
       "rejeicoes_por_boletim": {
-        "societario-ma": 12,
-        "trabalhista-empresarial": 3,
-        "direito-tributario": 8,
-        "ambiental-esg": 5,
-        "regulatorio-oleo-gas": 11,
-        "mercado-capitais-fundos": 5,
-        "imobiliario-infraestrutura": 4,
-        "propriedade-intelectual": 4,
-        "contencioso-civel": 4
+        "societario-ma": 2,
+        "direito-tributario": 2,
+        "regulatorio-oleo-gas": 1,
+        "imobiliario-infraestrutura": 2,
+        "contencioso-civel": 1,
+        "mercado-capitais-fundos": 1
       },
       "top_palavras_chave_detectadas": [
         {
-          "palavra": "aneel",
-          "ocorrencias": 7
-        },
-        {
-          "palavra": "ons",
-          "ocorrencias": 6
-        },
-        {
-          "palavra": "setor elétrico",
-          "ocorrencias": 5
-        },
-        {
           "palavra": "anp",
-          "ocorrencias": 5
-        },
-        {
-          "palavra": "energia",
           "ocorrencias": 4
         },
         {
           "palavra": "mercosul",
-          "ocorrencias": 3
-        },
-        {
-          "palavra": "pld",
-          "ocorrencias": 3
-        },
-        {
-          "palavra": "comércio eletrônico",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "cancelamento da autorização",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "consulta externa",
           "ocorrencias": 2
         },
         {
@@ -300,23 +263,15 @@
           "ocorrencias": 2
         },
         {
-          "palavra": "receita federal",
-          "ocorrencias": 2
-        },
-        {
           "palavra": "anpd",
           "ocorrencias": 2
         },
         {
-          "palavra": "proteção de dados",
+          "palavra": "cvm",
           "ocorrencias": 2
         },
         {
-          "palavra": "gás natural",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "combustíveis",
+          "palavra": "regulação",
           "ocorrencias": 2
         },
         {
@@ -324,16 +279,56 @@
           "ocorrencias": 2
         },
         {
-          "palavra": "sin",
+          "palavra": "aneel",
           "ocorrencias": 2
         },
         {
-          "palavra": "reajuste tarifário",
-          "ocorrencias": 2
+          "palavra": "comércio eletrônico",
+          "ocorrencias": 1
         },
         {
-          "palavra": "concessionárias",
-          "ocorrencias": 2
+          "palavra": "comércio de serviços",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "iban",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "transferências internacionais",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "contas bancárias",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "sociedade de crédito direto",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "scd",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "controladores",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "consulta externa",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "modelo energético",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "setor elétrico",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "pld",
+          "ocorrencias": 1
         }
       ]
     }
@@ -344,22 +339,9 @@
     "Ministério do Meio Ambiente | Notícias"
   ],
   "filtro1_bloqueios_detalhe": {
-    "regulatorio-oleo-gas": [
-      "CT PMO/PLD abre consulta externa sobre os requisitos funcion",
-      "Confira a apresentação e o vídeo do Encontro do PLD realizad",
-      "No MinutoMega Talks, diretora Gerusa Côrtes destaca preparaç",
-      "ONS aciona plano de gestão de excedentes pela segunda vez es",
-      "CT PMO/PLD abre consulta externa sobre os requisitos funcion",
-      "ONS confirma acionamento do Plano de Gestão de Excedentes de",
-      "Operador apresenta novo processo de integração da geração",
-      "ONS: projeções de afluências seguem estáveis ao final de ago",
-      "ONS indica como média a probabilidade de acionamento do Plan"
-    ],
     "imobiliario-infraestrutura": [
-      "Decisão no STF em Ação Direta de Inconstitucionalidade (ADI "
-    ],
-    "propriedade-intelectual": [
-      "DECRETO Nº 13.104, DE 21 DE AGOSTO DE 2026"
+      "Decisão Plenária - ADI 7866",
+      "Pauta da 617ª Reunião Ordinária da Diretoria Colegiada está "
     ],
     "societario-ma": [
       "ANEEL anui transferência de Controle Societário Direto e Ind"
