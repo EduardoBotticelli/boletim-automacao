@@ -1,11 +1,14 @@
 """
 Radares Lobo de Rizzo - geracao automatica.
-Arquitetura: Firecrawl (coleta) -> Gemini (Filtro 2 tematico) -> JSON.
+Arquitetura: Firecrawl (coleta) -> cascata Gemini (Filtro 2) -> JSON.
 
-VERSAO 2026.08.2
+VERSAO 2026.08.3
 - Mantem os 9 slugs tecnicos existentes.
 - Filtro 1: fonte -> Radares permitidos pela matriz editorial.
 - Filtro 2: conteudo -> Radares sugeridos pelo Gemini.
+- Usa cascata de modelos Gemini com duas tentativas por modelo.
+- Preserva o ultimo boletim.json valido se todos os modelos falharem.
+- Grava boletim.json e log_execucao.json de forma atomica.
 - Controla o limite por minuto do Firecrawl e repete erros 429.
 - Normaliza listas de fontes devolvidas pelo Gemini como strings ou objetos.
 - Usa o SDK atual google-genai.
@@ -32,7 +35,17 @@ LOG_PATH = os.path.join(OUTPUT_DIR, "log_execucao.json")
 
 FIRECRAWL_API_KEY = os.environ.get("FIRECRAWL_API_KEY")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+
+CASCATA_MODELOS = [
+    "gemini-3.7-flash",
+    "gemini-3.6-flash",
+    "gemini-3.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-2.5-flash",
+]
+TENTATIVAS_POR_MODELO = 2
+ESPERAS_GEMINI_SEGUNDOS = [10, 30]
+
 MIN_CONTEUDO_CHARS = 500
 MAX_CONTEUDO_CHARS = 10000
 INTERVALO_ENTRE_SCRAPES_SEGUNDOS = 6.5
@@ -208,7 +221,6 @@ def normalizar_nome_fonte(nome):
 
 
 def normalizar_lista_objetos(valor, motivo_padrao):
-    """Aceita lista de objetos ou lista de strings devolvida pelo Gemini."""
     if not isinstance(valor, list):
         return []
     resultado = []
@@ -233,6 +245,21 @@ def eh_rate_limit(erro):
     return "rate limit" in texto or "429" in texto or "too many requests" in texto
 
 
+def erro_gemini_recuperavel(erro):
+    texto = str(erro).lower()
+    marcadores = [
+        "429", "500", "502", "503", "504", "unavailable", "high demand",
+        "resource_exhausted", "deadline_exceeded", "timeout", "temporarily",
+        "not found", "not_found", "model is not found", "model not found",
+        "not supported", "permission denied for model",
+    ]
+    return any(marcador in texto for marcador in marcadores)
+
+
+def resumir_erro(erro, limite=500):
+    return " ".join(str(erro).split())[:limite]
+
+
 def scrape_com_retry(firecrawl, url):
     ultimo_erro = None
     for tentativa in range(1, MAX_TENTATIVAS_SCRAPE + 1):
@@ -248,12 +275,82 @@ def scrape_com_retry(firecrawl, url):
                 raise
             print(
                 "      Limite do Firecrawl atingido. Nova tentativa "
-                + str(tentativa + 1)
-                + "/"
-                + str(MAX_TENTATIVAS_SCRAPE)
+                + str(tentativa + 1) + "/" + str(MAX_TENTATIVAS_SCRAPE)
             )
             time.sleep(ESPERA_RATE_LIMIT_SEGUNDOS)
     raise ultimo_erro
+
+
+def gerar_com_cascata(cliente, prompt_final):
+    tentativas_log = []
+    ultimo_erro = ""
+
+    for modelo in CASCATA_MODELOS:
+        for tentativa in range(1, TENTATIVAS_POR_MODELO + 1):
+            print(
+                "Gemini: modelo " + modelo
+                + " - tentativa " + str(tentativa)
+                + "/" + str(TENTATIVAS_POR_MODELO)
+            )
+            try:
+                resposta = cliente.models.generate_content(
+                    model=modelo,
+                    contents=prompt_final,
+                    config=types.GenerateContentConfig(
+                        temperature=0.2,
+                        response_mime_type="application/json",
+                    ),
+                )
+                texto = resposta.text or ""
+                if not texto.strip():
+                    raise RuntimeError("Resposta vazia do modelo")
+
+                json_teste = json.loads(texto)
+                if not isinstance(json_teste, dict):
+                    raise ValueError("Resposta JSON nao e um objeto")
+                if not isinstance(json_teste.get("itens"), list):
+                    raise ValueError("Resposta JSON nao contem lista valida em 'itens'")
+
+                tentativas_log.append({
+                    "modelo": modelo,
+                    "tentativa": tentativa,
+                    "status": "sucesso",
+                })
+                return texto, modelo, tentativas_log
+
+            except json.JSONDecodeError as erro:
+                ultimo_erro = resumir_erro(erro)
+                tentativas_log.append({
+                    "modelo": modelo,
+                    "tentativa": tentativa,
+                    "status": "json_invalido",
+                    "erro": ultimo_erro,
+                })
+                print("  JSON invalido: " + ultimo_erro)
+
+            except Exception as erro:
+                ultimo_erro = resumir_erro(erro)
+                recuperavel = erro_gemini_recuperavel(erro)
+                tentativas_log.append({
+                    "modelo": modelo,
+                    "tentativa": tentativa,
+                    "status": "erro",
+                    "recuperavel": recuperavel,
+                    "erro": ultimo_erro,
+                })
+                print("  Erro: " + ultimo_erro)
+                if not recuperavel:
+                    return "", "", tentativas_log
+
+            if tentativa < TENTATIVAS_POR_MODELO:
+                indice_espera = min(tentativa - 1, len(ESPERAS_GEMINI_SEGUNDOS) - 1)
+                espera = ESPERAS_GEMINI_SEGUNDOS[indice_espera]
+                print("  Aguardando " + str(espera) + " segundos antes de repetir...")
+                time.sleep(espera)
+
+        print("  Avancando para o proximo modelo da cascata...")
+
+    return "", "", tentativas_log
 
 
 def carregar_fontes(janela_inicio_dt, agora, hoje):
@@ -268,8 +365,7 @@ def carregar_fontes(janela_inicio_dt, agora, hoje):
     ]
     url_planalto = (
         "http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/"
-        + meses[hoje.month - 1]
-        + "-resenha-diaria"
+        + meses[hoje.month - 1] + "-resenha-diaria"
     )
     url_bcb = (
         "https://www.bcb.gov.br/estabilidadefinanceira/buscanormas?dataInicioBusca="
@@ -280,7 +376,6 @@ def carregar_fontes(janela_inicio_dt, agora, hoje):
         + "&dtFim=" + data_fim_url
         + "&structure=ccee-noticias&ordenacao=Mais%20recentes"
     )
-
     dinamicas = [
         {"fonte": "Planalto | Resenha Diaria", "categoria": "Legislacao Federal", "url": url_planalto, "ativo": True},
         {"fonte": "Banco Central | Normas", "categoria": "Financeiro e Mercado de Capitais", "url": url_bcb, "ativo": True},
@@ -292,6 +387,15 @@ def carregar_fontes(janela_inicio_dt, agora, hoje):
 def ordenar_slugs(slugs):
     conjunto = set(slugs)
     return [slug for slug in BOLETINS_DISPONIVEIS if slug in conjunto]
+
+
+def salvar_json_atomico(caminho, dados):
+    temporario = caminho + ".tmp"
+    with open(temporario, "w", encoding="utf-8") as arquivo:
+        json.dump(dados, arquivo, ensure_ascii=False, indent=2)
+        arquivo.flush()
+        os.fsync(arquivo.fileno())
+    os.replace(temporario, caminho)
 
 
 def main():
@@ -316,7 +420,6 @@ def main():
     fontes = carregar_fontes(janela_inicio_dt, agora, hoje)
     fontes_ativas = [fonte for fonte in fontes if fonte.get("ativo", True)]
     fontes_inativas = [fonte for fonte in fontes if not fonte.get("ativo", True)]
-
     print(str(len(fontes_ativas)) + " fontes ativas a processar")
     if fontes_inativas:
         print(
@@ -333,6 +436,7 @@ def main():
         "data_execucao": hoje.isoformat(),
         "executado_em": agora.isoformat(),
         "janela": {"inicio": janela_inicio, "fim": janela_fim},
+        "modelos_gemini_configurados": CASCATA_MODELOS,
         "fontes_processadas": [],
     }
 
@@ -354,7 +458,7 @@ def main():
                 log["fontes_processadas"].append({"fonte": nome, "status": "ok", "tamanho_chars": len(conteudo)})
                 print("      OK - " + str(len(conteudo)) + " chars")
         except Exception as erro:
-            mensagem = str(erro)[:300]
+            mensagem = resumir_erro(erro, 300)
             dossier.append({"fonte": nome, "categoria": categoria, "url": url, "conteudo": "", "erro_tecnico": mensagem})
             log["fontes_processadas"].append({"fonte": nome, "status": "erro", "erro": mensagem})
             print("      Erro: " + mensagem)
@@ -362,7 +466,7 @@ def main():
             if indice < len(fontes_ativas):
                 time.sleep(INTERVALO_ENTRE_SCRAPES_SEGUNDOS)
 
-    print("\nEnviando dossier para o Gemini...")
+    print("\nEnviando dossier para a cascata Gemini...")
     cliente = genai.Client(api_key=GEMINI_API_KEY)
     prompt_final = (
         prompt_base
@@ -374,54 +478,36 @@ def main():
         + json.dumps(dossier, ensure_ascii=False, indent=2)
     )
 
-    texto = ""
-    ultimo_erro = ""
-    for tentativa in range(1, 4):
-        try:
-            resposta = cliente.models.generate_content(
-                model=GEMINI_MODEL,
-                contents=prompt_final,
-                config=types.GenerateContentConfig(
-                    temperature=0.2,
-                    response_mime_type="application/json",
-                ),
-            )
-            texto = resposta.text or ""
-            break
-        except Exception as erro:
-            ultimo_erro = str(erro)
-            print("Erro no Gemini (tentativa " + str(tentativa) + "/3): " + ultimo_erro)
-            if tentativa < 3:
-                time.sleep(3 * tentativa)
-    cliente.close()
-
-    if not texto:
-        texto = json.dumps({
-            "data_execucao": hoje.isoformat(),
-            "erro": "Falha na consulta ao Gemini",
-            "detalhe_erro": ultimo_erro[:500],
-            "itens": [],
-            "fontes_sem_resultado": [],
-            "fontes_sem_publicacao_hoje": [],
-            "fontes_com_erro_tecnico": [],
-        }, ensure_ascii=False)
-
     try:
-        boletim_json = json.loads(texto)
-        print("Gemini retornou JSON valido")
-    except json.JSONDecodeError:
-        boletim_json = {
-            "data_execucao": hoje.isoformat(),
-            "erro": "JSON invalido retornado pelo Gemini",
-            "resposta_bruta": texto,
-            "itens": [],
-            "fontes_sem_resultado": [],
-            "fontes_sem_publicacao_hoje": [],
-            "fontes_com_erro_tecnico": [],
+        texto, modelo_utilizado, tentativas_gemini = gerar_com_cascata(cliente, prompt_final)
+    finally:
+        cliente.close()
+
+    log["tentativas_gemini"] = tentativas_gemini
+    if not texto:
+        log["resultado"] = {
+            "status": "falha_gemini",
+            "boletim_anterior_preservado": os.path.exists(OUTPUT_PATH),
         }
+        salvar_json_atomico(LOG_PATH, log)
+        print("ERRO: todos os modelos da cascata Gemini falharam.")
+        print("O boletim.json anterior foi preservado e nao sera sobrescrito.")
+        sys.exit(1)
+
+    boletim_json = json.loads(texto)
+    if not isinstance(boletim_json, dict) or not isinstance(boletim_json.get("itens"), list):
+        log["resultado"] = {
+            "status": "resposta_gemini_invalida",
+            "modelo": modelo_utilizado,
+            "boletim_anterior_preservado": os.path.exists(OUTPUT_PATH),
+        }
+        salvar_json_atomico(LOG_PATH, log)
+        print("ERRO: a resposta final do Gemini nao possui a estrutura minima esperada.")
+        sys.exit(1)
 
     boletim_json["data_execucao"] = hoje.isoformat()
     boletim_json["janela_aplicada"] = {"inicio": janela_inicio, "fim": janela_fim}
+    boletim_json["modelo_gemini_utilizado"] = modelo_utilizado
     boletim_json["fontes_sem_resultado"] = normalizar_lista_objetos(
         boletim_json.get("fontes_sem_resultado", []),
         "A pagina foi acessada, mas nao foi possivel identificar conteudo utilizavel.",
@@ -453,12 +539,9 @@ def main():
         if item["fonte"] not in erros_existentes:
             boletim_json["fontes_com_erro_tecnico"].append(item)
 
-    itens_originais = boletim_json.get("itens", [])
-    if not isinstance(itens_originais, list):
-        itens_originais = []
     itens_validados = []
     itens_descartados = []
-    for item in itens_originais:
+    for item in boletim_json["itens"]:
         if not isinstance(item, dict):
             continue
         data_str = str(item.get("data_publicacao", "")).strip()
@@ -501,9 +584,9 @@ def main():
         if not isinstance(rejeitados, list):
             rejeitados = []
         rejeitados = [r for r in rejeitados if isinstance(r, dict)]
-        rejeicoes_existentes = {r.get("boletim") for r in rejeitados}
+        existentes = {r.get("boletim") for r in rejeitados}
         for slug in ordenar_slugs(bloqueados):
-            if slug not in rejeicoes_existentes:
+            if slug not in existentes:
                 rejeitados.append({
                     "boletim": slug,
                     "motivo": "Filtro 1: fonte '" + fonte_original + "' nao esta mapeada para este Radar",
@@ -555,6 +638,8 @@ def main():
     }
 
     log["resultado"] = {
+        "status": "sucesso",
+        "modelo_gemini_utilizado": modelo_utilizado,
         "itens_aceitos": len(itens_validados),
         "itens_descartados_pos_validacao": len(itens_descartados),
         "fontes_ativas": len(fontes_ativas),
@@ -573,12 +658,11 @@ def main():
     if bloqueios_detalhe:
         log["filtro1_bloqueios_detalhe"] = bloqueios_detalhe
 
-    with open(OUTPUT_PATH, "w", encoding="utf-8") as arquivo:
-        json.dump(boletim_json, arquivo, ensure_ascii=False, indent=2)
-    with open(LOG_PATH, "w", encoding="utf-8") as arquivo:
-        json.dump(log, arquivo, ensure_ascii=False, indent=2)
+    salvar_json_atomico(OUTPUT_PATH, boletim_json)
+    salvar_json_atomico(LOG_PATH, log)
 
     print("\nRadar salvo em: " + OUTPUT_PATH)
+    print("  Modelo Gemini utilizado: " + modelo_utilizado)
     print("  Itens aceitos: " + str(len(itens_validados)))
     print("  Itens descartados: " + str(len(itens_descartados)))
     print("  Itens com bloqueio F1: " + str(itens_com_bloqueio))
