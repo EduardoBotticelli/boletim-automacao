@@ -2,14 +2,13 @@
 Radares Lobo de Rizzo - geracao automatica.
 Arquitetura: Firecrawl (coleta) -> Gemini (Filtro 2 tematico) -> JSON.
 
-VERSAO 2026.08
+VERSAO 2026.08.2
 - Mantem os 9 slugs tecnicos existentes.
-- Atualiza os nomes visiveis para Radar.
 - Filtro 1: fonte -> Radares permitidos pela matriz editorial.
 - Filtro 2: conteudo -> Radares sugeridos pelo Gemini.
-- Resultado final: intersecao entre Filtro 1 e Filtro 2.
-- Registra clusters, fontes pendentes, defeso e auditoria no boletim.json.
-- Fontes com "ativo": false no fontes.json sao puladas.
+- Controla o limite por minuto do Firecrawl e repete erros 429.
+- Normaliza listas de fontes devolvidas pelo Gemini como strings ou objetos.
+- Usa o SDK atual google-genai.
 """
 
 import datetime
@@ -21,8 +20,8 @@ from collections import Counter
 from zoneinfo import ZoneInfo
 
 from firecrawl import Firecrawl
-import google.generativeai as genai
-
+from google import genai
+from google.genai import types
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONTES_PATH = os.path.join(BASE_DIR, "fontes.json")
@@ -36,6 +35,9 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 MIN_CONTEUDO_CHARS = 500
 MAX_CONTEUDO_CHARS = 10000
+INTERVALO_ENTRE_SCRAPES_SEGUNDOS = 6.5
+MAX_TENTATIVAS_SCRAPE = 3
+ESPERA_RATE_LIMIT_SEGUNDOS = 65
 
 DESCRICAO_RADARES = (
     "Informativo com atualizacoes legislativas, regulamentacoes, "
@@ -84,9 +86,6 @@ FONTES_EM_DEFESO = [
     "Secretaria de Premios e Apostas | Noticias",
 ]
 
-# Fontes aprovadas editorialmente, mas ainda sem coleta tecnica implementada.
-# Elas ficam registradas no JSON, mas nao sao enviadas ao Firecrawl ate serem
-# adicionadas e testadas no fontes.json ou em um coletor especifico.
 FONTES_PENDENTES_INTEGRACAO = {
     "regulatorio-oleo-gas": [
         "CADE - Diario Oficial da Uniao (Secoes 1 e 3)",
@@ -103,71 +102,52 @@ FONTES_PENDENTES_INTEGRACAO = {
         "ANP - Pautas e atas de reunioes de diretoria",
         "Consulta Publica do MME",
         "Agencia Eixos",
-    ],
+    ]
 }
 
-# Filtro 1: matriz editorial das fontes que ja existem tecnicamente.
 FONTE_PARA_BOLETINS = {
     "Planalto | Resenha Diaria": BOLETINS_DISPONIVEIS.copy(),
     "Destaques do D.O.U.": [
-        "trabalhista-empresarial",
-        "direito-tributario",
-        "regulatorio-oleo-gas",
-        "contencioso-civel",
+        "trabalhista-empresarial", "direito-tributario",
+        "regulatorio-oleo-gas", "contencioso-civel",
     ],
     "Ministerio da Fazenda | Noticias": BOLETINS_DISPONIVEIS.copy(),
     "CGU | Noticias": ["trabalhista-empresarial", "regulatorio-oleo-gas"],
     "Receita Federal | Normas": ["direito-tributario"],
     "Banco Central | Normas": [
-        "direito-tributario",
-        "societario-ma",
-        "mercado-capitais-fundos",
+        "direito-tributario", "societario-ma", "mercado-capitais-fundos",
     ],
     "COAF | Noticias": ["direito-tributario", "mercado-capitais-fundos"],
     "CVM | Noticias": [
-        "mercado-capitais-fundos",
-        "regulatorio-oleo-gas",
+        "mercado-capitais-fundos", "regulatorio-oleo-gas",
         "imobiliario-infraestrutura",
     ],
     "B3 | Oficios e Comunicados": ["mercado-capitais-fundos"],
     "ANP | Noticias": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg",
+        "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg",
     ],
     "ANEEL | Ultimas Noticias": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg",
+        "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg",
     ],
     "ANM | Noticias": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg",
+        "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg",
     ],
     "ANVISA | Noticias": ["regulatorio-oleo-gas"],
     "SENACON | Noticias": [
-        "regulatorio-oleo-gas",
-        "propriedade-intelectual",
-        "contencioso-civel",
+        "regulatorio-oleo-gas", "propriedade-intelectual", "contencioso-civel",
     ],
     "Secretaria de Premios e Apostas | Noticias": [],
     "ONS | Noticias": ["imobiliario-infraestrutura", "ambiental-esg"],
     "CCEE | Noticias": ["imobiliario-infraestrutura", "ambiental-esg"],
     "EPE | Noticias": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg",
+        "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg",
     ],
     "MME | Noticias": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg",
+        "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg",
     ],
     "Ministerio do Meio Ambiente | Noticias": ["ambiental-esg"],
     "Ministerio da Agricultura | Noticias": [
-        "imobiliario-infraestrutura",
-        "ambiental-esg",
+        "imobiliario-infraestrutura", "ambiental-esg",
     ],
     "INPI | Noticias": ["propriedade-intelectual"],
     "ANPD | Noticias": ["propriedade-intelectual"],
@@ -183,14 +163,34 @@ FONTES_EMAIL_PENDENTES = {
     "mercado-capitais-fundos": ["Latin Lawyer"],
     "regulatorio-oleo-gas": ["Agencia iNFRA", "iNFRA Energia", "Agencia Eixos"],
     "imobiliario-infraestrutura": [
-        "Agencia iNFRA",
-        "iNFRA Energia",
-        "IRIB",
-        "Latin Lawyer",
+        "Agencia iNFRA", "iNFRA Energia", "IRIB", "Latin Lawyer",
     ],
     "ambiental-esg": ["RC Ambiental"],
     "propriedade-intelectual": [],
     "contencioso-civel": [],
+}
+
+ALIASES_FONTES = {
+    "Ministério da Fazenda | Notícias": "Ministerio da Fazenda | Noticias",
+    "CGU | Notícias": "CGU | Noticias",
+    "B3 | Ofícios e Comunicados": "B3 | Oficios e Comunicados",
+    "ANP | Notícias": "ANP | Noticias",
+    "ANEEL | Últimas Notícias": "ANEEL | Ultimas Noticias",
+    "ANM | Notícias": "ANM | Noticias",
+    "ANVISA | Notícias": "ANVISA | Noticias",
+    "SENACON | Notícias": "SENACON | Noticias",
+    "Secretaria de Prêmios e Apostas | Notícias": "Secretaria de Premios e Apostas | Noticias",
+    "ONS | Notícias": "ONS | Noticias",
+    "EPE | Notícias": "EPE | Noticias",
+    "MME | Notícias": "MME | Noticias",
+    "Ministério do Meio Ambiente | Notícias": "Ministerio do Meio Ambiente | Noticias",
+    "Ministério da Agricultura | Notícias": "Ministerio da Agricultura | Noticias",
+    "INPI | Notícias": "INPI | Noticias",
+    "ANPD | Notícias": "ANPD | Noticias",
+    "COAF | Notícias": "COAF | Noticias",
+    "CVM | Notícias": "CVM | Noticias",
+    "ANTAQ | Notícias": "ANTAQ | Noticias",
+    "CNPE | Comunicações": "CNPE | Comunicacoes",
 }
 
 
@@ -204,30 +204,56 @@ def exigir_secrets():
 
 
 def normalizar_nome_fonte(nome):
-    """Converte apenas variantes conhecidas para as chaves historicas do Filtro 1."""
-    aliases = {
-        "Ministério da Fazenda | Notícias": "Ministerio da Fazenda | Noticias",
-        "CGU | Notícias": "CGU | Noticias",
-        "B3 | Ofícios e Comunicados": "B3 | Oficios e Comunicados",
-        "ANP | Notícias": "ANP | Noticias",
-        "ANEEL | Últimas Notícias": "ANEEL | Ultimas Noticias",
-        "ANM | Notícias": "ANM | Noticias",
-        "ANVISA | Notícias": "ANVISA | Noticias",
-        "SENACON | Notícias": "SENACON | Noticias",
-        "Secretaria de Prêmios e Apostas | Notícias": "Secretaria de Premios e Apostas | Noticias",
-        "ONS | Notícias": "ONS | Noticias",
-        "EPE | Notícias": "EPE | Noticias",
-        "MME | Notícias": "MME | Noticias",
-        "Ministério do Meio Ambiente | Notícias": "Ministerio do Meio Ambiente | Noticias",
-        "Ministério da Agricultura | Notícias": "Ministerio da Agricultura | Noticias",
-        "INPI | Notícias": "INPI | Noticias",
-        "ANPD | Notícias": "ANPD | Noticias",
-        "COAF | Notícias": "COAF | Noticias",
-        "CVM | Notícias": "CVM | Noticias",
-        "ANTAQ | Notícias": "ANTAQ | Noticias",
-        "CNPE | Comunicações": "CNPE | Comunicacoes",
-    }
-    return aliases.get(nome, nome)
+    return ALIASES_FONTES.get(nome, nome)
+
+
+def normalizar_lista_objetos(valor, motivo_padrao):
+    """Aceita lista de objetos ou lista de strings devolvida pelo Gemini."""
+    if not isinstance(valor, list):
+        return []
+    resultado = []
+    vistos = set()
+    for item in valor:
+        if isinstance(item, dict):
+            fonte = str(item.get("fonte", "")).strip()
+            motivo = str(item.get("motivo", motivo_padrao)).strip() or motivo_padrao
+        elif isinstance(item, str):
+            fonte = item.strip()
+            motivo = motivo_padrao
+        else:
+            continue
+        if fonte and fonte not in vistos:
+            vistos.add(fonte)
+            resultado.append({"fonte": fonte, "motivo": motivo})
+    return resultado
+
+
+def eh_rate_limit(erro):
+    texto = str(erro).lower()
+    return "rate limit" in texto or "429" in texto or "too many requests" in texto
+
+
+def scrape_com_retry(firecrawl, url):
+    ultimo_erro = None
+    for tentativa in range(1, MAX_TENTATIVAS_SCRAPE + 1):
+        try:
+            return firecrawl.scrape(
+                url,
+                formats=["markdown"],
+                only_main_content=True,
+            )
+        except Exception as erro:
+            ultimo_erro = erro
+            if not eh_rate_limit(erro) or tentativa == MAX_TENTATIVAS_SCRAPE:
+                raise
+            print(
+                "      Limite do Firecrawl atingido. Nova tentativa "
+                + str(tentativa + 1)
+                + "/"
+                + str(MAX_TENTATIVAS_SCRAPE)
+            )
+            time.sleep(ESPERA_RATE_LIMIT_SEGUNDOS)
+    raise ultimo_erro
 
 
 def carregar_fontes(janela_inicio_dt, agora, hoje):
@@ -236,53 +262,31 @@ def carregar_fontes(janela_inicio_dt, agora, hoje):
 
     data_ini_url = janela_inicio_dt.strftime("%d/%m/%Y").replace("/", "%2F")
     data_fim_url = agora.strftime("%d/%m/%Y").replace("/", "%2F")
-
-    meses_planalto = [
+    meses = [
         "janeiro", "fevereiro", "marco", "abril", "maio", "junho",
         "julho", "agosto", "setembro", "outubro", "novembro", "dezembro",
     ]
-    mes_atual = meses_planalto[hoje.month - 1]
-
     url_planalto = (
         "http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/"
-        + mes_atual
+        + meses[hoje.month - 1]
         + "-resenha-diaria"
     )
     url_bcb = (
         "https://www.bcb.gov.br/estabilidadefinanceira/buscanormas?dataInicioBusca="
-        + data_ini_url
-        + "&dataFimBusca="
-        + data_fim_url
-        + "&tipoDocumento=Todos"
+        + data_ini_url + "&dataFimBusca=" + data_fim_url + "&tipoDocumento=Todos"
     )
     url_ccee = (
-        "https://www.ccee.org.br/busca-ccee?q=&dtIni="
-        + data_ini_url
-        + "&dtFim="
-        + data_fim_url
+        "https://www.ccee.org.br/busca-ccee?q=&dtIni=" + data_ini_url
+        + "&dtFim=" + data_fim_url
         + "&structure=ccee-noticias&ordenacao=Mais%20recentes"
     )
 
-    fontes.insert(0, {
-        "fonte": "Planalto | Resenha Diaria",
-        "categoria": "Legislacao Federal",
-        "url": url_planalto,
-        "ativo": True,
-    })
-    fontes.insert(1, {
-        "fonte": "Banco Central | Normas",
-        "categoria": "Financeiro e Mercado de Capitais",
-        "url": url_bcb,
-        "ativo": True,
-    })
-    fontes.insert(2, {
-        "fonte": "CCEE | Noticias",
-        "categoria": "Energia e Recursos",
-        "url": url_ccee,
-        "ativo": True,
-    })
-
-    return fontes
+    dinamicas = [
+        {"fonte": "Planalto | Resenha Diaria", "categoria": "Legislacao Federal", "url": url_planalto, "ativo": True},
+        {"fonte": "Banco Central | Normas", "categoria": "Financeiro e Mercado de Capitais", "url": url_bcb, "ativo": True},
+        {"fonte": "CCEE | Noticias", "categoria": "Energia e Recursos", "url": url_ccee, "ativo": True},
+    ]
+    return dinamicas + fontes
 
 
 def ordenar_slugs(slugs):
@@ -297,9 +301,7 @@ def main():
     brt = ZoneInfo("America/Sao_Paulo")
     agora = datetime.datetime.now(brt)
     hoje = agora.date()
-    dia_semana = hoje.weekday()
-
-    dias_retroativos = 3 if dia_semana == 0 else 1
+    dias_retroativos = 3 if hoje.weekday() == 0 else 1
     janela_inicio_dt = datetime.datetime.combine(
         hoje - datetime.timedelta(days=dias_retroativos),
         datetime.time(0, 0),
@@ -318,8 +320,7 @@ def main():
     print(str(len(fontes_ativas)) + " fontes ativas a processar")
     if fontes_inativas:
         print(
-            str(len(fontes_inativas))
-            + " fontes inativas: "
+            str(len(fontes_inativas)) + " fontes inativas: "
             + ", ".join(fonte["fonte"] for fonte in fontes_inativas)
         )
 
@@ -340,74 +341,29 @@ def main():
         url = fonte["url"]
         categoria = fonte["categoria"]
         print("  [" + str(indice) + "/" + str(len(fontes_ativas)) + "] " + nome)
-
         try:
-            resultado = firecrawl.scrape(
-                url,
-                formats=["markdown"],
-                only_main_content=True,
-            )
+            resultado = scrape_com_retry(firecrawl, url)
             conteudo = (resultado.markdown or "")[:MAX_CONTEUDO_CHARS]
-
             if len(conteudo) < MIN_CONTEUDO_CHARS:
-                detalhe = (
-                    "Conteudo muito curto ("
-                    + str(len(conteudo))
-                    + " chars) - pagina possivelmente vazia, fora do ar ou bloqueando scraping"
-                )
-                dossier.append({
-                    "fonte": nome,
-                    "categoria": categoria,
-                    "url": url,
-                    "conteudo": "",
-                    "erro_tecnico": detalhe,
-                })
-                log["fontes_processadas"].append({
-                    "fonte": nome,
-                    "status": "erro_tecnico",
-                    "tamanho_chars": len(conteudo),
-                    "detalhe": "conteudo abaixo do minimo",
-                })
+                detalhe = "Conteudo muito curto (" + str(len(conteudo)) + " chars)"
+                dossier.append({"fonte": nome, "categoria": categoria, "url": url, "conteudo": "", "erro_tecnico": detalhe})
+                log["fontes_processadas"].append({"fonte": nome, "status": "erro_tecnico", "tamanho_chars": len(conteudo), "detalhe": detalhe})
                 print("      " + detalhe)
             else:
-                dossier.append({
-                    "fonte": nome,
-                    "categoria": categoria,
-                    "url": url,
-                    "conteudo": conteudo,
-                })
-                log["fontes_processadas"].append({
-                    "fonte": nome,
-                    "status": "ok",
-                    "tamanho_chars": len(conteudo),
-                })
+                dossier.append({"fonte": nome, "categoria": categoria, "url": url, "conteudo": conteudo})
+                log["fontes_processadas"].append({"fonte": nome, "status": "ok", "tamanho_chars": len(conteudo)})
                 print("      OK - " + str(len(conteudo)) + " chars")
         except Exception as erro:
-            mensagem = str(erro)[:200]
-            dossier.append({
-                "fonte": nome,
-                "categoria": categoria,
-                "url": url,
-                "conteudo": "",
-                "erro_tecnico": mensagem,
-            })
-            log["fontes_processadas"].append({
-                "fonte": nome,
-                "status": "erro",
-                "erro": mensagem,
-            })
+            mensagem = str(erro)[:300]
+            dossier.append({"fonte": nome, "categoria": categoria, "url": url, "conteudo": "", "erro_tecnico": mensagem})
+            log["fontes_processadas"].append({"fonte": nome, "status": "erro", "erro": mensagem})
             print("      Erro: " + mensagem)
+        finally:
+            if indice < len(fontes_ativas):
+                time.sleep(INTERVALO_ENTRE_SCRAPES_SEGUNDOS)
 
     print("\nEnviando dossier para o Gemini...")
-    genai.configure(api_key=GEMINI_API_KEY)
-    modelo = genai.GenerativeModel(
-        GEMINI_MODEL,
-        generation_config={
-            "temperature": 0.2,
-            "response_mime_type": "application/json",
-        },
-    )
-
+    cliente = genai.Client(api_key=GEMINI_API_KEY)
     prompt_final = (
         prompt_base
         + "\n\n## Contexto desta execucao\n\n"
@@ -419,23 +375,31 @@ def main():
     )
 
     texto = ""
-    ultimo_erro_gemini = ""
+    ultimo_erro = ""
     for tentativa in range(1, 4):
         try:
-            resposta = modelo.generate_content(prompt_final)
-            texto = resposta.text
+            resposta = cliente.models.generate_content(
+                model=GEMINI_MODEL,
+                contents=prompt_final,
+                config=types.GenerateContentConfig(
+                    temperature=0.2,
+                    response_mime_type="application/json",
+                ),
+            )
+            texto = resposta.text or ""
             break
         except Exception as erro:
-            ultimo_erro_gemini = str(erro)
-            print("Erro no Gemini (tentativa " + str(tentativa) + "/3): " + ultimo_erro_gemini)
+            ultimo_erro = str(erro)
+            print("Erro no Gemini (tentativa " + str(tentativa) + "/3): " + ultimo_erro)
             if tentativa < 3:
                 time.sleep(3 * tentativa)
+    cliente.close()
 
     if not texto:
         texto = json.dumps({
             "data_execucao": hoje.isoformat(),
             "erro": "Falha na consulta ao Gemini",
-            "detalhe_erro": ultimo_erro_gemini[:500],
+            "detalhe_erro": ultimo_erro[:500],
             "itens": [],
             "fontes_sem_resultado": [],
             "fontes_sem_publicacao_hoje": [],
@@ -458,45 +422,40 @@ def main():
 
     boletim_json["data_execucao"] = hoje.isoformat()
     boletim_json["janela_aplicada"] = {"inicio": janela_inicio, "fim": janela_fim}
+    boletim_json["fontes_sem_resultado"] = normalizar_lista_objetos(
+        boletim_json.get("fontes_sem_resultado", []),
+        "A pagina foi acessada, mas nao foi possivel identificar conteudo utilizavel.",
+    )
+    boletim_json["fontes_sem_publicacao_hoje"] = normalizar_lista_objetos(
+        boletim_json.get("fontes_sem_publicacao_hoje", []),
+        "Nenhuma publicacao foi identificada dentro da janela.",
+    )
+    boletim_json["fontes_com_erro_tecnico"] = normalizar_lista_objetos(
+        boletim_json.get("fontes_com_erro_tecnico", []),
+        "Erro tecnico informado durante a coleta.",
+    )
 
-    for chave in [
-        "fontes_sem_resultado",
-        "fontes_sem_publicacao_hoje",
-        "fontes_com_erro_tecnico",
-    ]:
-        if not isinstance(boletim_json.get(chave), list):
-            boletim_json[chave] = []
-
-    fontes_com_erro_no_dossier = [
-        {
-            "fonte": item["fonte"],
-            "motivo": item.get("erro_tecnico", "erro tecnico"),
-        }
-        for item in dossier
-        if "erro_tecnico" in item
+    erros_dossier = [
+        {"fonte": item["fonte"], "motivo": item.get("erro_tecnico", "erro tecnico")}
+        for item in dossier if "erro_tecnico" in item
     ]
-    nomes_com_erro = {item["fonte"] for item in fontes_com_erro_no_dossier}
-
+    nomes_com_erro = {item["fonte"] for item in erros_dossier}
     boletim_json["fontes_sem_resultado"] = [
         item for item in boletim_json["fontes_sem_resultado"]
-        if item.get("fonte") not in nomes_com_erro
+        if item["fonte"] not in nomes_com_erro
     ]
     boletim_json["fontes_sem_publicacao_hoje"] = [
         item for item in boletim_json["fontes_sem_publicacao_hoje"]
-        if item.get("fonte") not in nomes_com_erro
+        if item["fonte"] not in nomes_com_erro
     ]
-
-    nomes_ja_em_erro = {
-        item.get("fonte") for item in boletim_json["fontes_com_erro_tecnico"]
-    }
-    for item in fontes_com_erro_no_dossier:
-        if item["fonte"] not in nomes_ja_em_erro:
+    erros_existentes = {item["fonte"] for item in boletim_json["fontes_com_erro_tecnico"]}
+    for item in erros_dossier:
+        if item["fonte"] not in erros_existentes:
             boletim_json["fontes_com_erro_tecnico"].append(item)
 
     itens_originais = boletim_json.get("itens", [])
     if not isinstance(itens_originais, list):
         itens_originais = []
-
     itens_validados = []
     itens_descartados = []
     for item in itens_originais:
@@ -511,69 +470,58 @@ def main():
             if janela_inicio_dt.date() <= data_item <= hoje:
                 itens_validados.append(item)
             else:
-                itens_descartados.append({
-                    "titulo": item.get("titulo", "")[:80],
-                    "data": data_str,
-                    "motivo": "fora da janela",
-                })
+                itens_descartados.append({"titulo": item.get("titulo", "")[:80], "data": data_str, "motivo": "fora da janela"})
         except (ValueError, TypeError):
             item["data_publicacao"] = ""
             itens_validados.append(item)
 
-    filtro1_bloqueios_detalhe = {}
-    itens_com_f1_bloqueio = 0
-    itens_com_qualquer_rejeicao = 0
-    palavras_chave_counter = Counter()
-    rejeicoes_por_boletim = Counter()
+    bloqueios_detalhe = {}
+    itens_com_bloqueio = 0
+    itens_com_rejeicao = 0
+    palavras_counter = Counter()
+    rejeicoes_counter = Counter()
 
     for item in itens_validados:
-        fonte_original = item.get("fonte", "")
+        fonte_original = str(item.get("fonte", ""))
         fonte_mapeamento = normalizar_nome_fonte(fonte_original)
         permitidos = set(FONTE_PARA_BOLETINS.get(fonte_mapeamento, []))
-        sugeridos = {
-            slug for slug in item.get("boletins_confirmados", [])
-            if slug in BOLETINS_DISPONIVEIS
-        }
-
+        confirmados = item.get("boletins_confirmados", [])
+        if not isinstance(confirmados, list):
+            confirmados = []
+        sugeridos = {slug for slug in confirmados if slug in BOLETINS_DISPONIVEIS}
         finais = ordenar_slugs(permitidos & sugeridos)
         bloqueados = sugeridos - permitidos
 
         if bloqueados:
-            itens_com_f1_bloqueio += 1
-            titulo_curto = item.get("titulo", "")[:60]
+            itens_com_bloqueio += 1
             for slug in ordenar_slugs(bloqueados):
-                filtro1_bloqueios_detalhe.setdefault(slug, []).append(titulo_curto)
+                bloqueios_detalhe.setdefault(slug, []).append(item.get("titulo", "")[:60])
 
-        if not isinstance(item.get("boletins_rejeitados"), list):
-            item["boletins_rejeitados"] = []
-        if not isinstance(item.get("palavras_chave_detectadas"), list):
-            item["palavras_chave_detectadas"] = []
-
-        rejeicoes_existentes = {
-            rejeicao.get("boletim")
-            for rejeicao in item["boletins_rejeitados"]
-            if isinstance(rejeicao, dict)
-        }
+        rejeitados = item.get("boletins_rejeitados", [])
+        if not isinstance(rejeitados, list):
+            rejeitados = []
+        rejeitados = [r for r in rejeitados if isinstance(r, dict)]
+        rejeicoes_existentes = {r.get("boletim") for r in rejeitados}
         for slug in ordenar_slugs(bloqueados):
             if slug not in rejeicoes_existentes:
-                item["boletins_rejeitados"].append({
+                rejeitados.append({
                     "boletim": slug,
-                    "motivo": (
-                        "Filtro 1: fonte '"
-                        + fonte_original
-                        + "' nao esta mapeada para este Radar"
-                    ),
+                    "motivo": "Filtro 1: fonte '" + fonte_original + "' nao esta mapeada para este Radar",
                 })
+        item["boletins_rejeitados"] = rejeitados
 
-        if item["boletins_rejeitados"]:
-            itens_com_qualquer_rejeicao += 1
-        for palavra in item["palavras_chave_detectadas"]:
+        palavras = item.get("palavras_chave_detectadas", [])
+        if not isinstance(palavras, list):
+            palavras = []
+        item["palavras_chave_detectadas"] = palavras
+        if rejeitados:
+            itens_com_rejeicao += 1
+        for palavra in palavras:
             if isinstance(palavra, str) and palavra.strip():
-                palavras_chave_counter[palavra.lower().strip()] += 1
-        for rejeicao in item["boletins_rejeitados"]:
-            if isinstance(rejeicao, dict) and rejeicao.get("boletim"):
-                rejeicoes_por_boletim[rejeicao["boletim"]] += 1
-
+                palavras_counter[palavra.lower().strip()] += 1
+        for rejeicao in rejeitados:
+            if rejeicao.get("boletim"):
+                rejeicoes_counter[rejeicao["boletim"]] += 1
         item["boletins"] = finais
 
     boletim_json["itens"] = itens_validados
@@ -588,25 +536,21 @@ def main():
         "fontes_em_defeso": FONTES_EM_DEFESO,
     }
 
-    stats_por_boletim = {}
+    stats = {}
     for slug in BOLETINS_DISPONIVEIS:
-        total = sum(1 for item in itens_validados if slug in item.get("boletins", []))
-        stats_por_boletim[slug] = {
+        stats[slug] = {
             "nome": NOMES_RADARES[slug],
             "clusters": CLUSTERS_POR_BOLETIM[slug],
-            "total": total,
+            "total": sum(1 for item in itens_validados if slug in item.get("boletins", [])),
         }
-    boletim_json["estatisticas_por_boletim"] = stats_por_boletim
-
-    top_palavras = palavras_chave_counter.most_common(20)
+    boletim_json["estatisticas_por_boletim"] = stats
     boletim_json["auditoria"] = {
         "total_itens": len(itens_validados),
-        "itens_com_alguma_rejeicao": itens_com_qualquer_rejeicao,
-        "itens_com_bloqueio_f1": itens_com_f1_bloqueio,
-        "rejeicoes_por_boletim": dict(rejeicoes_por_boletim),
+        "itens_com_alguma_rejeicao": itens_com_rejeicao,
+        "itens_com_bloqueio_f1": itens_com_bloqueio,
+        "rejeicoes_por_boletim": dict(rejeicoes_counter),
         "top_palavras_chave_detectadas": [
-            {"palavra": palavra, "ocorrencias": ocorrencias}
-            for palavra, ocorrencias in top_palavras
+            {"palavra": p, "ocorrencias": c} for p, c in palavras_counter.most_common(20)
         ],
     }
 
@@ -618,18 +562,16 @@ def main():
         "fontes_sem_resultado": len(boletim_json["fontes_sem_resultado"]),
         "fontes_sem_publicacao_hoje": len(boletim_json["fontes_sem_publicacao_hoje"]),
         "fontes_com_erro_tecnico": len(boletim_json["fontes_com_erro_tecnico"]),
-        "itens_por_boletim": stats_por_boletim,
-        "filtro1_bloqueios": {
-            slug: len(titulos) for slug, titulos in filtro1_bloqueios_detalhe.items()
-        },
+        "itens_por_boletim": stats,
+        "filtro1_bloqueios": {slug: len(titulos) for slug, titulos in bloqueios_detalhe.items()},
         "auditoria": boletim_json["auditoria"],
     }
     if fontes_inativas:
         log["fontes_inativas_defeso"] = [fonte["fonte"] for fonte in fontes_inativas]
     if itens_descartados:
         log["itens_descartados"] = itens_descartados
-    if filtro1_bloqueios_detalhe:
-        log["filtro1_bloqueios_detalhe"] = filtro1_bloqueios_detalhe
+    if bloqueios_detalhe:
+        log["filtro1_bloqueios_detalhe"] = bloqueios_detalhe
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as arquivo:
         json.dump(boletim_json, arquivo, ensure_ascii=False, indent=2)
@@ -639,16 +581,12 @@ def main():
     print("\nRadar salvo em: " + OUTPUT_PATH)
     print("  Itens aceitos: " + str(len(itens_validados)))
     print("  Itens descartados: " + str(len(itens_descartados)))
-    print("  Itens com bloqueio F1: " + str(itens_com_f1_bloqueio))
+    print("  Itens com bloqueio F1: " + str(itens_com_bloqueio))
     print("\nDistribuicao por Radar (F1 + F2):")
     for slug in BOLETINS_DISPONIVEIS:
-        total = stats_por_boletim[slug]["total"]
-        bloqueios = len(filtro1_bloqueios_detalhe.get(slug, []))
-        sufixo = ""
-        if bloqueios:
-            sufixo = " (F1 bloqueou " + str(bloqueios) + " sugestoes do F2)"
-        print("  " + NOMES_RADARES[slug] + ": " + str(total) + " itens" + sufixo)
-
+        bloqueios = len(bloqueios_detalhe.get(slug, []))
+        extra = "" if not bloqueios else " (F1 bloqueou " + str(bloqueios) + " sugestoes do F2)"
+        print("  " + NOMES_RADARES[slug] + ": " + str(stats[slug]["total"]) + " itens" + extra)
     print("Concluido")
 
 
