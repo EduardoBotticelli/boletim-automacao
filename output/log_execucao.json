@@ -1,9 +1,9 @@
 {
   "data_execucao": "2026-08-24",
-  "executado_em": "2026-08-24T17:50:29.998976-03:00",
+  "executado_em": "2026-08-24T18:58:13.111361-03:00",
   "janela": {
     "inicio": "2026-08-21T00:00",
-    "fim": "2026-08-24T17:50"
+    "fim": "2026-08-24T18:58"
   },
   "modelos_gemini_configurados": [
     "gemini-3.7-flash",
@@ -86,7 +86,7 @@
     {
       "fonte": "ANVISA | Notícias",
       "status": "ok",
-      "tamanho_chars": 1967
+      "tamanho_chars": 10000
     },
     {
       "fonte": "INPI | Notícias",
@@ -111,7 +111,7 @@
     {
       "fonte": "EPE | Notícias",
       "status": "ok",
-      "tamanho_chars": 9822
+      "tamanho_chars": 9882
     },
     {
       "fonte": "ANTAQ | Notícias",
@@ -133,32 +133,18 @@
     {
       "modelo": "gemini-3.7-flash",
       "tentativa": 1,
-      "status": "erro",
-      "recuperavel": true,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
-    },
-    {
-      "modelo": "gemini-3.7-flash",
-      "tentativa": 2,
-      "status": "erro",
-      "recuperavel": true,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
-    },
-    {
-      "modelo": "gemini-3.6-flash",
-      "tentativa": 1,
       "status": "sucesso"
     }
   ],
   "resultado": {
     "status": "sucesso",
-    "modelo_gemini_utilizado": "gemini-3.6-flash",
-    "itens_aceitos": 24,
+    "modelo_gemini_utilizado": "gemini-3.7-flash",
+    "itens_aceitos": 29,
     "itens_descartados_pos_validacao": 0,
     "fontes_ativas": 23,
     "fontes_inativas": 3,
-    "fontes_sem_resultado": 2,
-    "fontes_sem_publicacao_hoje": 5,
+    "fontes_sem_resultado": 1,
+    "fontes_sem_publicacao_hoje": 4,
     "fontes_com_erro_tecnico": 1,
     "itens_por_boletim": {
       "trabalhista-empresarial": {
@@ -175,7 +161,7 @@
           "Tributário Consultivo",
           "Tributário Contencioso"
         ],
-        "total": 3
+        "total": 4
       },
       "societario-ma": {
         "nome": "Radar Societário, Fusões e Aquisições",
@@ -184,7 +170,7 @@
           "Purple",
           "Due Diligence"
         ],
-        "total": 1
+        "total": 0
       },
       "mercado-capitais-fundos": {
         "nome": "Radar Mercado de Capitais e Fundos de Investimento",
@@ -192,7 +178,7 @@
           "Financeiro Green",
           "Fundos"
         ],
-        "total": 4
+        "total": 3
       },
       "regulatorio-oleo-gas": {
         "nome": "Radar Regulatório e Óleo e Gás",
@@ -200,7 +186,7 @@
           "Regulatório",
           "Óleo & Gás Blue"
         ],
-        "total": 5
+        "total": 13
       },
       "imobiliario-infraestrutura": {
         "nome": "Radar Negócios Imobiliários e Infraestrutura",
@@ -208,14 +194,14 @@
           "Imobiliário",
           "Infraestrutura"
         ],
-        "total": 5
+        "total": 7
       },
       "ambiental-esg": {
         "nome": "Radar Ambiental e ESG",
         "clusters": [
           "Ambiental"
         ],
-        "total": 2
+        "total": 3
       },
       "propriedade-intelectual": {
         "nome": "Radar Propriedade Intelectual, Tecnologia e Privacidade",
@@ -234,36 +220,53 @@
       }
     },
     "filtro1_bloqueios": {
+      "regulatorio-oleo-gas": 3,
       "imobiliario-infraestrutura": 2,
-      "societario-ma": 1
+      "societario-ma": 2,
+      "contencioso-civel": 1,
+      "mercado-capitais-fundos": 1,
+      "propriedade-intelectual": 1
     },
     "auditoria": {
-      "total_itens": 24,
-      "itens_com_alguma_rejeicao": 9,
-      "itens_com_bloqueio_f1": 3,
+      "total_itens": 29,
+      "itens_com_alguma_rejeicao": 15,
+      "itens_com_bloqueio_f1": 10,
       "rejeicoes_por_boletim": {
-        "societario-ma": 2,
         "direito-tributario": 2,
-        "regulatorio-oleo-gas": 1,
+        "societario-ma": 3,
+        "regulatorio-oleo-gas": 4,
         "imobiliario-infraestrutura": 2,
-        "contencioso-civel": 1,
-        "mercado-capitais-fundos": 1
+        "contencioso-civel": 2,
+        "mercado-capitais-fundos": 1,
+        "propriedade-intelectual": 1
       },
       "top_palavras_chave_detectadas": [
         {
-          "palavra": "anp",
+          "palavra": "aneel",
           "ocorrencias": 4
+        },
+        {
+          "palavra": "receita federal",
+          "ocorrencias": 3
+        },
+        {
+          "palavra": "anp",
+          "ocorrencias": 3
         },
         {
           "palavra": "mercosul",
           "ocorrencias": 2
         },
         {
-          "palavra": "stf",
+          "palavra": "decreto",
           "ocorrencias": 2
         },
         {
-          "palavra": "anpd",
+          "palavra": "setor elétrico",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "stf",
           "ocorrencias": 2
         },
         {
@@ -275,11 +278,35 @@
           "ocorrencias": 2
         },
         {
+          "palavra": "energia",
+          "ocorrencias": 2
+        },
+        {
           "palavra": "consulta pública",
           "ocorrencias": 2
         },
         {
-          "palavra": "aneel",
+          "palavra": "ons",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "geração",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "distribuição",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "anvisa",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "vigilância sanitária",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "epe",
           "ocorrencias": 2
         },
         {
@@ -291,43 +318,7 @@
           "ocorrencias": 1
         },
         {
-          "palavra": "iban",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "transferências internacionais",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "contas bancárias",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "sociedade de crédito direto",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "scd",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "controladores",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "consulta externa",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "modelo energético",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "setor elétrico",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "pld",
+          "palavra": "resolução bcb",
           "ocorrencias": 1
         }
       ]
@@ -339,12 +330,27 @@
     "Ministério do Meio Ambiente | Notícias"
   ],
   "filtro1_bloqueios_detalhe": {
+    "regulatorio-oleo-gas": [
+      "CT PMO/PLD abre consulta externa sobre os requisitos funcion",
+      "ONS aciona plano de gestão de excedentes pela segunda vez es",
+      "Operador apresenta novo processo de integração da geração"
+    ],
     "imobiliario-infraestrutura": [
-      "Decisão Plenária - ADI 7866",
-      "Pauta da 617ª Reunião Ordinária da Diretoria Colegiada está "
+      "STF - Decisões em Ação Direta de Inconstitucionalidade - ADI",
+      "Embarcações do consórcio vencedor da travessia Manaus–Careir"
     ],
     "societario-ma": [
+      "Sessão de Julgamento em 25/8",
       "ANEEL anui transferência de Controle Societário Direto e Ind"
+    ],
+    "contencioso-civel": [
+      "ANEEL nega pedido de prova pericial feito pela Enel Distribu"
+    ],
+    "mercado-capitais-fundos": [
+      "Senacon abre averiguações sobre atuação de Banrisul e Agiban"
+    ],
+    "propriedade-intelectual": [
+      "Data centers e energia pautam debates com a EPE no “Energia "
     ]
   }
 }
