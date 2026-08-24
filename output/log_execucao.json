@@ -1,10 +1,17 @@
 {
   "data_execucao": "2026-08-24",
-  "executado_em": "2026-08-24T13:53:29.965211-03:00",
+  "executado_em": "2026-08-24T14:16:56.644648-03:00",
   "janela": {
     "inicio": "2026-08-21T00:00",
-    "fim": "2026-08-24T13:53"
+    "fim": "2026-08-24T14:16"
   },
+  "modelos_gemini_configurados": [
+    "gemini-3.7-flash",
+    "gemini-3.6-flash",
+    "gemini-3.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-2.5-flash"
+  ],
   "fontes_processadas": [
     {
       "fonte": "Planalto | Resenha Diaria",
@@ -93,9 +100,8 @@
     },
     {
       "fonte": "COAF | Notícias",
-      "status": "erro_tecnico",
-      "tamanho_chars": 289,
-      "detalhe": "Conteudo muito curto (289 chars)"
+      "status": "ok",
+      "tamanho_chars": 893
     },
     {
       "fonte": "ANM | Notícias",
@@ -123,13 +129,36 @@
       "tamanho_chars": 4417
     }
   ],
+  "tentativas_gemini": [
+    {
+      "modelo": "gemini-3.7-flash",
+      "tentativa": 1,
+      "status": "erro",
+      "recuperavel": true,
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    },
+    {
+      "modelo": "gemini-3.7-flash",
+      "tentativa": 2,
+      "status": "erro",
+      "recuperavel": true,
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    },
+    {
+      "modelo": "gemini-3.6-flash",
+      "tentativa": 1,
+      "status": "sucesso"
+    }
+  ],
   "resultado": {
-    "itens_aceitos": 0,
+    "status": "sucesso",
+    "modelo_gemini_utilizado": "gemini-3.6-flash",
+    "itens_aceitos": 41,
     "itens_descartados_pos_validacao": 0,
     "fontes_ativas": 23,
     "fontes_inativas": 3,
-    "fontes_sem_resultado": 0,
-    "fontes_sem_publicacao_hoje": 0,
+    "fontes_sem_resultado": 1,
+    "fontes_sem_publicacao_hoje": 6,
     "fontes_com_erro_tecnico": 1,
     "itens_por_boletim": {
       "trabalhista-empresarial": {
@@ -138,7 +167,7 @@
           "Amber",
           "Pink"
         ],
-        "total": 0
+        "total": 1
       },
       "direito-tributario": {
         "nome": "Radar Tributario",
@@ -146,7 +175,7 @@
           "Tributario Consultivo",
           "Tributario Contencioso"
         ],
-        "total": 0
+        "total": 3
       },
       "societario-ma": {
         "nome": "Radar Societario, Fusoes e Aquisicoes",
@@ -163,7 +192,7 @@
           "Financeiro Green",
           "Fundos"
         ],
-        "total": 0
+        "total": 3
       },
       "regulatorio-oleo-gas": {
         "nome": "Radar Regulatorio e Oleo e Gas",
@@ -171,7 +200,7 @@
           "Regulatorio",
           "Oleo & Gas Blue"
         ],
-        "total": 0
+        "total": 15
       },
       "imobiliario-infraestrutura": {
         "nome": "Radar Negocios Imobiliarios e Infraestrutura",
@@ -179,21 +208,21 @@
           "Imobiliario",
           "Infraestrutura"
         ],
-        "total": 0
+        "total": 16
       },
       "ambiental-esg": {
         "nome": "Radar Ambiental e ESG",
         "clusters": [
           "Ambiental"
         ],
-        "total": 0
+        "total": 4
       },
       "propriedade-intelectual": {
         "nome": "Radar Propriedade Intelectual, Tecnologia e Privacidade",
         "clusters": [
           "Propriedade Intelectual"
         ],
-        "total": 0
+        "total": 3
       },
       "contencioso-civel": {
         "nome": "Radar Solucao de Conflitos",
@@ -201,21 +230,143 @@
           "Contencioso Carbon",
           "Contencioso Gold"
         ],
-        "total": 0
+        "total": 3
       }
     },
-    "filtro1_bloqueios": {},
+    "filtro1_bloqueios": {
+      "regulatorio-oleo-gas": 4,
+      "trabalhista-empresarial": 1,
+      "imobiliario-infraestrutura": 1,
+      "propriedade-intelectual": 2,
+      "societario-ma": 1,
+      "mercado-capitais-fundos": 1
+    },
     "auditoria": {
-      "total_itens": 0,
-      "itens_com_alguma_rejeicao": 0,
-      "itens_com_bloqueio_f1": 0,
-      "rejeicoes_por_boletim": {},
-      "top_palavras_chave_detectadas": []
+      "total_itens": 41,
+      "itens_com_alguma_rejeicao": 41,
+      "itens_com_bloqueio_f1": 10,
+      "rejeicoes_por_boletim": {
+        "direito-tributario": 9,
+        "societario-ma": 8,
+        "trabalhista-empresarial": 4,
+        "ambiental-esg": 7,
+        "regulatorio-oleo-gas": 9,
+        "mercado-capitais-fundos": 3,
+        "imobiliario-infraestrutura": 4,
+        "propriedade-intelectual": 3,
+        "contencioso-civel": 4
+      },
+      "top_palavras_chave_detectadas": [
+        {
+          "palavra": "aneel",
+          "ocorrencias": 7
+        },
+        {
+          "palavra": "energia elétrica",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "anp",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "ons",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "setor elétrico",
+          "ocorrencias": 3
+        },
+        {
+          "palavra": "excedentes de energia",
+          "ocorrencias": 3
+        },
+        {
+          "palavra": "tarifas",
+          "ocorrencias": 3
+        },
+        {
+          "palavra": "mercosul",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "pld",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "mercado",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "stf",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "receita federal",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "anpd",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "proteção de dados",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "petróleo",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "gás natural",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "combustíveis",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "consulta pública",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "sin",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "distribuição",
+          "ocorrencias": 2
+        }
+      ]
     }
   },
   "fontes_inativas_defeso": [
     "CGU | Notícias",
     "Secretaria de Prêmios e Apostas | Notícias",
     "Ministério do Meio Ambiente | Notícias"
-  ]
+  ],
+  "filtro1_bloqueios_detalhe": {
+    "regulatorio-oleo-gas": [
+      "CT PMO/PLD abre consulta externa sobre os requisitos funcion",
+      "No MinutoMega Talks, diretora Gerusa Côrtes destaca preparaç",
+      "ONS aciona plano de gestão de excedentes pela segunda vez es",
+      "Operador apresenta novo processo de integração da geração"
+    ],
+    "trabalhista-empresarial": [
+      "Últimos dias para se inscrever no 3º EncontroCCEE: Diversida"
+    ],
+    "imobiliario-infraestrutura": [
+      "Decisão no Plenário na Ação Direta de Inconstitucionalidade "
+    ],
+    "propriedade-intelectual": [
+      "ANP publica edital do Prêmio ANP de Inovação Tecnológica 202",
+      "Data centers e energia pautam debates com a EPE no “Energia "
+    ],
+    "societario-ma": [
+      "ANEEL anui transferência de Controle Societário Direto e Ind"
+    ],
+    "mercado-capitais-fundos": [
+      "Senacon abre averiguações sobre atuação de Banrisul e Agiban"
+    ]
+  }
 }

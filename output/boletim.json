@@ -1,20 +1,1193 @@
 {
   "data_execucao": "2026-08-24",
-  "erro": "Falha na consulta ao Gemini",
-  "detalhe_erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-  "itens": [],
-  "fontes_sem_resultado": [],
-  "fontes_sem_publicacao_hoje": [],
+  "itens": [
+    {
+      "fonte": "Planalto | Resenha Diaria",
+      "categoria": "Legislacao Federal",
+      "titulo": "Decreto nº 13.104, de 21 de agosto de 2026",
+      "data_publicacao": "2026-08-24",
+      "resumo": "Promulga o Acordo sobre Comércio Eletrônico do Mercosul, firmado pela República Federativa do Brasil em Montevidéu.",
+      "motivo_filtragem": "A publicação versa sobre a promulgação de acordo internacional voltado à regulamentação do comércio eletrônico no âmbito do Mercosul, enquadrando-se em aspectos de tecnologia e e-commerce.",
+      "palavras_chave_detectadas": [
+        "comércio eletrônico",
+        "Mercosul"
+      ],
+      "boletins_confirmados": [
+        "propriedade-intelectual"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "direito-tributario",
+          "motivo": "O ato não dispõe sobre alíquotas, tributação direta/indireta ou obrigações fiscais aduaneiras específicas."
+        }
+      ],
+      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13104.htm",
+      "boletins": [
+        "propriedade-intelectual"
+      ]
+    },
+    {
+      "fonte": "Planalto | Resenha Diaria",
+      "categoria": "Legislacao Federal",
+      "titulo": "Decreto nº 13.103, de 21 de agosto de 2026",
+      "data_publicacao": "2026-08-24",
+      "resumo": "Promulga a Emenda ao Protocolo de Montevidéu sobre o Comércio de Serviços do Mercosul, firmada pela República Federativa do Brasil em Bento Gonçalves.",
+      "motivo_filtragem": "Trata-se de ato executivo internacional para integração de normas sobre o comércio de serviços no bloco regional, sem impacto direto específico nas matérias dos Radares temáticos.",
+      "palavras_chave_detectadas": [
+        "comércio de serviços",
+        "Mercosul"
+      ],
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "societario-ma",
+          "motivo": "O texto cuida de regras internacionais de comércio de serviços sem regulamentar operações societárias ou de M&A."
+        }
+      ],
+      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13103.htm",
+      "boletins": []
+    },
+    {
+      "fonte": "Planalto | Resenha Diaria",
+      "categoria": "Legislacao Federal",
+      "titulo": "Decreto nº 13.102, de 21 de agosto de 2026",
+      "data_publicacao": "2026-08-24",
+      "resumo": "Transforma Funções Gratificadas Específicas de Instituição de Ensino e Cargos de Direção no âmbito do Poder Executivo federal.",
+      "motivo_filtragem": "Trata de reorganização administrativa interna de cargos e funções públicas, sem aderência às áreas de prática do contencioso ou consultoria empresarial dos Radares.",
+      "palavras_chave_detectadas": [
+        "cargos de direção",
+        "funções gratificadas"
+      ],
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "A matéria refere-se exclusivamente a cargos públicos estatutários e gestão interna da administração pública federal."
+        }
+      ],
+      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13102.htm",
+      "boletins": []
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Resolução BCB n° 585, 24/8/2026",
+      "data_publicacao": "2026-08-24",
+      "resumo": "Dispõe sobre o formato padrão para identificação de contas bancárias mantidas no Brasil para fins de transferências internacionais de fundos (formato IBAN) e regulamenta seu uso.",
+      "motivo_filtragem": "A norma estabelece requisitos regulatórios e operacionais para a padronização de contas bancárias em transferências financeiras internacionais no sistema bancário brasileiro.",
+      "palavras_chave_detectadas": [
+        "transferências internacionais",
+        "IBAN",
+        "contas bancárias",
+        "Resolução BCB"
+      ],
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "direito-tributario",
+          "motivo": "A norma disciplina aspecto operacional e regulatório do sistema bancário sem alterar regras tributárias de remessa ou IOF."
+        }
+      ],
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20BCB&numero=585",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado n° 45.801, 24/8/2026",
+      "data_publicacao": "2026-08-24",
+      "resumo": "Divulga pedido de cancelamento da autorização para funcionamento da Bullla Sociedade de Empréstimo entre Pessoas S.A.",
+      "motivo_filtragem": "Informa sobre procedimento regulatório de cancelamento de autorização de funcionamento de Sociedade de Empréstimo entre Pessoas (SEP), fintech do sistema financeiro.",
+      "palavras_chave_detectadas": [
+        "Sociedade de Empréstimo entre Pessoas",
+        "SEP",
+        "autorização para funcionamento"
+      ],
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "societario-ma",
+          "motivo": "Refere-se a ato regulatório cadastral perante o Banco Central, sem detalhamento de operação de M&A ou liquidação societária."
+        }
+      ],
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45801",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "CCEE | Noticias",
+      "categoria": "Energia e Recursos",
+      "titulo": "CT PMO/PLD abre consulta externa sobre os requisitos funcionais do novo modelo energético do setor",
+      "data_publicacao": "2026-08-24",
+      "resumo": "Abertura de consulta externa pelo CT PMO/PLD para recebimento de contribuições sobre os requisitos funcionais do novo modelo energético do setor elétrico até 8 de outubro de 2026.",
+      "motivo_filtragem": "A notícia abrange a consulta pública regulatória sobre a modelagem computacional e energética do setor elétrico e formação do PLD.",
+      "palavras_chave_detectadas": [
+        "PLD",
+        "modelo energético",
+        "consulta externa",
+        "setor elétrico"
+      ],
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Trata de aspectos técnicos de modelagem de preço e despacho energético, não focando em critérios de licenciamento ou sustentabilidade."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Filtro 1: fonte 'CCEE | Noticias' nao esta mapeada para este Radar"
+        }
+      ],
+      "url": "https://www.ccee.org.br/-/ct-pmo-pld-abre-consulta-externa-sobre-os-requisitos-funcionais-do-novo-modelo-energetico-do-setor-eletrico",
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "CCEE | Noticias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Últimos dias para se inscrever no 3º EncontroCCEE: Diversidade & Inclusão no Setor Elétrico",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Divulgação do prazo final de inscrições para evento voltado a debater iniciativas de diversidade, inclusão e equidade no setor elétrico.",
+      "motivo_filtragem": "O evento aborda políticas corporativas de governança social, diversidade e inclusão nas empresas e no setor de energia.",
+      "palavras_chave_detectadas": [
+        "diversidade",
+        "inclusão",
+        "setor elétrico"
+      ],
+      "boletins_confirmados": [
+        "ambiental-esg",
+        "trabalhista-empresarial"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Trata-se de agenda institucional/social sobre D&I, sem conteúdo de regulação técnica ou outorgas setoriais."
+        },
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Filtro 1: fonte 'CCEE | Noticias' nao esta mapeada para este Radar"
+        }
+      ],
+      "url": "https://www.ccee.org.br/-/ultimos-dias-para-se-inscrever-no-3-encontroccee-diversidade-inclusao-no-setor-eletrico",
+      "boletins": [
+        "ambiental-esg"
+      ]
+    },
+    {
+      "fonte": "CCEE | Noticias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Confira a apresentação e o vídeo do Encontro do PLD realizado em 19/08",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Disponibilização do material e gravações do Encontro do PLD, contendo análises sobre o comportamento dos preços de energia e projeções de mercado.",
+      "motivo_filtragem": "O conteúdo traz dados e apresentações técnicas sobre o Preço de Liquidação das Diferenças (PLD) e comercialização no mercado elétrico.",
+      "palavras_chave_detectadas": [
+        "PLD",
+        "preço de energia",
+        "mercado"
+      ],
+      "boletins_confirmados": [
+        "imobiliario-infraestrutura"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Embora envolva preços e liquidação de energia, a matéria refere-se à comercialização setorial e não a valores mobiliários regulados."
+        }
+      ],
+      "url": "https://www.ccee.org.br/-/confira-a-apresentacao-e-o-video-do-encontro-do-pld-realizado-em-19-08",
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "CCEE | Noticias",
+      "categoria": "Energia e Recursos",
+      "titulo": "No MinutoMega Talks, diretora Gerusa Côrtes destaca preparação para abertura integral do mercado",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Apresentação de medidas tecnológicas e plataformas comparativas de preços voltadas à transição para a abertura integral do mercado livre de energia.",
+      "motivo_filtragem": "A notícia aborda a estruturação regulatória e operacional da migração de consumidores para o Ambiente de Contratação Livre (ACL).",
+      "palavras_chave_detectadas": [
+        "abertura do mercado",
+        "mercado livre de energia",
+        "ACL"
+      ],
+      "boletins_confirmados": [
+        "imobiliario-infraestrutura",
+        "regulatorio-oleo-gas"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "societario-ma",
+          "motivo": "O foco é a abertura regulatória do mercado de energia aos consumidores, e não operações societárias entre agentes."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Filtro 1: fonte 'CCEE | Noticias' nao esta mapeada para este Radar"
+        }
+      ],
+      "url": "https://www.ccee.org.br/-/no-minutomega-talks-diretora-gerusa-cortes-destaca-preparacao-para-abertura-integral-do-mercado",
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "Decisão no Plenário na Ação Direta de Inconstitucionalidade nº 7.866",
+      "data_publicacao": "2026-08-24",
+      "resumo": "Publicação de decisão proferida pelo Plenário do Supremo Tribunal Federal na ADI 7866, movida pela Associação Brasileira de Distribuidores de Energia Elétrica (Abradee).",
+      "motivo_filtragem": "Envolve julgamento de Ação Direta de Inconstitucionalidade perante o STF abordando normas aplicáveis ao setor de distribuição de energia elétrica.",
+      "palavras_chave_detectadas": [
+        "Ação Direta de Inconstitucionalidade",
+        "ADI",
+        "STF",
+        "energia elétrica"
+      ],
+      "boletins_confirmados": [
+        "contencioso-civel",
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não há indicação no trecho de que o objeto constitucional da ação versa sobre matéria fiscal ou tributária."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Filtro 1: fonte 'Destaques do D.O.U.' nao esta mapeada para este Radar"
+        }
+      ],
+      "url": "https://www.in.gov.br/web/dou/-/decisoes-727238153",
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "contencioso-civel"
+      ]
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "Resolução Nº 1, de 19 de Agosto de 2026",
+      "data_publicacao": "2026-08-24",
+      "resumo": "Aprova o Plano de Aplicação dos Recursos do Conselho Interministerial do Plano Brasil Soberano nos termos da Lei nº 15.473/2026.",
+      "motivo_filtragem": "Ato normativo de alocação de recursos públicos orçamentários sem repercussão direta em regras empresariais ou regulatórias privadas.",
+      "palavras_chave_detectadas": [
+        "Resolução",
+        "Plano de Aplicação de Recursos"
+      ],
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Trata-se de destinação de recursos financeiros orçamentários interministeriais, não de norma de arrecadação ou tributos."
+        }
+      ],
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-n-1-de-19-de-agosto-de-2026-727247313",
+      "boletins": []
+    },
+    {
+      "fonte": "Ministério da Fazenda | Notícias",
+      "categoria": "Tributário",
+      "titulo": "Receita Federal abre consulta ao quarto lote de restituição do IRPF 2026 nesta segunda-feira (24/8)",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Divulgação do cronograma e abertura da consulta ao 4º lote de restituição do Imposto sobre a Renda da Pessoa Física (IRPF) de 2026.",
+      "motivo_filtragem": "Disponibilização de lote de restituição do Imposto de Renda pela Secretaria da Receita Federal do Brasil.",
+      "palavras_chave_detectadas": [
+        "Receita Federal",
+        "restituição",
+        "IRPF",
+        "Imposto de Renda"
+      ],
+      "boletins_confirmados": [
+        "direito-tributario"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Refere-se ao processamento de restituição fiscal individual do IRPF, sem envolver ofertas ou ativos financeiros regulados."
+        }
+      ],
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/agosto/receita-federal-abre-consulta-ao-quarto-lote-de-restituicao-do-irpf-2026-nesta-segunda-feira-24",
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "fonte": "Ministério da Fazenda | Notícias",
+      "categoria": "Tributário",
+      "titulo": "Ministério da Fazenda e Enap firmam parceria para impulsionar lideranças femininas no setor financeiro",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Assinatura de Acordo de Cooperação Técnica para apoiar capacitação da plataforma Women Leaders in Finance no setor público financeiro.",
+      "motivo_filtragem": "Iniciativa voltada a políticas corporativas de governança, diversidade, equidade de gênero e capacitação no setor financeiro público.",
+      "palavras_chave_detectadas": [
+        "lideranças femininas",
+        "ESG",
+        "setor financeiro"
+      ],
+      "boletins_confirmados": [
+        "trabalhista-empresarial",
+        "ambiental-esg"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Trata de acordo de cooperação educacional/institucional focado em gênero, sem matéria fiscal."
+        }
+      ],
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/agosto/ministerio-da-fazenda-e-enap-firmam-parceria-para-impulsionar-liderancas-femininas-no-setor-financeiro",
+      "boletins": [
+        "trabalhista-empresarial",
+        "ambiental-esg"
+      ]
+    },
+    {
+      "fonte": "Ministério da Fazenda | Notícias",
+      "categoria": "Tributário",
+      "titulo": "Sistema e-Editais é reconhecido como plataforma oficial de publicações da Receita Federal",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Edição de portaria que disciplina o uso do e-Editais como meio oficial de intimação e publicação eletrônica de atos da Receita Federal.",
+      "motivo_filtragem": "Regulamentação de procedimento de intimação eletrônica e publicação formal de atos no âmbito do processo administrativo tributário.",
+      "palavras_chave_detectadas": [
+        "Receita Federal",
+        "publicação eletrônica",
+        "e-Editais"
+      ],
+      "boletins_confirmados": [
+        "direito-tributario"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Embora envolva sistema eletrônico, a norma disciplina estritamente a validade dos atos formais de comunicação tributária."
+        }
+      ],
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/agosto/sistema-e-editais-e-reconhecido-como-plataforma-oficial-de-publicacoes-da-receita-federal",
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "fonte": "Ministério da Fazenda | Notícias",
+      "categoria": "Tributário",
+      "titulo": "Evento no STF debate consensualidade na solução de contenciosos tributários",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Lançamento de obra e debate no STF abordando instrumentos de consensualidade e transação para mitigar a judicialização de disputas tributárias.",
+      "motivo_filtragem": "Discute métodos de composição de litígios fiscais, transação tributária e meios alternativos de resolução de conflitos tributários judicializados.",
+      "palavras_chave_detectadas": [
+        "contencioso tributário",
+        "STF",
+        "consensualidade",
+        "Direito Tributário"
+      ],
+      "boletins_confirmados": [
+        "direito-tributario",
+        "contencioso-civel"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "societario-ma",
+          "motivo": "O foco é a resolução de litígios com o Fisco, não abrangendo arbitragem ou contencioso entre sócios/empresas privadas."
+        }
+      ],
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/agosto/evento-no-stf-debate-consensualidade-na-solucao-de-contenciosos-tributarios",
+      "boletins": [
+        "direito-tributario",
+        "contencioso-civel"
+      ]
+    },
+    {
+      "fonte": "ANPD | Notícias",
+      "categoria": "Regulatório e Setorial",
+      "titulo": "ANPD avalia como plataformas digitais atuam para prevenir conteúdos criminosos e proteger crianças e mulheres na internet",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Agência Nacional de Proteção de Dados inicia monitoramento de plataformas digitais para fiscalizar a conformidade com o Marco Civil da Internet e o ECA Digital.",
+      "motivo_filtragem": "Ação fiscalizatória da ANPD sobre governança de plataformas digitais, proteção de dados e atendimento a diretrizes do Marco Civil da Internet e ECA Digital.",
+      "palavras_chave_detectadas": [
+        "ANPD",
+        "plataformas digitais",
+        "Marco Civil da Internet",
+        "ECA Digital",
+        "proteção de dados"
+      ],
+      "boletins_confirmados": [
+        "propriedade-intelectual"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Trata-se de atividade de monitoramento regulatório administrativo da ANPD, sem processo judicial ou arbitral em curso."
+        }
+      ],
+      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-avalia-como-plataformas-digitais-atuam-para-prevenir-conteudos-criminosos-e-proteger-criancas-e-mulheres-na-internet",
+      "boletins": [
+        "propriedade-intelectual"
+      ]
+    },
+    {
+      "fonte": "ANPD | Notícias",
+      "categoria": "Regulatório e Setorial",
+      "titulo": "ANPD e PNUD divulgam resultado da seleção de consultores que vão elaborar estudos sobre IA e proteção de dados",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Divulgação do resultado do processo seletivo promovido pela ANPD e PNUD para elaboração de pesquisas aplicadas sobre inteligência artificial e privacidade.",
+      "motivo_filtragem": "Elaboração de estudos regulatórios específicos sobre os impactos da Inteligência Artificial na proteção de dados pessoais.",
+      "palavras_chave_detectadas": [
+        "ANPD",
+        "inteligência artificial",
+        "proteção de dados"
+      ],
+      "boletins_confirmados": [
+        "propriedade-intelectual"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Estudos focam na regulação geral da IA e dados pessoais, sem vertente trabalhista de treinamento ou contratação de pessoal."
+        }
+      ],
+      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-resultado-da-selecao-para-consultores-que-vao-elaborar-relatorios-em-protecao-de-dados",
+      "boletins": [
+        "propriedade-intelectual"
+      ]
+    },
+    {
+      "fonte": "CVM | Notícias",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Área técnica da CVM confirma ampliação da lista de mercados admitidos em parcerias com intermediários estrangeiros",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Ofício Circular da Superintendência de Relações com o Mercado e Intermediários (SMI) autoriza acesso de corretoras a bolsas internacionais como CME, CBOT, NYMEX e COMEX via parcerias.",
+      "motivo_filtragem": "Orientação oficial da CVM sobre atuação de intermediários do mercado de valores mobiliários em contratos e bolsas no exterior.",
+      "palavras_chave_detectadas": [
+        "CVM",
+        "Ofício Circular",
+        "intermediários",
+        "valores mobiliários",
+        "mercados admitidos"
+      ],
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "societario-ma",
+          "motivo": "Refere-se à regulação de intermediação e parcerias em mercados futuros/commodities no exterior, sem envolver controle societário."
+        }
+      ],
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/area-tecnica-da-cvm-confirma-ampliacao-da-lista-de-mercados-admitidos-em-parcerias-com-intermediarios-estrangeiros",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "ANP | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ANP publica edital do Prêmio ANP de Inovação Tecnológica 2026",
+      "data_publicacao": "2026-08-24",
+      "resumo": "Lançamento do edital do Prêmio ANP de Inovação Tecnológica 2026 para reconhecer projetos de pesquisa, desenvolvimento e inovação no setor de petróleo, gás e biocombustíveis.",
+      "motivo_filtragem": "Iniciativa do regulador setorial que estimula a pesquisa, desenvolvimento (PD&I) e inovação tecnológica na cadeia de óleo, gás e energias renováveis.",
+      "palavras_chave_detectadas": [
+        "ANP",
+        "inovação tecnológica",
+        "PD&I",
+        "petróleo",
+        "gás natural"
+      ],
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "propriedade-intelectual"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Trata-se de prêmio acadêmico e de inovação setorial ampla, sem foco exclusivo em transição ou licenciamento ambiental."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Filtro 1: fonte 'ANP | Notícias' nao esta mapeada para este Radar"
+        }
+      ],
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-publica-edital-do-premio-anp-de-inovacao-tecnologica-2026",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "ANP | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Diretoria da ANP aprova reestruturação organizacional em etapas a partir de setembro",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Aprovação de mudanças na estrutura interna da ANP com foco em aprimorar a regulação do gás natural, segurança operacional e licitações de E&P.",
+      "motivo_filtragem": "Reestruturação administrativa do órgão regulador para otimizar processos de outorga, fiscalização de E&P e mercado de gás natural.",
+      "palavras_chave_detectadas": [
+        "ANP",
+        "gás natural",
+        "E&P",
+        "licitações",
+        "segurança operacional"
+      ],
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Refere-se ao arranjo interno das superintendências do regulador federal do petróleo, não a ativos ou licitações imobiliárias/obras."
+        }
+      ],
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/diretoria-da-anp-aprova-reestruturacao-organizacional-em-etapas-a-partir-de-setembro",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "ANP | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Entre os dias 17 e 21/8, a ANP realizou 155 ações de fiscalização com foco em preços abusivos",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Divulgação do balanço semanal de ações de fiscalização em agentes de distribuição e revenda de combustíveis no país.",
+      "motivo_filtragem": "Operação de fiscalização regulatória da ANP sobre os mercados downstream de distribuição e comercialização de combustíveis.",
+      "palavras_chave_detectadas": [
+        "ANP",
+        "fiscalização",
+        "combustíveis",
+        "distribuidores"
+      ],
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Apresenta relatório sumário de fiscalização em campo, sem instauração discriminada de processos sancionatórios ou ações judiciais."
+        }
+      ],
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/entre-os-dias-17-e-21-8-a-anp-realizou-155-acoes-de-fiscalizacao-com-foco-em-precos-abusivos",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "ANP | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ANP realiza workshop sobre mercados de carbono e instrumentos de descarbonização no setor de energia",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Realização de workshop pela ANP focado na integração de instrumentos de descarbonização e mercado de carbono no setor de energia e combustíveis.",
+      "motivo_filtragem": "Debate regulatório promovido pela ANP referente a metas ambientais, créditos de carbono e descarbonização da matriz energética.",
+      "palavras_chave_detectadas": [
+        "ANP",
+        "mercado de carbono",
+        "descarbonização",
+        "setor de energia"
+      ],
+      "boletins_confirmados": [
+        "ambiental-esg",
+        "regulatorio-oleo-gas"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "direito-tributario",
+          "motivo": "O workshop trata da regulação do mercado de carbono e sustentabilidade, sem abordar tributação ambiental ou taxas específicas."
+        }
+      ],
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-realiza-workshop-sobre-mercados-de-carbono-e-instrumentos-de-descarbonizacao-no-setor-de-energia",
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "ambiental-esg"
+      ]
+    },
+    {
+      "fonte": "ANP | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ANP fará consulta e audiência públicas sobre monitoramento da mistura obrigatória de biodiesel",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Abertura de consulta pública para avaliar minuta de resolução referente ao monitoramento do cumprimento das metas de adição de biodiesel à gasolina/diesel.",
+      "motivo_filtragem": "Processo regulatório participativo da ANP focado na especificação e fiscalização da cadeia de biocombustíveis.",
+      "palavras_chave_detectadas": [
+        "ANP",
+        "consulta pública",
+        "biodiesel",
+        "biocombustíveis"
+      ],
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Refere-se a aspecto específico de monitoramento cadastral e fiscalizador da mistura de combustíveis pelo órgão setorial."
+        }
+      ],
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-fara-consulta-e-audiencia-publicas-sobre-monitoramento-da-mistura-obrigatoria-de-biodiesel",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "ONS | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ONS aciona plano de gestão de excedentes pela segunda vez este ano",
+      "data_publicacao": "2026-08-24",
+      "resumo": "Adoção pelo ONS de plano de gestão operativa para tratar excesso de geração frente a patamares reduzidos de carga no Sistema Interligado Nacional.",
+      "motivo_filtragem": "Ação operacional e regulatória sobre a gestão de infraestrutura de transmissão e geração de energia elétrica no país.",
+      "palavras_chave_detectadas": [
+        "ONS",
+        "SIN",
+        "excedentes de energia",
+        "sistema elétrico"
+      ],
+      "boletins_confirmados": [
+        "imobiliario-infraestrutura",
+        "regulatorio-oleo-gas"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Mecanismo técnico estritamente focado no equilíbrio carga-geração da rede elétrica nacional."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Filtro 1: fonte 'ONS | Notícias' nao esta mapeada para este Radar"
+        }
+      ],
+      "url": "https://www.ons.org.br/paginas/noticias/details.aspx?i=13156",
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "ONS | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ONS confirma acionamento do Plano de Gestão de Excedentes de Energia na Rede de Distribuição no domingo, 23 de agosto",
+      "data_publicacao": "2026-08-22",
+      "resumo": "Comunicado aos agentes do setor confirmando a execução de procedimentos de segurança operacional na rede de distribuição de energia.",
+      "motivo_filtragem": "Implementação prática de regras operacionais de infraestrutura no setor elétrico interligado.",
+      "palavras_chave_detectadas": [
+        "ONS",
+        "rede de distribuição",
+        "excedentes de energia"
+      ],
+      "boletins_confirmados": [
+        "imobiliario-infraestrutura"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Aviso operacional de curta duração dirigido aos agentes, sem alteração de norma regulatória permanente."
+        }
+      ],
+      "url": "https://www.ons.org.br/paginas/noticias/details.aspx?i=13152",
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "ONS | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Operador apresenta novo processo de integração da geração",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Divulgação de webinar do ONS detalhando as alterações nos Procedimentos de Rede aprovadas pela ANEEL para conexão de usinas geradoras.",
+      "motivo_filtragem": "Apresentação de alterações regulatórias e técnicas dos Procedimentos de Rede da ANEEL/ONS para novos empreendimentos de geração de energia.",
+      "palavras_chave_detectadas": [
+        "ONS",
+        "Procedimentos de Rede",
+        "ANEEL",
+        "geração",
+        "integração"
+      ],
+      "boletins_confirmados": [
+        "imobiliario-infraestrutura",
+        "regulatorio-oleo-gas"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "societario-ma",
+          "motivo": "A matéria versa sobre acesso e integração física à rede elétrica de transmissão, não sobre estrutura corporativa das usinas."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Filtro 1: fonte 'ONS | Notícias' nao esta mapeada para este Radar"
+        }
+      ],
+      "url": "https://www.ons.org.br/paginas/noticias/details.aspx?i=13149",
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "ONS | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ONS: projeções de afluências seguem estáveis ao final de agosto",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Publicação do relatório semanal do ONS contendo projeções de Energia Natural Afluente (ENA) e níveis de reservatórios no país.",
+      "motivo_filtragem": "Acompanhamento de dados operacionais e de suprimento hídrico para o setor de energia elétrica.",
+      "palavras_chave_detectadas": [
+        "ONS",
+        "ENA",
+        "afluências",
+        "setor elétrico"
+      ],
+      "boletins_confirmados": [
+        "imobiliario-infraestrutura"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Consiste em relatório estatístico mensal de suporte à operação da infraestrutura hídrica/energética."
+        }
+      ],
+      "url": "https://www.ons.org.br/paginas/noticias/details.aspx?i=13147",
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "ONS | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ONS indica como média a probabilidade de acionamento do Plano de Gestão de Excedentes de Energia em 23 de agosto de 2026",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Informativo técnico prévio aos agentes sobre as condições probabilísticas de corte ou controle de excedentes de geração no SIN.",
+      "motivo_filtragem": "Gestão preventiva da infraestrutura de transmissão e geração de energia elétrica do Sistema Interligado.",
+      "palavras_chave_detectadas": [
+        "ONS",
+        "SIN",
+        "excedentes de energia"
+      ],
+      "boletins_confirmados": [
+        "imobiliario-infraestrutura"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Comunicação técnica de monitoramento pontual sem introdução de novas diretrizes normativas."
+        }
+      ],
+      "url": "https://www.ons.org.br/paginas/noticias/details.aspx?i=13144",
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "ANEEL | Últimas Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Pacto Energia tem novas tarifas de energia elétrica aprovadas pela ANEEL",
+      "data_publicacao": "2026-08-24",
+      "resumo": "Aprovação pela ANEEL de reajuste tarifário aplicável aos consumidores atendidos pela distribuidora Pacto Energia.",
+      "motivo_filtragem": "Decisão regulatória sobre homologação de tarifas no segmento de distribuição de energia elétrica.",
+      "palavras_chave_detectadas": [
+        "ANEEL",
+        "tarifas",
+        "energia elétrica",
+        "distribuição"
+      ],
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Refere-se ao reajuste da tarifa regulada da concessionária de energia, não a tributos como ICMS incidentes na fatura."
+        }
+      ],
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/pacto-energia-tem-novas-tarifas-de-energia-eletrica-aprovadas-pela-aneel",
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "ANEEL | Últimas Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Aprovada consulta pública para debater revisão tarifária da CEEE-D",
+      "data_publicacao": "2026-08-24",
+      "resumo": "Abertura de consulta pública pela ANEEL para receber contribuições sobre a revisão tarifária periódica da CEEE-D.",
+      "motivo_filtragem": "Processo regulatório e consulta pública referente a equilíbrio econômico-financeiro e tarifas de concessionária de distribuição de energia.",
+      "palavras_chave_detectadas": [
+        "ANEEL",
+        "consulta pública",
+        "revisão tarifária",
+        "energia elétrica"
+      ],
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Trata-se de procedimento administrativo de participação social conduzido pela agência reguladora."
+        }
+      ],
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aprovada-consulta-publica-para-debater-revisao-tarifariadaceee-d",
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "ANEEL | Últimas Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ANEEL aprova Reajuste Tarifário Anual da Equatorial Maranhão",
+      "data_publicacao": "2026-08-24",
+      "resumo": "Deliberação da Diretoria da ANEEL aprovando o reajuste tarifário anual da distribuidora Equatorial Maranhão.",
+      "motivo_filtragem": "Ato normativo de fixação tarifária de concessionária de serviço público de energia elétrica.",
+      "palavras_chave_detectadas": [
+        "ANEEL",
+        "reajuste tarifário",
+        "distribuição"
+      ],
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "direito-tributario",
+          "motivo": "A matéria versa sobre recomposição da tarifa regulada do setor elétrico."
+        }
+      ],
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-aprova-reajuste-tarifario-anual-da-equatorial-maranhao",
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "ANEEL | Últimas Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ANEEL aprova reajuste tarifário da Energisa Paraíba",
+      "data_publicacao": "2026-08-24",
+      "resumo": "Homologação dos novos valores tarifários aplicáveis aos serviços de distribuição da Energisa Paraíba.",
+      "motivo_filtragem": "Atualização tarifária periódica aprovada por agência reguladora setorial para concessão de infraestrutura.",
+      "palavras_chave_detectadas": [
+        "ANEEL",
+        "reajuste tarifário",
+        "tarifas"
+      ],
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "societario-ma",
+          "motivo": "Trata unicamente de reajuste periódico das tarifas do contrato de concessão."
+        }
+      ],
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-aprova-reajuste-tarifario-da-energisa-paraiba",
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "ANEEL | Últimas Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Aprovadas as novas tarifas da Neoenergia Elektro (SP/MS)",
+      "data_publicacao": "2026-08-24",
+      "resumo": "Definição pela ANEEL do reajuste de tarifas para os consumidores situados na área de cobertura da Neoenergia Elektro.",
+      "motivo_filtragem": "Reajuste ordinário da tarifa energética de distribuidora de energia elétrica em São Paulo e Mato Grosso do Sul.",
+      "palavras_chave_detectadas": [
+        "ANEEL",
+        "tarifas",
+        "energia elétrica"
+      ],
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Refere-se ao processo ordinário de reajuste de tarifas e custos do sistema de distribuição."
+        }
+      ],
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aprovadas-as-novas-tarifas-da-neoenergia-elektro-sp-ms",
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "ANEEL | Últimas Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ANEEL anui transferência de Controle Societário Direto e Indireto de concessionárias de serviço público de transmissão",
+      "data_publicacao": "2026-08-24",
+      "resumo": "Decisão da ANEEL concedendo anuência prévia para a mudança de controle societário direto e indireto em concessionárias de transmissão de energia.",
+      "motivo_filtragem": "Operação de M&A e alienação/troca de controle societário em concessionárias reguladas de infraestrutura de transmissão de energia elétrica.",
+      "palavras_chave_detectadas": [
+        "ANEEL",
+        "controle societário",
+        "transmissão",
+        "concessionárias",
+        "transferência de controle"
+      ],
+      "boletins_confirmados": [
+        "societario-ma",
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Operação consensual aprobatória pela via administrativa regulatória, sem indício de litígio entre sócios."
+        },
+        {
+          "boletim": "societario-ma",
+          "motivo": "Filtro 1: fonte 'ANEEL | Últimas Notícias' nao esta mapeada para este Radar"
+        }
+      ],
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-anui-transferencia-de-controle-societario-direto-e-indireto-de-concessionarias-de-servico-publico-de-transmissao",
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "Ministério da Agricultura | Notícias",
+      "categoria": "Regulatório e Setorial",
+      "titulo": "Ministro André de Paula participa do lançamento da revista Folha Energia em Pernambuco",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Divulgação da agenda institucional do ministro no lançamento de publicação editorial sobre energia em Recife.",
+      "motivo_filtragem": "Notícia meramente informativa sobre evento e participação em lançamento editorial, sem conteúdo normativo ou regulatório.",
+      "palavras_chave_detectadas": [
+        "agenda institucional"
+      ],
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "É uma cobertura de agenda política/social de lançamento de revista, sem alteração de regras do setor."
+        }
+      ],
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/ministro-andre-de-paula-participa-do-lancamento-da-revista-folha-energia-em-pernambuco",
+      "boletins": []
+    },
+    {
+      "fonte": "SENACON | Notícias",
+      "categoria": "Regulatório e Setorial",
+      "titulo": "Senacon abre averiguações sobre atuação de Banrisul e Agibank",
+      "data_publicacao": "2026-08-24",
+      "resumo": "Instauração de procedimentos administrativos pela Secretaria Nacional do Consumidor para apurar supostas irregularidades de bancos no atendimento a clientes.",
+      "motivo_filtragem": "Atuação fiscalizatória e punitiva de órgão de defesa do consumidor contra instituições financeiras perante o direito do consumidor.",
+      "palavras_chave_detectadas": [
+        "SENACON",
+        "procedimentos administrativos",
+        "defesa do consumidor",
+        "instituições financeiras"
+      ],
+      "boletins_confirmados": [
+        "contencioso-civel",
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Foco na relação de consumo e fiscalização bancária, sem envolver direito individual ou coletivo do trabalho."
+        },
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Filtro 1: fonte 'SENACON | Notícias' nao esta mapeada para este Radar"
+        }
+      ],
+      "url": "https://www.gov.br/mj/pt-br/assuntos/noticias-1/senacon-abre-averiguacoes-sobre-atuacao-de-banrisul-e-agibank",
+      "boletins": [
+        "contencioso-civel"
+      ]
+    },
+    {
+      "fonte": "ANM | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Mineração responsável exige regulação, diálogo e visão de longo prazo",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Debate promovido pela ANM em São Paulo sobre governança ambiental, sustentabilidade, CFEM e desafios da mineração no Brasil.",
+      "motivo_filtragem": "A notícia abrange as discussões de sustentabilidade, obrigações setoriais de mineração e repasses de royalties ambientais/CFEM.",
+      "palavras_chave_detectadas": [
+        "ANM",
+        "Mineração",
+        "CFEM",
+        "regulação"
+      ],
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "ambiental-esg",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Trata de CFEM (contraprestação financeira/royalty minerário), que possui natureza jurídica não tributária."
+        }
+      ],
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/mineracao-responsavel-exige-regulacao-dialogo-e-visao-de-longo-prazo",
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
+      ]
+    },
+    {
+      "fonte": "EPE | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "EPE publica Perspectivas para o Mercado Brasileiro de Combustíveis no Curto Prazo de agosto de 2026",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Divulgação do relatório de projeções de curto prazo para a demanda nacional de combustíveis líquidos e GLP nos anos de 2026 e 2027.",
+      "motivo_filtragem": "Estudo oficial da EPE mapeando os volumes de consumo e demanda nos segmentos de derivados de petróleo e combustíveis.",
+      "palavras_chave_detectadas": [
+        "EPE",
+        "combustíveis",
+        "GLP",
+        "petróleo",
+        "mercado"
+      ],
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Relatório estatístico focado em demanda de combustíveis derivados, sem foco em obras ou ativos imobiliários."
+        }
+      ],
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-perspectivas-para-o-mercado-brasileiro-de-combustiveis-no-curto-prazo-de-agosto-de-2026",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "EPE | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Equipe de Comunicação acompanhou encontros realizados no Rio de Janeiro, em São Paulo e em Belo Horizonte",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Relato da participação da equipe de comunicação da EPE em edições regionais de evento de comunicação corporativa.",
+      "motivo_filtragem": "Informe institucional sobre treinamento e presença de equipe de comunicação em eventos técnicos de mídia.",
+      "palavras_chave_detectadas": [
+        "comunicação",
+        "evento"
+      ],
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Nota estritamente institucional sem conteúdo de regulação ou planejamento energético."
+        }
+      ],
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/equipe-de-comunicacao-acompanhou-encontros-realizados-no-rio-de-janeiro-em-sao-paulo-e-em-belo-horizonte",
+      "boletins": []
+    },
+    {
+      "fonte": "EPE | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Data centers e energia pautam debates com a EPE no “Energia em Transformação” e seminário da FGV",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Participação da EPE em painéis para debater a expansão da demanda de energia elétrica por data centers no Brasil.",
+      "motivo_filtragem": "Debate sobre infraestrutura de data centers, consumo energético e capacidade de fornecimento do setor elétrico.",
+      "palavras_chave_detectadas": [
+        "EPE",
+        "data centers",
+        "energia elétrica",
+        "planejamento energético"
+      ],
+      "boletins_confirmados": [
+        "imobiliario-infraestrutura",
+        "propriedade-intelectual"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Embora a eficiência energética possa estar presente, o artigo trata de infraestrutura e suprimento de carga."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Filtro 1: fonte 'EPE | Notícias' nao esta mapeada para este Radar"
+        }
+      ],
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/data-centers-e-energia-pautam-debates-com-a-epe-no-energia-em-transformacao-e-seminario-da-fgv",
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "ANTAQ | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Pauta da 617ª Reunião Ordinária da Diretoria Colegiada está disponível",
+      "data_publicacao": "2026-08-21",
+      "resumo": "Disponibilização da pauta da 617ª Reunião Ordinária da Diretoria Colegiada da ANTAQ para julgamento de processos regulatórios do setor portuário e aquaviário.",
+      "motivo_filtragem": "Divulgação de pauta deliberativa do órgão regulador dos transportes aquaviários e portos.",
+      "palavras_chave_detectadas": [
+        "ANTAQ",
+        "Reunião Colegiada",
+        "outorga",
+        "Infraestrutura"
+      ],
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Divulgação administrativa preliminar da pauta de julgamento sem detalhamento dos projetos de infraestrutura específicos."
+        }
+      ],
+      "url": "https://www.gov.br/antaq/pt-br/noticias/2026/pauta-da-617a-reuniao-ordinaria-da-diretoria-colegiada-esta-disponivel",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    }
+  ],
+  "fontes_sem_publicacao_hoje": [
+    {
+      "fonte": "B3 | Ofícios e Comunicados",
+      "motivo": "Nenhuma publicacao foi identificada dentro da janela."
+    },
+    {
+      "fonte": "MME | Notícias",
+      "motivo": "Nenhuma publicacao foi identificada dentro da janela."
+    },
+    {
+      "fonte": "INPI | Notícias",
+      "motivo": "Nenhuma publicacao foi identificada dentro da janela."
+    },
+    {
+      "fonte": "ANVISA | Notícias",
+      "motivo": "Nenhuma publicacao foi identificada dentro da janela."
+    },
+    {
+      "fonte": "CNPE | Comunicações",
+      "motivo": "Nenhuma publicacao foi identificada dentro da janela."
+    },
+    {
+      "fonte": "Kollemata | Decretos",
+      "motivo": "Nenhuma publicacao foi identificada dentro da janela."
+    }
+  ],
+  "fontes_sem_resultado": [
+    {
+      "fonte": "Receita Federal | Normas",
+      "motivo": "A pagina foi acessada, mas nao foi possivel identificar conteudo utilizavel."
+    }
+  ],
   "fontes_com_erro_tecnico": [
     {
       "fonte": "COAF | Notícias",
-      "motivo": "Conteudo muito curto (289 chars)"
+      "motivo": "Erro tecnico informado durante a coleta."
     }
   ],
   "janela_aplicada": {
     "inicio": "2026-08-21T00:00",
-    "fim": "2026-08-24T13:53"
+    "fim": "2026-08-24T14:16"
   },
+  "modelo_gemini_utilizado": "gemini-3.6-flash",
   "boletins_config": {
     "descricao": "Informativo com atualizacoes legislativas, regulamentacoes, consultas publicas e publicacoes de orgaos reguladores.",
     "boletins_disponiveis": [
@@ -253,7 +1426,7 @@
         "Amber",
         "Pink"
       ],
-      "total": 0
+      "total": 1
     },
     "direito-tributario": {
       "nome": "Radar Tributario",
@@ -261,7 +1434,7 @@
         "Tributario Consultivo",
         "Tributario Contencioso"
       ],
-      "total": 0
+      "total": 3
     },
     "societario-ma": {
       "nome": "Radar Societario, Fusoes e Aquisicoes",
@@ -278,7 +1451,7 @@
         "Financeiro Green",
         "Fundos"
       ],
-      "total": 0
+      "total": 3
     },
     "regulatorio-oleo-gas": {
       "nome": "Radar Regulatorio e Oleo e Gas",
@@ -286,7 +1459,7 @@
         "Regulatorio",
         "Oleo & Gas Blue"
       ],
-      "total": 0
+      "total": 15
     },
     "imobiliario-infraestrutura": {
       "nome": "Radar Negocios Imobiliarios e Infraestrutura",
@@ -294,21 +1467,21 @@
         "Imobiliario",
         "Infraestrutura"
       ],
-      "total": 0
+      "total": 16
     },
     "ambiental-esg": {
       "nome": "Radar Ambiental e ESG",
       "clusters": [
         "Ambiental"
       ],
-      "total": 0
+      "total": 4
     },
     "propriedade-intelectual": {
       "nome": "Radar Propriedade Intelectual, Tecnologia e Privacidade",
       "clusters": [
         "Propriedade Intelectual"
       ],
-      "total": 0
+      "total": 3
     },
     "contencioso-civel": {
       "nome": "Radar Solucao de Conflitos",
@@ -316,14 +1489,105 @@
         "Contencioso Carbon",
         "Contencioso Gold"
       ],
-      "total": 0
+      "total": 3
     }
   },
   "auditoria": {
-    "total_itens": 0,
-    "itens_com_alguma_rejeicao": 0,
-    "itens_com_bloqueio_f1": 0,
-    "rejeicoes_por_boletim": {},
-    "top_palavras_chave_detectadas": []
+    "total_itens": 41,
+    "itens_com_alguma_rejeicao": 41,
+    "itens_com_bloqueio_f1": 10,
+    "rejeicoes_por_boletim": {
+      "direito-tributario": 9,
+      "societario-ma": 8,
+      "trabalhista-empresarial": 4,
+      "ambiental-esg": 7,
+      "regulatorio-oleo-gas": 9,
+      "mercado-capitais-fundos": 3,
+      "imobiliario-infraestrutura": 4,
+      "propriedade-intelectual": 3,
+      "contencioso-civel": 4
+    },
+    "top_palavras_chave_detectadas": [
+      {
+        "palavra": "aneel",
+        "ocorrencias": 7
+      },
+      {
+        "palavra": "energia elétrica",
+        "ocorrencias": 5
+      },
+      {
+        "palavra": "anp",
+        "ocorrencias": 5
+      },
+      {
+        "palavra": "ons",
+        "ocorrencias": 5
+      },
+      {
+        "palavra": "setor elétrico",
+        "ocorrencias": 3
+      },
+      {
+        "palavra": "excedentes de energia",
+        "ocorrencias": 3
+      },
+      {
+        "palavra": "tarifas",
+        "ocorrencias": 3
+      },
+      {
+        "palavra": "mercosul",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "pld",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "mercado",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "stf",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "receita federal",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "anpd",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "proteção de dados",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "petróleo",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "gás natural",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "combustíveis",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "consulta pública",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "sin",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "distribuição",
+        "ocorrencias": 2
+      }
+    ]
   }
 }
