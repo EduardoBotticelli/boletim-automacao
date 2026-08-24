@@ -1,48 +1,134 @@
-name: Gerar Boletim Jurídico
+name: Gerar Radares Jurídicos
 
 on:
-  workflow_dispatch:  # permite rodar manualmente
- # schedule:
- #  - cron: "0 11 * * 1-5"  # 08h BRT (11h UTC), seg a sex
+  workflow_dispatch:
+
+  # Para reativar a execução automática de segunda a sexta-feira,
+  # remova os comentários das linhas abaixo.
+  #
+  # schedule:
+  #   - cron: "0 11 * * 1-5"
 
 permissions:
   contents: write
 
+concurrency:
+  group: gerar-radares-juridicos
+  cancel-in-progress: false
+
 jobs:
-  gerar-boletim:
+  gerar-radares:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
 
     steps:
       - name: Checkout do repositório
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: "pip"
 
       - name: Instalar dependências
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Gerar boletim
+      - name: Validar sintaxe dos scripts
+        run: |
+          python -m py_compile scripts/gerar_boletim.py
+          python -m py_compile scripts/gerar_html.py
+
+      - name: Gerar curadoria dos Radares
         env:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: gemini-2.5-flash
-        run: python scripts/gerar_boletim.py
+        run: |
+          python scripts/gerar_boletim.py
 
-      - name: Gerar Word do boletim
-        run: python scripts/gerar_html.py
+      - name: Gerar páginas HTML de validação
+        run: |
+          python scripts/gerar_html.py
 
-      - name: Gerar auditoria HTML
-        run: python scripts/gerar_auditoria_html.py
+      - name: Verificar arquivos gerados
+        run: |
+          test -f output/boletim.json
+          test -f output/log_execucao.json
+
+          test -f output/validacao_trabalhista-empresarial.html
+          test -f output/validacao_direito-tributario.html
+          test -f output/validacao_societario-ma.html
+          test -f output/validacao_mercado-capitais-fundos.html
+          test -f output/validacao_regulatorio-oleo-gas.html
+          test -f output/validacao_imobiliario-infraestrutura.html
+          test -f output/validacao_ambiental-esg.html
+          test -f output/validacao_propriedade-intelectual.html
+          test -f output/validacao_contencioso-civel.html
+
+          echo "Arquivos da curadoria e da validação encontrados com sucesso."
+
+      - name: Exibir resumo da execução
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          boletim_path = Path("output/boletim.json")
+          boletim = json.loads(boletim_path.read_text(encoding="utf-8"))
+
+          modelo = boletim.get("modelo_gemini_utilizado", "não informado")
+          itens = boletim.get("itens", [])
+          estatisticas = boletim.get("estatisticas_por_boletim", {})
+
+          print("=" * 60)
+          print("RESUMO DA EXECUÇÃO")
+          print("=" * 60)
+          print(f"Modelo Gemini utilizado: {modelo}")
+          print(f"Total de itens processados: {len(itens)}")
+          print("")
+          print("Distribuição por Radar:")
+
+          for slug, dados in estatisticas.items():
+              if isinstance(dados, dict):
+                  nome = dados.get("nome", slug)
+                  total = dados.get("total", 0)
+              else:
+                  nome = slug
+                  total = dados
+
+              print(f"  {nome}: {total}")
+
+          print("=" * 60)
+          PY
+
+      - name: Disponibilizar arquivos como artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: radares-validacao-${{ github.run_number }}
+          if-no-files-found: error
+          retention-days: 14
+          path: |
+            output/boletim.json
+            output/log_execucao.json
+            output/validacao_*.html
 
       - name: Commit do resultado
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add output/
-          git diff --staged --quiet || git commit -m "📰 Atualiza boletim - $(date +'%Y-%m-%d')"
+
+          git add output/boletim.json
+          git add output/log_execucao.json
+          git add output/validacao_*.html
+
+          if git diff --staged --quiet; then
+            echo "Nenhuma alteração para registrar."
+            exit 0
+          fi
+
+          git commit -m "Atualiza curadoria dos Radares - $(date +'%Y-%m-%d')"
           git push
