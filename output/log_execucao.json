@@ -1,9 +1,9 @@
 {
-  "data_execucao": "2026-08-13",
-  "executado_em": "2026-08-13T14:39:34.763746-03:00",
+  "data_execucao": "2026-08-24",
+  "executado_em": "2026-08-24T13:53:29.965211-03:00",
   "janela": {
-    "inicio": "2026-08-12T00:00",
-    "fim": "2026-08-13T14:39"
+    "inicio": "2026-08-21T00:00",
+    "fim": "2026-08-24T13:53"
   },
   "fontes_processadas": [
     {
@@ -19,7 +19,7 @@
     {
       "fonte": "CCEE | Noticias",
       "status": "ok",
-      "tamanho_chars": 1947
+      "tamanho_chars": 2892
     },
     {
       "fonte": "Destaques do D.O.U.",
@@ -39,7 +39,7 @@
     {
       "fonte": "ANPD | Notícias",
       "status": "ok",
-      "tamanho_chars": 1289
+      "tamanho_chars": 10000
     },
     {
       "fonte": "CVM | Notícias",
@@ -49,7 +49,7 @@
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "status": "ok",
-      "tamanho_chars": 9727
+      "tamanho_chars": 9621
     },
     {
       "fonte": "ANP | Notícias",
@@ -64,7 +64,7 @@
     {
       "fonte": "ONS | Notícias",
       "status": "ok",
-      "tamanho_chars": 2504
+      "tamanho_chars": 5151
     },
     {
       "fonte": "ANEEL | Últimas Notícias",
@@ -79,7 +79,7 @@
     {
       "fonte": "ANVISA | Notícias",
       "status": "ok",
-      "tamanho_chars": 2196
+      "tamanho_chars": 1967
     },
     {
       "fonte": "INPI | Notícias",
@@ -93,8 +93,9 @@
     },
     {
       "fonte": "COAF | Notícias",
-      "status": "ok",
-      "tamanho_chars": 1136
+      "status": "erro_tecnico",
+      "tamanho_chars": 289,
+      "detalhe": "Conteudo muito curto (289 chars)"
     },
     {
       "fonte": "ANM | Notícias",
@@ -104,7 +105,7 @@
     {
       "fonte": "EPE | Notícias",
       "status": "ok",
-      "tamanho_chars": 10000
+      "tamanho_chars": 9822
     },
     {
       "fonte": "ANTAQ | Notícias",
@@ -119,184 +120,102 @@
     {
       "fonte": "Kollemata | Decretos",
       "status": "ok",
-      "tamanho_chars": 5473
+      "tamanho_chars": 4417
     }
   ],
   "resultado": {
-    "itens_aceitos": 46,
+    "itens_aceitos": 0,
     "itens_descartados_pos_validacao": 0,
     "fontes_ativas": 23,
     "fontes_inativas": 3,
     "fontes_sem_resultado": 0,
-    "fontes_sem_publicacao_hoje": 7,
+    "fontes_sem_publicacao_hoje": 0,
     "fontes_com_erro_tecnico": 1,
     "itens_por_boletim": {
       "trabalhista-empresarial": {
+        "nome": "Radar Trabalhista Empresarial",
+        "clusters": [
+          "Amber",
+          "Pink"
+        ],
         "total": 0
       },
       "direito-tributario": {
-        "total": 2
+        "nome": "Radar Tributario",
+        "clusters": [
+          "Tributario Consultivo",
+          "Tributario Contencioso"
+        ],
+        "total": 0
       },
       "societario-ma": {
-        "total": 4
+        "nome": "Radar Societario, Fusoes e Aquisicoes",
+        "clusters": [
+          "White",
+          "Purple",
+          "Due Diligence"
+        ],
+        "total": 0
       },
       "mercado-capitais-fundos": {
-        "total": 20
+        "nome": "Radar Mercado de Capitais e Fundos de Investimento",
+        "clusters": [
+          "Financeiro Green",
+          "Fundos"
+        ],
+        "total": 0
       },
       "regulatorio-oleo-gas": {
-        "total": 10
+        "nome": "Radar Regulatorio e Oleo e Gas",
+        "clusters": [
+          "Regulatorio",
+          "Oleo & Gas Blue"
+        ],
+        "total": 0
       },
       "imobiliario-infraestrutura": {
-        "total": 6
+        "nome": "Radar Negocios Imobiliarios e Infraestrutura",
+        "clusters": [
+          "Imobiliario",
+          "Infraestrutura"
+        ],
+        "total": 0
       },
       "ambiental-esg": {
-        "total": 5
+        "nome": "Radar Ambiental e ESG",
+        "clusters": [
+          "Ambiental"
+        ],
+        "total": 0
       },
       "propriedade-intelectual": {
-        "total": 3
+        "nome": "Radar Propriedade Intelectual, Tecnologia e Privacidade",
+        "clusters": [
+          "Propriedade Intelectual"
+        ],
+        "total": 0
       },
       "contencioso-civel": {
-        "total": 1
+        "nome": "Radar Solucao de Conflitos",
+        "clusters": [
+          "Contencioso Carbon",
+          "Contencioso Gold"
+        ],
+        "total": 0
       }
     },
-    "filtro2_bloqueios": {
-      "regulatorio-oleo-gas": 3,
-      "ambiental-esg": 3,
-      "imobiliario-infraestrutura": 4,
-      "contencioso-civel": 1,
-      "mercado-capitais-fundos": 2,
-      "propriedade-intelectual": 1
-    },
+    "filtro1_bloqueios": {},
     "auditoria": {
-      "total_itens": 46,
-      "itens_com_alguma_rejeicao": 46,
-      "itens_com_bloqueio_f1": 11,
-      "rejeicoes_por_boletim": {
-        "trabalhista-empresarial": 46,
-        "direito-tributario": 44,
-        "societario-ma": 42,
-        "mercado-capitais-fundos": 26,
-        "regulatorio-oleo-gas": 36,
-        "imobiliario-infraestrutura": 40,
-        "ambiental-esg": 41,
-        "propriedade-intelectual": 43,
-        "contencioso-civel": 45
-      },
-      "top_palavras_chave_detectadas": [
-        {
-          "palavra": "regulamenta",
-          "ocorrencias": 9
-        },
-        {
-          "palavra": "mercado financeiro",
-          "ocorrencias": 8
-        },
-        {
-          "palavra": "derivativos",
-          "ocorrencias": 7
-        },
-        {
-          "palavra": "crédito extraordinário",
-          "ocorrencias": 6
-        },
-        {
-          "palavra": "banco central",
-          "ocorrencias": 5
-        },
-        {
-          "palavra": "rolagem",
-          "ocorrencias": 5
-        },
-        {
-          "palavra": "leilão de swap cambial tradicional",
-          "ocorrencias": 4
-        },
-        {
-          "palavra": "governança corporativa",
-          "ocorrencias": 4
-        },
-        {
-          "palavra": "decreto",
-          "ocorrencias": 4
-        },
-        {
-          "palavra": "energia renovável",
-          "ocorrencias": 3
-        },
-        {
-          "palavra": "medida provisória",
-          "ocorrencias": 3
-        },
-        {
-          "palavra": "inpi",
-          "ocorrencias": 3
-        },
-        {
-          "palavra": "ministério das cidades",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "ministério do desenvolvimento agrário",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "agricultura familiar",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "ministério da integração e do desenvolvimento regional",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "mercado de energia elétrica",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "consumidores",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "baixa tensão",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "suprimento de última instância",
-          "ocorrencias": 2
-        }
-      ]
+      "total_itens": 0,
+      "itens_com_alguma_rejeicao": 0,
+      "itens_com_bloqueio_f1": 0,
+      "rejeicoes_por_boletim": {},
+      "top_palavras_chave_detectadas": []
     }
   },
   "fontes_inativas_defeso": [
     "CGU | Notícias",
     "Secretaria de Prêmios e Apostas | Notícias",
     "Ministério do Meio Ambiente | Notícias"
-  ],
-  "filtro2_bloqueios_detalhe": {
-    "regulatorio-oleo-gas": [
-      "Modelo simplificado para o varejo completa um ano de benefíc",
-      "EPE marca presença na 13ª edição do Fórum do Biogás, com est",
-      "EPE fala sobre inovação e planejamento energético na Rio Inn"
-    ],
-    "ambiental-esg": [
-      "DECRETO Nº 13.094, DE 12 DE AGOSTO DE 2026",
-      "DECRETO Nº 13.095, DE 12 DE AGOSTO DE 2026",
-      "DECRETO Nº 13.096, DE 12 DE AGOSTO DE 2026"
-    ],
-    "imobiliario-infraestrutura": [
-      "DECRETO Nº 13.095, DE 12 DE AGOSTO DE 2026",
-      "DECRETO Nº 13.096, DE 12 DE AGOSTO DE 2026",
-      "DECRETO Nº 13.097, DE 12 DE AGOSTO DE 2026",
-      "Audiência pública reúne contribuições para concessão do SAIP"
-    ],
-    "contencioso-civel": [
-      "Colegiado da CVM rejeita proposta conjunta de Termo de Compr"
-    ],
-    "mercado-capitais-fundos": [
-      "Descomissionamento: ANP realiza audiência pública sobre gara",
-      "Oficina debate crédito ao consumidor e combate ao endividame"
-    ],
-    "propriedade-intelectual": [
-      "EPE fala sobre inovação e planejamento energético na Rio Inn"
-    ]
-  }
+  ]
 }
