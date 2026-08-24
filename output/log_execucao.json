@@ -1,9 +1,9 @@
 {
   "data_execucao": "2026-08-24",
-  "executado_em": "2026-08-24T15:02:13.207965-03:00",
+  "executado_em": "2026-08-24T15:15:30.963890-03:00",
   "janela": {
     "inicio": "2026-08-21T00:00",
-    "fim": "2026-08-24T15:02"
+    "fim": "2026-08-24T15:15"
   },
   "modelos_gemini_configurados": [
     "gemini-3.7-flash",
@@ -133,18 +133,32 @@
     {
       "modelo": "gemini-3.7-flash",
       "tentativa": 1,
+      "status": "erro",
+      "recuperavel": true,
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    },
+    {
+      "modelo": "gemini-3.7-flash",
+      "tentativa": 2,
+      "status": "erro",
+      "recuperavel": true,
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    },
+    {
+      "modelo": "gemini-3.6-flash",
+      "tentativa": 1,
       "status": "sucesso"
     }
   ],
   "resultado": {
     "status": "sucesso",
-    "modelo_gemini_utilizado": "gemini-3.7-flash",
-    "itens_aceitos": 26,
+    "modelo_gemini_utilizado": "gemini-3.6-flash",
+    "itens_aceitos": 44,
     "itens_descartados_pos_validacao": 0,
     "fontes_ativas": 23,
     "fontes_inativas": 3,
-    "fontes_sem_resultado": 1,
-    "fontes_sem_publicacao_hoje": 6,
+    "fontes_sem_resultado": 2,
+    "fontes_sem_publicacao_hoje": 5,
     "fontes_com_erro_tecnico": 1,
     "itens_por_boletim": {
       "trabalhista-empresarial": {
@@ -156,15 +170,15 @@
         "total": 0
       },
       "direito-tributario": {
-        "nome": "Radar Tributario",
+        "nome": "Radar Tributário",
         "clusters": [
-          "Tributario Consultivo",
-          "Tributario Contencioso"
+          "Tributário Consultivo",
+          "Tributário Contencioso"
         ],
-        "total": 2
+        "total": 3
       },
       "societario-ma": {
-        "nome": "Radar Societario, Fusoes e Aquisicoes",
+        "nome": "Radar Societário, Fusões e Aquisições",
         "clusters": [
           "White",
           "Purple",
@@ -178,30 +192,30 @@
           "Financeiro Green",
           "Fundos"
         ],
-        "total": 3
+        "total": 4
       },
       "regulatorio-oleo-gas": {
-        "nome": "Radar Regulatorio e Oleo e Gas",
+        "nome": "Radar Regulatório e Óleo e Gás",
         "clusters": [
-          "Regulatorio",
-          "Oleo & Gas Blue"
+          "Regulatório",
+          "Óleo & Gás Blue"
         ],
-        "total": 11
+        "total": 16
       },
       "imobiliario-infraestrutura": {
-        "nome": "Radar Negocios Imobiliarios e Infraestrutura",
+        "nome": "Radar Negócios Imobiliários e Infraestrutura",
         "clusters": [
-          "Imobiliario",
+          "Imobiliário",
           "Infraestrutura"
         ],
-        "total": 9
+        "total": 14
       },
       "ambiental-esg": {
         "nome": "Radar Ambiental e ESG",
         "clusters": [
           "Ambiental"
         ],
-        "total": 3
+        "total": 5
       },
       "propriedade-intelectual": {
         "nome": "Radar Propriedade Intelectual, Tecnologia e Privacidade",
@@ -211,47 +225,78 @@
         "total": 3
       },
       "contencioso-civel": {
-        "nome": "Radar Solucao de Conflitos",
+        "nome": "Radar Solução de Conflitos",
         "clusters": [
           "Contencioso Carbon",
           "Contencioso Gold"
         ],
-        "total": 2
+        "total": 3
       }
     },
     "filtro1_bloqueios": {
-      "regulatorio-oleo-gas": 4,
-      "imobiliario-infraestrutura": 2,
-      "propriedade-intelectual": 2,
+      "regulatorio-oleo-gas": 9,
+      "imobiliario-infraestrutura": 1,
+      "propriedade-intelectual": 1,
       "societario-ma": 1
     },
     "auditoria": {
-      "total_itens": 26,
-      "itens_com_alguma_rejeicao": 14,
-      "itens_com_bloqueio_f1": 9,
+      "total_itens": 44,
+      "itens_com_alguma_rejeicao": 44,
+      "itens_com_bloqueio_f1": 12,
       "rejeicoes_por_boletim": {
-        "direito-tributario": 2,
-        "societario-ma": 2,
-        "regulatorio-oleo-gas": 5,
-        "imobiliario-infraestrutura": 2,
-        "propriedade-intelectual": 2,
-        "mercado-capitais-fundos": 1
+        "societario-ma": 12,
+        "trabalhista-empresarial": 3,
+        "direito-tributario": 8,
+        "ambiental-esg": 5,
+        "regulatorio-oleo-gas": 11,
+        "mercado-capitais-fundos": 5,
+        "imobiliario-infraestrutura": 4,
+        "propriedade-intelectual": 4,
+        "contencioso-civel": 4
       },
       "top_palavras_chave_detectadas": [
         {
-          "palavra": "anp",
-          "ocorrencias": 4
+          "palavra": "aneel",
+          "ocorrencias": 7
         },
         {
-          "palavra": "aneel",
-          "ocorrencias": 4
+          "palavra": "ons",
+          "ocorrencias": 6
         },
         {
           "palavra": "setor elétrico",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "anp",
+          "ocorrencias": 5
+        },
+        {
+          "palavra": "energia",
+          "ocorrencias": 4
+        },
+        {
+          "palavra": "mercosul",
           "ocorrencias": 3
         },
         {
-          "palavra": "banco central",
+          "palavra": "pld",
+          "ocorrencias": 3
+        },
+        {
+          "palavra": "comércio eletrônico",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "cancelamento da autorização",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "consulta externa",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "stf",
           "ocorrencias": 2
         },
         {
@@ -267,56 +312,28 @@
           "ocorrencias": 2
         },
         {
+          "palavra": "gás natural",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "combustíveis",
+          "ocorrencias": 2
+        },
+        {
           "palavra": "consulta pública",
           "ocorrencias": 2
         },
         {
-          "palavra": "ons",
+          "palavra": "sin",
           "ocorrencias": 2
         },
         {
-          "palavra": "revisão tarifária",
+          "palavra": "reajuste tarifário",
           "ocorrencias": 2
         },
         {
-          "palavra": "comércio eletrônico",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "e-commerce",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "decreto",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "formato iban",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "transferências internacionais",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "resolução bcb",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "instituições financeiras",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "sociedade de empréstimo entre pessoas",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "sep",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "autorização para funcionamento",
-          "ocorrencias": 1
+          "palavra": "concessionárias",
+          "ocorrencias": 2
         }
       ]
     }
@@ -329,17 +346,20 @@
   "filtro1_bloqueios_detalhe": {
     "regulatorio-oleo-gas": [
       "CT PMO/PLD abre consulta externa sobre os requisitos funcion",
+      "Confira a apresentação e o vídeo do Encontro do PLD realizad",
       "No MinutoMega Talks, diretora Gerusa Côrtes destaca preparaç",
       "ONS aciona plano de gestão de excedentes pela segunda vez es",
-      "Operador apresenta novo processo de integração da geração"
+      "CT PMO/PLD abre consulta externa sobre os requisitos funcion",
+      "ONS confirma acionamento do Plano de Gestão de Excedentes de",
+      "Operador apresenta novo processo de integração da geração",
+      "ONS: projeções de afluências seguem estáveis ao final de ago",
+      "ONS indica como média a probabilidade de acionamento do Plan"
     ],
     "imobiliario-infraestrutura": [
-      "STF - Decisões do Plenário - ADI 7866",
-      "Pauta da 617ª Reunião Ordinária da Diretoria Colegiada está "
+      "Decisão no STF em Ação Direta de Inconstitucionalidade (ADI "
     ],
     "propriedade-intelectual": [
-      "ANP publica edital do Prêmio ANP de Inovação Tecnológica 202",
-      "Data centers e energia pautam debates com a EPE no “Energia "
+      "DECRETO Nº 13.104, DE 21 DE AGOSTO DE 2026"
     ],
     "societario-ma": [
       "ANEEL anui transferência de Controle Societário Direto e Ind"
