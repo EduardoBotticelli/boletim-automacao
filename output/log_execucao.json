@@ -1,32 +1,25 @@
 {
-  "data_execucao": "2026-08-24",
-  "executado_em": "2026-08-24T18:58:13.111361-03:00",
+  "data_execucao": "2026-08-25",
+  "executado_em": "2026-08-25T15:29:30.734634-03:00",
   "janela": {
-    "inicio": "2026-08-21T00:00",
-    "fim": "2026-08-24T18:58"
+    "inicio": "2026-08-24T00:00",
+    "fim": "2026-08-25T15:29"
   },
-  "modelos_gemini_configurados": [
-    "gemini-3.7-flash",
-    "gemini-3.6-flash",
-    "gemini-3.5-flash",
-    "gemini-3.5-flash-lite",
-    "gemini-2.5-flash"
-  ],
   "fontes_processadas": [
     {
       "fonte": "Planalto | Resenha Diaria",
-      "status": "ok",
-      "tamanho_chars": 10000
+      "status": "erro",
+      "erro": "Internal Server Error: Failed to scrape. All scraping engines failed to retrieve content from this URL. Engines tried: [index, fire-engine;chrome-cdp, fire-engine(retry);chrome-cdp]. This usually happens when: (1) The URL is invalid or the page doesn't exist (404), (2) The website is blocking automa"
     },
     {
       "fonte": "Banco Central | Normas",
       "status": "ok",
-      "tamanho_chars": 10000
+      "tamanho_chars": 1227
     },
     {
       "fonte": "CCEE | Noticias",
       "status": "ok",
-      "tamanho_chars": 4034
+      "tamanho_chars": 2942
     },
     {
       "fonte": "Destaques do D.O.U.",
@@ -56,10 +49,25 @@
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "status": "ok",
-      "tamanho_chars": 9621
+      "tamanho_chars": 9792
     },
     {
       "fonte": "ANP | Notícias",
+      "status": "ok",
+      "tamanho_chars": 10000
+    },
+    {
+      "fonte": "ANP | Consultas e Audiências Públicas",
+      "status": "ok",
+      "tamanho_chars": 10000
+    },
+    {
+      "fonte": "ANP | Consultas Prévias",
+      "status": "ok",
+      "tamanho_chars": 1836
+    },
+    {
+      "fonte": "ANP | Pautas e Atas da Diretoria Colegiada",
       "status": "ok",
       "tamanho_chars": 10000
     },
@@ -69,9 +77,14 @@
       "tamanho_chars": 10000
     },
     {
+      "fonte": "MME | Consultas Públicas",
+      "status": "ok",
+      "tamanho_chars": 3136
+    },
+    {
       "fonte": "ONS | Notícias",
       "status": "ok",
-      "tamanho_chars": 5151
+      "tamanho_chars": 2112
     },
     {
       "fonte": "ANEEL | Últimas Notícias",
@@ -86,7 +99,7 @@
     {
       "fonte": "ANVISA | Notícias",
       "status": "ok",
-      "tamanho_chars": 10000
+      "tamanho_chars": 1837
     },
     {
       "fonte": "INPI | Notícias",
@@ -111,7 +124,7 @@
     {
       "fonte": "EPE | Notícias",
       "status": "ok",
-      "tamanho_chars": 9882
+      "tamanho_chars": 9722
     },
     {
       "fonte": "ANTAQ | Notícias",
@@ -121,31 +134,89 @@
     {
       "fonte": "CNPE | Comunicações",
       "status": "ok",
-      "tamanho_chars": 10000
+      "tamanho_chars": 1250
     },
     {
       "fonte": "Kollemata | Decretos",
       "status": "ok",
       "tamanho_chars": 4417
+    },
+    {
+      "fonte": "ANATEL | Notícias",
+      "status": "ok",
+      "tamanho_chars": 1305
+    },
+    {
+      "fonte": "SUSEP | Notícias",
+      "status": "ok",
+      "tamanho_chars": 1393
+    },
+    {
+      "fonte": "ANTT | Notícias - Defeso Eleitoral",
+      "status": "ok",
+      "tamanho_chars": 10000
     }
   ],
+  "fontes_suspensas": [
+    {
+      "fonte": "CGU | Notícias",
+      "motivo": "Defeso eleitoral",
+      "reativar_em": "2026-10-26"
+    },
+    {
+      "fonte": "Secretaria de Prêmios e Apostas | Notícias",
+      "motivo": "Defeso eleitoral",
+      "reativar_em": "2026-10-26"
+    },
+    {
+      "fonte": "Ministério do Meio Ambiente | Notícias",
+      "motivo": "Defeso eleitoral",
+      "reativar_em": "2026-10-26"
+    }
+  ],
+  "fontes_inativas": [],
   "tentativas_gemini": [
     {
       "modelo": "gemini-3.7-flash",
+      "tentativa": 1,
+      "status": "erro",
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    },
+    {
+      "modelo": "gemini-3.7-flash",
+      "tentativa": 2,
+      "status": "erro",
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    },
+    {
+      "modelo": "gemini-3.6-flash",
+      "tentativa": 1,
+      "status": "erro",
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    },
+    {
+      "modelo": "gemini-3.6-flash",
+      "tentativa": 2,
+      "status": "erro",
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    },
+    {
+      "modelo": "gemini-3.5-flash",
       "tentativa": 1,
       "status": "sucesso"
     }
   ],
   "resultado": {
     "status": "sucesso",
-    "modelo_gemini_utilizado": "gemini-3.7-flash",
-    "itens_aceitos": 29,
+    "modelo_gemini_utilizado": "gemini-3.5-flash",
+    "itens_aceitos": 26,
     "itens_descartados_pos_validacao": 0,
-    "fontes_ativas": 23,
-    "fontes_inativas": 3,
-    "fontes_sem_resultado": 1,
-    "fontes_sem_publicacao_hoje": 4,
-    "fontes_com_erro_tecnico": 1,
+    "fontes_ativas": 30,
+    "fontes_suspensas": 3,
+    "fontes_inativas": 0,
+    "fontes_sem_resultado": 4,
+    "fontes_sem_publicacao_hoje": 7,
+    "fontes_com_erro_tecnico": 2,
     "itens_por_boletim": {
       "trabalhista-empresarial": {
         "nome": "Radar Trabalhista Empresarial",
@@ -161,7 +232,7 @@
           "Tributário Consultivo",
           "Tributário Contencioso"
         ],
-        "total": 4
+        "total": 2
       },
       "societario-ma": {
         "nome": "Radar Societário, Fusões e Aquisições",
@@ -170,7 +241,7 @@
           "Purple",
           "Due Diligence"
         ],
-        "total": 0
+        "total": 1
       },
       "mercado-capitais-fundos": {
         "nome": "Radar Mercado de Capitais e Fundos de Investimento",
@@ -186,7 +257,7 @@
           "Regulatório",
           "Óleo & Gás Blue"
         ],
-        "total": 13
+        "total": 15
       },
       "imobiliario-infraestrutura": {
         "nome": "Radar Negócios Imobiliários e Infraestrutura",
@@ -194,14 +265,14 @@
           "Imobiliário",
           "Infraestrutura"
         ],
-        "total": 7
+        "total": 14
       },
       "ambiental-esg": {
         "nome": "Radar Ambiental e ESG",
         "clusters": [
           "Ambiental"
         ],
-        "total": 3
+        "total": 0
       },
       "propriedade-intelectual": {
         "nome": "Radar Propriedade Intelectual, Tecnologia e Privacidade",
@@ -216,57 +287,46 @@
           "Contencioso Carbon",
           "Contencioso Gold"
         ],
-        "total": 3
+        "total": 1
       }
     },
     "filtro1_bloqueios": {
-      "regulatorio-oleo-gas": 3,
-      "imobiliario-infraestrutura": 2,
-      "societario-ma": 2,
-      "contencioso-civel": 1,
-      "mercado-capitais-fundos": 1,
-      "propriedade-intelectual": 1
+      "regulatorio-oleo-gas": 2,
+      "contencioso-civel": 1
     },
     "auditoria": {
-      "total_itens": 29,
-      "itens_com_alguma_rejeicao": 15,
-      "itens_com_bloqueio_f1": 10,
+      "total_itens": 26,
+      "itens_com_alguma_rejeicao": 26,
+      "itens_com_bloqueio_f1": 3,
       "rejeicoes_por_boletim": {
-        "direito-tributario": 2,
-        "societario-ma": 3,
-        "regulatorio-oleo-gas": 4,
-        "imobiliario-infraestrutura": 2,
-        "contencioso-civel": 2,
-        "mercado-capitais-fundos": 1,
-        "propriedade-intelectual": 1
+        "direito-tributario": 6,
+        "regulatorio-oleo-gas": 3,
+        "ambiental-esg": 4,
+        "societario-ma": 7,
+        "contencioso-civel": 3,
+        "propriedade-intelectual": 2,
+        "mercado-capitais-fundos": 3,
+        "imobiliario-infraestrutura": 1
       },
       "top_palavras_chave_detectadas": [
         {
-          "palavra": "aneel",
-          "ocorrencias": 4
+          "palavra": "consulta pública",
+          "ocorrencias": 3
+        },
+        {
+          "palavra": "mercado livre de energia",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "pld",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "tarifas",
+          "ocorrencias": 2
         },
         {
           "palavra": "receita federal",
-          "ocorrencias": 3
-        },
-        {
-          "palavra": "anp",
-          "ocorrencias": 3
-        },
-        {
-          "palavra": "mercosul",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "decreto",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "setor elétrico",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "stf",
           "ocorrencias": 2
         },
         {
@@ -278,79 +338,67 @@
           "ocorrencias": 2
         },
         {
-          "palavra": "energia",
+          "palavra": "free flow",
           "ocorrencias": 2
         },
         {
-          "palavra": "consulta pública",
+          "palavra": "pedágio eletrônico",
           "ocorrencias": 2
         },
         {
-          "palavra": "ons",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "geração",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "distribuição",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "anvisa",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "vigilância sanitária",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "epe",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "comércio eletrônico",
+          "palavra": "consumidores",
           "ocorrencias": 1
         },
         {
-          "palavra": "comércio de serviços",
+          "palavra": "migração",
           "ocorrencias": 1
         },
         {
-          "palavra": "resolução bcb",
+          "palavra": "consulta externa",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "modelo energético",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "setor elétrico",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "suspensão de tributos",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "drawback",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "crédito extraordinário",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "ministério de minas e energia",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "reforma",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "novas regras tributárias",
           "ocorrencias": 1
         }
       ]
     }
   },
-  "fontes_inativas_defeso": [
-    "CGU | Notícias",
-    "Secretaria de Prêmios e Apostas | Notícias",
-    "Ministério do Meio Ambiente | Notícias"
-  ],
   "filtro1_bloqueios_detalhe": {
     "regulatorio-oleo-gas": [
-      "CT PMO/PLD abre consulta externa sobre os requisitos funcion",
-      "ONS aciona plano de gestão de excedentes pela segunda vez es",
-      "Operador apresenta novo processo de integração da geração"
-    ],
-    "imobiliario-infraestrutura": [
-      "STF - Decisões em Ação Direta de Inconstitucionalidade - ADI",
-      "Embarcações do consórcio vencedor da travessia Manaus–Careir"
-    ],
-    "societario-ma": [
-      "Sessão de Julgamento em 25/8",
-      "ANEEL anui transferência de Controle Societário Direto e Ind"
+      "CCEE lança campanha nacional para apresentar o mercado livre de energia para 90 milhões de brasileiros",
+      "CT PMO/PLD abre consulta externa sobre os requisitos funcionais do novo modelo energético do setor"
     ],
     "contencioso-civel": [
-      "ANEEL nega pedido de prova pericial feito pela Enel Distribu"
-    ],
-    "mercado-capitais-fundos": [
-      "Senacon abre averiguações sobre atuação de Banrisul e Agiban"
-    ],
-    "propriedade-intelectual": [
-      "Data centers e energia pautam debates com a EPE no “Energia "
+      "ANEEL nega pedido de prova pericial feito pela Enel Distribuição São Paulo"
     ]
   }
 }
