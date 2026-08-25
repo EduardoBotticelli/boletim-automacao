@@ -1,220 +1,106 @@
 name: Gerar Radares Jurídicos
-
 on:
   workflow_dispatch:
     inputs:
       executar_teste_dou:
-        description: "Executar a prova de conceito do DOU para o cluster Regulatório"
+        description: "Executar prova de conceito do DOU Regulatório"
         required: false
         default: true
         type: boolean
       data_dou_teste:
-        description: "Data da edição do DOU para o teste, no formato DD-MM-AAAA"
+        description: "Data do DOU em DD-MM-AAAA"
         required: false
         default: "24-08-2026"
         type: string
-
-  # Para reativar a execução automática de segunda a sexta-feira,
-  # remova os comentários das linhas abaixo.
-  #
-  # schedule:
-  #   - cron: "0 11 * * 1-5"
-
 permissions:
   contents: write
-
 concurrency:
   group: gerar-radares-juridicos
   cancel-in-progress: false
-
 jobs:
   gerar-radares:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
-
+    timeout-minutes: 75
     steps:
-      - name: Checkout do repositório
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: "pip"
-
+          cache: pip
       - name: Instalar dependências
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-
-      - name: Validar sintaxe dos scripts
+      - name: Validar arquivos
         run: |
+          python -m json.tool fontes.json > /dev/null
           python -m py_compile scripts/gerar_boletim.py
           python -m py_compile scripts/gerar_html.py
           python -m py_compile scripts/gerar_auditoria_html.py
           python -m py_compile scripts/testar_dou_regulatorio.py
-
-      - name: Gerar curadoria dos Radares
+      - name: Gerar curadoria
         env:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: |
-          python scripts/gerar_boletim.py
-
-      - name: Gerar páginas HTML de validação
-        run: |
-          python scripts/gerar_html.py
-
-      - name: Gerar auditoria consolidada
-        run: |
-          python scripts/gerar_auditoria_html.py
-
-      - name: Testar extração do DOU para o cluster Regulatório
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.executar_teste_dou }}
+        run: python scripts/gerar_boletim.py
+      - name: Gerar validações
+        run: python scripts/gerar_html.py
+      - name: Gerar auditoria
+        run: python scripts/gerar_auditoria_html.py
+      - name: Testar DOU Regulatório
+        if: ${{ inputs.executar_teste_dou }}
         env:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           DOU_DATA: ${{ inputs.data_dou_teste }}
-          DOU_SECAO: "do1"
-        run: |
-          python scripts/testar_dou_regulatorio.py
-
-      - name: Verificar arquivos principais gerados
+          DOU_SECAO: do1
+        run: python scripts/testar_dou_regulatorio.py
+      - name: Verificar saídas principais
         run: |
           test -f output/boletim.json
           test -f output/log_execucao.json
           test -f output/auditoria.html
-
-          test -f output/validacao_trabalhista-empresarial.html
-          test -f output/validacao_direito-tributario.html
-          test -f output/validacao_societario-ma.html
-          test -f output/validacao_mercado-capitais-fundos.html
-          test -f output/validacao_regulatorio-oleo-gas.html
-          test -f output/validacao_imobiliario-infraestrutura.html
-          test -f output/validacao_ambiental-esg.html
-          test -f output/validacao_propriedade-intelectual.html
-          test -f output/validacao_contencioso-civel.html
-
-          echo "Curadoria, validações e auditoria encontradas."
-
-      - name: Verificar arquivos do teste do DOU
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.executar_teste_dou }}
+          for slug in trabalhista-empresarial direito-tributario societario-ma mercado-capitais-fundos regulatorio-oleo-gas imobiliario-infraestrutura ambiental-esg propriedade-intelectual contencioso-civel; do
+            test -f "output/validacao_${slug}.html"
+          done
+      - name: Verificar saída DOU
+        if: ${{ inputs.executar_teste_dou }}
         run: |
           test -f output/teste_dou_regulatorio.json
           test -f output/teste_dou_regulatorio.html
-          echo "Arquivos da prova de conceito do DOU encontrados."
-
-      - name: Exibir resumo da execução
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-
-          boletim = json.loads(
-              Path("output/boletim.json").read_text(encoding="utf-8")
-          )
-
-          modelo = boletim.get(
-              "modelo_gemini_utilizado",
-              "não informado",
-          )
-          itens = boletim.get("itens", [])
-          estatisticas = boletim.get(
-              "estatisticas_por_boletim",
-              {},
-          )
-          auditoria = boletim.get("auditoria", {})
-
-          print("=" * 60)
-          print("RESUMO DA EXECUÇÃO")
-          print("=" * 60)
-          print(f"Modelo Gemini utilizado: {modelo}")
-          print(f"Total de itens processados: {len(itens)}")
-          print(
-              "Itens com bloqueio do Filtro 1: "
-              + str(auditoria.get("itens_com_bloqueio_f1", 0))
-          )
-          print("")
-          print("Distribuição por Radar:")
-
-          for slug, dados in estatisticas.items():
-              if isinstance(dados, dict):
-                  nome = dados.get("nome", slug)
-                  total = dados.get("total", 0)
-              else:
-                  nome = slug
-                  total = dados
-
-              print(f"  {nome}: {total}")
-
-          teste_dou = Path("output/teste_dou_regulatorio.json")
-          if teste_dou.exists():
-              resultado_dou = json.loads(
-                  teste_dou.read_text(encoding="utf-8")
-              )
-              print("")
-              print("Prova de conceito do DOU:")
-              print(
-                  "  Publicações regulatórias identificadas: "
-                  + str(
-                      resultado_dou.get(
-                          "total_publicacoes_regulatorias",
-                          0,
-                      )
-                  )
-              )
-              print(
-                  "  Modelo Gemini do teste: "
-                  + str(
-                      resultado_dou.get(
-                          "modelo_gemini_utilizado",
-                          "não informado",
-                      )
-                  )
-              )
-
-          print("=" * 60)
-          PY
-
-      - name: Disponibilizar arquivos principais como artifact
+      - name: Artifact principal
         uses: actions/upload-artifact@v4
         with:
           name: radares-validacao-${{ github.run_number }}
-          if-no-files-found: error
           retention-days: 14
+          if-no-files-found: error
           path: |
             output/boletim.json
             output/log_execucao.json
             output/auditoria.html
             output/validacao_*.html
-
-      - name: Disponibilizar prova de conceito do DOU como artifact
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.executar_teste_dou }}
+      - name: Artifact DOU
+        if: ${{ inputs.executar_teste_dou }}
         uses: actions/upload-artifact@v4
         with:
           name: teste-dou-regulatorio-${{ github.run_number }}
-          if-no-files-found: error
           retention-days: 14
+          if-no-files-found: error
           path: |
             output/teste_dou_regulatorio.json
             output/teste_dou_regulatorio.html
-
       - name: Commit dos resultados oficiais
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add output/boletim.json
-          git add output/log_execucao.json
-          git add output/auditoria.html
-          git add output/validacao_*.html
-
+          git add output/boletim.json output/log_execucao.json output/auditoria.html output/validacao_*.html
           if git diff --staged --quiet; then
-            echo "Nenhuma alteração oficial para registrar."
+            echo "Nenhuma alteração oficial."
             exit 0
           fi
-
           git commit -m "Atualiza curadoria e auditoria dos Radares - $(date +'%Y-%m-%d')"
           git push
