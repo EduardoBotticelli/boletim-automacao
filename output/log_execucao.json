@@ -1,9 +1,9 @@
 {
   "data_execucao": "2026-08-25",
-  "executado_em": "2026-08-25T17:11:21.432520-03:00",
+  "executado_em": "2026-08-25T17:57:06.529189-03:00",
   "janela": {
     "inicio": "2026-08-24T00:00",
-    "fim": "2026-08-25T17:11"
+    "fim": "2026-08-25T17:57"
   },
   "fontes_processadas": [
     {
@@ -15,174 +15,230 @@
       "fonte": "Banco Central | Normas",
       "status": "ok",
       "tamanho_chars": 1227,
+      "publicacoes_localizadas": 0,
+      "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "CCEE | Noticias",
       "status": "ok",
-      "tamanho_chars": 2942,
+      "tamanho_chars": 8258,
+      "publicacoes_localizadas": 15,
+      "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "Destaques do D.O.U.",
       "status": "ok",
       "tamanho_chars": 14607,
+      "publicacoes_localizadas": 0,
+      "busca_complementar_executada": false,
       "conteudo_truncado": false
     },
     {
       "fonte": "Receita Federal | Normas",
       "status": "ok",
       "tamanho_chars": 30000,
+      "publicacoes_localizadas": 2,
+      "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
     {
       "fonte": "Ministério da Fazenda | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
+      "publicacoes_localizadas": 9,
+      "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
     {
       "fonte": "ANPD | Notícias",
       "status": "ok",
-      "tamanho_chars": 1289,
+      "tamanho_chars": 2110,
+      "publicacoes_localizadas": 2,
+      "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "CVM | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
+      "publicacoes_localizadas": 10,
+      "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "status": "ok",
       "tamanho_chars": 9646,
+      "publicacoes_localizadas": 0,
+      "busca_complementar_executada": false,
       "conteudo_truncado": false
     },
     {
       "fonte": "ANP | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
+      "publicacoes_localizadas": 6,
+      "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
     {
       "fonte": "ANP | Consultas e Audiências Públicas",
       "status": "ok",
-      "tamanho_chars": 23306,
+      "tamanho_chars": 25314,
+      "publicacoes_localizadas": 6,
+      "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "ANP | Consultas Prévias",
       "status": "ok",
-      "tamanho_chars": 1836,
+      "tamanho_chars": 3844,
+      "publicacoes_localizadas": 6,
+      "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "ANP | Pautas e Atas da Diretoria Colegiada",
       "status": "ok",
       "tamanho_chars": 30000,
+      "publicacoes_localizadas": 6,
+      "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
     {
       "fonte": "MME | Notícias",
       "status": "ok",
       "tamanho_chars": 16693,
+      "publicacoes_localizadas": 0,
+      "busca_complementar_executada": false,
       "conteudo_truncado": false
     },
     {
       "fonte": "MME | Consultas Públicas",
       "status": "ok",
       "tamanho_chars": 3136,
+      "publicacoes_localizadas": 0,
+      "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "ONS | Notícias",
       "status": "ok",
-      "tamanho_chars": 2112,
+      "tamanho_chars": 7465,
+      "publicacoes_localizadas": 11,
+      "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "ANEEL | Últimas Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
+      "publicacoes_localizadas": 11,
+      "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
     {
       "fonte": "Ministério da Agricultura | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
+      "publicacoes_localizadas": 30,
+      "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
     {
       "fonte": "ANVISA | Notícias",
       "status": "ok",
-      "tamanho_chars": 1837,
+      "tamanho_chars": 4668,
+      "publicacoes_localizadas": 8,
+      "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "INPI | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
+      "publicacoes_localizadas": 8,
+      "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
     {
       "fonte": "SENACON | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
+      "publicacoes_localizadas": 30,
+      "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
     {
       "fonte": "COAF | Notícias",
       "status": "erro_conteudo_origem",
       "tamanho_chars": 893,
-      "erro": "A origem retornou uma página de erro/manutenção (conteúdo restrito)."
+      "erro": "A origem retornou página de erro/manutenção (conteúdo restrito)."
     },
     {
       "fonte": "ANM | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
+      "publicacoes_localizadas": 1,
+      "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
     {
       "fonte": "EPE | Notícias",
       "status": "ok",
       "tamanho_chars": 9882,
+      "publicacoes_localizadas": 0,
+      "busca_complementar_executada": false,
       "conteudo_truncado": false
     },
     {
       "fonte": "ANTAQ | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
+      "publicacoes_localizadas": 4,
+      "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
     {
       "fonte": "CNPE | Comunicações",
       "status": "ok",
-      "tamanho_chars": 1250,
+      "tamanho_chars": 3231,
+      "publicacoes_localizadas": 5,
+      "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "Kollemata | Decretos",
       "status": "ok",
-      "tamanho_chars": 4417,
+      "tamanho_chars": 6353,
+      "publicacoes_localizadas": 6,
+      "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "ANATEL | Notícias",
       "status": "ok",
-      "tamanho_chars": 1305,
+      "tamanho_chars": 2001,
+      "publicacoes_localizadas": 2,
+      "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "SUSEP | Notícias",
       "status": "ok",
-      "tamanho_chars": 1393,
+      "tamanho_chars": 2246,
+      "publicacoes_localizadas": 2,
+      "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "ANTT | Notícias - Defeso Eleitoral",
       "status": "ok",
       "tamanho_chars": 30000,
+      "publicacoes_localizadas": 15,
+      "busca_complementar_executada": true,
       "conteudo_truncado": true
     }
   ],
@@ -214,13 +270,12 @@
   "resultado": {
     "status": "sucesso",
     "modelo_gemini_utilizado": "gemini-3.7-flash",
-    "itens_aceitos": 45,
-    "itens_descartados_pos_validacao": 0,
+    "itens_aceitos": 27,
     "fontes_ativas": 30,
     "fontes_suspensas": 3,
     "fontes_inativas": 0,
-    "fontes_sem_resultado": 7,
-    "fontes_sem_publicacao_hoje": 5,
+    "fontes_sem_resultado": 0,
+    "fontes_sem_publicacao_hoje": 13,
     "fontes_com_erro_tecnico": 2,
     "itens_por_boletim": {
       "trabalhista-empresarial": {
@@ -262,7 +317,7 @@
           "Regulatório",
           "Óleo & Gás Blue"
         ],
-        "total": 24
+        "total": 12
       },
       "imobiliario-infraestrutura": {
         "nome": "Radar Negócios Imobiliários e Infraestrutura",
@@ -270,7 +325,7 @@
           "Imobiliário",
           "Infraestrutura"
         ],
-        "total": 24
+        "total": 12
       },
       "ambiental-esg": {
         "nome": "Radar Ambiental e ESG",
@@ -284,7 +339,7 @@
         "clusters": [
           "Propriedade Intelectual"
         ],
-        "total": 3
+        "total": 2
       },
       "contencioso-civel": {
         "nome": "Radar Solução de Conflitos",
@@ -292,54 +347,39 @@
           "Contencioso Carbon",
           "Contencioso Gold"
         ],
-        "total": 2
+        "total": 1
       }
     },
     "filtro1_bloqueios": {
-      "regulatorio-oleo-gas": 4,
-      "societario-ma": 2,
+      "direito-tributario": 1,
+      "regulatorio-oleo-gas": 2,
       "propriedade-intelectual": 1,
-      "direito-tributario": 2,
       "contencioso-civel": 1,
-      "mercado-capitais-fundos": 2
+      "mercado-capitais-fundos": 1
     },
     "auditoria": {
-      "total_itens": 45,
-      "itens_com_alguma_rejeicao": 25,
-      "itens_com_bloqueio_f1": 12,
+      "total_itens": 27,
+      "itens_com_alguma_rejeicao": 14,
+      "itens_com_bloqueio_f1": 5,
       "rejeicoes_por_boletim": {
-        "contencioso-civel": 3,
-        "regulatorio-oleo-gas": 7,
-        "trabalhista-empresarial": 2,
-        "societario-ma": 7,
-        "direito-tributario": 6,
-        "imobiliario-infraestrutura": 1,
-        "propriedade-intelectual": 2,
-        "mercado-capitais-fundos": 2
+        "contencioso-civel": 5,
+        "regulatorio-oleo-gas": 3,
+        "societario-ma": 1,
+        "direito-tributario": 3,
+        "propriedade-intelectual": 1,
+        "mercado-capitais-fundos": 1
       },
       "top_palavras_chave_detectadas": [
         {
-          "palavra": "aneel",
-          "ocorrencias": 10
-        },
-        {
-          "palavra": "tarifas",
+          "palavra": "consulta pública",
           "ocorrencias": 5
         },
         {
-          "palavra": "ccee",
-          "ocorrencias": 3
-        },
-        {
-          "palavra": "concessão",
-          "ocorrencias": 3
+          "palavra": "aneel",
+          "ocorrencias": 5
         },
         {
           "palavra": "mme",
-          "ocorrencias": 3
-        },
-        {
-          "palavra": "consulta pública",
           "ocorrencias": 3
         },
         {
@@ -347,23 +387,15 @@
           "ocorrencias": 3
         },
         {
-          "palavra": "antt",
+          "palavra": "concessão",
           "ocorrencias": 3
         },
         {
-          "palavra": "mercado livre de energia",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "pld",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "crédito extraordinário",
-          "ocorrencias": 2
-        },
-        {
           "palavra": "receita federal",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "comissão de valores mobiliários",
           "ocorrencias": 2
         },
         {
@@ -371,60 +403,72 @@
           "ocorrencias": 2
         },
         {
-          "palavra": "b3",
+          "palavra": "processo administrativo",
           "ocorrencias": 2
         },
         {
-          "palavra": "reforma do setor elétrico",
+          "palavra": "ccee",
           "ocorrencias": 2
         },
         {
-          "palavra": "taxa de fiscalização",
+          "palavra": "mercado livre de energia",
           "ocorrencias": 2
         },
         {
-          "palavra": "lei 15.269",
+          "palavra": "energia",
           "ocorrencias": 2
         },
         {
-          "palavra": "transferência de controle societário",
+          "palavra": "pld",
           "ocorrencias": 2
         },
         {
-          "palavra": "reajuste tarifário",
+          "palavra": "setor elétrico",
           "ocorrencias": 2
         },
         {
-          "palavra": "propriedade intelectual",
+          "palavra": "energia elétrica",
           "ocorrencias": 2
+        },
+        {
+          "palavra": "distribuição",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "transmissão",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "inpi",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "suspensão de tributos",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "drawback",
+          "ocorrencias": 1
         }
       ]
     }
   },
   "filtro1_bloqueios_detalhe": {
+    "direito-tributario": [
+      "CVM está pronta para receber novos CNPJs alfanuméricos gerados pela Receita Federal"
+    ],
     "regulatorio-oleo-gas": [
       "CCEE lança campanha nacional para apresentar o mercado livre de energia para 90 milhões de brasileiros",
-      "CCEE na Mídia: Gerusa Côrtes explica abertura do mercado livre em reportagem do Jornal Nacional",
-      "Masterclass: avance nos estudos para a Certificação de Operadores do Mercado",
       "CT PMO/PLD abre consulta externa sobre os requisitos funcionais do novo modelo energético do setor"
-    ],
-    "societario-ma": [
-      "CVM está pronta para receber novos CNPJs alfanuméricos gerados pela Receita Federal",
-      "Sessão de Julgamento em 25/8"
     ],
     "propriedade-intelectual": [
       "ANP publica edital do Prêmio ANP de Inovação Tecnológica 2026"
-    ],
-    "direito-tributario": [
-      "MME coloca em consulta pública Taxa de Fiscalização dos Serviços de Energia Elétrica para comercializadores",
-      "Consulta Pública n° 227 de 24/08/2026"
     ],
     "contencioso-civel": [
       "ANEEL nega pedido de prova pericial feito pela Enel Distribuição São Paulo"
     ],
     "mercado-capitais-fundos": [
-      "Senacon abre averiguações sobre atuação de Banrisul e Agibank",
-      "ANTT avança na consolidação do free flow e anuncia nova etapa para meios de pagamento"
+      "Senacon abre averiguações sobre atuação de Banrisul e Agibank"
     ]
   }
 }
