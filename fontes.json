@@ -62,7 +62,7 @@
     "categoria": "Energia e Recursos",
     "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa",
     "ativo": true,
-    "tipo_coleta": "lista_estruturada"
+    "tipo_coleta": "indice_documentos"
   },
   {
     "fonte": "ANP | Pautas e Atas da Diretoria Colegiada",
