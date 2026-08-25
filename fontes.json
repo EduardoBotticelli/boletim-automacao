@@ -39,7 +39,10 @@
     "fonte": "CGU | Notícias",
     "categoria": "Regulatório e Setorial",
     "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias",
-    "ativo": false
+    "ativo": true,
+    "suspenso": true,
+    "motivo_suspensao": "Defeso eleitoral",
+    "reativar_em": "2026-10-26"
   },
   {
     "fonte": "ANP | Notícias",
@@ -48,10 +51,38 @@
     "ativo": true
   },
   {
+    "fonte": "ANP | Consultas e Audiências Públicas",
+    "categoria": "Energia e Recursos",
+    "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica",
+    "ativo": true,
+    "tipo_coleta": "lista_estruturada"
+  },
+  {
+    "fonte": "ANP | Consultas Prévias",
+    "categoria": "Energia e Recursos",
+    "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa",
+    "ativo": true,
+    "tipo_coleta": "lista_estruturada"
+  },
+  {
+    "fonte": "ANP | Pautas e Atas da Diretoria Colegiada",
+    "categoria": "Energia e Recursos",
+    "url": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada",
+    "ativo": true,
+    "tipo_coleta": "indice_documentos"
+  },
+  {
     "fonte": "MME | Notícias",
     "categoria": "Energia e Recursos",
     "url": "https://www.gov.br/mme/pt-br/assuntos/noticias",
     "ativo": true
+  },
+  {
+    "fonte": "MME | Consultas Públicas",
+    "categoria": "Energia e Recursos",
+    "url": "https://consultas-publicas.mme.gov.br/home",
+    "ativo": true,
+    "tipo_coleta": "lista_estruturada"
   },
   {
     "fonte": "ONS | Notícias",
@@ -69,13 +100,19 @@
     "fonte": "Secretaria de Prêmios e Apostas | Notícias",
     "categoria": "Regulatório e Setorial",
     "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias",
-    "ativo": false
+    "ativo": true,
+    "suspenso": true,
+    "motivo_suspensao": "Defeso eleitoral",
+    "reativar_em": "2026-10-26"
   },
   {
     "fonte": "Ministério do Meio Ambiente | Notícias",
     "categoria": "Regulatório e Setorial",
     "url": "https://www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias",
-    "ativo": false
+    "ativo": true,
+    "suspenso": true,
+    "motivo_suspensao": "Defeso eleitoral",
+    "reativar_em": "2026-10-26"
   },
   {
     "fonte": "Ministério da Agricultura | Notícias",
@@ -133,8 +170,26 @@
   },
   {
     "fonte": "Kollemata | Decretos",
-    "categoria": "Registros e Cartorios",
+    "categoria": "Registros e Cartórios",
     "url": "https://sinoreg-es.org.br/decretos/",
+    "ativo": true
+  },
+  {
+    "fonte": "ANATEL | Notícias",
+    "categoria": "Regulatório e Setorial",
+    "url": "https://www.gov.br/anatel/pt-br/assuntos/noticias",
+    "ativo": true
+  },
+  {
+    "fonte": "SUSEP | Notícias",
+    "categoria": "Financeiro e Mercado de Capitais",
+    "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias",
+    "ativo": true
+  },
+  {
+    "fonte": "ANTT | Notícias - Defeso Eleitoral",
+    "categoria": "Regulatório e Setorial",
+    "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral",
     "ativo": true
   }
 ]
