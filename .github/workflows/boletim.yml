@@ -3,15 +3,15 @@ on:
   workflow_dispatch:
     inputs:
       executar_teste_dou:
-        description: "Executar prova de conceito do DOU Regulatório"
-        required: false
-        default: true
+        description: Executar prova de conceito do DOU Regulatório
+        required: true
         type: boolean
-      data_dou_teste:
-        description: "Data do DOU em DD-MM-AAAA"
-        required: false
-        default: "24-08-2026"
+        default: true
+      dou_data:
+        description: Data do DOU em DD-MM-AAAA
+        required: true
         type: string
+        default: "24-08-2026"
 permissions:
   contents: write
 concurrency:
@@ -20,7 +20,7 @@ concurrency:
 jobs:
   gerar-radares:
     runs-on: ubuntu-latest
-    timeout-minutes: 75
+    timeout-minutes: 60
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -38,10 +38,7 @@ jobs:
       - name: Validar arquivos
         run: |
           python -m json.tool fontes.json > /dev/null
-          python -m py_compile scripts/gerar_boletim.py
-          python -m py_compile scripts/gerar_html.py
-          python -m py_compile scripts/gerar_auditoria_html.py
-          python -m py_compile scripts/testar_dou_regulatorio.py
+          python -m py_compile scripts/gerar_boletim.py scripts/gerar_html.py scripts/gerar_auditoria_html.py scripts/testar_dou_regulatorio.py
       - name: Gerar curadoria
         env:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
@@ -51,28 +48,20 @@ jobs:
         run: python scripts/gerar_html.py
       - name: Gerar auditoria
         run: python scripts/gerar_auditoria_html.py
-      - name: Testar DOU Regulatório
+      - name: Testar DOU
         if: ${{ inputs.executar_teste_dou }}
         env:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          DOU_DATA: ${{ inputs.data_dou_teste }}
-          DOU_SECAO: do1
+          DOU_DATA: ${{ inputs.dou_data }}
         run: python scripts/testar_dou_regulatorio.py
-      - name: Verificar saídas principais
+      - name: Verificar saídas
         run: |
           test -f output/boletim.json
           test -f output/log_execucao.json
           test -f output/auditoria.html
-          for slug in trabalhista-empresarial direito-tributario societario-ma mercado-capitais-fundos regulatorio-oleo-gas imobiliario-infraestrutura ambiental-esg propriedade-intelectual contencioso-civel; do
-            test -f "output/validacao_${slug}.html"
-          done
-      - name: Verificar saída DOU
-        if: ${{ inputs.executar_teste_dou }}
-        run: |
-          test -f output/teste_dou_regulatorio.json
-          test -f output/teste_dou_regulatorio.html
-      - name: Artifact principal
+          for slug in trabalhista-empresarial direito-tributario societario-ma mercado-capitais-fundos regulatorio-oleo-gas imobiliario-infraestrutura ambiental-esg propriedade-intelectual contencioso-civel; do test -f "output/validacao_${slug}.html"; done
+      - name: Artifact oficial
         uses: actions/upload-artifact@v4
         with:
           name: radares-validacao-${{ github.run_number }}
@@ -93,14 +82,11 @@ jobs:
           path: |
             output/teste_dou_regulatorio.json
             output/teste_dou_regulatorio.html
-      - name: Commit dos resultados oficiais
+      - name: Commit oficial
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add output/boletim.json output/log_execucao.json output/auditoria.html output/validacao_*.html
-          if git diff --staged --quiet; then
-            echo "Nenhuma alteração oficial."
-            exit 0
-          fi
+          if git diff --staged --quiet; then echo "Sem alterações."; exit 0; fi
           git commit -m "Atualiza curadoria e auditoria dos Radares - $(date +'%Y-%m-%d')"
           git push
