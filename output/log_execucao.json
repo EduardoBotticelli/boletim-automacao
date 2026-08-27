@@ -1,9 +1,9 @@
 {
   "data_execucao": "2026-08-27",
-  "executado_em": "2026-08-27T15:44:02.649142-03:00",
+  "executado_em": "2026-08-27T16:38:18.056064-03:00",
   "janela": {
     "inicio": "2026-08-26T00:00",
-    "fim": "2026-08-27T15:44"
+    "fim": "2026-08-27T16:38"
   },
   "fontes_processadas": [
     {
@@ -274,7 +274,7 @@
       "modelo": "gemini-3.7-flash",
       "tentativa": 2,
       "status": "erro",
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      "erro": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_to"
     },
     {
       "modelo": "gemini-3.6-flash",
@@ -297,12 +297,12 @@
   "resultado": {
     "status": "sucesso",
     "modelo_gemini_utilizado": "gemini-3.5-flash",
-    "itens_aceitos": 6,
+    "itens_aceitos": 9,
     "fontes_ativas": 30,
     "fontes_suspensas": 3,
     "fontes_inativas": 0,
     "fontes_sem_resultado": 1,
-    "fontes_sem_publicacao_hoje": 12,
+    "fontes_sem_publicacao_hoje": 10,
     "fontes_com_erro_tecnico": 1,
     "itens_por_boletim": {
       "trabalhista-empresarial": {
@@ -336,7 +336,7 @@
           "Financeiro Green",
           "Fundos"
         ],
-        "total": 1
+        "total": 2
       },
       "regulatorio-oleo-gas": {
         "nome": "Radar Regulatório e Óleo e Gás",
@@ -344,7 +344,7 @@
           "Regulatório",
           "Óleo & Gás Blue"
         ],
-        "total": 3
+        "total": 5
       },
       "imobiliario-infraestrutura": {
         "nome": "Radar Negócios Imobiliários e Infraestrutura",
@@ -378,25 +378,39 @@
       }
     },
     "filtro1_bloqueios": {
-      "ambiental-esg": 2
+      "societario-ma": 1,
+      "ambiental-esg": 2,
+      "imobiliario-infraestrutura": 1,
+      "regulatorio-oleo-gas": 1
     },
     "auditoria": {
-      "total_itens": 6,
-      "itens_com_alguma_rejeicao": 6,
-      "itens_com_bloqueio_f1": 1,
+      "total_itens": 9,
+      "itens_com_alguma_rejeicao": 9,
+      "itens_com_bloqueio_f1": 4,
       "rejeicoes_por_boletim": {
-        "societario-ma": 2,
-        "ambiental-esg": 3,
-        "direito-tributario": 2,
-        "mercado-capitais-fundos": 1
+        "direito-tributario": 1,
+        "propriedade-intelectual": 1,
+        "societario-ma": 3,
+        "ambiental-esg": 4,
+        "imobiliario-infraestrutura": 3,
+        "mercado-capitais-fundos": 1,
+        "regulatorio-oleo-gas": 2
       },
       "top_palavras_chave_detectadas": [
+        {
+          "palavra": "ofício circular",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "fiscalização",
+          "ocorrencias": 2
+        },
         {
           "palavra": "cvm",
           "ocorrencias": 1
         },
         {
-          "palavra": "ofício circular",
+          "palavra": "resolução cvm",
           "ocorrencias": 1
         },
         {
@@ -408,19 +422,43 @@
           "ocorrencias": 1
         },
         {
-          "palavra": "patente",
+          "palavra": "resolução cppi",
           "ocorrencias": 1
         },
         {
-          "palavra": "inpi",
+          "palavra": "ferrovias",
           "ocorrencias": 1
         },
         {
-          "palavra": "tecnologias verdes",
+          "palavra": "desestatização",
           "ocorrencias": 1
         },
         {
-          "palavra": "agricultura sustentável",
+          "palavra": "programa nacional de desestatização",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "arrecadação",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "receita federal",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "tributos",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "b3",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "índice de energia elétrica",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "ponderação",
           "ocorrencias": 1
         },
         {
@@ -438,46 +476,23 @@
         {
           "palavra": "baterias",
           "ocorrencias": 1
-        },
-        {
-          "palavra": "energia elétrica",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "arrecadação",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "receita federal",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "tributos",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "royalties",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "anp",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "petróleo",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "gás natural",
-          "ocorrencias": 1
         }
       ]
     }
   },
   "filtro1_bloqueios_detalhe": {
+    "societario-ma": [
+      "Áreas técnicas da CVM orientam sobre aplicação da Resolução CVM 244, que alterou a Resolução CVM 193"
+    ],
     "ambiental-esg": [
       "Áreas técnicas da CVM orientam sobre aplicação da Resolução CVM 244, que alterou a Resolução CVM 193",
       "Radar Tecnológico do INPI mapeia pedidos de patente em agricultura sustentável"
+    ],
+    "imobiliario-infraestrutura": [
+      "RESOLUÇÃO CPPI Nº 367, DE 28 DE ABRIL DE 2026"
+    ],
+    "regulatorio-oleo-gas": [
+      "053-2026-VPC-Ofício Circular - Mudança no Índice de Energia Elétrica"
     ]
   }
 }

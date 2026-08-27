@@ -6,22 +6,32 @@
       "categoria": "Financeiro e Mercado de Capitais",
       "titulo": "Áreas técnicas da CVM orientam sobre aplicação da Resolução CVM 244, que alterou a Resolução CVM 193",
       "data_publicacao": "2026-08-27",
-      "resumo": "Ofício Circular conjunto da SNC e da SEP orienta o mercado sobre a aplicação da Resolução CVM 244, que altera a Resolução CVM 193, tratando da elaboração e apresentação do relatório de informações financeiras relacionadas à sustentabilidade.",
-      "motivo_filtragem": "Classificado em mercado-capitais-fundos devido às orientações das áreas técnicas da CVM direcionadas ao mercado regulado, e em ambiental-esg por tratar de relatórios de informações financeiras de sustentabilidade.",
+      "resumo": "Ofício Circular conjunto da SNC e da SEP apresenta orientações sobre a aplicação da Resolução CVM 244, que promoveu alterações na Resolução CVM 193, tratando especificamente da elaboração e apresentação do relatório de informações financeiras relacionadas à sustentabilidade.",
+      "motivo_filtragem": "Classificado em Mercado de Capitais e Fundos de Investimento devido às orientações da CVM sobre resoluções de mercado; em Ambiental e ESG pelo foco no relatório de informações financeiras de sustentabilidade; e em Societário e M&A pelas diretrizes aplicáveis a companhias abertas (SEP).",
       "palavras_chave_detectadas": [
         "CVM",
-        "Ofício Circular",
+        "Resolução CVM",
         "sustentabilidade",
-        "relatório de informações financeiras"
+        "relatório de informações financeiras",
+        "Ofício Circular"
       ],
       "boletins_confirmados": [
         "mercado-capitais-fundos",
-        "ambiental-esg"
+        "ambiental-esg",
+        "societario-ma"
       ],
       "boletins_rejeitados": [
         {
+          "boletim": "direito-tributario",
+          "motivo": "Trata de obrigações acessórias de reporte financeiro e sustentabilidade perante a CVM, sem natureza de tributos ou planejamento fiscal."
+        },
+        {
+          "boletim": "propriedade-intelectual",
+          "motivo": "Não envolve ativos intangíveis, tecnologia ou proteção de dados pessoais."
+        },
+        {
           "boletim": "societario-ma",
-          "motivo": "Trata de obrigações de companhias abertas, mas o foco principal é a regulação de mercado de capitais e sustentabilidade."
+          "motivo": "Filtro 1: fonte 'CVM | Notícias' não está mapeada para este Radar"
         },
         {
           "boletim": "ambiental-esg",
@@ -34,15 +44,134 @@
       ]
     },
     {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "RESOLUÇÃO CPPI Nº 367, DE 28 DE ABRIL DE 2026",
+      "data_publicacao": "2026-08-27",
+      "resumo": "Resolução opina pela alteração de resoluções anteriores do CPPI e pela inclusão de trechos de ferrovias federais no Programa Nacional de Desestatização (PND).",
+      "motivo_filtragem": "Classificado em Negócios Imobiliários e Infraestrutura devido ao foco em ferrovias federais e desestatização; e em Regulatório por envolver o Programa Nacional de Desestatização e regulação de transportes.",
+      "palavras_chave_detectadas": [
+        "Resolução CPPI",
+        "ferrovias",
+        "desestatização",
+        "Programa Nacional de Desestatização"
+      ],
+      "boletins_confirmados": [
+        "imobiliario-infraestrutura",
+        "regulatorio-oleo-gas"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "societario-ma",
+          "motivo": "Apesar de tratar de desestatização, o foco é a inclusão de trechos ferroviários no PND, sem envolver diretamente fusões, aquisições ou governança corporativa privada."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Filtro 1: fonte 'Destaques do D.O.U.' não está mapeada para este Radar"
+        }
+      ],
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-cppi-n-367-de-28-de-abril-de-2026-728221720",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "Ministério da Fazenda | Notícias",
+      "categoria": "Tributário",
+      "titulo": "Arrecadação federal soma R$ 289,346 bilhões em julho, mostram os dados divulgados pela Receita",
+      "data_publicacao": "2026-08-26",
+      "resumo": "Divulgação dos dados de arrecadação de tributos federais referentes ao mês de julho de 2026, registrando crescimento nominal de 13,82% e alta real de 8,97% em comparação ao mesmo período de 2025.",
+      "motivo_filtragem": "Classificado em Direito Tributário por tratar diretamente da arrecadação de tributos federais e dados da Receita Federal.",
+      "palavras_chave_detectadas": [
+        "arrecadação",
+        "Receita Federal",
+        "tributos"
+      ],
+      "boletins_confirmados": [
+        "direito-tributario"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "mercado-capitais-fundos",
+          "motivo": "Trata de dados macroeconômicos de arrecadação tributária federal, sem impacto direto na regulação de valores mobiliários ou fundos de investimento."
+        }
+      ],
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/agosto/arrecadacao-federal-soma-r-289-346-bilhoes-em-julho-mostram-os-dados-divulgados-pela-receita",
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "fonte": "B3 | Ofícios e Comunicados",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "053-2026-VPC-Ofício Circular - Mudança no Índice de Energia Elétrica",
+      "data_publicacao": "2026-08-27",
+      "resumo": "Ofício Circular comunica alteração na metodologia do Índice de Energia Elétrica (IEE) da B3 para o rebalanceamento de setembro de 2026, ajustando o percentual de ponderação por emissor.",
+      "motivo_filtragem": "Classificado em Mercado de Capitais e Fundos de Investimento por se tratar de alteração metodológica em índice de ações da B3; e em Regulatório e Óleo e Gás devido ao setor de energia elétrica.",
+      "palavras_chave_detectadas": [
+        "B3",
+        "Ofício Circular",
+        "Índice de Energia Elétrica",
+        "ponderação"
+      ],
+      "boletins_confirmados": [
+        "mercado-capitais-fundos",
+        "regulatorio-oleo-gas"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Apesar de mencionar energia elétrica, a norma altera a metodologia de um índice de ações na bolsa de valores, sem tratar de projetos de infraestrutura ou contratos de concessão."
+        },
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Filtro 1: fonte 'B3 | Ofícios e Comunicados' não está mapeada para este Radar"
+        }
+      ],
+      "url": "https://www.b3.com.br/data/files/EC/75/F9/BF/27440A105BF9020AAC094EA8/OC%20053-2026-VPC%20MUDANCA%20NO%20%C3%8DNDICE%20DE%20ENERGIA%20ELETRICA_PT.pdf",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "ANEEL | Últimas Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "ANEEL promoverá audiência pública sobre editais dos primeiros leilões de baterias de grande porte do Brasil",
+      "data_publicacao": "2026-08-27",
+      "resumo": "ANEEL anuncia a realização de audiência pública para discutir as minutas de editais e contratos dos Leilões de Reserva de Capacidade na forma de potência, focando na inserção de baterias de grande porte no sistema elétrico nacional.",
+      "motivo_filtragem": "Classificado em Regulatório e Óleo e Gás por se tratar de audiência pública e regulação setorial da ANEEL; e em Negócios Imobiliários e Infraestrutura por envolver leilões de reserva de capacidade e infraestrutura de energia.",
+      "palavras_chave_detectadas": [
+        "ANEEL",
+        "audiência pública",
+        "Leilões de Reserva de Capacidade",
+        "baterias"
+      ],
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Embora envolva transição energética e baterias, o foco do ato é a regulação tarifária, contratual e licitatória do leilão de reserva de capacidade."
+        }
+      ],
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-promovera-audiencia-publica-sobre-editais-dos-primeiros-leiloes-de-baterias-de-grande-porte-do-brasil",
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
       "fonte": "INPI | Notícias",
       "categoria": "Regulatório e Setorial",
       "titulo": "Radar Tecnológico do INPI mapeia pedidos de patente em agricultura sustentável",
       "data_publicacao": "2026-08-27",
-      "resumo": "O INPI publicou um estudo de Radar Tecnológico mapeando os pedidos de patente relacionados à agricultura sustentável, destacando o panorama de desenvolvimento de tecnologias verdes no setor.",
-      "motivo_filtragem": "Classificado em propriedade-intelectual devido ao mapeamento de patentes pelo INPI, e em ambiental-esg por focar em tecnologias verdes e agricultura sustentável.",
+      "resumo": "INPI publica estudo de Radar Tecnológico que mapeia os pedidos de patentes relacionados a tecnologias verdes e práticas de agricultura sustentável no Brasil.",
+      "motivo_filtragem": "Classificado em Propriedade Intelectual por tratar de mapeamento de patentes do INPI; e em Ambiental e ESG por focar em tecnologias verdes e sustentabilidade.",
       "palavras_chave_detectadas": [
-        "patente",
         "INPI",
+        "patente",
         "tecnologias verdes",
         "agricultura sustentável"
       ],
@@ -52,8 +181,8 @@
       ],
       "boletins_rejeitados": [
         {
-          "boletim": "direito-tributario",
-          "motivo": "Não aborda incentivos fiscais ou tributação de patentes."
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Trata de mapeamento de patentes e tecnologias verdes, sem focar em regulação setorial de energia, óleo e gás ou mineração."
         },
         {
           "boletim": "ambiental-esg",
@@ -66,84 +195,55 @@
       ]
     },
     {
-      "fonte": "ANEEL | Últimas Notícias",
-      "categoria": "Energia e Recursos",
-      "titulo": "ANEEL promoverá audiência pública sobre editais dos primeiros leilões de baterias de grande porte do Brasil",
-      "data_publicacao": "2026-08-27",
-      "resumo": "A ANEEL anunciou a realização de uma audiência pública para discutir as minutas dos editais e contratos dos Leilões de Reserva de Capacidade na forma de potência, previstos para dezembro de 2026, com foco na introdução de baterias de grande porte no sistema elétrico brasileiro.",
-      "motivo_filtragem": "Classificado em regulatorio-oleo-gas por se tratar de audiência pública e regulação setorial da ANEEL, e em imobiliario-infraestrutura devido ao impacto na infraestrutura de energia elétrica e armazenamento (baterias).",
-      "palavras_chave_detectadas": [
-        "ANEEL",
-        "audiência pública",
-        "Leilões de Reserva de Capacidade",
-        "baterias",
-        "energia elétrica"
-      ],
-      "boletins_confirmados": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "ambiental-esg",
-          "motivo": "Embora envolva baterias e transição energética, o foco do documento é estritamente regulatório e de infraestrutura de leilão."
-        }
-      ],
-      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-promovera-audiencia-publica-sobre-editais-dos-primeiros-leiloes-de-baterias-de-grande-porte-do-brasil",
-      "boletins": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura"
-      ]
-    },
-    {
-      "fonte": "Ministério da Fazenda | Notícias",
-      "categoria": "Tributário",
-      "titulo": "Arrecadação federal soma R$ 289,346 bilhões em julho, mostram os dados divulgados pela Receita",
+      "fonte": "ANVISA | Notícias",
+      "categoria": "Saúde e Vigilância Sanitária",
+      "titulo": "Anvisa estabelece novas regras de segurança sanitária para aeroportos e empresas do setor aéreo",
       "data_publicacao": "2026-08-26",
-      "resumo": "A Receita Federal divulgou que a arrecadação de tributos federais atingiu R$ 289,346 bilhões em julho de 2026, registrando um crescimento real de 8,97% em comparação ao mesmo mês do ano anterior.",
-      "motivo_filtragem": "Classificado em direito-tributario por tratar diretamente de dados de arrecadação de tributos federais divulgados pela Receita Federal.",
+      "resumo": "Anvisa aprova nova regulamentação que moderniza o modelo de fiscalização sanitária em aeroportos e aeronaves, incorporando diretrizes de gestão da qualidade e análise baseada em risco sanitário.",
+      "motivo_filtragem": "Classificado em Regulatório e Óleo e Gás por se tratar de novas regras e fiscalização setorial da ANVISA aplicáveis a aeroportos e aviação.",
       "palavras_chave_detectadas": [
-        "arrecadação",
-        "Receita Federal",
-        "tributos"
-      ],
-      "boletins_confirmados": [
-        "direito-tributario"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "mercado-capitais-fundos",
-          "motivo": "Trata de arrecadação fiscal geral, sem relação direta com regulação de mercado de capitais."
-        }
-      ],
-      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/agosto/arrecadacao-federal-soma-r-289-346-bilhoes-em-julho-mostram-os-dados-divulgados-pela-receita",
-      "boletins": [
-        "direito-tributario"
-      ]
-    },
-    {
-      "fonte": "ANP | Notícias",
-      "categoria": "Energia e Recursos",
-      "titulo": "Royalties: valores referentes à produção de junho foram distribuídos hoje a estados e municípios",
-      "data_publicacao": "2026-08-27",
-      "resumo": "A ANP realizou a distribuição dos valores de royalties referentes à produção de petróleo e gás natural do mês de junho de 2026 para os estados e municípios beneficiários.",
-      "motivo_filtragem": "Classificado em regulatorio-oleo-gas por tratar da distribuição de royalties decorrentes da produção de petróleo e gás natural sob regulação da ANP.",
-      "palavras_chave_detectadas": [
-        "royalties",
-        "ANP",
-        "petróleo",
-        "gás natural"
+        "Anvisa",
+        "segurança sanitária",
+        "aeroportos",
+        "fiscalização"
       ],
       "boletins_confirmados": [
         "regulatorio-oleo-gas"
       ],
       "boletins_rejeitados": [
         {
-          "boletim": "direito-tributario",
-          "motivo": "Royalties de petróleo são participações governamentais de natureza não tributária."
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Apesar de se aplicar a aeroportos, a norma trata estritamente de vigilância e segurança sanitária, sem impacto em concessões, obras ou financiamento de infraestrutura."
         }
       ],
-      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/royalties-valores-referentes-a-producao-de-junho-foram-distribuidos-hoje-a-estados-e-municipios",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-estabelece-novas-regras-de-seguranca-sanitaria-para-aeroportos-e-empresas-do-setor-aereo",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "ANM | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Rastreabilidade e inteligência fiscalizatória entram no debate sobre cadeia do ouro na Exposibram 2026",
+      "data_publicacao": "2026-08-27",
+      "resumo": "Debate na Exposibram 2026 destaca a importância da integração entre órgãos públicos para aprimorar a rastreabilidade e a inteligência fiscalizatória na cadeia de produção do ouro, visando combater a extração ilegal.",
+      "motivo_filtragem": "Classificado em Regulatório e Óleo e Gás por tratar de fiscalização, rastreabilidade e cadeia produtiva do ouro sob a ótica da ANM.",
+      "palavras_chave_detectadas": [
+        "ANM",
+        "rastreabilidade",
+        "ouro",
+        "fiscalização"
+      ],
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Embora o combate ao garimpo ilegal tenha forte apelo ambiental, o foco da publicação é a fiscalização regulatória e a rastreabilidade da cadeia mineral pela ANM."
+        }
+      ],
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/rastreabilidade-e-inteligencia-fiscalizatoria-entram-no-debate-sobre-cadeia-do-ouro-na-exposibram-2026-1",
       "boletins": [
         "regulatorio-oleo-gas"
       ]
@@ -153,13 +253,12 @@
       "categoria": "Energia e Recursos",
       "titulo": "ANTAQ realiza visita técnica a empresas de navegação em Santos",
       "data_publicacao": "2026-08-26",
-      "resumo": "A ANTAQ realizou uma visita técnica a empresas de navegação em Santos, abordando temas estratégicos como a cadeia logística de contêineres, planejamento e regulação do setor aquaviário.",
-      "motivo_filtragem": "Classificado em regulatorio-oleo-gas devido à atuação regulatória da ANTAQ no setor de transportes aquaviários, e em imobiliario-infraestrutura por envolver a infraestrutura portuária e logística de Santos.",
+      "resumo": "ANTAQ realiza visitas técnicas a armadores e empresas de navegação no porto de Santos para discutir regulação, planejamento e a cadeia logística de contêineres.",
+      "motivo_filtragem": "Classificado em Regulatório e Óleo e Gás por envolver a atuação fiscalizatória e regulatória da ANTAQ; e em Negócios Imobiliários e Infraestrutura por tratar da infraestrutura portuária e logística de Santos.",
       "palavras_chave_detectadas": [
         "ANTAQ",
         "navegação",
         "Santos",
-        "logística",
         "portos"
       ],
       "boletins_confirmados": [
@@ -169,7 +268,7 @@
       "boletins_rejeitados": [
         {
           "boletim": "societario-ma",
-          "motivo": "Trata de visitas técnicas regulatórias, sem envolver fusões, aquisições ou reorganizações societárias das empresas."
+          "motivo": "Trata de visita técnica institucional e regulação logística portuária, sem envolver operações societárias ou direito concorrencial."
         }
       ],
       "url": "https://www.gov.br/antaq/pt-br/noticias/2026/antaq-realiza-visita-tecnica-a-empresas-de-navegacao-em-santos",
@@ -181,15 +280,11 @@
   ],
   "fontes_sem_publicacao_hoje": [
     {
-      "fonte": "Planalto | Resenha Diaria",
-      "motivo": "Nenhuma publicação foi identificada dentro da janela."
-    },
-    {
       "fonte": "ANPD | Notícias",
       "motivo": "Nenhuma publicação foi identificada dentro da janela."
     },
     {
-      "fonte": "ANP | Consultas e Audiências Públicas",
+      "fonte": "SENACON | Notícias",
       "motivo": "Nenhuma publicação foi identificada dentro da janela."
     },
     {
@@ -197,7 +292,7 @@
       "motivo": "Nenhuma publicação foi identificada dentro da janela."
     },
     {
-      "fonte": "ANP | Pautas e Atas da Diretoria Colegiada",
+      "fonte": "ANP | Pautas e Atas de Diretoria Colegiada",
       "motivo": "Nenhuma publicação foi identificada dentro da janela."
     },
     {
@@ -210,10 +305,6 @@
     },
     {
       "fonte": "ONS | Notícias",
-      "motivo": "Nenhuma publicação foi identificada dentro da janela."
-    },
-    {
-      "fonte": "SENACON | Notícias",
       "motivo": "Nenhuma publicação foi identificada dentro da janela."
     },
     {
@@ -243,7 +334,7 @@
   ],
   "janela_aplicada": {
     "inicio": "2026-08-26T00:00",
-    "fim": "2026-08-27T15:44"
+    "fim": "2026-08-27T16:38"
   },
   "modelo_gemini_utilizado": "gemini-3.5-flash",
   "validacao_fontes": [
@@ -252,7 +343,7 @@
       "status_coleta": "ok",
       "publicacoes_localizadas": 0,
       "publicacoes_aprovadas": 0,
-      "status_editorial": "sem_publicacao_na_janela",
+      "status_editorial": "publicacoes_sem_aderencia_editorial",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
     },
@@ -278,8 +369,8 @@
       "fonte": "Destaques do D.O.U.",
       "status_coleta": "ok",
       "publicacoes_localizadas": 0,
-      "publicacoes_aprovadas": 0,
-      "status_editorial": "publicacoes_sem_aderencia_editorial",
+      "publicacoes_aprovadas": 1,
+      "status_editorial": "itens_incluidos",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
     },
@@ -323,8 +414,8 @@
       "fonte": "B3 | Ofícios e Comunicados",
       "status_coleta": "ok",
       "publicacoes_localizadas": 0,
-      "publicacoes_aprovadas": 0,
-      "status_editorial": "publicacoes_sem_aderencia_editorial",
+      "publicacoes_aprovadas": 1,
+      "status_editorial": "itens_incluidos",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
     },
@@ -332,8 +423,8 @@
       "fonte": "ANP | Notícias",
       "status_coleta": "ok",
       "publicacoes_localizadas": 3,
-      "publicacoes_aprovadas": 1,
-      "status_editorial": "itens_incluidos",
+      "publicacoes_aprovadas": 0,
+      "status_editorial": "publicacoes_sem_aderencia_editorial",
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
@@ -342,7 +433,7 @@
       "status_coleta": "ok",
       "publicacoes_localizadas": 3,
       "publicacoes_aprovadas": 0,
-      "status_editorial": "sem_publicacao_na_janela",
+      "status_editorial": "publicacoes_sem_aderencia_editorial",
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
@@ -360,7 +451,7 @@
       "status_coleta": "ok",
       "publicacoes_localizadas": 3,
       "publicacoes_aprovadas": 0,
-      "status_editorial": "sem_publicacao_na_janela",
+      "status_editorial": "publicacoes_sem_aderencia_editorial",
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
@@ -413,8 +504,8 @@
       "fonte": "ANVISA | Notícias",
       "status_coleta": "ok",
       "publicacoes_localizadas": 0,
-      "publicacoes_aprovadas": 0,
-      "status_editorial": "publicacoes_sem_aderencia_editorial",
+      "publicacoes_aprovadas": 1,
+      "status_editorial": "itens_incluidos",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
     },
@@ -449,8 +540,8 @@
       "fonte": "ANM | Notícias",
       "status_coleta": "ok",
       "publicacoes_localizadas": 3,
-      "publicacoes_aprovadas": 0,
-      "status_editorial": "publicacoes_sem_aderencia_editorial",
+      "publicacoes_aprovadas": 1,
+      "status_editorial": "itens_incluidos",
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
@@ -550,7 +641,7 @@
         "Financeiro Green",
         "Fundos"
       ],
-      "total": 1
+      "total": 2
     },
     "regulatorio-oleo-gas": {
       "nome": "Radar Regulatório e Óleo e Gás",
@@ -558,7 +649,7 @@
         "Regulatório",
         "Óleo & Gás Blue"
       ],
-      "total": 3
+      "total": 5
     },
     "imobiliario-infraestrutura": {
       "nome": "Radar Negócios Imobiliários e Infraestrutura",
@@ -860,22 +951,33 @@
     ]
   },
   "auditoria": {
-    "total_itens": 6,
-    "itens_com_alguma_rejeicao": 6,
-    "itens_com_bloqueio_f1": 1,
+    "total_itens": 9,
+    "itens_com_alguma_rejeicao": 9,
+    "itens_com_bloqueio_f1": 4,
     "rejeicoes_por_boletim": {
-      "societario-ma": 2,
-      "ambiental-esg": 3,
-      "direito-tributario": 2,
-      "mercado-capitais-fundos": 1
+      "direito-tributario": 1,
+      "propriedade-intelectual": 1,
+      "societario-ma": 3,
+      "ambiental-esg": 4,
+      "imobiliario-infraestrutura": 3,
+      "mercado-capitais-fundos": 1,
+      "regulatorio-oleo-gas": 2
     },
     "top_palavras_chave_detectadas": [
+      {
+        "palavra": "ofício circular",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "fiscalização",
+        "ocorrencias": 2
+      },
       {
         "palavra": "cvm",
         "ocorrencias": 1
       },
       {
-        "palavra": "ofício circular",
+        "palavra": "resolução cvm",
         "ocorrencias": 1
       },
       {
@@ -887,19 +989,43 @@
         "ocorrencias": 1
       },
       {
-        "palavra": "patente",
+        "palavra": "resolução cppi",
         "ocorrencias": 1
       },
       {
-        "palavra": "inpi",
+        "palavra": "ferrovias",
         "ocorrencias": 1
       },
       {
-        "palavra": "tecnologias verdes",
+        "palavra": "desestatização",
         "ocorrencias": 1
       },
       {
-        "palavra": "agricultura sustentável",
+        "palavra": "programa nacional de desestatização",
+        "ocorrencias": 1
+      },
+      {
+        "palavra": "arrecadação",
+        "ocorrencias": 1
+      },
+      {
+        "palavra": "receita federal",
+        "ocorrencias": 1
+      },
+      {
+        "palavra": "tributos",
+        "ocorrencias": 1
+      },
+      {
+        "palavra": "b3",
+        "ocorrencias": 1
+      },
+      {
+        "palavra": "índice de energia elétrica",
+        "ocorrencias": 1
+      },
+      {
+        "palavra": "ponderação",
         "ocorrencias": 1
       },
       {
@@ -916,38 +1042,6 @@
       },
       {
         "palavra": "baterias",
-        "ocorrencias": 1
-      },
-      {
-        "palavra": "energia elétrica",
-        "ocorrencias": 1
-      },
-      {
-        "palavra": "arrecadação",
-        "ocorrencias": 1
-      },
-      {
-        "palavra": "receita federal",
-        "ocorrencias": 1
-      },
-      {
-        "palavra": "tributos",
-        "ocorrencias": 1
-      },
-      {
-        "palavra": "royalties",
-        "ocorrencias": 1
-      },
-      {
-        "palavra": "anp",
-        "ocorrencias": 1
-      },
-      {
-        "palavra": "petróleo",
-        "ocorrencias": 1
-      },
-      {
-        "palavra": "gás natural",
         "ocorrencias": 1
       }
     ]
