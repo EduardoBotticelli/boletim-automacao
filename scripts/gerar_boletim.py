@@ -300,7 +300,14 @@ def main():
     stats = {s: {"nome": NOMES[s], "clusters": CLUSTERS[s], "total": sum(s in i.get("boletins", []) for i in itens)} for s in SLUGS}
     boletim.update({"data_execucao": hoje.isoformat(), "janela_aplicada": {"inicio": inicio_iso, "fim": fim_iso}, "modelo_gemini_utilizado": modelo, "itens": itens, "fontes_sem_resultado": sem_resultado, "fontes_sem_publicacao_hoje": sem_publicacao, "fontes_com_erro_tecnico": erros, "validacao_fontes": validacao, "estatisticas_por_boletim": stats})
     boletim["boletins_config"] = {"descricao": "Informativo com atualizações legislativas, regulamentações, consultas públicas e publicações de órgãos reguladores.", "boletins_disponiveis": SLUGS, "nomes_radares": NOMES, "clusters_por_boletim": CLUSTERS, "fontes_email_pendentes": EMAIL, "fontes_pendentes_integracao": {"regulatorio-oleo-gas": ["CADE - DOU", "MEC - DOU", "MDIC - DOU", "Câmara dos Deputados", "Senado Federal", "Agência Eixos"]}, "mapeamento_fonte_boletim": MAPA, "fontes_em_defeso": log["fontes_suspensas"]}
-    boletim["auditoria"] = {"total_itens": len(itens), "itens_com_alguma_rejeicao": sum(bool(i.get("boletins_rejeitados")) for i in itens), "itens_com_bloqueio_f1": sum(bool(v) for v in bloqueios.values()), "rejeicoes_por_boletim": dict(rejeicoes), "top_palavras_chave_detectadas": [{"palavra": p, "ocorrencias": c} for p, c in palavras.most_common(20)]}
+    boletim["auditoria"] = {"total_itens": len(itens), "itens_com_alguma_rejeicao": sum(bool(i.get("boletins_rejeitados")) for i in itens), "itens_com_bloqueio_f1": len(
+        {
+            titulo
+            for titulos in bloqueios.values()
+            for titulo in titulos
+            if titulo
+        }
+    ), "rejeicoes_por_boletim": dict(rejeicoes), "top_palavras_chave_detectadas": [{"palavra": p, "ocorrencias": c} for p, c in palavras.most_common(20)]}
     log["resultado"] = {"status": "sucesso", "modelo_gemini_utilizado": modelo, "itens_aceitos": len(itens), "fontes_ativas": len(ativas), "fontes_suspensas": len(suspensas), "fontes_inativas": len(inativas), "fontes_sem_resultado": len(sem_resultado), "fontes_sem_publicacao_hoje": len(sem_publicacao), "fontes_com_erro_tecnico": len(erros), "itens_por_boletim": stats, "filtro1_bloqueios": {s: len(v) for s, v in bloqueios.items()}, "auditoria": boletim["auditoria"]}
     if bloqueios:
         log["filtro1_bloqueios_detalhe"] = bloqueios
