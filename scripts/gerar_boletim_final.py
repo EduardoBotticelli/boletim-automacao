@@ -13,6 +13,8 @@ Princípios:
 - mantém os nove slugs técnicos;
 - não publica itens sem decisão aprovada;
 - aceita edições de título, resumo, URL, fonte, data e Radares;
+- publica itens adicionados manualmente no portal, que chegam com o conteúdo
+  embutido na própria decisão por não existirem no boletim.json;
 - ignora itens rejeitados;
 - não exibe metadados técnicos de IA, filtros ou auditoria;
 - não sobrescreve e-mails finais se o arquivo de decisões estiver ausente,
@@ -83,6 +85,12 @@ STATUS_APROVADOS = {
     "aprovada",
     "aprovar",
     "approved",
+    # O portal classifica como "ajustado" o item aprovado cujos Radares foram
+    # alterados na curadoria. Continua sendo uma aprovação.
+    "ajustado",
+    "ajustada",
+    "editado",
+    "editada",
     "mantido",
     "mantida",
     "incluir",
@@ -143,6 +151,16 @@ CAMPOS_LISTA_DECISOES = [
     "items",
     "revisoes",
     "revisões",
+]
+
+# Onde procurar o conteúdo de um item adicionado manualmente no portal.
+CAMPOS_ITEM_EMBUTIDO = [
+    "noticia",
+    "notícia",
+    "item",
+    "item_manual",
+    "conteudo",
+    "conteúdo",
 ]
 
 
@@ -491,6 +509,65 @@ def aplicar_edicoes(item, decisao):
     return atualizado
 
 
+def extrair_item_embutido(decisao):
+    """Devolve o conteúdo do item carregado dentro da própria decisão."""
+    for campo in CAMPOS_ITEM_EMBUTIDO:
+        valor = decisao.get(campo)
+        if isinstance(valor, dict):
+            return valor
+    return {}
+
+
+def decisao_e_manual(decisao):
+    return normalizar_texto(decisao.get("origem")) == "manual"
+
+
+def item_de_decisao(decisao):
+    """
+    Reconstrói um item a partir de uma decisão sem correspondente no
+    boletim.json.
+
+    É o caso dos itens que a curadoria adiciona manualmente no portal: eles
+    nunca passaram pelo pipeline de coleta, então o texto só existe dentro da
+    decisão. Devolve None quando a decisão não carrega conteúdo suficiente.
+    """
+    base = extrair_item_embutido(decisao)
+
+    if not base and not decisao_e_manual(decisao):
+        return None
+
+    titulo = texto_limpo(base.get("titulo") or decisao.get("titulo"))
+    if not titulo:
+        return None
+
+    return {
+        "fonte": texto_limpo(base.get("fonte") or decisao.get("fonte")),
+        "categoria": (
+            texto_limpo(base.get("categoria") or decisao.get("categoria"))
+            or "Adicionado manualmente"
+        ),
+        "titulo": titulo,
+        "resumo": texto_limpo(base.get("resumo") or decisao.get("resumo")),
+        "data_publicacao": texto_limpo(
+            base.get("data_publicacao") or decisao.get("data_publicacao")
+        ),
+        "url": url_segura(base.get("url") or decisao.get("url")),
+        "boletins": lista_slugs(base.get("boletins")),
+        "origem": "manual",
+    }
+
+
+def resumo_do_item(item, motivo=None):
+    registro = {
+        "fonte": item.get("fonte", ""),
+        "titulo": item.get("titulo", ""),
+        "url": item.get("url", ""),
+    }
+    if motivo:
+        registro["motivo"] = motivo
+    return registro
+
+
 def aplicar_decisoes(itens_originais, decisoes):
     indice = defaultdict(list)
 
@@ -499,22 +576,17 @@ def aplicar_decisoes(itens_originais, decisoes):
             indice[chave].append(decisao)
 
     aprovados = []
+    manuais = 0
     rejeitados = 0
     sem_decisao = []
     decisoes_sem_item = set(range(len(decisoes)))
-    mapa_indices = {id(decisao): indice for indice, decisao in enumerate(decisoes)}
+    mapa_indices = {id(decisao): posicao for posicao, decisao in enumerate(decisoes)}
 
     for item in itens_originais:
         decisao = localizar_decisao(item, indice)
 
         if decisao is None:
-            sem_decisao.append(
-                {
-                    "fonte": item.get("fonte", ""),
-                    "titulo": item.get("titulo", ""),
-                    "url": item.get("url", ""),
-                }
-            )
+            sem_decisao.append(resumo_do_item(item))
             continue
 
         decisoes_sem_item.discard(mapa_indices[id(decisao)])
@@ -526,12 +598,7 @@ def aplicar_decisoes(itens_originais, decisoes):
 
         if status != "aprovado":
             sem_decisao.append(
-                {
-                    "fonte": item.get("fonte", ""),
-                    "titulo": item.get("titulo", ""),
-                    "url": item.get("url", ""),
-                    "motivo": "Decisão sem status reconhecido",
-                }
+                resumo_do_item(item, "Decisão sem status reconhecido")
             )
             continue
 
@@ -540,20 +607,49 @@ def aplicar_decisoes(itens_originais, decisoes):
 
         if not atualizado["boletins"]:
             sem_decisao.append(
-                {
-                    "fonte": atualizado.get("fonte", ""),
-                    "titulo": atualizado.get("titulo", ""),
-                    "url": atualizado.get("url", ""),
-                    "motivo": "Item aprovado sem Radar final",
-                }
+                resumo_do_item(atualizado, "Item aprovado sem Radar final")
             )
             continue
 
         aprovados.append(atualizado)
 
-    decisoes_orfas = [decisoes[indice] for indice in sorted(decisoes_sem_item)]
+    # Decisões que sobraram: ou são itens adicionados manualmente no portal
+    # (e trazem o próprio conteúdo), ou não têm como ser publicadas.
+    decisoes_orfas = []
 
-    return aprovados, rejeitados, sem_decisao, decisoes_orfas
+    for posicao in sorted(decisoes_sem_item):
+        decisao = decisoes[posicao]
+        status = obter_status(decisao)
+
+        if status == "rejeitado":
+            rejeitados += 1
+            continue
+
+        item_manual = item_de_decisao(decisao)
+
+        if item_manual is None:
+            decisoes_orfas.append(decisao)
+            continue
+
+        if status != "aprovado":
+            sem_decisao.append(
+                resumo_do_item(item_manual, "Decisão sem status reconhecido")
+            )
+            continue
+
+        atualizado = aplicar_edicoes(item_manual, decisao)
+        atualizado["boletins"] = lista_slugs(atualizado.get("boletins", []))
+
+        if not atualizado["boletins"]:
+            sem_decisao.append(
+                resumo_do_item(atualizado, "Item manual aprovado sem Radar final")
+            )
+            continue
+
+        aprovados.append(atualizado)
+        manuais += 1
+
+    return aprovados, manuais, rejeitados, sem_decisao, decisoes_orfas
 
 
 def remover_duplicados(itens):
@@ -745,7 +841,7 @@ def main():
             "Os e-mails finais foram preservados."
         )
 
-    aprovados, rejeitados, sem_decisao, decisoes_orfas = aplicar_decisoes(
+    aprovados, manuais, rejeitados, sem_decisao, decisoes_orfas = aplicar_decisoes(
         boletim["itens"],
         decisoes,
     )
@@ -801,14 +897,21 @@ def main():
         "total_itens_boletim": len(boletim["itens"]),
         "total_decisoes": len(decisoes),
         "total_aprovados": len(aprovados),
+        "total_itens_manuais": manuais,
         "total_rejeitados": rejeitados,
         "decisoes_sem_item_correspondente": decisoes_orfas,
         "arquivos_gerados": arquivos_gerados,
     }
     escrever_json_atomico(RESUMO_PATH, resumo)
 
+    if decisoes_orfas:
+        print(
+            f"Aviso: {len(decisoes_orfas)} decisão(ões) sem item correspondente "
+            "no boletim.json foram ignoradas. Ver o resumo."
+        )
+
     print("=" * 60)
-    print(f"Itens aprovados: {len(aprovados)}")
+    print(f"Itens aprovados: {len(aprovados)} (dos quais {manuais} manuais)")
     print(f"Itens rejeitados: {rejeitados}")
     print(f"Radares gerados: {len(arquivos_gerados)}")
     print(f"Resumo: {RESUMO_PATH}")
