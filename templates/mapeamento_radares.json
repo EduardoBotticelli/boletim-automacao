@@ -7,12 +7,14 @@
     "antes do '|') com o nome da seção do template, sem acento e sem",
     "pontuação. 'aliases_fonte' cobre o que sobra.",
     "",
+    "Cada alias tem um '_motivo' explicando a escolha. Ele é ignorado pelo",
+    "código: só as chaves que são slug de Radar valem como destino.",
+    "",
     "Para rotear uma fonte nova, acrescente uma entrada em 'aliases_fonte' com",
     "o nome da fonte como chave e a âncora da seção do template como valor.",
     "As âncoras de cada template aparecem no relatório do",
     "scripts/inspecionar_templates.py."
   ],
-
   "templates": {
     "trabalhista-empresarial": "Template_Radar Trabalhista.msg",
     "direito-tributario": "Template_Radar Tributário.msg",
@@ -24,7 +26,6 @@
     "propriedade-intelectual": "Template_Radar Propriedade Intelectual_ Tecnologia e Privacidade.msg",
     "contencioso-civel": "Template_Radar Solução de Conflitos.msg"
   },
-
   "assuntos": {
     "trabalhista-empresarial": "Radar Trabalhista Empresarial",
     "direito-tributario": "Radar Tributário",
@@ -36,21 +37,64 @@
     "propriedade-intelectual": "Radar Propriedade Intelectual, Tecnologia e Privacidade",
     "contencioso-civel": "Radar Solução de Conflitos"
   },
-
   "aliases_fonte": {
     "_comentario": "chave = nome da fonte no boletim.json; valor = âncora da seção no template do Radar",
     "Ministério do Meio Ambiente": {
+      "_motivo": "O template chama a mesma fonte de 'Ministério do Meio Ambiente e Mudança do Clima'.",
       "ambiental-esg": "MinisterioMeioAmbiente"
     },
     "Ministério da Agricultura": {
+      "_motivo": "O template usa a sigla MAPA para o Ministério da Agricultura e Pecuária.",
       "ambiental-esg": "MAPA",
       "imobiliario-infraestrutura": "MAPA"
     },
     "Kollemata": {
+      "_motivo": "Mesma fonte, nomes iguais; alias mantido por clareza.",
       "imobiliario-infraestrutura": "Kollemata"
     },
     "Portal Reforma Tributária": {
+      "_motivo": "Mesma fonte, nomes iguais; alias mantido por clareza.",
       "direito-tributario": "PortalReformaTributaria"
+    },
+    "SUSEP": {
+      "_motivo": "A SUSEP é autarquia vinculada ao Ministério da Fazenda e não tem seção própria nestes templates. Publicar sob 'Ministério da Fazenda' mantém a vinculação institucional correta.",
+      "mercado-capitais-fundos": "MinisterioFazenda",
+      "imobiliario-infraestrutura": "MinisterioFazenda",
+      "ambiental-esg": "MinisterioFazenda"
+    },
+    "ANEEL": {
+      "_motivo": "No Radar Societário não há seção da ANEEL. Os atos da agência são publicados no Diário Oficial da União, que é a seção de publicações oficiais desse template. Nos demais Radares a ANEEL tem seção própria e o casamento automático resolve.",
+      "societario-ma": "DiarioOficial"
+    },
+    "ANATEL": {
+      "_motivo": "Sem seção própria no Radar Imobiliário e Infraestrutura. Roteada para o Diário Oficial da União, onde os atos da agência são publicados.",
+      "imobiliario-infraestrutura": "DiarioOficialUniao"
+    },
+    "ANTAQ": {
+      "_motivo": "Sem seção própria no Radar Imobiliário e Infraestrutura. Roteada para o Diário Oficial da União. No Radar Regulatório a ANTAQ tem seção própria e o casamento automático resolve.",
+      "imobiliario-infraestrutura": "DiarioOficialUniao"
+    },
+    "ANTT": {
+      "_motivo": "Sem seção própria nos Radares Imobiliário e Ambiental. Roteada para o Diário Oficial da União. No Radar Regulatório a ANTT tem seção própria.",
+      "imobiliario-infraestrutura": "DiarioOficialUniao",
+      "ambiental-esg": "DiarioOficialUniao"
     }
+  },
+  "_secao_padrao_leia_me": [
+    "Destino para item adicionado manualmente no portal cuja fonte digitada não",
+    "corresponde a nenhuma seção do template. Vazio (padrão) significa que esse",
+    "item bloqueia a geração em vez de aparecer sob um nome de fonte que não é o",
+    "dele. Preencha com a âncora de uma seção para liberar."
+  ],
+  "secao_padrao_item_manual": {
+    "trabalhista-empresarial": "",
+    "direito-tributario": "",
+    "societario-ma": "",
+    "mercado-capitais-fundos": "",
+    "regulatorio-oleo-gas": "",
+    "imobiliario-infraestrutura": "",
+    "ambiental-esg": "",
+    "propriedade-intelectual": "",
+    "contencioso-civel": ""
   }
 }

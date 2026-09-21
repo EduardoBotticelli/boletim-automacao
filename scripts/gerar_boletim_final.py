@@ -791,19 +791,34 @@ def resolver_secao(fonte, slug, secoes, aliases):
     return None
 
 
-def agrupar_por_secao(itens, slug, secoes, aliases):
+def agrupar_por_secao(itens, slug, secoes, aliases, secao_padrao_manual=""):
     """
     Distribui as notícias aprovadas de um Radar entre as seções do template.
 
     Devolve (mapa_por_ancora, sem_secao). Uma notícia sem seção correspondente
     nunca é descartada em silêncio: ela volta em 'sem_secao' e bloqueia a
     geração, porque publicar o Radar sem ela esconderia uma decisão humana.
+
+    'secao_padrao_manual' vale só para item adicionado à mão no portal, cuja
+    fonte é texto livre e pode não existir no template. Vazio (o padrão)
+    mantém o bloqueio: é melhor parar do que publicar o item sob o nome de
+    uma fonte que não é a dele.
     """
     por_ancora = defaultdict(list)
     sem_secao = []
 
     for item in itens:
         secao = resolver_secao(item.get("fonte"), slug, secoes, aliases)
+
+        if (
+            secao is None
+            and secao_padrao_manual
+            and normalizar_texto(item.get("origem")) == "manual"
+        ):
+            secao = next(
+                (alvo for alvo in secoes if alvo.ancora == secao_padrao_manual),
+                None,
+            )
 
         if secao is None:
             sem_secao.append(
@@ -812,10 +827,13 @@ def agrupar_por_secao(itens, slug, secoes, aliases):
                     "fonte": item.get("fonte", ""),
                     "titulo": item.get("titulo", ""),
                     "url": item.get("url", ""),
+                    "origem": item.get("origem", "scraper"),
                     "motivo": (
                         "O template oficial deste Radar não tem seção para esta "
-                        "fonte. Acrescente a seção no template ou mapeie a fonte "
-                        "em templates/mapeamento_radares.json."
+                        "fonte. Mapeie a fonte para uma seção existente em "
+                        "templates/mapeamento_radares.json (aliases_fonte), "
+                        "acrescente a seção ao template, ou — para item "
+                        "adicionado à mão — defina secao_padrao_item_manual."
                     ),
                 }
             )
@@ -907,6 +925,7 @@ def main():
     mapeamento = carregar_mapeamento()
     aliases = mapeamento.get("aliases_fonte", {})
     assuntos = mapeamento.get("assuntos", {})
+    padroes_manuais = mapeamento.get("secao_padrao_item_manual", {})
 
     # Carrega os nove templates antes de gravar qualquer coisa: se um deles
     # estiver faltando ou ilegível, nada é sobrescrito.
@@ -934,7 +953,11 @@ def main():
     for slug in SLUGS:
         _, estrutura = carregados[slug]
         por_ancora, faltantes = agrupar_por_secao(
-            agrupados[slug], slug, estrutura.secoes, aliases
+            agrupados[slug],
+            slug,
+            estrutura.secoes,
+            aliases,
+            texto_limpo(padroes_manuais.get(slug)),
         )
         distribuicao[slug] = por_ancora
         sem_secao.extend(faltantes)

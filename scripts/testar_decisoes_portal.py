@@ -669,6 +669,135 @@ def teste_fonte_sem_secao_no_template_bloqueia():
     assert all(dados.decode() == SENTINELA for dados in r.mensagens.values())
 
 
+
+def teste_alias_roteia_fonte_para_secao_existente():
+    """
+    Fonte sem seção própria vai para a seção mapeada em
+    templates/mapeamento_radares.json em vez de bloquear.
+
+    A ANTAQ não tem seção no template do Radar Imobiliário e Infraestrutura e
+    está mapeada para o Diário Oficial da União.
+    """
+    boletim = boletim_exemplo()
+    boletim["itens"].append(
+        {
+            "fonte": "ANTAQ | Notícias",
+            "categoria": "Infraestrutura",
+            "titulo": "ANTAQ realiza visita técnica em Santos",
+            "data_publicacao": "2026-08-27",
+            "resumo": "Visita a empresas de navegação.",
+            "motivo_filtragem": "Regulação portuária.",
+            "palavras_chave_detectadas": [],
+            "boletins_confirmados": ["imobiliario-infraestrutura"],
+            "boletins_rejeitados": [],
+            "url": "https://www.gov.br/antaq/visita-santos",
+            "boletins": ["imobiliario-infraestrutura"],
+        }
+    )
+
+    decisoes = payload(
+        [
+            decisao(
+                "CVM orienta sobre a Resolução 244",
+                "https://www.gov.br/cvm/noticia-244",
+                "CVM | Notícias",
+                "rejeitado",
+                [],
+            ),
+            decisao(
+                "RESOLUÇÃO CPPI Nº 367",
+                "https://www.in.gov.br/dou/resolucao-cppi-367",
+                "Destaques do D.O.U.",
+                "rejeitado",
+                [],
+            ),
+            decisao(
+                "ANTAQ realiza visita técnica em Santos",
+                "https://www.gov.br/antaq/visita-santos",
+                "ANTAQ | Notícias",
+                "aprovado",
+                ["imobiliario-infraestrutura"],
+            ),
+        ]
+    )
+
+    r = executar(boletim, decisoes)
+
+    assert r.codigo == 0, f"o alias deveria evitar o bloqueio, saida:\n{r.saida}"
+
+    html = r.emails["imobiliario-infraestrutura"]
+    assert "visita técnica em Santos" in html, "a notícia da ANTAQ não foi publicada"
+    assert "name=DiarioOficialUniao" in html, "não caiu na seção mapeada"
+
+    publicadas = next(
+        arquivo["secoes_publicadas"]
+        for arquivo in r.resumo["arquivos_gerados"]
+        if arquivo["slug"] == "imobiliario-infraestrutura"
+    )
+    assert publicadas == ["DiarioOficialUniao"], publicadas
+
+
+def teste_todas_as_fontes_do_filtro1_tem_destino():
+    """
+    Toda fonte que o Filtro 1 permite para um Radar precisa ter seção no
+    template ou alias no mapeamento. Sem isso, uma notícia dessa fonte
+    bloquearia a edição inteira.
+    """
+    import re
+
+    codigo = (BASE_DIR / "scripts" / "gerar_boletim.py").read_text(encoding="utf-8")
+    espaco = {}
+    for padrao in (r"^SLUGS = \[.*?\]$", r"^MAPA = \{.*?^\}$"):
+        encontrado = re.search(padrao, codigo, re.M | re.S)
+        assert encontrado, "não foi possível ler o Filtro 1 do gerar_boletim.py"
+        exec(encontrado.group(0), espaco)
+
+    mapeamento = json.loads(
+        (BASE_DIR / "templates" / "mapeamento_radares.json").read_text(encoding="utf-8")
+    )
+    aliases = mapeamento.get("aliases_fonte", {})
+
+    sys.path.insert(0, str(BASE_DIR / "scripts"))
+    import templates_radar
+
+    faltando = []
+
+    for fonte, slugs in espaco["MAPA"].items():
+        orgao = templates_radar.normalizar(str(fonte).split("|")[0])
+
+        for slug in slugs:
+            template = templates_radar.carregar_template(
+                str(BASE_DIR / "templates" / mapeamento["templates"][slug])
+            )
+            secoes = templates_radar.analisar(template.html).secoes
+
+            destino = None
+            for chave, destinos in aliases.items():
+                if isinstance(destinos, dict) and templates_radar.normalizar(chave) == orgao:
+                    destino = destinos.get(slug)
+                    if destino:
+                        break
+
+            if destino:
+                assert any(secao.ancora == destino for secao in secoes), (
+                    f"{slug}: o alias de '{fonte}' aponta para a âncora "
+                    f"'{destino}', que não existe no template"
+                )
+                continue
+
+            casou = any(
+                templates_radar.normalizar(secao.nome) == orgao
+                or templates_radar.normalizar(secao.nome).startswith(orgao + " ")
+                or orgao.startswith(templates_radar.normalizar(secao.nome) + " ")
+                for secao in secoes
+                if templates_radar.normalizar(secao.nome)
+            )
+            if not casou:
+                faltando.append((slug, fonte))
+
+    assert not faltando, "fontes do Filtro 1 sem destino no template: " + str(faltando)
+
+
 TESTES = [
     teste_fluxo_completo,
     teste_edicoes_de_texto,
@@ -682,6 +811,8 @@ TESTES = [
     teste_radar_vazio_usa_o_template_com_mensagem,
     teste_eml_carrega_as_imagens_do_template,
     teste_fonte_sem_secao_no_template_bloqueia,
+    teste_alias_roteia_fonte_para_secao_existente,
+    teste_todas_as_fontes_do_filtro1_tem_destino,
 ]
 
 

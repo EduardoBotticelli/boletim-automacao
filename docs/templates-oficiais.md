@@ -103,25 +103,52 @@ Para ver as âncoras disponíveis e as fontes ainda sem seção:
 python scripts/inspecionar_templates.py
 ```
 
-## Lacunas conhecidas nos templates
+## Fontes roteadas para outra seção
 
-O relatório acima aponta oito pares (Radar, fonte) que o Filtro 1 permite
-mas que não têm seção no template correspondente:
+Oito pares (Radar, fonte) que o Filtro 1 permite não têm seção própria no
+template correspondente. Em vez de bloquear a edição, cada um foi mapeado
+para uma seção que já existe no template, em `aliases_fonte`:
 
-| Radar | Fonte sem seção |
-|---|---|
-| societario-ma | ANEEL |
-| mercado-capitais-fundos | SUSEP |
-| imobiliario-infraestrutura | ANATEL, ANTAQ, ANTT, SUSEP |
-| ambiental-esg | ANTT, SUSEP |
+| Radar | Fonte | Seção usada | Por quê |
+|---|---|---|---|
+| societario-ma | ANEEL | Diário Oficial da União | Os atos da agência são publicados no DOU, que é a seção de publicações oficiais desse template |
+| mercado-capitais-fundos | SUSEP | Ministério da Fazenda | A SUSEP é autarquia vinculada ao Ministério da Fazenda |
+| imobiliario-infraestrutura | SUSEP | Ministério da Fazenda | idem |
+| imobiliario-infraestrutura | ANATEL | Diário Oficial da União (Seção 1) | Sem seção própria; publicações oficiais |
+| imobiliario-infraestrutura | ANTAQ | Diário Oficial da União (Seção 1) | idem |
+| imobiliario-infraestrutura | ANTT | Diário Oficial da União (Seção 1) | idem |
+| ambiental-esg | ANTT | Diário Oficial da União (Seção 1) | idem |
+| ambiental-esg | SUSEP | Ministério da Fazenda | idem |
 
-Enquanto isso não for resolvido, uma notícia dessas fontes nesses Radares
-bloqueia a edição. A solução é do Marketing (acrescentar a seção ao
-template) ou da curadoria (rotear a fonte para uma seção existente pelo
-`aliases_fonte`).
+Nos Radares em que essas fontes têm seção própria (a ANTAQ no Regulatório,
+por exemplo), o casamento automático resolve e o alias não é usado.
 
-O mesmo vale para item adicionado manualmente no portal: a fonte digitada
-precisa corresponder a uma seção do template do Radar escolhido.
+**O que isso implica.** A faixa da seção é lida como a origem da notícia.
+Uma notícia da ANTAQ publicada sob "Diário Oficial da União" aparece com uma
+procedência que não é exatamente a dela. É o preço de não criar seções novas
+no template. A correção definitiva é o Marketing acrescentar as seções que
+faltam; feito isso, basta remover o alias e o casamento automático assume.
+
+`python scripts/inspecionar_templates.py` confirma que, hoje, toda fonte do
+Filtro 1 tem destino.
+
+## Item adicionado manualmente no portal
+
+A fonte de um item manual é texto livre e pode não existir em nenhuma seção.
+Por padrão esse item **bloqueia** a geração, para não sair sob o nome de uma
+fonte que não é a dele.
+
+Para liberar, preencha `secao_padrao_item_manual` no mapeamento com a âncora
+da seção que deve receber esses itens no Radar:
+
+```json
+"secao_padrao_item_manual": {
+  "contencioso-civel": "DiarioOficialUniao"
+}
+```
+
+Vazio (o padrão) mantém o bloqueio. A alternativa sem esse efeito é
+acrescentar um alias para a fonte específica, quando ela se repete.
 
 ## Defeitos observados nos templates entregues
 
