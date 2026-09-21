@@ -23,11 +23,14 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from dataclasses import dataclass
 from pathlib import Path
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SCRIPT = BASE_DIR / "scripts" / "gerar_boletim_final.py"
+MODULO_TEMPLATES = BASE_DIR / "scripts" / "templates_radar.py"
+TEMPLATES_DIR = BASE_DIR / "templates"
 
 SLUGS = [
     "trabalhista-empresarial",
@@ -42,6 +45,15 @@ SLUGS = [
 ]
 
 SENTINELA = "<!-- e-mail anterior preservado -->"
+
+
+@dataclass
+class Resultado:
+    codigo: int
+    saida: str
+    emails: dict
+    mensagens: dict
+    resumo: dict
 
 
 def boletim_exemplo():
@@ -125,7 +137,8 @@ def executar(boletim, decisoes):
     """
     Roda o gerar_boletim_final.py em uma cópia isolada do repositório.
 
-    Devolve (returncode, saida, conteudo_dos_emails, resumo).
+    Devolve um Resultado com o código de saída, a saída de texto, as prévias
+    em HTML, as mensagens .eml e o resumo.
     """
     with tempfile.TemporaryDirectory() as raiz:
         raiz = Path(raiz)
@@ -134,6 +147,11 @@ def executar(boletim, decisoes):
         saida_dir.mkdir()
 
         shutil.copy2(SCRIPT, raiz / "scripts" / SCRIPT.name)
+        shutil.copy2(MODULO_TEMPLATES, raiz / "scripts" / MODULO_TEMPLATES.name)
+
+        # Os templates oficiais entram por link simbólico: são ~10 MB e o
+        # script só os lê.
+        (raiz / "templates").symlink_to(TEMPLATES_DIR, target_is_directory=True)
 
         (saida_dir / "boletim.json").write_text(
             json.dumps(boletim, ensure_ascii=False), encoding="utf-8"
@@ -142,9 +160,10 @@ def executar(boletim, decisoes):
             json.dumps(decisoes, ensure_ascii=False), encoding="utf-8"
         )
 
-        # E-mails de uma edição anterior: nenhuma falha pode sobrescrevê-los.
+        # Arquivos de uma edição anterior: nenhuma falha pode sobrescrevê-los.
         for slug in SLUGS:
             (saida_dir / f"email_{slug}.html").write_text(SENTINELA, encoding="utf-8")
+            (saida_dir / f"email_{slug}.eml").write_text(SENTINELA, encoding="utf-8")
 
         processo = subprocess.run(
             [sys.executable, str(raiz / "scripts" / SCRIPT.name)],
@@ -158,6 +177,12 @@ def executar(boletim, decisoes):
             if (saida_dir / f"email_{slug}.html").exists()
         }
 
+        mensagens = {
+            slug: (saida_dir / f"email_{slug}.eml").read_bytes()
+            for slug in SLUGS
+            if (saida_dir / f"email_{slug}.eml").exists()
+        }
+
         resumo_path = saida_dir / "resumo_geracao_final.json"
         resumo = (
             json.loads(resumo_path.read_text(encoding="utf-8"))
@@ -165,7 +190,13 @@ def executar(boletim, decisoes):
             else {}
         )
 
-        return processo.returncode, processo.stdout + processo.stderr, emails, resumo
+        return Resultado(
+            codigo=processo.returncode,
+            saida=processo.stdout + processo.stderr,
+            emails=emails,
+            mensagens=mensagens,
+            resumo=resumo,
+        )
 
 
 # ---------------------------------------------------------------------------
@@ -182,7 +213,7 @@ def teste_fluxo_completo():
                 "https://www.gov.br/cvm/noticia-244",
                 "CVM | Notícias",
                 "aprovado",
-                ["mercado-capitais-fundos", "ambiental-esg"],
+                ["mercado-capitais-fundos", "imobiliario-infraestrutura"],
                 status_portal="ajustado",
             ),
             decisao(
@@ -193,48 +224,54 @@ def teste_fluxo_completo():
                 [],
             ),
             decisao(
-                "STJ fixa tese sobre honorários",
-                "https://www.stj.jus.br/noticia-honorarios",
-                "STJ | Notícias",
+                "SENACON abre consulta sobre superendividamento",
+                "https://www.gov.br/senacon/consulta-superendividamento",
+                "SENACON | Notícias",
                 "aprovado",
                 ["contencioso-civel"],
                 origem="manual",
                 noticia={
-                    "fonte": "STJ | Notícias",
+                    "fonte": "SENACON | Notícias",
                     "categoria": "Adicionado manualmente",
-                    "titulo": "STJ fixa tese sobre honorários",
+                    "titulo": "SENACON abre consulta sobre superendividamento",
                     "data_publicacao": "2026-08-27",
-                    "resumo": "Corte Especial define critérios de fixação.",
-                    "url": "https://www.stj.jus.br/noticia-honorarios",
+                    "resumo": "Consulta pública sobre renegociação de dívidas.",
+                    "url": "https://www.gov.br/senacon/consulta-superendividamento",
                     "boletins": ["contencioso-civel"],
                 },
             ),
         ]
     )
 
-    codigo, saida, emails, resumo = executar(boletim_exemplo(), decisoes)
+    r = executar(boletim_exemplo(), decisoes)
 
-    assert codigo == 0, f"esperava sucesso, saida:\n{saida}"
-    assert len(emails) == 9, f"esperava 9 arquivos, veio {len(emails)}"
-    assert resumo["status"] == "sucesso"
-    assert resumo["total_aprovados"] == 2
-    assert resumo["total_itens_manuais"] == 1
-    assert resumo["total_rejeitados"] == 1
+    assert r.codigo == 0, f"esperava sucesso, saida:\n{r.saida}"
+    assert len(r.emails) == 9, f"esperava 9 arquivos, veio {len(r.emails)}"
+    assert r.resumo["status"] == "sucesso"
+    assert r.resumo["total_aprovados"] == 2
+    assert r.resumo["total_itens_manuais"] == 1
+    assert r.resumo["total_rejeitados"] == 1
 
     # O ajuste manual venceu: a IA sugeriu só mercado-capitais, a curadoria
-    # acrescentou ambiental-esg.
-    assert "Resolução 244" in emails["mercado-capitais-fundos"]
-    assert "Resolução 244" in emails["ambiental-esg"]
+    # acrescentou imobiliario-infraestrutura.
+    assert "Resolução 244" in r.emails["mercado-capitais-fundos"]
+    assert "Resolução 244" in r.emails["imobiliario-infraestrutura"]
 
-    # O item manual foi publicado.
-    assert "honorários" in emails["contencioso-civel"]
+    # O item manual foi publicado, na seção da fonte dele.
+    assert "superendividamento" in r.emails["contencioso-civel"]
 
     # O item rejeitado não aparece em lugar nenhum.
-    for slug, conteudo in emails.items():
+    for slug, conteudo in r.emails.items():
         assert "CPPI" not in conteudo, f"item rejeitado vazou em {slug}"
 
-    # Radar sem itens continua sendo gerado, com a mensagem de vazio.
-    assert "Nenhum item aprovado" in emails["trabalhista-empresarial"]
+    # Radar sem itens continua sendo gerado, com a mensagem padrão.
+    assert (
+        "Não foram identificadas atualizações para este Radar"
+        in r.emails["trabalhista-empresarial"]
+    )
+
+    # O .eml é o artefato de envio: precisa existir para os nove Radares.
+    assert len(r.mensagens) == 9, f"esperava 9 .eml, veio {len(r.mensagens)}"
 
 
 def teste_edicoes_de_texto():
@@ -261,10 +298,10 @@ def teste_edicoes_de_texto():
         ]
     )
 
-    codigo, saida, emails, _ = executar(boletim_exemplo(), decisoes)
+    r = executar(boletim_exemplo(), decisoes)
 
-    assert codigo == 0, f"esperava sucesso, saida:\n{saida}"
-    html = emails["mercado-capitais-fundos"]
+    assert r.codigo == 0, f"esperava sucesso, saida:\n{r.saida}"
+    html = r.emails["mercado-capitais-fundos"]
     assert "CVM detalha a aplicação da Resolução 244" in html
     assert "Resumo reescrito pela curadoria." in html
     assert "noticia-244-corrigida" in html
@@ -284,11 +321,12 @@ def teste_item_sem_decisao_bloqueia():
         ]
     )
 
-    codigo, _, emails, resumo = executar(boletim_exemplo(), decisoes)
+    r = executar(boletim_exemplo(), decisoes)
 
-    assert codigo != 0, "revisão incompleta deveria bloquear"
-    assert resumo["status"] == "bloqueado_por_itens_sem_decisao"
-    assert all(conteudo == SENTINELA for conteudo in emails.values())
+    assert r.codigo != 0, "revisão incompleta deveria bloquear"
+    assert r.resumo["status"] == "bloqueado_por_itens_sem_decisao"
+    assert all(conteudo == SENTINELA for conteudo in r.emails.values())
+    assert all(dados.decode() == SENTINELA for dados in r.mensagens.values())
 
 
 def teste_status_pendente_bloqueia():
@@ -317,10 +355,11 @@ def teste_status_pendente_bloqueia():
         ]
     )
 
-    codigo, _, emails, _ = executar(boletim_exemplo(), decisoes)
+    r = executar(boletim_exemplo(), decisoes)
 
-    assert codigo != 0, "status pendente deveria bloquear"
-    assert all(conteudo == SENTINELA for conteudo in emails.values())
+    assert r.codigo != 0, "status pendente deveria bloquear"
+    assert all(conteudo == SENTINELA for conteudo in r.emails.values())
+    assert all(dados.decode() == SENTINELA for dados in r.mensagens.values())
 
 
 def teste_rascunho_bloqueia():
@@ -345,10 +384,11 @@ def teste_rascunho_bloqueia():
         revisao_concluida=False,
     )
 
-    codigo, _, emails, _ = executar(boletim_exemplo(), decisoes)
+    r = executar(boletim_exemplo(), decisoes)
 
-    assert codigo != 0, "rascunho deveria bloquear"
-    assert all(conteudo == SENTINELA for conteudo in emails.values())
+    assert r.codigo != 0, "rascunho deveria bloquear"
+    assert all(conteudo == SENTINELA for conteudo in r.emails.values())
+    assert all(dados.decode() == SENTINELA for dados in r.mensagens.values())
 
 
 def teste_formato_legado_bloqueia():
@@ -365,11 +405,12 @@ def teste_formato_legado_bloqueia():
         ],
     }
 
-    codigo, _, emails, resumo = executar(boletim_exemplo(), decisoes)
+    r = executar(boletim_exemplo(), decisoes)
 
-    assert codigo != 0, "formato legado deveria bloquear"
-    assert resumo["status"] == "bloqueado_por_itens_sem_decisao"
-    assert all(conteudo == SENTINELA for conteudo in emails.values())
+    assert r.codigo != 0, "formato legado deveria bloquear"
+    assert r.resumo["status"] == "bloqueado_por_itens_sem_decisao"
+    assert all(conteudo == SENTINELA for conteudo in r.emails.values())
+    assert all(dados.decode() == SENTINELA for dados in r.mensagens.values())
 
 
 def teste_aprovado_sem_radar_bloqueia():
@@ -393,11 +434,239 @@ def teste_aprovado_sem_radar_bloqueia():
         ]
     )
 
-    codigo, _, emails, resumo = executar(boletim_exemplo(), decisoes)
+    r = executar(boletim_exemplo(), decisoes)
 
-    assert codigo != 0, "aprovado sem Radar deveria bloquear"
-    assert resumo["status"] == "bloqueado_por_itens_sem_decisao"
-    assert all(conteudo == SENTINELA for conteudo in emails.values())
+    assert r.codigo != 0, "aprovado sem Radar deveria bloquear"
+    assert r.resumo["status"] == "bloqueado_por_itens_sem_decisao"
+    assert all(conteudo == SENTINELA for conteudo in r.emails.values())
+    assert all(dados.decode() == SENTINELA for dados in r.mensagens.values())
+
+
+
+def teste_template_oficial_preservado():
+    """
+    O corpo publicado é o do template: imagens, avaliação, rodapé e links
+    institucionais chegam intactos, e nenhum placeholder sobra.
+    """
+    decisoes = payload(
+        [
+            decisao(
+                "CVM orienta sobre a Resolução 244",
+                "https://www.gov.br/cvm/noticia-244",
+                "CVM | Notícias",
+                "aprovado",
+                ["mercado-capitais-fundos"],
+            ),
+            decisao(
+                "RESOLUÇÃO CPPI Nº 367",
+                "https://www.in.gov.br/dou/resolucao-cppi-367",
+                "Destaques do D.O.U.",
+                "rejeitado",
+                [],
+            ),
+        ]
+    )
+
+    r = executar(boletim_exemplo(), decisoes)
+    assert r.codigo == 0, f"esperava sucesso, saida:\n{r.saida}"
+
+    html = r.emails["mercado-capitais-fundos"]
+
+    # Identidade visual e recursos do template.
+    assert html.count("<img") == 9, "as imagens do template sumiram"
+    assert "forms.cloud.microsoft" in html, "a avaliação da edição sumiu"
+    assert "linkedin.com/company/loboderizzoadvogados" in html, "rodapé social sumiu"
+    assert "www.ldr.com.br" in html, "link institucional sumiu"
+    assert "VOLTAR AO SUM" in html, "o voltar ao sumário sumiu"
+
+    # Nenhum placeholder remanescente.
+    assert "00.00.2026" not in html
+    assert "Título | " not in html
+    assert "Descrição<" not in html
+
+    # Data da edição e link real da matéria.
+    assert "27.08.2026" in html
+    assert "https://www.gov.br/cvm/noticia-244" in html
+
+
+def teste_secoes_sem_noticia_saem_do_corpo_e_do_sumario():
+    """Fonte sem notícia não aparece nem como seção nem no sumário."""
+    decisoes = payload(
+        [
+            decisao(
+                "CVM orienta sobre a Resolução 244",
+                "https://www.gov.br/cvm/noticia-244",
+                "CVM | Notícias",
+                "aprovado",
+                ["mercado-capitais-fundos"],
+            ),
+            decisao(
+                "RESOLUÇÃO CPPI Nº 367",
+                "https://www.in.gov.br/dou/resolucao-cppi-367",
+                "Destaques do D.O.U.",
+                "rejeitado",
+                [],
+            ),
+        ]
+    )
+
+    r = executar(boletim_exemplo(), decisoes)
+    assert r.codigo == 0, f"esperava sucesso, saida:\n{r.saida}"
+
+    html = r.emails["mercado-capitais-fundos"]
+
+    # A seção da CVM ficou.
+    assert "name=CVM" in html
+
+    # As demais fontes do template saíram, com as entradas do sumário.
+    for ausente in ("B3", "LatinLawyer", "COAF", "BancoCentral"):
+        assert f"name={ausente}" not in html, f"seção {ausente} deveria ter saído"
+        assert f'href="#{ausente}"' not in html, f"sumário ainda cita {ausente}"
+
+
+def teste_radar_vazio_usa_o_template_com_mensagem():
+    """Radar sem notícia mantém o template e exibe a mensagem padrão."""
+    decisoes = payload(
+        [
+            decisao(
+                "CVM orienta sobre a Resolução 244",
+                "https://www.gov.br/cvm/noticia-244",
+                "CVM | Notícias",
+                "aprovado",
+                ["mercado-capitais-fundos"],
+            ),
+            decisao(
+                "RESOLUÇÃO CPPI Nº 367",
+                "https://www.in.gov.br/dou/resolucao-cppi-367",
+                "Destaques do D.O.U.",
+                "rejeitado",
+                [],
+            ),
+        ]
+    )
+
+    r = executar(boletim_exemplo(), decisoes)
+    assert r.codigo == 0, f"esperava sucesso, saida:\n{r.saida}"
+
+    html = r.emails["ambiental-esg"]
+
+    assert (
+        "Não foram identificadas atualizações para este Radar no período analisado."
+        in html
+    )
+    # O template continua inteiro.
+    assert html.count("<img") == 9
+    assert "forms.cloud.microsoft" in html
+    assert "VOLTAR AO SUM" in html
+    # E nenhuma faixa de fonte sobrou.
+    assert "Título | " not in html
+
+
+def teste_eml_carrega_as_imagens_do_template():
+    """O .eml traz cada imagem referenciada por cid: como parte da mensagem."""
+    import email
+    import re
+    from email import policy
+
+    decisoes = payload(
+        [
+            decisao(
+                "CVM orienta sobre a Resolução 244",
+                "https://www.gov.br/cvm/noticia-244",
+                "CVM | Notícias",
+                "aprovado",
+                ["mercado-capitais-fundos"],
+            ),
+            decisao(
+                "RESOLUÇÃO CPPI Nº 367",
+                "https://www.in.gov.br/dou/resolucao-cppi-367",
+                "Destaques do D.O.U.",
+                "rejeitado",
+                [],
+            ),
+        ]
+    )
+
+    r = executar(boletim_exemplo(), decisoes)
+    assert r.codigo == 0, f"esperava sucesso, saida:\n{r.saida}"
+
+    for slug, bruto in r.mensagens.items():
+        mensagem = email.message_from_bytes(bruto, policy=policy.default)
+        corpo = mensagem.get_body(preferencelist=("html",))
+        assert corpo is not None, f"{slug}: .eml sem corpo HTML"
+
+        conteudo = corpo.get_content()
+        embutidos = {
+            parte.get("Content-ID")
+            for parte in mensagem.walk()
+            if parte.get("Content-ID")
+        }
+        referenciados = set(re.findall(r"cid:([^\"']+)", conteudo))
+
+        assert referenciados, f"{slug}: o corpo não referencia imagem alguma"
+        faltando = [
+            cid for cid in referenciados if f"<{cid}>" not in embutidos
+        ]
+        assert not faltando, f"{slug}: imagens sem anexo correspondente: {faltando}"
+
+
+def teste_fonte_sem_secao_no_template_bloqueia():
+    """
+    Notícia aprovada cuja fonte não existe no template não pode ser
+    descartada em silêncio: a geração para e os e-mails anteriores ficam.
+    """
+    boletim = boletim_exemplo()
+    boletim["itens"].append(
+        {
+            "fonte": "Tribunal Inexistente | Notícias",
+            "categoria": "Teste",
+            "titulo": "Notícia de fonte que o template não conhece",
+            "data_publicacao": "2026-08-27",
+            "resumo": "Deve bloquear a geração.",
+            "motivo_filtragem": "Teste.",
+            "palavras_chave_detectadas": [],
+            "boletins_confirmados": ["mercado-capitais-fundos"],
+            "boletins_rejeitados": [],
+            "url": "https://exemplo.invalido/noticia",
+            "boletins": ["mercado-capitais-fundos"],
+        }
+    )
+
+    decisoes = payload(
+        [
+            decisao(
+                "CVM orienta sobre a Resolução 244",
+                "https://www.gov.br/cvm/noticia-244",
+                "CVM | Notícias",
+                "aprovado",
+                ["mercado-capitais-fundos"],
+            ),
+            decisao(
+                "RESOLUÇÃO CPPI Nº 367",
+                "https://www.in.gov.br/dou/resolucao-cppi-367",
+                "Destaques do D.O.U.",
+                "rejeitado",
+                [],
+            ),
+            decisao(
+                "Notícia de fonte que o template não conhece",
+                "https://exemplo.invalido/noticia",
+                "Tribunal Inexistente | Notícias",
+                "aprovado",
+                ["mercado-capitais-fundos"],
+            ),
+        ]
+    )
+
+    r = executar(boletim, decisoes)
+
+    assert r.codigo != 0, "fonte sem seção deveria bloquear"
+    assert r.resumo["status"] == "bloqueado_por_fonte_sem_secao_no_template"
+    assert r.resumo["itens_sem_secao_no_template"][0]["fonte"] == (
+        "Tribunal Inexistente | Notícias"
+    )
+    assert all(conteudo == SENTINELA for conteudo in r.emails.values())
+    assert all(dados.decode() == SENTINELA for dados in r.mensagens.values())
 
 
 TESTES = [
@@ -408,6 +677,11 @@ TESTES = [
     teste_rascunho_bloqueia,
     teste_formato_legado_bloqueia,
     teste_aprovado_sem_radar_bloqueia,
+    teste_template_oficial_preservado,
+    teste_secoes_sem_noticia_saem_do_corpo_e_do_sumario,
+    teste_radar_vazio_usa_o_template_com_mensagem,
+    teste_eml_carrega_as_imagens_do_template,
+    teste_fonte_sem_secao_no_template_bloqueia,
 ]
 
 

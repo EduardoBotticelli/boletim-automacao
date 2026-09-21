@@ -25,12 +25,12 @@ jobs:
         with:
           python-version: "3.11"
 
-      # Nao precisa instalar dependencias externas - o script usa so stdlib
-      # Se um dia precisar de bibliotecas, descomentar:
-      # - name: Instalar dependencias
-      #   run: |
-      #     python -m pip install --upgrade pip
-      #     pip install -r requirements.txt
+      # Os templates oficiais sao .msg (container OLE com o corpo em RTF),
+      # entao a leitura precisa de olefile, compressed-rtf e RTFDE.
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install olefile compressed-rtf RTFDE
 
       - name: Verificar arquivos de entrada
         run: |
@@ -49,17 +49,41 @@ jobs:
           fi
           echo "  OK"
 
+          echo "Verificando os templates oficiais..."
+          if [ ! -f templates/mapeamento_radares.json ]; then
+            echo "ERRO: templates/mapeamento_radares.json nao encontrado."
+            exit 1
+          fi
+          total=$(ls templates/*.msg 2>/dev/null | wc -l)
+          if [ "$total" -lt 9 ]; then
+            echo "ERRO: esperados 9 templates .msg, encontrados $total."
+            exit 1
+          fi
+          echo "  OK ($total templates)"
+
       - name: Testar contrato portal x gerador
         run: python scripts/testar_decisoes_portal.py
 
       - name: Gerar boletins finais
         run: python scripts/gerar_boletim_final.py
 
+      - name: Publicar artefatos da edicao
+        uses: actions/upload-artifact@v4
+        with:
+          name: radares-finais-${{ github.run_number }}
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            output/email_*.eml
+            output/email_*.html
+            output/recursos_radar/**
+            output/resumo_geracao_final.json
+
       - name: Commit dos boletins finais
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add output/email_*.html
+          git add output/email_*.eml output/email_*.html output/recursos_radar
           if git diff --staged --quiet; then
             echo "Nenhuma mudanca nos boletins finais - nada a commitar."
           else
@@ -71,5 +95,7 @@ jobs:
         run: |
           echo "============================================"
           echo "Boletins finais gerados e commitados."
+          echo "Artefato de envio: output/email_<slug>.eml (corpo e imagens do"
+          echo "template oficial). A previa em HTML fica em email_<slug>.html."
           echo "Power Automate pode acionar o Fluxo 1 agora."
           echo "============================================"
