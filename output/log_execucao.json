@@ -1,15 +1,15 @@
 {
-  "data_execucao": "2026-08-27",
-  "executado_em": "2026-08-27T16:38:18.056064-03:00",
+  "data_execucao": "2026-09-21",
+  "executado_em": "2026-09-21T17:58:01.498603-03:00",
   "janela": {
-    "inicio": "2026-08-26T00:00",
-    "fim": "2026-08-27T16:38"
+    "inicio": "2026-09-18T00:00",
+    "fim": "2026-09-21T17:58"
   },
   "fontes_processadas": [
     {
       "fonte": "Planalto | Resenha Diaria",
       "status": "ok",
-      "tamanho_chars": 19248,
+      "tamanho_chars": 18220,
       "publicacoes_localizadas": 0,
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -17,23 +17,23 @@
     {
       "fonte": "Banco Central | Normas",
       "status": "ok",
-      "tamanho_chars": 10891,
-      "publicacoes_localizadas": 0,
-      "busca_complementar_executada": false,
+      "tamanho_chars": 4056,
+      "publicacoes_localizadas": 1,
+      "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "CCEE | Noticias",
       "status": "ok",
-      "tamanho_chars": 4070,
-      "publicacoes_localizadas": 7,
+      "tamanho_chars": 7966,
+      "publicacoes_localizadas": 15,
       "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "Destaques do D.O.U.",
       "status": "ok",
-      "tamanho_chars": 15753,
+      "tamanho_chars": 15164,
       "publicacoes_localizadas": 0,
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -42,7 +42,7 @@
       "fonte": "Receita Federal | Normas",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 0,
+      "publicacoes_localizadas": 6,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
@@ -50,14 +50,14 @@
       "fonte": "Ministério da Fazenda | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 11,
+      "publicacoes_localizadas": 12,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
     {
       "fonte": "ANPD | Notícias",
       "status": "ok",
-      "tamanho_chars": 27719,
+      "tamanho_chars": 28252,
       "publicacoes_localizadas": 0,
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -66,14 +66,14 @@
       "fonte": "CVM | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 5,
+      "publicacoes_localizadas": 1,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "status": "ok",
-      "tamanho_chars": 9652,
+      "tamanho_chars": 9598,
       "publicacoes_localizadas": 0,
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -82,7 +82,7 @@
       "fonte": "ANP | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 3,
+      "publicacoes_localizadas": 15,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
@@ -90,38 +90,38 @@
       "fonte": "ANP | Consultas e Audiências Públicas",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 3,
+      "publicacoes_localizadas": 15,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
     {
       "fonte": "ANP | Consultas Prévias",
       "status": "ok",
-      "tamanho_chars": 22522,
-      "publicacoes_localizadas": 3,
+      "tamanho_chars": 27261,
+      "publicacoes_localizadas": 15,
       "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "ANP | Pautas e Atas da Diretoria Colegiada",
       "status": "ok",
-      "tamanho_chars": 30000,
-      "publicacoes_localizadas": 3,
+      "tamanho_chars": 28433,
+      "publicacoes_localizadas": 15,
       "busca_complementar_executada": true,
-      "conteudo_truncado": true
+      "conteudo_truncado": false
     },
     {
       "fonte": "MME | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 0,
+      "publicacoes_localizadas": 12,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
     {
       "fonte": "MME | Consultas Públicas",
       "status": "ok",
-      "tamanho_chars": 3136,
+      "tamanho_chars": 2963,
       "publicacoes_localizadas": 0,
       "busca_complementar_executada": true,
       "conteudo_truncado": false
@@ -129,16 +129,16 @@
     {
       "fonte": "ONS | Notícias",
       "status": "ok",
-      "tamanho_chars": 5128,
-      "publicacoes_localizadas": 0,
-      "busca_complementar_executada": false,
+      "tamanho_chars": 9315,
+      "publicacoes_localizadas": 15,
+      "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "ANEEL | Últimas Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 2,
+      "publicacoes_localizadas": 3,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
@@ -153,16 +153,16 @@
     {
       "fonte": "ANVISA | Notícias",
       "status": "ok",
-      "tamanho_chars": 22885,
-      "publicacoes_localizadas": 0,
-      "busca_complementar_executada": false,
+      "tamanho_chars": 13098,
+      "publicacoes_localizadas": 30,
+      "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "INPI | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 1,
+      "publicacoes_localizadas": 7,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
@@ -177,21 +177,21 @@
     {
       "fonte": "COAF | Notícias",
       "status": "erro_conteudo_origem",
-      "tamanho_chars": 289,
+      "tamanho_chars": 914,
       "erro": "A origem retornou página de erro/manutenção (conteúdo restrito)."
     },
     {
       "fonte": "ANM | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 3,
+      "publicacoes_localizadas": 7,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
     {
       "fonte": "EPE | Notícias",
       "status": "ok",
-      "tamanho_chars": 9882,
+      "tamanho_chars": 10430,
       "publicacoes_localizadas": 0,
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -207,7 +207,7 @@
     {
       "fonte": "CNPE | Comunicações",
       "status": "ok",
-      "tamanho_chars": 20245,
+      "tamanho_chars": 20266,
       "publicacoes_localizadas": 0,
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -215,15 +215,15 @@
     {
       "fonte": "Kollemata | Decretos",
       "status": "ok",
-      "tamanho_chars": 6969,
-      "publicacoes_localizadas": 8,
+      "tamanho_chars": 4810,
+      "publicacoes_localizadas": 1,
       "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "ANATEL | Notícias",
       "status": "ok",
-      "tamanho_chars": 21475,
+      "tamanho_chars": 25454,
       "publicacoes_localizadas": 0,
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -231,7 +231,7 @@
     {
       "fonte": "SUSEP | Notícias",
       "status": "ok",
-      "tamanho_chars": 26493,
+      "tamanho_chars": 25918,
       "publicacoes_localizadas": 0,
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -240,7 +240,7 @@
       "fonte": "ANTT | Notícias - Defeso Eleitoral",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 7,
+      "publicacoes_localizadas": 16,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     }
@@ -267,42 +267,18 @@
     {
       "modelo": "gemini-3.7-flash",
       "tentativa": 1,
-      "status": "erro",
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
-    },
-    {
-      "modelo": "gemini-3.7-flash",
-      "tentativa": 2,
-      "status": "erro",
-      "erro": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_to"
-    },
-    {
-      "modelo": "gemini-3.6-flash",
-      "tentativa": 1,
-      "status": "erro",
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
-    },
-    {
-      "modelo": "gemini-3.6-flash",
-      "tentativa": 2,
-      "status": "erro",
-      "erro": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_to"
-    },
-    {
-      "modelo": "gemini-3.5-flash",
-      "tentativa": 1,
       "status": "sucesso"
     }
   ],
   "resultado": {
     "status": "sucesso",
-    "modelo_gemini_utilizado": "gemini-3.5-flash",
-    "itens_aceitos": 9,
+    "modelo_gemini_utilizado": "gemini-3.7-flash",
+    "itens_aceitos": 47,
     "fontes_ativas": 30,
     "fontes_suspensas": 3,
     "fontes_inativas": 0,
     "fontes_sem_resultado": 1,
-    "fontes_sem_publicacao_hoje": 10,
+    "fontes_sem_publicacao_hoje": 12,
     "fontes_com_erro_tecnico": 1,
     "itens_por_boletim": {
       "trabalhista-empresarial": {
@@ -319,7 +295,7 @@
           "Tributário Consultivo",
           "Tributário Contencioso"
         ],
-        "total": 1
+        "total": 4
       },
       "societario-ma": {
         "nome": "Radar Societário, Fusões e Aquisições",
@@ -336,7 +312,7 @@
           "Financeiro Green",
           "Fundos"
         ],
-        "total": 2
+        "total": 6
       },
       "regulatorio-oleo-gas": {
         "nome": "Radar Regulatório e Óleo e Gás",
@@ -344,7 +320,7 @@
           "Regulatório",
           "Óleo & Gás Blue"
         ],
-        "total": 5
+        "total": 19
       },
       "imobiliario-infraestrutura": {
         "nome": "Radar Negócios Imobiliários e Infraestrutura",
@@ -352,14 +328,14 @@
           "Imobiliário",
           "Infraestrutura"
         ],
-        "total": 2
+        "total": 13
       },
       "ambiental-esg": {
         "nome": "Radar Ambiental e ESG",
         "clusters": [
           "Ambiental"
         ],
-        "total": 0
+        "total": 1
       },
       "propriedade-intelectual": {
         "nome": "Radar Propriedade Intelectual, Tecnologia e Privacidade",
@@ -374,125 +350,136 @@
           "Contencioso Carbon",
           "Contencioso Gold"
         ],
-        "total": 0
+        "total": 1
       }
     },
     "filtro1_bloqueios": {
-      "societario-ma": 1,
-      "ambiental-esg": 2,
+      "regulatorio-oleo-gas": 2,
       "imobiliario-infraestrutura": 1,
-      "regulatorio-oleo-gas": 1
+      "mercado-capitais-fundos": 2,
+      "propriedade-intelectual": 1,
+      "direito-tributario": 2,
+      "contencioso-civel": 1
     },
     "auditoria": {
-      "total_itens": 9,
-      "itens_com_alguma_rejeicao": 9,
-      "itens_com_bloqueio_f1": 4,
+      "total_itens": 47,
+      "itens_com_alguma_rejeicao": 30,
+      "itens_com_bloqueio_f1": 8,
       "rejeicoes_por_boletim": {
-        "direito-tributario": 1,
-        "propriedade-intelectual": 1,
-        "societario-ma": 3,
-        "ambiental-esg": 4,
-        "imobiliario-infraestrutura": 3,
-        "mercado-capitais-fundos": 1,
-        "regulatorio-oleo-gas": 2
+        "regulatorio-oleo-gas": 11,
+        "imobiliario-infraestrutura": 8,
+        "societario-ma": 5,
+        "mercado-capitais-fundos": 2,
+        "ambiental-esg": 3,
+        "propriedade-intelectual": 4,
+        "direito-tributario": 4,
+        "contencioso-civel": 3
       },
       "top_palavras_chave_detectadas": [
         {
-          "palavra": "ofício circular",
-          "ocorrencias": 2
+          "palavra": "antt",
+          "ocorrencias": 8
         },
         {
           "palavra": "fiscalização",
-          "ocorrencias": 2
+          "ocorrencias": 5
         },
         {
-          "palavra": "cvm",
-          "ocorrencias": 1
+          "palavra": "epe",
+          "ocorrencias": 5
         },
         {
-          "palavra": "resolução cvm",
-          "ocorrencias": 1
+          "palavra": "susep",
+          "ocorrencias": 5
         },
         {
-          "palavra": "sustentabilidade",
-          "ocorrencias": 1
+          "palavra": "anvisa",
+          "ocorrencias": 4
         },
         {
-          "palavra": "relatório de informações financeiras",
-          "ocorrencias": 1
+          "palavra": "vigilância sanitária",
+          "ocorrencias": 4
         },
         {
-          "palavra": "resolução cppi",
-          "ocorrencias": 1
+          "palavra": "ccee",
+          "ocorrencias": 3
         },
         {
-          "palavra": "ferrovias",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "desestatização",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "programa nacional de desestatização",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "arrecadação",
-          "ocorrencias": 1
+          "palavra": "reforma tributária",
+          "ocorrencias": 3
         },
         {
           "palavra": "receita federal",
-          "ocorrencias": 1
+          "ocorrencias": 3
         },
         {
-          "palavra": "tributos",
-          "ocorrencias": 1
+          "palavra": "mineração",
+          "ocorrencias": 3
         },
         {
-          "palavra": "b3",
-          "ocorrencias": 1
+          "palavra": "anm",
+          "ocorrencias": 3
         },
         {
-          "palavra": "índice de energia elétrica",
-          "ocorrencias": 1
+          "palavra": "energia elétrica",
+          "ocorrencias": 3
         },
         {
-          "palavra": "ponderação",
-          "ocorrencias": 1
+          "palavra": "rodovias concedidas",
+          "ocorrencias": 3
         },
         {
-          "palavra": "aneel",
-          "ocorrencias": 1
+          "palavra": "rodovias",
+          "ocorrencias": 3
         },
         {
-          "palavra": "audiência pública",
-          "ocorrencias": 1
+          "palavra": "ambiente de operações",
+          "ocorrencias": 2
         },
         {
-          "palavra": "leilões de reserva de capacidade",
-          "ocorrencias": 1
+          "palavra": "infraestrutura",
+          "ocorrencias": 2
         },
         {
-          "palavra": "baterias",
-          "ocorrencias": 1
+          "palavra": "anp",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "mercado",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "seguros",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "obrigações contratuais",
+          "ocorrencias": 2
         }
       ]
     }
   },
   "filtro1_bloqueios_detalhe": {
-    "societario-ma": [
-      "Áreas técnicas da CVM orientam sobre aplicação da Resolução CVM 244, que alterou a Resolução CVM 193"
-    ],
-    "ambiental-esg": [
-      "Áreas técnicas da CVM orientam sobre aplicação da Resolução CVM 244, que alterou a Resolução CVM 193",
-      "Radar Tecnológico do INPI mapeia pedidos de patente em agricultura sustentável"
+    "regulatorio-oleo-gas": [
+      "CCEE realiza 78ª Assembleia Geral Extraordinária na próxima sexta-feira (25/09), em formato online",
+      "ONS divulga resultado consolidado da PNAST em 2026"
     ],
     "imobiliario-infraestrutura": [
-      "RESOLUÇÃO CPPI Nº 367, DE 28 DE ABRIL DE 2026"
+      "PORTARIA MCID Nº 1.263, DE 18 DE SETEMBRO DE 2026"
     ],
-    "regulatorio-oleo-gas": [
-      "053-2026-VPC-Ofício Circular - Mudança no Índice de Energia Elétrica"
+    "mercado-capitais-fundos": [
+      "PORTARIA MCID Nº 1.263, DE 18 DE SETEMBRO DE 2026",
+      "Estoques de CPR somam R$ 600,3 bilhões em agosto"
+    ],
+    "propriedade-intelectual": [
+      "DECISÃO Nº 66, DE 18 DE SETEMBRO DE 2026"
+    ],
+    "direito-tributario": [
+      "Susep constitui Grupo de Trabalho para analisar impactos da Reforma Tributária no mercado supervisionado",
+      "CMED convida setor regulado para segunda reunião sobre Reforma Tributária"
+    ],
+    "contencioso-civel": [
+      "Susep esclarece regras aplicáveis ao seguro de Responsabilidade Civil de Veículo (RC-V)"
     ]
   }
 }
