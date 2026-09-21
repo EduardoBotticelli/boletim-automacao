@@ -82,7 +82,7 @@ encontrado.
 | Campo             | Papel |
 |-------------------|-------|
 | `status`          | Só `"aprovado"` ou `"rejeitado"`. É o que o gerador lê. |
-| `status_portal`   | O que a pessoa fez (`aprovado`, `ajustado`, `rejeitado`, `pendente`). Só auditoria; o gerador ignora. |
+| `status_portal`   | O que a pessoa fez (`aprovado`, `ajustado` ou `rejeitado`). Só auditoria; o gerador ignora. |
 | `origem`          | `"scraper"` (veio do pipeline) ou `"manual"` (adicionado na curadoria). |
 | `url`, `fonte`, `titulo` | Valores originais. São a chave de casamento. |
 | `radares_finais`  | Slugs de destino. `boletins` é o mesmo valor, aceito como alias. |
@@ -91,11 +91,20 @@ encontrado.
 
 ### Itens pendentes
 
-O portal nunca exporta `status: "pendente"`. Um item que a pessoa deixou sem
-decisão é exportado como `rejeitado`, com `status_portal: "pendente"`, e o
-diálogo de confirmação avisa quantos itens serão descartados. Se um cliente
-antigo mandar `"pendente"` em `status`, o gerador bloqueia a geração em vez
-de adivinhar.
+Não existe decisão pendente neste arquivo. A revisão só pode ser concluída
+depois que **todo** item recebeu uma decisão explícita: enquanto houver
+pendência, o botão de confirmação do portal fica desabilitado e informa
+quantos itens faltam.
+
+Item pendente **não** é convertido em rejeitado e **não** é descartado. A
+distinção importa: "ninguém olhou" e "foi recusado" são coisas diferentes, e
+depois de gravado o arquivo não haveria como separá-las. Além do botão
+desabilitado, o portal tem duas travas: o handler de confirmação recusa, e o
+`montarPayloadRevisao` (`lib/revisao.ts`) lança erro.
+
+Se mesmo assim chegar um `status: "pendente"` — por exemplo de um cliente
+antigo —, o gerador bloqueia a geração em vez de adivinhar, e preserva os
+e-mails da edição anterior.
 
 ## Quando o gerador se recusa a gerar
 
