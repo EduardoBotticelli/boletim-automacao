@@ -49,6 +49,9 @@ jobs:
           fi
           echo "  OK"
 
+      - name: Testar contrato portal x gerador
+        run: python scripts/testar_decisoes_portal.py
+
       - name: Gerar boletins finais
         run: python scripts/gerar_boletim_final.py
 

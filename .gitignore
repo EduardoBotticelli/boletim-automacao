@@ -1,0 +1,6 @@
+# Artefatos do Python (o workflow roda py_compile nos scripts)
+__pycache__/
+*.pyc
+
+# Escrita atomica: arquivos temporarios do scripts/gerar_boletim_final.py
+output/*.tmp
