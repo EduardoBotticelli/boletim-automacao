@@ -1,9 +1,9 @@
 {
   "data_execucao": "2026-09-22",
-  "executado_em": "2026-09-22T18:47:51.526048-03:00",
+  "executado_em": "2026-09-22T16:47:37.937238-03:00",
   "janela": {
     "inicio": "2026-09-21T00:00",
-    "fim": "2026-09-22T18:47"
+    "fim": "2026-09-22T16:47"
   },
   "fontes_processadas": [
     {
@@ -89,10 +89,10 @@
     {
       "fonte": "ANP | Consultas e Audiências Públicas",
       "status": "ok",
-      "tamanho_chars": 7228,
+      "tamanho_chars": 30000,
       "publicacoes_localizadas": 7,
       "busca_complementar_executada": true,
-      "conteudo_truncado": false
+      "conteudo_truncado": true
     },
     {
       "fonte": "ANP | Consultas Prévias",
@@ -136,19 +136,16 @@
     },
     {
       "fonte": "ANEEL | Últimas Notícias",
-      "status": "ok",
-      "tamanho_chars": 19433,
-      "publicacoes_localizadas": 0,
-      "busca_complementar_executada": false,
-      "conteudo_truncado": false
+      "status": "erro",
+      "erro": "Internal Server Error: Failed to scrape. All scraping engines failed to retrieve content from this URL. Engines tried: [index, fire-engine;chrome-cdp, fire-engine(retry);chrome-cdp]. This usually happens when: (1) The URL is invalid or the page doesn't exist (404), (2) The website is blocking automa"
     },
     {
       "fonte": "Ministério da Agricultura | Notícias",
       "status": "ok",
-      "tamanho_chars": 29691,
-      "publicacoes_localizadas": 0,
-      "busca_complementar_executada": false,
-      "conteudo_truncado": false
+      "tamanho_chars": 30000,
+      "publicacoes_localizadas": 30,
+      "busca_complementar_executada": true,
+      "conteudo_truncado": true
     },
     {
       "fonte": "ANVISA | Notícias",
@@ -273,13 +270,13 @@
   "resultado": {
     "status": "sucesso",
     "modelo_gemini_utilizado": "gemini-3.7-flash",
-    "itens_aceitos": 29,
+    "itens_aceitos": 25,
     "fontes_ativas": 30,
     "fontes_suspensas": 3,
     "fontes_inativas": 0,
     "fontes_sem_resultado": 1,
-    "fontes_sem_publicacao_hoje": 9,
-    "fontes_com_erro_tecnico": 1,
+    "fontes_sem_publicacao_hoje": 10,
+    "fontes_com_erro_tecnico": 2,
     "itens_por_boletim": {
       "trabalhista-empresarial": {
         "nome": "Radar Trabalhista Empresarial",
@@ -320,7 +317,7 @@
           "Regulatório",
           "Óleo & Gás Blue"
         ],
-        "total": 14
+        "total": 9
       },
       "imobiliario-infraestrutura": {
         "nome": "Radar Negócios Imobiliários e Infraestrutura",
@@ -328,7 +325,7 @@
           "Imobiliário",
           "Infraestrutura"
         ],
-        "total": 11
+        "total": 10
       },
       "ambiental-esg": {
         "nome": "Radar Ambiental e ESG",
@@ -342,7 +339,7 @@
         "clusters": [
           "Propriedade Intelectual"
         ],
-        "total": 4
+        "total": 3
       },
       "contencioso-civel": {
         "nome": "Radar Solução de Conflitos",
@@ -350,58 +347,38 @@
           "Contencioso Carbon",
           "Contencioso Gold"
         ],
-        "total": 4
+        "total": 3
       }
     },
     "filtro1_bloqueios": {
-      "regulatorio-oleo-gas": 1,
-      "direito-tributario": 1,
-      "propriedade-intelectual": 1
+      "regulatorio-oleo-gas": 2,
+      "contencioso-civel": 2,
+      "propriedade-intelectual": 2,
+      "direito-tributario": 1
     },
     "auditoria": {
-      "total_itens": 29,
-      "itens_com_alguma_rejeicao": 11,
-      "itens_com_bloqueio_f1": 3,
+      "total_itens": 25,
+      "itens_com_alguma_rejeicao": 25,
+      "itens_com_bloqueio_f1": 7,
       "rejeicoes_por_boletim": {
         "direito-tributario": 2,
-        "imobiliario-infraestrutura": 1,
-        "societario-ma": 2,
-        "contencioso-civel": 2,
-        "propriedade-intelectual": 3,
-        "regulatorio-oleo-gas": 1
+        "imobiliario-infraestrutura": 2,
+        "trabalhista-empresarial": 1,
+        "societario-ma": 6,
+        "propriedade-intelectual": 4,
+        "contencioso-civel": 8,
+        "mercado-capitais-fundos": 2,
+        "regulatorio-oleo-gas": 5,
+        "ambiental-esg": 2
       },
       "top_palavras_chave_detectadas": [
         {
-          "palavra": "combustíveis",
-          "ocorrencias": 3
-        },
-        {
-          "palavra": "eca digital",
-          "ocorrencias": 3
-        },
-        {
-          "palavra": "anp",
-          "ocorrencias": 3
-        },
-        {
-          "palavra": "aneel",
+          "palavra": "fiscalização",
           "ocorrencias": 3
         },
         {
           "palavra": "ccee",
-          "ocorrencias": 3
-        },
-        {
-          "palavra": "senacon",
-          "ocorrencias": 3
-        },
-        {
-          "palavra": "anvisa",
-          "ocorrencias": 3
-        },
-        {
-          "palavra": "vigilância sanitária",
-          "ocorrencias": 3
+          "ocorrencias": 2
         },
         {
           "palavra": "reforma tributária",
@@ -412,31 +389,11 @@
           "ocorrencias": 2
         },
         {
-          "palavra": "anpd",
+          "palavra": "eca digital",
           "ocorrencias": 2
         },
         {
-          "palavra": "fiscalização",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "concessão",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "regras de comercialização",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "inteligência artificial",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "ia companions",
-          "ocorrencias": 2
-        },
-        {
-          "palavra": "susep",
+          "palavra": "anp",
           "ocorrencias": 2
         },
         {
@@ -444,25 +401,75 @@
           "ocorrencias": 2
         },
         {
-          "palavra": "regulação",
+          "palavra": "susep",
           "ocorrencias": 2
         },
         {
           "palavra": "antt",
           "ocorrencias": 2
+        },
+        {
+          "palavra": "notários e registradores",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "sanções administrativas",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "prazo prescricional",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "floresta nacional",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "unidades de conservação",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "estado da bahia",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "estatuto da advocacia",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "conselho federal da ordem dos advogados do brasil",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "conselhos seccionais",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "alienar o imóvel",
+          "ocorrencias": 1
+        },
+        {
+          "palavra": "município de são lourenço da mata",
+          "ocorrencias": 1
         }
       ]
     }
   },
   "filtro1_bloqueios_detalhe": {
     "regulatorio-oleo-gas": [
-      "Participe do próximo Momento Capacita aborda propostas de alterações nas Regras de Comercialização para 2027"
+      "Participe do próximo Momento Capacita aborda propostas de alterações nas Regras de Comercialização para 2027",
+      "CO – CCEE disponibiliza Regras e Procedimentos de Comercialização adaptados para operacionalização das compensações por cortes de geração – Portaria Normativa MME nº 140/2026"
+    ],
+    "contencioso-civel": [
+      "Audiência pública para discutir novo regulamento de fiscalização da ANPD será nesta quinta (24)",
+      "Susep cria Grupo de Trabalho para discutir seguros voltados à infraestrutura"
+    ],
+    "propriedade-intelectual": [
+      "2ª edição do NAVE – Programa ANP de Empreendedorismo é lançada na ROG.e",
+      "EPE fala sobre energia e avanço da inteligência artificial no TechGrid 2026"
     ],
     "direito-tributario": [
       "Susep constitui Grupo de Trabalho para analisar impactos da Reforma Tributária no mercado supervisionado"
-    ],
-    "propriedade-intelectual": [
-      "EPE fala sobre energia e avanço da inteligência artificial no TechGrid 2026"
     ]
   }
 }
