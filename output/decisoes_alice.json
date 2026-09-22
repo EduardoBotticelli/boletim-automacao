@@ -1,341 +1,408 @@
 {
-  "confirmadoEm": "2026-07-21T23:26:37.022Z",
-  "itens": [
+  "versao_formato": 2,
+  "revisao_concluida": true,
+  "origem": "portal-curadoria",
+  "confirmado_em": "2026-09-22T20:54:04.023Z",
+  "data_execucao": "2026-09-22",
+  "total_itens": 25,
+  "total_aprovados": 25,
+  "total_rejeitados": 0,
+  "decisoes": [
     {
-      "id": "manual-1784676349002",
+      "id": "it-e614491d",
       "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15509.htm",
+      "fonte": "Planalto | Resenha Diaria",
+      "titulo": "Lei nº 15.509, de 21 de setembro de 2026",
+      "radares_finais": [
+        "imobiliario-infraestrutura",
+        "contencioso-civel"
+      ],
+      "boletins": [
+        "imobiliario-infraestrutura",
+        "contencioso-civel"
+      ]
+    },
+    {
+      "id": "it-cfaffc1e",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15508.htm",
+      "fonte": "Planalto | Resenha Diaria",
+      "titulo": "Lei nº 15.508, de 21 de setembro de 2026",
+      "radares_finais": [
+        "ambiental-esg"
+      ],
       "boletins": [
         "ambiental-esg"
       ]
     },
     {
-      "id": "real-0",
+      "id": "it-7a71011c",
       "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15511.htm",
+      "fonte": "Planalto | Resenha Diaria",
+      "titulo": "Lei nº 15.511, de 21 de setembro de 2026",
+      "radares_finais": [
+        "contencioso-civel"
+      ],
       "boletins": [
-        "imobiliario-infraestrutura",
+        "contencioso-civel"
+      ]
+    },
+    {
+      "id": "it-df2a15f7",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13125.htm",
+      "fonte": "Planalto | Resenha Diaria",
+      "titulo": "Decreto nº 13.125, de 21 de setembro de 2026",
+      "radares_finais": [
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-3a199a33",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13121.htm",
+      "fonte": "Planalto | Resenha Diaria",
+      "titulo": "Decreto nº 13.121, de 21 de setembro de 2026",
+      "radares_finais": [
+        "direito-tributario",
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "direito-tributario",
         "regulatorio-oleo-gas"
       ]
     },
     {
-      "id": "real-1",
-      "status": "rejeitado",
-      "boletins": []
-    },
-    {
-      "id": "real-2",
+      "id": "it-654f52b7",
       "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45991",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado nº 45.991, de 21 de setembro de 2026",
+      "radares_finais": [
+        "societario-ma",
+        "mercado-capitais-fundos"
+      ],
       "boletins": [
-        "trabalhista-empresarial"
-      ]
-    },
-    {
-      "id": "real-3",
-      "status": "pendente",
-      "boletins": []
-    },
-    {
-      "id": "real-4",
-      "status": "aprovado",
-      "boletins": [
+        "societario-ma",
         "mercado-capitais-fundos"
       ]
     },
     {
-      "id": "real-5",
+      "id": "it-e1525482",
       "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45989",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado nº 45.989, de 21 de setembro de 2026",
+      "radares_finais": [
+        "societario-ma",
+        "mercado-capitais-fundos"
+      ],
       "boletins": [
+        "societario-ma",
         "mercado-capitais-fundos"
       ]
     },
     {
-      "id": "real-6",
+      "id": "it-c0aeb39a",
       "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.ccee.org.br/-/participe-do-proximo-momento-capacita-aborda-propostas-de-alteracoes-nas-regras-de-comercializacao-para-2027",
+      "fonte": "CCEE | Noticias",
+      "titulo": "Participe do próximo Momento Capacita aborda propostas de alterações nas Regras de Comercialização para 2027",
+      "radares_finais": [
+        "imobiliario-infraestrutura"
+      ],
       "boletins": [
-        "mercado-capitais-fundos"
+        "imobiliario-infraestrutura"
       ]
     },
     {
-      "id": "real-7",
+      "id": "it-4d86dbf0",
       "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.ccee.org.br/-/co-ccee-disponibiliza-regras-e-procedimentos-de-comercializacao-adaptados-para-operacionalizacao-das-compensacoes-por-cortes-de-geracao-prt-normativa-mme-n-140-2026",
+      "fonte": "CCEE | Noticias",
+      "titulo": "CO – CCEE disponibiliza Regras e Procedimentos de Comercialização adaptados para operacionalização das compensações por cortes de geração – Portaria Normativa MME nº 140/2026",
+      "radares_finais": [
+        "imobiliario-infraestrutura"
+      ],
       "boletins": [
-        "mercado-capitais-fundos"
+        "imobiliario-infraestrutura"
       ]
     },
     {
-      "id": "real-8",
+      "id": "it-7b31d264",
       "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/acao-concentra-orientacoes-sobre-a-reforma-tributaria",
+      "fonte": "Ministério da Fazenda | Notícias",
+      "titulo": "Ação concentra orientações sobre a Reforma Tributária",
+      "radares_finais": [
+        "direito-tributario"
+      ],
       "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "real-9",
-      "status": "aprovado",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "real-10",
-      "status": "aprovado",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "real-11",
-      "status": "aprovado",
-      "boletins": [
-        "mercado-capitais-fundos",
-        "societario-ma"
-      ]
-    },
-    {
-      "id": "real-12",
-      "status": "aprovado",
-      "boletins": [
-        "mercado-capitais-fundos",
-        "societario-ma"
-      ]
-    },
-    {
-      "id": "real-13",
-      "status": "aprovado",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "real-14",
-      "status": "aprovado",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "real-15",
-      "status": "aprovado",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "real-16",
-      "status": "aprovado",
-      "boletins": [
-        "mercado-capitais-fundos",
-        "societario-ma"
-      ]
-    },
-    {
-      "id": "real-17",
-      "status": "aprovado",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "real-18",
-      "status": "aprovado",
-      "boletins": [
-        "regulatorio-oleo-gas",
-        "propriedade-intelectual"
-      ]
-    },
-    {
-      "id": "real-19",
-      "status": "aprovado",
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "id": "real-20",
-      "status": "aprovado",
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "id": "real-21",
-      "status": "aprovado",
-      "boletins": [
-        "trabalhista-empresarial",
         "direito-tributario"
       ]
     },
     {
-      "id": "real-22",
-      "status": "pendente",
-      "boletins": []
-    },
-    {
-      "id": "real-23",
+      "id": "it-e7eeac3b",
       "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/receita-federal-abre-consulta-ao-lote-residual-de-restituicao-do-irpf-2026-nesta-quarta-feira-23-9",
+      "fonte": "Ministério da Fazenda | Notícias",
+      "titulo": "Receita Federal abre consulta ao lote residual de restituição do IRPF 2026 nesta quarta-feira (23/9)",
+      "radares_finais": [
+        "direito-tributario"
+      ],
       "boletins": [
-        "trabalhista-empresarial"
+        "direito-tributario"
       ]
     },
     {
-      "id": "real-24",
+      "id": "it-dd8ccc2b",
       "status": "aprovado",
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "id": "real-25",
-      "status": "aprovado",
-      "boletins": [
-        "direito-tributario",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/audiencia-publica-para-discutir-novo-regulamento-de-fiscalizacao-da-anpd-sera-nesta-quinta-24",
+      "fonte": "ANPD | Notícias",
+      "titulo": "Audiência pública para discutir novo regulamento de fiscalização da ANPD será nesta quinta (24)",
+      "radares_finais": [
         "propriedade-intelectual"
-      ]
-    },
-    {
-      "id": "real-26",
-      "status": "aprovado",
-      "boletins": [
-        "propriedade-intelectual"
-      ]
-    },
-    {
-      "id": "real-27",
-      "status": "aprovado",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "real-28",
-      "status": "aprovado",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "real-29",
-      "status": "aprovado",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "real-30",
-      "status": "aprovado",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "real-31",
-      "status": "aprovado",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "real-32",
-      "status": "aprovado",
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "id": "real-33",
-      "status": "aprovado",
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "id": "real-34",
-      "status": "aprovado",
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "id": "real-35",
-      "status": "aprovado",
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "id": "real-36",
-      "status": "aprovado",
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "id": "real-37",
-      "status": "aprovado",
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "id": "real-38",
-      "status": "aprovado",
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "id": "real-39",
-      "status": "aprovado",
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "id": "real-40",
-      "status": "aprovado",
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "id": "real-41",
-      "status": "aprovado",
+      ],
       "boletins": [
         "propriedade-intelectual"
       ]
     },
     {
-      "id": "real-42",
+      "id": "it-f1e9551f",
       "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.b3.com.br/data/files/1F/53/8D/C0/BC9C0A105BF9020AAC094EA8/CE%20054-2026-VNC%20303%C2%BA%20LEILAO%20ESPECIAL%20DO%20FUNDO%20DE%20INVESTIMENTOS%20DO%20NORDESTE%20FINOR_PT.pdf",
+      "fonte": "B3 | Ofícios e Comunicados",
+      "titulo": "303º Leilão Especial do Fundo de Investimentos do Nordeste (Finor)",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
       "boletins": [
-        "propriedade-intelectual"
+        "mercado-capitais-fundos"
       ]
     },
     {
-      "id": "real-43",
+      "id": "it-be3dce0c",
       "status": "aprovado",
-      "boletins": [
-        "propriedade-intelectual"
-      ]
-    },
-    {
-      "id": "real-44",
-      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/2a-edicao-do-nave-2013-programa-anp-de-empreendedorismo-e-lancada-na-rog.e",
+      "fonte": "ANP | Notícias",
+      "titulo": "2ª edição do NAVE – Programa ANP de Empreendedorismo é lançada na ROG.e",
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
       "boletins": [
         "regulatorio-oleo-gas"
       ]
     },
     {
-      "id": "real-45",
+      "id": "it-b25112c9",
       "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/acoes-de-fiscalizacao-em-sao-paulo-verificam-o-cumprimento-de-normas-em-93-agentes",
+      "fonte": "ANP | Notícias",
+      "titulo": "Ações de fiscalização em São Paulo verificam o cumprimento de normas em 93 agentes",
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
       "boletins": [
-        "ambiental-esg"
+        "regulatorio-oleo-gas"
       ]
     },
     {
-      "id": "real-46",
+      "id": "it-3deea472",
       "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-determina-apreensao-de-saneantes-sem-registro",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Anvisa determina apreensão de saneantes sem registro",
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
       "boletins": [
-        "ambiental-esg"
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-a65db6a4",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/inpi-reconhece-a-indicacao-geografica-para-a-bebida-tiquira-do-maranhao",
+      "fonte": "INPI | Notícias",
+      "titulo": "INPI reconhece a Indicação Geográfica para a bebida tiquira do Maranhão",
+      "radares_finais": [
+        "propriedade-intelectual"
+      ],
+      "boletins": [
+        "propriedade-intelectual"
+      ]
+    },
+    {
+      "id": "it-93eb6257",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/mj/pt-br/assuntos/noticias-1/mjsp-anuncia-tres-portarias-para-reforcar-protecao-de-brasileiros-no-ambiente-digital",
+      "fonte": "SENACON | Notícias",
+      "titulo": "MJSP anuncia três atos para reforçar proteção de brasileiros no ambiente digital",
+      "radares_finais": [
+        "propriedade-intelectual",
+        "contencioso-civel"
+      ],
+      "boletins": [
+        "propriedade-intelectual",
+        "contencioso-civel"
+      ]
+    },
+    {
+      "id": "it-a0d98d77",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/mineracast-debate-consolidacao-da-economia-mineral-como-area-estrategica-da-agencia",
+      "fonte": "ANM | Notícias",
+      "titulo": "Mineracast debate consolidação da Economia Mineral como área estratégica da Agência",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-54c663ff",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-fala-sobre-energia-e-avanco-da-inteligencia-artificial-no-techgrid-2026",
+      "fonte": "EPE | Notícias",
+      "titulo": "EPE fala sobre energia e avanço da inteligência artificial no TechGrid 2026",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-e9f5e700",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/antaq/pt-br/noticias/antaq-participa-de-missao-tecnica-nos-estados-unidos",
+      "fonte": "ANTAQ | Notícias",
+      "titulo": "ANTAQ participa de missão técnica nos Estados Unidos",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-f15157a5",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/setembro/susep-constitui-grupo-de-trabalho-para-analisar-impactos-da-reforma-tributaria-no-mercado-supervisionado",
+      "fonte": "SUSEP | Notícias",
+      "titulo": "Susep constitui Grupo de Trabalho para analisar impactos da Reforma Tributária no mercado supervisionado",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-ce45fea2",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/setembro/susep-cria-grupo-de-trabalho-para-discutir-seguros-voltados-a-infraestrutura",
+      "fonte": "SUSEP | Notícias",
+      "titulo": "Susep cria Grupo de Trabalho para discutir seguros voltados à infraestrutura",
+      "radares_finais": [
+        "mercado-capitais-fundos",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-d4db0d95",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-acompanha-testes-de-sinalizacao-cromatica-na-serra-do-mar-na-br-277",
+      "fonte": "ANTT | Notícias - Defeso Eleitoral",
+      "titulo": "ANTT acompanha testes de sinalização cromática na Serra do Mar, na BR-277",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-322fe4fa",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/da-obrigacao-a-fiscalizacao-como-a-antt-acompanha-a-seguranca-nas-rodovias",
+      "fonte": "ANTT | Notícias - Defeso Eleitoral",
+      "titulo": "Da obrigação à fiscalização: como a ANTT acompanha a segurança nas rodovias",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
       ]
     }
   ]
