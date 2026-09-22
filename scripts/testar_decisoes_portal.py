@@ -603,7 +603,8 @@ def teste_eml_carrega_as_imagens_do_template():
             for parte in mensagem.walk()
             if parte.get("Content-ID")
         }
-        referenciados = set(re.findall(r"cid:([^\"']+)", conteudo))
+        sem_comentario = re.sub(r"<!--.*?-->", " ", conteudo, flags=re.S)
+        referenciados = set(re.findall(r"cid:([^\"'\s>)]+)", sem_comentario))
 
         assert referenciados, f"{slug}: o corpo não referencia imagem alguma"
         faltando = [
@@ -915,6 +916,126 @@ def teste_todas_as_fontes_do_filtro1_tem_destino():
     assert not faltando, "fontes do Filtro 1 sem destino no template: " + str(faltando)
 
 
+
+def teste_estrutura_mime_embute_as_imagens():
+    """
+    A mensagem precisa ter a estrutura que o Outlook embute.
+
+    Falha se a montagem MIME regredir para o formato em que as doze imagens
+    viram anexos visíveis e o corpo mostra caixas quebradas, que foi o
+    defeito observado: as partes estavam com Content-Disposition attachment
+    e o multipart/related não declarava o tipo da parte raiz.
+
+    Espelha o que o .msg oficial declara para cada anexo:
+    PR_ATTACH_FLAGS = ATT_MHTML_REF, PR_ATTACHMENT_HIDDEN = 1 e
+    PR_RENDERING_POSITION = -1.
+    """
+    import email
+    import re
+    from email import policy
+
+    decisoes = payload(
+        [
+            decisao(
+                "CVM orienta sobre a Resolução 244",
+                "https://www.gov.br/cvm/noticia-244",
+                "CVM | Notícias",
+                "aprovado",
+                ["mercado-capitais-fundos"],
+            ),
+            decisao(
+                "RESOLUÇÃO CPPI Nº 367",
+                "https://www.in.gov.br/dou/resolucao-cppi-367",
+                "Destaques do D.O.U.",
+                "rejeitado",
+                [],
+            ),
+        ]
+    )
+
+    r = executar(boletim_exemplo(), decisoes)
+    assert r.codigo == 0, f"esperava sucesso, saida:\n{r.saida}"
+    assert len(r.mensagens) == 9, f"esperava 9 .eml, veio {len(r.mensagens)}"
+
+    for slug, bruto in r.mensagens.items():
+        mensagem = email.message_from_bytes(bruto, policy=policy.default)
+
+        # 1. corpo e imagens no mesmo multipart/related, com o tipo da raiz
+        #    declarado.
+        assert mensagem.get_content_type() == "multipart/related", (
+            f"{slug}: a raiz é {mensagem.get_content_type()}"
+        )
+        assert mensagem.get_param("type") == "multipart/alternative", (
+            f"{slug}: o multipart/related não declara o tipo da parte raiz"
+        )
+
+        # 2. cabeçalhos básicos da mensagem.
+        for cabecalho in ("Subject", "Date", "Message-ID"):
+            assert mensagem.get(cabecalho), f"{slug}: falta {cabecalho}"
+
+        corpo = mensagem.get_body(preferencelist=("html",))
+        assert corpo is not None, f"{slug}: sem corpo HTML"
+        conteudo = corpo.get_content()
+
+        embutidos = {}
+        for parte in mensagem.walk():
+            identificador = parte.get("Content-ID")
+            if not identificador:
+                continue
+
+            # 3. Content-ID entre sinais de menor e maior.
+            assert identificador.startswith("<") and identificador.endswith(">"), (
+                f"{slug}: Content-ID fora do formato: {identificador}"
+            )
+
+            # 4. imagem embutida, não anexo.
+            disposicao = (parte.get_content_disposition() or "").lower()
+            assert disposicao == "inline", (
+                f"{slug}: {identificador} está como "
+                f"{disposicao or 'sem disposição'}, deveria ser inline"
+            )
+
+            # 5. codificação adequada para binário.
+            assert parte.get("Content-Transfer-Encoding", "").lower() == "base64", (
+                f"{slug}: {identificador} não está em base64"
+            )
+
+            embutidos[identificador.strip("<>")] = parte
+
+        # 6. nenhum anexo visível.
+        anexos = [
+            parte.get_filename() or parte.get_content_type()
+            for parte in mensagem.walk()
+            if (parte.get_content_disposition() or "").lower() == "attachment"
+        ]
+        assert not anexos, f"{slug}: a mensagem tem anexo visível: {anexos}"
+
+        # 7. todo cid que o cliente enxerga tem parte, e toda parte é
+        #    referenciada. Referência dentro de comentário HTML não conta: é
+        #    o caso do fallback VML, cujos recursos não entram na mensagem
+        #    justamente porque o Outlook os listaria como anexos.
+        sem_comentario = re.sub(r"<!--.*?-->", " ", conteudo, flags=re.S)
+        referenciados = set(re.findall(r"cid:([^\"'\s>)]+)", sem_comentario))
+        assert referenciados, f"{slug}: o corpo não referencia imagem alguma"
+
+        so_em_comentario = (
+            set(re.findall(r"cid:([^\"'\s>)]+)", conteudo)) - referenciados
+        )
+        embutidos_indevidos = sorted(so_em_comentario & set(embutidos))
+        assert not embutidos_indevidos, (
+            f"{slug}: recurso referenciado só dentro de comentário entrou na "
+            f"mensagem e apareceria como anexo: {embutidos_indevidos}"
+        )
+
+        faltando = sorted(referenciados - set(embutidos))
+        assert not faltando, f"{slug}: cid sem parte correspondente: {faltando}"
+
+        sobrando = sorted(set(embutidos) - referenciados)
+        assert not sobrando, (
+            f"{slug}: parte embutida sem referência no corpo: {sobrando}"
+        )
+
+
 TESTES = [
     teste_fluxo_completo,
     teste_edicoes_de_texto,
@@ -927,6 +1048,7 @@ TESTES = [
     teste_secoes_sem_noticia_saem_do_corpo_e_do_sumario,
     teste_radar_vazio_usa_o_template_com_mensagem,
     teste_eml_carrega_as_imagens_do_template,
+    teste_estrutura_mime_embute_as_imagens,
     teste_fonte_sem_secao_no_template_bloqueia,
     teste_fonte_nova_publica_na_propria_secao,
     teste_mecanismo_de_alias_continua_disponivel,

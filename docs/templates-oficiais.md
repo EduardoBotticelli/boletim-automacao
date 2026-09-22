@@ -76,6 +76,76 @@ As imagens ficam em uma pasta por Radar porque os templates reaproveitam os
 mesmos nomes de arquivo para imagens diferentes: `image006.png`, por
 exemplo, é um banner distinto em três Radares.
 
+### Estrutura da mensagem
+
+```
+multipart/related; type="multipart/alternative"
+  multipart/alternative
+    text/plain          (texto puro, para quem não renderiza HTML)
+    text/html           (o corpo do template)
+  image/png   Content-Disposition: inline + Content-ID   x9
+```
+
+O `multipart/related` por fora é o formato que o próprio Outlook gera: deixa
+as imagens visíveis para o corpo HTML qualquer que seja a alternativa
+escolhida pelo cliente. O parâmetro `type` diz qual é a parte raiz.
+
+Cada imagem vai com **`Content-Disposition: inline`**. Com `attachment` o
+Outlook lista as doze imagens como anexos e não as resolve no corpo — todas
+as imagens aparecem como caixas quebradas, inclusive banner, avaliação e
+redes sociais.
+
+Isso espelha o que o `.msg` oficial declara para cada anexo:
+
+| Propriedade MAPI | Valor no template | Equivalente MIME |
+|---|---|---|
+| `PR_ATTACH_FLAGS` | `4` (ATT_MHTML_REF) | parte dentro do `multipart/related`, referenciada por `cid:` |
+| `PR_ATTACHMENT_HIDDEN` | `1` | `Content-Disposition: inline` |
+| `PR_RENDERING_POSITION` | `-1` | idem |
+
+### Recursos referenciados só dentro de comentário
+
+Entram na mensagem apenas os recursos cujo `cid` o corpo referencia **fora
+de comentário HTML**. Hoje isso exclui os três `.wmz`.
+
+O Word emite cada botão de avaliação em duas versões:
+
+```html
+<!--[if gte vml 1]><v:shape ...><v:imagedata src="cid:image001.wmz@..."/></v:shape><![endif]-->
+<![if !vml]><a href="..."><img src="cid:image003.png@..." alt=NEUTRA></a><![endif]>
+```
+
+`<!--[if ...]>` é comentário HTML de verdade; `<![if ...]>` não é. O Outlook
+decide o que esconder da lista de anexos casando Content-ID com as
+referências do corpo, e essa varredura ignora comentário. Resultado: os nove
+PNG somem da lista e os três `.wmz` apareciam como anexos visíveis.
+
+O tipo não é o motivo: o `.msg` original usa o mesmo
+`application/x-ms-wmz` e mesmo assim os esconde, porque o MAPI tem a
+propriedade `PR_ATTACHMENT_HIDDEN`, **que não tem equivalente em MIME**.
+`Content-Disposition: inline` é o mais próximo e não basta para uma parte
+que o cliente não associa ao corpo.
+
+Sem os `.wmz` os botões continuam aparecendo: a versão em PNG está em
+`<![if !vml]>`, fora de comentário, e é a que o Outlook usa. Verificado no
+Outlook, abrindo uma edição sem os três — os botões EXCELENTE, NEUTRA e
+RUIM renderizam normalmente.
+
+A regra é geral, não uma exceção para `.wmz`: qualquer recurso que só seja
+referenciado de dentro de comentário fica fora da mensagem, porque só teria
+o efeito de virar anexo visível. Os arquivos continuam sendo extraídos para
+`recursos_radar/`, para a prévia em HTML.
+
+A mensagem leva `Subject`, `Date`, `Message-ID` e `X-Unsent: 1`. O
+`X-Unsent` faz o Outlook abrir o arquivo como mensagem nova, pronta para
+endereçar e enviar, em vez de mensagem recebida sem remetente. `From` e
+`To` ficam em branco por padrão e podem ser preenchidos em
+`templates/mapeamento_radares.json` (`remetente` e `destinatario`).
+
+A função `conferir_eml` valida essa estrutura antes de gravar: se a
+montagem regredir, a geração falha e os e-mails da edição anterior são
+preservados.
+
 ### Sobre o envio por corpo HTML
 
 O corpo do `.eml` usa `cid:`, que só resolve dentro de uma mensagem. Se o
