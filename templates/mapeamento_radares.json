@@ -1,0 +1,77 @@
+{
+  "_leia_me": [
+    "Liga cada Radar ao seu template oficial (.msg) e resolve os nomes de fonte",
+    "que não casam automaticamente com o nome da seção dentro do template.",
+    "",
+    "O casamento automático compara o nome da fonte do boletim.json (a parte",
+    "antes do '|') com o nome da seção do template, sem acento e sem",
+    "pontuação. 'aliases_fonte' cobre o que sobra.",
+    "",
+    "Cada alias tem um '_motivo' explicando a escolha. Ele é ignorado pelo",
+    "código: só as chaves que são slug de Radar valem como destino.",
+    "",
+    "Para rotear uma fonte nova, acrescente uma entrada em 'aliases_fonte' com",
+    "o nome da fonte como chave e a âncora da seção do template como valor.",
+    "As âncoras de cada template aparecem no relatório do",
+    "scripts/inspecionar_templates.py."
+  ],
+  "templates": {
+    "trabalhista-empresarial": "Template_Radar Trabalhista.msg",
+    "direito-tributario": "Template_Radar Tributário.msg",
+    "societario-ma": "Template_Radar Societário_ Fusões e Aquisições.msg",
+    "mercado-capitais-fundos": "Template_Radar Mercado de Capitais e Fundos de Investimento.msg",
+    "regulatorio-oleo-gas": "Template_Radar Regulatório e Óleo e Gás.msg",
+    "imobiliario-infraestrutura": "Template_Radar Negócios Imobiliários e Infraestrutura.msg",
+    "ambiental-esg": "Template_Radar Ambiental e ESG.msg",
+    "propriedade-intelectual": "Template_Radar Propriedade Intelectual_ Tecnologia e Privacidade.msg",
+    "contencioso-civel": "Template_Radar Solução de Conflitos.msg"
+  },
+  "assuntos": {
+    "trabalhista-empresarial": "Radar Trabalhista Empresarial",
+    "direito-tributario": "Radar Tributário",
+    "societario-ma": "Radar Societário, Fusões e Aquisições",
+    "mercado-capitais-fundos": "Radar Mercado de Capitais e Fundos de Investimento",
+    "regulatorio-oleo-gas": "Radar Regulatório e Óleo e Gás",
+    "imobiliario-infraestrutura": "Radar Negócios Imobiliários e Infraestrutura",
+    "ambiental-esg": "Radar Ambiental e ESG",
+    "propriedade-intelectual": "Radar Propriedade Intelectual, Tecnologia e Privacidade",
+    "contencioso-civel": "Radar Solução de Conflitos"
+  },
+  "aliases_fonte": {
+    "_comentario": "chave = nome da fonte no boletim.json; valor = âncora da seção no template do Radar",
+    "Ministério do Meio Ambiente": {
+      "_motivo": "O template chama a mesma fonte de 'Ministério do Meio Ambiente e Mudança do Clima'.",
+      "ambiental-esg": "MinisterioMeioAmbiente"
+    },
+    "Ministério da Agricultura": {
+      "_motivo": "O template usa a sigla MAPA para o Ministério da Agricultura e Pecuária.",
+      "ambiental-esg": "MAPA",
+      "imobiliario-infraestrutura": "MAPA"
+    },
+    "Kollemata": {
+      "_motivo": "Mesma fonte, nomes iguais; alias mantido por clareza.",
+      "imobiliario-infraestrutura": "Kollemata"
+    },
+    "Portal Reforma Tributária": {
+      "_motivo": "Mesma fonte, nomes iguais; alias mantido por clareza.",
+      "direito-tributario": "PortalReformaTributaria"
+    }
+  },
+  "_secao_padrao_leia_me": [
+    "Destino para item adicionado manualmente no portal cuja fonte digitada não",
+    "corresponde a nenhuma seção do template. Vazio (padrão) significa que esse",
+    "item bloqueia a geração em vez de aparecer sob um nome de fonte que não é o",
+    "dele. Preencha com a âncora de uma seção para liberar."
+  ],
+  "secao_padrao_item_manual": {
+    "trabalhista-empresarial": "",
+    "direito-tributario": "",
+    "societario-ma": "",
+    "mercado-capitais-fundos": "",
+    "regulatorio-oleo-gas": "",
+    "imobiliario-infraestrutura": "",
+    "ambiental-esg": "",
+    "propriedade-intelectual": "",
+    "contencioso-civel": ""
+  }
+}

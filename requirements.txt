@@ -1,3 +1,11 @@
 firecrawl-py>=1.0.0
 google-genai>=0.8.0
 python-docx>=1.0.0
+
+# Leitura dos templates oficiais (.msg) do Marketing.
+# O corpo do .msg e HTML encapsulado em RTF: olefile abre o container OLE,
+# compressed-rtf descomprime o PR_RTF_COMPRESSED e RTFDE desencapsula o HTML.
+# Todas sao puro Python e instalam no runner Linux do GitHub Actions.
+olefile>=0.47
+compressed-rtf>=1.0.6
+RTFDE>=0.1.2

@@ -32,7 +32,7 @@ jobs:
       - name: Validar arquivos
         run: |
           python -m json.tool fontes.json > /dev/null
-          python -m py_compile scripts/gerar_boletim.py scripts/gerar_html.py scripts/gerar_auditoria_html.py scripts/testar_dou_regulatorio.py scripts/gerar_boletim_final.py scripts/testar_decisoes_portal.py
+          python -m py_compile scripts/gerar_boletim.py scripts/gerar_html.py scripts/gerar_auditoria_html.py scripts/testar_dou_regulatorio.py scripts/gerar_boletim_final.py scripts/testar_decisoes_portal.py scripts/templates_radar.py scripts/inspecionar_templates.py
       - name: Gerar Radares
         env:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
