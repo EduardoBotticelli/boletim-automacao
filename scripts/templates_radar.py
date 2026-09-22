@@ -301,6 +301,25 @@ def _texto_visivel(fragmento):
     return " ".join(_html.unescape(sem_tag).split())
 
 
+def _ancora_de_secao(fragmento):
+    """
+    A âncora que identifica uma seção de fonte dentro de uma linha.
+
+    Só conta âncora que envolve conteúdo: no template, a faixa verde da fonte
+    é sempre <a name=X>NOME DA FONTE</a>. Âncora vazia (<a name=X></a>) é
+    ponto de destino de link, como a do "VOLTAR AO SUMÁRIO", e não delimita
+    seção nenhuma.
+    """
+    for encontrada in re.finditer(
+        r"<a[^>]*\bname=[\"']?([A-Za-z0-9_.-]+)[\"']?[^>]*>", fragmento
+    ):
+        if fragmento[encontrada.end() :].lstrip().startswith("</a>"):
+            continue
+        return encontrada
+
+    return None
+
+
 def normalizar(valor):
     """Minúsculas, sem acento e sem pontuação, para comparar nomes de fontes."""
     texto = "".join(
@@ -362,9 +381,7 @@ def analisar(html_template):
     indices_cabecalho = []
 
     for indice, (inicio, fim) in enumerate(linhas):
-        encontrada = re.search(
-            r"<a[^>]*\bname=[\"']?([A-Za-z0-9_.-]+)", html_template[inicio:fim]
-        )
+        encontrada = _ancora_de_secao(html_template[inicio:fim])
         if not encontrada:
             continue
 

@@ -40,6 +40,7 @@ from urllib.parse import urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import ajustes_templates
 import templates_radar
 
 
@@ -929,7 +930,9 @@ def main():
 
     # Carrega os nove templates antes de gravar qualquer coisa: se um deles
     # estiver faltando ou ilegível, nada é sobrescrito.
+    config_ajustes = ajustes_templates.carregar_config()
     carregados = {}
+    ajustes_aplicados = {}
     for slug in SLUGS:
         caminho_template = TEMPLATES_DIR / mapeamento["templates"][slug]
         if not caminho_template.exists():
@@ -939,6 +942,12 @@ def main():
             )
         try:
             template = templates_radar.carregar_template(str(caminho_template))
+            # Ajustes autorizados sobre o HTML extraído: a âncora que faz o
+            # "VOLTAR AO SUMÁRIO" funcionar e as seções de fonte que o
+            # template ainda não tem. O .msg não é alterado.
+            template.html, ajustes = ajustes_templates.aplicar(
+                template.html, slug, config_ajustes
+            )
             estrutura = templates_radar.analisar(template.html)
         except Exception as erro:
             raise SystemExit(
@@ -946,6 +955,7 @@ def main():
                 "Os e-mails finais foram preservados."
             ) from erro
         carregados[slug] = (template, estrutura)
+        ajustes_aplicados[slug] = ajustes
 
     # Distribui as notícias pelas seções antes de gravar, pelo mesmo motivo.
     distribuicao = {}
@@ -1031,6 +1041,7 @@ def main():
         "total_itens_manuais": manuais,
         "total_rejeitados": rejeitados,
         "decisoes_sem_item_correspondente": decisoes_orfas,
+        "ajustes_nos_templates": ajustes_aplicados,
         "arquivos_gerados": arquivos_gerados,
     }
     escrever_json_atomico(RESUMO_PATH, resumo)

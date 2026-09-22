@@ -30,6 +30,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SCRIPT = BASE_DIR / "scripts" / "gerar_boletim_final.py"
 MODULO_TEMPLATES = BASE_DIR / "scripts" / "templates_radar.py"
+MODULO_AJUSTES = BASE_DIR / "scripts" / "ajustes_templates.py"
 TEMPLATES_DIR = BASE_DIR / "templates"
 
 SLUGS = [
@@ -148,6 +149,7 @@ def executar(boletim, decisoes):
 
         shutil.copy2(SCRIPT, raiz / "scripts" / SCRIPT.name)
         shutil.copy2(MODULO_TEMPLATES, raiz / "scripts" / MODULO_TEMPLATES.name)
+        shutil.copy2(MODULO_AJUSTES, raiz / "scripts" / MODULO_AJUSTES.name)
 
         # Os templates oficiais entram por link simbólico: são ~10 MB e o
         # script só os lê.
@@ -670,13 +672,12 @@ def teste_fonte_sem_secao_no_template_bloqueia():
 
 
 
-def teste_alias_roteia_fonte_para_secao_existente():
+def teste_fonte_nova_publica_na_propria_secao():
     """
-    Fonte sem seção própria vai para a seção mapeada em
-    templates/mapeamento_radares.json em vez de bloquear.
+    Fonte que ganhou seção no template publica sob o próprio nome, não sob
+    outra procedência.
 
-    A ANTAQ não tem seção no template do Radar Imobiliário e Infraestrutura e
-    está mapeada para o Diário Oficial da União.
+    A ANTAQ não tinha seção no Radar Imobiliário e Infraestrutura; agora tem.
     """
     boletim = boletim_exemplo()
     boletim["itens"].append(
@@ -684,7 +685,7 @@ def teste_alias_roteia_fonte_para_secao_existente():
             "fonte": "ANTAQ | Notícias",
             "categoria": "Infraestrutura",
             "titulo": "ANTAQ realiza visita técnica em Santos",
-            "data_publicacao": "2026-08-27",
+            "data_publicacao": "2026-09-22",
             "resumo": "Visita a empresas de navegação.",
             "motivo_filtragem": "Regulação portuária.",
             "palavras_chave_detectadas": [],
@@ -722,19 +723,132 @@ def teste_alias_roteia_fonte_para_secao_existente():
     )
 
     r = executar(boletim, decisoes)
-
-    assert r.codigo == 0, f"o alias deveria evitar o bloqueio, saida:\n{r.saida}"
-
-    html = r.emails["imobiliario-infraestrutura"]
-    assert "visita técnica em Santos" in html, "a notícia da ANTAQ não foi publicada"
-    assert "name=DiarioOficialUniao" in html, "não caiu na seção mapeada"
+    assert r.codigo == 0, f"esperava sucesso, saida:\n{r.saida}"
 
     publicadas = next(
         arquivo["secoes_publicadas"]
         for arquivo in r.resumo["arquivos_gerados"]
         if arquivo["slug"] == "imobiliario-infraestrutura"
     )
-    assert publicadas == ["DiarioOficialUniao"], publicadas
+    assert publicadas == ["ANTAQ"], (
+        f"a notícia deveria sair na seção da ANTAQ, saiu em {publicadas}"
+    )
+
+    html = r.emails["imobiliario-infraestrutura"]
+    assert "visita técnica em Santos" in html
+    assert 'href="#ANTAQ"' in html, "a ANTAQ não entrou no sumário"
+
+
+def teste_mecanismo_de_alias_continua_disponivel():
+    """
+    O alias continua funcionando para casos futuros, mesmo sem nenhuma fonte
+    dependendo dele hoje.
+
+    O Ministério da Agricultura chega como MAPA no template do Radar
+    Ambiental e ESG por meio de alias.
+    """
+    mapeamento = json.loads(
+        (BASE_DIR / "templates" / "mapeamento_radares.json").read_text(encoding="utf-8")
+    )
+    aliases = mapeamento.get("aliases_fonte", {})
+    assert "Ministério da Agricultura" in aliases, "o mecanismo de alias sumiu"
+
+    boletim = boletim_exemplo()
+    boletim["itens"].append(
+        {
+            "fonte": "Ministério da Agricultura | Notícias",
+            "categoria": "Ambiental",
+            "titulo": "MAPA publica normas de defesa agropecuária",
+            "data_publicacao": "2026-09-22",
+            "resumo": "Normas de defesa agropecuária.",
+            "motivo_filtragem": "Teste de alias.",
+            "palavras_chave_detectadas": [],
+            "boletins_confirmados": ["ambiental-esg"],
+            "boletins_rejeitados": [],
+            "url": "https://www.gov.br/agricultura/normas",
+            "boletins": ["ambiental-esg"],
+        }
+    )
+
+    decisoes = payload(
+        [
+            decisao(
+                "CVM orienta sobre a Resolução 244",
+                "https://www.gov.br/cvm/noticia-244",
+                "CVM | Notícias",
+                "rejeitado",
+                [],
+            ),
+            decisao(
+                "RESOLUÇÃO CPPI Nº 367",
+                "https://www.in.gov.br/dou/resolucao-cppi-367",
+                "Destaques do D.O.U.",
+                "rejeitado",
+                [],
+            ),
+            decisao(
+                "MAPA publica normas de defesa agropecuária",
+                "https://www.gov.br/agricultura/normas",
+                "Ministério da Agricultura | Notícias",
+                "aprovado",
+                ["ambiental-esg"],
+            ),
+        ]
+    )
+
+    r = executar(boletim, decisoes)
+    assert r.codigo == 0, f"esperava sucesso, saida:\n{r.saida}"
+
+    publicadas = next(
+        arquivo["secoes_publicadas"]
+        for arquivo in r.resumo["arquivos_gerados"]
+        if arquivo["slug"] == "ambiental-esg"
+    )
+    assert publicadas == ["MAPA"], publicadas
+
+
+def teste_ancora_do_voltar_ao_sumario_existe():
+    """
+    Em todos os nove Radares, todo link interno tem âncora de destino.
+
+    Antes do ajuste, o "VOLTAR AO SUMÁRIO" apontava para "#Sumario", que não
+    existia em template nenhum.
+    """
+    decisoes = payload(
+        [
+            decisao(
+                "CVM orienta sobre a Resolução 244",
+                "https://www.gov.br/cvm/noticia-244",
+                "CVM | Notícias",
+                "aprovado",
+                ["mercado-capitais-fundos"],
+            ),
+            decisao(
+                "RESOLUÇÃO CPPI Nº 367",
+                "https://www.in.gov.br/dou/resolucao-cppi-367",
+                "Destaques do D.O.U.",
+                "rejeitado",
+                [],
+            ),
+        ]
+    )
+
+    r = executar(boletim_exemplo(), decisoes)
+    assert r.codigo == 0, f"esperava sucesso, saida:\n{r.saida}"
+
+    import re
+
+    for slug, html in r.emails.items():
+        ancoras = set(re.findall(r'<a[^>]*name="?([A-Za-z0-9_.-]+)"?', html))
+        destinos = set(re.findall(r'href="#([A-Za-z0-9_.-]+)"', html))
+        quebrados = sorted(destinos - ancoras)
+        assert not quebrados, f"{slug}: links internos sem âncora: {quebrados}"
+
+    # Vale também na edição vazia, onde a grade de fontes some inteira.
+    vazio = r.emails["ambiental-esg"]
+    assert "Não foram identificadas atualizações" in vazio
+    ancoras = set(re.findall(r'<a[^>]*name="?([A-Za-z0-9_.-]+)"?', vazio))
+    assert "Sumario" in ancoras, "a âncora do sumário sumiu na edição vazia"
 
 
 def teste_todas_as_fontes_do_filtro1_tem_destino():
@@ -758,8 +872,10 @@ def teste_todas_as_fontes_do_filtro1_tem_destino():
     aliases = mapeamento.get("aliases_fonte", {})
 
     sys.path.insert(0, str(BASE_DIR / "scripts"))
+    import ajustes_templates
     import templates_radar
 
+    config_ajustes = ajustes_templates.carregar_config()
     faltando = []
 
     for fonte, slugs in espaco["MAPA"].items():
@@ -769,7 +885,8 @@ def teste_todas_as_fontes_do_filtro1_tem_destino():
             template = templates_radar.carregar_template(
                 str(BASE_DIR / "templates" / mapeamento["templates"][slug])
             )
-            secoes = templates_radar.analisar(template.html).secoes
+            html, _ = ajustes_templates.aplicar(template.html, slug, config_ajustes)
+            secoes = templates_radar.analisar(html).secoes
 
             destino = None
             for chave, destinos in aliases.items():
@@ -811,7 +928,9 @@ TESTES = [
     teste_radar_vazio_usa_o_template_com_mensagem,
     teste_eml_carrega_as_imagens_do_template,
     teste_fonte_sem_secao_no_template_bloqueia,
-    teste_alias_roteia_fonte_para_secao_existente,
+    teste_fonte_nova_publica_na_propria_secao,
+    teste_mecanismo_de_alias_continua_disponivel,
+    teste_ancora_do_voltar_ao_sumario_existe,
     teste_todas_as_fontes_do_filtro1_tem_destino,
 ]
 

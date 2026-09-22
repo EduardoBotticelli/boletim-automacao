@@ -18,6 +18,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BASE_DIR / "scripts"))
 
+import ajustes_templates  # noqa: E402
 import templates_radar  # noqa: E402
 
 TEMPLATES_DIR = BASE_DIR / "templates"
@@ -55,6 +56,7 @@ def fontes_permitidas_por_radar():
 def main():
     mapeamento = json.loads(MAPEAMENTO_PATH.read_text(encoding="utf-8"))
     permitidas = fontes_permitidas_por_radar()
+    config_ajustes = ajustes_templates.carregar_config()
     aliases = mapeamento.get("aliases_fonte", {})
 
     lacunas = []
@@ -62,6 +64,9 @@ def main():
     for slug, arquivo in mapeamento["templates"].items():
         caminho = TEMPLATES_DIR / arquivo
         template = templates_radar.carregar_template(str(caminho))
+        template.html, ajustes = ajustes_templates.aplicar(
+            template.html, slug, config_ajustes
+        )
         estrutura = templates_radar.analisar(template.html)
 
         print("=" * 78)
@@ -71,9 +76,11 @@ def main():
             f"imagens: {len(template.recursos)} | "
             f"seções: {len(estrutura.secoes)}"
         )
+        novas = {d["ancora"] for d in ajustes.get("secoes_novas", [])}
         print(f"  {'ÂNCORA':<28} SEÇÃO")
         for secao in estrutura.secoes:
-            print(f"  {secao.ancora:<28} {secao.nome}")
+            marca = "  (acrescentada)" if secao.ancora in novas else ""
+            print(f"  {secao.ancora:<28} {secao.nome}{marca}")
 
         for fonte in sorted(permitidas.get(slug, [])):
             if _tem_secao(fonte, slug, estrutura.secoes, aliases):

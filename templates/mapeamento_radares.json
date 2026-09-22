@@ -55,29 +55,6 @@
     "Portal Reforma Tributária": {
       "_motivo": "Mesma fonte, nomes iguais; alias mantido por clareza.",
       "direito-tributario": "PortalReformaTributaria"
-    },
-    "SUSEP": {
-      "_motivo": "A SUSEP é autarquia vinculada ao Ministério da Fazenda e não tem seção própria nestes templates. Publicar sob 'Ministério da Fazenda' mantém a vinculação institucional correta.",
-      "mercado-capitais-fundos": "MinisterioFazenda",
-      "imobiliario-infraestrutura": "MinisterioFazenda",
-      "ambiental-esg": "MinisterioFazenda"
-    },
-    "ANEEL": {
-      "_motivo": "No Radar Societário não há seção da ANEEL. Os atos da agência são publicados no Diário Oficial da União, que é a seção de publicações oficiais desse template. Nos demais Radares a ANEEL tem seção própria e o casamento automático resolve.",
-      "societario-ma": "DiarioOficial"
-    },
-    "ANATEL": {
-      "_motivo": "Sem seção própria no Radar Imobiliário e Infraestrutura. Roteada para o Diário Oficial da União, onde os atos da agência são publicados.",
-      "imobiliario-infraestrutura": "DiarioOficialUniao"
-    },
-    "ANTAQ": {
-      "_motivo": "Sem seção própria no Radar Imobiliário e Infraestrutura. Roteada para o Diário Oficial da União. No Radar Regulatório a ANTAQ tem seção própria e o casamento automático resolve.",
-      "imobiliario-infraestrutura": "DiarioOficialUniao"
-    },
-    "ANTT": {
-      "_motivo": "Sem seção própria nos Radares Imobiliário e Ambiental. Roteada para o Diário Oficial da União. No Radar Regulatório a ANTT tem seção própria.",
-      "imobiliario-infraestrutura": "DiarioOficialUniao",
-      "ambiental-esg": "DiarioOficialUniao"
     }
   },
   "_secao_padrao_leia_me": [

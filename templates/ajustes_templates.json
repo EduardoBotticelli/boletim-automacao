@@ -1,0 +1,95 @@
+{
+  "_leia_me": [
+    "Ajustes aplicados ao HTML extraído dos templates oficiais, na hora de",
+    "gerar a edição. Os arquivos .msg não são alterados: eles continuam sendo",
+    "a fonte, somente leitura.",
+    "",
+    "São dois ajustes, ambos autorizados e pendentes de incorporação oficial",
+    "pelo Marketing. A lista para envio está em docs/templates-oficiais.md.",
+    "",
+    "1. ancora_voltar_sumario: o link 'VOLTAR AO SUMÁRIO' aponta para",
+    "   '#Sumario' e essa âncora não existe em nenhum dos nove templates. É",
+    "   inserido um <a name> vazio no bloco do sumário.",
+    "",
+    "2. secoes_novas: fontes que o Filtro 1 permite e que o template não tem.",
+    "   Cada uma é cópia literal de uma seção existente do mesmo template",
+    "   ('modelo'), trocando só a âncora e o nome.",
+    "",
+    "Critério de posição: a seção nova entra depois da última seção existente,",
+    "e a entrada no sumário ocupa a primeira célula livre da grade. É a única",
+    "posição que não desloca nenhuma entrada já definida pelo Marketing nem",
+    "muda a largura de célula alguma. Entre as novas, a ordem é alfabética."
+  ],
+
+  "ancora_voltar_sumario": "Sumario",
+
+  "secoes_novas": {
+    "societario-ma": [
+      {
+        "ancora": "ANEEL",
+        "nome": "ANEEL",
+        "nome_sumario": "aneel",
+        "modelo": "BancoCentral",
+        "_motivo": "Único outro órgão regulador do template; a seção do Banco Central é o modelo mais próximo."
+      }
+    ],
+
+    "mercado-capitais-fundos": [
+      {
+        "ancora": "SUSEP",
+        "nome": "SUSEP",
+        "nome_sumario": "susep",
+        "modelo": "COAF",
+        "_motivo": "COAF é a outra sigla de supervisor do sistema financeiro no template."
+      }
+    ],
+
+    "imobiliario-infraestrutura": [
+      {
+        "ancora": "ANATEL",
+        "nome": "ANATEL",
+        "nome_sumario": "anatel",
+        "modelo": "ANEEL",
+        "_motivo": "ANEEL é seção de agência reguladora com sigla, mesmo formato."
+      },
+      {
+        "ancora": "ANTAQ",
+        "nome": "ANTAQ",
+        "nome_sumario": "antaq",
+        "modelo": "ANEEL",
+        "_motivo": "idem"
+      },
+      {
+        "ancora": "ANTT",
+        "nome": "ANTT",
+        "nome_sumario": "antt",
+        "modelo": "ANEEL",
+        "_motivo": "idem"
+      },
+      {
+        "ancora": "SUSEP",
+        "nome": "SUSEP",
+        "nome_sumario": "susep",
+        "modelo": "ANEEL",
+        "_motivo": "idem"
+      }
+    ],
+
+    "ambiental-esg": [
+      {
+        "ancora": "ANTT",
+        "nome": "ANTT",
+        "nome_sumario": "antt",
+        "modelo": "ANEEL",
+        "_motivo": "ANEEL é seção de agência reguladora com sigla, mesmo formato."
+      },
+      {
+        "ancora": "SUSEP",
+        "nome": "SUSEP",
+        "nome_sumario": "susep",
+        "modelo": "ANEEL",
+        "_motivo": "idem"
+      }
+    ]
+  }
+}

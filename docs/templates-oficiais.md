@@ -103,65 +103,78 @@ Para ver as âncoras disponíveis e as fontes ainda sem seção:
 python scripts/inspecionar_templates.py
 ```
 
-## Fontes roteadas para outra seção
+## Ajustes aplicados sobre o template
 
-Oito pares (Radar, fonte) que o Filtro 1 permite não têm seção própria no
-template correspondente. Em vez de bloquear a edição, cada um foi mapeado
-para uma seção que já existe no template, em `aliases_fonte`:
+Os `.msg` não podem ser reescritos no Linux (ver acima), então dois ajustes
+autorizados são aplicados ao HTML extraído, na geração. Estão declarados em
+`templates/ajustes_templates.json` e implementados em
+`scripts/ajustes_templates.py`.
 
-| Radar | Fonte | Seção usada | Por quê |
-|---|---|---|---|
-| societario-ma | ANEEL | Diário Oficial da União | Os atos da agência são publicados no DOU, que é a seção de publicações oficiais desse template |
-| mercado-capitais-fundos | SUSEP | Ministério da Fazenda | A SUSEP é autarquia vinculada ao Ministério da Fazenda |
-| imobiliario-infraestrutura | SUSEP | Ministério da Fazenda | idem |
-| imobiliario-infraestrutura | ANATEL | Diário Oficial da União (Seção 1) | Sem seção própria; publicações oficiais |
-| imobiliario-infraestrutura | ANTAQ | Diário Oficial da União (Seção 1) | idem |
-| imobiliario-infraestrutura | ANTT | Diário Oficial da União (Seção 1) | idem |
-| ambiental-esg | ANTT | Diário Oficial da União (Seção 1) | idem |
-| ambiental-esg | SUSEP | Ministério da Fazenda | idem |
+Os dois precisam ser incorporados oficialmente pelo Marketing. A lista para
+envio está no fim deste documento.
 
-Nos Radares em que essas fontes têm seção própria (a ANTAQ no Regulatório,
-por exemplo), o casamento automático resolve e o alias não é usado.
+### Ajuste 1 — âncora do "VOLTAR AO SUMÁRIO"
 
-**O que isso implica.** A faixa da seção é lida como a origem da notícia.
-Uma notícia da ANTAQ publicada sob "Diário Oficial da União" aparece com uma
-procedência que não é exatamente a dela. É o preço de não criar seções novas
-no template. A correção definitiva é o Marketing acrescentar as seções que
-faltam; feito isso, basta remover o alias e o casamento automático assume.
+O link aponta para `#Sumario` e essa âncora não existe em nenhum dos nove
+templates, então o link não leva a lugar nenhum.
 
-`python scripts/inspecionar_templates.py` confirma que, hoje, toda fonte do
-Filtro 1 tem destino.
+É inserido `<a name="Sumario"></a>` dentro do primeiro parágrafo da linha do
+rótulo do sumário ("navegue pelas fontes"). A âncora é um elemento vazio:
+não ocupa espaço, não muda texto, cor, fonte, espaçamento nem estrutura.
 
-## Item adicionado manualmente no portal
+A linha do rótulo foi escolhida porque é o começo do sumário e é a única
+parte dele que sobrevive na edição vazia, quando a grade de fontes é
+removida inteira. Assim o link funciona também nessa edição.
 
-A fonte de um item manual é texto livre e pode não existir em nenhuma seção.
-Por padrão esse item **bloqueia** a geração, para não sair sob o nome de uma
-fonte que não é a dele.
+### Ajuste 2 — seções de fonte que faltavam
 
-Para liberar, preencha `secao_padrao_item_manual` no mapeamento com a âncora
-da seção que deve receber esses itens no Radar:
+Oito pares (Radar, fonte) que o Filtro 1 permite não tinham seção:
 
-```json
-"secao_padrao_item_manual": {
-  "contencioso-civel": "DiarioOficialUniao"
-}
-```
+| Radar | Fontes acrescentadas | Seção copiada |
+|---|---|---|
+| societario-ma | ANEEL | Banco Central (Normas) |
+| mercado-capitais-fundos | SUSEP | COAF |
+| imobiliario-infraestrutura | ANATEL, ANTAQ, ANTT, SUSEP | ANEEL |
+| ambiental-esg | ANTT, SUSEP | ANEEL |
 
-Vazio (o padrão) mantém o bloqueio. A alternativa sem esse efeito é
-acrescentar um alias para a fonte específica, quando ela se repete.
+Cada seção nova é **cópia literal** de uma seção existente do mesmo
+template: a mesma linha de cabeçalho e a mesma linha de notícias, com a
+troca apenas da âncora e do nome da fonte. Cor de faixa, fonte, altura,
+espaçamento e marcação do Word vêm intactos da seção de origem. O código
+confere o resultado: se o texto do cabeçalho copiado não ficar exatamente
+igual ao nome da fonte nova, a geração falha.
 
-## Defeitos observados nos templates entregues
+A entrada no sumário é cópia de uma entrada existente e ocupa a primeira
+célula livre da grade. A grade sempre tem três células por linha e mantém
+as que sobram vazias; é esse mesmo comportamento que é usado. Só o Radar
+Imobiliário e Infraestrutura precisou de uma linha nova, copiada da última
+linha existente. Nenhuma largura de célula foi alterada.
 
-Estes pontos vieram assim do Marketing e foram **preservados**, não
-corrigidos:
+**Critério de posição:** a seção nova entra depois da última seção
+existente, e a entrada no sumário ocupa a primeira posição livre. É a única
+posição que não desloca nenhuma entrada já definida pelo Marketing nem muda
+a largura de célula alguma, e mantém sumário e corpo na mesma ordem. Entre
+as novas, a ordem é alfabética. Se o Marketing preferir agrupar por tema
+(as agências junto das outras agências, antes das publicações oficiais), é
+só reposicionar quando incorporar oficialmente.
 
-- **Radar Tributário**: o sumário lista oito fontes, mas o template tem nove
-  seções — "Portal Reforma Tributária" não tem entrada com link no sumário.
-- **Voltar ao sumário**: o link aponta para `#Sumario`, e não existe âncora
-  com esse nome em nenhum dos nove templates.
-- **Radar Tributário**: os títulos de sete seções são links para âncoras que
-  não existem (`#MinisteriodaFazenda`, `#Diariooficial`, `#DOU`, `#PLANALTO`,
-  `#BANCOCENTRAL`).
+### Aliases
+
+Com as seções criadas, os aliases que desviavam ANEEL, ANATEL, ANTAQ, ANTT e
+SUSEP para outras seções foram **removidos**: cada notícia passa a sair sob
+a própria fonte. O mecanismo continua disponível em `aliases_fonte` para
+casos futuros, e hoje resolve apenas diferenças de nome — por exemplo
+"Ministério da Agricultura" que no template se chama "MAPA".
+
+## Defeitos do template: o que foi corrigido e o que resta
+
+A entrega de 22/09/2026 corrigiu, no Radar Tributário, as âncoras com erro de
+digitação e os links de título de seção que apontavam para âncoras
+inexistentes. Resta um defeito, tratado pelo Ajuste 1 acima e **ainda
+pendente** no arquivo oficial:
+
+- o "VOLTAR AO SUMÁRIO" aponta para `#Sumario`, e nenhum dos nove templates
+  tem âncora com esse nome.
 
 ## Consequência visual da remoção no sumário
 
@@ -171,3 +184,51 @@ ficar irregular (uma linha com duas células, outra com uma). É o efeito
 direto da regra "remover do sumário as fontes sem notícias" sobre uma grade
 de largura fixa. Redistribuir as células mudaria a largura delas, o que
 seria alterar o layout.
+
+## Lista para o Marketing
+
+Alterações que o pipeline aplica hoje sobre o HTML dos templates e que
+precisam ser incorporadas aos arquivos `.msg` oficiais. Enquanto não forem,
+o pipeline continua aplicando por cima, sem prejuízo.
+
+**1. Âncora de destino do "VOLTAR AO SUMÁRIO" — nos nove Radares**
+
+O link já existe e aponta para `#Sumario`, mas a âncora de destino não
+existe. Criar, no bloco do sumário (na linha do rótulo "navegue pelas
+fontes"), um indicador invisível chamado `Sumario`. No Word: posicionar o
+cursor no início dessa linha e inserir um **indicador** (Inserir →
+Indicador) com o nome `Sumario`. Não muda nada visualmente.
+
+**2. Seções de fonte que faltam**
+
+Criar, duplicando uma seção existente do mesmo Radar (faixa verde + bloco de
+notícias) e acrescentando a fonte ao sumário:
+
+| Radar | Fonte a criar |
+|---|---|
+| Radar Societário, Fusões e Aquisições | ANEEL |
+| Radar Mercado de Capitais e Fundos de Investimento | SUSEP |
+| Radar Negócios Imobiliários e Infraestrutura | ANATEL |
+| Radar Negócios Imobiliários e Infraestrutura | ANTAQ |
+| Radar Negócios Imobiliários e Infraestrutura | ANTT |
+| Radar Negócios Imobiliários e Infraestrutura | SUSEP |
+| Radar Ambiental e ESG | ANTT |
+| Radar Ambiental e ESG | SUSEP |
+
+São fontes que o Filtro 1 já autoriza para esses Radares. Sem a seção, uma
+notícia delas não teria onde ser publicada.
+
+Cada seção precisa de: a faixa verde com o nome da fonte, o indicador
+(âncora) com o mesmo nome, o bloco de notícias no mesmo formato das demais,
+e a entrada correspondente no sumário com link para o indicador.
+
+A posição adotada pelo pipeline é depois da última seção existente, com a
+entrada do sumário na primeira célula livre da grade de três colunas. Se
+preferirem agrupar por tema, fiquem à vontade: o pipeline lê a ordem do
+arquivo.
+
+**3. Nada além disso**
+
+Cabeçalho, data, imagens, bloco de avaliação, rodapé, links institucionais e
+as seções que já existiam não foram tocados.
+
