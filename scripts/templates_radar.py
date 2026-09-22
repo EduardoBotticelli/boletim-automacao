@@ -642,46 +642,163 @@ def preencher(html_template, estrutura, data_edicao, noticias_por_ancora):
 # ---------------------------------------------------------------------------
 
 
-def montar_eml(assunto, html_corpo, recursos, data_cabecalho=None):
+def montar_eml(
+    assunto,
+    html_corpo,
+    recursos,
+    data_cabecalho=None,
+    remetente="",
+    destinatario="",
+):
     """
     Monta a mensagem final como .eml (RFC 5322), pronta para envio.
 
-    O corpo vai exatamente como saiu do template e as imagens entram como
-    partes relacionadas com o mesmo Content-ID que o HTML referencia em
-    "cid:", que é o que mantém as imagens embutidas na mensagem.
+    A estrutura espelha o que o .msg oficial declara para os anexos
+    (PR_ATTACH_FLAGS = ATT_MHTML_REF, PR_ATTACHMENT_HIDDEN = 1,
+    PR_RENDERING_POSITION = -1): imagem embutida, referenciada pelo corpo,
+    que não aparece na lista de anexos.
+
+        multipart/related; type="multipart/alternative"
+          multipart/alternative
+            text/plain
+            text/html
+          image/*  (Content-Disposition: inline + Content-ID)
+
+    O multipart/related por fora é o formato que o próprio Outlook gera e
+    deixa as imagens visíveis para o corpo HTML qualquer que seja a
+    alternativa escolhida pelo cliente. O "type" diz qual é a parte raiz.
+
+    Cada imagem vai com disposição "inline": com "attachment" o Outlook
+    lista as doze imagens como anexos e não as resolve no corpo, que foi
+    exatamente o defeito observado.
 
     Usa apenas a biblioteca padrão: roda em qualquer Linux, inclusive no
     runner do GitHub Actions.
     """
-    from email.message import EmailMessage
-    from email.utils import formatdate
+    from email.message import EmailMessage, MIMEPart
+    from email.utils import formatdate, make_msgid
 
     mensagem = EmailMessage()
     mensagem["Subject"] = assunto
     mensagem["Date"] = data_cabecalho or formatdate(localtime=True)
-    mensagem["MIME-Version"] = "1.0"
+    mensagem["Message-ID"] = make_msgid(domain="ldr.com.br")
 
-    # Alternativa em texto puro para clientes que não renderizam HTML.
-    mensagem.set_content(
+    if remetente:
+        mensagem["From"] = remetente
+    if destinatario:
+        mensagem["To"] = destinatario
+
+    # Faz o Outlook abrir o arquivo como mensagem nova, pronta para
+    # endereçar e enviar, em vez de mensagem recebida sem remetente.
+    mensagem["X-Unsent"] = "1"
+
+    # Corpo: texto puro para quem não renderiza HTML, e o HTML do template.
+    # Vai em MIMEPart (e não EmailMessage) para as subpartes não ganharem um
+    # MIME-Version próprio: esse cabeçalho é só da raiz.
+    alternativa = MIMEPart()
+    alternativa.set_content(
         _texto_visivel(html_corpo) or assunto,
         subtype="plain",
         charset="utf-8",
     )
-    mensagem.add_alternative(html_corpo, subtype="html", charset="utf-8")
+    alternativa.add_alternative(html_corpo, subtype="html", charset="utf-8")
 
-    parte_html = mensagem.get_payload()[-1]
+    # A árvore é montada à mão: make_related() se recusa a converter um
+    # multipart/alternative já existente em multipart/related.
+    mensagem.set_type("multipart/related")
+    mensagem.set_param("type", "multipart/alternative")
+    mensagem.attach(alternativa)
 
     for recurso in recursos:
         tipo, _, subtipo = recurso.mime.partition("/")
-        parte_html.add_related(
+        parte = MIMEPart()
+        parte.set_content(
             recurso.dados,
             maintype=tipo or "application",
             subtype=subtipo or "octet-stream",
             cid=f"<{recurso.content_id}>",
             filename=recurso.nome_arquivo,
+            disposition="inline",
         )
+        mensagem.attach(parte)
 
     return mensagem
+
+
+def conferir_eml(mensagem):
+    """
+    Confere a estrutura da mensagem antes de gravar.
+
+    Devolve a lista de problemas encontrados; vazia quer dizer que a
+    mensagem está no formato que o Outlook embute. É uma rede de segurança
+    contra regressão na montagem MIME.
+    """
+    import re
+
+    problemas = []
+
+    if mensagem.get_content_type() != "multipart/related":
+        problemas.append(
+            f"a raiz é {mensagem.get_content_type()}, deveria ser multipart/related"
+        )
+
+    if mensagem.get_param("type") != "multipart/alternative":
+        problemas.append(
+            'o multipart/related não declara type="multipart/alternative"'
+        )
+
+    for cabecalho in ("Subject", "Date", "Message-ID"):
+        if not mensagem.get(cabecalho):
+            problemas.append(f"falta o cabeçalho {cabecalho}")
+
+    corpo = mensagem.get_body(preferencelist=("html",))
+    if corpo is None:
+        problemas.append("a mensagem não tem corpo HTML")
+        return problemas
+
+    conteudo = corpo.get_content()
+    referenciados = set(re.findall(r"cid:([^\"'\s>)]+)", conteudo))
+
+    embutidos = {}
+    for parte in mensagem.walk():
+        identificador = parte.get("Content-ID")
+        if not identificador:
+            continue
+
+        if not (identificador.startswith("<") and identificador.endswith(">")):
+            problemas.append(f"Content-ID fora do formato <...>: {identificador}")
+
+        disposicao = (parte.get_content_disposition() or "").lower()
+        if disposicao != "inline":
+            problemas.append(
+                f"{identificador} está como '{disposicao or 'sem disposição'}', "
+                "deveria ser inline"
+            )
+
+        if parte.get("Content-Transfer-Encoding", "").lower() != "base64":
+            problemas.append(
+                f"{identificador} não está em base64"
+            )
+
+        embutidos[identificador.strip("<>")] = parte
+
+    faltando = sorted(referenciados - set(embutidos))
+    if faltando:
+        problemas.append(f"cid sem parte correspondente: {faltando}")
+
+    sobrando = sorted(set(embutidos) - referenciados)
+    if sobrando:
+        problemas.append(f"parte embutida sem referência no corpo: {sobrando}")
+
+    anexos = [
+        parte.get_filename() or parte.get_content_type()
+        for parte in mensagem.walk()
+        if (parte.get_content_disposition() or "").lower() == "attachment"
+    ]
+    if anexos:
+        problemas.append(f"a mensagem tem anexo visível: {anexos}")
+
+    return problemas
 
 
 def html_para_previa(html_corpo, pasta_recursos):

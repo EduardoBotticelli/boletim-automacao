@@ -76,6 +76,49 @@ As imagens ficam em uma pasta por Radar porque os templates reaproveitam os
 mesmos nomes de arquivo para imagens diferentes: `image006.png`, por
 exemplo, é um banner distinto em três Radares.
 
+### Estrutura da mensagem
+
+```
+multipart/related; type="multipart/alternative"
+  multipart/alternative
+    text/plain          (texto puro, para quem não renderiza HTML)
+    text/html           (o corpo do template)
+  image/png   Content-Disposition: inline + Content-ID   x9
+  application/x-ms-wmz  Content-Disposition: inline + Content-ID   x3
+```
+
+O `multipart/related` por fora é o formato que o próprio Outlook gera: deixa
+as imagens visíveis para o corpo HTML qualquer que seja a alternativa
+escolhida pelo cliente. O parâmetro `type` diz qual é a parte raiz.
+
+Cada imagem vai com **`Content-Disposition: inline`**. Com `attachment` o
+Outlook lista as doze imagens como anexos e não as resolve no corpo — todas
+as imagens aparecem como caixas quebradas, inclusive banner, avaliação e
+redes sociais.
+
+Isso espelha o que o `.msg` oficial declara para cada anexo:
+
+| Propriedade MAPI | Valor no template | Equivalente MIME |
+|---|---|---|
+| `PR_ATTACH_FLAGS` | `4` (ATT_MHTML_REF) | parte dentro do `multipart/related`, referenciada por `cid:` |
+| `PR_ATTACHMENT_HIDDEN` | `1` | `Content-Disposition: inline` |
+| `PR_RENDERING_POSITION` | `-1` | idem |
+
+Os três `.wmz` são o fallback VML dos botões de avaliação
+(`<v:imagedata src="cid:...">`, para EXCELENTE, NEUTRA e RUIM). O `.msg`
+original os carrega como anexos ocultos, exatamente como os PNG, então eles
+permanecem — também inline, também sem aparecer na lista de anexos.
+
+A mensagem leva `Subject`, `Date`, `Message-ID` e `X-Unsent: 1`. O
+`X-Unsent` faz o Outlook abrir o arquivo como mensagem nova, pronta para
+endereçar e enviar, em vez de mensagem recebida sem remetente. `From` e
+`To` ficam em branco por padrão e podem ser preenchidos em
+`templates/mapeamento_radares.json` (`remetente` e `destinatario`).
+
+A função `conferir_eml` valida essa estrutura antes de gravar: se a
+montagem regredir, a geração falha e os e-mails da edição anterior são
+preservados.
+
 ### Sobre o envio por corpo HTML
 
 O corpo do `.eml` usa `cid:`, que só resolve dentro de uma mensagem. Se o

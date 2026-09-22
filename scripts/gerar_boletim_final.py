@@ -1003,7 +1003,21 @@ def main():
         )
 
         assunto = f"{assuntos.get(slug, nome_radar)} | {data_extenso}"
-        mensagem = templates_radar.montar_eml(assunto, corpo, template.recursos)
+        mensagem = templates_radar.montar_eml(
+            assunto,
+            corpo,
+            template.recursos,
+            remetente=texto_limpo(mapeamento.get("remetente")),
+            destinatario=texto_limpo(mapeamento.get("destinatario")),
+        )
+
+        problemas = templates_radar.conferir_eml(mensagem)
+        if problemas:
+            raise SystemExit(
+                f"ERRO na montagem da mensagem de {slug}: "
+                + "; ".join(problemas)
+                + ". Os e-mails finais foram preservados."
+            )
 
         caminho_eml = OUTPUT_DIR / f"email_{slug}.eml"
         escrever_bytes_atomico(caminho_eml, mensagem.as_bytes())

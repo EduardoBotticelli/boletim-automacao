@@ -73,5 +73,12 @@
     "ambiental-esg": "",
     "propriedade-intelectual": "",
     "contencioso-civel": ""
-  }
+  },
+  "_remetente_leia_me": [
+    "Remetente e destinatário do .eml. Vazio (padrão) deixa os campos em branco:",
+    "o arquivo traz X-Unsent, então o Outlook abre como mensagem nova, pronta",
+    "para endereçar e enviar. Preencha se quiser os campos já sugeridos."
+  ],
+  "remetente": "",
+  "destinatario": ""
 }
