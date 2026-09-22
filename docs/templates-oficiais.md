@@ -84,7 +84,6 @@ multipart/related; type="multipart/alternative"
     text/plain          (texto puro, para quem não renderiza HTML)
     text/html           (o corpo do template)
   image/png   Content-Disposition: inline + Content-ID   x9
-  application/x-ms-wmz  Content-Disposition: inline + Content-ID   x3
 ```
 
 O `multipart/related` por fora é o formato que o próprio Outlook gera: deixa
@@ -104,10 +103,38 @@ Isso espelha o que o `.msg` oficial declara para cada anexo:
 | `PR_ATTACHMENT_HIDDEN` | `1` | `Content-Disposition: inline` |
 | `PR_RENDERING_POSITION` | `-1` | idem |
 
-Os três `.wmz` são o fallback VML dos botões de avaliação
-(`<v:imagedata src="cid:...">`, para EXCELENTE, NEUTRA e RUIM). O `.msg`
-original os carrega como anexos ocultos, exatamente como os PNG, então eles
-permanecem — também inline, também sem aparecer na lista de anexos.
+### Recursos referenciados só dentro de comentário
+
+Entram na mensagem apenas os recursos cujo `cid` o corpo referencia **fora
+de comentário HTML**. Hoje isso exclui os três `.wmz`.
+
+O Word emite cada botão de avaliação em duas versões:
+
+```html
+<!--[if gte vml 1]><v:shape ...><v:imagedata src="cid:image001.wmz@..."/></v:shape><![endif]-->
+<![if !vml]><a href="..."><img src="cid:image003.png@..." alt=NEUTRA></a><![endif]>
+```
+
+`<!--[if ...]>` é comentário HTML de verdade; `<![if ...]>` não é. O Outlook
+decide o que esconder da lista de anexos casando Content-ID com as
+referências do corpo, e essa varredura ignora comentário. Resultado: os nove
+PNG somem da lista e os três `.wmz` apareciam como anexos visíveis.
+
+O tipo não é o motivo: o `.msg` original usa o mesmo
+`application/x-ms-wmz` e mesmo assim os esconde, porque o MAPI tem a
+propriedade `PR_ATTACHMENT_HIDDEN`, **que não tem equivalente em MIME**.
+`Content-Disposition: inline` é o mais próximo e não basta para uma parte
+que o cliente não associa ao corpo.
+
+Sem os `.wmz` os botões continuam aparecendo: a versão em PNG está em
+`<![if !vml]>`, fora de comentário, e é a que o Outlook usa. Verificado no
+Outlook, abrindo uma edição sem os três — os botões EXCELENTE, NEUTRA e
+RUIM renderizam normalmente.
+
+A regra é geral, não uma exceção para `.wmz`: qualquer recurso que só seja
+referenciado de dentro de comentário fica fora da mensagem, porque só teria
+o efeito de virar anexo visível. Os arquivos continuam sendo extraídos para
+`recursos_radar/`, para a prévia em HTML.
 
 A mensagem leva `Subject`, `Date`, `Message-ID` e `X-Unsent: 1`. O
 `X-Unsent` faz o Outlook abrir o arquivo como mensagem nova, pronta para

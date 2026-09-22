@@ -294,6 +294,23 @@ def _filhos_diretos(texto, nome_alvo, inicio, fim):
     return resultado
 
 
+def referencias_cid(html):
+    """
+    Os cid que o corpo referencia de um jeito que o cliente enxerga.
+
+    Referência dentro de comentário HTML não conta. Isso importa porque o
+    Word emite os recursos VML dentro de "<!--[if gte vml 1]> ... <![endif]-->",
+    que é comentário de verdade, enquanto a alternativa em PNG fica em
+    "<![if !vml]> ... <![endif]>", que não é.
+
+    O Outlook decide o que esconder da lista de anexos casando Content-ID
+    com as referências do corpo, e essa varredura ignora comentário. Parte
+    referenciada só de dentro de comentário acaba listada como anexo comum.
+    """
+    sem_comentario = re.sub(r"<!--.*?-->", " ", html, flags=re.S)
+    return set(re.findall(r"cid:([^\"'\s>)]+)", sem_comentario))
+
+
 def _texto_visivel(fragmento):
     """Texto legível de um fragmento de HTML, para casar nomes de fontes."""
     sem_comentario = re.sub(r"<!--.*?-->", " ", fragmento, flags=re.S)
@@ -709,7 +726,18 @@ def montar_eml(
     mensagem.set_param("type", "multipart/alternative")
     mensagem.attach(alternativa)
 
+    # Só entram na mensagem os recursos que o corpo referencia fora de
+    # comentário. Os que sobram (hoje, os .wmz do fallback VML dos botões de
+    # avaliação) apareceriam como anexos visíveis no Outlook, porque ele não
+    # associa ao corpo uma referência que está dentro de comentário. Sem eles
+    # os botões continuam aparecendo: a alternativa em PNG está em
+    # "<![if !vml]>", que não é comentário, e é a que o Outlook usa.
+    visiveis = referencias_cid(html_corpo)
+
     for recurso in recursos:
+        if recurso.content_id not in visiveis:
+            continue
+
         tipo, _, subtipo = recurso.mime.partition("/")
         parte = MIMEPart()
         parte.set_content(
@@ -733,8 +761,6 @@ def conferir_eml(mensagem):
     mensagem está no formato que o Outlook embute. É uma rede de segurança
     contra regressão na montagem MIME.
     """
-    import re
-
     problemas = []
 
     if mensagem.get_content_type() != "multipart/related":
@@ -757,7 +783,7 @@ def conferir_eml(mensagem):
         return problemas
 
     conteudo = corpo.get_content()
-    referenciados = set(re.findall(r"cid:([^\"'\s>)]+)", conteudo))
+    referenciados = referencias_cid(conteudo)
 
     embutidos = {}
     for parte in mensagem.walk():

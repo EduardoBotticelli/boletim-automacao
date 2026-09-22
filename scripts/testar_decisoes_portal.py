@@ -603,7 +603,8 @@ def teste_eml_carrega_as_imagens_do_template():
             for parte in mensagem.walk()
             if parte.get("Content-ID")
         }
-        referenciados = set(re.findall(r"cid:([^\"']+)", conteudo))
+        sem_comentario = re.sub(r"<!--.*?-->", " ", conteudo, flags=re.S)
+        referenciados = set(re.findall(r"cid:([^\"'\s>)]+)", sem_comentario))
 
         assert referenciados, f"{slug}: o corpo não referencia imagem alguma"
         faltando = [
@@ -1009,9 +1010,22 @@ def teste_estrutura_mime_embute_as_imagens():
         ]
         assert not anexos, f"{slug}: a mensagem tem anexo visível: {anexos}"
 
-        # 7. todo cid do corpo tem parte, e toda parte é referenciada.
-        referenciados = set(re.findall(r"cid:([^\"'\s>)]+)", conteudo))
+        # 7. todo cid que o cliente enxerga tem parte, e toda parte é
+        #    referenciada. Referência dentro de comentário HTML não conta: é
+        #    o caso do fallback VML, cujos recursos não entram na mensagem
+        #    justamente porque o Outlook os listaria como anexos.
+        sem_comentario = re.sub(r"<!--.*?-->", " ", conteudo, flags=re.S)
+        referenciados = set(re.findall(r"cid:([^\"'\s>)]+)", sem_comentario))
         assert referenciados, f"{slug}: o corpo não referencia imagem alguma"
+
+        so_em_comentario = (
+            set(re.findall(r"cid:([^\"'\s>)]+)", conteudo)) - referenciados
+        )
+        embutidos_indevidos = sorted(so_em_comentario & set(embutidos))
+        assert not embutidos_indevidos, (
+            f"{slug}: recurso referenciado só dentro de comentário entrou na "
+            f"mensagem e apareceria como anexo: {embutidos_indevidos}"
+        )
 
         faltando = sorted(referenciados - set(embutidos))
         assert not faltando, f"{slug}: cid sem parte correspondente: {faltando}"
