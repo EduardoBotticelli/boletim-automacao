@@ -2,7 +2,7 @@
   "versao_formato": 2,
   "revisao_concluida": true,
   "origem": "portal-curadoria",
-  "confirmado_em": "2026-09-23T19:40:16.996Z",
+  "confirmado_em": "2026-09-23T21:24:40.205Z",
   "data_execucao": "2026-09-23",
   "total_itens": 27,
   "total_aprovados": 21,
@@ -104,19 +104,15 @@
     {
       "id": "it-5f911907",
       "status": "aprovado",
-      "status_portal": "aprovado",
+      "status_portal": "ajustado",
       "origem": "scraper",
       "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/decreto-do-hidrogenio-e-publicado-e-marca-nova-etapa-em-regulamentacao",
       "fonte": "Ministério da Fazenda | Notícias",
       "titulo": "Decreto do hidrogênio é publicado e marca nova etapa em regulamentação",
       "radares_finais": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
         "ambiental-esg"
       ],
       "boletins": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
         "ambiental-esg"
       ]
     },
