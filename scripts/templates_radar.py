@@ -705,9 +705,14 @@ def montar_eml(
     if destinatario:
         mensagem["To"] = destinatario
 
-    # Faz o Outlook abrir o arquivo como mensagem nova, pronta para
-    # endereçar e enviar, em vez de mensagem recebida sem remetente.
-    mensagem["X-Unsent"] = "1"
+    # Não usar X-Unsent aqui. Ele faz o Outlook abrir o arquivo em modo de
+    # composição, que passa o corpo pelo editor do Word, e o editor normaliza
+    # o CSS do template: descarta font-variant:small-caps (o sumário aparece
+    # em minúsculas), recolore os hiperlinks com a cor do tema e converte o
+    # posicionamento absoluto em fluxo, o que troca a ordem dos botões de
+    # avaliação (de EXCELENTE, NEUTRA, RUIM para NEUTRA, EXCELENTE, RUIM) e
+    # desloca a pergunta da edição. Sem o cabeçalho, o Outlook abre em modo
+    # de leitura e a edição sai igual ao template do Marketing.
 
     # Corpo: texto puro para quem não renderiza HTML, e o HTML do template.
     # Vai em MIMEPart (e não EmailMessage) para as subpartes não ganharem um
@@ -776,6 +781,12 @@ def conferir_eml(mensagem):
     for cabecalho in ("Subject", "Date", "Message-ID"):
         if not mensagem.get(cabecalho):
             problemas.append(f"falta o cabeçalho {cabecalho}")
+
+    if mensagem.get("X-Unsent"):
+        problemas.append(
+            "a mensagem tem X-Unsent, que faz o Outlook abrir em modo de "
+            "composição e descaracterizar o CSS do template"
+        )
 
     corpo = mensagem.get_body(preferencelist=("html",))
     if corpo is None:

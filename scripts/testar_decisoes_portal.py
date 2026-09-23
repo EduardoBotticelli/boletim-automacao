@@ -973,6 +973,15 @@ def teste_estrutura_mime_embute_as_imagens():
         for cabecalho in ("Subject", "Date", "Message-ID"):
             assert mensagem.get(cabecalho), f"{slug}: falta {cabecalho}"
 
+        # 3. sem X-Unsent: ele abre o arquivo em modo de composição, e o
+        #    editor do Word descaracteriza o CSS do template (sumário em
+        #    minúsculas, hiperlinks recoloridos, botões de avaliação fora de
+        #    ordem). Conferido no Outlook comparando com o template.
+        assert not mensagem.get("X-Unsent"), (
+            f"{slug}: a mensagem tem X-Unsent e o corpo sairia "
+            "descaracterizado no Outlook"
+        )
+
         corpo = mensagem.get_body(preferencelist=("html",))
         assert corpo is not None, f"{slug}: sem corpo HTML"
         conteudo = corpo.get_content()
