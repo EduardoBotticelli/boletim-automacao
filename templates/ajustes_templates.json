@@ -4,7 +4,7 @@
     "gerar a edição. Os arquivos .msg não são alterados: eles continuam sendo",
     "a fonte, somente leitura.",
     "",
-    "São dois ajustes, ambos autorizados e pendentes de incorporação oficial",
+    "São três ajustes, todos autorizados e pendentes de incorporação oficial",
     "pelo Marketing. A lista para envio está em docs/templates-oficiais.md.",
     "",
     "1. ancora_voltar_sumario: o link 'VOLTAR AO SUMÁRIO' aponta para",
@@ -15,10 +15,18 @@
     "   Cada uma é cópia literal de uma seção existente do mesmo template",
     "   ('modelo'), trocando só a âncora e o nome.",
     "",
+    "3. secao_outras_publicacoes: a faixa genérica dos nove Radares, criada",
+    "   pelo mesmo processo de cópia do item 2. Recebe qualquer notícia",
+    "   aprovada cuja fonte não tenha faixa própria naquele Radar. Sem ela, a",
+    "   geração trava; com ela, nada é descartado e nada muda de procedência,",
+    "   porque quem cai na faixa é publicado com o nome da própria fonte no",
+    "   começo do título.",
+    "",
     "Critério de posição: a seção nova entra depois da última seção existente,",
     "e a entrada no sumário ocupa a primeira célula livre da grade. É a única",
     "posição que não desloca nenhuma entrada já definida pelo Marketing nem",
-    "muda a largura de célula alguma. Entre as novas, a ordem é alfabética."
+    "muda a largura de célula alguma. Entre as novas, a ordem é alfabética, e",
+    "a faixa genérica vem por último, depois de todas as fontes."
   ],
 
   "ancora_voltar_sumario": "Sumario",
@@ -91,5 +99,37 @@
         "_motivo": "idem"
       }
     ]
+  },
+
+  "secao_outras_publicacoes": {
+    "_leia_me": [
+      "Destino de qualquer notícia aprovada cuja fonte não tenha faixa própria",
+      "no Radar. Cobre as três origens do problema: fonte que a matriz do",
+      "Filtro 1 não liga àquele Radar, Radar escolhido à mão no portal e item",
+      "adicionado à mão com a fonte digitada em texto livre.",
+      "",
+      "'modelo' diz de qual seção do próprio template a faixa é copiada. O",
+      "critério foi escolher, em cada Radar, uma seção de nome curto e de uma",
+      "linha só, para a cópia trocar exatamente um trecho de texto.",
+      "",
+      "A faixa só aparece na edição quando tem notícia: vazia, ela é removida",
+      "do corpo e do sumário como qualquer outra seção sem conteúdo."
+    ],
+
+    "ancora": "OutrasPublicacoes",
+    "nome": "Outras publicações",
+    "nome_sumario": "outras publicações",
+
+    "modelo": {
+      "trabalhista-empresarial": "CGU",
+      "direito-tributario": "COAF",
+      "societario-ma": "BancoCentral",
+      "mercado-capitais-fundos": "COAF",
+      "regulatorio-oleo-gas": "ANEEL",
+      "imobiliario-infraestrutura": "ANEEL",
+      "ambiental-esg": "ANEEL",
+      "propriedade-intelectual": "INPI",
+      "contencioso-civel": "SENACON"
+    }
   }
 }

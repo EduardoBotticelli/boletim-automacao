@@ -6,7 +6,7 @@ fonte, somente leitura (ver docs/templates-oficiais.md). Os ajustes abaixo
 são aplicados ao HTML já desencapsulado, na hora de gerar a edição, e estão
 declarados em templates/ajustes_templates.json para ficarem auditáveis.
 
-São exatamente dois, ambos autorizados:
+São três, todos autorizados:
 
 1. Âncora de destino do "VOLTAR AO SUMÁRIO". O link aponta para "#Sumario" e
    essa âncora não existe em nenhum dos nove templates. A âncora é um
@@ -17,6 +17,14 @@ São exatamente dois, ambos autorizados:
    a mesma linha de cabeçalho e a mesma linha de notícias, trocando só a
    âncora e o nome da fonte. A entrada no sumário também é cópia de uma
    entrada existente, aproveitando as células vazias que a grade já reserva.
+
+3. A faixa "Outras publicações", criada nos nove templates pelo mesmo
+   processo de cópia do item 2. É o destino de qualquer notícia aprovada
+   cuja fonte não tenha faixa própria naquele Radar, venha ela de uma fonte
+   fora da matriz do Filtro 1, de um Radar escolhido à mão no portal ou de
+   um item adicionado à mão com a fonte digitada. A procedência real da
+   notícia continua visível: quem entra nessa faixa é publicado com o nome
+   da própria fonte no começo do título.
 
 Nada além disso é tocado: cabeçalho, data, imagens, avaliação, rodapé,
 links institucionais e as seções que já existiam ficam como vieram.
@@ -267,90 +275,151 @@ def _linha_extra_do_sumario(html, estrutura, conteudo_vazio, conteudo_primeiro):
     return nova, fim
 
 
-def aplicar_secoes_novas(html, slug, secoes_novas):
+def _acrescentar_secao(html, slug, definicao, conteudo_vazio):
+    """
+    Acrescenta ao template uma seção copiada de outra seção do mesmo template.
+
+    A cópia é literal: a mesma linha de cabeçalho e a mesma linha de notícias
+    do modelo, trocando só a âncora e o nome visível. A seção entra depois da
+    última existente e ganha a entrada correspondente no sumário.
+
+    Devolve (html, detalhe). O detalhe é None quando a seção já existia.
+    """
+    estrutura = templates_radar.analisar(html)
+
+    ancora = definicao["ancora"]
+    nome = definicao["nome"]
+    modelo_ancora = definicao["modelo"]
+
+    if any(secao.ancora == ancora for secao in estrutura.secoes):
+        return html, None
+
+    modelo = next(
+        (s for s in estrutura.secoes if s.ancora == modelo_ancora), None
+    )
+    if modelo is None:
+        raise ValueError(
+            f"{slug}: a seção modelo '{modelo_ancora}' não existe no template."
+        )
+
+    cabecalho = _trocar_identidade(
+        html[modelo.inicio_cabecalho : modelo.fim_cabecalho],
+        modelo.ancora,
+        modelo.nome,
+        ancora,
+        nome,
+    )
+    corpo = html[modelo.inicio_corpo : modelo.fim_corpo]
+
+    conferencia = templates_radar._texto_visivel(cabecalho)
+    if conferencia != nome:
+        raise ValueError(
+            f"{slug}: o cabeçalho copiado ficou com o texto {conferencia!r} "
+            f"em vez de {nome!r}."
+        )
+
+    # A seção nova entra depois da última existente.
+    ultima = max(estrutura.secoes, key=lambda s: s.fim_corpo)
+    posicao = ultima.fim_corpo
+    html = html[:posicao] + cabecalho + corpo + html[posicao:]
+
+    # Entrada no sumário, na primeira posição livre da grade.
+    estrutura = templates_radar.analisar(html)
+    celulas = _celulas_do_sumario(html, estrutura)
+    preenchidas = [c for c in celulas if c["texto"]]
+    livres = [c for c in celulas if not c["texto"]]
+
+    conteudo = _conteudo_preenchido(
+        html, preenchidas[-1], ancora, definicao["nome_sumario"]
+    )
+
+    if livres:
+        html = _preencher_celula_sumario(html, livres[0], conteudo)
+        linha_usada = livres[0]["linha"]
+    else:
+        nova_linha, fim_ultima = _linha_extra_do_sumario(
+            html, estrutura, conteudo_vazio, conteudo
+        )
+        html = html[:fim_ultima] + nova_linha + html[fim_ultima:]
+        linha_usada = max(estrutura.linhas_sumario) + 1
+
+    detalhe = {
+        "radar": slug,
+        "ancora": ancora,
+        "nome": nome,
+        "copiada_de": modelo_ancora,
+        "linha_sumario": linha_usada,
+    }
+
+    return html, detalhe
+
+
+def aplicar_secoes_novas(html, slug, secoes_novas, conteudo_vazio=None):
     """
     Acrescenta ao template as seções de fonte que faltam.
 
-    Cada seção nova é inserida depois da última seção existente e recebe a
-    entrada correspondente no sumário. Devolve (html, relatório).
+    Devolve (html, relatório).
     """
+    if conteudo_vazio is None:
+        conteudo_vazio = _modelo_celula_vazia(html, templates_radar.analisar(html))
+
     relatorio = []
-
-    # O modelo de célula livre é capturado antes de qualquer preenchimento:
-    # depois de ocupar as posições que sobravam, não haveria mais de onde
-    # copiar.
-    conteudo_vazio = _modelo_celula_vazia(html, templates_radar.analisar(html))
-
     for definicao in secoes_novas:
-        estrutura = templates_radar.analisar(html)
-
-        ancora = definicao["ancora"]
-        nome = definicao["nome"]
-        modelo_ancora = definicao["modelo"]
-
-        if any(secao.ancora == ancora for secao in estrutura.secoes):
-            continue
-
-        modelo = next(
-            (s for s in estrutura.secoes if s.ancora == modelo_ancora), None
-        )
-        if modelo is None:
-            raise ValueError(
-                f"{slug}: a seção modelo '{modelo_ancora}' não existe no template."
-            )
-
-        cabecalho = _trocar_identidade(
-            html[modelo.inicio_cabecalho : modelo.fim_cabecalho],
-            modelo.ancora,
-            modelo.nome,
-            ancora,
-            nome,
-        )
-        corpo = html[modelo.inicio_corpo : modelo.fim_corpo]
-
-        conferencia = templates_radar._texto_visivel(cabecalho)
-        if conferencia != nome:
-            raise ValueError(
-                f"{slug}: o cabeçalho copiado ficou com o texto {conferencia!r} "
-                f"em vez de {nome!r}."
-            )
-
-        # A seção nova entra depois da última existente.
-        ultima = max(estrutura.secoes, key=lambda s: s.fim_corpo)
-        posicao = ultima.fim_corpo
-        html = html[:posicao] + cabecalho + corpo + html[posicao:]
-
-        # Entrada no sumário, na primeira posição livre da grade.
-        estrutura = templates_radar.analisar(html)
-        celulas = _celulas_do_sumario(html, estrutura)
-        preenchidas = [c for c in celulas if c["texto"]]
-        livres = [c for c in celulas if not c["texto"]]
-
-        conteudo = _conteudo_preenchido(
-            html, preenchidas[-1], ancora, definicao["nome_sumario"]
-        )
-
-        if livres:
-            html = _preencher_celula_sumario(html, livres[0], conteudo)
-            linha_usada = livres[0]["linha"]
-        else:
-            nova_linha, fim_ultima = _linha_extra_do_sumario(
-                html, estrutura, conteudo_vazio, conteudo
-            )
-            html = html[:fim_ultima] + nova_linha + html[fim_ultima:]
-            linha_usada = max(estrutura.linhas_sumario) + 1
-
-        relatorio.append(
-            {
-                "radar": slug,
-                "ancora": ancora,
-                "nome": nome,
-                "copiada_de": modelo_ancora,
-                "linha_sumario": linha_usada,
-            }
-        )
+        html, detalhe = _acrescentar_secao(html, slug, definicao, conteudo_vazio)
+        if detalhe is not None:
+            relatorio.append(detalhe)
 
     return html, relatorio
+
+
+# ---------------------------------------------------------------------------
+# 3. Faixa "Outras publicações"
+# ---------------------------------------------------------------------------
+
+
+def ancora_generica(config):
+    """
+    A âncora da faixa "Outras publicações", ou "" se ela não for declarada.
+
+    É o que o gerador consulta para saber onde publicar uma notícia cuja
+    fonte não tem faixa própria no Radar. Sem a declaração, o gerador volta a
+    bloquear: nenhuma notícia aprovada some em silêncio.
+    """
+    generica = config.get("secao_outras_publicacoes") or {}
+    return generica.get("ancora") or ""
+
+
+def aplicar_secao_generica(html, slug, config_generica, conteudo_vazio=None):
+    """
+    Cria no template do Radar a faixa que recebe as fontes sem faixa própria.
+
+    A faixa é criada pelo mesmo processo das demais: cópia literal de uma
+    seção existente do próprio template, declarada em 'modelo'. Só o nome e a
+    âncora mudam.
+
+    Devolve (html, detalhe).
+    """
+    modelos = config_generica.get("modelo") or {}
+    modelo_ancora = modelos.get(slug)
+    if not modelo_ancora:
+        raise ValueError(
+            f"{slug}: a faixa genérica não diz de qual seção copiar. Preencha "
+            "'secao_outras_publicacoes.modelo' em "
+            "templates/ajustes_templates.json."
+        )
+
+    if conteudo_vazio is None:
+        conteudo_vazio = _modelo_celula_vazia(html, templates_radar.analisar(html))
+
+    definicao = {
+        "ancora": config_generica["ancora"],
+        "nome": config_generica["nome"],
+        "nome_sumario": config_generica.get("nome_sumario")
+        or config_generica["nome"],
+        "modelo": modelo_ancora,
+    }
+
+    return _acrescentar_secao(html, slug, definicao, conteudo_vazio)
 
 
 # ---------------------------------------------------------------------------
@@ -364,7 +433,11 @@ def aplicar(html, slug, config):
 
     Devolve (html, relatório) com o que foi efetivamente alterado.
     """
-    relatorio = {"ancora_sumario": False, "secoes_novas": []}
+    relatorio = {
+        "ancora_sumario": False,
+        "secoes_novas": [],
+        "secao_generica": None,
+    }
 
     nome_ancora = config.get("ancora_voltar_sumario")
     if nome_ancora:
@@ -372,9 +445,25 @@ def aplicar(html, slug, config):
         html, inseriu = inserir_ancora_sumario(html, estrutura, nome_ancora)
         relatorio["ancora_sumario"] = inseriu
 
+    # O modelo de célula livre da grade é capturado uma vez só, antes de
+    # qualquer preenchimento: depois de ocupar as posições que sobravam, não
+    # haveria mais de onde copiar.
+    conteudo_vazio = _modelo_celula_vazia(html, templates_radar.analisar(html))
+
     secoes_novas = (config.get("secoes_novas") or {}).get(slug) or []
     if secoes_novas:
-        html, detalhes = aplicar_secoes_novas(html, slug, secoes_novas)
+        html, detalhes = aplicar_secoes_novas(
+            html, slug, secoes_novas, conteudo_vazio
+        )
         relatorio["secoes_novas"] = detalhes
+
+    # A faixa genérica entra por último, depois de todas as fontes: é para
+    # onde vai quem não tem faixa própria, então é a última do Radar.
+    generica = config.get("secao_outras_publicacoes") or {}
+    if generica.get("ancora"):
+        html, detalhe = aplicar_secao_generica(
+            html, slug, generica, conteudo_vazio
+        )
+        relatorio["secao_generica"] = detalhe
 
     return html, relatorio

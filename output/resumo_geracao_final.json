@@ -1,0 +1,290 @@
+{
+  "status": "sucesso",
+  "data_execucao": "2026-09-23T20:54:57.492768+00:00",
+  "data_edicao": "2026-09-23",
+  "total_itens_boletim": 27,
+  "total_decisoes": 27,
+  "total_aprovados": 21,
+  "total_itens_manuais": 0,
+  "total_rejeitados": 6,
+  "decisoes_sem_item_correspondente": [],
+  "ajustes_nos_templates": {
+    "trabalhista-empresarial": {
+      "ancora_sumario": true,
+      "secoes_novas": [],
+      "secao_generica": {
+        "radar": "trabalhista-empresarial",
+        "ancora": "OutrasPublicacoes",
+        "nome": "Outras publicações",
+        "copiada_de": "CGU",
+        "linha_sumario": 4
+      }
+    },
+    "direito-tributario": {
+      "ancora_sumario": true,
+      "secoes_novas": [],
+      "secao_generica": {
+        "radar": "direito-tributario",
+        "ancora": "OutrasPublicacoes",
+        "nome": "Outras publicações",
+        "copiada_de": "COAF",
+        "linha_sumario": 6
+      }
+    },
+    "societario-ma": {
+      "ancora_sumario": true,
+      "secoes_novas": [
+        {
+          "radar": "societario-ma",
+          "ancora": "ANEEL",
+          "nome": "ANEEL",
+          "copiada_de": "BancoCentral",
+          "linha_sumario": 4
+        }
+      ],
+      "secao_generica": {
+        "radar": "societario-ma",
+        "ancora": "OutrasPublicacoes",
+        "nome": "Outras publicações",
+        "copiada_de": "BancoCentral",
+        "linha_sumario": 5
+      }
+    },
+    "mercado-capitais-fundos": {
+      "ancora_sumario": true,
+      "secoes_novas": [
+        {
+          "radar": "mercado-capitais-fundos",
+          "ancora": "SUSEP",
+          "nome": "SUSEP",
+          "copiada_de": "COAF",
+          "linha_sumario": 5
+        }
+      ],
+      "secao_generica": {
+        "radar": "mercado-capitais-fundos",
+        "ancora": "OutrasPublicacoes",
+        "nome": "Outras publicações",
+        "copiada_de": "COAF",
+        "linha_sumario": 6
+      }
+    },
+    "regulatorio-oleo-gas": {
+      "ancora_sumario": true,
+      "secoes_novas": [],
+      "secao_generica": {
+        "radar": "regulatorio-oleo-gas",
+        "ancora": "OutrasPublicacoes",
+        "nome": "Outras publicações",
+        "copiada_de": "ANEEL",
+        "linha_sumario": 12
+      }
+    },
+    "imobiliario-infraestrutura": {
+      "ancora_sumario": true,
+      "secoes_novas": [
+        {
+          "radar": "imobiliario-infraestrutura",
+          "ancora": "ANATEL",
+          "nome": "ANATEL",
+          "copiada_de": "ANEEL",
+          "linha_sumario": 8
+        },
+        {
+          "radar": "imobiliario-infraestrutura",
+          "ancora": "ANTAQ",
+          "nome": "ANTAQ",
+          "copiada_de": "ANEEL",
+          "linha_sumario": 9
+        },
+        {
+          "radar": "imobiliario-infraestrutura",
+          "ancora": "ANTT",
+          "nome": "ANTT",
+          "copiada_de": "ANEEL",
+          "linha_sumario": 9
+        },
+        {
+          "radar": "imobiliario-infraestrutura",
+          "ancora": "SUSEP",
+          "nome": "SUSEP",
+          "copiada_de": "ANEEL",
+          "linha_sumario": 9
+        }
+      ],
+      "secao_generica": {
+        "radar": "imobiliario-infraestrutura",
+        "ancora": "OutrasPublicacoes",
+        "nome": "Outras publicações",
+        "copiada_de": "ANEEL",
+        "linha_sumario": 10
+      }
+    },
+    "ambiental-esg": {
+      "ancora_sumario": true,
+      "secoes_novas": [
+        {
+          "radar": "ambiental-esg",
+          "ancora": "ANTT",
+          "nome": "ANTT",
+          "copiada_de": "ANEEL",
+          "linha_sumario": 7
+        },
+        {
+          "radar": "ambiental-esg",
+          "ancora": "SUSEP",
+          "nome": "SUSEP",
+          "copiada_de": "ANEEL",
+          "linha_sumario": 7
+        }
+      ],
+      "secao_generica": {
+        "radar": "ambiental-esg",
+        "ancora": "OutrasPublicacoes",
+        "nome": "Outras publicações",
+        "copiada_de": "ANEEL",
+        "linha_sumario": 8
+      }
+    },
+    "propriedade-intelectual": {
+      "ancora_sumario": true,
+      "secoes_novas": [],
+      "secao_generica": {
+        "radar": "propriedade-intelectual",
+        "ancora": "OutrasPublicacoes",
+        "nome": "Outras publicações",
+        "copiada_de": "INPI",
+        "linha_sumario": 5
+      }
+    },
+    "contencioso-civel": {
+      "ancora_sumario": true,
+      "secoes_novas": [],
+      "secao_generica": {
+        "radar": "contencioso-civel",
+        "ancora": "OutrasPublicacoes",
+        "nome": "Outras publicações",
+        "copiada_de": "SENACON",
+        "linha_sumario": 4
+      }
+    }
+  },
+  "noticias_em_outras_publicacoes": [
+    {
+      "radar": "regulatorio-oleo-gas",
+      "fonte": "Ministério da Agricultura | Notícias",
+      "titulo": "Fiscalização do Mapa identifica fábrica irregular de ração animal em Santa Catarina",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/fiscalizacao-do-mapa-identifica-fabrica-irregular-de-racao-animal-em-santa-catarina",
+      "origem": "scraper",
+      "publicada_em": "OutrasPublicacoes"
+    }
+  ],
+  "arquivos_gerados": [
+    {
+      "slug": "trabalhista-empresarial",
+      "nome": "Radar Trabalhista Empresarial",
+      "template": "Template_Radar Trabalhista.msg",
+      "arquivo": "email_trabalhista-empresarial.eml",
+      "previa": "email_trabalhista-empresarial.html",
+      "total_itens": 0,
+      "secoes_publicadas": []
+    },
+    {
+      "slug": "direito-tributario",
+      "nome": "Radar Tributário",
+      "template": "Template_Radar Tributário.msg",
+      "arquivo": "email_direito-tributario.eml",
+      "previa": "email_direito-tributario.html",
+      "total_itens": 1,
+      "secoes_publicadas": [
+        "MinisterioFazenda"
+      ]
+    },
+    {
+      "slug": "societario-ma",
+      "nome": "Radar Societário, Fusões e Aquisições",
+      "template": "Template_Radar Societário_ Fusões e Aquisições.msg",
+      "arquivo": "email_societario-ma.eml",
+      "previa": "email_societario-ma.html",
+      "total_itens": 0,
+      "secoes_publicadas": []
+    },
+    {
+      "slug": "mercado-capitais-fundos",
+      "nome": "Radar Mercado de Capitais e Fundos de Investimento",
+      "template": "Template_Radar Mercado de Capitais e Fundos de Investimento.msg",
+      "arquivo": "email_mercado-capitais-fundos.eml",
+      "previa": "email_mercado-capitais-fundos.html",
+      "total_itens": 0,
+      "secoes_publicadas": []
+    },
+    {
+      "slug": "regulatorio-oleo-gas",
+      "nome": "Radar Regulatório e Óleo e Gás",
+      "template": "Template_Radar Regulatório e Óleo e Gás.msg",
+      "arquivo": "email_regulatorio-oleo-gas.eml",
+      "previa": "email_regulatorio-oleo-gas.html",
+      "total_itens": 16,
+      "secoes_publicadas": [
+        "ANEEL",
+        "ANP",
+        "ANTAQ",
+        "ANTT",
+        "MME",
+        "MinisterioFazenda",
+        "OutrasPublicacoes",
+        "Planalto",
+        "SENACON"
+      ]
+    },
+    {
+      "slug": "imobiliario-infraestrutura",
+      "nome": "Radar Negócios Imobiliários e Infraestrutura",
+      "template": "Template_Radar Negócios Imobiliários e Infraestrutura.msg",
+      "arquivo": "email_imobiliario-infraestrutura.eml",
+      "previa": "email_imobiliario-infraestrutura.html",
+      "total_itens": 10,
+      "secoes_publicadas": [
+        "ANEEL",
+        "ANTAQ",
+        "ANTT",
+        "CCEE",
+        "MME",
+        "MinisterioFazenda"
+      ]
+    },
+    {
+      "slug": "ambiental-esg",
+      "nome": "Radar Ambiental e ESG",
+      "template": "Template_Radar Ambiental e ESG.msg",
+      "arquivo": "email_ambiental-esg.eml",
+      "previa": "email_ambiental-esg.html",
+      "total_itens": 1,
+      "secoes_publicadas": [
+        "MinisterioFazenda"
+      ]
+    },
+    {
+      "slug": "propriedade-intelectual",
+      "nome": "Radar Propriedade Intelectual, Tecnologia e Privacidade",
+      "template": "Template_Radar Propriedade Intelectual_ Tecnologia e Privacidade.msg",
+      "arquivo": "email_propriedade-intelectual.eml",
+      "previa": "email_propriedade-intelectual.html",
+      "total_itens": 3,
+      "secoes_publicadas": [
+        "ANPD",
+        "INPI",
+        "SENACON"
+      ]
+    },
+    {
+      "slug": "contencioso-civel",
+      "nome": "Radar Solução de Conflitos",
+      "template": "Template_Radar Solução de Conflitos.msg",
+      "arquivo": "email_contencioso-civel.eml",
+      "previa": "email_contencioso-civel.html",
+      "total_itens": 0,
+      "secoes_publicadas": []
+    }
+  ]
+}

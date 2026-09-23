@@ -792,34 +792,75 @@ def resolver_secao(fonte, slug, secoes, aliases):
     return None
 
 
-def agrupar_por_secao(itens, slug, secoes, aliases, secao_padrao_manual=""):
+def rotulo_da_fonte(fonte):
+    """
+    O nome da fonte como ele aparece para quem lê.
+
+    O boletim.json escreve a fonte como "Órgão | Seção" ("ANEEL | Últimas
+    Notícias"); para o leitor do Radar, o que identifica a procedência é o
+    órgão. Item adicionado à mão traz a fonte digitada, que volta inteira.
+    """
+    return texto_limpo(str(fonte or "").split("|")[0])
+
+
+def agrupar_por_secao(
+    itens,
+    slug,
+    secoes,
+    aliases,
+    secao_padrao_manual="",
+    ancora_generica="",
+):
     """
     Distribui as notícias aprovadas de um Radar entre as seções do template.
 
-    Devolve (mapa_por_ancora, sem_secao). Uma notícia sem seção correspondente
-    nunca é descartada em silêncio: ela volta em 'sem_secao' e bloqueia a
-    geração, porque publicar o Radar sem ela esconderia uma decisão humana.
+    Devolve (mapa_por_ancora, sem_secao, encaminhadas).
 
-    'secao_padrao_manual' vale só para item adicionado à mão no portal, cuja
-    fonte é texto livre e pode não existir no template. Vazio (o padrão)
-    mantém o bloqueio: é melhor parar do que publicar o item sob o nome de
-    uma fonte que não é a dele.
+    A fonte de cada notícia é procurada primeiro entre as faixas do próprio
+    template. O que não tem faixa própria vai para a faixa "Outras
+    publicações" ('ancora_generica'), que existe nos nove Radares. São três
+    os caminhos que levam uma notícia até lá:
+
+    - a matriz do Filtro 1 não liga aquela fonte àquele Radar, então o
+      template do Marketing nunca previu a faixa;
+    - a pessoa escolheu o Radar à mão no portal, onde qualquer notícia pode
+      ir para qualquer Radar;
+    - o item foi adicionado à mão, com a fonte digitada em texto livre —
+      Latin Lawyer, IRIB, Agência iNFRA e as outras ainda fora do scraper.
+
+    Nenhuma notícia muda de procedência nesse caminho: quem entra na faixa
+    genérica é publicado com o nome da própria fonte no começo do título, e
+    volta em 'encaminhadas' para ficar registrado no resumo da geração.
+
+    'secao_padrao_manual' continua valendo e tem precedência sobre a faixa
+    genérica: é o jeito de mandar os itens manuais de um Radar para uma faixa
+    escolhida em vez da genérica.
+
+    Sem faixa genérica declarada e sem padrão manual, a notícia volta em
+    'sem_secao' e bloqueia a geração. Descartar em silêncio nunca é opção:
+    esconderia uma decisão humana.
     """
     por_ancora = defaultdict(list)
     sem_secao = []
+    encaminhadas = []
+
+    def por_ancora_alvo(ancora):
+        return next((alvo for alvo in secoes if alvo.ancora == ancora), None)
 
     for item in itens:
         secao = resolver_secao(item.get("fonte"), slug, secoes, aliases)
+        generica = False
 
         if (
             secao is None
             and secao_padrao_manual
             and normalizar_texto(item.get("origem")) == "manual"
         ):
-            secao = next(
-                (alvo for alvo in secoes if alvo.ancora == secao_padrao_manual),
-                None,
-            )
+            secao = por_ancora_alvo(secao_padrao_manual)
+
+        if secao is None and ancora_generica:
+            secao = por_ancora_alvo(ancora_generica)
+            generica = secao is not None
 
         if secao is None:
             sem_secao.append(
@@ -831,24 +872,46 @@ def agrupar_por_secao(itens, slug, secoes, aliases, secao_padrao_manual=""):
                     "origem": item.get("origem", "scraper"),
                     "motivo": (
                         "O template oficial deste Radar não tem seção para esta "
-                        "fonte. Mapeie a fonte para uma seção existente em "
-                        "templates/mapeamento_radares.json (aliases_fonte), "
-                        "acrescente a seção ao template, ou — para item "
-                        "adicionado à mão — defina secao_padrao_item_manual."
+                        "fonte e a faixa 'Outras publicações' não está "
+                        "declarada em templates/ajustes_templates.json "
+                        "(secao_outras_publicacoes). Declare a faixa, mapeie a "
+                        "fonte para uma seção existente em "
+                        "templates/mapeamento_radares.json (aliases_fonte) ou "
+                        "acrescente a seção ao template."
                     ),
                 }
             )
             continue
 
+        titulo = texto_limpo(item.get("titulo")) or "Sem título"
+
+        if generica:
+            # A faixa genérica não diz de onde veio a notícia, então o nome da
+            # fonte entra no título. Sem isso, o Radar publicaria a notícia sem
+            # procedência visível.
+            rotulo = rotulo_da_fonte(item.get("fonte"))
+            if rotulo:
+                titulo = f"{rotulo} — {titulo}"
+            encaminhadas.append(
+                {
+                    "radar": slug,
+                    "fonte": item.get("fonte", ""),
+                    "titulo": item.get("titulo", ""),
+                    "url": item.get("url", ""),
+                    "origem": item.get("origem", "scraper"),
+                    "publicada_em": secao.ancora,
+                }
+            )
+
         por_ancora[secao.ancora].append(
             {
-                "titulo": texto_limpo(item.get("titulo")) or "Sem título",
+                "titulo": titulo,
                 "url": url_segura(item.get("url")),
                 "resumo": texto_limpo(item.get("resumo")),
             }
         )
 
-    return por_ancora, sem_secao
+    return por_ancora, sem_secao, encaminhadas
 
 
 def gravar_recursos(recursos, destino):
@@ -958,19 +1021,24 @@ def main():
         ajustes_aplicados[slug] = ajustes
 
     # Distribui as notícias pelas seções antes de gravar, pelo mesmo motivo.
+    ancora_generica = ajustes_templates.ancora_generica(config_ajustes)
+
     distribuicao = {}
     sem_secao = []
+    encaminhadas = []
     for slug in SLUGS:
         _, estrutura = carregados[slug]
-        por_ancora, faltantes = agrupar_por_secao(
+        por_ancora, faltantes, genericas = agrupar_por_secao(
             agrupados[slug],
             slug,
             estrutura.secoes,
             aliases,
             texto_limpo(padroes_manuais.get(slug)),
+            ancora_generica,
         )
         distribuicao[slug] = por_ancora
         sem_secao.extend(faltantes)
+        encaminhadas.extend(genericas)
 
     if sem_secao:
         resumo = {
@@ -1056,6 +1124,7 @@ def main():
         "total_rejeitados": rejeitados,
         "decisoes_sem_item_correspondente": decisoes_orfas,
         "ajustes_nos_templates": ajustes_aplicados,
+        "noticias_em_outras_publicacoes": encaminhadas,
         "arquivos_gerados": arquivos_gerados,
     }
     escrever_json_atomico(RESUMO_PATH, resumo)
@@ -1067,6 +1136,13 @@ def main():
         )
 
     print("=" * 60)
+    if encaminhadas:
+        print(
+            f"Aviso: {len(encaminhadas)} notícia(s) sem faixa própria foram "
+            "publicadas em 'Outras publicações', com o nome da fonte no "
+            "título. Ver o resumo."
+        )
+
     print(f"Itens aprovados: {len(aprovados)} (dos quais {manuais} manuais)")
     print(f"Itens rejeitados: {rejeitados}")
     print(f"Radares gerados: {len(arquivos_gerados)}")

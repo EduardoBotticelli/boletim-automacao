@@ -59,9 +59,12 @@
   },
   "_secao_padrao_leia_me": [
     "Destino para item adicionado manualmente no portal cuja fonte digitada não",
-    "corresponde a nenhuma seção do template. Vazio (padrão) significa que esse",
-    "item bloqueia a geração em vez de aparecer sob um nome de fonte que não é o",
-    "dele. Preencha com a âncora de uma seção para liberar."
+    "corresponde a nenhuma seção do template. Vazio (padrão) manda esse item",
+    "para a faixa 'Outras publicações', onde ele é publicado com o nome da",
+    "fonte digitada no começo do título. Preencha com a âncora de uma seção do",
+    "template para mandá-lo para lá em vez da faixa genérica; nesse caso a",
+    "notícia passa a aparecer sob o nome daquela seção, então só use quando a",
+    "fonte digitada for mesmo a daquela faixa."
   ],
   "secao_padrao_item_manual": {
     "trabalhista-empresarial": "",
@@ -75,9 +78,12 @@
     "contencioso-civel": ""
   },
   "_remetente_leia_me": [
-    "Remetente e destinatário do .eml. Vazio (padrão) deixa os campos em branco:",
-    "o arquivo traz X-Unsent, então o Outlook abre como mensagem nova, pronta",
-    "para endereçar e enviar. Preencha se quiser os campos já sugeridos."
+    "Remetente e destinatário do .eml. Vazio (padrão) deixa os campos em branco.",
+    "O arquivo não traz X-Unsent, porque ele faz o Outlook abrir em modo de",
+    "composição e descaracterizar o CSS do template (ver",
+    "docs/templates-oficiais.md); a mensagem abre em modo de leitura e o envio",
+    "sai por 'Ações → Reenviar esta mensagem'. Preencha para os campos já",
+    "virem endereçados."
   ],
   "remetente": "",
   "destinatario": ""

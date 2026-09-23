@@ -196,10 +196,16 @@ da fonte do `boletim.json` (a parte antes do `|`) com o nome da seção, sem
 acento e sem pontuação. O que não casa sozinho é resolvido em
 `templates/mapeamento_radares.json`, no bloco `aliases_fonte`.
 
-Uma notícia aprovada cuja fonte não tem seção no template **bloqueia a
-geração**, com o item identificado em `output/resumo_geracao_final.json`.
-Publicar o Radar sem ela esconderia uma decisão humana, que é justamente o
-que o resto do fluxo evita.
+Uma notícia aprovada cuja fonte não tem seção no template sai na faixa
+**"Outras publicações"** (Ajuste 3), com o nome da fonte no começo do
+título. Nada é descartado e nada muda de procedência. Os itens que foram
+por esse caminho ficam listados em `output/resumo_geracao_final.json`, no
+campo `noticias_em_outras_publicacoes`, e a geração avisa quantos foram.
+
+Se a faixa genérica não estiver declarada, a geração **bloqueia**, como
+antes, com o item identificado no mesmo resumo. Publicar o Radar sem a
+notícia esconderia uma decisão humana, que é justamente o que o resto do
+fluxo evita.
 
 Para ver as âncoras disponíveis e as fontes ainda sem seção:
 
@@ -209,12 +215,12 @@ python scripts/inspecionar_templates.py
 
 ## Ajustes aplicados sobre o template
 
-Os `.msg` não podem ser reescritos no Linux (ver acima), então dois ajustes
+Os `.msg` não podem ser reescritos no Linux (ver acima), então três ajustes
 autorizados são aplicados ao HTML extraído, na geração. Estão declarados em
 `templates/ajustes_templates.json` e implementados em
 `scripts/ajustes_templates.py`.
 
-Os dois precisam ser incorporados oficialmente pelo Marketing. A lista para
+Os três precisam ser incorporados oficialmente pelo Marketing. A lista para
 envio está no fim deste documento.
 
 ### Ajuste 1 — âncora do "VOLTAR AO SUMÁRIO"
@@ -261,6 +267,70 @@ a largura de célula alguma, e mantém sumário e corpo na mesma ordem. Entre
 as novas, a ordem é alfabética. Se o Marketing preferir agrupar por tema
 (as agências junto das outras agências, antes das publicações oficiais), é
 só reposicionar quando incorporar oficialmente.
+
+### Ajuste 3 — faixa "Outras publicações"
+
+Criada nos nove Radares, sempre como **última** seção. Recebe qualquer
+notícia aprovada cuja fonte não tenha faixa própria naquele Radar.
+
+É a resposta a um problema com três origens, que o Ajuste 2 não resolvia
+porque ele fecha lacunas conhecidas, uma a uma:
+
+1. **Divergência entre a matriz e o template.** A matriz do Filtro 1 (o
+   `MAPA` do `scripts/gerar_boletim.py`) diz quais Radares cada fonte pode
+   alimentar; os templates dizem quais faixas existem em cada Radar. As duas
+   listas foram construídas separadamente e podem divergir de novo a cada
+   fonte nova ou template novo.
+2. **Radar escolhido à mão no portal.** A pessoa pode acrescentar qualquer
+   Radar a qualquer notícia, independentemente da matriz e da sugestão da
+   IA. A superfície real não é a matriz: é fonte × nove Radares.
+3. **Item adicionado à mão.** A fonte é digitada em texto livre, justamente
+   para as fontes ainda fora do scraper — Latin Lawyer, Tributário.com,
+   IRIB, Agência iNFRA, iNFRA Energia, Agência Eixos, RC Ambiental. Nenhuma
+   delas tem faixa em todos os Radares.
+
+A faixa é criada pelo mesmo processo do Ajuste 2: **cópia literal** de uma
+seção existente do próprio template, trocando só a âncora e o nome. A seção
+de origem de cada Radar está em `secao_outras_publicacoes.modelo`; o
+critério foi escolher uma seção de nome curto e de uma linha só, para a
+troca de texto ser inequívoca.
+
+| Radar | Seção copiada |
+|---|---|
+| trabalhista-empresarial | CGU |
+| direito-tributario | COAF |
+| societario-ma | Banco Central (Normas) |
+| mercado-capitais-fundos | COAF |
+| regulatorio-oleo-gas | ANEEL |
+| imobiliario-infraestrutura | ANEEL |
+| ambiental-esg | ANEEL |
+| propriedade-intelectual | INPI |
+| contencioso-civel | SENACON |
+
+**Procedência.** A faixa não diz de onde a notícia veio, então o nome da
+fonte entra no começo do título, separado por travessão:
+
+```
+Ministério da Agricultura — Fiscalização do Mapa identifica fábrica irregular
+```
+
+Nenhuma notícia é publicada sob o nome de outro órgão. O nome usado é o da
+própria fonte do `boletim.json` (a parte antes do `|`) ou, no item manual, o
+que a pessoa digitou.
+
+**Quando ela aparece.** Só quando tem notícia. Vazia, ela é removida do
+corpo e do sumário como qualquer outra seção sem conteúdo, então uma edição
+comum — em que toda fonte tem faixa própria — sai exatamente como hoje.
+
+**Posição.** Última seção do Radar, depois de todas as fontes, e a entrada
+no sumário na primeira célula livre da grade. É onde uma faixa de sobra
+pertence, e é a posição que não desloca nenhuma entrada já definida pelo
+Marketing.
+
+**Precedência.** O `secao_padrao_item_manual` do mapeamento continua valendo
+e vem antes da faixa genérica: é o jeito de mandar os itens manuais de um
+Radar para uma faixa escolhida. Ele muda a procedência aparente da notícia,
+então só serve quando a fonte digitada é mesmo a daquela faixa.
 
 ### Aliases
 
@@ -318,6 +388,22 @@ notícias) e acrescentando a fonte ao sumário:
 | Radar Negócios Imobiliários e Infraestrutura | SUSEP |
 | Radar Ambiental e ESG | ANTT |
 | Radar Ambiental e ESG | SUSEP |
+
+**3. Faixa "Outras publicações" — nos nove Radares**
+
+Criar, em cada um dos nove Radares, uma faixa chamada **Outras publicações**
+como última seção, duplicando uma seção existente do próprio Radar (faixa
+verde + bloco de notícias) e acrescentando a entrada no sumário.
+
+É o destino das notícias cuja fonte não tem faixa naquele Radar. Sem ela, a
+geração trava: hoje o portal permite acrescentar qualquer Radar a qualquer
+notícia e adicionar notícias de fontes que não estão em template nenhum
+(Latin Lawyer, Tributário.com, IRIB, Agência iNFRA, iNFRA Energia, Agência
+Eixos, RC Ambiental).
+
+A notícia publicada nessa faixa leva o nome da própria fonte no começo do
+título, então a procedência continua visível. A faixa só aparece na edição
+quando tem notícia.
 
 São fontes que o Filtro 1 já autoriza para esses Radares. Sem a seção, uma
 notícia delas não teria onde ser publicada.

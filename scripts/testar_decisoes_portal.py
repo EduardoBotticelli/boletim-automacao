@@ -9,6 +9,8 @@ como subprocesso e verifica o resultado.
 O que ele protege:
 - o formato canônico gravado pelo portal gera os nove email_<slug>.html;
 - itens adicionados manualmente na curadoria são publicados;
+- notícia cuja fonte não tem faixa no Radar sai na faixa "Outras
+  publicações", com a procedência real no título, em vez de travar a geração;
 - ajustes de Radar feitos por uma pessoa valem mais que a sugestão da IA;
 - edições de título, resumo e URL são aplicadas;
 - itens rejeitados não são publicados;
@@ -134,9 +136,26 @@ def payload(decisoes, **extras):
     return corpo
 
 
-def executar(boletim, decisoes):
+def config_ajustes():
+    """A configuração de ajustes do repositório, para o teste variar."""
+    return json.loads(
+        (TEMPLATES_DIR / "ajustes_templates.json").read_text(encoding="utf-8")
+    )
+
+
+def config_mapeamento():
+    """O mapeamento de Radares do repositório, para o teste variar."""
+    return json.loads(
+        (TEMPLATES_DIR / "mapeamento_radares.json").read_text(encoding="utf-8")
+    )
+
+
+def executar(boletim, decisoes, ajustes=None, mapeamento=None):
     """
     Roda o gerar_boletim_final.py em uma cópia isolada do repositório.
+
+    'ajustes' e 'mapeamento' substituem os JSON de configuração da pasta
+    templates/, para o teste experimentar variações sem tocar no repositório.
 
     Devolve um Resultado com o código de saída, a saída de texto, as prévias
     em HTML, as mensagens .eml e o resumo.
@@ -152,8 +171,29 @@ def executar(boletim, decisoes):
         shutil.copy2(MODULO_AJUSTES, raiz / "scripts" / MODULO_AJUSTES.name)
 
         # Os templates oficiais entram por link simbólico: são ~10 MB e o
-        # script só os lê.
-        (raiz / "templates").symlink_to(TEMPLATES_DIR, target_is_directory=True)
+        # script só os lê. Quando o teste troca uma configuração, a pasta
+        # passa a ser real e só os .msg continuam vindo por link.
+        if ajustes is None and mapeamento is None:
+            (raiz / "templates").symlink_to(TEMPLATES_DIR, target_is_directory=True)
+        else:
+            destino = raiz / "templates"
+            destino.mkdir()
+            for arquivo in TEMPLATES_DIR.iterdir():
+                if arquivo.suffix != ".json":
+                    (destino / arquivo.name).symlink_to(arquivo)
+
+            configuracoes = {
+                "ajustes_templates.json": ajustes,
+                "mapeamento_radares.json": mapeamento,
+            }
+            for nome, valor in configuracoes.items():
+                if valor is None:
+                    shutil.copy2(TEMPLATES_DIR / nome, destino / nome)
+                else:
+                    (destino / nome).write_text(
+                        json.dumps(valor, ensure_ascii=False, indent=2),
+                        encoding="utf-8",
+                    )
 
         (saida_dir / "boletim.json").write_text(
             json.dumps(boletim, ensure_ascii=False), encoding="utf-8"
@@ -560,8 +600,9 @@ def teste_radar_vazio_usa_o_template_com_mensagem():
     assert html.count("<img") == 9
     assert "forms.cloud.microsoft" in html
     assert "VOLTAR AO SUM" in html
-    # E nenhuma faixa de fonte sobrou.
+    # E nenhuma faixa de fonte sobrou, nem a genérica.
     assert "Título | " not in html
+    assert "Outras publicações" not in html
 
 
 def teste_eml_carrega_as_imagens_do_template():
@@ -613,36 +654,37 @@ def teste_eml_carrega_as_imagens_do_template():
         assert not faltando, f"{slug}: imagens sem anexo correspondente: {faltando}"
 
 
-def teste_fonte_sem_secao_no_template_bloqueia():
-    """
-    Notícia aprovada cuja fonte não existe no template não pode ser
-    descartada em silêncio: a geração para e os e-mails anteriores ficam.
-    """
+def boletim_com_fonte_desconhecida():
+    """O boletim de exemplo mais uma notícia sem faixa em Radar algum."""
     boletim = boletim_exemplo()
     boletim["itens"].append(
-        {
-            "fonte": "Tribunal Inexistente | Notícias",
-            "categoria": "Teste",
-            "titulo": "Notícia de fonte que o template não conhece",
-            "data_publicacao": "2026-08-27",
-            "resumo": "Deve bloquear a geração.",
-            "motivo_filtragem": "Teste.",
-            "palavras_chave_detectadas": [],
-            "boletins_confirmados": ["mercado-capitais-fundos"],
-            "boletins_rejeitados": [],
-            "url": "https://exemplo.invalido/noticia",
-            "boletins": ["mercado-capitais-fundos"],
-        }
+    {
+        "fonte": "Tribunal Inexistente | Notícias",
+        "categoria": "Teste",
+        "titulo": "Notícia de fonte que o template não conhece",
+        "data_publicacao": "2026-08-27",
+        "resumo": "Não existe faixa desta fonte em Radar algum.",
+        "motivo_filtragem": "Teste.",
+        "palavras_chave_detectadas": [],
+        "boletins_confirmados": ["mercado-capitais-fundos"],
+        "boletins_rejeitados": [],
+        "url": "https://exemplo.invalido/noticia",
+        "boletins": ["mercado-capitais-fundos"],
+    }
     )
+    return boletim
 
-    decisoes = payload(
+
+def decisoes_com_fonte_desconhecida(radares):
+    """Só a notícia de fonte desconhecida é aprovada."""
+    return payload(
         [
             decisao(
                 "CVM orienta sobre a Resolução 244",
                 "https://www.gov.br/cvm/noticia-244",
                 "CVM | Notícias",
-                "aprovado",
-                ["mercado-capitais-fundos"],
+                "rejeitado",
+                [],
             ),
             decisao(
                 "RESOLUÇÃO CPPI Nº 367",
@@ -656,14 +698,82 @@ def teste_fonte_sem_secao_no_template_bloqueia():
                 "https://exemplo.invalido/noticia",
                 "Tribunal Inexistente | Notícias",
                 "aprovado",
-                ["mercado-capitais-fundos"],
+                radares,
             ),
         ]
     )
 
-    r = executar(boletim, decisoes)
 
-    assert r.codigo != 0, "fonte sem seção deveria bloquear"
+def teste_fonte_sem_secao_vai_para_outras_publicacoes():
+    """
+    Notícia aprovada cuja fonte não tem faixa no template é publicada na
+    faixa "Outras publicações", com a procedência real no título.
+
+    É a origem 1: a matriz do Filtro 1 e os templates do Marketing foram
+    construídos em momentos diferentes e divergem.
+    """
+    r = executar(
+        boletim_com_fonte_desconhecida(),
+        decisoes_com_fonte_desconhecida(["mercado-capitais-fundos"]),
+    )
+
+    assert r.codigo == 0, f"esperava sucesso, saida:\n{r.saida}"
+
+    publicadas = next(
+        arquivo["secoes_publicadas"]
+        for arquivo in r.resumo["arquivos_gerados"]
+        if arquivo["slug"] == "mercado-capitais-fundos"
+    )
+    assert publicadas == ["OutrasPublicacoes"], (
+        f"a notícia deveria sair na faixa genérica, saiu em {publicadas}"
+    )
+
+    html = r.emails["mercado-capitais-fundos"]
+    assert "Outras publicações" in html, "a faixa genérica não foi publicada"
+    assert 'href="#OutrasPublicacoes"' in html, (
+        "a faixa genérica não entrou no sumário"
+    )
+    assert "Tribunal Inexistente — Notícia de fonte que o template não conhece" in (
+        html
+    ), "a procedência real não aparece no título"
+
+    # Nada foi descartado e o encaminhamento fica registrado.
+    encaminhadas = r.resumo["noticias_em_outras_publicacoes"]
+    assert len(encaminhadas) == 1, encaminhadas
+    assert encaminhadas[0]["fonte"] == "Tribunal Inexistente | Notícias"
+    assert encaminhadas[0]["radar"] == "mercado-capitais-fundos"
+    assert encaminhadas[0]["publicada_em"] == "OutrasPublicacoes"
+
+    # Nos Radares onde nada caiu na faixa, ela não aparece.
+    for slug in SLUGS:
+        if slug == "mercado-capitais-fundos":
+            continue
+        assert "Outras publicações" not in r.emails[slug], (
+            f"{slug}: a faixa genérica vazia deveria ter saído do Radar"
+        )
+        assert "#OutrasPublicacoes" not in r.emails[slug], (
+            f"{slug}: a faixa genérica vazia deveria ter saído do sumário"
+        )
+
+
+def teste_sem_faixa_generica_a_geracao_bloqueia():
+    """
+    Sem a faixa genérica declarada, a notícia sem faixa própria volta a
+    bloquear a geração.
+
+    É a garantia de que nada é descartado em silêncio: quando não há para
+    onde mandar a notícia, o gerador para e preserva os e-mails anteriores.
+    """
+    ajustes = config_ajustes()
+    ajustes.pop("secao_outras_publicacoes", None)
+
+    r = executar(
+        boletim_com_fonte_desconhecida(),
+        decisoes_com_fonte_desconhecida(["mercado-capitais-fundos"]),
+        ajustes=ajustes,
+    )
+
+    assert r.codigo != 0, "sem faixa genérica, a fonte sem seção deveria bloquear"
     assert r.resumo["status"] == "bloqueado_por_fonte_sem_secao_no_template"
     assert r.resumo["itens_sem_secao_no_template"][0]["fonte"] == (
         "Tribunal Inexistente | Notícias"
@@ -671,6 +781,223 @@ def teste_fonte_sem_secao_no_template_bloqueia():
     assert all(conteudo == SENTINELA for conteudo in r.emails.values())
     assert all(dados.decode() == SENTINELA for dados in r.mensagens.values())
 
+
+def teste_radar_escolhido_a_mao_preserva_a_procedencia():
+    """
+    O caso concreto que travou a geração: notícia do Ministério da
+    Agricultura aprovada para o Radar Regulatório e Óleo e Gás, que não tem
+    faixa do MAPA.
+
+    É a origem 2: no portal, qualquer Radar pode ser acrescentado a qualquer
+    notícia. A mesma notícia vai para dois Radares e em cada um aparece sob a
+    procedência certa — faixa do MAPA no Ambiental, que tem a faixa, e
+    "Outras publicações" no Regulatório, que não tem.
+    """
+    boletim = boletim_exemplo()
+    boletim["itens"].append(
+        {
+            "fonte": "Ministério da Agricultura | Notícias",
+            "categoria": "Agropecuária",
+            "titulo": "Fiscalização do Mapa identifica fábrica irregular de ração",
+            "data_publicacao": "2026-09-23",
+            "resumo": "Operação em fábrica de ração animal.",
+            "motivo_filtragem": "Fiscalização federal.",
+            "palavras_chave_detectadas": [],
+            # A matriz do Filtro 1 não liga o MAPA ao Regulatório, então a
+            # coleta entrega o item sem Radar algum.
+            "boletins_confirmados": ["regulatorio-oleo-gas"],
+            "boletins_rejeitados": [],
+            "url": "https://www.gov.br/agricultura/fiscalizacao-racao",
+            "boletins": [],
+        }
+    )
+
+    decisoes = payload(
+        [
+            decisao(
+                "CVM orienta sobre a Resolução 244",
+                "https://www.gov.br/cvm/noticia-244",
+                "CVM | Notícias",
+                "rejeitado",
+                [],
+            ),
+            decisao(
+                "RESOLUÇÃO CPPI Nº 367",
+                "https://www.in.gov.br/dou/resolucao-cppi-367",
+                "Destaques do D.O.U.",
+                "rejeitado",
+                [],
+            ),
+            decisao(
+                "Fiscalização do Mapa identifica fábrica irregular de ração",
+                "https://www.gov.br/agricultura/fiscalizacao-racao",
+                "Ministério da Agricultura | Notícias",
+                "aprovado",
+                ["regulatorio-oleo-gas", "ambiental-esg"],
+            ),
+        ]
+    )
+
+    r = executar(boletim, decisoes)
+    assert r.codigo == 0, f"esperava sucesso, saida:\n{r.saida}"
+
+    por_slug = {
+        arquivo["slug"]: arquivo["secoes_publicadas"]
+        for arquivo in r.resumo["arquivos_gerados"]
+    }
+
+    # No Ambiental existe a faixa do MAPA: publica lá, sob o próprio nome.
+    assert por_slug["ambiental-esg"] == ["MAPA"], por_slug["ambiental-esg"]
+    ambiental = r.emails["ambiental-esg"]
+    assert "Fiscalização do Mapa identifica" in ambiental
+    assert "Ministério da Agricultura — Fiscalização" not in ambiental, (
+        "na faixa do MAPA a procedência já está na faixa; não repetir no título"
+    )
+    assert "Outras publicações" not in ambiental
+
+    # No Regulatório não existe: publica na faixa genérica, com a fonte no
+    # título, sem ser atribuída a nenhum outro órgão.
+    assert por_slug["regulatorio-oleo-gas"] == ["OutrasPublicacoes"], (
+        por_slug["regulatorio-oleo-gas"]
+    )
+    regulatorio = r.emails["regulatorio-oleo-gas"]
+    assert "Ministério da Agricultura — Fiscalização do Mapa identifica" in (
+        regulatorio
+    ), "a procedência real não aparece no título"
+
+    encaminhadas = r.resumo["noticias_em_outras_publicacoes"]
+    assert [e["radar"] for e in encaminhadas] == ["regulatorio-oleo-gas"], (
+        encaminhadas
+    )
+
+
+def item_manual_de_fonte_livre(radares):
+    """Decisão de item adicionado à mão, com a fonte digitada em texto livre."""
+    return decisao(
+        "Latin Lawyer analisa operação de infraestrutura",
+        "https://latinlawyer.com/analise-infraestrutura",
+        "Latin Lawyer",
+        "aprovado",
+        radares,
+        origem="manual",
+        noticia={
+            "fonte": "Latin Lawyer",
+            "categoria": "Adicionado manualmente",
+            "titulo": "Latin Lawyer analisa operação de infraestrutura",
+            "data_publicacao": "2026-08-27",
+            "resumo": "Análise de operação recente.",
+            "url": "https://latinlawyer.com/analise-infraestrutura",
+            "boletins": radares,
+        },
+    )
+
+
+def teste_item_manual_com_fonte_livre_vai_para_outras_publicacoes():
+    """
+    Item adicionado à mão, com a fonte digitada, é publicado na faixa
+    genérica com o nome que a pessoa digitou.
+
+    É a origem 3: o portal aceita fonte em texto livre justamente para as
+    fontes ainda fora do scraper, que não têm faixa em template nenhum.
+    """
+    decisoes = payload(
+        [
+            decisao(
+                "CVM orienta sobre a Resolução 244",
+                "https://www.gov.br/cvm/noticia-244",
+                "CVM | Notícias",
+                "rejeitado",
+                [],
+            ),
+            decisao(
+                "RESOLUÇÃO CPPI Nº 367",
+                "https://www.in.gov.br/dou/resolucao-cppi-367",
+                "Destaques do D.O.U.",
+                "rejeitado",
+                [],
+            ),
+            item_manual_de_fonte_livre(["trabalhista-empresarial"]),
+        ]
+    )
+
+    r = executar(boletim_exemplo(), decisoes)
+    assert r.codigo == 0, f"esperava sucesso, saida:\n{r.saida}"
+
+    publicadas = next(
+        arquivo["secoes_publicadas"]
+        for arquivo in r.resumo["arquivos_gerados"]
+        if arquivo["slug"] == "trabalhista-empresarial"
+    )
+    assert publicadas == ["OutrasPublicacoes"], publicadas
+
+    html = r.emails["trabalhista-empresarial"]
+    assert "Latin Lawyer — Latin Lawyer analisa operação de infraestrutura" in html
+    assert 'href="#OutrasPublicacoes"' in html
+
+    encaminhadas = r.resumo["noticias_em_outras_publicacoes"]
+    assert len(encaminhadas) == 1 and encaminhadas[0]["origem"] == "manual", (
+        encaminhadas
+    )
+
+
+def teste_secao_padrao_manual_continua_tendo_precedencia():
+    """
+    O 'secao_padrao_item_manual' continua disponível e vale mais que a faixa
+    genérica, para o caso em que a fonte digitada é mesmo a de uma faixa.
+
+    Aqui a pessoa digitou "Controladoria-Geral da União", que é a CGU do
+    template escrita por extenso.
+    """
+    mapeamento = config_mapeamento()
+    mapeamento["secao_padrao_item_manual"]["trabalhista-empresarial"] = "CGU"
+
+    manual = item_manual_de_fonte_livre(["trabalhista-empresarial"])
+    manual["fonte"] = "Controladoria-Geral da União"
+    manual["titulo"] = "CGU publica relatório de integridade"
+    manual["url"] = "https://www.gov.br/cgu/relatorio-integridade"
+    manual["noticia"] = {
+        "fonte": "Controladoria-Geral da União",
+        "categoria": "Adicionado manualmente",
+        "titulo": "CGU publica relatório de integridade",
+        "data_publicacao": "2026-08-27",
+        "resumo": "Relatório anual de integridade.",
+        "url": "https://www.gov.br/cgu/relatorio-integridade",
+        "boletins": ["trabalhista-empresarial"],
+    }
+
+    decisoes = payload(
+        [
+            decisao(
+                "CVM orienta sobre a Resolução 244",
+                "https://www.gov.br/cvm/noticia-244",
+                "CVM | Notícias",
+                "rejeitado",
+                [],
+            ),
+            decisao(
+                "RESOLUÇÃO CPPI Nº 367",
+                "https://www.in.gov.br/dou/resolucao-cppi-367",
+                "Destaques do D.O.U.",
+                "rejeitado",
+                [],
+            ),
+            manual,
+        ]
+    )
+
+    r = executar(boletim_exemplo(), decisoes, mapeamento=mapeamento)
+    assert r.codigo == 0, f"esperava sucesso, saida:\n{r.saida}"
+
+    publicadas = next(
+        arquivo["secoes_publicadas"]
+        for arquivo in r.resumo["arquivos_gerados"]
+        if arquivo["slug"] == "trabalhista-empresarial"
+    )
+    assert publicadas == ["CGU"], (
+        f"o padrão manual deveria vencer a faixa genérica, saiu em {publicadas}"
+    )
+    assert not r.resumo["noticias_em_outras_publicacoes"]
+    assert "Outras publicações" not in r.emails["trabalhista-empresarial"]
 
 
 def teste_fonte_nova_publica_na_propria_secao():
@@ -1045,6 +1372,64 @@ def teste_estrutura_mime_embute_as_imagens():
         )
 
 
+def teste_faixa_outras_publicacoes_existe_nos_nove_templates():
+    """
+    A faixa genérica é criada nos nove templates: sempre por cópia de uma
+    seção do próprio template, sempre como última seção do Radar, e sem tocar
+    em nada que já existia.
+    """
+    sys.path.insert(0, str(BASE_DIR / "scripts"))
+    import ajustes_templates
+    import templates_radar
+
+    config = config_ajustes()
+    mapeamento = config_mapeamento()
+
+    ancora = ajustes_templates.ancora_generica(config)
+    assert ancora, "a faixa genérica não está declarada"
+    nome = config["secao_outras_publicacoes"]["nome"]
+
+    sem_generica = dict(config)
+    sem_generica.pop("secao_outras_publicacoes", None)
+
+    for slug, arquivo in mapeamento["templates"].items():
+        template = templates_radar.carregar_template(str(TEMPLATES_DIR / arquivo))
+
+        antes, _ = ajustes_templates.aplicar(template.html, slug, sem_generica)
+        depois, relatorio = ajustes_templates.aplicar(template.html, slug, config)
+
+        estrutura_antes = templates_radar.analisar(antes)
+        estrutura_depois = templates_radar.analisar(depois)
+
+        # A faixa é a última seção do Radar.
+        ultima = estrutura_depois.secoes[-1]
+        assert ultima.ancora == ancora, f"{slug}: última seção é {ultima.ancora}"
+        assert ultima.nome == nome, f"{slug}: faixa criada como {ultima.nome!r}"
+
+        # Nenhuma seção existente mudou de nome, de âncora ou de posição.
+        assert [(s.ancora, s.nome) for s in estrutura_depois.secoes[:-1]] == [
+            (s.ancora, s.nome) for s in estrutura_antes.secoes
+        ], f"{slug}: as seções existentes foram alteradas"
+
+        # Tudo o que vem depois da última seção — avaliação da edição, rodapé
+        # e links institucionais — continua byte a byte igual.
+        cauda = antes[estrutura_antes.secoes[-1].fim_corpo :]
+        assert cauda in depois, f"{slug}: o trecho final do template mudou"
+
+        # A grade do sumário continua com três células por linha.
+        celulas = ajustes_templates._celulas_do_sumario(depois, estrutura_depois)
+        assert len(celulas) == 3 * len(estrutura_depois.linhas_sumario), (
+            f"{slug}: a grade do sumário deixou de ter três células por linha"
+        )
+        assert f'href="#{ancora}"' in depois, f"{slug}: faixa fora do sumário"
+
+        # E a cópia saiu de uma seção do próprio template.
+        copiada_de = relatorio["secao_generica"]["copiada_de"]
+        assert copiada_de in {s.ancora for s in estrutura_antes.secoes}, (
+            f"{slug}: a faixa foi copiada de {copiada_de}, que não é do template"
+        )
+
+
 TESTES = [
     teste_fluxo_completo,
     teste_edicoes_de_texto,
@@ -1058,7 +1443,12 @@ TESTES = [
     teste_radar_vazio_usa_o_template_com_mensagem,
     teste_eml_carrega_as_imagens_do_template,
     teste_estrutura_mime_embute_as_imagens,
-    teste_fonte_sem_secao_no_template_bloqueia,
+    teste_fonte_sem_secao_vai_para_outras_publicacoes,
+    teste_sem_faixa_generica_a_geracao_bloqueia,
+    teste_radar_escolhido_a_mao_preserva_a_procedencia,
+    teste_item_manual_com_fonte_livre_vai_para_outras_publicacoes,
+    teste_secao_padrao_manual_continua_tendo_precedencia,
+    teste_faixa_outras_publicacoes_existe_nos_nove_templates,
     teste_fonte_nova_publica_na_propria_secao,
     teste_mecanismo_de_alias_continua_disponivel,
     teste_ancora_do_voltar_ao_sumario_existe,
