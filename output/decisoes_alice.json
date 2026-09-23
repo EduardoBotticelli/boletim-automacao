@@ -2,123 +2,51 @@
   "versao_formato": 2,
   "revisao_concluida": true,
   "origem": "portal-curadoria",
-  "confirmado_em": "2026-09-23T19:15:37.512Z",
-  "data_execucao": "2026-09-22",
-  "total_itens": 25,
-  "total_aprovados": 25,
-  "total_rejeitados": 0,
+  "confirmado_em": "2026-09-23T19:40:16.996Z",
+  "data_execucao": "2026-09-23",
+  "total_itens": 27,
+  "total_aprovados": 21,
+  "total_rejeitados": 6,
   "decisoes": [
     {
-      "id": "it-e614491d",
+      "id": "it-a6f32324",
       "status": "aprovado",
       "status_portal": "aprovado",
       "origem": "scraper",
-      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15509.htm",
+      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15519.htm",
       "fonte": "Planalto | Resenha Diaria",
-      "titulo": "Lei nº 15.509, de 21 de setembro de 2026",
+      "titulo": "Lei nº 15.519, de 22.9.2026",
       "radares_finais": [
-        "imobiliario-infraestrutura",
-        "contencioso-civel"
-      ],
-      "boletins": [
-        "imobiliario-infraestrutura",
-        "contencioso-civel"
-      ]
-    },
-    {
-      "id": "it-cfaffc1e",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "origem": "scraper",
-      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15508.htm",
-      "fonte": "Planalto | Resenha Diaria",
-      "titulo": "Lei nº 15.508, de 21 de setembro de 2026",
-      "radares_finais": [
-        "ambiental-esg"
-      ],
-      "boletins": [
-        "ambiental-esg"
-      ]
-    },
-    {
-      "id": "it-7a71011c",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "origem": "scraper",
-      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15511.htm",
-      "fonte": "Planalto | Resenha Diaria",
-      "titulo": "Lei nº 15.511, de 21 de setembro de 2026",
-      "radares_finais": [
-        "contencioso-civel"
-      ],
-      "boletins": [
-        "contencioso-civel"
-      ]
-    },
-    {
-      "id": "it-df2a15f7",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "origem": "scraper",
-      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13125.htm",
-      "fonte": "Planalto | Resenha Diaria",
-      "titulo": "Decreto nº 13.125, de 21 de setembro de 2026",
-      "radares_finais": [
-        "imobiliario-infraestrutura"
-      ],
-      "boletins": [
-        "imobiliario-infraestrutura"
-      ]
-    },
-    {
-      "id": "it-3a199a33",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "origem": "scraper",
-      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13121.htm",
-      "fonte": "Planalto | Resenha Diaria",
-      "titulo": "Decreto nº 13.121, de 21 de setembro de 2026",
-      "radares_finais": [
-        "direito-tributario",
         "regulatorio-oleo-gas"
       ],
       "boletins": [
-        "direito-tributario",
         "regulatorio-oleo-gas"
       ]
     },
     {
-      "id": "it-654f52b7",
-      "status": "aprovado",
-      "status_portal": "aprovado",
+      "id": "it-a0651d2b",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
       "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45991",
-      "fonte": "Banco Central | Normas",
-      "titulo": "Comunicado nº 45.991, de 21 de setembro de 2026",
-      "radares_finais": [
-        "societario-ma",
-        "mercado-capitais-fundos"
-      ],
-      "boletins": [
-        "societario-ma",
-        "mercado-capitais-fundos"
-      ]
+      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15518.htm",
+      "fonte": "Planalto | Resenha Diaria",
+      "titulo": "Lei nº 15.518, de 22.9.2026",
+      "radares_finais": [],
+      "boletins": []
     },
     {
-      "id": "it-e1525482",
+      "id": "it-40af70e6",
       "status": "aprovado",
       "status_portal": "aprovado",
       "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=45989",
-      "fonte": "Banco Central | Normas",
-      "titulo": "Comunicado nº 45.989, de 21 de setembro de 2026",
+      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15517.htm",
+      "fonte": "Planalto | Resenha Diaria",
+      "titulo": "Lei nº 15.517, de 22.9.2026",
       "radares_finais": [
-        "societario-ma",
-        "mercado-capitais-fundos"
+        "regulatorio-oleo-gas"
       ],
       "boletins": [
-        "societario-ma",
-        "mercado-capitais-fundos"
+        "regulatorio-oleo-gas"
       ]
     },
     {
@@ -137,48 +65,59 @@
       ]
     },
     {
-      "id": "it-4d86dbf0",
+      "id": "it-1006152f",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/secretaria-de-politica-economica-projeta-crescimento-de-2-para-o-pib-em-2026-e-2-3-em-2027",
+      "fonte": "Ministério da Fazenda | Notícias",
+      "titulo": "Secretaria de Política Econômica projeta crescimento de 2% para o PIB em 2026 e 2,3% em 2027",
+      "radares_finais": [],
+      "boletins": []
+    },
+    {
+      "id": "it-a5a10786",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/arrecadacao-federal-em-agosto-totaliza-r-235-566-bilhoes-apontam-dados-divulgados-pela-receita-federal",
+      "fonte": "Ministério da Fazenda | Notícias",
+      "titulo": "Arrecadação federal em agosto totaliza R$ 235,566 bilhões, apontam dados divulgados pela Receita Federal",
+      "radares_finais": [],
+      "boletins": []
+    },
+    {
+      "id": "it-facfaf48",
       "status": "aprovado",
       "status_portal": "aprovado",
       "origem": "scraper",
-      "url": "https://www.ccee.org.br/-/co-ccee-disponibiliza-regras-e-procedimentos-de-comercializacao-adaptados-para-operacionalizacao-das-compensacoes-por-cortes-de-geracao-prt-normativa-mme-n-140-2026",
-      "fonte": "CCEE | Noticias",
-      "titulo": "CO – CCEE disponibiliza Regras e Procedimentos de Comercialização adaptados para operacionalização das compensações por cortes de geração – Portaria Normativa MME nº 140/2026",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/receita-federal-divulga-balanco-de-solicitacoes-de-opcao-pelo-simples-nacional-e-pelo-regime-regular-do-ibs-e-da-cbs",
+      "fonte": "Ministério da Fazenda | Notícias",
+      "titulo": "Receita Federal divulga balanço de solicitações de opção pelo Simples Nacional e pelo regime regular do IBS e da CBS",
       "radares_finais": [
-        "imobiliario-infraestrutura"
+        "direito-tributario"
       ],
       "boletins": [
-        "imobiliario-infraestrutura"
+        "direito-tributario"
       ]
     },
     {
-      "id": "it-7b31d264",
+      "id": "it-5f911907",
       "status": "aprovado",
       "status_portal": "aprovado",
       "origem": "scraper",
-      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/acao-concentra-orientacoes-sobre-a-reforma-tributaria",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/decreto-do-hidrogenio-e-publicado-e-marca-nova-etapa-em-regulamentacao",
       "fonte": "Ministério da Fazenda | Notícias",
-      "titulo": "Ação concentra orientações sobre a Reforma Tributária",
+      "titulo": "Decreto do hidrogênio é publicado e marca nova etapa em regulamentação",
       "radares_finais": [
-        "direito-tributario"
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
       ],
       "boletins": [
-        "direito-tributario"
-      ]
-    },
-    {
-      "id": "it-e7eeac3b",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "origem": "scraper",
-      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/receita-federal-abre-consulta-ao-lote-residual-de-restituicao-do-irpf-2026-nesta-quarta-feira-23-9",
-      "fonte": "Ministério da Fazenda | Notícias",
-      "titulo": "Receita Federal abre consulta ao lote residual de restituição do IRPF 2026 nesta quarta-feira (23/9)",
-      "radares_finais": [
-        "direito-tributario"
-      ],
-      "boletins": [
-        "direito-tributario"
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
       ]
     },
     {
@@ -197,43 +136,24 @@
       ]
     },
     {
-      "id": "it-f1e9551f",
-      "status": "aprovado",
-      "status_portal": "aprovado",
+      "id": "it-a4e6ae32",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
       "origem": "scraper",
-      "url": "https://www.b3.com.br/data/files/1F/53/8D/C0/BC9C0A105BF9020AAC094EA8/CE%20054-2026-VNC%20303%C2%BA%20LEILAO%20ESPECIAL%20DO%20FUNDO%20DE%20INVESTIMENTOS%20DO%20NORDESTE%20FINOR_PT.pdf",
-      "fonte": "B3 | Ofícios e Comunicados",
-      "titulo": "303º Leilão Especial do Fundo de Investimentos do Nordeste (Finor)",
-      "radares_finais": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "it-be3dce0c",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "origem": "scraper",
-      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/2a-edicao-do-nave-2013-programa-anp-de-empreendedorismo-e-lancada-na-rog.e",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/atualizacao-sei-ficara-indisponivel-a-partir-das-17h-de-25-09-para-implantacao-da-nova-versao-do-sistema",
       "fonte": "ANP | Notícias",
-      "titulo": "2ª edição do NAVE – Programa ANP de Empreendedorismo é lançada na ROG.e",
-      "radares_finais": [
-        "regulatorio-oleo-gas"
-      ],
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
+      "titulo": "Atualização: SEI ficará indisponível a partir das 17h de 25/09 para implantação da nova versão do sistema.",
+      "radares_finais": [],
+      "boletins": []
     },
     {
-      "id": "it-b25112c9",
+      "id": "it-abe79072",
       "status": "aprovado",
       "status_portal": "aprovado",
       "origem": "scraper",
-      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/acoes-de-fiscalizacao-em-sao-paulo-verificam-o-cumprimento-de-normas-em-93-agentes",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-senacon-e-procons-fazem-operacao-conjunta-de-fiscalizacao-de-combustiveis-em-13-estados-e-no-df",
       "fonte": "ANP | Notícias",
-      "titulo": "Ações de fiscalização em São Paulo verificam o cumprimento de normas em 93 agentes",
+      "titulo": "ANP, Senacon e Procons fazem operação conjunta de fiscalização de combustíveis em 13 estados e no DF",
       "radares_finais": [
         "regulatorio-oleo-gas"
       ],
@@ -242,19 +162,128 @@
       ]
     },
     {
-      "id": "it-3deea472",
+      "id": "it-b72c002a",
       "status": "aprovado",
       "status_portal": "aprovado",
       "origem": "scraper",
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-determina-apreensao-de-saneantes-sem-registro",
-      "fonte": "ANVISA | Notícias",
-      "titulo": "Anvisa determina apreensão de saneantes sem registro",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-aplica-mais-de-r-200-milhoes-em-multas-a-distribuidoras-de-combustiveis-por-aumento-abusivo-de-precos",
+      "fonte": "ANP | Notícias",
+      "titulo": "ANP aplica mais de R$ 200 milhões em multas a distribuidoras de combustíveis por aumento abusivo de preços",
       "radares_finais": [
         "regulatorio-oleo-gas"
       ],
       "boletins": [
         "regulatorio-oleo-gas"
       ]
+    },
+    {
+      "id": "it-54780032",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/mme-abre-consulta-publica-sobre-concessoes-de-hidreletricas-vencidas-e-vincendas",
+      "fonte": "MME | Notícias",
+      "titulo": "MME abre consulta pública sobre concessões de hidrelétricas vencidas e vincendas",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-b3647277",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/portaria-que-inclui-a-aneel-no-sistema-brasileiro-de-inteligencia-e-publicada",
+      "fonte": "ANEEL | Últimas Notícias",
+      "titulo": "Portaria que inclui a ANEEL no Sistema Brasileiro de Inteligência é publicada",
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-f310179a",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/agencia-adia-aprovacao-da-representacao-do-programa-de-resposta-da-demanda",
+      "fonte": "ANEEL | Últimas Notícias",
+      "titulo": "Agência adia aprovação da representação do programa de Resposta da Demanda",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-ca979346",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/leilao-de-transmissao-e-confirmado-para-30-de-outubro-com-previsao-de-r-8-9-bilhoes-em-investimentos",
+      "fonte": "ANEEL | Últimas Notícias",
+      "titulo": "Leilão de Transmissão é confirmado para 30 de outubro, com previsão de R$ 8,9 bilhões em investimentos",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-78545a91",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-aprova-alteracoes-nas-regras-de-comercializacao-para-usinas-termeletricas",
+      "fonte": "ANEEL | Últimas Notícias",
+      "titulo": "ANEEL aprova alterações nas Regras de Comercialização para usinas termelétricas",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-0df6318d",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/fiscalizacao-do-mapa-identifica-fabrica-irregular-de-racao-animal-em-santa-catarina",
+      "fonte": "Ministério da Agricultura | Notícias",
+      "titulo": "Fiscalização do Mapa identifica fábrica irregular de ração animal em Santa Catarina",
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-f86ff4a0",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/servicos-do-inpi-estao-temporariamente-indisponiveis",
+      "fonte": "INPI | Notícias",
+      "titulo": "Serviços do INPI estão temporariamente indisponíveis",
+      "radares_finais": [],
+      "boletins": []
     },
     {
       "id": "it-a65db6a4",
@@ -272,64 +301,54 @@
       ]
     },
     {
-      "id": "it-93eb6257",
+      "id": "it-e17b5790",
       "status": "aprovado",
       "status_portal": "aprovado",
       "origem": "scraper",
-      "url": "https://www.gov.br/mj/pt-br/assuntos/noticias-1/mjsp-anuncia-tres-portarias-para-reforcar-protecao-de-brasileiros-no-ambiente-digital",
+      "url": "https://www.gov.br/mj/pt-br/assuntos/noticias-1/senacon-reune-procons-de-todo-o-pais-para-fiscalizar-margens-de-combustiveis",
       "fonte": "SENACON | Notícias",
-      "titulo": "MJSP anuncia três atos para reforçar proteção de brasileiros no ambiente digital",
+      "titulo": "Senacon reúne Procons de todo o País para fiscalizar margens de combustíveis",
       "radares_finais": [
-        "propriedade-intelectual",
-        "contencioso-civel"
+        "regulatorio-oleo-gas"
       ],
       "boletins": [
-        "propriedade-intelectual",
-        "contencioso-civel"
+        "regulatorio-oleo-gas"
       ]
     },
     {
-      "id": "it-a0d98d77",
+      "id": "it-152e0a88",
       "status": "aprovado",
       "status_portal": "aprovado",
       "origem": "scraper",
-      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/mineracast-debate-consolidacao-da-economia-mineral-como-area-estrategica-da-agencia",
-      "fonte": "ANM | Notícias",
-      "titulo": "Mineracast debate consolidação da Economia Mineral como área estratégica da Agência",
+      "url": "https://www.gov.br/mj/pt-br/assuntos/noticias-1/sedigi-identifica-riscos-de-201ccompanheiros-de-ia-para-criancas-e-adolescentes",
+      "fonte": "SENACON | Notícias",
+      "titulo": "Sedigi identifica riscos de “companheiros de IA\" para crianças e adolescentes",
       "radares_finais": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura"
+        "propriedade-intelectual"
       ],
       "boletins": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura"
+        "propriedade-intelectual"
       ]
     },
     {
-      "id": "it-54c663ff",
-      "status": "aprovado",
-      "status_portal": "aprovado",
+      "id": "it-5dcbae57",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
       "origem": "scraper",
-      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-fala-sobre-energia-e-avanco-da-inteligencia-artificial-no-techgrid-2026",
-      "fonte": "EPE | Notícias",
-      "titulo": "EPE fala sobre energia e avanço da inteligência artificial no TechGrid 2026",
-      "radares_finais": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura"
-      ],
-      "boletins": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura"
-      ]
+      "url": "https://www.gov.br/mj/pt-br/assuntos/noticias-1/mutirao-de-negociacao-de-dividas-mobiliza-capital-e-municipios-do-rio-de-janeiro",
+      "fonte": "SENACON | Notícias",
+      "titulo": "Mutirão de negociação de dívidas mobiliza capital e municípios do Rio de Janeiro",
+      "radares_finais": [],
+      "boletins": []
     },
     {
-      "id": "it-e9f5e700",
+      "id": "it-cca47ee0",
       "status": "aprovado",
       "status_portal": "aprovado",
       "origem": "scraper",
-      "url": "https://www.gov.br/antaq/pt-br/noticias/antaq-participa-de-missao-tecnica-nos-estados-unidos",
+      "url": "https://www.gov.br/antaq/pt-br/noticias/tomada-de-subsidios-recebe-contribuicoes-para-analise-da-sobrestadia-de-conteineres",
       "fonte": "ANTAQ | Notícias",
-      "titulo": "ANTAQ participa de missão técnica nos Estados Unidos",
+      "titulo": "Tomada de subsídios recebe contribuições para análise da sobrestadia de contêineres",
       "radares_finais": [
         "regulatorio-oleo-gas",
         "imobiliario-infraestrutura"
@@ -340,45 +359,30 @@
       ]
     },
     {
-      "id": "it-f15157a5",
+      "id": "it-9eaa7df9",
       "status": "aprovado",
       "status_portal": "aprovado",
       "origem": "scraper",
-      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/setembro/susep-constitui-grupo-de-trabalho-para-analisar-impactos-da-reforma-tributaria-no-mercado-supervisionado",
-      "fonte": "SUSEP | Notícias",
-      "titulo": "Susep constitui Grupo de Trabalho para analisar impactos da Reforma Tributária no mercado supervisionado",
+      "url": "https://www.gov.br/antaq/pt-br/noticias/divulgada-pauta-da-619a-reuniao-ordinaria-da-diretoria-colegiada",
+      "fonte": "ANTAQ | Notícias",
+      "titulo": "Divulgada pauta da 619ª Reunião Ordinária da Diretoria Colegiada",
       "radares_finais": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "it-ce45fea2",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "origem": "scraper",
-      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/setembro/susep-cria-grupo-de-trabalho-para-discutir-seguros-voltados-a-infraestrutura",
-      "fonte": "SUSEP | Notícias",
-      "titulo": "Susep cria Grupo de Trabalho para discutir seguros voltados à infraestrutura",
-      "radares_finais": [
-        "mercado-capitais-fundos",
+        "regulatorio-oleo-gas",
         "imobiliario-infraestrutura"
       ],
       "boletins": [
-        "mercado-capitais-fundos",
+        "regulatorio-oleo-gas",
         "imobiliario-infraestrutura"
       ]
     },
     {
-      "id": "it-d4db0d95",
+      "id": "it-d1bfc16a",
       "status": "aprovado",
       "status_portal": "aprovado",
       "origem": "scraper",
-      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-acompanha-testes-de-sinalizacao-cromatica-na-serra-do-mar-na-br-277",
+      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/o-que-acontece-com-o-passageiro-quando-um-veiculo-clandestino-e-apreendido",
       "fonte": "ANTT | Notícias - Defeso Eleitoral",
-      "titulo": "ANTT acompanha testes de sinalização cromática na Serra do Mar, na BR-277",
+      "titulo": "O que acontece com o passageiro quando um veículo clandestino é apreendido?",
       "radares_finais": [
         "regulatorio-oleo-gas",
         "imobiliario-infraestrutura"
@@ -389,13 +393,13 @@
       ]
     },
     {
-      "id": "it-322fe4fa",
+      "id": "it-66c40dfd",
       "status": "aprovado",
       "status_portal": "aprovado",
       "origem": "scraper",
-      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/da-obrigacao-a-fiscalizacao-como-a-antt-acompanha-a-seguranca-nas-rodovias",
+      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/dos-numeros-a-prevencao-como-os-dados-ajudam-a-orientar-a-seguranca-nas-rodovias",
       "fonte": "ANTT | Notícias - Defeso Eleitoral",
-      "titulo": "Da obrigação à fiscalização: como a ANTT acompanha a segurança nas rodovias",
+      "titulo": "Dos números à prevenção: como os dados ajudam a orientar a segurança nas rodovias",
       "radares_finais": [
         "regulatorio-oleo-gas",
         "imobiliario-infraestrutura"
