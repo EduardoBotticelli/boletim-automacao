@@ -1,15 +1,15 @@
 {
-  "data_execucao": "2026-09-22",
-  "executado_em": "2026-09-22T16:47:37.937238-03:00",
+  "data_execucao": "2026-09-23",
+  "executado_em": "2026-09-23T15:08:22.737079-03:00",
   "janela": {
-    "inicio": "2026-09-21T00:00",
-    "fim": "2026-09-22T16:47"
+    "inicio": "2026-09-22T00:00",
+    "fim": "2026-09-23T15:08"
   },
   "fontes_processadas": [
     {
       "fonte": "Planalto | Resenha Diaria",
       "status": "ok",
-      "tamanho_chars": 21704,
+      "tamanho_chars": 24804,
       "publicacoes_localizadas": 0,
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -17,23 +17,23 @@
     {
       "fonte": "Banco Central | Normas",
       "status": "ok",
-      "tamanho_chars": 10817,
+      "tamanho_chars": 3708,
       "publicacoes_localizadas": 0,
-      "busca_complementar_executada": false,
+      "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "CCEE | Noticias",
       "status": "ok",
-      "tamanho_chars": 6680,
-      "publicacoes_localizadas": 11,
+      "tamanho_chars": 4807,
+      "publicacoes_localizadas": 7,
       "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "Destaques do D.O.U.",
       "status": "ok",
-      "tamanho_chars": 14549,
+      "tamanho_chars": 14819,
       "publicacoes_localizadas": 0,
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -42,7 +42,7 @@
       "fonte": "Receita Federal | Normas",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 1,
+      "publicacoes_localizadas": 0,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
@@ -50,7 +50,7 @@
       "fonte": "Ministério da Fazenda | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 7,
+      "publicacoes_localizadas": 8,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
@@ -73,7 +73,7 @@
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "status": "ok",
-      "tamanho_chars": 9687,
+      "tamanho_chars": 9837,
       "publicacoes_localizadas": 0,
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -82,7 +82,7 @@
       "fonte": "ANP | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 7,
+      "publicacoes_localizadas": 14,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
@@ -90,38 +90,38 @@
       "fonte": "ANP | Consultas e Audiências Públicas",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 7,
+      "publicacoes_localizadas": 14,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
     {
       "fonte": "ANP | Consultas Prévias",
       "status": "ok",
-      "tamanho_chars": 23828,
-      "publicacoes_localizadas": 7,
+      "tamanho_chars": 27433,
+      "publicacoes_localizadas": 14,
       "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "ANP | Pautas e Atas da Diretoria Colegiada",
       "status": "ok",
-      "tamanho_chars": 24748,
-      "publicacoes_localizadas": 7,
+      "tamanho_chars": 28605,
+      "publicacoes_localizadas": 14,
       "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "MME | Notícias",
       "status": "ok",
-      "tamanho_chars": 17733,
-      "publicacoes_localizadas": 0,
-      "busca_complementar_executada": false,
-      "conteudo_truncado": false
+      "tamanho_chars": 30000,
+      "publicacoes_localizadas": 4,
+      "busca_complementar_executada": true,
+      "conteudo_truncado": true
     },
     {
       "fonte": "MME | Consultas Públicas",
       "status": "ok",
-      "tamanho_chars": 2963,
+      "tamanho_chars": 2659,
       "publicacoes_localizadas": 0,
       "busca_complementar_executada": true,
       "conteudo_truncado": false
@@ -129,15 +129,18 @@
     {
       "fonte": "ONS | Notícias",
       "status": "ok",
-      "tamanho_chars": 5171,
-      "publicacoes_localizadas": 0,
-      "busca_complementar_executada": false,
+      "tamanho_chars": 14330,
+      "publicacoes_localizadas": 22,
+      "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "ANEEL | Últimas Notícias",
-      "status": "erro",
-      "erro": "Internal Server Error: Failed to scrape. All scraping engines failed to retrieve content from this URL. Engines tried: [index, fire-engine;chrome-cdp, fire-engine(retry);chrome-cdp]. This usually happens when: (1) The URL is invalid or the page doesn't exist (404), (2) The website is blocking automa"
+      "status": "ok",
+      "tamanho_chars": 30000,
+      "publicacoes_localizadas": 4,
+      "busca_complementar_executada": true,
+      "conteudo_truncado": true
     },
     {
       "fonte": "Ministério da Agricultura | Notícias",
@@ -150,8 +153,8 @@
     {
       "fonte": "ANVISA | Notícias",
       "status": "ok",
-      "tamanho_chars": 8276,
-      "publicacoes_localizadas": 16,
+      "tamanho_chars": 7028,
+      "publicacoes_localizadas": 13,
       "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
@@ -159,7 +162,7 @@
       "fonte": "INPI | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 4,
+      "publicacoes_localizadas": 3,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
@@ -174,14 +177,14 @@
     {
       "fonte": "COAF | Notícias",
       "status": "erro_conteudo_origem",
-      "tamanho_chars": 914,
+      "tamanho_chars": 289,
       "erro": "A origem retornou página de erro/manutenção (conteúdo restrito)."
     },
     {
       "fonte": "ANM | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 3,
+      "publicacoes_localizadas": 2,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
@@ -197,7 +200,7 @@
       "fonte": "ANTAQ | Notícias",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 4,
+      "publicacoes_localizadas": 3,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     },
@@ -220,7 +223,7 @@
     {
       "fonte": "ANATEL | Notícias",
       "status": "ok",
-      "tamanho_chars": 25454,
+      "tamanho_chars": 25549,
       "publicacoes_localizadas": 0,
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -237,7 +240,7 @@
       "fonte": "ANTT | Notícias - Defeso Eleitoral",
       "status": "ok",
       "tamanho_chars": 30000,
-      "publicacoes_localizadas": 15,
+      "publicacoes_localizadas": 18,
       "busca_complementar_executada": true,
       "conteudo_truncado": true
     }
@@ -264,19 +267,55 @@
     {
       "modelo": "gemini-3.7-flash",
       "tentativa": 1,
+      "status": "erro",
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    },
+    {
+      "modelo": "gemini-3.7-flash",
+      "tentativa": 2,
+      "status": "erro",
+      "erro": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_to"
+    },
+    {
+      "modelo": "gemini-3.6-flash",
+      "tentativa": 1,
+      "status": "erro",
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    },
+    {
+      "modelo": "gemini-3.6-flash",
+      "tentativa": 2,
+      "status": "erro",
+      "erro": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_to"
+    },
+    {
+      "modelo": "gemini-3.5-flash",
+      "tentativa": 1,
+      "status": "erro",
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    },
+    {
+      "modelo": "gemini-3.5-flash",
+      "tentativa": 2,
+      "status": "erro",
+      "erro": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_to"
+    },
+    {
+      "modelo": "gemini-3.5-flash-lite",
+      "tentativa": 1,
       "status": "sucesso"
     }
   ],
   "resultado": {
     "status": "sucesso",
-    "modelo_gemini_utilizado": "gemini-3.7-flash",
-    "itens_aceitos": 25,
+    "modelo_gemini_utilizado": "gemini-3.5-flash-lite",
+    "itens_aceitos": 27,
     "fontes_ativas": 30,
     "fontes_suspensas": 3,
     "fontes_inativas": 0,
-    "fontes_sem_resultado": 1,
-    "fontes_sem_publicacao_hoje": 10,
-    "fontes_com_erro_tecnico": 2,
+    "fontes_sem_resultado": 0,
+    "fontes_sem_publicacao_hoje": 17,
+    "fontes_com_erro_tecnico": 1,
     "itens_por_boletim": {
       "trabalhista-empresarial": {
         "nome": "Radar Trabalhista Empresarial",
@@ -292,7 +331,7 @@
           "Tributário Consultivo",
           "Tributário Contencioso"
         ],
-        "total": 3
+        "total": 1
       },
       "societario-ma": {
         "nome": "Radar Societário, Fusões e Aquisições",
@@ -301,7 +340,7 @@
           "Purple",
           "Due Diligence"
         ],
-        "total": 2
+        "total": 0
       },
       "mercado-capitais-fundos": {
         "nome": "Radar Mercado de Capitais e Fundos de Investimento",
@@ -309,7 +348,7 @@
           "Financeiro Green",
           "Fundos"
         ],
-        "total": 5
+        "total": 0
       },
       "regulatorio-oleo-gas": {
         "nome": "Radar Regulatório e Óleo e Gás",
@@ -317,7 +356,7 @@
           "Regulatório",
           "Óleo & Gás Blue"
         ],
-        "total": 9
+        "total": 15
       },
       "imobiliario-infraestrutura": {
         "nome": "Radar Negócios Imobiliários e Infraestrutura",
@@ -347,41 +386,46 @@
           "Contencioso Carbon",
           "Contencioso Gold"
         ],
-        "total": 3
+        "total": 0
       }
     },
     "filtro1_bloqueios": {
-      "regulatorio-oleo-gas": 2,
-      "contencioso-civel": 2,
-      "propriedade-intelectual": 2,
-      "direito-tributario": 1
+      "regulatorio-oleo-gas": 2
     },
     "auditoria": {
-      "total_itens": 25,
-      "itens_com_alguma_rejeicao": 25,
-      "itens_com_bloqueio_f1": 7,
+      "total_itens": 27,
+      "itens_com_alguma_rejeicao": 27,
+      "itens_com_bloqueio_f1": 2,
       "rejeicoes_por_boletim": {
-        "direito-tributario": 2,
-        "imobiliario-infraestrutura": 2,
-        "trabalhista-empresarial": 1,
-        "societario-ma": 6,
-        "propriedade-intelectual": 4,
-        "contencioso-civel": 8,
-        "mercado-capitais-fundos": 2,
-        "regulatorio-oleo-gas": 5,
-        "ambiental-esg": 2
+        "trabalhista-empresarial": 2,
+        "contencioso-civel": 10,
+        "mercado-capitais-fundos": 4,
+        "regulatorio-oleo-gas": 4,
+        "direito-tributario": 4,
+        "societario-ma": 1,
+        "imobiliario-infraestrutura": 1,
+        "ambiental-esg": 2,
+        "propriedade-intelectual": 1
       },
       "top_palavras_chave_detectadas": [
         {
-          "palavra": "fiscalização",
+          "palavra": "aneel",
+          "ocorrencias": 4
+        },
+        {
+          "palavra": "combustíveis",
           "ocorrencias": 3
         },
         {
-          "palavra": "ccee",
-          "ocorrencias": 2
+          "palavra": "anp",
+          "ocorrencias": 3
         },
         {
-          "palavra": "reforma tributária",
+          "palavra": "senacon",
+          "ocorrencias": 3
+        },
+        {
+          "palavra": "regras de comercialização",
           "ocorrencias": 2
         },
         {
@@ -389,19 +433,31 @@
           "ocorrencias": 2
         },
         {
-          "palavra": "eca digital",
+          "palavra": "anpd",
           "ocorrencias": 2
         },
         {
-          "palavra": "anp",
+          "palavra": "procon",
           "ocorrencias": 2
         },
         {
-          "palavra": "infraestrutura",
+          "palavra": "preços abusivos",
           "ocorrencias": 2
         },
         {
-          "palavra": "susep",
+          "palavra": "inpi",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "dados",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "antaq",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "setor aquaviário",
           "ocorrencias": 2
         },
         {
@@ -409,47 +465,27 @@
           "ocorrencias": 2
         },
         {
-          "palavra": "notários e registradores",
+          "palavra": "atividade de psicopedagogia",
           "ocorrencias": 1
         },
         {
-          "palavra": "sanções administrativas",
+          "palavra": "lei",
           "ocorrencias": 1
         },
         {
-          "palavra": "prazo prescricional",
+          "palavra": "programa institucional de bolsa de iniciação à docência",
           "ocorrencias": 1
         },
         {
-          "palavra": "floresta nacional",
+          "palavra": "pibid",
           "ocorrencias": 1
         },
         {
-          "palavra": "unidades de conservação",
+          "palavra": "código penal",
           "ocorrencias": 1
         },
         {
-          "palavra": "estado da bahia",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "estatuto da advocacia",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "conselho federal da ordem dos advogados do brasil",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "conselhos seccionais",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "alienar o imóvel",
-          "ocorrencias": 1
-        },
-        {
-          "palavra": "município de são lourenço da mata",
+          "palavra": "petróleo e derivados",
           "ocorrencias": 1
         }
       ]
@@ -458,18 +494,7 @@
   "filtro1_bloqueios_detalhe": {
     "regulatorio-oleo-gas": [
       "Participe do próximo Momento Capacita aborda propostas de alterações nas Regras de Comercialização para 2027",
-      "CO – CCEE disponibiliza Regras e Procedimentos de Comercialização adaptados para operacionalização das compensações por cortes de geração – Portaria Normativa MME nº 140/2026"
-    ],
-    "contencioso-civel": [
-      "Audiência pública para discutir novo regulamento de fiscalização da ANPD será nesta quinta (24)",
-      "Susep cria Grupo de Trabalho para discutir seguros voltados à infraestrutura"
-    ],
-    "propriedade-intelectual": [
-      "2ª edição do NAVE – Programa ANP de Empreendedorismo é lançada na ROG.e",
-      "EPE fala sobre energia e avanço da inteligência artificial no TechGrid 2026"
-    ],
-    "direito-tributario": [
-      "Susep constitui Grupo de Trabalho para analisar impactos da Reforma Tributária no mercado supervisionado"
+      "Fiscalização do Mapa identifica fábrica irregular de ração animal em Santa Catarina"
     ]
   }
 }
