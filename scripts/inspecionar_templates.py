@@ -2,9 +2,13 @@
 Relatório dos templates oficiais dos Radares.
 
 Mostra, para cada template .msg, as seções de fonte com suas âncoras, quantas
-imagens ele carrega e quais fontes do Filtro 1 ainda não têm seção. É o que
-usar quando o gerador bloquear com "fonte sem seção no template": o relatório
-diz quais âncoras existem para preencher templates/mapeamento_radares.json.
+imagens ele carrega e quais fontes do Filtro 1 ainda não têm seção própria.
+
+Uma fonte sem seção própria não trava mais a geração: ela sai na faixa
+"Outras publicações", com o nome da fonte no título. O relatório continua
+sendo o que usar para decidir o contrário — dar faixa própria a uma fonte,
+seja criando a seção no template, seja mapeando a fonte para uma seção já
+existente em templates/mapeamento_radares.json.
 
 Uso: python scripts/inspecionar_templates.py
 """
@@ -77,6 +81,9 @@ def main():
             f"seções: {len(estrutura.secoes)}"
         )
         novas = {d["ancora"] for d in ajustes.get("secoes_novas", [])}
+        generica = ajustes.get("secao_generica")
+        if generica:
+            novas.add(generica["ancora"])
         print(f"  {'ÂNCORA':<28} SEÇÃO")
         for secao in estrutura.secoes:
             marca = "  (acrescentada)" if secao.ancora in novas else ""
@@ -90,13 +97,23 @@ def main():
         print()
 
     print("=" * 78)
+    ancora = ajustes_templates.ancora_generica(config_ajustes)
+    if ancora:
+        print(f'Faixa genérica: "{ancora}", última seção de cada Radar.')
+        print("Recebe a notícia cuja fonte não tem faixa própria, com o nome")
+        print("da fonte no começo do título.")
+        print()
+
     if lacunas:
-        print("FONTES DO FILTRO 1 SEM SEÇÃO NO TEMPLATE")
-        print("(uma notícia dessas fontes bloqueia a geração do Radar)")
+        print("FONTES DO FILTRO 1 SEM SEÇÃO PRÓPRIA NO TEMPLATE")
+        if ancora:
+            print("(notícia dessas fontes sai na faixa genérica)")
+        else:
+            print("(uma notícia dessas fontes bloqueia a geração do Radar)")
         for slug, fonte in lacunas:
             print(f"  {slug:<28} {fonte}")
     else:
-        print("Todas as fontes do Filtro 1 têm seção no template do Radar.")
+        print("Todas as fontes do Filtro 1 têm seção própria no template.")
 
 
 def _tem_secao(fonte, slug, secoes, aliases):
