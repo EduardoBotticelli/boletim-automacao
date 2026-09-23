@@ -136,11 +136,45 @@ referenciado de dentro de comentário fica fora da mensagem, porque só teria
 o efeito de virar anexo visível. Os arquivos continuam sendo extraídos para
 `recursos_radar/`, para a prévia em HTML.
 
-A mensagem leva `Subject`, `Date`, `Message-ID` e `X-Unsent: 1`. O
-`X-Unsent` faz o Outlook abrir o arquivo como mensagem nova, pronta para
-endereçar e enviar, em vez de mensagem recebida sem remetente. `From` e
-`To` ficam em branco por padrão e podem ser preenchidos em
+A mensagem leva `Subject`, `Date` e `Message-ID`. `From` e `To` ficam em
+branco por padrão e podem ser preenchidos em
 `templates/mapeamento_radares.json` (`remetente` e `destinatario`).
+
+### Por que não usar X-Unsent
+
+O cabeçalho `X-Unsent: 1` faz o Outlook abrir o arquivo em modo de
+composição, o que seria conveniente para endereçar e enviar. Ele **não deve
+ser usado**: o modo de composição passa o corpo pelo editor do Word, e o
+editor normaliza o CSS do template.
+
+Comparado lado a lado com o template do Marketing, com `X-Unsent` o Outlook:
+
+- descarta `font-variant:small-caps`, e o sumário aparece em minúsculas
+  ("navegue pelas fontes" em vez de "NAVEGUE PELAS FONTES");
+- recolore os hiperlinks com a cor do tema, em vez da cor do template;
+- altera os tons das faixas;
+- converte o posicionamento absoluto em fluxo, o que troca a ordem dos
+  botões de avaliação e desloca a pergunta da edição.
+
+A ordem dos botões é o sintoma mais claro. No HTML eles aparecem na ordem
+NEUTRA, EXCELENTE, RUIM, e a ordem na tela vem do `margin-left`:
+
+| Botão | Ordem no documento | `margin-left` |
+|---|---|---|
+| NEUTRA | 1º | 146px |
+| EXCELENTE | 2º | −2px |
+| RUIM | 3º | 294px |
+
+Honrando o `margin-left` sai EXCELENTE, NEUTRA, RUIM, que é o template.
+Ignorando, sai a ordem do documento.
+
+Sem o cabeçalho, o Outlook abre em modo de leitura e a edição sai igual ao
+template. `conferir_eml` recusa a geração se o cabeçalho voltar.
+
+**Como enviar.** Em modo de leitura não há campo "Para" para preencher. As
+opções são: preencher `remetente` e `destinatario` no mapeamento, abrir a
+mensagem e usar "Ações → Reenviar esta mensagem"; ou deixar o disparo
+automatizado consumir o `.eml`, caso em que o modo de abertura não importa.
 
 A função `conferir_eml` valida essa estrutura antes de gravar: se a
 montagem regredir, a geração falha e os e-mails da edição anterior são
