@@ -11,6 +11,8 @@ O que ele protege:
 - itens adicionados manualmente na curadoria são publicados;
 - notícia cuja fonte não tem faixa no Radar sai na faixa "Outras
   publicações", com a procedência real no título, em vez de travar a geração;
+- o sumário lista todas as fontes do Radar: com link quando têm notícia, em
+  cinza e sem link quando não têm;
 - ajustes de Radar feitos por uma pessoa valem mais que a sugestão da IA;
 - edições de título, resumo e URL são aplicadas;
 - itens rejeitados não são publicados;
@@ -531,8 +533,11 @@ def teste_template_oficial_preservado():
     assert "https://www.gov.br/cvm/noticia-244" in html
 
 
-def teste_secoes_sem_noticia_saem_do_corpo_e_do_sumario():
-    """Fonte sem notícia não aparece nem como seção nem no sumário."""
+def teste_fonte_sem_noticia_sai_do_corpo_e_fica_cinza_no_sumario():
+    """
+    Fonte sem notícia sai do corpo, mas continua listada no sumário — em
+    cinza e sem link, dizendo que foi consultada e não publicou nada.
+    """
     decisoes = payload(
         [
             decisao(
@@ -557,13 +562,22 @@ def teste_secoes_sem_noticia_saem_do_corpo_e_do_sumario():
 
     html = r.emails["mercado-capitais-fundos"]
 
-    # A seção da CVM ficou.
+    # A seção da CVM ficou, com link no sumário.
     assert "name=CVM" in html
+    assert 'href="#CVM"' in html
 
-    # As demais fontes do template saíram, com as entradas do sumário.
+    # As demais fontes saíram do corpo e perderam o link...
     for ausente in ("B3", "LatinLawyer", "COAF", "BancoCentral"):
         assert f"name={ausente}" not in html, f"seção {ausente} deveria ter saído"
-        assert f'href="#{ausente}"' not in html, f"sumário ainda cita {ausente}"
+        assert f'href="#{ausente}"' not in html, (
+            f"{ausente} não deveria ter link: a seção não existe nesta edição"
+        )
+
+    # ... mas continuam no sumário, em cinza.
+    for nome in ("b3", "latin lawyer", "coaf", "banco central (normas)"):
+        assert f">{nome}<" in html, f"o sumário deixou de listar {nome}"
+
+    assert "color:#808080" in html, "as fontes sem notícia não saíram em cinza"
 
 
 def teste_radar_vazio_usa_o_template_com_mensagem():
@@ -603,6 +617,13 @@ def teste_radar_vazio_usa_o_template_com_mensagem():
     # E nenhuma faixa de fonte sobrou, nem a genérica.
     assert "Título | " not in html
     assert "Outras publicações" not in html
+
+    # O sumário continua inteiro, todo em cinza: as fontes foram consultadas
+    # e nenhuma publicou nada.
+    for nome in ("anp", "aneel", "mapa", "ons", "ccee"):
+        assert f">{nome}<" in html, f"o sumário deixou de listar {nome}"
+    assert 'href="#ANP"' not in html, "fonte sem notícia não pode ter link"
+    assert "color:#808080" in html, "o sumário da edição vazia não saiu em cinza"
 
 
 def teste_eml_carrega_as_imagens_do_template():
@@ -1430,6 +1451,202 @@ def teste_faixa_outras_publicacoes_existe_nos_nove_templates():
         )
 
 
+def _preparar_templates():
+    """Carrega os nove templates com os ajustes aplicados, uma vez só."""
+    sys.path.insert(0, str(BASE_DIR / "scripts"))
+    import ajustes_templates
+    import templates_radar
+
+    config = config_ajustes()
+    mapeamento = config_mapeamento()
+
+    preparados = {}
+    for slug, arquivo in mapeamento["templates"].items():
+        template = templates_radar.carregar_template(str(TEMPLATES_DIR / arquivo))
+        html, _ = ajustes_templates.aplicar(template.html, slug, config)
+        preparados[slug] = html
+
+    return ajustes_templates, templates_radar, config, preparados
+
+
+def _linhas_do_sumario(templates_radar, html):
+    """As linhas da tabela que vêm antes da primeira faixa de fonte."""
+    tags = templates_radar._varrer_tags(html)
+    linhas = templates_radar._elementos_de_topo(html, tags, "tr", "table", 0)
+
+    for indice, (inicio, fim) in enumerate(linhas):
+        if templates_radar._ancora_de_secao(html[inicio:fim]):
+            return linhas[:indice]
+
+    return linhas
+
+
+def _celulas_do_sumario_por_texto(templates_radar, html, linhas, ignorar=()):
+    """
+    As células da grade do sumário, indexadas pelo texto visível.
+
+    O texto de uma entrada às vezes vem partido em mais de um trecho no HTML
+    do Word ("diário oficial da união" com o parêntese em outro estilo), então
+    a comparação é feita pelo texto já montado, não por busca de string.
+
+    'ignorar' deixa de fora a célula da data da edição, que muda de conteúdo
+    de propósito e fica na mesma faixa do sumário.
+    """
+    celulas = {}
+    for inicio, fim in linhas:
+        for a, b in templates_radar._filhos_diretos(html, "td", inicio, fim):
+            visivel = templates_radar._texto_visivel(html[a:b])
+            if visivel and visivel not in ignorar:
+                celulas[visivel] = html[a:b]
+    return celulas
+
+
+def teste_sumario_lista_todas_as_fontes_do_radar():
+    """
+    O sumário lista todas as fontes previstas no template, tenham ou não
+    notícia. A que tem, com link; a que não tem, em cinza e sem link.
+
+    A grade continua com as mesmas linhas e as mesmas células do template:
+    como nenhuma célula é removida, nada desloca e nada muda de largura.
+    """
+    ajustes_templates, templates_radar, config, preparados = _preparar_templates()
+
+    generica = ajustes_templates.ancora_generica(config)
+    cinza = ajustes_templates.cor_sem_noticia(config)
+
+    for slug, html in preparados.items():
+        estrutura = templates_radar.analisar(html)
+
+        # Uma notícia na primeira fonte e outra na faixa genérica, para
+        # nenhuma linha do sumário sair e a comparação ser exata.
+        primeira = estrutura.secoes[0]
+        noticias = {
+            primeira.ancora: [
+                {"titulo": "Teste", "url": "https://exemplo.invalido/", "resumo": "."}
+            ],
+            generica: [
+                {"titulo": "Outra", "url": "https://exemplo.invalido/2", "resumo": "."}
+            ],
+        }
+
+        saida = templates_radar.preencher(
+            html, estrutura, "23.09.2026", noticias, [generica], cinza
+        )
+
+        linhas_antes = _linhas_do_sumario(templates_radar, html)
+        linhas_depois = _linhas_do_sumario(templates_radar, saida)
+
+        assert len(linhas_antes) == len(linhas_depois), (
+            f"{slug}: o sumário perdeu linhas ({len(linhas_antes)} -> "
+            f"{len(linhas_depois)})"
+        )
+
+        # A data da edição também vive nessa faixa e muda de propósito.
+        datas = {templates_radar._PLACEHOLDER_DATA, "23.09.2026"}
+        antes = _celulas_do_sumario_por_texto(
+            templates_radar, html, linhas_antes, datas
+        )
+        depois = _celulas_do_sumario_por_texto(
+            templates_radar, saida, linhas_depois, datas
+        )
+
+        assert sorted(antes) == sorted(depois), (
+            f"{slug}: o sumário mudou de conteúdo. "
+            f"Sumiram: {sorted(set(antes) - set(depois))}"
+        )
+
+        com_noticia = {primeira.ancora, generica}
+
+        for secao in estrutura.secoes:
+            celula = next(
+                (c for c in estrutura.celulas_sumario if c.ancora == secao.ancora),
+                None,
+            )
+            assert celula is not None, f"{slug}: {secao.ancora} não está no sumário"
+
+            fragmento = depois.get(celula.nome)
+            assert fragmento is not None, (
+                f"{slug}: {celula.nome!r} sumiu da grade do sumário"
+            )
+
+            if secao.ancora in com_noticia:
+                assert f'href="#{secao.ancora}"' in fragmento, (
+                    f"{slug}: {secao.ancora} tem notícia e perdeu o link"
+                )
+                continue
+
+            # Sem notícia: some do corpo, fica no sumário, sem link e em cinza.
+            assert 'href="#' not in fragmento, (
+                f"{slug}: {secao.ancora} não tem seção e não pode ter link"
+            )
+            assert cinza in fragmento, (
+                f"{slug}: {celula.nome!r} não saiu em cinza"
+            )
+
+
+def teste_faixa_generica_vazia_sai_do_sumario():
+    """
+    A faixa "Outras publicações" não é fonte consultada: sem notícia, ela
+    sai do sumário em vez de aparecer em cinza.
+    """
+    ajustes_templates, templates_radar, config, preparados = _preparar_templates()
+
+    generica = ajustes_templates.ancora_generica(config)
+    cinza = ajustes_templates.cor_sem_noticia(config)
+    nome = config["secao_outras_publicacoes"]["nome"]
+
+    for slug, html in preparados.items():
+        estrutura = templates_radar.analisar(html)
+        primeira = estrutura.secoes[0]
+
+        saida = templates_radar.preencher(
+            html,
+            estrutura,
+            "23.09.2026",
+            {
+                primeira.ancora: [
+                    {"titulo": "Teste", "url": "https://exemplo.invalido/", "resumo": "."}
+                ]
+            },
+            [generica],
+            cinza,
+        )
+
+        assert nome not in saida, f"{slug}: a faixa genérica vazia continuou na edição"
+        assert f'href="#{generica}"' not in saida, (
+            f"{slug}: a faixa genérica vazia continuou no sumário"
+        )
+
+
+def teste_espacamento_entre_noticias_vale_em_todas_as_secoes():
+    """
+    O espaço entre notícias é o declarado na configuração, em todos os
+    parágrafos de notícia dos nove templates — inclusive nas seções criadas
+    pelos ajustes, que são cópias feitas antes desta troca.
+    """
+    import re
+
+    _, templates_radar, config, preparados = _preparar_templates()
+
+    valor = config["espacamento_entre_noticias"]
+    assert valor, "o espaçamento não está declarado"
+
+    for slug, html in preparados.items():
+        estrutura = templates_radar.analisar(html)
+
+        for secao in estrutura.secoes:
+            unidades = templates_radar._unidades_de_noticia(html, secao)
+            assert unidades, f"{slug}: seção {secao.ancora} sem parágrafo de notícia"
+
+            for inicio, _fim in unidades:
+                abertura = re.match(r"<p\b[^>]*>", html[inicio:])
+                assert abertura, f"{slug}: parágrafo de notícia sem tag de abertura"
+                assert f"margin-bottom:{valor}" in abertura.group(0), (
+                    f"{slug}: parágrafo de notícia da seção {secao.ancora} ficou "
+                    f"com {abertura.group(0)[:120]!r}"
+                )
+
+
 TESTES = [
     teste_fluxo_completo,
     teste_edicoes_de_texto,
@@ -1439,7 +1656,7 @@ TESTES = [
     teste_formato_legado_bloqueia,
     teste_aprovado_sem_radar_bloqueia,
     teste_template_oficial_preservado,
-    teste_secoes_sem_noticia_saem_do_corpo_e_do_sumario,
+    teste_fonte_sem_noticia_sai_do_corpo_e_fica_cinza_no_sumario,
     teste_radar_vazio_usa_o_template_com_mensagem,
     teste_eml_carrega_as_imagens_do_template,
     teste_estrutura_mime_embute_as_imagens,
@@ -1449,6 +1666,9 @@ TESTES = [
     teste_item_manual_com_fonte_livre_vai_para_outras_publicacoes,
     teste_secao_padrao_manual_continua_tendo_precedencia,
     teste_faixa_outras_publicacoes_existe_nos_nove_templates,
+    teste_sumario_lista_todas_as_fontes_do_radar,
+    teste_faixa_generica_vazia_sai_do_sumario,
+    teste_espacamento_entre_noticias_vale_em_todas_as_secoes,
     teste_fonte_nova_publica_na_propria_secao,
     teste_mecanismo_de_alias_continua_disponivel,
     teste_ancora_do_voltar_ao_sumario_existe,

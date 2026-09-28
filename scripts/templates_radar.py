@@ -38,6 +38,11 @@ TEXTO_SEM_NOTICIAS = (
     "Não foram identificadas atualizações para este Radar no período analisado."
 )
 
+# Cor do texto das fontes que aparecem no sumário sem ter tido notícia.
+# Cinza médio sobre o fundo #D9D9D9 da grade, que é o que o próprio template
+# usa nas células.
+COR_SEM_NOTICIA = "#808080"
+
 _PLACEHOLDER_DATA = "00.00.2026"
 _PLACEHOLDER_TITULO = "Título | "
 _PLACEHOLDER_LINK = "Acesse a matéria"
@@ -532,6 +537,46 @@ def _unidade_sem_noticias(modelo, mensagem):
     return resultado
 
 
+_COR_PRETA = re.compile(r"color:(?:black|#000000|#000)\b")
+
+
+def _celula_sem_noticia(fragmento, cor):
+    """
+    A célula do sumário de uma fonte que não teve notícia no período.
+
+    Tira o link — não existe seção para onde ir — e troca a cor do texto
+    pelo cinza. Todo o resto vem intacto do template: a célula com largura,
+    fundo e bordas, o versalete, o espaçamento entre letras e a fonte.
+    """
+    abertura = re.search(r'<a\b[^>]*href=["\']?#[^"\'>]+["\']?[^>]*>', fragmento)
+    if abertura:
+        fechamento = fragmento.find("</a>", abertura.end())
+        if fechamento != -1:
+            fragmento = (
+                fragmento[: abertura.start()]
+                + fragmento[abertura.end() : fechamento]
+                + fragmento[fechamento + len("</a>") :]
+            )
+
+    if _COR_PRETA.search(fragmento):
+        return _COR_PRETA.sub("color:" + cor, fragmento)
+
+    # Célula que não declara cor: o cinza entra por fora, envolvendo o
+    # conteúdo, sem tocar no <td> nem no que há dentro.
+    abertura_td = re.match(r"<td\b[^>]*>", fragmento)
+    fim_td = fragmento.rfind("</td>")
+    if not abertura_td or fim_td == -1:
+        return fragmento
+
+    return (
+        fragmento[: abertura_td.end()]
+        + f"<span style='color:{cor}'>"
+        + fragmento[abertura_td.end() : fim_td]
+        + "</span>"
+        + fragmento[fim_td:]
+    )
+
+
 def _corpo_preenchido(html_template, secao, noticias, mensagem_vazio=None):
     """Reescreve a linha de notícias de uma seção mantendo a linha original."""
     unidades = _unidades_de_noticia(html_template, secao)
@@ -554,16 +599,33 @@ def _corpo_preenchido(html_template, secao, noticias, mensagem_vazio=None):
     return antes + conteudo + depois
 
 
-def preencher(html_template, estrutura, data_edicao, noticias_por_ancora):
+def preencher(
+    html_template,
+    estrutura,
+    data_edicao,
+    noticias_por_ancora,
+    ancoras_opcionais=(),
+    cor_sem_noticia=COR_SEM_NOTICIA,
+):
     """
     Devolve o HTML da edição final.
 
     `noticias_por_ancora` mapeia a âncora da seção para a lista de notícias
-    aprovadas. Seções ausentes do mapa (ou com lista vazia) são removidas,
-    junto com a entrada correspondente no sumário.
+    aprovadas. Seções ausentes do mapa (ou com lista vazia) são removidas do
+    corpo: o Radar mostra só o que tem conteúdo.
+
+    O sumário, ao contrário, lista todas as fontes previstas no template. A
+    que teve notícia continua com o link para a seção; a que não teve aparece
+    em cinza e sem link, dizendo a quem lê que a fonte foi consultada e não
+    houve publicação relevante. Como nenhuma célula sai, a grade de três
+    células por linha fica intacta.
+
+    `ancoras_opcionais` são as âncoras que não representam fonte consultada e
+    por isso continuam saindo do sumário quando não têm notícia — hoje, a
+    faixa "Outras publicações".
 
     Quando nenhuma seção tem notícia, o template é preservado e uma única
-    seção exibe a mensagem padrão.
+    seção exibe a mensagem padrão, com o sumário inteiro em cinza.
     """
     com_noticias = [
         secao
@@ -573,13 +635,22 @@ def preencher(html_template, estrutura, data_edicao, noticias_por_ancora):
     radar_vazio = not com_noticias
 
     ancoras_mantidas = {secao.ancora for secao in com_noticias}
+    opcionais = set(ancoras_opcionais or ())
 
-    # Sumário: remove as células das fontes sem notícia. Uma linha que perde
-    # todas as células é removida inteira, para não deixar faixa vazia.
+    # Sumário: a fonte sem notícia continua listada, só que em cinza e sem
+    # link. Saem do sumário apenas as âncoras opcionais sem notícia, que não
+    # são fonte consultada. Uma linha que perde todas as células é removida
+    # inteira, para não deixar faixa vazia.
     celulas_removidas = {
         (celula.inicio, celula.fim)
         for celula in estrutura.celulas_sumario
-        if celula.ancora not in ancoras_mantidas
+        if celula.ancora not in ancoras_mantidas and celula.ancora in opcionais
+    }
+
+    celulas_sem_noticia = {
+        (celula.inicio, celula.fim)
+        for celula in estrutura.celulas_sumario
+        if celula.ancora not in ancoras_mantidas and celula.ancora not in opcionais
     }
 
     linhas_esvaziadas = set()
@@ -619,8 +690,17 @@ def preencher(html_template, estrutura, data_edicao, noticias_por_ancora):
         for celula in estrutura.celulas_sumario:
             if celula.indice_linha != indice:
                 continue
-            if (celula.inicio, celula.fim) in celulas_removidas:
+            chave = (celula.inicio, celula.fim)
+            if chave in celulas_removidas:
                 emitir_ate(celula.inicio)
+                cursor = celula.fim
+            elif chave in celulas_sem_noticia:
+                emitir_ate(celula.inicio)
+                partes.append(
+                    _celula_sem_noticia(
+                        html_template[celula.inicio : celula.fim], cor_sem_noticia
+                    )
+                )
                 cursor = celula.fim
 
     # 3. Seções.

@@ -4,7 +4,7 @@
     "gerar a edição. Os arquivos .msg não são alterados: eles continuam sendo",
     "a fonte, somente leitura.",
     "",
-    "São três ajustes, todos autorizados e pendentes de incorporação oficial",
+    "São cinco ajustes, todos autorizados e pendentes de incorporação oficial",
     "pelo Marketing. A lista para envio está em docs/templates-oficiais.md.",
     "",
     "1. ancora_voltar_sumario: o link 'VOLTAR AO SUMÁRIO' aponta para",
@@ -22,6 +22,13 @@
     "   porque quem cai na faixa é publicado com o nome da própria fonte no",
     "   começo do título.",
     "",
+    "4. espacamento_entre_noticias: a margem inferior do parágrafo de notícia,",
+    "   que no template é 4.0pt e deixa as notícias muito juntas.",
+    "",
+    "5. cor_fonte_sem_noticia: a cor da fonte que aparece no sumário sem ter",
+    "   tido notícia. O sumário lista todas as fontes previstas no Radar; a",
+    "   que não publicou nada sai em cinza e sem link.",
+    "",
     "Critério de posição: a seção nova entra depois da última seção existente,",
     "e a entrada no sumário ocupa a primeira célula livre da grade. É a única",
     "posição que não desloca nenhuma entrada já definida pelo Marketing nem",
@@ -30,6 +37,21 @@
   ],
 
   "ancora_voltar_sumario": "Sumario",
+
+  "_espacamento_leia_me": [
+    "Margem inferior de cada parágrafo de notícia. O template traz 4.0pt, que",
+    "deixa uma notícia colada na seguinte. Trocar só esse número não mexe em",
+    "recuo, marcador de lista, fonte nem em qualquer outro parágrafo.",
+    "Vazio desliga o ajuste e mantém o valor do template."
+  ],
+  "espacamento_entre_noticias": "10.0pt",
+
+  "_cor_sem_noticia_leia_me": [
+    "Cor do texto das fontes que aparecem no sumário sem ter tido notícia no",
+    "período. Cinza médio sobre o fundo #D9D9D9 que o template usa nas",
+    "células da grade. Vazio usa o padrão do scripts/templates_radar.py."
+  ],
+  "cor_fonte_sem_noticia": "#808080",
 
   "secoes_novas": {
     "societario-ma": [
