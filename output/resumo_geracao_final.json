@@ -1,6 +1,6 @@
 {
   "status": "sucesso",
-  "data_execucao": "2026-09-23T20:54:57.492768+00:00",
+  "data_execucao": "2026-09-28T21:14:13.879032+00:00",
   "data_edicao": "2026-09-23",
   "total_itens_boletim": 27,
   "total_decisoes": 27,
@@ -18,6 +18,10 @@
         "nome": "Outras publicações",
         "copiada_de": "CGU",
         "linha_sumario": 4
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 12
       }
     },
     "direito-tributario": {
@@ -29,6 +33,10 @@
         "nome": "Outras publicações",
         "copiada_de": "COAF",
         "linha_sumario": 6
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 20
       }
     },
     "societario-ma": {
@@ -48,6 +56,10 @@
         "nome": "Outras publicações",
         "copiada_de": "BancoCentral",
         "linha_sumario": 5
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 14
       }
     },
     "mercado-capitais-fundos": {
@@ -67,6 +79,10 @@
         "nome": "Outras publicações",
         "copiada_de": "COAF",
         "linha_sumario": 6
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 20
       }
     },
     "regulatorio-oleo-gas": {
@@ -78,6 +94,10 @@
         "nome": "Outras publicações",
         "copiada_de": "ANEEL",
         "linha_sumario": 12
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 56
       }
     },
     "imobiliario-infraestrutura": {
@@ -118,6 +138,10 @@
         "nome": "Outras publicações",
         "copiada_de": "ANEEL",
         "linha_sumario": 10
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 44
       }
     },
     "ambiental-esg": {
@@ -144,6 +168,10 @@
         "nome": "Outras publicações",
         "copiada_de": "ANEEL",
         "linha_sumario": 8
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 32
       }
     },
     "propriedade-intelectual": {
@@ -155,6 +183,10 @@
         "nome": "Outras publicações",
         "copiada_de": "INPI",
         "linha_sumario": 5
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 14
       }
     },
     "contencioso-civel": {
@@ -166,6 +198,10 @@
         "nome": "Outras publicações",
         "copiada_de": "SENACON",
         "linha_sumario": 4
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 12
       }
     }
   },
@@ -179,6 +215,21 @@
       "publicada_em": "OutrasPublicacoes"
     }
   ],
+  "radares_sem_conteudo": {
+    "gerados_vazios": [
+      "trabalhista-empresarial",
+      "societario-ma",
+      "mercado-capitais-fundos",
+      "contencioso-civel"
+    ],
+    "confirmados_no_portal": [],
+    "sem_registro_de_confirmacao": [
+      "trabalhista-empresarial",
+      "societario-ma",
+      "mercado-capitais-fundos",
+      "contencioso-civel"
+    ]
+  },
   "arquivos_gerados": [
     {
       "slug": "trabalhista-empresarial",
@@ -224,14 +275,13 @@
       "template": "Template_Radar Regulatório e Óleo e Gás.msg",
       "arquivo": "email_regulatorio-oleo-gas.eml",
       "previa": "email_regulatorio-oleo-gas.html",
-      "total_itens": 16,
+      "total_itens": 15,
       "secoes_publicadas": [
         "ANEEL",
         "ANP",
         "ANTAQ",
         "ANTT",
         "MME",
-        "MinisterioFazenda",
         "OutrasPublicacoes",
         "Planalto",
         "SENACON"
@@ -243,14 +293,13 @@
       "template": "Template_Radar Negócios Imobiliários e Infraestrutura.msg",
       "arquivo": "email_imobiliario-infraestrutura.eml",
       "previa": "email_imobiliario-infraestrutura.html",
-      "total_itens": 10,
+      "total_itens": 9,
       "secoes_publicadas": [
         "ANEEL",
         "ANTAQ",
         "ANTT",
         "CCEE",
-        "MME",
-        "MinisterioFazenda"
+        "MME"
       ]
     },
     {
