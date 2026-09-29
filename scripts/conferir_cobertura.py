@@ -302,6 +302,13 @@ def main():
     parser.add_argument("--fonte", nargs="*", default=[])
     parser.add_argument("--json", default="")
     parser.add_argument("--dias", type=int, default=1)
+    parser.add_argument(
+        "--testar-url",
+        nargs="*",
+        default=[],
+        help="URLs candidatas a testar, sem comparar com o boletim. Serve "
+        "para conferir se uma fonte quebrada tem endereco novo.",
+    )
     args = parser.parse_args()
 
     if not os.getenv("FIRECRAWL_API_KEY"):
@@ -312,6 +319,34 @@ def main():
     agora = datetime.datetime.now(ZoneInfo("America/Sao_Paulo"))
     fim = agora.date()
     inicio = fim - datetime.timedelta(days=args.dias)
+    fc = Firecrawl(api_key=os.environ["FIRECRAWL_API_KEY"])
+
+    if args.testar_url:
+        print("TESTE DE URLS CANDIDATAS")
+        for indice, url in enumerate(args.testar_url, 1):
+            try:
+                markdown, _ = coletar(fc, url, True)
+                marcador = ""
+                minusculo = markdown.lower()
+                for termo in ("estamos em manuten", "conte\u00fado restrito", "conteudo restrito", "access denied", "not found", "internal server error"):
+                    if termo in minusculo:
+                        marcador = termo
+                        break
+                publicacoes = publicacoes_no_markdown(markdown, url, inicio, fim)
+                print(f"  {url}")
+                print(
+                    f"    {len(markdown)} chars | {len(publicacoes)} link(s) de publicacao"
+                    + (f" | PAGINA DE ERRO: {marcador}" if marcador else "")
+                )
+                for pub in publicacoes[:5]:
+                    print(f"      - {pub['titulo'][:70]}")
+            except Exception as erro:
+                print(f"  {url}\n    erro: {' '.join(str(erro).split())[:160]}")
+            if indice < len(args.testar_url):
+                time.sleep(INTERVALO)
+        print()
+        if not args.fonte:
+            return
 
     fontes = json.loads(FONTES.read_text(encoding="utf-8"))
     fontes = [f for f in fontes if f.get("ativo", True) and not f.get("suspenso")]
@@ -322,7 +357,6 @@ def main():
     if not fontes:
         raise SystemExit("Nenhuma fonte selecionada.")
 
-    fc = Firecrawl(api_key=os.environ["FIRECRAWL_API_KEY"])
     print(f"Janela: {inicio.isoformat()} a {fim.isoformat()} | {len(fontes)} fonte(s)")
     print()
 

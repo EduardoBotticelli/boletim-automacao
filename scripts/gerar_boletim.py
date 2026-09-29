@@ -71,6 +71,15 @@ MAX_CHARS = 30000
 MIN_CHARS = 500
 LIMIAR_DINAMICO = 5000
 BUSCA_LIMITE = 30
+# Teto do bloco da busca complementar dentro de MAX_CHARS. Garante que a
+# pagina continue tendo espaco mesmo quando a busca traz muitos resultados.
+LIMITE_BUSCA_CHARS = MAX_CHARS * 2 // 5
+# Fontes por chamada ao Gemini. O prompt unico com as trinta passava de 200
+# mil tokens e levava a 429 nos modelos melhores.
+LOTE_FONTES = 6
+INTERVALO_LOTES = 4
+# Piso de publicacoes por Radar para o resgate por escassez.
+PISO_RESGATE = 5
 
 
 def sem_acento(valor):
@@ -130,6 +139,29 @@ def texto_busca(registros):
     return "\n".join(linhas)
 
 
+def montar_conteudo(bruto, descobertas):
+    """
+    Junta a pagina coletada e o que a busca complementar achou, dentro de
+    MAX_CHARS.
+
+    O bloco da busca entra primeiro e a pagina ocupa o que sobra. Antes era o
+    contrario: concatenava e cortava no fim. Como a busca so dispara quando a
+    pagina e grande, e a pagina grande ja preenchia MAX_CHARS sozinha, o bloco
+    inteiro caia fora justamente nas fontes que mais dependiam dele.
+
+    Devolve (conteudo, caracteres ocupados pela busca, pagina foi cortada).
+    """
+    if not descobertas:
+        return bruto[:MAX_CHARS], 0, len(bruto) > MAX_CHARS
+
+    bloco = texto_busca(descobertas)[:LIMITE_BUSCA_CHARS]
+    espaco = MAX_CHARS - len(bloco) - 2
+    if espaco <= 0:
+        return bloco[:MAX_CHARS], min(len(bloco), MAX_CHARS), True
+
+    return bruto[:espaco] + "\n\n" + bloco, len(bloco), len(bruto) > espaco
+
+
 def pagina_erro(conteudo):
     t = conteudo.lower()
     return next((m for m in ["estamos em manutenção", "estamos em manutencao", "conteúdo restrito", "conteudo restrito", "access denied", "internal server error"] if m in t), "")
@@ -184,6 +216,125 @@ def gemini(cliente, prompt):
     return None, "", logs
 
 
+def lotes_de(dossier, tamanho):
+    for inicio in range(0, len(dossier), tamanho):
+        yield dossier[inicio : inicio + tamanho]
+
+
+def classificar(cliente, base, contexto, dossier):
+    """
+    Classifica o dossier em lotes de fontes, um lote por chamada.
+
+    O prompt unico com as trinta fontes chegava a 200 mil tokens e provocava
+    429 RESOURCE_EXHAUSTED nos modelos melhores; a cascata entregava entao o
+    trabalho ao mais fraco, que extrai menos. Em lotes, cada chamada cabe no
+    orcamento e o primeiro modelo volta a ser usado.
+
+    A cascata continua valendo dentro de cada lote. Um lote que falha por
+    inteiro nao derruba os outros: as fontes dele voltam em 'falharam' e sao
+    registradas como erro tecnico, para nao sumirem em silencio.
+
+    Devolve (boletim unido, modelos usados, registro por lote, fontes falhas).
+    """
+    itens, sem_publicacao, sem_resultado, com_erro = [], [], [], []
+    modelos, registro, falharam = [], [], []
+    total = len(list(lotes_de(dossier, LOTE_FONTES)))
+
+    for numero, lote in enumerate(lotes_de(dossier, LOTE_FONTES), 1):
+        nomes = [d.get("fonte", "") for d in lote]
+        print(f"Gemini lote {numero}/{total}: {len(lote)} fonte(s)")
+        prompt = base + contexto + json.dumps(lote, ensure_ascii=False)
+        dados, modelo, tentativas = gemini(cliente, prompt)
+        registro.append({"lote": numero, "fontes": nomes, "modelo": modelo, "tentativas": tentativas})
+
+        if dados is None:
+            print(f"  lote {numero} falhou em todos os modelos")
+            falharam.extend(nomes)
+        else:
+            modelos.append(modelo)
+            itens.extend(x for x in dados.get("itens", []) if isinstance(x, dict))
+            sem_publicacao.extend(dados.get("fontes_sem_publicacao_hoje") or [])
+            sem_resultado.extend(dados.get("fontes_sem_resultado") or [])
+            com_erro.extend(dados.get("fontes_com_erro_tecnico") or [])
+
+        if numero < total:
+            time.sleep(INTERVALO_LOTES)
+
+    if not modelos:
+        return None, [], registro, falharam
+
+    unido = {
+        "itens": itens,
+        "fontes_sem_publicacao_hoje": sem_publicacao,
+        "fontes_sem_resultado": sem_resultado,
+        "fontes_com_erro_tecnico": com_erro,
+    }
+    return unido, modelos, registro, falharam
+
+
+def resgatar_por_escassez(itens, piso):
+    """
+    Promove, nos Radares que ficaram abaixo do piso, as publicacoes que a IA
+    considerou tematicamente possiveis mas insuficientes.
+
+    O Filtro 1 continua valendo: so entra o que a matriz permite para aquela
+    fonte. Publicacao excluida por conteudo institucional nao e resgatada.
+
+    O item chega ao portal identificado como resgatado dentro do
+    'motivo_filtragem', que e o campo de motivo que a curadoria ja exibe, e
+    guarda o detalhe em 'resgates' para a auditoria. Quem decide continua
+    sendo a pessoa: o resgate so coloca o item na mesa.
+
+    Devolve a lista de resgates feitos.
+    """
+    if piso <= 0:
+        return []
+
+    total = Counter()
+    for item in itens:
+        for slug in item.get("boletins") or []:
+            total[slug] += 1
+
+    resgates = []
+    for slug in SLUGS:
+        for item in itens:
+            if total[slug] >= piso:
+                break
+            if slug in (item.get("boletins") or []):
+                continue
+            if item.get("exclusao_editorial_automatica"):
+                continue
+            if slug not in set(MAPA.get(chave_fonte(item.get("fonte", "")), [])):
+                continue
+
+            recusa = next(
+                (
+                    r
+                    for r in item.get("boletins_rejeitados") or []
+                    if isinstance(r, dict)
+                    and r.get("boletim") == slug
+                    and not str(r.get("motivo", "")).startswith("Filtro 1:")
+                ),
+                None,
+            )
+            if recusa is None:
+                continue
+
+            item["boletins"] = [s for s in SLUGS if s in set(item.get("boletins") or []) | {slug}]
+            item["boletins_rejeitados"] = [r for r in item.get("boletins_rejeitados") or [] if r is not recusa]
+            item.setdefault("resgates", []).append({"boletim": slug, "motivo_da_recusa": recusa.get("motivo", "")})
+            total[slug] += 1
+            resgates.append({"boletim": slug, "fonte": item.get("fonte", ""), "titulo": item.get("titulo", ""), "motivo_da_recusa": recusa.get("motivo", "")})
+
+    for item in itens:
+        if not item.get("resgates"):
+            continue
+        nomes = ", ".join(NOMES[r["boletim"]] for r in item["resgates"] if r["boletim"] in NOMES)
+        item["motivo_filtragem"] = f"[Resgatado por escassez: {nomes}] {item.get('motivo_filtragem', '')}".strip()
+
+    return resgates
+
+
 def main():
     if not os.getenv("FIRECRAWL_API_KEY") or not os.getenv("GEMINI_API_KEY"):
         raise SystemExit("FIRECRAWL_API_KEY e GEMINI_API_KEY são obrigatórias.")
@@ -203,16 +354,14 @@ def main():
         try:
             resultado = scrape_retry(fc, fonte["url"])
             bruto = resultado.markdown or ""
-            conteudo = bruto[:MAX_CHARS]
             complementar = len(bruto) < LIMIAR_DINAMICO or len(bruto) > MAX_CHARS or fonte.get("tipo_coleta") in {"lista_estruturada", "indice_documentos"}
             descobertas = []
             if complementar:
                 try:
                     descobertas = busca_complementar(fc, fonte, inicio, hoje)
-                    if descobertas:
-                        conteudo = (conteudo + "\n\n" + texto_busca(descobertas))[:MAX_CHARS]
                 except Exception as erro:
                     print("Busca complementar falhou: " + erro_resumo(erro, 180))
+            conteudo, chars_busca, truncado = montar_conteudo(bruto, descobertas)
             marcador = pagina_erro(conteudo)
             if marcador:
                 motivo = f"A origem retornou página de erro/manutenção ({marcador})."
@@ -224,7 +373,7 @@ def main():
                 processadas.append({"fonte": nome, "status": "erro_tecnico", "tamanho_chars": len(conteudo), "erro": motivo})
             else:
                 dossier.append({"fonte": nome, "categoria": fonte["categoria"], "url": fonte["url"], "tipo_coleta": fonte.get("tipo_coleta", "pagina"), "publicacoes_localizadas": len(descobertas), "conteudo": conteudo})
-                processadas.append({"fonte": nome, "status": "ok", "tamanho_chars": len(conteudo), "publicacoes_localizadas": len(descobertas), "busca_complementar_executada": complementar, "conteudo_truncado": len(bruto) > MAX_CHARS})
+                processadas.append({"fonte": nome, "status": "ok", "tamanho_chars": len(conteudo), "publicacoes_localizadas": len(descobertas), "busca_complementar_executada": complementar, "chars_busca_complementar": chars_busca, "conteudo_truncado": truncado})
         except Exception as erro:
             motivo = erro_resumo(erro, 300)
             dossier.append({"fonte": nome, "categoria": fonte["categoria"], "url": fonte["url"], "conteudo": "", "erro_tecnico": motivo})
@@ -233,17 +382,19 @@ def main():
             time.sleep(6.5)
     inicio_iso = f"{inicio.isoformat()}T00:00"
     fim_iso = agora.strftime("%Y-%m-%dT%H:%M")
-    prompt = PROMPT.read_text(encoding="utf-8") + f"\n\n## Contexto\ndata_execucao: {hoje.isoformat()}\njanela_inicio: {inicio_iso}\njanela_fim: {fim_iso}\n\n## Dossier\n" + json.dumps(dossier, ensure_ascii=False)
+    contexto = f"\n\n## Contexto\ndata_execucao: {hoje.isoformat()}\njanela_inicio: {inicio_iso}\njanela_fim: {fim_iso}\n\n## Dossier\n"
     client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
     try:
-        boletim, modelo, tentativas = gemini(client, prompt)
+        boletim, modelos, lotes_gemini, lotes_falhos = classificar(client, PROMPT.read_text(encoding="utf-8"), contexto, dossier)
     finally:
         client.close()
-    log = {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": inicio_iso, "fim": fim_iso}, "fontes_processadas": processadas, "fontes_suspensas": [{"fonte": f["fonte"], "motivo": f.get("motivo_suspensao", "Suspensão temporária"), "reativar_em": f.get("reativar_em", "")} for f in suspensas], "fontes_inativas": [{"fonte": f["fonte"]} for f in inativas], "tentativas_gemini": tentativas}
+    modelo = ", ".join(dict.fromkeys(modelos))
+    tentativas = [dict(t, lote=r["lote"]) for r in lotes_gemini for t in r["tentativas"]]
+    log = {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": inicio_iso, "fim": fim_iso}, "fontes_processadas": processadas, "fontes_suspensas": [{"fonte": f["fonte"], "motivo": f.get("motivo_suspensao", "Suspensão temporária"), "reativar_em": f.get("reativar_em", "")} for f in suspensas], "fontes_inativas": [{"fonte": f["fonte"]} for f in inativas], "tentativas_gemini": tentativas, "lotes_gemini": lotes_gemini}
     if boletim is None:
         log["resultado"] = {"status": "falha_gemini", "boletim_anterior_preservado": BOLETIM.exists()}
         salvar(LOG, log)
-        raise SystemExit("Cascata Gemini falhou; boletim anterior preservado.")
+        raise SystemExit("Cascata Gemini falhou em todos os lotes; boletim anterior preservado.")
     itens = []
     for item in boletim.get("itens", []):
         if not isinstance(item, dict):
@@ -278,7 +429,21 @@ def main():
         for r in rejs:
             if r.get("boletim"):
                 rejeicoes[r["boletim"]] += 1
+    resgates = resgatar_por_escassez(itens, PISO_RESGATE)
+    if resgates:
+        print(f"Resgate por escassez: {len(resgates)} publicação(ões) promovida(s).")
+        rejeicoes = Counter()
+        for item in itens:
+            for r in item.get("boletins_rejeitados") or []:
+                if isinstance(r, dict) and r.get("boletim"):
+                    rejeicoes[r["boletim"]] += 1
+
     erros = [{"fonte": x.get("fonte"), "motivo": x.get("erro", "Erro técnico") } for x in processadas if x.get("status") != "ok"]
+    ja_com_erro = {e["fonte"] for e in erros}
+    for nome in lotes_falhos:
+        if nome not in ja_com_erro:
+            erros.append({"fonte": nome, "motivo": "A classificação deste lote falhou em todos os modelos da cascata."})
+            ja_com_erro.add(nome)
     nomes_erro = {x["fonte"] for x in erros}
     def lista(chave, padrao):
         resultado = []
@@ -307,7 +472,7 @@ def main():
             for titulo in titulos
             if titulo
         }
-    ), "rejeicoes_por_boletim": dict(rejeicoes), "top_palavras_chave_detectadas": [{"palavra": p, "ocorrencias": c} for p, c in palavras.most_common(20)]}
+    ), "rejeicoes_por_boletim": dict(rejeicoes), "resgates_por_escassez": resgates, "top_palavras_chave_detectadas": [{"palavra": p, "ocorrencias": c} for p, c in palavras.most_common(20)]}
     log["resultado"] = {"status": "sucesso", "modelo_gemini_utilizado": modelo, "itens_aceitos": len(itens), "fontes_ativas": len(ativas), "fontes_suspensas": len(suspensas), "fontes_inativas": len(inativas), "fontes_sem_resultado": len(sem_resultado), "fontes_sem_publicacao_hoje": len(sem_publicacao), "fontes_com_erro_tecnico": len(erros), "itens_por_boletim": stats, "filtro1_bloqueios": {s: len(v) for s, v in bloqueios.items()}, "auditoria": boletim["auditoria"]}
     if bloqueios:
         log["filtro1_bloqueios_detalhe"] = bloqueios
