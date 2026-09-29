@@ -234,6 +234,22 @@ def relatorio(limite, detalhe_fontes):
         else:
             print("  (sem decisao de curadoria registrada para esta data)")
 
+        estatisticas = boletim.get("estatisticas_por_boletim") or {}
+        if estatisticas:
+            por_radar = " ".join(
+                f"{slug.split('-')[0][:6]}:{dado.get('total', 0)}"
+                for slug, dado in estatisticas.items()
+            )
+            print(f"  {'publicacoes por Radar':<44}{por_radar}")
+
+        resgates = (boletim.get("auditoria") or {}).get("resgates_por_escassez") or []
+        if resgates:
+            contagem = Counter(r.get("boletim", "?") for r in resgates)
+            print(
+                f"  {'resgatadas por escassez':<44}{len(resgates):>8}  "
+                + ", ".join(f"{k}:{v}" for k, v in contagem.items())
+            )
+
         for chave, valor in etapas.items():
             totais[chave] += valor
         for chave, valor in origem.items():
