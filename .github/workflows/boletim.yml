@@ -11,6 +11,7 @@ on:
           - coleta
           - cobertura
           - ambas
+          - comparar_extracao
       fontes_cobertura:
         description: Fontes a conferir na cobertura (vazio = todas)
         required: false
@@ -68,6 +69,13 @@ jobs:
           fi
           python scripts/conferir_cobertura.py --dias 2 --json output/cobertura.json $argumentos
 
+      - name: Comparar as duas formas de extracao
+        if: ${{ inputs.etapa == 'comparar_extracao' }}
+        env:
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+        run: |
+          python scripts/comparar_extracao.py --dias 1 --fonte ${{ inputs.fontes_cobertura }}
+
       - name: Mostrar o detalhe da cobertura
         if: ${{ always() && inputs.etapa != 'coleta' }}
         run: |
@@ -76,7 +84,7 @@ jobs:
           fi
 
       - name: Gerar Radares
-        if: ${{ inputs.etapa != 'cobertura' }}
+        if: ${{ inputs.etapa == 'coleta' || inputs.etapa == 'ambas' }}
         env:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -100,7 +108,7 @@ jobs:
           path: output/cobertura.json
 
       - uses: actions/upload-artifact@v4
-        if: ${{ inputs.etapa != 'cobertura' }}
+        if: ${{ inputs.etapa == 'coleta' || inputs.etapa == 'ambas' }}
         with:
           name: radares-validacao-${{ github.run_number }}
           retention-days: 14
@@ -119,7 +127,7 @@ jobs:
             output/teste_dou_regulatorio.json
             output/teste_dou_regulatorio.html
       - name: Commit oficial
-        if: ${{ inputs.etapa != 'cobertura' }}
+        if: ${{ inputs.etapa == 'coleta' || inputs.etapa == 'ambas' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
