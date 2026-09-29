@@ -68,6 +68,13 @@ jobs:
           fi
           python scripts/conferir_cobertura.py --dias 2 --json output/cobertura.json $argumentos
 
+      - name: Mostrar o detalhe da cobertura
+        if: ${{ always() && inputs.etapa != 'coleta' }}
+        run: |
+          if [ -f output/cobertura.json ]; then
+            python -m json.tool output/cobertura.json
+          fi
+
       - name: Gerar Radares
         if: ${{ inputs.etapa != 'cobertura' }}
         env:
