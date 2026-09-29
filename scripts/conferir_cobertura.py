@@ -345,8 +345,6 @@ def main():
             if indice < len(args.testar_url):
                 time.sleep(INTERVALO)
         print()
-        if not args.fonte:
-            return
 
     fontes = json.loads(FONTES.read_text(encoding="utf-8"))
     fontes = [f for f in fontes if f.get("ativo", True) and not f.get("suspenso")]
@@ -355,6 +353,8 @@ def main():
         fontes = [f for f in fontes if any(a in f["fonte"].lower() for a in alvos)]
 
     if not fontes:
+        if args.testar_url:
+            return
         raise SystemExit("Nenhuma fonte selecionada.")
 
     print(f"Janela: {inicio.isoformat()} a {fim.isoformat()} | {len(fontes)} fonte(s)")
