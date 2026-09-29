@@ -77,7 +77,11 @@ LIMITE_BUSCA_CHARS = MAX_CHARS * 2 // 5
 # Fontes por chamada ao Gemini. O prompt unico com as trinta passava de 200
 # mil tokens e levava a 429 nos modelos melhores.
 LOTE_FONTES = 6
-INTERVALO_LOTES = 4
+# Intervalo entre lotes. Com 4 segundos, a primeira execucao em lotes ainda
+# viu 429 RESOURCE_EXHAUSTED em quatro dos cinco lotes: a cota do Gemini e por
+# minuto, e cinco chamadas grandes em um minuto continuam estourando. Dar
+# espaco entre elas custa tempo de execucao e nada mais.
+INTERVALO_LOTES = 20
 # Piso de publicacoes por Radar para o resgate por escassez.
 PISO_RESGATE = 5
 

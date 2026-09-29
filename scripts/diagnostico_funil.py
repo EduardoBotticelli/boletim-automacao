@@ -109,6 +109,20 @@ def pares_por_etapa(boletim):
     }
 
 
+def _busca_entrou(registro):
+    """
+    O que a busca complementar achou chegou ao dossier?
+
+    Depois do P1 o proprio log diz quantos caracteres o bloco da busca ocupou.
+    Antes dele, o bloco era concatenado ao conteudo e so entao cortado em
+    MAX_CHARS, entao pagina cortada significava busca inteira descartada — e e
+    assim que as execucoes antigas precisam ser lidas.
+    """
+    if "chars_busca_complementar" in registro:
+        return registro["chars_busca_complementar"] > 0
+    return not registro.get("conteudo_truncado")
+
+
 def coleta(log):
     """O que a coleta entregou: tamanho, corte e busca complementar."""
     processadas = log.get("fontes_processadas") or []
@@ -116,18 +130,11 @@ def coleta(log):
     truncadas = [x for x in processadas if x.get("conteudo_truncado")]
     buscas = [x for x in processadas if x.get("busca_complementar_executada")]
 
-    # A busca complementar e concatenada ao conteudo e o resultado e cortado
-    # em MAX_CHARS. Quando o conteudo ja chegou no limite, o que a busca
-    # encontrou nao entra no dossier.
     localizadas_uteis = sum(
-        x.get("publicacoes_localizadas", 0)
-        for x in buscas
-        if not x.get("conteudo_truncado")
+        x.get("publicacoes_localizadas", 0) for x in buscas if _busca_entrou(x)
     )
     localizadas_perdidas = sum(
-        x.get("publicacoes_localizadas", 0)
-        for x in buscas
-        if x.get("conteudo_truncado")
+        x.get("publicacoes_localizadas", 0) for x in buscas if not _busca_entrou(x)
     )
 
     return {

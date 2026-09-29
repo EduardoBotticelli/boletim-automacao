@@ -425,3 +425,100 @@ fonte nova resolve.
    há pelo menos quatro.
 5. O Trabalhista não tem problema de filtro: tem três fontes genéricas e
    nenhuma específica.
+
+---
+
+# Resultado: Etapa 2 executada e execução completa
+
+Rodado em 29/09/2026 pelo workflow, com a chave do Firecrawl. O que abaixo diz
+"medido" foi medido contra as fontes reais, não inferido.
+
+## O que a conferência de cobertura encontrou
+
+Primeiro, uma correção na própria ferramenta: a listagem do gov.br embrulha o
+título no link da miniatura (`.../noticia/imagem.jpg/@@images/image/mini`).
+Sem tirar esse sufixo, a comparação por URL nunca casava e **toda** publicação
+aparecia como faltando. A primeira medição, de 28% de cobertura, estava
+subestimada por isso. O casamento passou a aceitar também o título
+normalizado.
+
+### A causa que não estava na lista de hipóteses
+
+`only_main_content=True` **elimina todos os links de publicação** em cinco
+fontes:
+
+| Fonte | Links no conteúdo principal | Links na página inteira |
+|---|---|---|
+| ANP \| Notícias | **0** | 262 |
+| ANP \| Consultas e Audiências | **0** | 261 |
+| ANP \| Consultas Prévias | **0** | 261 |
+| ANP \| Pautas e Atas | **0** | 262 |
+| CNPE | **0** | 67 |
+
+Elas entregavam de 20 a 35 mil caracteres de texto sem um único link de
+publicação. É a explicação de as quatro últimas fecharem quatro execuções em
+zero. Passaram a ser coletadas com a página inteira.
+
+### Causa por fonte, das que produziam zero
+
+| Fonte | Publicações na listagem | Com data | Na janela | Causa | Ação |
+|---|---|---|---|---|---|
+| ANP ×4, CNPE | 0 / 261 na inteira | — | — | `only_main_content` | página inteira |
+| ANATEL | 30 | **0** | 0 | listagem sem data | dispara a busca |
+| Receita Federal | 31 | **0** | 0 | listagem sem data | P1 já resolve |
+| Kollemata | 10 | 10 | **0** | **não publicou** | nenhuma |
+| MME Consultas Públicas | 0 | 0 | 0 | SPA; busca acha 0 | **sem correção clara** |
+| COAF | 2 ("Conteúdo Restrito") | 0 | 0 | acesso restrito | **sem substituta** |
+
+As três URLs candidatas do COAF foram testadas e falharam:
+`/assuntos/noticias` também restrito, `/centrais-de-conteudo/noticias` não
+existe, e a home não é listagem.
+
+### Controles de regressão
+
+| Controle | Resultado |
+|---|---|
+| ANEEL, seis publicações por corte | **não reproduz**: 8.977 caracteres além do limite, nenhuma publicação datada na cauda |
+| ANVISA, Elevidys | **não reproduz** o Elevidys, mas faltam 2 outras da janela (SNCR e o memorando com Hong Kong) |
+| ANATEL, SUSEP, ANPD com 1.300 a 1.800 caracteres | **não reproduz**: hoje entregam 25 a 29 mil |
+
+## A execução completa, contra as anteriores
+
+| | 21/09 | 22/09 | 23/09 | 29/09 antes | **29/09 depois** |
+|---|---|---|---|---|---|
+| Modelo | 3.7-flash | 3.7-flash | 3.5-lite | 3.5-lite | 3.5-lite + 3.6-flash |
+| Publicações extraídas | 47 | 25 | 27 | 9 | **31** |
+| Busca complementar no dossier | 92 | 41 | 70 | 79 | **223** |
+| Busca complementar descartada | 155 | 108 | 130 | 136 | **0** |
+| Radares com conteúdo | 6 | 8 | 5 | 5 | **9** |
+| Resgates por escassez | — | — | — | — | 7 |
+
+A comparação justa é a última coluna contra a penúltima: **mesma janela, mesmo
+dia, 9 publicações viraram 31**, e pela primeira vez os nove Radares saíram com
+conteúdo.
+
+Publicações por Radar na execução nova: trabalhista 1, tributário 5,
+societário 1, mercado de capitais 7, regulatório 10, imobiliário 8, ambiental
+3, propriedade intelectual 2, contencioso 2.
+
+O Trabalhista, zerado nas quatro execuções anteriores, saiu com 1 — pelo
+resgate. Continua valendo o que o diagnóstico disse: ali o problema é falta de
+fonte, e o resgate só ameniza.
+
+## O que ainda não está resolvido
+
+**A cota do Gemini continua estourando.** Em quatro dos cinco lotes a cascata
+desceu até o `3.5-flash-lite`, com seis tentativas falhas cada. Os lotes menores
+ajudaram — 31 itens contra 9 —, mas o `429 RESOURCE_EXHAUSTED` não sumiu: a cota
+é por minuto e cinco chamadas em sequência com 4 segundos de intervalo ainda a
+estouram.
+
+O intervalo entre lotes passou de 4 para 20 segundos por causa disso. **Esse
+ajuste não foi validado em execução**: custa cerca de um minuto e meio a mais e
+a próxima execução real dirá se leva o primeiro modelo da lista a ser usado.
+
+**ANP Consultas e Audiências, ANP Consultas Prévias, CNPE e ANATEL continuam em
+zero** mesmo com a página inteira e a busca complementar. O conteúdo agora
+chega; o modelo é que não extrai publicação dele. Com o `3.5-flash-lite` em
+quatro dos cinco lotes, vale reavaliar depois que a cota deixar de derrubar a
+cascata.
