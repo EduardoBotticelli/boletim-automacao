@@ -389,13 +389,22 @@ def ancora_generica(config):
     return generica.get("ancora") or ""
 
 
-def cor_sem_noticia(config):
+def aviso_sem_noticia(config):
     """
-    A cor do texto das fontes listadas no sumário que não tiveram notícia.
+    Como as fontes sem notícia aparecem no sumário: cor, legenda e tamanho
+    da legenda.
 
-    Vazio devolve "" e o gerador usa o padrão do templates_radar.
+    Cada campo não declarado fica com o padrão do templates_radar. Legenda
+    vazia desliga a linha de texto e deixa só o cinza.
     """
-    return config.get("cor_fonte_sem_noticia") or ""
+    padrao = templates_radar.AVISO_SEM_NOTICIA
+    texto = config.get("texto_fonte_sem_noticia")
+
+    return templates_radar.AvisoSemNoticia(
+        cor=config.get("cor_fonte_sem_noticia") or padrao.cor,
+        texto=padrao.texto if texto is None else texto,
+        tamanho=config.get("tamanho_texto_sem_noticia") or padrao.tamanho,
+    )
 
 
 def aplicar_secao_generica(html, slug, config_generica, conteudo_vazio=None):

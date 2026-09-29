@@ -1034,7 +1034,7 @@ def main():
 
     # Distribui as notícias pelas seções antes de gravar, pelo mesmo motivo.
     ancora_generica = ajustes_templates.ancora_generica(config_ajustes)
-    cor_sem_noticia = ajustes_templates.cor_sem_noticia(config_ajustes)
+    aviso_sem_noticia = ajustes_templates.aviso_sem_noticia(config_ajustes)
 
     distribuicao = {}
     sem_secao = []
@@ -1085,9 +1085,7 @@ def main():
             # não aparece. Toda fonte de verdade fica no sumário, em cinza
             # quando não publicou nada no período.
             ancoras_opcionais=[ancora_generica] if ancora_generica else [],
-            cor_sem_noticia=(
-                cor_sem_noticia or templates_radar.COR_SEM_NOTICIA
-            ),
+            aviso=aviso_sem_noticia,
         )
 
         assunto = f"{assuntos.get(slug, nome_radar)} | {data_extenso}"

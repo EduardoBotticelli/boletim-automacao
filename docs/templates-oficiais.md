@@ -354,16 +354,29 @@ parte daquele Radar.
 Agora o sumário lista todas as fontes previstas no template:
 
 - fonte **com** notícia: como sempre, com link para a seção;
-- fonte **sem** notícia: em cinza (`cor_fonte_sem_noticia`, hoje `#808080`) e
-  sem link, porque não existe seção para onde ir.
+- fonte **sem** notícia: em cinza (`cor_fonte_sem_noticia`, hoje `#808080`),
+  sem link — porque não existe seção para onde ir — e com a legenda
+  **"Sem publicações nesta edição"** logo abaixo do nome.
+
+A legenda existe porque o cinza sozinho é ambíguo: quem lê não tem como saber
+se aquilo quer dizer "consultamos e não saiu nada" ou "essa fonte não faz
+parte deste Radar". Ela fica dentro da mesma célula, em um segundo parágrafo,
+a `tamanho_texto_sem_noticia` (hoje `7.5pt`, menor que os 10pt do nome), sem
+versalete e sem negrito — é legenda, não outro nome de fonte.
 
 O corpo continua mostrando só as seções com notícia. A faixa "Outras
 publicações" é a única exceção no sumário: ela não é fonte consultada, então
-continua saindo quando está vazia.
+continua saindo quando está vazia — e por isso nunca recebe a legenda.
 
-Na prática o ajuste é feito na própria célula do template: o `<a>` é removido
-e a cor do texto é trocada. A célula, com largura, bordas e fundo, e o
-versalete, o espaçamento entre letras e a fonte vêm intactos.
+Na prática o ajuste é feito na própria célula do template: o `<a>` é removido,
+a cor do texto é trocada e a legenda entra como parágrafo novo, copiando a tag
+de abertura do parágrafo do nome. A célula em si — largura, altura declarada,
+bordas e fundo — não é tocada, nem o versalete, o espaçamento entre letras e a
+fonte do nome. A linha fica mais alta porque há mais uma linha de texto nela;
+isso é inerente ao pedido.
+
+O estilo da legenda é declarado em linha, no `<span>`, que é a forma que o
+template já usa — é a que o Outlook preserva.
 
 ### Aliases
 
@@ -451,12 +464,15 @@ trocar 4 pt por 10 pt. Nada mais muda.
 
 Hoje o sumário do arquivo oficial lista as fontes com link. A regra nova, já
 aplicada pelo pipeline, é: a fonte que não publicou nada no período continua
-listada, **em cinza (#808080) e sem link**. Isso mostra a quem lê que a fonte
-foi consultada, e mantém a grade de três células sempre completa.
+listada, **em cinza (#808080), sem link e com a linha "Sem publicações nesta
+edição" (7,5 pt) abaixo do nome**, dentro da mesma célula. Isso mostra a quem
+lê que a fonte foi consultada, e mantém a grade de três células sempre
+completa.
 
 Para o arquivo oficial nada precisa mudar visualmente: o template é o estado
-"todas as fontes com link". A observação fica registrada para o caso de o
-Marketing querer padronizar o cinza em algum guia de estilo.
+"todas as fontes com link", e o cinza e a legenda só aparecem na edição
+gerada. A observação fica registrada para o caso de o Marketing querer
+padronizar o cinza e o tamanho da legenda em algum guia de estilo.
 
 São fontes que o Filtro 1 já autoriza para esses Radares. Sem a seção, uma
 notícia delas não teria onde ser publicada.
