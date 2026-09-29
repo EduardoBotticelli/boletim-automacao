@@ -101,10 +101,20 @@ def erro_resumo(erro, limite=400):
     return " ".join(str(erro).split())[:limite]
 
 
-def scrape_retry(fc, url):
+def scrape_retry(fc, url, so_conteudo_principal=True):
+    """
+    Coleta a pagina.
+
+    'so_conteudo_principal' e o only_main_content do Firecrawl. Ele limpa
+    menu, rodape e banners, mas em algumas listagens leva junto os links das
+    publicacoes: a conferencia de cobertura mostrou as quatro fontes da ANP e
+    o CNPE entregando 20 a 35 mil caracteres de texto com ZERO links de
+    publicacao no conteudo principal, contra 261 na pagina inteira. Essas
+    fontes marcam "pagina_inteira": true no fontes.json.
+    """
     for tentativa in range(3):
         try:
-            return fc.scrape(url, formats=["markdown"], only_main_content=True)
+            return fc.scrape(url, formats=["markdown"], only_main_content=so_conteudo_principal)
         except Exception as erro:
             if tentativa == 2 or not any(x in str(erro).lower() for x in ["429", "rate limit", "too many"]):
                 raise
@@ -352,7 +362,7 @@ def main():
         nome = fonte["fonte"]
         print(f"[{indice}/{len(ativas)}] {nome}")
         try:
-            resultado = scrape_retry(fc, fonte["url"])
+            resultado = scrape_retry(fc, fonte["url"], not fonte.get("pagina_inteira"))
             bruto = resultado.markdown or ""
             complementar = len(bruto) < LIMIAR_DINAMICO or len(bruto) > MAX_CHARS or fonte.get("tipo_coleta") in {"lista_estruturada", "indice_documentos"}
             descobertas = []
@@ -373,7 +383,7 @@ def main():
                 processadas.append({"fonte": nome, "status": "erro_tecnico", "tamanho_chars": len(conteudo), "erro": motivo})
             else:
                 dossier.append({"fonte": nome, "categoria": fonte["categoria"], "url": fonte["url"], "tipo_coleta": fonte.get("tipo_coleta", "pagina"), "publicacoes_localizadas": len(descobertas), "conteudo": conteudo})
-                processadas.append({"fonte": nome, "status": "ok", "tamanho_chars": len(conteudo), "publicacoes_localizadas": len(descobertas), "busca_complementar_executada": complementar, "chars_busca_complementar": chars_busca, "conteudo_truncado": truncado})
+                processadas.append({"fonte": nome, "status": "ok", "tamanho_chars": len(conteudo), "publicacoes_localizadas": len(descobertas), "busca_complementar_executada": complementar, "chars_busca_complementar": chars_busca, "conteudo_truncado": truncado, "pagina_inteira": bool(fonte.get("pagina_inteira"))})
         except Exception as erro:
             motivo = erro_resumo(erro, 300)
             dossier.append({"fonte": nome, "categoria": fonte["categoria"], "url": fonte["url"], "conteudo": "", "erro_tecnico": motivo})
