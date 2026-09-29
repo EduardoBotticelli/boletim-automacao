@@ -26,6 +26,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 import time
 from pathlib import Path
 from urllib.parse import urlparse
@@ -86,8 +87,35 @@ RUIDO = (
 )
 
 
+IMAGEM = re.compile(r"/[^/]+\.(?:jpe?g|png|gif|webp|svg)$", re.I)
+PONTUACAO = re.compile(r"[^a-z0-9 ]+")
+
+
 def normalizar_url(url):
-    return str(url or "").split("#")[0].split("?")[0].rstrip("/").lower()
+    """
+    A URL da publicacao, sem o que o Plone pendura no link da listagem.
+
+    Na listagem do gov.br o titulo vem embrulhado no link da miniatura:
+    .../noticia/imagem.jpg/@@images/image/mini. Sem tirar esse sufixo, a
+    comparacao com o boletim.json nunca casa e toda publicacao parece
+    faltando.
+    """
+    alvo = str(url or "").split("#")[0].split("?")[0]
+    corte = alvo.find("/@@images")
+    if corte != -1:
+        alvo = alvo[:corte]
+    alvo = IMAGEM.sub("", alvo)
+    return alvo.rstrip("/").lower()
+
+
+def normalizar_titulo(titulo):
+    """Titulo comparavel: sem markdown, sem acento, sem pontuacao."""
+    texto = str(titulo or "").replace("*", " ")
+    texto = "".join(
+        c for c in unicodedata.normalize("NFD", texto)
+        if unicodedata.category(c) != "Mn"
+    ).lower()
+    return " ".join(PONTUACAO.sub(" ", texto).split())
 
 
 def escopo(url):
@@ -227,11 +255,15 @@ def conferir(fc, fonte, inicio, fim):
 
     itens, data_execucao = itens_do_boletim(nome)
     urls_boletim = {normalizar_url(i.get("url")) for i in itens}
+    titulos_boletim = {normalizar_titulo(i.get("titulo")) for i in itens}
 
     referencia = pub_inteira or pub_principal
     na_janela = [p for p in referencia if p["na_janela"]]
     faltando = [
-        p for p in na_janela if normalizar_url(p["url"]) not in urls_boletim
+        p
+        for p in na_janela
+        if normalizar_url(p["url"]) not in urls_boletim
+        and normalizar_titulo(p["titulo"]) not in titulos_boletim
     ]
 
     relato.update(
@@ -247,6 +279,7 @@ def conferir(fc, fonte, inicio, fim):
             "perdidas_pelo_only_main_content": max(
                 0, len(pub_inteira) - len(pub_principal)
             ),
+            "publicacoes_com_alguma_data": len([p for p in referencia if p["datas"]]),
             "publicacoes_na_janela": len(na_janela),
             "chegaram_ao_boletim": len(itens),
             "faltando_no_boletim": len(faltando),
@@ -373,7 +406,9 @@ def main():
                 f"{relato['chars_pagina_inteira']} inteira"
             )
             print(
-                f"    publicacoes: {relato['publicacoes_na_janela']} na janela / "
+                f"    publicacoes: {relato['publicacoes_pagina_inteira'] or relato['publicacoes_conteudo_principal']} na listagem / "
+                f"{relato['publicacoes_com_alguma_data']} com data / "
+                f"{relato['publicacoes_na_janela']} na janela / "
                 f"{relato['chegaram_ao_boletim']} no boletim / "
                 f"{relato['faltando_no_boletim']} faltando"
             )
