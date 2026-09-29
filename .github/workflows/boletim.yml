@@ -2,6 +2,25 @@ name: Gerar Radares Jurídicos
 on:
   workflow_dispatch:
     inputs:
+      etapa:
+        description: O que rodar nesta execucao
+        required: false
+        type: choice
+        default: coleta
+        options:
+          - coleta
+          - cobertura
+          - ambas
+      fontes_cobertura:
+        description: Fontes a conferir na cobertura (vazio = todas)
+        required: false
+        type: string
+        default: ""
+      urls_candidatas:
+        description: URLs candidatas a testar na cobertura
+        required: false
+        type: string
+        default: ""
       executar_teste_dou:
         description: Executar prova de conceito do DOU Regulatório
         required: true
@@ -35,7 +54,22 @@ jobs:
           python -m py_compile scripts/gerar_boletim.py scripts/gerar_html.py scripts/gerar_auditoria_html.py scripts/testar_dou_regulatorio.py scripts/gerar_boletim_final.py scripts/testar_decisoes_portal.py scripts/templates_radar.py scripts/inspecionar_templates.py scripts/conferir_cobertura.py scripts/diagnostico_funil.py scripts/testar_coleta.py
       - name: Testar a coleta
         run: python scripts/testar_coleta.py
+      - name: Conferir cobertura das fontes
+        if: ${{ inputs.etapa == 'cobertura' || inputs.etapa == 'ambas' }}
+        env:
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+        run: |
+          argumentos=""
+          if [ -n "${{ inputs.fontes_cobertura }}" ]; then
+            argumentos="$argumentos --fonte ${{ inputs.fontes_cobertura }}"
+          fi
+          if [ -n "${{ inputs.urls_candidatas }}" ]; then
+            argumentos="$argumentos --testar-url ${{ inputs.urls_candidatas }}"
+          fi
+          python scripts/conferir_cobertura.py --dias 2 --json output/cobertura.json $argumentos
+
       - name: Gerar Radares
+        if: ${{ inputs.etapa != 'cobertura' }}
         env:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -44,13 +78,22 @@ jobs:
           python scripts/gerar_html.py
           python scripts/gerar_auditoria_html.py
       - name: Testar DOU
-        if: ${{ inputs.executar_teste_dou }}
+        if: ${{ inputs.executar_teste_dou && inputs.etapa != 'cobertura' }}
         env:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           DOU_DATA: ${{ inputs.dou_data }}
         run: python scripts/testar_dou_regulatorio.py
       - uses: actions/upload-artifact@v4
+        if: ${{ always() && inputs.etapa != 'coleta' }}
+        with:
+          name: cobertura-${{ github.run_number }}
+          retention-days: 14
+          if-no-files-found: warn
+          path: output/cobertura.json
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ inputs.etapa != 'cobertura' }}
         with:
           name: radares-validacao-${{ github.run_number }}
           retention-days: 14
@@ -69,6 +112,7 @@ jobs:
             output/teste_dou_regulatorio.json
             output/teste_dou_regulatorio.html
       - name: Commit oficial
+        if: ${{ inputs.etapa != 'cobertura' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
