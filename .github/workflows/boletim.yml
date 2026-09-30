@@ -14,6 +14,7 @@ on:
           - comparar_extracao
           - alternativas
           - reprocessar
+          - sondar
       fontes_cobertura:
         description: Fontes a conferir na cobertura (vazio = todas)
         required: false
@@ -81,9 +82,13 @@ jobs:
       - name: Investigar coleta sem Firecrawl
         # Download direto, RSS, API publica e busca por data no site. Nao
         # recebe chave nenhuma: nao ha como gastar credito nesta etapa.
-        if: ${{ inputs.etapa == 'alternativas' }}
+        if: ${{ inputs.etapa == 'alternativas' || inputs.etapa == 'sondar' }}
         run: |
           python scripts/investigar_alternativas.py --autoteste
+          if [ "${{ inputs.etapa }}" = "sondar" ]; then
+            python scripts/investigar_alternativas.py --sondar --json output/alternativas_sonda.json
+            exit 0
+          fi
           argumentos=""
           if [ -n "${{ inputs.fontes_cobertura }}" ]; then
             argumentos="--fonte ${{ inputs.fontes_cobertura }}"
@@ -91,12 +96,13 @@ jobs:
           python scripts/investigar_alternativas.py --json output/alternativas.json $argumentos
 
       - name: Registrar o resultado da investigacao
-        if: ${{ always() && inputs.etapa == 'alternativas' }}
+        if: ${{ always() && (inputs.etapa == 'alternativas' || inputs.etapa == 'sondar') }}
         run: |
-          if [ ! -f output/alternativas.json ]; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f output/alternativas.json
+          for arquivo in output/alternativas.json output/alternativas_sonda.json; do
+            if [ -f "$arquivo" ]; then git add -f "$arquivo"; fi
+          done
           if git diff --staged --quiet; then exit 0; fi
           git commit -m "Registra a investigacao de coleta sem Firecrawl"
           git pull --rebase origin "${{ github.ref_name }}"

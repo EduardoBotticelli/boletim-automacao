@@ -1129,6 +1129,91 @@ def imprimir(resultado):
 
 
 # ---------------------------------------------------------------------------
+# Sondagem: de onde vem o conteudo que o HTML nao traz
+# ---------------------------------------------------------------------------
+
+SONDAR = [
+    ("ANATEL | Notícias", "https://www.gov.br/anatel/pt-br/assuntos/noticias"),
+    ("ANVISA | Notícias", "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa"),
+    ("ANPD | Notícias", "https://www.gov.br/anpd/pt-br/assuntos/noticias"),
+    ("SUSEP | Notícias", "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias"),
+    ("ONS | Notícias", "https://www.ons.org.br/paginas/imprensa/noticias"),
+    ("Receita Federal | Normas", "http://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1"),
+    ("ANP | Consultas e Audiências Públicas", "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica"),
+    ("ANP | Consultas Prévias", "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa"),
+    ("ANP | Pautas e Atas da Diretoria Colegiada", "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada"),
+    ("CNPE | Comunicações", "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes"),
+    ("CGU | Notícias", "https://www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias"),
+    ("Ministério do Meio Ambiente | Notícias", "https://www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias"),
+    ("busca por data do gov.br", "https://www.gov.br/fazenda/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date={inicio}&created.range:record=min"),
+]
+PALAVRAS_DADOS = re.compile(r"(noticia|_api/|getbytitle|ajax|fetch\(|\$\.get|\$\.post|@@|/api/|\.json|listagem|resultado|idAto|link\.action)", re.I)
+MARCAS_PRINCIPAL = ('id="content-core"', 'id="content"', 'id="main-content"', "<main", 'role="main"')
+
+
+def sondar(cliente, url):
+    registro = cliente.baixar(url)
+    html_texto = registro["texto"] or ""
+    saida = {"url": url, "http": enxuto(registro)}
+    saida["scripts"] = re.findall(r"<script[^>]+src=[\"']([^\"']+)", html_texto, re.I)[:40]
+    saida["atributos_data"] = sorted(set(re.findall(
+        r"data-[\w-]+=[\"']([^\"']*(?:/|@@|\.json|api|search|busca|noticia)[^\"']*)[\"']", html_texto, re.I)))[:40]
+    trechos = []
+    for m in re.finditer(r"<script(?![^>]*src=)[^>]*>(.*?)</script>", html_texto, re.S | re.I):
+        corpo = m.group(1)
+        for k in PALAVRAS_DADOS.finditer(corpo):
+            trechos.append(" ".join(corpo[max(0, k.start() - 200): k.start() + 300].split()))
+            if len(trechos) >= 10:
+                break
+        if len(trechos) >= 10:
+            break
+    saida["trechos_de_script"] = trechos
+    saida["formularios"] = re.findall(r"<form[^>]*action=[\"']([^\"']+)[\"'][^>]*", html_texto, re.I)[:10]
+    saida["marcadores"] = {m: html_texto.count(m) for m in (
+        "idAto", "link.action", "resultado", "tileItem", "searchResults", "search-results", "Carregando",
+        "summary", "documentByLine", "collection", "listagem", "{{")}
+    for marca in MARCAS_PRINCIPAL:
+        posicao = html_texto.find(marca)
+        if posicao != -1:
+            leitor = ler_html(html_texto[posicao:posicao + 600_000], registro["url_final"])
+            saida["regiao_principal"] = marca
+            saida["texto_principal"] = leitor.texto()[:30_000]
+            break
+    # Scripts do proprio site costumam guardar o endereco que alimenta a pagina.
+    host = urlparse(registro["url_final"]).netloc
+    proprios = [urljoin(registro["url_final"], s) for s in saida["scripts"]]
+    proprios = [s for s in proprios if urlparse(s).netloc == host and not re.search(r"jquery|bootstrap|analytics|gtag|recaptcha|vlibras|barra", s, re.I)]
+    achados = []
+    for script in proprios[:6]:
+        codigo = cliente.baixar(script, aceitar="*/*")
+        corpo = codigo["texto"] or ""
+        for k in PALAVRAS_DADOS.finditer(corpo):
+            achados.append({"script": script[-80:], "trecho": " ".join(corpo[max(0, k.start() - 160): k.start() + 240].split())})
+            if len(achados) >= 16:
+                break
+    saida["trechos_em_scripts_do_site"] = achados
+    return saida
+
+
+def executar_sondagem(cliente, inicio, destino):
+    resultado = {}
+    for nome, url in SONDAR:
+        url = url.format(inicio=inicio.isoformat())
+        try:
+            resultado[nome] = sondar(cliente, url)
+        except Exception as erro:
+            resultado[nome] = {"url": url, "erro": " ".join(str(erro).split())[:300]}
+        r = resultado[nome]
+        print(f"\n### {nome}: {(r.get('http') or {}).get('status')} regiao={r.get('regiao_principal')} "
+              f"scripts={len(r.get('scripts', []))} data={len(r.get('atributos_data', []))} "
+              f"trechos={len(r.get('trechos_de_script', []))}+{len(r.get('trechos_em_scripts_do_site', []))} marcadores={r.get('marcadores')}")
+    if destino:
+        Path(destino).parent.mkdir(parents=True, exist_ok=True)
+        Path(destino).write_text(json.dumps(resultado, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"Detalhe em {destino}")
+
+
+# ---------------------------------------------------------------------------
 # Autoteste offline
 # ---------------------------------------------------------------------------
 
@@ -1214,6 +1299,7 @@ def main():
     parser.add_argument("--fonte", nargs="*", default=[])
     parser.add_argument("--json", default="")
     parser.add_argument("--autoteste", action="store_true")
+    parser.add_argument("--sondar", action="store_true", help="examina de onde vem o conteudo das paginas montadas por JavaScript")
     args = parser.parse_args()
 
     if args.autoteste:
@@ -1227,6 +1313,10 @@ def main():
 
     hoje = datetime.datetime.now(FUSO).date()
     fontes, inicio = fontes_da_execucao(hoje)
+    if args.sondar:
+        executar_sondagem(cliente, inicio, args.json)
+        print(f"{cliente.requisicoes} requisicoes, nenhuma ao Firecrawl.")
+        return
     if args.fonte:
         alvos = [sem_acento(a).lower() for a in args.fonte]
         fontes = [f for f in fontes if any(a in sem_acento(f["fonte"]).lower() for a in alvos)]
