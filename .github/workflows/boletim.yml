@@ -2,11 +2,35 @@ name: Gerar Radares Jurídicos
 on:
   workflow_dispatch:
     inputs:
+      etapa:
+        description: O que rodar nesta execucao
+        required: false
+        type: choice
+        default: coleta
+        options:
+          - coleta
+          - cobertura
+          - ambas
+          - comparar_extracao
+          - alternativas
+          - reprocessar
+          - sondar
+          - demo_dou
+      fontes_cobertura:
+        description: Fontes a conferir na cobertura (vazio = todas)
+        required: false
+        type: string
+        default: ""
+      urls_candidatas:
+        description: URLs candidatas a testar na cobertura
+        required: false
+        type: string
+        default: ""
       executar_teste_dou:
-        description: Executar prova de conceito do DOU Regulatório
+        description: Executar prova de conceito do DOU Regulatório (gasta 1 crédito do Firecrawl e uma chamada ao Gemini)
         required: true
         type: boolean
-        default: true
+        default: false
       dou_data:
         description: Data do DOU em DD-MM-AAAA
         required: true
@@ -32,8 +56,92 @@ jobs:
       - name: Validar arquivos
         run: |
           python -m json.tool fontes.json > /dev/null
-          python -m py_compile scripts/gerar_boletim.py scripts/gerar_html.py scripts/gerar_auditoria_html.py scripts/testar_dou_regulatorio.py scripts/gerar_boletim_final.py scripts/testar_decisoes_portal.py scripts/templates_radar.py scripts/inspecionar_templates.py
+          python -m py_compile scripts/coleta_direta.py scripts/gerar_boletim.py scripts/gerar_html.py scripts/gerar_auditoria_html.py scripts/testar_dou_regulatorio.py scripts/gerar_boletim_final.py scripts/testar_decisoes_portal.py scripts/templates_radar.py scripts/inspecionar_templates.py scripts/conferir_cobertura.py scripts/diagnostico_funil.py scripts/testar_coleta.py scripts/investigar_alternativas.py
+      - name: Testar a coleta
+        run: python scripts/testar_coleta.py
+      - name: Conferir cobertura das fontes
+        if: ${{ inputs.etapa == 'cobertura' || inputs.etapa == 'ambas' }}
+        env:
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+        run: |
+          argumentos=""
+          if [ -n "${{ inputs.fontes_cobertura }}" ]; then
+            argumentos="$argumentos --fonte ${{ inputs.fontes_cobertura }}"
+          fi
+          if [ -n "${{ inputs.urls_candidatas }}" ]; then
+            argumentos="$argumentos --testar-url ${{ inputs.urls_candidatas }}"
+          fi
+          python scripts/conferir_cobertura.py --dias 2 --json output/cobertura.json $argumentos
+
+      - name: Comparar as duas formas de extracao
+        if: ${{ inputs.etapa == 'comparar_extracao' }}
+        env:
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+        run: |
+          python scripts/comparar_extracao.py --dias 1 --fonte ${{ inputs.fontes_cobertura }}
+
+      - name: Investigar coleta sem Firecrawl
+        # Download direto, RSS, API publica e busca por data no site. Nao
+        # recebe chave nenhuma: nao ha como gastar credito nesta etapa.
+        if: ${{ inputs.etapa == 'alternativas' || inputs.etapa == 'sondar' }}
+        run: |
+          python scripts/investigar_alternativas.py --autoteste
+          if [ "${{ inputs.etapa }}" = "sondar" ]; then
+            alvo="${{ inputs.fontes_cobertura }}"
+            export ENSAIO_FONTE="${{ inputs.urls_candidatas }}"
+            python scripts/investigar_alternativas.py --sondar-alvo "${alvo:-final}" --json output/alternativas_sonda.json
+            exit 0
+          fi
+          argumentos=""
+          if [ -n "${{ inputs.fontes_cobertura }}" ]; then
+            argumentos="--fonte ${{ inputs.fontes_cobertura }}"
+          fi
+          python scripts/investigar_alternativas.py --json output/alternativas.json $argumentos
+
+      - name: Registrar o resultado da investigacao
+        if: ${{ always() && (inputs.etapa == 'alternativas' || inputs.etapa == 'sondar') }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for arquivo in output/alternativas.json output/alternativas_sonda.json; do
+            if [ -f "$arquivo" ]; then git add -f "$arquivo"; fi
+          done
+          if git diff --staged --quiet; then exit 0; fi
+          git commit -m "Registra a investigacao de coleta sem Firecrawl"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
+
+      - name: Demonstracao do DOU em quatro modelos
+        # So demonstracao: grava em output/demo_dou e nao commita nada. Baixa o
+        # DOU pelo INLABS, o servico oficial da Imprensa Nacional, porque o
+        # in.gov.br derruba a conexao vinda do runner. Nao recebe a chave do
+        # Firecrawl nem a do Gemini.
+        if: ${{ inputs.etapa == 'demo_dou' }}
+        env:
+          INLABS_EMAIL: ${{ secrets.INLABS_EMAIL }}
+          INLABS_SENHA: ${{ secrets.INLABS_SENHA }}
+        run: |
+          pip install pypdf
+          python scripts/demo_dou.py --autoteste
+          python scripts/demo_dou.py --origem inlabs --data "${{ inputs.dou_data }}"
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() && inputs.etapa == 'demo_dou' }}
+        with:
+          name: demo-dou-${{ github.run_number }}
+          retention-days: 14
+          if-no-files-found: warn
+          path: output/demo_dou/
+
+      - name: Mostrar o detalhe da cobertura
+        if: ${{ always() && inputs.etapa != 'coleta' }}
+        run: |
+          if [ -f output/cobertura.json ]; then
+            python -m json.tool output/cobertura.json
+          fi
+
       - name: Gerar Radares
+        if: ${{ inputs.etapa == 'coleta' || inputs.etapa == 'ambas' }}
         env:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -41,14 +149,47 @@ jobs:
           python scripts/gerar_boletim.py
           python scripts/gerar_html.py
           python scripts/gerar_auditoria_html.py
+      - name: Guardar o dossier da coleta
+        # Roda mesmo se a classificacao falhar: e nesse caso que o dossier
+        # guardado permite reprocessar sem gastar Firecrawl de novo.
+        if: ${{ always() && (inputs.etapa == 'coleta' || inputs.etapa == 'ambas') }}
+        run: |
+          if [ ! -f output/dossier/indice.json ]; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/dossier output/log_execucao.json
+          if git diff --staged --quiet; then exit 0; fi
+          git commit -m "Guarda a coleta de $(date +'%Y-%m-%d')"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
+      - name: Reprocessar o dossier guardado
+        # Sem FIRECRAWL_API_KEY: o reprocessamento nao tem como gastar credito.
+        if: ${{ inputs.etapa == 'reprocessar' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python scripts/gerar_boletim.py --reprocessar
+          python scripts/gerar_html.py
+          python scripts/gerar_auditoria_html.py
       - name: Testar DOU
-        if: ${{ inputs.executar_teste_dou }}
+        # So nas etapas que geram Radares: as de medicao nao gastam credito
+        # com a prova de conceito do DOU.
+        if: ${{ inputs.executar_teste_dou && (inputs.etapa == 'coleta' || inputs.etapa == 'ambas') }}
         env:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           DOU_DATA: ${{ inputs.dou_data }}
         run: python scripts/testar_dou_regulatorio.py
       - uses: actions/upload-artifact@v4
+        if: ${{ always() && inputs.etapa != 'coleta' }}
+        with:
+          name: cobertura-${{ github.run_number }}
+          retention-days: 14
+          if-no-files-found: warn
+          path: output/cobertura.json
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ inputs.etapa == 'coleta' || inputs.etapa == 'ambas' || inputs.etapa == 'reprocessar' }}
         with:
           name: radares-validacao-${{ github.run_number }}
           retention-days: 14
@@ -67,10 +208,15 @@ jobs:
             output/teste_dou_regulatorio.json
             output/teste_dou_regulatorio.html
       - name: Commit oficial
+        if: ${{ inputs.etapa == 'coleta' || inputs.etapa == 'ambas' || inputs.etapa == 'reprocessar' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add output/boletim.json output/log_execucao.json output/auditoria.html output/validacao_*.html
           if git diff --staged --quiet; then exit 0; fi
-          git commit -m "Atualiza Radares - $(date +'%Y-%m-%d')"
+          if [ "${{ inputs.etapa }}" = "reprocessar" ]; then
+            git commit -m "Reprocessa Radares - $(date +'%Y-%m-%d')"
+          else
+            git commit -m "Atualiza Radares - $(date +'%Y-%m-%d')"
+          fi
           git push
