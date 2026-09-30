@@ -750,6 +750,25 @@ def sondar_dou(cliente, inicio, fim, destino):
     Path(destino).write_text(json.dumps({"testes": resultado, "robots": info}, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
+def sondar_paginacao_receita(cliente, inicio, fim, destino):
+    """Como a tabela da Receita pagina: links, formulario e campos de data."""
+    url = "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1"
+    registro = cliente.baixar(url)
+    html_texto = registro["texto"] or ""
+    resultado = {
+        "http": enxuto(registro),
+        "links_de_pagina": sorted(set(re.findall(r"""(?:href|onclick)=["']([^"']*(?:p=\d|pagina|Pagina|paginacao)[^"']*)["']""", html_texto)))[:30],
+        "formularios": re.findall(r"<form[^>]*>", html_texto, re.I)[:5],
+        "campos": sorted(set(re.findall(r"""<(?:input|select)[^>]*name=["']([^"']+)["'][^>]*>""", html_texto, re.I)))[:60],
+        "trechos_paginacao": [" ".join(html_texto[max(0, m.start() - 400): m.start() + 600].split())
+                              for m in re.finditer(r"pagina(?:cao|ção)|class=['\"]pagination", html_texto, re.I)][:4],
+        "scripts_com_p": [" ".join(t.split())[:600] for t in re.findall(r"<script[^>]*>(.*?)</script>", html_texto, re.S) if re.search(r"\bp=|pagina", t)][:4],
+    }
+    for chave, valor in resultado.items():
+        print(chave, json.dumps(valor, ensure_ascii=False)[:1500])
+    Path(destino).write_text(json.dumps(resultado, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
 def ensaiar_coleta(cliente, inicio, fim, destino):
     """
     A coleta gratuita de producao contra os sites reais, sem Firecrawl e sem
@@ -940,6 +959,9 @@ def main():
 
     hoje = datetime.datetime.now(FUSO).date()
     fontes, inicio = fontes_da_execucao(hoje)
+    if args.sondar_alvo == "receita_paginas":
+        sondar_paginacao_receita(cliente, inicio, hoje, args.json)
+        return
     if args.sondar_alvo == "coleta":
         ensaiar_coleta(cliente, inicio, hoje, args.json)
         print(f"{cliente.requisicoes} requisicoes, nenhuma ao Firecrawl.")
