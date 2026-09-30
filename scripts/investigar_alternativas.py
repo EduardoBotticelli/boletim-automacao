@@ -777,9 +777,12 @@ def ensaiar_coleta(cliente, inicio, fim, destino):
     import coleta_direta
 
     fontes, _ = fontes_da_execucao(fim)
+    so = os.getenv("ENSAIO_FONTE", "")
     resultado = []
     for fonte in fontes:
         if fonte["_estado"] != "ativa" or fonte.get("coleta", "firecrawl") == "firecrawl":
+            continue
+        if so and so.lower() not in fonte["fonte"].lower():
             continue
         item = {"fonte": fonte["fonte"], "coleta": fonte.get("coleta")}
         try:
@@ -789,7 +792,8 @@ def ensaiar_coleta(cliente, inicio, fim, destino):
                         com_data=sum(1 for p in publicacoes if p["data"]),
                         com_descricao=sum(1 for p in publicacoes if p["descricao"]),
                         na_janela=sum(1 for p in publicacoes if p["na_janela"]),
-                        enviar=[{k: p[k][:110] for k in ("data", "hora", "titulo", "url", "descricao")} for p in publicacoes if p["enviar"]][:25])
+                        aviso=coleta.get("aviso", ""), datas=sorted({p["data"] for p in publicacoes}),
+                        enviar=[{k: p[k][:110] for k in ("data", "hora", "titulo", "url", "descricao")} for p in publicacoes if p["enviar"]][:80])
         except coleta_direta.FalhaColeta as erro:
             item["falha"] = str(erro)
         resultado.append(item)

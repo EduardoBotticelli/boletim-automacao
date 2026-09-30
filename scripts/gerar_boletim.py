@@ -746,6 +746,61 @@ def resgatar_por_escassez(itens, piso):
     return resgates
 
 
+def _chave_url(url):
+    return str(url or "").strip().lower().rstrip("/")
+
+
+def _chave_titulo(titulo):
+    return " ".join(sem_acento(titulo).lower().split())[:80]
+
+
+def publicacoes_nao_devolvidas(material, itens, modelo):
+    """
+    Publicacoes que a coleta separou e mandou ao Gemini, mas que nao voltaram.
+
+    O modelo mais fraco da cascata devolve poucas publicacoes: em 30/09, com os
+    outros em 503, ele devolveu 1 de 24 atos da Receita e 1 de 12 normativos
+    do Banco Central. Como a coleta ja traz titulo, data, link e descricao,
+    nada disso precisa sumir: a publicacao vai ao portal sem Radar, com o
+    motivo escrito, e a pessoa decide. Vale tambem para lote que falhou
+    inteiro.
+
+    So entra o que esta na janela ou nao tem data. A publicacao com data
+    futura (as consultas da ANP mostram a data da audiencia) fica so no
+    registro, para nao reaparecer todo dia.
+
+    Devolve (itens novos, registro por fonte).
+    """
+    urls = {_chave_url(i.get("url")) for i in itens}
+    titulos = {_chave_titulo(i.get("titulo")) for i in itens}
+    novos, registro = [], {}
+    for fonte in material:
+        if not fonte.get("estruturado"):
+            continue
+        for publicacao in fonte.get("publicacoes") or []:
+            if not publicacao.get("enviar"):
+                continue
+            if _chave_url(publicacao.get("url")) in urls or _chave_titulo(publicacao.get("titulo")) in titulos:
+                continue
+            anotacao = registro.setdefault(fonte["fonte"], {"ao_portal": 0, "so_registradas": 0, "titulos": []})
+            anotacao["titulos"].append(publicacao.get("titulo", ""))
+            if publicacao.get("data") and not publicacao.get("na_janela"):
+                anotacao["so_registradas"] += 1
+                continue
+            anotacao["ao_portal"] += 1
+            novos.append({
+                "fonte": fonte["fonte"], "titulo": publicacao.get("titulo", ""), "url": publicacao.get("url", ""),
+                "data_publicacao": publicacao.get("data", ""), "resumo": publicacao.get("descricao", ""),
+                "boletins_confirmados": [], "boletins_rejeitados": [], "palavras_chave_detectadas": [],
+                "motivo_filtragem": (
+                    f"[Não classificada pela IA] A publicação foi coletada da fonte, mas o modelo "
+                    f"({modelo or 'nenhum'}) não a devolveu. Escolha o Radar ou rejeite."
+                ),
+                "nao_classificada_pela_ia": True,
+            })
+    return novos, registro
+
+
 def fontes_reativadas_com_erro(ativas, processadas, hoje):
     """
     Fonte que estava suspensa com data de retomada, ja voltou e continua com
@@ -845,6 +900,15 @@ def main():
         except ValueError:
             item["data_publicacao"] = ""
         itens.append(item)
+    nao_devolvidas, registro_nao_devolvidas = publicacoes_nao_devolvidas(material, itens, modelo)
+    if nao_devolvidas:
+        print(f"::warning title=Publicações não devolvidas pela IA::{len(nao_devolvidas)} publicação(ões) coletada(s) voltaram ao portal sem Radar, para decisão humana.")
+        itens.extend(nao_devolvidas)
+    log["publicacoes_nao_devolvidas_pela_ia"] = {
+        "ao_portal_sem_radar": len(nao_devolvidas),
+        "so_registradas_data_futura": sum(r["so_registradas"] for r in registro_nao_devolvidas.values()),
+        "por_fonte": registro_nao_devolvidas,
+    }
     bloqueios, rejeicoes, palavras = {}, Counter(), Counter()
     for item in itens:
         fonte = item.get("fonte", "")
@@ -911,7 +975,7 @@ def main():
             for titulo in titulos
             if titulo
         }
-    ), "rejeicoes_por_boletim": dict(rejeicoes), "resgates_por_escassez": resgates, "cascata_gemini": cascata, "top_palavras_chave_detectadas": [{"palavra": p, "ocorrencias": c} for p, c in palavras.most_common(20)]}
+    ), "rejeicoes_por_boletim": dict(rejeicoes), "resgates_por_escassez": resgates, "cascata_gemini": cascata, "nao_classificadas_pela_ia": len(nao_devolvidas), "top_palavras_chave_detectadas": [{"palavra": p, "ocorrencias": c} for p, c in palavras.most_common(20)]}
     log["resultado"] = {"status": "sucesso", "modelo_gemini_utilizado": modelo, "itens_aceitos": len(itens), "fontes_ativas": len(material), "fontes_suspensas": len(suspensas), "fontes_inativas": len(inativas), "fontes_sem_resultado": len(sem_resultado), "fontes_sem_publicacao_hoje": len(sem_publicacao), "fontes_com_erro_tecnico": len(erros), "itens_por_boletim": stats, "filtro1_bloqueios": {s: len(v) for s, v in bloqueios.items()}, "auditoria": boletim["auditoria"]}
     if bloqueios:
         log["filtro1_bloqueios_detalhe"] = bloqueios

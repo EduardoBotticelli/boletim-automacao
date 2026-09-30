@@ -908,6 +908,25 @@ def teste_coleta_do_fontes_json_e_valida():
     assert mme["suspenso"] and "reativar_em" not in mme
 
 
+def teste_publicacao_que_a_ia_nao_devolve_vai_ao_portal_sem_radar():
+    material = [{
+        "fonte": "Receita", "estruturado": True,
+        "publicacoes": [
+            publicacao("devolvida", "2026-09-30"), publicacao("omitida", "2026-09-30"), publicacao("sem-data", ""),
+            dict(publicacao("futura", "2026-10-13"), na_janela=False), publicacao("antiga", "2026-09-01", enviar=False),
+        ],
+    }, {"fonte": "Pelo Firecrawl", "estruturado": False, "publicacoes": []}]
+    itens = [{"fonte": "Receita", "titulo": "Outro título", "url": "https://x.gov.br/devolvida"}]
+    novos, registro = gb.publicacoes_nao_devolvidas(material, itens, "gemini-3.5-flash-lite")
+    assert sorted(i["url"] for i in novos) == ["https://x.gov.br/omitida", "https://x.gov.br/sem-data"], novos
+    assert all(i["boletins_confirmados"] == [] and i["nao_classificada_pela_ia"] for i in novos)
+    assert novos[0]["motivo_filtragem"].startswith("[Não classificada pela IA]") and "flash-lite" in novos[0]["motivo_filtragem"]
+    assert registro["Receita"] == {"ao_portal": 2, "so_registradas": 1, "titulos": ["omitida", "sem-data", "futura"]}
+    # Casar pelo titulo tambem conta: a IA as vezes devolve outro endereco.
+    novos, _ = gb.publicacoes_nao_devolvidas(material, [{"titulo": "omitida", "url": "https://outro"}, {"url": "https://x.gov.br/devolvida"}, {"url": "https://x.gov.br/sem-data"}], "m")
+    assert novos == []
+
+
 TESTES = [
     teste_busca_sobrevive_em_pagina_grande,
     teste_sem_busca_o_comportamento_nao_muda,
@@ -953,6 +972,7 @@ TESTES = [
     teste_busca_so_roda_onde_a_fonte_pede,
     teste_fonte_reativada_com_erro_vai_para_o_log,
     teste_coleta_do_fontes_json_e_valida,
+    teste_publicacao_que_a_ia_nao_devolve_vai_ao_portal_sem_radar,
 ]
 
 

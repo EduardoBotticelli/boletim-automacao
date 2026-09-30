@@ -825,11 +825,18 @@ def ler_linhas_receita(html_texto):
     return publicacoes
 
 
-def tabela_receita(cliente, fonte, inicio, fim, paginas=4):
-    """A tabela vem em ordem de publicacao: segue a paginacao ate sair da janela."""
+def tabela_receita(cliente, fonte, inicio, fim, paginas=6):
+    """
+    A consulta do SIJUT ja filtrada pela data de publicacao da janela
+    (tipoData=2, dt_inicio, dt_fim), em ordem de publicacao, seguindo a
+    paginacao ate acabar. Sem o filtro, a pagina 1 traz os 24 atos mais
+    recentes e a paginacao volta vazia.
+    """
     publicacoes, textos, aviso = [], [], ""
+    filtro = f"&dt_inicio={inicio.strftime('%d/%m/%Y')}&dt_fim={fim.strftime('%d/%m/%Y')}".replace("/", "%2F")
+    base = fonte["url"] if "dt_inicio=" in fonte["url"] else fonte["url"] + filtro
     for pagina in range(1, paginas + 1):
-        url = re.sub(r"([?&])p=\d+", rf"\g<1>p={pagina}", fonte["url"])
+        url = re.sub(r"([?&])p=\d+", rf"\g<1>p={pagina}", base)
         registro = _exigir(cliente.baixar(url), "tabela da Receita")
         linhas = ler_linhas_receita(registro["texto"])
         if pagina > 1 and not linhas and publicacoes and min(p["data"] for p in publicacoes if p["data"]) >= inicio.isoformat():

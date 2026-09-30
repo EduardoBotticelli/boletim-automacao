@@ -88,6 +88,7 @@ jobs:
           python scripts/investigar_alternativas.py --autoteste
           if [ "${{ inputs.etapa }}" = "sondar" ]; then
             alvo="${{ inputs.fontes_cobertura }}"
+            export ENSAIO_FONTE="${{ inputs.urls_candidatas }}"
             python scripts/investigar_alternativas.py --sondar-alvo "${alvo:-final}" --json output/alternativas_sonda.json
             exit 0
           fi
