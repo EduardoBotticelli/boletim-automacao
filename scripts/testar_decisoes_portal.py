@@ -1832,6 +1832,47 @@ def teste_espacamento_entre_noticias_vale_em_todas_as_secoes():
                 )
 
 
+def teste_o_que_fica_fora_do_email_vai_para_o_resumo_com_o_motivo():
+    """Retirado na revisao e sem Radar definido ficam registrados, cada um com o seu motivo."""
+    decisoes = payload(
+        [
+            decisao(
+                "CVM orienta sobre a Resolução 244",
+                "https://www.gov.br/cvm/noticia-244",
+                "CVM | Notícias",
+                "rejeitado",
+                [],
+                status_portal="rejeitado",
+                acao_revisao="retirada",
+                radares_originais=["mercado-capitais-fundos"],
+                motivo="Retirada na revisão.",
+            ),
+            # Decisao sem "motivo": o gerador deduz pelo status_portal.
+            decisao(
+                "RESOLUÇÃO CPPI Nº 367",
+                "https://www.in.gov.br/dou/resolucao-cppi-367",
+                "Destaques do D.O.U.",
+                "rejeitado",
+                [],
+                status_portal="sem_radar",
+            ),
+        ],
+        radares_sem_conteudo_confirmados=list(SLUGS),
+    )
+
+    r = executar(boletim_exemplo(), decisoes)
+
+    assert r.codigo == 0, f"esperava sucesso, saida:\n{r.saida}"
+    assert r.resumo["total_rejeitados"] == 2
+    por_titulo = {x["titulo"]: x for x in r.resumo["fora_do_email"]}
+    assert por_titulo["CVM orienta sobre a Resolução 244"]["motivo"] == "Retirada na revisão."
+    assert por_titulo["CVM orienta sobre a Resolução 244"]["acao_revisao"] == "retirada"
+    assert por_titulo["RESOLUÇÃO CPPI Nº 367"]["motivo"].startswith("Chegou sem Radar definido")
+    assert "1 sem Radar definido" in r.saida, r.saida
+    for slug, conteudo in r.emails.items():
+        assert "CPPI" not in conteudo and "Resolução 244" not in conteudo, slug
+
+
 TESTES = [
     teste_fluxo_completo,
     teste_edicoes_de_texto,
@@ -1859,6 +1900,7 @@ TESTES = [
     teste_mecanismo_de_alias_continua_disponivel,
     teste_ancora_do_voltar_ao_sumario_existe,
     teste_todas_as_fontes_do_filtro1_tem_destino,
+    teste_o_que_fica_fora_do_email_vai_para_o_resumo_com_o_motivo,
 ]
 
 

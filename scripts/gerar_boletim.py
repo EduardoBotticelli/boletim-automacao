@@ -837,10 +837,10 @@ def montar_sugestor(fontes):
 
 def distribuir_sem_ia(itens, fontes, modelo, sugestor=None):
     """
-    Da um Radar sugerido, sem IA, a publicacao que o Gemini nao devolveu.
-    A sugestao fica em 'sugestao_sem_ia', fora de 'boletins': o portal a
-    mostra como pendente e identificada, e so vale se a pessoa confirmar.
-    Devolve o resumo para o log.
+    Da um Radar, sem IA, a publicacao que o Gemini nao devolveu. O Radar
+    vai para 'boletins' e o item chega ao portal incluido, como os da IA;
+    o metodo e a evidencia ficam em 'sugestao_sem_ia', para o log e a
+    auditoria. Devolve o resumo para o log.
     """
     if not any(i.get("nao_classificada_pela_ia") for i in itens):
         return sugestao_sem_ia.distribuir([], None, modelo, NOMES)

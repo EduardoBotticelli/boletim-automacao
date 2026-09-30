@@ -1066,7 +1066,7 @@ def teste_fonte_generica_nunca_vai_para_todos_os_radares():
     assert r["radares"] == [], r
 
 
-def teste_distribuir_marca_a_sugestao_sem_tocar_nos_boletins():
+def teste_distribuir_poe_o_radar_sugerido_em_boletins():
     import sugestao_sem_ia as ss
     itens = [
         {"fonte": "Unico | Noticias", "titulo": "Leilão", "resumo": "", "boletins": [], "nao_classificada_pela_ia": True},
@@ -1078,7 +1078,9 @@ def teste_distribuir_marca_a_sugestao_sem_tocar_nos_boletins():
     assert resumo["itens"] == 3 and resumo["com_radar_sugerido"] == 1 and resumo["sem_radar"] == 2
     assert resumo["por_metodo"] == {"matriz": 1, "palavras_chave": 0, "perfil_da_fonte": 0} and resumo["por_radar"] == {"b": 1}
     assert resumo["por_fonte"]["Unico | Noticias"]["matriz"] == 1
-    assert all(i["boletins"] == [] for i in itens[:3]) and "sugestao_sem_ia" not in itens[3]
+    # O Radar sugerido vira o Radar do item: chega ao portal incluido, como o da IA.
+    assert itens[0]["boletins"] == ["b"] and itens[1]["boletins"] == [] and itens[2]["boletins"] == []
+    assert itens[3]["boletins"] == ["b"] and "sugestao_sem_ia" not in itens[3]
     assert itens[0]["sugestao_sem_ia"]["radares"] == ["b"]
     assert itens[0]["motivo_filtragem"].startswith("[Sugestão sem IA: Radar B, por matriz do Filtro 1]") and "não pela IA" in itens[0]["motivo_filtragem"]
     assert itens[1]["motivo_filtragem"].startswith("[Não classificada pela IA]") and "flash-lite" in itens[1]["motivo_filtragem"]
@@ -1180,7 +1182,7 @@ TESTES = [
     teste_termos_do_prompt_descartam_o_que_nao_distingue_radar,
     teste_sugestao_segue_matriz_palavras_e_perfil_nessa_ordem,
     teste_fonte_generica_nunca_vai_para_todos_os_radares,
-    teste_distribuir_marca_a_sugestao_sem_tocar_nos_boletins,
+    teste_distribuir_poe_o_radar_sugerido_em_boletins,
     teste_distribuicao_so_le_os_templates_quando_ha_o_que_distribuir,
     teste_todo_radar_do_filtro1_tem_secao_no_template,
     teste_ato_interno_do_bc_vai_sem_radar_com_o_motivo,

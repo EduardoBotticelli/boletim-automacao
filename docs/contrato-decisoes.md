@@ -51,16 +51,19 @@ encontrado.
   "total_itens": 10,
   "total_aprovados": 9,
   "total_rejeitados": 1,
+  "total_sem_radar": 0,
   "radares_sem_conteudo_confirmados": ["contencioso-civel"],
   "decisoes": [
     {
       "id": "it-1a2b3c4d",
       "status": "aprovado",
       "status_portal": "ajustado",
+      "acao_revisao": "radar_alterado",
       "origem": "scraper",
       "url": "https://www.gov.br/cvm/noticia-244",
       "fonte": "CVM | Notícias",
       "titulo": "CVM orienta sobre a Resolução 244",
+      "radares_originais": ["mercado-capitais-fundos"],
       "radares_finais": ["mercado-capitais-fundos", "ambiental-esg"],
       "boletins": ["mercado-capitais-fundos", "ambiental-esg"]
     }
@@ -76,7 +79,8 @@ encontrado.
 | `revisao_concluida` | Tem de ser `true`. Com `false` o gerador para e preserva os e-mails anteriores. |
 | `confirmado_em`     | Momento da confirmação, em ISO 8601. |
 | `data_execucao`     | Edição do boletim que foi revisada. |
-| `decisoes`          | Uma entrada por item revisado, incluindo os rejeitados. |
+| `decisoes`          | Uma entrada por item da edição, incluindo os retirados e os sem Radar. |
+| `total_sem_radar`   | Dos rejeitados, quantos chegaram sem Radar e ninguém atribuiu um. |
 | `radares_sem_conteudo_confirmados` | Radares que saem sem nenhuma publicação, com ciência explícita de quem revisou. Lista vazia quando todos têm conteúdo. |
 
 ### Campos da decisão
@@ -84,36 +88,41 @@ encontrado.
 | Campo             | Papel |
 |-------------------|-------|
 | `status`          | Só `"aprovado"` ou `"rejeitado"`. É o que o gerador lê. |
-| `status_portal`   | O que a pessoa fez (`aprovado`, `ajustado` ou `rejeitado`). Só auditoria; o gerador ignora. |
+| `status_portal`   | Situação no portal: `aprovado` (chegou com Radar e ficou), `ajustado` (Radar mudado ou atribuído), `rejeitado` (retirado) ou `sem_radar` (chegou sem Radar e ninguém atribuiu). |
+| `acao_revisao`    | O registro do que quem revisou fez no item: `mantida`, `radar_alterado`, `radar_atribuido`, `retirada`, `sem_radar` ou `adicionada`. |
+| `radares_originais` | Radares com que o item chegou ao portal. Com `radares_finais`, mostra o que mudou. |
+| `motivo`          | Só nos rejeitados: "Retirada na revisão." ou "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão." |
 | `origem`          | `"scraper"` (veio do pipeline) ou `"manual"` (adicionado na curadoria). |
 | `url`, `fonte`, `titulo` | Valores originais. São a chave de casamento. |
 | `radares_finais`  | Slugs de destino. `boletins` é o mesmo valor, aceito como alias. |
 | `*_editado(a)`    | Opcionais. Só aparecem quando houve edição. |
 | `noticia`         | Só quando `origem` é `"manual"`: o conteúdo completo do item. |
 
-### Itens pendentes
+### Nada fica à espera de decisão
 
-Não existe decisão pendente neste arquivo. A revisão só pode ser concluída
-depois que **todo** item recebeu uma decisão explícita: enquanto houver
-pendência, o botão de confirmação do portal fica desabilitado e informa
-quantos itens faltam.
+O item com Radar definido pelo pipeline (pela IA ou pelas regras sem IA)
+chega ao portal já incluído. Quem revisa só age para retirar um item ou mudar
+o Radar dele. O item sem Radar fica numa lista recolhida, "Sem Radar
+definido", que não bloqueia a confirmação: se ninguém atribuir um Radar, ele
+vai no arquivo como `status: "rejeitado"`, `status_portal: "sem_radar"` e o
+motivo escrito. Assim "foi retirado por alguém" e "não tinha Radar" continuam
+distinguíveis depois de gravado.
 
-Item pendente **não** é convertido em rejeitado e **não** é descartado. A
-distinção importa: "ninguém olhou" e "foi recusado" são coisas diferentes, e
-depois de gravado o arquivo não haveria como separá-las. Além do botão
-desabilitado, o portal tem duas travas: o handler de confirmação recusa, e o
-`montarPayloadRevisao` (`lib/revisao.ts`) lança erro.
+O gerador registra no `resumo_geracao_final.json`, em `fora_do_email`, cada
+item que não foi para o e-mail, com o motivo e a `acao_revisao`. Decisão
+antiga, sem `motivo`, recebe o motivo pelo `status_portal`. O resumo passa a
+ser commitado junto com os e-mails.
 
-Se mesmo assim chegar um `status: "pendente"` — por exemplo de um cliente
-antigo —, o gerador bloqueia a geração em vez de adivinhar, e preserva os
-e-mails da edição anterior.
+Se chegar um `status: "pendente"` de um cliente antigo, o gerador continua
+bloqueando a geração em vez de adivinhar, e preserva os e-mails anteriores.
 
 ### Radar sem conteúdo
 
 Um Radar pode acabar sem nenhuma publicação. Em vez de sair só com a mensagem
 padrão sem que ninguém tenha reparado, o portal bloqueia a conclusão da
 revisão e oferece, para cada Radar vazio, as publicações coletadas naquela
-edição que não foram classificadas para ele.
+edição que não estão nele. Um botão ("Enviar sem publicações") confirma todos
+os Radares vazios de uma vez.
 
 Para liberar, quem revisa faz uma das duas coisas:
 
