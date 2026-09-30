@@ -2,35 +2,35 @@
   "versao_formato": 2,
   "revisao_concluida": true,
   "origem": "portal-curadoria",
-  "confirmado_em": "2026-09-29T17:44:05.629Z",
-  "data_execucao": "2026-09-29",
-  "total_itens": 9,
-  "total_aprovados": 9,
-  "total_rejeitados": 0,
+  "confirmado_em": "2026-09-30T22:22:17.524Z",
+  "data_execucao": "2026-09-30",
+  "total_itens": 90,
+  "total_aprovados": 77,
+  "total_rejeitados": 13,
   "decisoes": [
     {
-      "id": "it-3cbe070b",
+      "id": "it-ce8578aa",
       "status": "aprovado",
       "status_portal": "aprovado",
       "origem": "scraper",
-      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15525.htm",
+      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15526.htm",
       "fonte": "Planalto | Resenha Diaria",
-      "titulo": "Lei nº 15.525, de 28.9.2026",
+      "titulo": "Lei nº 15.526, de 29 de setembro de 2026",
       "radares_finais": [
-        "direito-tributario"
+        "imobiliario-infraestrutura"
       ],
       "boletins": [
-        "direito-tributario"
+        "imobiliario-infraestrutura"
       ]
     },
     {
-      "id": "it-c8971ede",
+      "id": "it-d8fb379d",
       "status": "aprovado",
       "status_portal": "aprovado",
       "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20BCB&numero=590",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=597",
       "fonte": "Banco Central | Normas",
-      "titulo": "Resolução BCB n° 590, 28/9/2026",
+      "titulo": "Resolução BCB N° 597",
       "radares_finais": [
         "mercado-capitais-fundos"
       ],
@@ -39,28 +39,270 @@
       ]
     },
     {
-      "id": "it-19cd434c",
+      "id": "it-d7fb360a",
       "status": "aprovado",
       "status_portal": "aprovado",
       "origem": "scraper",
-      "url": "https://www.ccee.org.br/-/ccee-amplia-modulo-digital-para-processos-de-monitoramento-intensivo",
-      "fonte": "CCEE | Noticias",
-      "titulo": "CCEE amplia módulo digital para processos de Monitoramento Intensivo",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=596",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Resolução BCB N° 596",
       "radares_finais": [
-        "imobiliario-infraestrutura"
+        "mercado-capitais-fundos"
       ],
       "boletins": [
-        "imobiliario-infraestrutura"
+        "mercado-capitais-fundos"
       ]
     },
     {
-      "id": "it-c4a10df4",
+      "id": "it-d6fb3477",
       "status": "aprovado",
       "status_portal": "aprovado",
       "origem": "scraper",
-      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/2deg-workshop-sobre-gas-release-tera-transmissao-ao-vivo-pelo-canal-da-anp-no-youtube",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=595",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Resolução BCB N° 595",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-d2fb2e2b",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=591",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Resolução BCB N° 591",
+      "radares_finais": [
+        "societario-ma",
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "societario-ma",
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-ca56bf45",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153838",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Solução de Consulta Cosit nº 195",
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-c956bdb2",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153839",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Solução de Consulta Cosit nº 190",
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-c55478cf",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153829",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Solução de Consulta Cosit nº 193",
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-ce5486fa",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153822",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Solução de Consulta Cosit nº 192",
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-cd548567",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153821",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Solução de Consulta Cosit nº 191",
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-c454773c",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153828",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Solução de Consulta Cosit nº 188",
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-455bfe14",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153819",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Solução de Consulta Cosit nº 187",
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-465bffa7",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153818",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Solução de Consulta Cosit nº 185",
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-0bfa86ef",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/receita-publica-novo-balanco-de-solicitacoes-de-opcao-pelo-simples-nacional-e-pelo-regime-regular-do-ibs-e-da-cbs",
+      "fonte": "Ministério da Fazenda | Notícias",
+      "titulo": "Receita publica novo balanço de solicitações de opção pelo Simples Nacional e pelo regime regular do IBS e da CBS",
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-d12f8e36",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/colegiado-da-cvm-aceita-proposta-de-termo-de-compromisso-de-mais-de-r-2-3-milhoes-em-caso-envolvendo-a-atual-tc-s-a",
+      "fonte": "CVM | Notícias",
+      "titulo": "Colegiado da CVM aceita proposta de Termo de Compromisso de mais de R$ 2.3 milhões em caso envolvendo a atual TC S.A.",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-02f87e79",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/sessao-de-julgamento-em-29-9",
+      "fonte": "CVM | Notícias",
+      "titulo": "Sessão de Julgamento em 29/9",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-b6175ac5",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.b3.com.br/data/files/91/13/BC/F1/1DEE0A105BF9020AAC094EA8/OC%20062-2026-VPC%20DESLISTAGEM%20DO%20FUTURO%20DE%20SP%20MERVAL%20E%20REPUBLICACAO%20DOS%20CONTRATOS%20DE%20DERIVATIVOS%20DE%20EQUITIES_PT.pdf",
+      "fonte": "B3 | Ofícios e Comunicados",
+      "titulo": "062-2026-VPC-Ofício Circular Deslistagem do Futuro de S&P Merval e republicação dos Contratos de Derivativos de Equities",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-2b8a1939",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.b3.com.br/data/files/CB/54/E6/F9/EBDE0A105BF9020AAC094EA8/CE%20056-2026-VNC%20EPUMA%20PRESERVACAO%20DE%20FOCO%20EM%20BOLETAS%20DURANTE%20O%20RECEBIMENTO%20DE%20NOTICIAS_PT.pdf",
+      "fonte": "B3 | Ofícios e Comunicados",
+      "titulo": "056-2026-VNC-Comunicado Externo ePUMA | Preservação de Foco em Boletas durante o Recebimento de Notícias",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-ae676b04",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.b3.com.br/data/files/35/27/0D/AF/CADE0A105BF9020AAC094EA8/OC%20041-2026%20PRE_PROGRAMA%20DE%20FORMADOR%20DE%20MERCADO%20PARA%20PRODUTOS%20INDEXADOS%20A%20INFLACAO%20IPCA%20ALTERACAO%20NO%20BENEFICIO%20ADICIONAL_PT.pdf",
+      "fonte": "B3 | Ofícios e Comunicados",
+      "titulo": "041-2026-PRE-Ofício Circular Alteração no Programa de Formador de Mercado para Produtos Indexados à Inflação (IPCA)",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-e3083827",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-realiza-2deg-workshop-para-debater-gas-release",
       "fonte": "ANP | Notícias",
-      "titulo": "2° Workshop sobre Gas Release terá transmissão ao vivo pelo canal da ANP no YouTube",
+      "titulo": "ANP realiza 2° Workshop para debater Gas Release",
       "radares_finais": [
         "regulatorio-oleo-gas"
       ],
@@ -84,18 +326,118 @@
       ]
     },
     {
-      "id": "it-9511a654",
+      "id": "it-c4a10df4",
       "status": "aprovado",
       "status_portal": "aprovado",
       "origem": "scraper",
-      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-aprova-projeto-da-motiva-riosp-para-implantacao-de-corredor-logistico-sustentavel-multimodal",
-      "fonte": "ANTT | Notícias - Defeso Eleitoral",
-      "titulo": "ANTT aprova projeto da Motiva RioSP para implantação de Corredor Logístico Sustentável Multimodal",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/2deg-workshop-sobre-gas-release-tera-transmissao-ao-vivo-pelo-canal-da-anp-no-youtube",
+      "fonte": "ANP | Notícias",
+      "titulo": "2° Workshop sobre Gas Release terá transmissão ao vivo pelo canal da ANP no YouTube",
       "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-c55394a9",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-firma-acordo-para-formar-agentes-comunitarios-de-energia-na-amazonia-legal",
+      "fonte": "ANEEL | Últimas Notícias",
+      "titulo": "ANEEL firma acordo para formar Agentes Comunitários de Energia na Amazônia Legal",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "ambiental-esg"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "ambiental-esg"
+      ]
+    },
+    {
+      "id": "it-ca8f5666",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/consulta-publica-propoe-metodologia-para-amortizacoes-de-investimentos-em-geracao",
+      "fonte": "ANEEL | Últimas Notícias",
+      "titulo": "Consulta pública propõe metodologia para amortizações de investimentos em geração",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
         "imobiliario-infraestrutura"
       ],
       "boletins": [
+        "regulatorio-oleo-gas",
         "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-9d776aea",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-nega-recurso-da-enel-sp-contra-decisao-que-indeferiu-pericia-tecnica-relacionada-aos-eventos-climaticos-extremos",
+      "fonte": "ANEEL | Últimas Notícias",
+      "titulo": "ANEEL nega recurso da Enel SP contra decisão que indeferiu perícia técnica relacionada aos eventos climáticos extremos",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
+      ]
+    },
+    {
+      "id": "it-480c2cda",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/eleicoes-2026-aneel-determina-planos-especiais-de-atendimento-para-garantir-energia-durante-o-periodo",
+      "fonte": "ANEEL | Últimas Notícias",
+      "titulo": "Eleições 2026: ANEEL determina planos especiais de atendimento para garantir energia durante o período",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-a73595df",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/agricultura/pt-br/acesso-a-informacao/licitacoes-e-contratos/contratos/mapa-sede/2026/contrato-no-66-2026-servicos-continuos-de-supervisores-administrativos-e-engenheiros",
+      "fonte": "Ministério da Agricultura | Notícias",
+      "titulo": "CONTRATO Nº 66/2026 - SERVIÇOS CONTÍNUOS DE SUPERVISORES ...",
+      "radares_finais": [
+        "trabalhista-empresarial"
+      ],
+      "boletins": [
+        "trabalhista-empresarial"
+      ]
+    },
+    {
+      "id": "it-871dc4bd",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/anvisa-aprova-regularizacao-de-cosmeticos-artesanais",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Anvisa aprova regularização de cosméticos artesanais",
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
       ]
     },
     {
@@ -114,21 +456,6 @@
       ]
     },
     {
-      "id": "it-ea1d70e0",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "origem": "scraper",
-      "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/tramite-prioritario-para-marcas-de-mercado-virtual-esta-temporariamente-indisponivel",
-      "fonte": "INPI | Notícias",
-      "titulo": "Trâmite prioritário para marcas de mercado virtual está temporariamente indisponível",
-      "radares_finais": [
-        "propriedade-intelectual"
-      ],
-      "boletins": [
-        "propriedade-intelectual"
-      ]
-    },
-    {
       "id": "it-fc57594e",
       "status": "aprovado",
       "status_portal": "aprovado",
@@ -142,6 +469,873 @@
       "boletins": [
         "propriedade-intelectual"
       ]
+    },
+    {
+      "id": "it-7b0e9ba5",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/nova-sumula-estabelece-ipi-como-marco-objetivo-para-cobranca-da-cfem",
+      "fonte": "ANM | Notícias",
+      "titulo": "Nova súmula estabelece IPI como marco objetivo para cobrança da CFEM",
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-662efb6a",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/diretoria-prorroga-agenda-regulatoria-para-o-exercicio-de-2027",
+      "fonte": "ANM | Notícias",
+      "titulo": "Diretoria prorroga Agenda Regulatória para o exercício de 2027",
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-44956064",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-lanca-nota-tecnica-sobre-a-movimentacao-de-hidrogenio-de-baixa-emissao-de-carbono-em-infraestruturas-de-transporte-de-gas-natural-",
+      "fonte": "EPE | Notícias",
+      "titulo": "EPE lança Nota Técnica sobre a movimentação de hidrogênio de baixa emissão de carbono em infraestruturas de transporte de gás natural​",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
+      ]
+    },
+    {
+      "id": "it-aa6ef17d",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/plano-nacional-de-energia-2055-e-aprovado-e-aponta-caminhos-para-um-sistema-energetico-mais-limpo-resiliente-e-competitivo",
+      "fonte": "EPE | Notícias",
+      "titulo": "Plano Nacional de Energia 2055 é aprovado e aponta caminhos para um sistema energético mais limpo, resiliente e competitivo",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
+      ]
+    },
+    {
+      "id": "it-10004791",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://sinoreg-es.org.br/notarios-e-registradores-capixabas-encerram-congresso-internacional-da-emes-com-tema-prova-extrajudicial/",
+      "fonte": "Kollemata | Decretos",
+      "titulo": "Notários e registradores capixabas encerram Congresso Internacional da Emes com tema “prova extrajudicial”",
+      "radares_finais": [
+        "contencioso-civel"
+      ],
+      "boletins": [
+        "contencioso-civel"
+      ]
+    },
+    {
+      "id": "it-cb319d22",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://sinoreg-es.org.br/cnj-apresenta-proposta-para-registros-de-mortes-em-contexto-de-acao-de-orgaos-de-seguranca/",
+      "fonte": "Kollemata | Decretos",
+      "titulo": "CNJ apresenta proposta para registros de mortes em contexto de ação de órgãos de segurança",
+      "radares_finais": [
+        "contencioso-civel"
+      ],
+      "boletins": [
+        "contencioso-civel"
+      ]
+    },
+    {
+      "id": "it-e30844b7",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://sinoreg-es.org.br/ccj-pode-votar-mudanca-na-contagem-de-prazos-para-agilizar-inventarios/",
+      "fonte": "Kollemata | Decretos",
+      "titulo": "CCJ pode votar mudança na contagem de prazos para agilizar inventários",
+      "radares_finais": [
+        "contencioso-civel"
+      ],
+      "boletins": [
+        "contencioso-civel"
+      ]
+    },
+    {
+      "id": "it-6d6a5197",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://sinoreg-es.org.br/artigo-prescricao-da-pretensao-punitiva-disciplinar-contra-notarios-e-registradores-apos-a-lei-15-509-26/",
+      "fonte": "Kollemata | Decretos",
+      "titulo": "Artigo – Prescrição da pretensão punitiva disciplinar contra notários e registradores após a lei 15.509/26",
+      "radares_finais": [
+        "contencioso-civel"
+      ],
+      "boletins": [
+        "contencioso-civel"
+      ]
+    },
+    {
+      "id": "it-bdaa8208",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://sinoreg-es.org.br/inteligencia-artificial-pode-tornar-os-servicos-dos-cartorios-de-registro-civil-mais-ageis/",
+      "fonte": "Kollemata | Decretos",
+      "titulo": "Inteligência Artificial pode tornar os serviços dos Cartórios de Registro Civil mais ágeis",
+      "radares_finais": [
+        "propriedade-intelectual"
+      ],
+      "boletins": [
+        "propriedade-intelectual"
+      ]
+    },
+    {
+      "id": "it-8984d827",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/setembro/sancionada-lei-que-aperfeicoa-marco-legal-do-seguro-rural",
+      "fonte": "SUSEP | Notícias",
+      "titulo": "Sancionada Lei que aperfeiçoa marco legal do seguro rural",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-65b1d473",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/setembro/susep-abre-nova-consulta-publica-sobre-resolucao-alternativa-de-conflitos-em-contratos-de-seguro",
+      "fonte": "SUSEP | Notícias",
+      "titulo": "Susep abre nova consulta pública sobre resolução alternativa de conflitos em contratos de seguro",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-9c18bcc2",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/setembro/susep-abre-consultas-publicas-para-revisao-da-regulamentacao-de-titulos-de-capitalizacao",
+      "fonte": "SUSEP | Notícias",
+      "titulo": "Susep abre consultas públicas para revisão da regulamentação de títulos de capitalização",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-3bf8d34f",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/setembro/susep-coloca-em-consulta-publica-proposta-de-regulamentacao-dos-procedimentos-operacionais-de-resseguro",
+      "fonte": "SUSEP | Notícias",
+      "titulo": "Susep coloca em consulta pública proposta de regulamentação dos procedimentos operacionais de resseguro",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-f84c5720",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/setembro/presidente-sanciona-lei-que-altera-regras-tributarias-para-resseguradoras-locais",
+      "fonte": "SUSEP | Notícias",
+      "titulo": "Presidente sanciona lei que altera regras tributárias para resseguradoras locais",
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-634918bc",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-atualiza-coeficientes-do-piso-minimo-do-frete-e-divulga-novo-preco-de-referencia-do-diesel",
+      "fonte": "ANTT | Notícias - Defeso Eleitoral",
+      "titulo": "ANTT atualiza coeficientes do Piso Mínimo do Frete e divulga novo preço de referência do diesel",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-699968ff",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/assinatura-do-contrato-da-rota-dos-sertoes-marca-novo-ciclo-de-investimentos-no-nordeste",
+      "fonte": "ANTT | Notícias - Defeso Eleitoral",
+      "titulo": "Assinatura do contrato da Rota dos Sertões marca novo ciclo de investimentos no Nordeste",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-a1612e42",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-prorroga-prazo-para-contribuicoes-sobre-alteracoes-em-solucoes-de-engenharia",
+      "fonte": "ANTT | Notícias - Defeso Eleitoral",
+      "titulo": "ANTT prorroga prazo para contribuições sobre alterações em soluções de engenharia",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-9511a654",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-aprova-projeto-da-motiva-riosp-para-implantacao-de-corredor-logistico-sustentavel-multimodal",
+      "fonte": "ANTT | Notícias - Defeso Eleitoral",
+      "titulo": "ANTT aprova projeto da Motiva RioSP para implantação de Corredor Logístico Sustentável Multimodal",
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
+      ]
+    },
+    {
+      "id": "it-6e546780",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46047",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado N° 46.047",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-d5fb32e4",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=594",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Resolução BCB N° 594",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-d4fb3151",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=593",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Resolução BCB N° 593",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-d3fb2fbe",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=592",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Resolução BCB N° 592",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-6f546913",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46046",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado N° 46.046",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-70546aa6",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46045",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado N° 46.045",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-71546c39",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46044",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado N° 46.044",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-72546dcc",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46043",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado N° 46.043",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-73546f5f",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46042",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado N° 46.042",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-745470f2",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46041",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado N° 46.041",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-75547285",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46040",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado N° 46.040",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-fc4cf845",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46039",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado N° 46.039",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-fb4cf6b2",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46038",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado N° 46.038",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-00805f69",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Ato%20de%20Diretor&numero=705",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Ato de Diretor N° 705",
+      "radares_finais": [],
+      "boletins": []
+    },
+    {
+      "id": "it-fe4cfb6b",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46037",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado N° 46.037",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-fd4cf9d8",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46036",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado N° 46.036",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-004cfe91",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46035",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado N° 46.035",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-ff4cfcfe",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46034",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado N° 46.034",
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-9da4bd7e",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
+      "origem": "scraper",
+      "url": "https://www.ccee.org.br/-/confira-a-apresentacao-e-o-video-do-encontro-do-pld-realizado-em-26-09",
+      "fonte": "CCEE | Noticias",
+      "titulo": "Confira a apresentação e o vídeo do Encontro do PLD realizado em 26/09",
+      "radares_finais": [],
+      "boletins": []
+    },
+    {
+      "id": "it-19cd434c",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
+      "origem": "scraper",
+      "url": "https://www.ccee.org.br/-/ccee-amplia-modulo-digital-para-processos-de-monitoramento-intensivo",
+      "fonte": "CCEE | Noticias",
+      "titulo": "CCEE amplia módulo digital para processos de Monitoramento Intensivo",
+      "radares_finais": [],
+      "boletins": []
+    },
+    {
+      "id": "it-47f80451",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
+      "origem": "scraper",
+      "url": "https://www.ccee.org.br/-/ultimos-dias-para-inscricao-no-curso-de-formacao-de-precos-em-parceria-com-a-psr",
+      "fonte": "CCEE | Noticias",
+      "titulo": "Últimos dias para inscrição no curso de Formação de Preços em parceria com a PSR",
+      "radares_finais": [],
+      "boletins": []
+    },
+    {
+      "id": "it-cc56c26b",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Ato Declaratório Executivo Corat nº 79",
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-cb56c0d8",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153837",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Ato Declaratório Executivo Sutri nº 9",
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-cd56c3fe",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153835",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Ato Declaratório Executivo Coana nº 136",
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-3759a973",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153803",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Ato Declaratório Executivo Corat nº 78",
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-cc5483d4",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153820",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Solução de Consulta Cosit nº 189",
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-9f350cc1",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/saldo-de-operacoes-de-credito-garantidas-pela-uniao-atinge-r-353-64-bilhoes-no-2o-quadrimestre-de-2026",
+      "fonte": "Ministério da Fazenda | Notícias",
+      "titulo": "Saldo de operações de crédito garantidas pela União atinge R$ 353,64 bilhões no 2º quadrimestre de 2026",
+      "radares_finais": [],
+      "boletins": []
+    },
+    {
+      "id": "it-a2f8e736",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/governo-central-registra-em-agosto-deficit-primario-de-r-13-6-bilhoes-aponta-o-resultado-do-tesouro-nacional",
+      "fonte": "Ministério da Fazenda | Notícias",
+      "titulo": "Governo Central registra em agosto déficit primário de R$ 13,6 bilhões, aponta o Resultado do Tesouro Nacional",
+      "radares_finais": [],
+      "boletins": []
+    },
+    {
+      "id": "it-9885e9f4",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/simples-nacional-2027-tem-novos-prazos-para-microempresas-e-empresas-de-pequeno-porte",
+      "fonte": "Ministério da Fazenda | Notícias",
+      "titulo": "Simples Nacional 2027 tem novos prazos para microempresas e empresas de pequeno porte",
+      "radares_finais": [],
+      "boletins": []
+    },
+    {
+      "id": "it-4e7dcb96",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/abertura-de-mercados-para-produtos-brasileiros-em-antigua-e-barbuda-chile-argelia-china-e-paraguai",
+      "fonte": "Ministério da Agricultura | Notícias",
+      "titulo": "Abertura de mercados para produtos brasileiros em Antígua e Barbuda, Chile, Argélia, China e Paraguai",
+      "radares_finais": [],
+      "boletins": []
+    },
+    {
+      "id": "it-872df48d",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-aprova-medicamento-para-tratamento-de-esquistossomose-em-criancas",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Anvisa aprova medicamento para tratamento de esquistossomose em crianças",
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-f93433e9",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/webinar-apresentara-avaliacao-nacional-das-praticas-de-seguranca-do-paciente-2026",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Webinar apresentará avaliação nacional das práticas de segurança do paciente 2026",
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-24820105",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/acompanhe-a-18a-reuniao-ordinaria-publica-da-diretoria-colegiada-da-anvisa",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Acompanhe a 18ª Reunião Ordinária Pública da Diretoria Colegiada da Anvisa",
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-12046cc0",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/sncr-perfis-de-acesso-ao-sistema-estao-disponiveis-no-cadastro-anvisa-a-partir-desta-terca-29-9",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "SNCR: perfis de acesso ao sistema estão disponíveis no cadastro Anvisa a partir desta terça (29/9)",
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-ea1d70e0",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/tramite-prioritario-para-marcas-de-mercado-virtual-esta-temporariamente-indisponivel",
+      "fonte": "INPI | Notícias",
+      "titulo": "Trâmite prioritário para marcas de mercado virtual está temporariamente indisponível",
+      "radares_finais": [
+        "propriedade-intelectual"
+      ],
+      "boletins": [
+        "propriedade-intelectual"
+      ]
+    },
+    {
+      "id": "it-cee24fee",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/seguranca-de-barragens-e-pilhas-ganha-novas-perspectivas-na-damsweek-2026",
+      "fonte": "ANM | Notícias",
+      "titulo": "Segurança de barragens e pilhas ganha novas perspectivas na Damsweek 2026",
+      "radares_finais": [],
+      "boletins": []
+    },
+    {
+      "id": "it-8a385aee",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/parceria-preve-pesquisa-e-formacao-em-minerais-criticos",
+      "fonte": "ANM | Notícias",
+      "titulo": "Parceria prevê pesquisa e formação em minerais críticos",
+      "radares_finais": [],
+      "boletins": []
+    },
+    {
+      "id": "it-26ebc606",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-participa-do-forum-sebrae-oportunidades-no-oleo-e-gas",
+      "fonte": "EPE | Notícias",
+      "titulo": "EPE participa do Fórum Sebrae Oportunidades no Óleo e Gás",
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-596cf7fe",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
+      "origem": "scraper",
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/resenha-mensal-consumo-nacional-de-eletricidade-cresce-4-3-em-agosto-de-2026",
+      "fonte": "EPE | Notícias",
+      "titulo": "Resenha Mensal: consumo nacional de eletricidade cresce 4,3% em agosto de 2026",
+      "radares_finais": [],
+      "boletins": []
+    },
+    {
+      "id": "it-d3f4f80f",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
+      "origem": "scraper",
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-promove-workshop-para-discutir-agenda-estrategica-de-ccs-no-brasil",
+      "fonte": "EPE | Notícias",
+      "titulo": "EPE promove workshop para discutir agenda estratégica de CCS no Brasil",
+      "radares_finais": [],
+      "boletins": []
+    },
+    {
+      "id": "it-4ca646cc",
+      "status": "rejeitado",
+      "status_portal": "rejeitado",
+      "origem": "scraper",
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-caderno-do-estudo-de-estimativa-volumetrica-da-bacia-de-pelotas",
+      "fonte": "EPE | Notícias",
+      "titulo": "EPE publica caderno do estudo de estimativa volumétrica da Bacia de Pelotas",
+      "radares_finais": [],
+      "boletins": []
+    },
+    {
+      "id": "it-c2892fed",
+      "status": "aprovado",
+      "status_portal": "ajustado",
+      "origem": "scraper",
+      "url": "https://www.gov.br/antaq/pt-br/noticias/sobrestadia-de-conteiner-webinario-tem-nova-data",
+      "fonte": "ANTAQ | Notícias",
+      "titulo": "Sobrestadia de contêiner: webinário tem nova data",
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
     }
-  ]
+  ],
+  "radares_sem_conteudo_confirmados": []
 }
