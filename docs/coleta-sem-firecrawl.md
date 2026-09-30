@@ -230,3 +230,64 @@ portal `consultas-publicas.mme.gov.br` é anunciada em notícia: o portal é
 montado por JavaScript e não expõe uma listagem legível. Para fechar a
 pendência, é preciso encontrar a API que alimenta o portal, ou comparar à mão,
 por algumas semanas, o que o portal lista com o que MME Notícias anuncia.
+
+### Primeira execução completa (30/09, janela 29/09 00h a 30/09 15h48)
+
+| | 29/09 (antes) | 30/09 (coleta nova) |
+|---|---|---|
+| Créditos do Firecrawl | 156 | **7** (Planalto, DOU e ONS, mais as buscas da Agricultura e da CVM) |
+| Fontes coletadas sem Firecrawl | 0 | **25** |
+| Quedas para o Firecrawl | — | **0** |
+| Caracteres mandados ao Gemini | 687.556 | **83.691** |
+| Publicações da janela entregues ao Gemini com título, data, link e descrição | — | **82** |
+| Itens no boletim | 31 | **45** |
+| Modelo | `3.5-flash-lite` + `3.6-flash` | `3.5-flash-lite` nos 4 lotes, depois de 840 s de espera por 503 |
+
+Por Radar (30/09 contra 29/09): Regulatório 27 × 10, Imobiliário 15 × 8,
+Mercado de Capitais 6 × 7, Ambiental 5 × 3, Tributário 4 × 5, Propriedade
+Intelectual 2 × 2, Trabalhista 1 × 1, Societário 0 × 1, Contencioso 0 × 2.
+
+**O que a execução mostrou e foi corrigido depois dela:**
+
+- **A IA fraca omitia publicações sem registro.** Os três modelos melhores
+  responderam 503 durante todo o teto de espera, e o `3.5-flash-lite` devolveu
+  43 das 82 publicações: ficaram de fora 23 atos da Receita e 11 normativos do
+  BC. Agora o que a coleta separou e o Gemini não devolveu vai ao portal sem
+  Radar, com o motivo "[Não classificada pela IA]", e o log conta por fonte.
+  Na execução de 30/09 isso teria levado mais 38 itens ao portal (1 consulta
+  da ANP com data futura ficaria só no registro).
+- **A Receita só via a primeira página.** Sem filtro, a consulta trazia os 24
+  atos mais recentes e a paginação voltava vazia. Com a consulta filtrada pela
+  janela de publicação, o ensaio trouxe **52 atos** (28 de 29/09 e 24 de 30/09).
+  Muitos são atos de unidades locais (alfândegas, delegacias); restringir por
+  órgão é decisão editorial, não foi feita.
+
+Essas duas correções não passaram por uma segunda execução completa, para
+manter a execução única pedida: estão cobertas pelos testes e pelo ensaio seco
+da Receita.
+
+## Demonstração do DOU
+
+`scripts/demo_dou.py` gera o Radar Regulatório de exemplo nos quatro modelos
+(A: link para o PDF oficial da página; B: PDF da página anexado; C: Seção 1
+completa anexada; D: trecho do ato em texto). Sem Gemini: o resumo de cada ato
+é a ementa dele.
+
+**Bloqueio:** o runner do GitHub não consegue baixar o DOU direto. Os três
+endereços da Imprensa Nacional (`www.in.gov.br`, `download.in.gov.br` e
+`pesquisa.in.gov.br`) derrubam a conexão, inclusive no `robots.txt`, e não
+tentei contornar. O único serviço que responde é o **INLABS**
+(`inlabs.in.gov.br`), o canal oficial para download automatizado do DOU em XML
+e PDF, que exige cadastro gratuito.
+
+Para gerar os exemplos: criar a conta no INLABS, cadastrar os segredos
+`INLABS_EMAIL` e `INLABS_SENHA` no repositório e rodar o workflow com
+`etapa = demo_dou` e `dou_data` no formato DD-MM-AAAA. O resultado sai como
+artefato `demo-dou-N`, com os quatro `.eml` e um `resumo.json` com o tamanho de
+cada um. De uma máquina onde o in.gov.br responde, também dá para rodar
+`python scripts/demo_dou.py --origem direto --data AAAA-MM-DD`.
+
+O mesmo bloqueio vale para a produção: os modelos B e C precisam do PDF, e o
+Firecrawl não devolve PDF. O modelo A precisa do número da página, que a coleta
+atual do DOU pelo Firecrawl não traz. Qualquer um dos quatro em produção passa
+pelo INLABS.
