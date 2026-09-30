@@ -1,66 +1,115 @@
 {
- "http://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1": {
-  "http": {
-   "url": "http://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1",
-   "status": 200,
-   "erro": "",
-   "tipo": "text/html;charset=UTF-8",
-   "bytes": 381686,
-   "ms": 2526,
-   "url_final": "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1",
-   "bloqueio": ""
+ "testes": [
+  {
+   "dia": "2026-09-30",
+   "teste": "pdf_secao1_completo",
+   "url": "https://download.in.gov.br/do/secao1/2026/2026_09_30/2026_09_30_ASSINADO_do1.pdf",
+   "http": {
+    "url": "https://download.in.gov.br/do/secao1/2026/2026_09_30/2026_09_30_ASSINADO_do1.pdf",
+    "status": "robots",
+    "erro": "robots.txt nao permite",
+    "tipo": "",
+    "bytes": 0,
+    "ms": 0,
+    "url_final": "https://download.in.gov.br/do/secao1/2026/2026_09_30/2026_09_30_ASSINADO_do1.pdf",
+    "bloqueio": ""
+   },
+   "comeco": ""
   },
-  "idAto": 120,
-  "trechos": [
-   "crescente)</option><option value=\"Publicacao_ASC\">Data da publicação (crescente)</option>\n\t\t\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t            </div>\n\t\t\t\t\t\t\t          </div>\n\t\t\t\t\t\t\t        </td>\n\t\t\t\t\t\t\t      </tr>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<tr> <!-- tituloTabelaAtos -->\n\t\t\t\t\t\t\t\t\t\t<th nowrap=\"nowrap\"><span class=\"btnOrdem ordemTipoAto text-center\" coluna=\"TipoAto\" direcao=\"ASC\"><img src=\"imagens/sort0.png\" style=\"vertical-align: middle; cursor: pointer;\"></img>Tipo do ato</span></th>\n\t\t\t\t\t\t\t\t\t\t<th nowrap=\"nowrap\"><span class=\"btnOrdem ordemNumero text-center\" coluna=\"Numero\" direcao=\"ASC\"><img src=\"imagens/sort0.png\" style=\"vertical-align: middle; cursor: pointer;\"></img>N&ordm; do ato</span></th>\n\t\t\t\t\t\t\t\t\t\t<th nowrap=\"nowrap\"><span class=\"btnOrdem ordemOrgao text-center\" coluna=\"Orgao\" direcao=\"ASC\"><img src=\"imagens/sort0.png\" style=\"vertical-align: middle; cursor: pointer;\"></img>&Oacute;rg&atilde;o / unidade</span></th>\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<th nowrap=\"nowrap\"><span id=\"ordenamentoDataPublicacao\" class=\"btnOrdem ordemPublicacao text-center\" coluna=\"Publicacao\" direcao=\"DESC\"><img src=\"imagens/sort0.png\" style=\"vertical-align: middle; cursor: pointer;\"></img>Publica&ccedil;&atilde;o</span></th>\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<th class=\"text-center\" nowrap=\"nowrap\" style=\"cursor: default !important;\">Ementa</th>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t<tr class='linhaResultados'>\n\t\t\t\t\t\t\t\t\t\t\t<!-- <td width=\"10%\" align=\"center\"><a href='link.action?idAto=153836'>Ato Declarat&#xF3;rio Executivo</a></td> -->\n\n\t\t\t\t\t\t\t\t\t\t\t<!-- Visualização Sequencial -->\n\t\t\t\t\t\t\t\t\t\t\t<td width=\"10%\" align=\"center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<a href='https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836/vs/MTUzODM2LDE1MzgzNywxNTM4MzgsMTUzODM5LDE1MzgzNSwxNTM4NDAsMTUzODQxLDE1Mzg0MywxNTM4NDQsMTUzODQyLDE1Mzg0NSwxNTM4NDcsMTUzODQ2LDE1Mzg1NCwxNTM4NTMsMTUzODUyLDE1Mzg1MSwxNTM4NTAsMTUzODQ5LDE1Mzg0OCwxNTM4NTUsMTUzODU2LDE1Mzg1OCwxNTM4NTc=' target=\"_blank\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tAto Declarat&#xF3;rio Executivo\n\t\t\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t\t</td>\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t  \t\t\t\t<td width=\"10%\" align=\"center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<!-- <a href='link.action?antigo=1&idAto=153836'> -->\n\t\t\t\t\t\t\t\t\t\t\t\t<a href='https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836/vs/MTUzODM2LDE1MzgzNywxNTM4MzgsMTUzODM5LDE1MzgzNSwxNTM4NDAsMTUzODQxLDE1Mzg0MywxNTM4NDQsMTUzODQyLDE1Mzg0NSwxNTM4NDcsMTUzODQ2LDE1Mzg1NCwxNTM4NTMsMTUzODUyLDE1Mzg1MSwxNTM4NTAsMTUzODQ5LDE1Mzg0OCwxNTM4NTUsMTUzODU2LDE1Mzg1OCwxNTM4NTc=' target=\"_blank\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t79\n\t\t\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t  \t\t\t\t<td width=\"10%\" align=\"center\">\n\t\t\t\t\t\t\t  \t\t\t\t\n\t\t\t\t\t\t\t  \t\t\t\t<div>\n\t\t\t\t\t\t\t\t\t\t\t\t<!-- <a href='link.action?antigo=1&idAto=153836' title=\"Coordena&#xE7;&#xE3;o-Geral de Administra&#xE7;&#xE3;o do Cr&#xE9;dito Tribut&#xE1;rio\"> -->\n\t\t\t\t\t\t\t\t\t\t\t\t<a href='https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836/vs/MTUzODM2LDE1MzgzNywxNTM4MzgsMTUzODM5LDE1MzgzNSwxNTM4NDAsMTUzODQxLDE1Mzg0MywxNTM4NDQsM",
-   "NTM4NTAsMTUzODQ5LDE1Mzg0OCwxNTM4NTUsMTUzODU2LDE1Mzg1OCwxNTM4NTc=' target=\"_blank\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tAto Declarat&#xF3;rio Executivo\n\t\t\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t\t</td>\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t  \t\t\t\t<td width=\"10%\" align=\"center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<!-- <a href='link.action?antigo=1&idAto=153836'> -->\n\t\t\t\t\t\t\t\t\t\t\t\t<a href='https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836/vs/MTUzODM2LDE1MzgzNywxNTM4MzgsMTUzODM5LDE1MzgzNSwxNTM4NDAsMTUzODQxLDE1Mzg0MywxNTM4NDQsMTUzODQyLDE1Mzg0NSwxNTM4NDcsMTUzODQ2LDE1Mzg1NCwxNTM4NTMsMTUzODUyLDE1Mzg1MSwxNTM4NTAsMTUzODQ5LDE1Mzg0OCwxNTM4NTUsMTUzODU2LDE1Mzg1OCwxNTM4NTc=' target=\"_blank\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t79\n\t\t\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t  \t\t\t\t<td width=\"10%\" align=\"center\">\n\t\t\t\t\t\t\t  \t\t\t\t\n\t\t\t\t\t\t\t  \t\t\t\t<div>\n\t\t\t\t\t\t\t\t\t\t\t\t<!-- <a href='link.action?antigo=1&idAto=153836' title=\"Coordena&#xE7;&#xE3;o-Geral de Administra&#xE7;&#xE3;o do Cr&#xE9;dito Tribut&#xE1;rio\"> -->\n\t\t\t\t\t\t\t\t\t\t\t\t<a href='https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836/vs/MTUzODM2LDE1MzgzNywxNTM4MzgsMTUzODM5LDE1MzgzNSwxNTM4NDAsMTUzODQxLDE1Mzg0MywxNTM4NDQsMTUzODQyLDE1Mzg0NSwxNTM4NDcsMTUzODQ2LDE1Mzg1NCwxNTM4NTMsMTUzODUyLDE1Mzg1MSwxNTM4NTAsMTUzODQ5LDE1Mzg0OCwxNTM4NTUsMTUzODU2LDE1Mzg1OCwxNTM4NTc=' target=\"_blank\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tCorat</a></div>\n\t\t\t\t\t\t\t  \t\t\t\t\n\t\t\t\t\t\t\t  \t\t\t\t</td>\n\t\t\t\t\t\t\t  \t\t\t\t<td width=\"10%\" align=\"center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<!-- <a href='link.action?antigo=1&idAto=153836'> -->\n\t\t\t\t\t\t\t\t\t\t\t\t<a href='https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836/vs/MTUzODM2LDE1MzgzNywxNTM4MzgsMTUzODM5LDE1MzgzNSwxNTM4NDAsMTUzODQxLDE1Mzg0Mywx"
-  ],
-  "classes_em_volta": [
-   "btnOrdem ordemNumero text-center",
-   "btnOrdem ordemOrgao text-center",
-   "btnOrdem ordemPublicacao text-center",
-   "btnOrdem ordemTipoAto text-center",
-   "col-md-6",
-   "col-md-6 text-right hidden-xs",
-   "control-label",
-   "row",
-   "select-ordenacao",
-   "tabela-acoes",
-   "table table-striped tabela alternativo",
-   "table-responsive",
-   "text-center"
-  ]
- },
- "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1": {
-  "http": {
-   "url": "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1",
-   "status": 200,
-   "erro": "",
-   "tipo": "text/html;charset=UTF-8",
-   "bytes": 381686,
-   "ms": 1484,
-   "url_final": "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1",
-   "bloqueio": ""
+  {
+   "dia": "2026-09-30",
+   "teste": "pdf_pagina_1",
+   "url": "https://pesquisa.in.gov.br/imprensa/servlet/INPDFViewer?jornal=515&pagina=1&data=30/09/2026&captchafield=firstAccess",
+   "http": {
+    "url": "https://pesquisa.in.gov.br/imprensa/servlet/INPDFViewer?jornal=515&pagina=1&data=30/09/2026&captchafield=firstAccess",
+    "status": "robots",
+    "erro": "robots.txt nao permite",
+    "tipo": "",
+    "bytes": 0,
+    "ms": 0,
+    "url_final": "https://pesquisa.in.gov.br/imprensa/servlet/INPDFViewer?jornal=515&pagina=1&data=30/09/2026&captchafield=firstAccess",
+    "bloqueio": ""
+   },
+   "comeco": ""
   },
-  "idAto": 120,
-  "trechos": [
-   "crescente)</option><option value=\"Publicacao_ASC\">Data da publicação (crescente)</option>\n\t\t\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t            </div>\n\t\t\t\t\t\t\t          </div>\n\t\t\t\t\t\t\t        </td>\n\t\t\t\t\t\t\t      </tr>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<tr> <!-- tituloTabelaAtos -->\n\t\t\t\t\t\t\t\t\t\t<th nowrap=\"nowrap\"><span class=\"btnOrdem ordemTipoAto text-center\" coluna=\"TipoAto\" direcao=\"ASC\"><img src=\"imagens/sort0.png\" style=\"vertical-align: middle; cursor: pointer;\"></img>Tipo do ato</span></th>\n\t\t\t\t\t\t\t\t\t\t<th nowrap=\"nowrap\"><span class=\"btnOrdem ordemNumero text-center\" coluna=\"Numero\" direcao=\"ASC\"><img src=\"imagens/sort0.png\" style=\"vertical-align: middle; cursor: pointer;\"></img>N&ordm; do ato</span></th>\n\t\t\t\t\t\t\t\t\t\t<th nowrap=\"nowrap\"><span class=\"btnOrdem ordemOrgao text-center\" coluna=\"Orgao\" direcao=\"ASC\"><img src=\"imagens/sort0.png\" style=\"vertical-align: middle; cursor: pointer;\"></img>&Oacute;rg&atilde;o / unidade</span></th>\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<th nowrap=\"nowrap\"><span id=\"ordenamentoDataPublicacao\" class=\"btnOrdem ordemPublicacao text-center\" coluna=\"Publicacao\" direcao=\"DESC\"><img src=\"imagens/sort0.png\" style=\"vertical-align: middle; cursor: pointer;\"></img>Publica&ccedil;&atilde;o</span></th>\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<th class=\"text-center\" nowrap=\"nowrap\" style=\"cursor: default !important;\">Ementa</th>\n\t\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t<tr class='linhaResultados'>\n\t\t\t\t\t\t\t\t\t\t\t<!-- <td width=\"10%\" align=\"center\"><a href='link.action?idAto=153836'>Ato Declarat&#xF3;rio Executivo</a></td> -->\n\n\t\t\t\t\t\t\t\t\t\t\t<!-- Visualização Sequencial -->\n\t\t\t\t\t\t\t\t\t\t\t<td width=\"10%\" align=\"center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<a href='https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836/vs/MTUzODM2LDE1MzgzNywxNTM4MzgsMTUzODM5LDE1MzgzNSwxNTM4NDAsMTUzODQxLDE1Mzg0MywxNTM4NDQsMTUzODQyLDE1Mzg0NSwxNTM4NDcsMTUzODQ2LDE1Mzg1NCwxNTM4NTMsMTUzODUyLDE1Mzg1MSwxNTM4NTAsMTUzODQ5LDE1Mzg0OCwxNTM4NTUsMTUzODU2LDE1Mzg1OCwxNTM4NTc=' target=\"_blank\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tAto Declarat&#xF3;rio Executivo\n\t\t\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t\t</td>\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t  \t\t\t\t<td width=\"10%\" align=\"center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<!-- <a href='link.action?antigo=1&idAto=153836'> -->\n\t\t\t\t\t\t\t\t\t\t\t\t<a href='https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836/vs/MTUzODM2LDE1MzgzNywxNTM4MzgsMTUzODM5LDE1MzgzNSwxNTM4NDAsMTUzODQxLDE1Mzg0MywxNTM4NDQsMTUzODQyLDE1Mzg0NSwxNTM4NDcsMTUzODQ2LDE1Mzg1NCwxNTM4NTMsMTUzODUyLDE1Mzg1MSwxNTM4NTAsMTUzODQ5LDE1Mzg0OCwxNTM4NTUsMTUzODU2LDE1Mzg1OCwxNTM4NTc=' target=\"_blank\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t79\n\t\t\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t  \t\t\t\t<td width=\"10%\" align=\"center\">\n\t\t\t\t\t\t\t  \t\t\t\t\n\t\t\t\t\t\t\t  \t\t\t\t<div>\n\t\t\t\t\t\t\t\t\t\t\t\t<!-- <a href='link.action?antigo=1&idAto=153836' title=\"Coordena&#xE7;&#xE3;o-Geral de Administra&#xE7;&#xE3;o do Cr&#xE9;dito Tribut&#xE1;rio\"> -->\n\t\t\t\t\t\t\t\t\t\t\t\t<a href='https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836/vs/MTUzODM2LDE1MzgzNywxNTM4MzgsMTUzODM5LDE1MzgzNSwxNTM4NDAsMTUzODQxLDE1Mzg0MywxNTM4NDQsM",
-   "NTM4NTAsMTUzODQ5LDE1Mzg0OCwxNTM4NTUsMTUzODU2LDE1Mzg1OCwxNTM4NTc=' target=\"_blank\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tAto Declarat&#xF3;rio Executivo\n\t\t\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t\t</td>\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t  \t\t\t\t<td width=\"10%\" align=\"center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<!-- <a href='link.action?antigo=1&idAto=153836'> -->\n\t\t\t\t\t\t\t\t\t\t\t\t<a href='https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836/vs/MTUzODM2LDE1MzgzNywxNTM4MzgsMTUzODM5LDE1MzgzNSwxNTM4NDAsMTUzODQxLDE1Mzg0MywxNTM4NDQsMTUzODQyLDE1Mzg0NSwxNTM4NDcsMTUzODQ2LDE1Mzg1NCwxNTM4NTMsMTUzODUyLDE1Mzg1MSwxNTM4NTAsMTUzODQ5LDE1Mzg0OCwxNTM4NTUsMTUzODU2LDE1Mzg1OCwxNTM4NTc=' target=\"_blank\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t79\n\t\t\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t  \t\t\t\t<td width=\"10%\" align=\"center\">\n\t\t\t\t\t\t\t  \t\t\t\t\n\t\t\t\t\t\t\t  \t\t\t\t<div>\n\t\t\t\t\t\t\t\t\t\t\t\t<!-- <a href='link.action?antigo=1&idAto=153836' title=\"Coordena&#xE7;&#xE3;o-Geral de Administra&#xE7;&#xE3;o do Cr&#xE9;dito Tribut&#xE1;rio\"> -->\n\t\t\t\t\t\t\t\t\t\t\t\t<a href='https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836/vs/MTUzODM2LDE1MzgzNywxNTM4MzgsMTUzODM5LDE1MzgzNSwxNTM4NDAsMTUzODQxLDE1Mzg0MywxNTM4NDQsMTUzODQyLDE1Mzg0NSwxNTM4NDcsMTUzODQ2LDE1Mzg1NCwxNTM4NTMsMTUzODUyLDE1Mzg1MSwxNTM4NTAsMTUzODQ5LDE1Mzg0OCwxNTM4NTUsMTUzODU2LDE1Mzg1OCwxNTM4NTc=' target=\"_blank\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tCorat</a></div>\n\t\t\t\t\t\t\t  \t\t\t\t\n\t\t\t\t\t\t\t  \t\t\t\t</td>\n\t\t\t\t\t\t\t  \t\t\t\t<td width=\"10%\" align=\"center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<!-- <a href='link.action?antigo=1&idAto=153836'> -->\n\t\t\t\t\t\t\t\t\t\t\t\t<a href='https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836/vs/MTUzODM2LDE1MzgzNywxNTM4MzgsMTUzODM5LDE1MzgzNSwxNTM4NDAsMTUzODQxLDE1Mzg0Mywx"
-  ],
-  "classes_em_volta": [
-   "btnOrdem ordemNumero text-center",
-   "btnOrdem ordemOrgao text-center",
-   "btnOrdem ordemPublicacao text-center",
-   "btnOrdem ordemTipoAto text-center",
-   "col-md-6",
-   "col-md-6 text-right hidden-xs",
-   "control-label",
-   "row",
-   "select-ordenacao",
-   "tabela-acoes",
-   "table table-striped tabela alternativo",
-   "table-responsive",
-   "text-center"
-  ]
+  {
+   "dia": "2026-09-30",
+   "teste": "visualizador_pagina_1",
+   "url": "https://pesquisa.in.gov.br/imprensa/jsp/visualiza/index.jsp?jornal=515&pagina=1&data=30/09/2026",
+   "http": {
+    "url": "https://pesquisa.in.gov.br/imprensa/jsp/visualiza/index.jsp?jornal=515&pagina=1&data=30/09/2026",
+    "status": "robots",
+    "erro": "robots.txt nao permite",
+    "tipo": "",
+    "bytes": 0,
+    "ms": 0,
+    "url_final": "https://pesquisa.in.gov.br/imprensa/jsp/visualiza/index.jsp?jornal=515&pagina=1&data=30/09/2026",
+    "bloqueio": ""
+   },
+   "comeco": ""
+  },
+  {
+   "dia": "2026-09-30",
+   "teste": "leitura_do_jornal",
+   "url": "https://www.in.gov.br/leiturajornal?data=30-09-2026&secao=do1",
+   "http": {
+    "url": "https://www.in.gov.br/leiturajornal?data=30-09-2026&secao=do1",
+    "status": "robots",
+    "erro": "robots.txt nao permite",
+    "tipo": "",
+    "bytes": 0,
+    "ms": 0,
+    "url_final": "https://www.in.gov.br/leiturajornal?data=30-09-2026&secao=do1",
+    "bloqueio": ""
+   },
+   "comeco": ""
+  },
+  {
+   "dia": "2026-09-30",
+   "teste": "inlabs",
+   "url": "https://inlabs.in.gov.br/",
+   "http": {
+    "url": "https://inlabs.in.gov.br/",
+    "status": 200,
+    "erro": "",
+    "tipo": "text/html; charset=UTF-8",
+    "bytes": 6065,
+    "ms": 1496,
+    "url_final": "https://inlabs.in.gov.br/acessar.php",
+    "bloqueio": "",
+    "tamanho_declarado": ""
+   },
+   "comeco": "<!DOCTYP"
+  }
+ ],
+ "robots": {
+  "download.in.gov.br": {
+   "url": "https://download.in.gov.br/robots.txt",
+   "status": null,
+   "crawl_delay": null,
+   "erro": "Remote end closed connection without response",
+   "regras": "inacessivel, tratado como proibido"
+  },
+  "pesquisa.in.gov.br": {
+   "url": "https://pesquisa.in.gov.br/robots.txt",
+   "status": null,
+   "crawl_delay": null,
+   "erro": "Remote end closed connection without response",
+   "regras": "inacessivel, tratado como proibido"
+  },
+  "www.in.gov.br": {
+   "url": "https://www.in.gov.br/robots.txt",
+   "status": null,
+   "crawl_delay": null,
+   "erro": "Remote end closed connection without response",
+   "regras": "inacessivel, tratado como proibido"
+  },
+  "inlabs.in.gov.br": {
+   "url": "https://inlabs.in.gov.br/robots.txt",
+   "status": 404,
+   "crawl_delay": null,
+   "erro": "HTTP 404",
+   "regras": "sem regras"
+  }
  }
 }
