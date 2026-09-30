@@ -26,10 +26,13 @@ total e **nenhum crédito do Firecrawl**:
   derrubada foi registrada e deixada como está.
 
 Para cada fonte foram testados: download direto, feed RSS/Atom, API pública e
-busca por data no próprio site. O resultado bruto está nos commits
-"Registra a investigação de coleta sem Firecrawl" desta branch, em
-`output/alternativas.json` (rodadas 1 e 2) e `output/alternativas_sonda.json`
-(sondagens das páginas montadas por JavaScript, da ANP e da Receita).
+busca por data no próprio site. O resultado bruto ficou no histórico da branch
+`claude/diagnostico-cobertura`, fora do PR para não levar saída de teste à
+`main`: `output/alternativas.json` nos commits `944c321` (rodada 1) e `6b28aa3`
+(rodada 2); `output/alternativas_sonda.json` nos commits `929b36b` (páginas
+montadas por JavaScript), `bba06ac` (API do Volto, ANP por ano, ONS), `0ab18a3`
+(Receita), `78ca403` (DOU), `007fffd` (ensaio seco da coleta) e `f1dfa7b`
+(ensaio da Receita filtrada pela janela).
 
 ### O que cada caminho deu, em resumo
 
