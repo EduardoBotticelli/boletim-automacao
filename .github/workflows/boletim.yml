@@ -58,7 +58,9 @@ jobs:
           python -m json.tool fontes.json > /dev/null
           python -m py_compile scripts/coleta_direta.py scripts/sugestao_sem_ia.py scripts/gerar_boletim.py scripts/gerar_html.py scripts/gerar_auditoria_html.py scripts/testar_dou_regulatorio.py scripts/gerar_boletim_final.py scripts/testar_decisoes_portal.py scripts/templates_radar.py scripts/inspecionar_templates.py scripts/conferir_cobertura.py scripts/diagnostico_funil.py scripts/testar_coleta.py scripts/investigar_alternativas.py
       - name: Testar a coleta
-        run: python scripts/testar_coleta.py
+        run: |
+          python scripts/testar_coleta.py
+          python scripts/testar_publicacao.py
       - name: Conferir cobertura das fontes
         if: ${{ inputs.etapa == 'cobertura' || inputs.etapa == 'ambas' }}
         env:
@@ -100,16 +102,7 @@ jobs:
 
       - name: Registrar o resultado da investigacao
         if: ${{ always() && (inputs.etapa == 'alternativas' || inputs.etapa == 'sondar') }}
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for arquivo in output/alternativas.json output/alternativas_sonda.json; do
-            if [ -f "$arquivo" ]; then git add -f "$arquivo"; fi
-          done
-          if git diff --staged --quiet; then exit 0; fi
-          git commit -m "Registra a investigacao de coleta sem Firecrawl"
-          git pull --rebase origin "${{ github.ref_name }}"
-          git push origin "HEAD:${{ github.ref_name }}"
+        run: bash scripts/publicar_saidas.sh "Registra a investigacao de coleta sem Firecrawl" "${{ github.ref_name }}" output/alternativas.json output/alternativas_sonda.json
 
       - name: Demonstracao do DOU em quatro modelos
         # So demonstracao: grava em output/demo_dou e nao commita nada. Baixa o
@@ -151,17 +144,13 @@ jobs:
           python scripts/gerar_auditoria_html.py
       - name: Guardar o dossier da coleta
         # Roda mesmo se a classificacao falhar: e nesse caso que o dossier
-        # guardado permite reprocessar sem gastar Firecrawl de novo.
+        # guardado permite reprocessar sem gastar Firecrawl de novo. O
+        # boletim.json ja esta modificado e fica para o commit oficial; o
+        # publicar_saidas.sh traz o ramo sem precisar dele commitado.
         if: ${{ always() && (inputs.etapa == 'coleta' || inputs.etapa == 'ambas') }}
         run: |
           if [ ! -f output/dossier/indice.json ]; then exit 0; fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add output/dossier output/log_execucao.json
-          if git diff --staged --quiet; then exit 0; fi
-          git commit -m "Guarda a coleta de $(date +'%Y-%m-%d')"
-          git pull --rebase origin "${{ github.ref_name }}"
-          git push origin "HEAD:${{ github.ref_name }}"
+          bash scripts/publicar_saidas.sh "Guarda a coleta de $(date +'%Y-%m-%d')" "${{ github.ref_name }}" output/dossier output/log_execucao.json
       - name: Reprocessar o dossier guardado
         # Sem FIRECRAWL_API_KEY: o reprocessamento nao tem como gastar credito.
         if: ${{ inputs.etapa == 'reprocessar' }}
@@ -189,7 +178,9 @@ jobs:
           path: output/cobertura.json
 
       - uses: actions/upload-artifact@v4
-        if: ${{ inputs.etapa == 'coleta' || inputs.etapa == 'ambas' || inputs.etapa == 'reprocessar' }}
+        # Mesmo se um passo anterior falhar: o que a execucao gerou fica
+        # disponivel para baixar por 14 dias.
+        if: ${{ always() && (inputs.etapa == 'coleta' || inputs.etapa == 'ambas' || inputs.etapa == 'reprocessar') }}
         with:
           name: radares-validacao-${{ github.run_number }}
           retention-days: 14
@@ -210,13 +201,9 @@ jobs:
       - name: Commit oficial
         if: ${{ inputs.etapa == 'coleta' || inputs.etapa == 'ambas' || inputs.etapa == 'reprocessar' }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add output/boletim.json output/log_execucao.json output/auditoria.html output/validacao_*.html
-          if git diff --staged --quiet; then exit 0; fi
           if [ "${{ inputs.etapa }}" = "reprocessar" ]; then
-            git commit -m "Reprocessa Radares - $(date +'%Y-%m-%d')"
+            mensagem="Reprocessa Radares - $(date +'%Y-%m-%d')"
           else
-            git commit -m "Atualiza Radares - $(date +'%Y-%m-%d')"
+            mensagem="Atualiza Radares - $(date +'%Y-%m-%d')"
           fi
-          git push
+          bash scripts/publicar_saidas.sh "$mensagem" "${{ github.ref_name }}" output/boletim.json output/log_execucao.json output/auditoria.html output/validacao_*.html
