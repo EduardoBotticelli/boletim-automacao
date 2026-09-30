@@ -1,47 +1,382 @@
-{
- "http": {
-  "url": "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1",
-  "status": 200,
-  "erro": "",
-  "tipo": "text/html;charset=UTF-8",
-  "bytes": 381686,
-  "ms": 3422,
-  "url_final": "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1",
-  "bloqueio": "",
-  "tamanho_declarado": ""
- },
- "links_de_pagina": [],
- "formularios": [
-  "<form name=\"frmPesquisa\" class=\"frmPesquisa\" id=\"frmPesquisa\" method=\"get\" action=\"consulta.action\">"
- ],
- "campos": [
-  "anoAtoFacet",
-  "ano_ato",
-  "chkOrgaos",
-  "dt_fim",
-  "dt_inicio",
-  "facetsExistentes",
-  "lblTiposAtosSelecionados",
-  "numero_ato",
-  "optOrdem",
-  "ordemColuna",
-  "ordemDirecao",
-  "orgaosSelecionados",
-  "siglaOrgaoFacet",
-  "somente_atos_vigentes",
-  "termoBusca",
-  "tipoAtoFacet",
-  "tipoConsulta",
-  "tipoData",
-  "tiposAtosSelecionados"
- ],
- "trechos_paginacao": [
-  "his).val().split('_'); $(\"#ordemColuna\").val(arr[0]); $(\"#ordemDirecao\").val(arr[1]); $(\"#p\").val(\"1\"); $( this ).val(\"\"); $(\"#frmPesquisa\").submit(); }); $(\"#btnSubmit\").click(function(){ $(\"#ordemColuna\").val(\"\"); $(\"#ordemDirecao\").val(\"\"); $(\"#p\").val(\"1\"); //$(\"#ordenamentoDataPublicacao\").attr(\"direcao\",\"ASC\"); $(\"#frmPesquisa\").submit(); }); $(\".paginacao\").change(function(){ $(\".paginacao\").val(this.value); $(\"#frmPesquisa\").submit(); }); $(\"#btnPaginaAnterior\").click(function(){ if($(\"#p\").val()>1){ $(\"#p\").val(parseInt($(\"#p\").val())-1); $(\"#frmPesquisa\").submit(); } }); $(\"#btnProximaPagina\").click(function(){ var novoValor = parseInt($(\"#p\").val())+1; $(\"#p\").val(novoValor); $(\"#frmPesquisa\").submit(); }); $(\".btnPaginaAnterior2\").click(function(){ if($(\"#p\").val()>1){ $(\".paginacao\").val(parseInt($(\".paginacao\").val())-1); $(\"#frmPesquisa\").submit(); } });",
-  "una\").val(arr[0]); $(\"#ordemDirecao\").val(arr[1]); $(\"#p\").val(\"1\"); $( this ).val(\"\"); $(\"#frmPesquisa\").submit(); }); $(\"#btnSubmit\").click(function(){ $(\"#ordemColuna\").val(\"\"); $(\"#ordemDirecao\").val(\"\"); $(\"#p\").val(\"1\"); //$(\"#ordenamentoDataPublicacao\").attr(\"direcao\",\"ASC\"); $(\"#frmPesquisa\").submit(); }); $(\".paginacao\").change(function(){ $(\".paginacao\").val(this.value); $(\"#frmPesquisa\").submit(); }); $(\"#btnPaginaAnterior\").click(function(){ if($(\"#p\").val()>1){ $(\"#p\").val(parseInt($(\"#p\").val())-1); $(\"#frmPesquisa\").submit(); } }); $(\"#btnProximaPagina\").click(function(){ var novoValor = parseInt($(\"#p\").val())+1; $(\"#p\").val(novoValor); $(\"#frmPesquisa\").submit(); }); $(\".btnPaginaAnterior2\").click(function(){ if($(\"#p\").val()>1){ $(\".paginacao\").val(parseInt($(\".paginacao\").val())-1); $(\"#frmPesquisa\").submit(); } }); $(\".btnProximaPagina2\").click(func",
-  "$(\"#btnPaginaAnterior\").click(function(){ if($(\"#p\").val()>1){ $(\"#p\").val(parseInt($(\"#p\").val())-1); $(\"#frmPesquisa\").submit(); } }); $(\"#btnProximaPagina\").click(function(){ var novoValor = parseInt($(\"#p\").val())+1; $(\"#p\").val(novoValor); $(\"#frmPesquisa\").submit(); }); $(\".btnPaginaAnterior2\").click(function(){ if($(\"#p\").val()>1){ $(\".paginacao\").val(parseInt($(\".paginacao\").val())-1); $(\"#frmPesquisa\").submit(); } }); $(\".btnProximaPagina2\").click(function(){ var novoValor = parseInt($(\".paginacao\").val())+1; $(\".paginacao\").val(novoValor); $(\"#frmPesquisa\").submit(); }); $(\"#btnReset\").click(function(){ window.location.href = \"/sijut2consulta/consulta.action\"; }); $.extend($.expr[\":\"], { \"containsIN\": function(elem, i, match, array) { return (elem.textContent || elem.innerText || \"\").toLowerCase().indexOf((match[3] || \"\").toLowerCase()) >= 0; } }); $(\"#f",
-  "click(function(){ if($(\"#p\").val()>1){ $(\"#p\").val(parseInt($(\"#p\").val())-1); $(\"#frmPesquisa\").submit(); } }); $(\"#btnProximaPagina\").click(function(){ var novoValor = parseInt($(\"#p\").val())+1; $(\"#p\").val(novoValor); $(\"#frmPesquisa\").submit(); }); $(\".btnPaginaAnterior2\").click(function(){ if($(\"#p\").val()>1){ $(\".paginacao\").val(parseInt($(\".paginacao\").val())-1); $(\"#frmPesquisa\").submit(); } }); $(\".btnProximaPagina2\").click(function(){ var novoValor = parseInt($(\".paginacao\").val())+1; $(\".paginacao\").val(novoValor); $(\"#frmPesquisa\").submit(); }); $(\"#btnReset\").click(function(){ window.location.href = \"/sijut2consulta/consulta.action\"; }); $.extend($.expr[\":\"], { \"containsIN\": function(elem, i, match, array) { return (elem.textContent || elem.innerText || \"\").toLowerCase().indexOf((match[3] || \"\").toLowerCase()) >= 0; } }); $(\"#filtroOrgaos\").keyup(function("
- ],
- "scripts_com_p": [
-  "//DEFININDO VALORES DA ORDENACAO PERSONALIZADA var colunaOrdem = \"Publicacao\"; var direcaoOrdem = \"DESC\"; var tamanhoTermoBusca = \"0\"; $.extend($.expr[':'], { 'containsi': function(elem, i, match, array) { return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || \"\").toLowerCase()) >= 0; } }); function clearOrgaosFilter(){ $(\"#filterOrgaos\").val(\"\"); $(\".itemOrgaos\").css(\"display\", \"\"); } function verificaStopWords(termo){ var lines = stopWords; for (var i = 0, len = lines.length; i < len; i++) { if(termo === lines[i]){ return true; } } return false; } function confi"
- ]
-}
+[
+ {
+  "fonte": "Receita Federal | Normas",
+  "coleta": "receita",
+  "listadas": 52,
+  "requisicoes": 3,
+  "com_data": 52,
+  "com_descricao": 52,
+  "na_janela": 52,
+  "aviso": "A página 1 inteira está na janela e a página 2 veio vazia: pode haver atos da janela fora da coleta.",
+  "datas": [
+   "2026-09-29",
+   "2026-09-30"
+  ],
+  "enviar": [
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo Corat nº 79",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836",
+    "descricao": "Altera os Anexos Únicos dos Atos Declaratórios Executivos Corat nº 63, de 26 de agosto de 2026, e nº 78, de 28"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo Sutri nº 9",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153837",
+    "descricao": "Vincula a Secretaria Especial da Receita Federal do Brasil e a pessoa jurídica que menciona a Termo de Consens"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Solução de Consulta Cosit nº 195",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153838",
+    "descricao": "Assunto: Imposto sobre a Renda de Pessoa Jurídica - IRPJ INCIDÊNCIA. REPASSES DE RECURSOS. ORÇAMENTO GERAL DO "
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Solução de Consulta Cosit nº 190",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153839",
+    "descricao": "Assunto: Imposto sobre a Renda Retido na Fonte - IRRF SERVIÇOS DE MANUTENÇÃO E REPARAÇÃO ELÉTRICA E DE MANUTEN"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo Coana nº 136",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153835",
+    "descricao": "Certifica como Operador Econômico Autorizado a pessoa jurídica que especifica."
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo ALF/BSB nº 47",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153840",
+    "descricao": "\"Dispõe sobre a liberação, para fins de transferência de propriedade, do veículo que menciona.\""
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo ALF/MNS nº 56",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153841",
+    "descricao": "Habilita a empresa mencionada ao regime de suspensão da contribuição para o PIS/PASEP-Importação e da COFINS/I"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Portaria IRF/SLS nº 6",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153843",
+    "descricao": "Atribui à Equipe de Vigilância e Repressão da Inspetoria da Receita Federal do Brasil do Porto de São Luís a e"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo ALF/BHE nº 59",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153844",
+    "descricao": "Inclusão de interessados no Cadastro de Ajudante de Despachante Aduaneiro"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo ALF/BHE nº 58",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153842",
+    "descricao": "Inclusão de interessados no Cadastro de Ajudante de Despachante Aduaneiro"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/BHE nº 99",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153845",
+    "descricao": "Atualiza as marcas comerciais relativas ao Registro Especial de Bebidas Alcoólicas nº 06101/291."
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Portaria SRRF08 nº 1280",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153847",
+    "descricao": "Dispõe sobre o período diário para atendimento e o horário de funcionamento do atendimento no âmbito das unida"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Portaria SRRF08 nº 1279",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153846",
+    "descricao": "Dispõe sobre as atividades das Equipes de Gestão do Crédito Tributário e do Direito Creditório (Eqrat) no âmbi"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/SOR nº 1507",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153854",
+    "descricao": "Concede Habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/SOR nº 1506",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153853",
+    "descricao": "Concede Habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/SOR nº 1505",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153852",
+    "descricao": "Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infra-Estrutura (Reidi) à pesso"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/SOR nº 1504",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153851",
+    "descricao": "Concede Habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/SOR nº 1503",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153850",
+    "descricao": "Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infra-Estrutura (Reidi) à pesso"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/SOR nº 1485",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153849",
+    "descricao": "Declara a nulidade do ATO DECLARATÓRIO EXECUTIVO EQBEN/DELEBEN/SRRF08ª/RFB Nº 1.418, DE 9 DE SETEMBRO DE 2026,"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/SOR nº 1483",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153848",
+    "descricao": "Concede coabilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (Reidi) à pesso"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/SOR nº 521",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153855",
+    "descricao": "Retificação"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Portaria SRRF10 nº 990",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153856",
+    "descricao": "Dispõe sobre a suspensão das atividades da Agência da Receita Federal do Brasil em Lagoa Vermelha (RS) e sobre"
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/NHO nº 34",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153858",
+    "descricao": "Inscreve no Registro Especial e autoriza engarrafamento dos produtos que menciona."
+   },
+   {
+    "data": "2026-09-30",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/NHO nº 33",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153857",
+    "descricao": "nscreve no Registro Especial e autoriza engarrafamento dos produtos que menciona."
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo Corat nº 78",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153803",
+    "descricao": "Divulga a Agenda Tributária do mês de outubro de 2026."
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Solução de Consulta Cosit nº 193",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153829",
+    "descricao": "Assunto: Simples Nacional INOVAÇÃO TECNOLÓGICA. CARACTERIZAÇÃO E CRITÉRIOS. INCENTIVOS FISCAIS. MICROEMPRESAS "
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Solução de Consulta Cosit nº 192",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153822",
+    "descricao": "Assunto: Normas Gerais de Direito Tributário DENÚNCIA ESPONTÂNEA. DÉBITO ORIGINAL DECLARADO A MENOR E COMPENSA"
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Solução de Consulta Cosit nº 191",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153821",
+    "descricao": "Assunto: Simples Nacional SIMPLES NACIONAL. SIMEI. DESENQUADRAMENTO. CONTINUIDADE DA ATIVIDADE. FATOR \"R\". REC"
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Solução de Consulta Cosit nº 189",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153820",
+    "descricao": "Assunto: Contribuição para o PIS/Pasep SERVIÇOS DE SEGURANÇA PRIVADA. MONITORAMENTO DE SISTEMAS ELETRÔNICOS DE"
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Solução de Consulta Cosit nº 188",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153828",
+    "descricao": "Assunto: Imposto sobre a Renda de Pessoa Física - IRPF DÉCIMO TERCEIRO SALÁRIO PROPORCIONAL RELACIONADO AO PER"
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Solução de Consulta Cosit nº 187",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153819",
+    "descricao": "Assunto: Obrigações Acessórias DECLARAÇÃO DE INCENTIVOS, RENÚNCIAS, BENEFÍCIOS E IMUNIDADES DE NATUREZA TRIBUT"
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Solução de Consulta Cosit nº 185",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153818",
+    "descricao": "Assunto: Simples Nacional PRESTAÇÃO DE SERVIÇOS MÉDICOS. CESSÃO OU LOCAÇÃO DE MÃO DE OBRA. INGRESSO OU PERMANÊ"
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo ALF/MNS nº 55",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153815",
+    "descricao": "Inscreve peticionário no Registro de Ajudantes de Despachantes Aduaneiros, mantido pela Secretaria da Receita "
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo ALF/MNS nº 54",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153809",
+    "descricao": "Inscreve peticionário no Registro de Ajudantes de Despachantes Aduaneiros, mantido pela Secretaria da Receita "
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo SRRF03 nº 6",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153807",
+    "descricao": "Declara alfandegado a Instalação Portuária de Uso Privativo, localizado no município de Luís Correia, Estado d"
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo ALF/BHE nº 57",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153825",
+    "descricao": "Certifica como Operador Econômico Autorizado a empresa que especifica."
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo ALF/BHE nº 56",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153806",
+    "descricao": "Altera o Ato Declaratório Executivo nº55, de 21 de setembro de 2026, para fins de readequação do resultado do "
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo Decex/RJO nº 190",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153816",
+    "descricao": "Declara habilitada ao regime aduaneiro especial de utilização econômica destinado a bens a serem utilizados na"
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo ALF/VCP nº 15",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153802",
+    "descricao": "Inclui inscrições no Registro de Ajudantes de Despachantes Aduaneiros."
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo Decex/SPO nº 106",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153827",
+    "descricao": "Certifica como Operador Econômico Autorizado a empresa que especifica."
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo Decex/SPO nº 105",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153808",
+    "descricao": "Certifica como Operador Econômico Autorizado a empresa que especifica."
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo Decex/SPO nº 102",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153805",
+    "descricao": "Certifica como Operador Econômico Autorizado a empresa que especifica."
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/SOR nº 1502",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153804",
+    "descricao": "Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infra-Estrutura (Reidi) à pesso"
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/SOR nº 1501",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153810",
+    "descricao": "Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infra-Estrutura (Reidi) à pesso"
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/SOR nº 1500",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153811",
+    "descricao": "Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa"
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/SOR nº 1499",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153817",
+    "descricao": "Declara a anulação do ADE DRF/REC Nº 101/2023, que concedeu habilitação definitiva ao Programa Mais Leite Saud"
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/SOR nº 1498",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153826",
+    "descricao": "Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infra-Estrutura (Reidi) à pesso"
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/SOR nº 1497",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153814",
+    "descricao": "Concede habilitação definitiva ao Programa Mais Leite Saudável à pessoa jurídica que menciona."
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/SOR nº 1496",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153813",
+    "descricao": "Concede habilitação definitiva ao Programa Mais Leite Saudável à pessoa jurídica que menciona."
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/SOR nº 1495",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153812",
+    "descricao": "Concede habilitação definitiva ao Programa Mais Leite Saudável à pessoa jurídica que menciona."
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo DRF/SOR nº 1494",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153824",
+    "descricao": "Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infra-Estrutura (Reidi) à pesso"
+   },
+   {
+    "data": "2026-09-29",
+    "hora": "",
+    "titulo": "Ato Declaratório Executivo SRRF09 nº 30",
+    "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153823",
+    "descricao": "Concede a segunda alteração do regime especial de emissão de documentos e escrituração de livros fiscais refer"
+   }
+  ]
+ }
+]
