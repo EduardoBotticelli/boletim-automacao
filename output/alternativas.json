@@ -1,0 +1,4966 @@
+{
+ "executado_em": "2026-09-30T14:45:53.426419-03:00",
+ "janela": {
+  "inicio": "2026-09-29",
+  "fim": "2026-09-30"
+ },
+ "user_agent": "BoletimRadarBot/1.0 (coleta automatizada de publicacoes oficiais para boletim juridico; uma visita por pagina ao dia)",
+ "requisicoes": 184,
+ "robots": {
+  "www4.planalto.gov.br": {
+   "url": "http://www4.planalto.gov.br/robots.txt",
+   "status": null,
+   "crawl_delay": null,
+   "erro": "Remote end closed connection without response",
+   "regras": "inacessivel, tratado como proibido"
+  },
+  "www.bcb.gov.br": {
+   "url": "https://www.bcb.gov.br/robots.txt",
+   "status": 200,
+   "crawl_delay": null,
+   "erro": "",
+   "regras": "lidas"
+  },
+  "www.ccee.org.br": {
+   "url": "https://www.ccee.org.br/robots.txt",
+   "status": 200,
+   "crawl_delay": null,
+   "erro": "",
+   "regras": "lidas"
+  },
+  "www.in.gov.br": {
+   "url": "https://www.in.gov.br/robots.txt",
+   "status": null,
+   "crawl_delay": null,
+   "erro": "Remote end closed connection without response",
+   "regras": "inacessivel, tratado como proibido"
+  },
+  "normas.receita.fazenda.gov.br": {
+   "url": "http://normas.receita.fazenda.gov.br/robots.txt",
+   "status": 404,
+   "crawl_delay": null,
+   "erro": "HTTP 404",
+   "regras": "sem regras"
+  },
+  "www.gov.br": {
+   "url": "https://www.gov.br/robots.txt",
+   "status": 200,
+   "crawl_delay": null,
+   "erro": "",
+   "regras": "lidas"
+  },
+  "www.b3.com.br": {
+   "url": "http://www.b3.com.br/robots.txt",
+   "status": 200,
+   "crawl_delay": null,
+   "erro": "",
+   "regras": "lidas"
+  },
+  "consultas-publicas.mme.gov.br": {
+   "url": "https://consultas-publicas.mme.gov.br/robots.txt",
+   "status": 200,
+   "crawl_delay": null,
+   "erro": "",
+   "regras": "sem regras"
+  },
+  "www.ons.org.br": {
+   "url": "https://www.ons.org.br/robots.txt",
+   "status": 404,
+   "crawl_delay": null,
+   "erro": "HTTP 404",
+   "regras": "sem regras"
+  },
+  "www.epe.gov.br": {
+   "url": "https://www.epe.gov.br/robots.txt",
+   "status": 200,
+   "crawl_delay": null,
+   "erro": "",
+   "regras": "lidas"
+  },
+  "sinoreg-es.org.br": {
+   "url": "https://sinoreg-es.org.br/robots.txt",
+   "status": 200,
+   "crawl_delay": null,
+   "erro": "",
+   "regras": "lidas"
+  }
+ },
+ "fontes": [
+  {
+   "fonte": "Planalto | Resenha Diaria",
+   "url": "http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/setembro-resenha-diaria",
+   "estado": "ativa",
+   "host": "www4.planalto.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/setembro-resenha-diaria",
+     "http": {
+      "url": "http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/setembro-resenha-diaria",
+      "status": "robots",
+      "erro": "robots.txt nao permite",
+      "tipo": "",
+      "bytes": 0,
+      "ms": 0,
+      "url_final": "http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/setembro-resenha-diaria",
+      "bloqueio": ""
+     }
+    }
+   ],
+   "robots": {
+    "url": "http://www4.planalto.gov.br/robots.txt",
+    "status": null,
+    "crawl_delay": null,
+    "erro": "Remote end closed connection without response",
+    "regras": "inacessivel, tratado como proibido",
+    "listagem_permitida": false
+   },
+   "plataforma": "desconhecida"
+  },
+  {
+   "fonte": "Banco Central | Normas",
+   "url": "https://www.bcb.gov.br/estabilidadefinanceira/buscanormas?dataInicioBusca=29%2F09%2F2026&dataFimBusca=30%2F09%2F2026&tipoDocumento=Todos",
+   "estado": "ativa",
+   "host": "www.bcb.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.bcb.gov.br/estabilidadefinanceira/buscanormas?dataInicioBusca=29%2F09%2F2026&dataFimBusca=30%2F09%2F2026&tipoDocumento=Todos",
+     "http": {
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/buscanormas?dataInicioBusca=29%2F09%2F2026&dataFimBusca=30%2F09%2F2026&tipoDocumento=Todos",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html",
+      "bytes": 2871,
+      "ms": 179,
+      "url_final": "https://www.bcb.gov.br/estabilidadefinanceira/buscanormas?dataInicioBusca=29%2F09%2F2026&dataFimBusca=30%2F09%2F2026&tipoDocumento=Todos",
+      "bloqueio": ""
+     },
+     "publicacoes": 0,
+     "com_titulo": 0,
+     "com_link": 0,
+     "com_data": 0,
+     "com_descricao": 0,
+     "na_janela": 0,
+     "data_mais_antiga": "",
+     "data_mais_recente": "",
+     "amostra": [],
+     "plataforma": "desconhecida",
+     "titulo_pagina": "Banco Central do Brasil",
+     "chars_texto": 0,
+     "links": 0,
+     "scripts": 5,
+     "parece_spa": true,
+     "feeds_anunciados": [],
+     "ok": false,
+     "pistas_de_api": []
+    },
+    {
+     "metodo": "api_bcb_buscanormativos",
+     "url": "https://www.bcb.gov.br/api/search/app/normativos/buscanormativos?querytext=ContentType:normativo%20AND%20contentSource:normativos&rowlimit=40&startrow=0&sortlist=Data1OWSDATE:descending&refinementfilters=Data:range(datetime(2026-09-29),datetime(2026-10-01))",
+     "http": {
+      "url": "https://www.bcb.gov.br/api/search/app/normativos/buscanormativos?querytext=ContentType:normativo%20AND%20contentSource:normativos&rowlimit=40&startrow=0&sortlist=Data1OWSDATE:descending&refinementfilters=Data:range(datetime(2026-09-29),datetime(2026-10-01))",
+      "status": 200,
+      "erro": "",
+      "tipo": "application/json; charset=utf-8",
+      "bytes": 11771,
+      "ms": 788,
+      "url_final": "https://www.bcb.gov.br/api/search/app/normativos/buscanormativos?querytext=ContentType:normativo%20AND%20contentSource:normativos&rowlimit=40&startrow=0&sortlist=Data1OWSDATE:descending&refinementfilters=Data:range(datetime(2026-09-29),datetime(2026-10-01))",
+      "bloqueio": ""
+     },
+     "publicacoes": 13,
+     "com_titulo": 13,
+     "com_link": 13,
+     "com_data": 13,
+     "com_descricao": 13,
+     "na_janela": 12,
+     "data_mais_antiga": "2026-09-28",
+     "data_mais_recente": "2026-09-30",
+     "amostra": [
+      {
+       "titulo": "Comunicado N° 46.044",
+       "data": "2026-09-30",
+       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46044",
+       "descricao": "Divulga as taxas de juros &quot;Pm&quot; e &quot;PMm&quot; vigentes em outubro de 2026."
+      },
+      {
+       "titulo": "Comunicado N° 46.043",
+       "data": "2026-09-30",
+       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46043",
+       "descricao": "Divulga a taxa de juros &quot;Jm&quot; e o fator de ajuste &quot;a5&quot; vigentes em outubro de 2026."
+      },
+      {
+       "titulo": "Comunicado N° 46.042",
+       "data": "2026-09-30",
+       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46042",
+       "descricao": "Divulga a Taxa de Juros de Longo Prazo (TJLP) para o quarto trimestre de 2026."
+      }
+     ],
+     "ok": true,
+     "chaves_do_item": [
+      "AssuntoNormativoOWSMTXT",
+      "CanceladoOWSBOOL",
+      "HitHighlightedSummary",
+      "NumeroOWSNMBR",
+      "RefinableString01",
+      "RefinableString03",
+      "RefinableString05",
+      "ResponsavelOWSText",
+      "RevogadoOWSBOOL",
+      "RowNumber",
+      "TipodoNormativoOWSCHCS",
+      "data",
+      "listItemId",
+      "title"
+     ],
+     "total_declarado": 13,
+     "cobre_a_janela": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.bcb.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "desconhecida"
+  },
+  {
+   "fonte": "CCEE | Noticias",
+   "url": "https://www.ccee.org.br/busca-ccee?q=&dtIni=29%2F09%2F2026&dtFim=30%2F09%2F2026&structure=ccee-noticias&ordenacao=Mais%20recentes",
+   "estado": "ativa",
+   "host": "www.ccee.org.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.ccee.org.br/busca-ccee?q=&dtIni=29%2F09%2F2026&dtFim=30%2F09%2F2026&structure=ccee-noticias&ordenacao=Mais%20recentes",
+     "http": {
+      "url": "https://www.ccee.org.br/busca-ccee?q=&dtIni=29%2F09%2F2026&dtFim=30%2F09%2F2026&structure=ccee-noticias&ordenacao=Mais%20recentes",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=UTF-8",
+      "bytes": 197702,
+      "ms": 1201,
+      "url_final": "https://www.ccee.org.br/busca-ccee?q=&dtIni=29%2F09%2F2026&dtFim=30%2F09%2F2026&structure=ccee-noticias&ordenacao=Mais%20recentes",
+      "bloqueio": ""
+     },
+     "publicacoes": 41,
+     "com_titulo": 41,
+     "com_link": 41,
+     "com_data": 3,
+     "com_descricao": 5,
+     "na_janela": 3,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-09-30",
+     "amostra": [
+      {
+       "titulo": "Confira a apresentação e o vídeo do Encontro do PLD realizado em 26/09",
+       "data": "2026-09-30",
+       "url": "https://www.ccee.org.br/-/confira-a-apresentacao-e-o-video-do-encontro-do-pld-realizado-em-26-09",
+       "descricao": "Evento apresentou analises de comportamento do preco e projecoes : NOTICIAS"
+      },
+      {
+       "titulo": "CCEE amplia módulo digital para processos de Monitoramento Intensivo",
+       "data": "2026-09-29",
+       "url": "https://www.ccee.org.br/-/ccee-amplia-modulo-digital-para-processos-de-monitoramento-intensivo",
+       "descricao": "Solucao passa a atender mais uma frente de monitoramento e avanca na digitalizacao e integracao dos processos da organizacao : NOTICIAS"
+      },
+      {
+       "titulo": "Últimos dias para inscrição no curso de Formação de Preços em parceria com a PSR",
+       "data": "2026-09-29",
+       "url": "https://www.ccee.org.br/-/ultimos-dias-para-inscricao-no-curso-de-formacao-de-precos-em-parceria-com-a-psr",
+       "descricao": "Primeira edicao on-line da capacitacao apresenta diferentes modelos e perspectivas sobre a formacao de precos no mercado de energia : 1 de 1 Loading... Menu de Navegacao a ccee comunicacao ajuda tecnologia dados e analises precos mercado CCEE Academy documentos Fechar Ao clicar em ‘Aceitar todos os "
+      }
+     ],
+     "plataforma": "liferay",
+     "titulo_pagina": "busca-ccee - CCEE",
+     "chars_texto": 10160,
+     "links": 93,
+     "scripts": 56,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.ccee.org.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "liferay"
+  },
+  {
+   "fonte": "Destaques do D.O.U.",
+   "url": "https://www.in.gov.br/leiturajornal",
+   "estado": "ativa",
+   "host": "www.in.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.in.gov.br/leiturajornal",
+     "http": {
+      "url": "https://www.in.gov.br/leiturajornal",
+      "status": "robots",
+      "erro": "robots.txt nao permite",
+      "tipo": "",
+      "bytes": 0,
+      "ms": 0,
+      "url_final": "https://www.in.gov.br/leiturajornal",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_dou_leiturajornal",
+     "url": "https://www.in.gov.br/leiturajornal?data=29-09-2026&secao=do1",
+     "http": {
+      "url": "https://www.in.gov.br/leiturajornal?data=29-09-2026&secao=do1",
+      "status": "robots",
+      "erro": "robots.txt nao permite",
+      "tipo": "",
+      "bytes": 0,
+      "ms": 0,
+      "url_final": "https://www.in.gov.br/leiturajornal?data=29-09-2026&secao=do1",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_dou_leiturajornal",
+     "url": "https://www.in.gov.br/leiturajornal?data=30-09-2026&secao=do1",
+     "http": {
+      "url": "https://www.in.gov.br/leiturajornal?data=30-09-2026&secao=do1",
+      "status": "robots",
+      "erro": "robots.txt nao permite",
+      "tipo": "",
+      "bytes": 0,
+      "ms": 0,
+      "url_final": "https://www.in.gov.br/leiturajornal?data=30-09-2026&secao=do1",
+      "bloqueio": ""
+     }
+    }
+   ],
+   "robots": {
+    "url": "https://www.in.gov.br/robots.txt",
+    "status": null,
+    "crawl_delay": null,
+    "erro": "Remote end closed connection without response",
+    "regras": "inacessivel, tratado como proibido",
+    "listagem_permitida": false
+   },
+   "plataforma": "desconhecida"
+  },
+  {
+   "fonte": "Receita Federal | Normas",
+   "url": "http://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1",
+   "estado": "ativa",
+   "host": "normas.receita.fazenda.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "http://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1",
+     "http": {
+      "url": "http://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=UTF-8",
+      "bytes": 381686,
+      "ms": 3110,
+      "url_final": "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1",
+      "bloqueio": ""
+     },
+     "publicacoes": 0,
+     "com_titulo": 0,
+     "com_link": 0,
+     "com_data": 0,
+     "com_descricao": 0,
+     "na_janela": 0,
+     "data_mais_antiga": "",
+     "data_mais_recente": "",
+     "amostra": [],
+     "plataforma": "desconhecida",
+     "titulo_pagina": "Normas",
+     "chars_texto": 82162,
+     "links": 122,
+     "scripts": 24,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": false,
+     "pistas_de_api": []
+    }
+   ],
+   "robots": {
+    "url": "http://normas.receita.fazenda.gov.br/robots.txt",
+    "status": 404,
+    "crawl_delay": null,
+    "erro": "HTTP 404",
+    "regras": "sem regras",
+    "listagem_permitida": true
+   },
+   "plataforma": "desconhecida"
+  },
+  {
+   "fonte": "Ministério da Fazenda | Notícias",
+   "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias",
+     "http": {
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 175672,
+      "ms": 561,
+      "url_final": "https://www.gov.br/fazenda/pt-br/assuntos/noticias",
+      "bloqueio": ""
+     },
+     "publicacoes": 30,
+     "com_titulo": 30,
+     "com_link": 30,
+     "com_data": 30,
+     "com_descricao": 30,
+     "na_janela": 3,
+     "data_mais_antiga": "2026-09-11",
+     "data_mais_recente": "2026-09-30",
+     "amostra": [
+      {
+       "titulo": "Saldo de operações de crédito garantidas pela União atinge R$ 353,64 bilhões no 2º quadrimestre de 2026",
+       "data": "2026-09-30",
+       "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/saldo-de-operacoes-de-credito-garantidas-pela-uniao-atinge-r-353-64-bilhoes-no-2o-quadrimestre-de-2026",
+       "descricao": "- Os dados foram publicados nesta quarta-feira (30/09) pelo Tesouro Nacional no Relatorio Quadrimestral de Operacoes de Credito Garantidas Tags: CONTAS PUBLICAS"
+      },
+      {
+       "titulo": "Governo Central registra em agosto déficit primário de R$ 13,6 bilhões, aponta o Resultado do Tesouro Nacional",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/governo-central-registra-em-agosto-deficit-primario-de-r-13-6-bilhoes-aponta-o-resultado-do-tesouro-nacional",
+       "descricao": "- Em agosto do ano passado, o deficit foi de R$ 15,5 bilhoes, em valores correntes Tags: FIQUE ATENTO"
+      },
+      {
+       "titulo": "Simples Nacional 2027 tem novos prazos para microempresas e empresas de pequeno porte",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/simples-nacional-2027-tem-novos-prazos-para-microempresas-e-empresas-de-pequeno-porte",
+       "descricao": "- Resolucao com as novas datas foi publicada na segunda-feira (28/09) Tags: RELATORIO"
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "Notícias — Ministério da Fazenda",
+     "chars_texto": 25001,
+     "links": 159,
+     "scripts": 37,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 438,
+      "url_final": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 427,
+      "url_final": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 482,
+      "url_final": "https://www.gov.br/fazenda/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 437,
+      "url_final": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/fazenda/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/fazenda/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 484,
+      "url_final": "https://www.gov.br/fazenda/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/fazenda/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/fazenda/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 96079,
+      "ms": 427,
+      "url_final": "https://www.gov.br/fazenda/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 49,
+     "com_titulo": 49,
+     "com_link": 49,
+     "com_data": 2,
+     "com_descricao": 1,
+     "na_janela": 2,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      },
+      {
+       "titulo": "Conselho Monetário Nacional",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/fazenda/pt-br/assuntos/cmn",
+       "descricao": ""
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "ANPD | Notícias",
+   "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias",
+     "http": {
+      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 325526,
+      "ms": 974,
+      "url_final": "https://www.gov.br/anpd/pt-br/assuntos/noticias",
+      "bloqueio": ""
+     },
+     "publicacoes": 11,
+     "com_titulo": 11,
+     "com_link": 11,
+     "com_data": 0,
+     "com_descricao": 1,
+     "na_janela": 0,
+     "data_mais_antiga": "",
+     "data_mais_recente": "",
+     "amostra": [
+      {
+       "titulo": "Deliberações do Conselho Diretor",
+       "data": "",
+       "url": "https://www.gov.br/anpd/pt-br/assuntos/deliberacoes-do-conselho-diretor",
+       "descricao": ""
+      },
+      {
+       "titulo": "Denúncia de descumprimento da LGPD",
+       "data": "",
+       "url": "https://www.gov.br/anpd/pt-br/assuntos/denuncia-de-descumprimento-da-lgpd",
+       "descricao": ""
+      },
+      {
+       "titulo": "Comunicação de incidente de segurança",
+       "data": "",
+       "url": "https://www.gov.br/anpd/pt-br/assuntos/comunicacao-de-incidentes-de-seguranca-cis",
+       "descricao": ""
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "NotíciasPortal Gov.br",
+     "chars_texto": 5648,
+     "links": 61,
+     "scripts": 8,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 150189,
+      "ms": 792,
+      "url_final": "https://www.gov.br/anpd/pt-br/assuntos/noticias/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 150241,
+      "ms": 765,
+      "url_final": "https://www.gov.br/anpd/pt-br/assuntos/noticias/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 325660,
+      "ms": 900,
+      "url_final": "https://www.gov.br/anpd/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": ""
+     },
+     "erro_leitura": "resposta nao e JSON (text/html; charset=utf-8)"
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 167011,
+      "ms": 982,
+      "url_final": "https://www.gov.br/anpd/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": ""
+     },
+     "erro_leitura": "resposta nao e JSON (text/html; charset=utf-8)"
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/anpd/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anpd/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 167013,
+      "ms": 924,
+      "url_final": "https://www.gov.br/anpd/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": ""
+     },
+     "erro_leitura": "resposta nao e JSON (text/html; charset=utf-8)"
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/anpd/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/anpd/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 167012,
+      "ms": 922,
+      "url_final": "https://www.gov.br/anpd/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 0,
+     "com_titulo": 0,
+     "com_link": 0,
+     "com_data": 0,
+     "com_descricao": 0,
+     "na_janela": 0,
+     "data_mais_antiga": "",
+     "data_mais_recente": "",
+     "amostra": [],
+     "ok": false
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "CVM | Notícias",
+   "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias",
+     "http": {
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 197295,
+      "ms": 427,
+      "url_final": "https://www.gov.br/cvm/pt-br/assuntos/noticias",
+      "bloqueio": ""
+     },
+     "publicacoes": 30,
+     "com_titulo": 30,
+     "com_link": 30,
+     "com_data": 30,
+     "com_descricao": 30,
+     "na_janela": 1,
+     "data_mais_antiga": "2026-08-31",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Sessão de Julgamento em 29/9",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/sessao-de-julgamento-em-29-9",
+       "descricao": "- Processos serao julgados a partir das 15h Tags: EVENTO"
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "Notícias — Comissão de Valores Mobiliários",
+     "chars_texto": 21203,
+     "links": 120,
+     "scripts": 35,
+     "parece_spa": false,
+     "feeds_anunciados": [
+      {
+       "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/RSS",
+       "tipo": "application/rss+xml",
+       "titulo": "Notícias - RSS 1.0"
+      },
+      {
+       "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/rss.xml",
+       "tipo": "application/rss+xml",
+       "titulo": "Notícias - RSS 2.0"
+      },
+      {
+       "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/atom.xml",
+       "tipo": "application/rss+xml",
+       "titulo": "Notícias - Atom"
+      }
+     ],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/RSS",
+     "anunciado": true,
+     "http": {
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/RSS",
+      "status": 200,
+      "erro": "",
+      "tipo": "application/atom+xml; charset=utf-8",
+      "bytes": 8445,
+      "ms": 430,
+      "url_final": "https://www.gov.br/cvm/pt-br/assuntos/noticias/RSS",
+      "bloqueio": ""
+     },
+     "publicacoes": 15,
+     "com_titulo": 15,
+     "com_link": 15,
+     "com_data": 15,
+     "com_descricao": 1,
+     "na_janela": 0,
+     "data_mais_antiga": "2020-09-10",
+     "data_mais_recente": "2026-07-03",
+     "amostra": [
+      {
+       "titulo": "2021",
+       "data": "2024-02-01",
+       "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2021",
+       "descricao": ""
+      },
+      {
+       "titulo": "2009",
+       "data": "2024-12-19",
+       "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2009",
+       "descricao": ""
+      },
+      {
+       "titulo": "2006",
+       "data": "2024-12-19",
+       "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2006",
+       "descricao": ""
+      }
+     ],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/rss.xml",
+     "anunciado": true,
+     "http": {
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/rss.xml",
+      "status": 200,
+      "erro": "",
+      "tipo": "application/atom+xml; charset=utf-8",
+      "bytes": 3983,
+      "ms": 421,
+      "url_final": "https://www.gov.br/cvm/pt-br/assuntos/noticias/rss.xml",
+      "bloqueio": ""
+     },
+     "publicacoes": 15,
+     "com_titulo": 15,
+     "com_link": 0,
+     "com_data": 15,
+     "com_descricao": 1,
+     "na_janela": 0,
+     "data_mais_antiga": "2020-09-10",
+     "data_mais_recente": "2026-07-03",
+     "amostra": [
+      {
+       "titulo": "2021",
+       "data": "2024-02-01",
+       "url": "",
+       "descricao": ""
+      },
+      {
+       "titulo": "2009",
+       "data": "2024-12-19",
+       "url": "",
+       "descricao": ""
+      },
+      {
+       "titulo": "2006",
+       "data": "2024-12-19",
+       "url": "",
+       "descricao": ""
+      }
+     ],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/atom.xml",
+     "anunciado": true,
+     "http": {
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/atom.xml",
+      "status": 200,
+      "erro": "",
+      "tipo": "application/atom+xml; charset=utf-8",
+      "bytes": 7907,
+      "ms": 422,
+      "url_final": "https://www.gov.br/cvm/pt-br/assuntos/noticias/atom.xml",
+      "bloqueio": ""
+     },
+     "publicacoes": 15,
+     "com_titulo": 15,
+     "com_link": 15,
+     "com_data": 15,
+     "com_descricao": 1,
+     "na_janela": 0,
+     "data_mais_antiga": "2020-09-10",
+     "data_mais_recente": "2026-07-03",
+     "amostra": [
+      {
+       "titulo": "2021",
+       "data": "2024-02-01",
+       "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2021",
+       "descricao": ""
+      },
+      {
+       "titulo": "2009",
+       "data": "2024-12-19",
+       "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2009",
+       "descricao": ""
+      },
+      {
+       "titulo": "2006",
+       "data": "2024-12-19",
+       "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2006",
+       "descricao": ""
+      }
+     ],
+     "ok": true
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 488,
+      "url_final": "https://www.gov.br/cvm/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 493,
+      "url_final": "https://www.gov.br/cvm/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/cvm/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/cvm/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 495,
+      "url_final": "https://www.gov.br/cvm/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/cvm/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/cvm/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 127561,
+      "ms": 584,
+      "url_final": "https://www.gov.br/cvm/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 86,
+     "com_titulo": 86,
+     "com_link": 86,
+     "com_data": 2,
+     "com_descricao": 1,
+     "na_janela": 2,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      },
+      {
+       "titulo": "Blog Penso, logo invisto?",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/cvm/pt-br/assuntos/educacao/blog-penso-logo-invisto",
+       "descricao": ""
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "B3 | Ofícios e Comunicados",
+   "url": "http://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/",
+   "estado": "ativa",
+   "host": "www.b3.com.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "http://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/",
+     "http": {
+      "url": "http://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=UTF-8",
+      "bytes": 72965,
+      "ms": 3015,
+      "url_final": "https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/",
+      "bloqueio": ""
+     },
+     "publicacoes": 11,
+     "com_titulo": 11,
+     "com_link": 11,
+     "com_data": 8,
+     "com_descricao": 10,
+     "na_janela": 0,
+     "data_mais_antiga": "2016-03-28",
+     "data_mais_recente": "2026-11-03",
+     "amostra": [
+      {
+       "titulo": "Download do Documento",
+       "data": "",
+       "url": "https://www.b3.com.br/data/files/91/13/BC/F1/1DEE0A105BF9020AAC094EA8/OC%20062-2026-VPC%20DESLISTAGEM%20DO%20FUTURO%20DE%20SP%20MERVAL%20E%20REPUBLICACAO%20DOS%20CONTRATOS%20DE%20DERIVATIVOS%20DE%20EQUITIES_PT.pdf",
+       "descricao": "A nova configuracao permite manter a interacao continua com a boleta em preenchimento na plataforma."
+      },
+      {
+       "titulo": "Download do Documento",
+       "data": "2026-11-03",
+       "url": "https://www.b3.com.br/data/files/CB/54/E6/F9/EBDE0A105BF9020AAC094EA8/CE%20056-2026-VNC%20EPUMA%20PRESERVACAO%20DE%20FOCO%20EM%20BOLETAS%20DURANTE%20O%20RECEBIMENTO%20DE%20NOTICIAS_PT.pdf",
+       "descricao": "A partir de , as Operacoes Casadas de DAP com NTN-B via plataforma Trademate deixarao de integrar o programa."
+      },
+      {
+       "titulo": "Download do Documento",
+       "data": "2026-11-03",
+       "url": "https://www.b3.com.br/data/files/35/27/0D/AF/CADE0A105BF9020AAC094EA8/OC%20041-2026%20PRE_PROGRAMA%20DE%20FORMADOR%20DE%20MERCADO%20PARA%20PRODUTOS%20INDEXADOS%20A%20INFLACAO%20IPCA%20ALTERACAO%20NO%20BENEFICIO%20ADICIONAL_PT.pdf",
+       "descricao": "Devido ao periodo eleitoral, a alteracao no horario de encerramento dos calls de fechamento dos ETFs foi adiada para , com o objetivo de aprimorar a eficiencia operacional e a formacao de precos dos ativos."
+      }
+     ],
+     "plataforma": "desconhecida",
+     "titulo_pagina": "Ofícios e comunicados | B3",
+     "chars_texto": 7914,
+     "links": 31,
+     "scripts": 56,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "http://www.b3.com.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "desconhecida"
+  },
+  {
+   "fonte": "CGU | Notícias",
+   "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias",
+   "estado": "suspensa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias",
+     "http": {
+      "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 80883,
+      "ms": 1245,
+      "url_final": "https://www.gov.br/cgu/acl_users/credentials_cookie_auth/require_login?came_from=https%3A//www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias",
+      "bloqueio": ""
+     },
+     "publicacoes": 50,
+     "com_titulo": 50,
+     "com_link": 50,
+     "com_data": 0,
+     "com_descricao": 1,
+     "na_janela": 0,
+     "data_mais_antiga": "",
+     "data_mais_recente": "",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      },
+      {
+       "titulo": "elogioprofissionalsaude",
+       "data": "",
+       "url": "https://www.gov.br/cgu/pt-br/centrais-de-conteudo/campanhas/elogioprofissionalsaude",
+       "descricao": ""
+      },
+      {
+       "titulo": "jogogovernoaberto",
+       "data": "",
+       "url": "https://www.gov.br/cgu/pt-br/governo-aberto/central-de-conteudos/jogo-de-governo-aberto",
+       "descricao": ""
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "Controladoria-Geral da União",
+     "chars_texto": 30665,
+     "links": 301,
+     "scripts": 37,
+     "parece_spa": false,
+     "feeds_anunciados": [
+      {
+       "url": "https://www.gov.br/cgu/RSS",
+       "tipo": "application/rss+xml",
+       "titulo": "Controladoria-Geral da União - RSS 1.0"
+      },
+      {
+       "url": "https://www.gov.br/cgu/rss.xml",
+       "tipo": "application/rss+xml",
+       "titulo": "Controladoria-Geral da União - RSS 2.0"
+      },
+      {
+       "url": "https://www.gov.br/cgu/atom.xml",
+       "tipo": "application/rss+xml",
+       "titulo": "Controladoria-Geral da União - Atom"
+      }
+     ],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/cgu/RSS",
+     "anunciado": true,
+     "http": {
+      "url": "https://www.gov.br/cgu/RSS",
+      "status": 200,
+      "erro": "",
+      "tipo": "application/atom+xml; charset=utf-8",
+      "bytes": 12799,
+      "ms": 422,
+      "url_final": "https://www.gov.br/cgu/RSS",
+      "bloqueio": ""
+     },
+     "publicacoes": 15,
+     "com_titulo": 12,
+     "com_link": 15,
+     "com_data": 15,
+     "com_descricao": 2,
+     "na_janela": 2,
+     "data_mais_antiga": "2026-09-28",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/cgu/pt-br/acesso-a-informacao/institucional/quem-e-quem/Curriculo.pdf/view",
+       "descricao": ""
+      },
+      {
+       "titulo": "Concorrência Eletrônica nº 106/2026",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/cgu/pt-br/acesso-a-informacao/licitacoes-e-contratos/licitacoes/concorrencia/2026/concorrencia-eletronica-no-106-2026",
+       "descricao": "- PROCESSO SEI nº 00190.103763/2026-69 | Objeto: Contratação de serviços especiais de engenharia para a elaboração de Estudos Preliminares, Anteprojeto, Projetos Básicos, e Projetos Executivos em Plataforma BIM (Building Information Modeling), a serem executados sem regime de dedicação exclusiva de "
+      }
+     ],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/cgu/rss.xml",
+     "anunciado": true,
+     "http": {
+      "url": "https://www.gov.br/cgu/rss.xml",
+      "status": 200,
+      "erro": "",
+      "tipo": "application/atom+xml; charset=utf-8",
+      "bytes": 6254,
+      "ms": 428,
+      "url_final": "https://www.gov.br/cgu/rss.xml",
+      "bloqueio": ""
+     },
+     "publicacoes": 15,
+     "com_titulo": 13,
+     "com_link": 0,
+     "com_data": 15,
+     "com_descricao": 3,
+     "na_janela": 2,
+     "data_mais_antiga": "2026-09-28",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "",
+       "data": "2026-09-29",
+       "url": "",
+       "descricao": ""
+      },
+      {
+       "titulo": "Concorrência Eletrônica nº 106/2026",
+       "data": "2026-09-29",
+       "url": "",
+       "descricao": "- PROCESSO SEI nº 00190.103763/2026-69 | Objeto: Contratação de serviços especiais de engenharia para a elaboração de Estudos Preliminares, Anteprojeto, Projetos Básicos, e Projetos Executivos em Plataforma BIM (Building Information Modeling), a serem executados sem regime de dedicação exclusiva de "
+      }
+     ],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/cgu/atom.xml",
+     "anunciado": true,
+     "http": {
+      "url": "https://www.gov.br/cgu/atom.xml",
+      "status": 200,
+      "erro": "",
+      "tipo": "application/atom+xml; charset=utf-8",
+      "bytes": 13269,
+      "ms": 427,
+      "url_final": "https://www.gov.br/cgu/atom.xml",
+      "bloqueio": ""
+     },
+     "publicacoes": 15,
+     "com_titulo": 12,
+     "com_link": 15,
+     "com_data": 15,
+     "com_descricao": 2,
+     "na_janela": 2,
+     "data_mais_antiga": "2026-09-28",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/cgu/pt-br/acesso-a-informacao/institucional/quem-e-quem/Curriculo.pdf/view",
+       "descricao": ""
+      },
+      {
+       "titulo": "Concorrência Eletrônica nº 106/2026",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/cgu/pt-br/acesso-a-informacao/licitacoes-e-contratos/licitacoes/concorrencia/2026/concorrencia-eletronica-no-106-2026",
+       "descricao": "- PROCESSO SEI nº 00190.103763/2026-69 | Objeto: Contratação de serviços especiais de engenharia para a elaboração de Estudos Preliminares, Anteprojeto, Projetos Básicos, e Projetos Executivos em Plataforma BIM (Building Information Modeling), a serem executados sem regime de dedicação exclusiva de "
+      }
+     ],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias/rss.xml",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 80883,
+      "ms": 1064,
+      "url_final": "https://www.gov.br/cgu/acl_users/credentials_cookie_auth/require_login?came_from=https%3A//www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias/rss.xml",
+      "bloqueio": ""
+     },
+     "erro_leitura": "not well-formed (invalid token): line 9, column 44"
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias/RSS",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 80883,
+      "ms": 1040,
+      "url_final": "https://www.gov.br/cgu/acl_users/credentials_cookie_auth/require_login?came_from=https%3A//www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias/RSS",
+      "bloqueio": ""
+     },
+     "erro_leitura": "not well-formed (invalid token): line 9, column 44"
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 93,
+      "ms": 431,
+      "url_final": "https://www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 93,
+      "ms": 453,
+      "url_final": "https://www.gov.br/cgu/pt-br/assuntos/noticias/ultimas-noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/cgu/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/cgu/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 491,
+      "url_final": "https://www.gov.br/cgu/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/cgu/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/cgu/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 66666,
+      "ms": 426,
+      "url_final": "https://www.gov.br/cgu/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 43,
+     "com_titulo": 43,
+     "com_link": 43,
+     "com_data": 1,
+     "com_descricao": 1,
+     "na_janela": 1,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "ANP | Notícias",
+   "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados",
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 307898,
+      "ms": 691,
+      "url_final": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados",
+      "bloqueio": ""
+     },
+     "publicacoes": 31,
+     "com_titulo": 31,
+     "com_link": 31,
+     "com_data": 31,
+     "com_descricao": 19,
+     "na_janela": 3,
+     "data_mais_antiga": "2020-07-10",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "ANP realiza 2° Workshop para debater Gas Release",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-realiza-2deg-workshop-para-debater-gas-release",
+       "descricao": "- Gravacao esta disponivel no canal da Agencia no YouTube Royalties"
+      },
+      {
+       "titulo": "Royalties: valores referentes à produção de julho foram distribuídos hoje a estados e municípios",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/royalties-valores-referentes-a-producao-de-julho-foram-distribuidos-hoje-a-estados-e-municipios",
+       "descricao": ""
+      },
+      {
+       "titulo": "2° Workshop sobre Gas Release terá transmissão ao vivo pelo canal da ANP no YouTube",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/2deg-workshop-sobre-gas-release-tera-transmissao-ao-vivo-pelo-canal-da-anp-no-youtube",
+       "descricao": ""
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "Notícias e comunicados — Agência Nacional do Petróleo, Gás Natural e Biocombustíveis",
+     "chars_texto": 125753,
+     "links": 977,
+     "scripts": 37,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 2633,
+      "url_final": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 434,
+      "url_final": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 437,
+      "url_final": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 439,
+      "url_final": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/anp/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 439,
+      "url_final": "https://www.gov.br/anp/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/anp/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 258474,
+      "ms": 566,
+      "url_final": "https://www.gov.br/anp/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 241,
+     "com_titulo": 241,
+     "com_link": 241,
+     "com_data": 2,
+     "com_descricao": 1,
+     "na_janela": 1,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-10-08",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "ANP | Consultas e Audiências Públicas",
+   "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica",
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 280639,
+      "ms": 567,
+      "url_final": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica",
+      "bloqueio": ""
+     },
+     "publicacoes": 239,
+     "com_titulo": 239,
+     "com_link": 239,
+     "com_data": 1,
+     "com_descricao": 1,
+     "na_janela": 0,
+     "data_mais_antiga": "2026-10-08",
+     "data_mais_recente": "2026-10-08",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      },
+      {
+       "titulo": "Análise de Impacto Regulatório (AIR)",
+       "data": "",
+       "url": "https://www.gov.br/anp/pt-br/assuntos/analise-de-impacto-regulatorio-air",
+       "descricao": ""
+      },
+      {
+       "titulo": "Armazenamento e movimentação de produtos líquidos",
+       "data": "",
+       "url": "https://www.gov.br/anp/pt-br/assuntos/armazenamento-e-movimentacao-de-produtos-liquidos",
+       "descricao": ""
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "Consultas e Audiências Públicas — Agência Nacional do Petróleo, Gás Natural e Biocombustíveis",
+     "chars_texto": 115698,
+     "links": 938,
+     "scripts": 38,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 433,
+      "url_final": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 435,
+      "url_final": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 443,
+      "url_final": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 439,
+      "url_final": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/anp/pt-br",
+     "compartilhado_com": "ANP | Notícias"
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/anp/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 258480,
+      "ms": 557,
+      "url_final": "https://www.gov.br/anp/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 241,
+     "com_titulo": 241,
+     "com_link": 241,
+     "com_data": 2,
+     "com_descricao": 1,
+     "na_janela": 1,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-10-08",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "ANP | Consultas Prévias",
+   "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa",
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 270091,
+      "ms": 568,
+      "url_final": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa",
+      "bloqueio": ""
+     },
+     "publicacoes": 239,
+     "com_titulo": 239,
+     "com_link": 239,
+     "com_data": 1,
+     "com_descricao": 1,
+     "na_janela": 0,
+     "data_mais_antiga": "2026-10-08",
+     "data_mais_recente": "2026-10-08",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      },
+      {
+       "titulo": "Análise de Impacto Regulatório (AIR)",
+       "data": "",
+       "url": "https://www.gov.br/anp/pt-br/assuntos/analise-de-impacto-regulatorio-air",
+       "descricao": ""
+      },
+      {
+       "titulo": "Armazenamento e movimentação de produtos líquidos",
+       "data": "",
+       "url": "https://www.gov.br/anp/pt-br/assuntos/armazenamento-e-movimentacao-de-produtos-liquidos",
+       "descricao": ""
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "Consulta Prévia — Agência Nacional do Petróleo, Gás Natural e Biocombustíveis",
+     "chars_texto": 114575,
+     "links": 938,
+     "scripts": 38,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 434,
+      "url_final": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 448,
+      "url_final": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 439,
+      "url_final": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 481,
+      "url_final": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/anp/pt-br",
+     "compartilhado_com": "ANP | Notícias"
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/anp/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 258480,
+      "ms": 564,
+      "url_final": "https://www.gov.br/anp/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 241,
+     "com_titulo": 241,
+     "com_link": 241,
+     "com_data": 2,
+     "com_descricao": 1,
+     "na_janela": 1,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-10-08",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "ANP | Pautas e Atas da Diretoria Colegiada",
+   "url": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada",
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 273291,
+      "ms": 562,
+      "url_final": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada",
+      "bloqueio": ""
+     },
+     "publicacoes": 246,
+     "com_titulo": 246,
+     "com_link": 246,
+     "com_data": 1,
+     "com_descricao": 1,
+     "na_janela": 0,
+     "data_mais_antiga": "2026-10-08",
+     "data_mais_recente": "2026-10-08",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      },
+      {
+       "titulo": "Análise de Impacto Regulatório (AIR)",
+       "data": "",
+       "url": "https://www.gov.br/anp/pt-br/assuntos/analise-de-impacto-regulatorio-air",
+       "descricao": ""
+      },
+      {
+       "titulo": "Armazenamento e movimentação de produtos líquidos",
+       "data": "",
+       "url": "https://www.gov.br/anp/pt-br/assuntos/armazenamento-e-movimentacao-de-produtos-liquidos",
+       "descricao": ""
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "Pautas, atas e calendário de Reuniões da Diretoria Colegiada — Agência Nacional do Petróleo, Gás Natural e Biocombustíve",
+     "chars_texto": 116002,
+     "links": 939,
+     "scripts": 38,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 440,
+      "url_final": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 440,
+      "url_final": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 439,
+      "url_final": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 440,
+      "url_final": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/anp/pt-br",
+     "compartilhado_com": "ANP | Notícias"
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/anp/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/anp/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 258474,
+      "ms": 560,
+      "url_final": "https://www.gov.br/anp/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 241,
+     "com_titulo": 241,
+     "com_link": 241,
+     "com_data": 2,
+     "com_descricao": 1,
+     "na_janela": 1,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-10-08",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "MME | Notícias",
+   "url": "https://www.gov.br/mme/pt-br/assuntos/noticias",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/mme/pt-br/assuntos/noticias",
+     "http": {
+      "url": "https://www.gov.br/mme/pt-br/assuntos/noticias",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 212007,
+      "ms": 560,
+      "url_final": "https://www.gov.br/mme/pt-br/assuntos/noticias",
+      "bloqueio": ""
+     },
+     "publicacoes": 30,
+     "com_titulo": 30,
+     "com_link": 30,
+     "com_data": 30,
+     "com_descricao": 30,
+     "na_janela": 0,
+     "data_mais_antiga": "2026-07-13",
+     "data_mais_recente": "2026-09-23",
+     "amostra": [
+      {
+       "titulo": "MME abre consulta pública sobre concessões de hidrelétricas vencidas e vincendas",
+       "data": "2026-09-23",
+       "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/mme-abre-consulta-publica-sobre-concessoes-de-hidreletricas-vencidas-e-vincendas",
+       "descricao": "- Contribuicoes poderao ser enviadas ate 23 de outubro e vao subsidiar a elaboracao de decreto RenovaBio"
+      },
+      {
+       "titulo": "MME abre consulta pública sobre metas do RenovaBio para o período de 2027 a 2036",
+       "data": "2026-09-15",
+       "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/mme-abre-consulta-publica-sobre-metas-do-renovabio-para-o-periodo-de-2027-a-2036",
+       "descricao": "- Interessados poderao contribuir com a proposta que orientara a trajetoria de descarbonizacao do setor de combustiveis da proxima decada SISTEMA ELETRICO"
+      },
+      {
+       "titulo": "CMSE defende continuidade e aprimoramento dos mecanismos de Resposta da Demanda no sistema elétrico brasileiro",
+       "data": "2026-09-02",
+       "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/cmse-defende-continuidade-e-aprimoramento-dos-mecanismos-de-resposta-da-demanda-no-sistema-eletrico-brasileiro",
+       "descricao": "- Comite tambem destacou acoes para assegurar o fornecimento de energia eletrica no pais frente ao El Nino Energia, Minerais e Combustiveis"
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "Notícias — Ministério de Minas e Energia",
+     "chars_texto": 15316,
+     "links": 60,
+     "scripts": 35,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 438,
+      "url_final": "https://www.gov.br/mme/pt-br/assuntos/noticias/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 431,
+      "url_final": "https://www.gov.br/mme/pt-br/assuntos/noticias/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/mme/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/mme/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 489,
+      "url_final": "https://www.gov.br/mme/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/mme/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 488,
+      "url_final": "https://www.gov.br/mme/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/mme/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/mme/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 436,
+      "url_final": "https://www.gov.br/mme/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/mme/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/mme/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 158058,
+      "ms": 1446,
+      "url_final": "https://www.gov.br/mme/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 70,
+     "com_titulo": 70,
+     "com_link": 70,
+     "com_data": 1,
+     "com_descricao": 1,
+     "na_janela": 1,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "MME | Consultas Públicas",
+   "url": "https://consultas-publicas.mme.gov.br/home",
+   "estado": "ativa",
+   "host": "consultas-publicas.mme.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://consultas-publicas.mme.gov.br/home",
+     "http": {
+      "url": "https://consultas-publicas.mme.gov.br/home",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html",
+      "bytes": 74680,
+      "ms": 900,
+      "url_final": "https://consultas-publicas.mme.gov.br/home",
+      "bloqueio": ""
+     },
+     "publicacoes": 0,
+     "com_titulo": 0,
+     "com_link": 0,
+     "com_data": 0,
+     "com_descricao": 0,
+     "na_janela": 0,
+     "data_mais_antiga": "",
+     "data_mais_recente": "",
+     "amostra": [],
+     "plataforma": "desconhecida",
+     "titulo_pagina": "Consultas Públicas",
+     "chars_texto": 0,
+     "links": 0,
+     "scripts": 4,
+     "parece_spa": true,
+     "feeds_anunciados": [],
+     "ok": false,
+     "pistas_de_api": []
+    }
+   ],
+   "robots": {
+    "url": "https://consultas-publicas.mme.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "sem regras",
+    "listagem_permitida": true
+   },
+   "plataforma": "desconhecida"
+  },
+  {
+   "fonte": "ONS | Notícias",
+   "url": "https://www.ons.org.br/paginas/imprensa/noticias",
+   "estado": "ativa",
+   "host": "www.ons.org.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.ons.org.br/paginas/imprensa/noticias",
+     "http": {
+      "url": "https://www.ons.org.br/paginas/imprensa/noticias",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 156156,
+      "ms": 39,
+      "url_final": "https://www.ons.org.br/paginas/imprensa/noticias",
+      "bloqueio": ""
+     },
+     "publicacoes": 0,
+     "com_titulo": 0,
+     "com_link": 0,
+     "com_data": 0,
+     "com_descricao": 0,
+     "na_janela": 0,
+     "data_mais_antiga": "",
+     "data_mais_recente": "",
+     "amostra": [],
+     "plataforma": "sharepoint",
+     "titulo_pagina": "Notícias",
+     "chars_texto": 2131,
+     "links": 16,
+     "scripts": 73,
+     "parece_spa": true,
+     "feeds_anunciados": [],
+     "ok": false,
+     "pistas_de_api": []
+    }
+   ],
+   "robots": {
+    "url": "https://www.ons.org.br/robots.txt",
+    "status": 404,
+    "crawl_delay": null,
+    "erro": "HTTP 404",
+    "regras": "sem regras",
+    "listagem_permitida": true
+   },
+   "plataforma": "sharepoint"
+  },
+  {
+   "fonte": "ANEEL | Últimas Notícias",
+   "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias",
+     "http": {
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 271875,
+      "ms": 562,
+      "url_final": "https://www.gov.br/aneel/pt-br/assuntos/noticias",
+      "bloqueio": ""
+     },
+     "publicacoes": 32,
+     "com_titulo": 32,
+     "com_link": 32,
+     "com_data": 31,
+     "com_descricao": 31,
+     "na_janela": 3,
+     "data_mais_antiga": "2021-12-08",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Consulta pública propõe metodologia para amortizações de investimentos em geração",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/consulta-publica-propoe-metodologia-para-amortizacoes-de-investimentos-em-geracao",
+       "descricao": "- ANEEL recebera contribuicoes de 1º a 30 de outubro Distribuicao"
+      },
+      {
+       "titulo": "ANEEL nega recurso da Enel SP contra decisão que indeferiu perícia técnica relacionada aos eventos climáticos extremos",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-nega-recurso-da-enel-sp-contra-decisao-que-indeferiu-pericia-tecnica-relacionada-aos-eventos-climaticos-extremos",
+       "descricao": "- Com a decisao, fica encerrada a fase instrutoria do procedimento administrativo tendente a caducidade da concessao. ELEICAO"
+      },
+      {
+       "titulo": "Eleições 2026: ANEEL determina planos especiais de atendimento para garantir energia durante o período",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/eleicoes-2026-aneel-determina-planos-especiais-de-atendimento-para-garantir-energia-durante-o-periodo",
+       "descricao": "- As distribuidoras de energia devem ter atencao especial aos locais de votacao, aos tribunais regionais eleitorais e ao Tribunal Superior Eleitoral (TSE), alem do atendimento em toda a area de concessao. Tarifas"
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "Notícias — Agência Nacional de Energia Elétrica",
+     "chars_texto": 99774,
+     "links": 830,
+     "scripts": 35,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 432,
+      "url_final": "https://www.gov.br/aneel/pt-br/assuntos/noticias/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 421,
+      "url_final": "https://www.gov.br/aneel/pt-br/assuntos/noticias/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 434,
+      "url_final": "https://www.gov.br/aneel/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 452,
+      "url_final": "https://www.gov.br/aneel/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/aneel/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/aneel/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 433,
+      "url_final": "https://www.gov.br/aneel/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/aneel/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/aneel/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 214712,
+      "ms": 564,
+      "url_final": "https://www.gov.br/aneel/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 177,
+     "com_titulo": 177,
+     "com_link": 177,
+     "com_data": 1,
+     "com_descricao": 1,
+     "na_janela": 1,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "Secretaria de Prêmios e Apostas | Notícias",
+   "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias",
+   "estado": "suspensa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias",
+     "http": {
+      "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 119183,
+      "ms": 555,
+      "url_final": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias",
+      "bloqueio": ""
+     },
+     "publicacoes": 10,
+     "com_titulo": 10,
+     "com_link": 10,
+     "com_data": 10,
+     "com_descricao": 10,
+     "na_janela": 0,
+     "data_mais_antiga": "2026-07-13",
+     "data_mais_recente": "2026-09-15",
+     "amostra": [
+      {
+       "titulo": "SPA publica portaria de enfrentamento ao mercado ilegal de apostas",
+       "data": "2026-09-15",
+       "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/spa-publica-portaria-de-enfrentamento-ao-mercado-ilegal-de-apostas",
+       "descricao": "Norma amplia os procedimentos destinados a prevencao, a identificacao e a repressao de transacoes de pagamento relacionadas a exploracao irregular de apostas de quota fixa tags: publicado Noticia PREMIOS E APOSTAS"
+      },
+      {
+       "titulo": "SPA encerra nesta quarta-feira (09/09) consulta pública sobre autorização de bets",
+       "data": "2026-09-09",
+       "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/spa-encerra-nesta-quarta-feira-09-09-consulta-publica-sobre-autorizacao-de-bets",
+       "descricao": "Sugestoes e contribuicoes podem ser enviadas por meio da plataforma Brasil Participativo tags: publicado Noticia PREMIOS E APOSTAS"
+      },
+      {
+       "titulo": "Receita Federal e MPF realizam coletiva da Operação Jogo de Sombras",
+       "data": "2026-08-28",
+       "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/agosto/receita-federal-e-mpf-realizam-coletiva-da-operacao-jogo-de-sombras",
+       "descricao": "Coletiva de imprensa sera realizada nesta sexta-feira (28/08), as , com transmissao ao vivo pelo canal do Ministerio da Fazenda no YouTube tags: publicado Noticia PREMIOS E APOSTAS"
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "Notícias — Ministério da Fazenda",
+     "chars_texto": 8586,
+     "links": 56,
+     "scripts": 34,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 443,
+      "url_final": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 447,
+      "url_final": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 435,
+      "url_final": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 437,
+      "url_final": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/copy_of_noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/fazenda/pt-br",
+     "compartilhado_com": "Ministério da Fazenda | Notícias"
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/fazenda/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/fazenda/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 96079,
+      "ms": 427,
+      "url_final": "https://www.gov.br/fazenda/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 49,
+     "com_titulo": 49,
+     "com_link": 49,
+     "com_data": 2,
+     "com_descricao": 1,
+     "na_janela": 2,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      },
+      {
+       "titulo": "Conselho Monetário Nacional",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/fazenda/pt-br/assuntos/cmn",
+       "descricao": ""
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "Ministério do Meio Ambiente | Notícias",
+   "url": "https://www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias",
+   "estado": "suspensa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias",
+     "http": {
+      "url": "https://www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 57412,
+      "ms": 1113,
+      "url_final": "https://www.gov.br/mma/acl_users/credentials_cookie_auth/require_login?came_from=https%3A//www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias",
+      "bloqueio": ""
+     },
+     "publicacoes": 0,
+     "com_titulo": 0,
+     "com_link": 0,
+     "com_data": 0,
+     "com_descricao": 0,
+     "na_janela": 0,
+     "data_mais_antiga": "",
+     "data_mais_recente": "",
+     "amostra": [],
+     "plataforma": "plone",
+     "titulo_pagina": "Ministério do Meio Ambiente e Mudança do Clima",
+     "chars_texto": 4544,
+     "links": 32,
+     "scripts": 35,
+     "parece_spa": true,
+     "feeds_anunciados": [
+      {
+       "url": "https://www.gov.br/mma/RSS",
+       "tipo": "application/rss+xml",
+       "titulo": "Ministério do Meio Ambiente e Mudança do Clima - RSS 1.0"
+      },
+      {
+       "url": "https://www.gov.br/mma/rss.xml",
+       "tipo": "application/rss+xml",
+       "titulo": "Ministério do Meio Ambiente e Mudança do Clima - RSS 2.0"
+      },
+      {
+       "url": "https://www.gov.br/mma/atom.xml",
+       "tipo": "application/rss+xml",
+       "titulo": "Ministério do Meio Ambiente e Mudança do Clima - Atom"
+      }
+     ],
+     "ok": false,
+     "pistas_de_api": []
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/mma/RSS",
+     "anunciado": true,
+     "http": {
+      "url": "https://www.gov.br/mma/RSS",
+      "status": 200,
+      "erro": "",
+      "tipo": "application/atom+xml; charset=utf-8",
+      "bytes": 14513,
+      "ms": 426,
+      "url_final": "https://www.gov.br/mma/RSS",
+      "bloqueio": ""
+     },
+     "publicacoes": 15,
+     "com_titulo": 13,
+     "com_link": 15,
+     "com_data": 15,
+     "com_descricao": 7,
+     "na_janela": 4,
+     "data_mais_antiga": "2026-09-25",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Boletim #9",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/mma/pt-br/assuntos/controle-ao-desmatamento-queimadas-e-ordenamento-ambiental-territorial/boletim-do-fogo-brasil-2026/copy2_of_BOLETIM92026.pdf/view",
+       "descricao": ""
+      },
+      {
+       "titulo": "Boletim #9",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/mma/pt-br/assuntos/controle-ao-desmatamento-queimadas-e-ordenamento-ambiental-territorial/boletim-do-fogo-brasil-2026/copy_of_BOLETIM92026.pdf/view",
+       "descricao": ""
+      },
+      {
+       "titulo": "",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/mma/pt-br/assuntos/bioeconomia/patrimonio-genetico/conselho-de-gestao-do-patrimonio-genetico-cgen-1/normas-do-cgen/pdf/Resol.CGenn54de16_09_2026_DOU_28_09_2026.pdf/view",
+       "descricao": ""
+      }
+     ],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/mma/rss.xml",
+     "anunciado": true,
+     "http": {
+      "url": "https://www.gov.br/mma/rss.xml",
+      "status": 200,
+      "erro": "",
+      "tipo": "application/atom+xml; charset=utf-8",
+      "bytes": 6848,
+      "ms": 424,
+      "url_final": "https://www.gov.br/mma/rss.xml",
+      "bloqueio": ""
+     },
+     "publicacoes": 15,
+     "com_titulo": 13,
+     "com_link": 0,
+     "com_data": 15,
+     "com_descricao": 7,
+     "na_janela": 4,
+     "data_mais_antiga": "2026-09-25",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Boletim #9",
+       "data": "2026-09-29",
+       "url": "",
+       "descricao": ""
+      },
+      {
+       "titulo": "Boletim #9",
+       "data": "2026-09-29",
+       "url": "",
+       "descricao": ""
+      },
+      {
+       "titulo": "",
+       "data": "2026-09-29",
+       "url": "",
+       "descricao": ""
+      }
+     ],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/mma/atom.xml",
+     "anunciado": true,
+     "http": {
+      "url": "https://www.gov.br/mma/atom.xml",
+      "status": 200,
+      "erro": "",
+      "tipo": "application/atom+xml; charset=utf-8",
+      "bytes": 13851,
+      "ms": 876,
+      "url_final": "https://www.gov.br/mma/atom.xml",
+      "bloqueio": ""
+     },
+     "publicacoes": 15,
+     "com_titulo": 13,
+     "com_link": 15,
+     "com_data": 15,
+     "com_descricao": 7,
+     "na_janela": 4,
+     "data_mais_antiga": "2026-09-25",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Boletim #9",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/mma/pt-br/assuntos/controle-ao-desmatamento-queimadas-e-ordenamento-ambiental-territorial/boletim-do-fogo-brasil-2026/copy2_of_BOLETIM92026.pdf/view",
+       "descricao": ""
+      },
+      {
+       "titulo": "Boletim #9",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/mma/pt-br/assuntos/controle-ao-desmatamento-queimadas-e-ordenamento-ambiental-territorial/boletim-do-fogo-brasil-2026/copy_of_BOLETIM92026.pdf/view",
+       "descricao": ""
+      },
+      {
+       "titulo": "",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/mma/pt-br/assuntos/bioeconomia/patrimonio-genetico/conselho-de-gestao-do-patrimonio-genetico-cgen-1/normas-do-cgen/pdf/Resol.CGenn54de16_09_2026_DOU_28_09_2026.pdf/view",
+       "descricao": ""
+      }
+     ],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias/rss.xml",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 57412,
+      "ms": 1570,
+      "url_final": "https://www.gov.br/mma/acl_users/credentials_cookie_auth/require_login?came_from=https%3A//www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias/rss.xml",
+      "bloqueio": ""
+     },
+     "erro_leitura": "not well-formed (invalid token): line 9, column 44"
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias/RSS",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 57418,
+      "ms": 1207,
+      "url_final": "https://www.gov.br/mma/acl_users/credentials_cookie_auth/require_login?came_from=https%3A//www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias/RSS",
+      "bloqueio": ""
+     },
+     "erro_leitura": "not well-formed (invalid token): line 9, column 44"
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 93,
+      "ms": 446,
+      "url_final": "https://www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 93,
+      "ms": 445,
+      "url_final": "https://www.gov.br/mma/pt-br/assuntos/noticias/ultimas-noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/mma/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/mma/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 440,
+      "url_final": "https://www.gov.br/mma/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/mma/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/mma/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 176761,
+      "ms": 557,
+      "url_final": "https://www.gov.br/mma/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 75,
+     "com_titulo": 75,
+     "com_link": 75,
+     "com_data": 1,
+     "com_descricao": 1,
+     "na_janela": 1,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "Ministério da Agricultura | Notícias",
+   "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias",
+     "http": {
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 304012,
+      "ms": 695,
+      "url_final": "https://www.gov.br/agricultura/pt-br/assuntos/noticias",
+      "bloqueio": ""
+     },
+     "publicacoes": 30,
+     "com_titulo": 30,
+     "com_link": 30,
+     "com_data": 30,
+     "com_descricao": 20,
+     "na_janela": 1,
+     "data_mais_antiga": "2026-08-17",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Abertura de mercados para produtos brasileiros em Antígua e Barbuda, Chile, Argélia, China e Paraguai",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/abertura-de-mercados-para-produtos-brasileiros-em-antigua-e-barbuda-chile-argelia-china-e-paraguai",
+       "descricao": ""
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "Notícias — Ministério da Agricultura e Pecuária",
+     "chars_texto": 107052,
+     "links": 910,
+     "scripts": 35,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 8645,
+      "url_final": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 419,
+      "url_final": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 483,
+      "url_final": "https://www.gov.br/agricultura/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 496,
+      "url_final": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/agricultura/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/agricultura/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 438,
+      "url_final": "https://www.gov.br/agricultura/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/agricultura/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/agricultura/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 228524,
+      "ms": 565,
+      "url_final": "https://www.gov.br/agricultura/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 138,
+     "com_titulo": 138,
+     "com_link": 138,
+     "com_data": 1,
+     "com_descricao": 1,
+     "na_janela": 1,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "ANVISA | Notícias",
+   "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa",
+     "http": {
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 455963,
+      "ms": 899,
+      "url_final": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa",
+      "bloqueio": ""
+     },
+     "publicacoes": 29,
+     "com_titulo": 29,
+     "com_link": 29,
+     "com_data": 0,
+     "com_descricao": 1,
+     "na_janela": 0,
+     "data_mais_antiga": "",
+     "data_mais_recente": "",
+     "amostra": [
+      {
+       "titulo": "Educação e pesquisa",
+       "data": "",
+       "url": "https://www.gov.br/anvisa/pt-br/assuntos/educacaoepesquisa",
+       "descricao": ""
+      },
+      {
+       "titulo": "Fiscalização e monitoramento",
+       "data": "",
+       "url": "https://www.gov.br/anvisa/pt-br/assuntos/fiscalizacao-e-monitoramento",
+       "descricao": ""
+      },
+      {
+       "titulo": "Laboratórios Analíticos",
+       "data": "",
+       "url": "https://www.gov.br/anvisa/pt-br/assuntos/laboratorios",
+       "descricao": ""
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "NotíciasPortal Gov.br",
+     "chars_texto": 7600,
+     "links": 87,
+     "scripts": 8,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 150596,
+      "ms": 748,
+      "url_final": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 150528,
+      "ms": 758,
+      "url_final": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 456094,
+      "ms": 952,
+      "url_final": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": ""
+     },
+     "erro_leitura": "resposta nao e JSON (text/html; charset=utf-8)"
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 167034,
+      "ms": 2223,
+      "url_final": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": ""
+     },
+     "erro_leitura": "resposta nao e JSON (text/html; charset=utf-8)"
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/anvisa/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anvisa/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 167032,
+      "ms": 962,
+      "url_final": "https://www.gov.br/anvisa/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": ""
+     },
+     "erro_leitura": "resposta nao e JSON (text/html; charset=utf-8)"
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/anvisa/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/anvisa/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 167033,
+      "ms": 864,
+      "url_final": "https://www.gov.br/anvisa/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 0,
+     "com_titulo": 0,
+     "com_link": 0,
+     "com_data": 0,
+     "com_descricao": 0,
+     "na_janela": 0,
+     "data_mais_antiga": "",
+     "data_mais_recente": "",
+     "amostra": [],
+     "ok": false
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "INPI | Notícias",
+   "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/",
+     "http": {
+      "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 215594,
+      "ms": 426,
+      "url_final": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/",
+      "bloqueio": ""
+     },
+     "publicacoes": 27,
+     "com_titulo": 27,
+     "com_link": 27,
+     "com_data": 27,
+     "com_descricao": 3,
+     "na_janela": 2,
+     "data_mais_antiga": "2026-08-24",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Trâmite prioritário para marcas de mercado virtual está temporariamente indisponível",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/tramite-prioritario-para-marcas-de-mercado-virtual-esta-temporariamente-indisponivel",
+       "descricao": ""
+      },
+      {
+       "titulo": "INPI reconhece a Indicação Geográfica para a renda renascença de Poção (PE)",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/inpi-reconhece-a-indicacao-geografica-para-a-renda-renascenca-de-pocao-pe",
+       "descricao": "tags: publicado Noticia tags: publicado Noticia tags: publicado Noticia"
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "Últimas Notícias — Instituto Nacional da Propriedade Industrial",
+     "chars_texto": 71000,
+     "links": 669,
+     "scripts": 34,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 443,
+      "url_final": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 436,
+      "url_final": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 482,
+      "url_final": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 495,
+      "url_final": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/inpi/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/inpi/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 486,
+      "url_final": "https://www.gov.br/inpi/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/inpi/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/inpi/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 161386,
+      "ms": 426,
+      "url_final": "https://www.gov.br/inpi/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 101,
+     "com_titulo": 101,
+     "com_link": 101,
+     "com_data": 1,
+     "com_descricao": 1,
+     "na_janela": 1,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados [Materiais de Consulta e Apoio](http://)"
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "SENACON | Notícias",
+   "url": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/consumidor/defesadoconsumidor/noticias-senacon",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/consumidor/defesadoconsumidor/noticias-senacon",
+     "http": {
+      "url": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/consumidor/defesadoconsumidor/noticias-senacon",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 231658,
+      "ms": 556,
+      "url_final": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/consumidor/defesadoconsumidor/noticias-senacon",
+      "bloqueio": ""
+     },
+     "publicacoes": 30,
+     "com_titulo": 30,
+     "com_link": 30,
+     "com_data": 30,
+     "com_descricao": 30,
+     "na_janela": 0,
+     "data_mais_antiga": "2026-07-21",
+     "data_mais_recente": "2026-09-28",
+     "amostra": [
+      {
+       "titulo": "Museu Nacional de Belas Artes reabre duas salas revitalizadas com recursos do FDD",
+       "data": "2026-09-28",
+       "url": "https://www.gov.br/mj/pt-br/assuntos/noticias-1/museu-nacional-de-belas-artes-reabre-duas-salas-revitalizadas-com-recursos-do-fdd",
+       "descricao": "Espacos voltam a receber exposicoes e visitantes no Rio de Janeiro tags: publicado Noticia CONSUMIDOR"
+      },
+      {
+       "titulo": "Governo Federal toma novas medidas para conter alta dos combustíveis",
+       "data": "2026-09-28",
+       "url": "https://www.gov.br/mj/pt-br/assuntos/noticias-1/governo-federal-toma-novas-medidas-para-conter-alta-dos-combustiveis",
+       "descricao": "Iniciativas incluem manutencao da subvencao ao oleo diesel, novas rodadas de fiscalizacao e endurecimento de punicoes a revendedores e distribuidores tags: publicado Noticia SEGURANCA PUBLICA"
+      },
+      {
+       "titulo": "Força-tarefa dos Ministérios da Justiça e Segurança Pública e da Fazenda derruba 506 sites suspeitos de apostas após a edição da MP das Bets",
+       "data": "2026-09-27",
+       "url": "https://www.gov.br/mj/pt-br/assuntos/noticias-1/forca-tarefa-dos-ministerios-da-justica-e-seguranca-publica-e-da-fazenda-derruba-506-sites-suspeitos-de-apostas-apos-a-edicao-da-mp-das-bets",
+       "descricao": "Monitoramento tambem encontrou publicidade de bets na Meta e no Google apos a entrada em vigor da proibicao tags: publicado Noticia CONSUMIDOR"
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "Notícias Senacon — Ministério da Justiça e Segurança Pública",
+     "chars_texto": 21908,
+     "links": 154,
+     "scripts": 35,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/consumidor/defesadoconsumidor/noticias-senacon/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/consumidor/defesadoconsumidor/noticias-senacon/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 439,
+      "url_final": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/consumidor/defesadoconsumidor/noticias-senacon/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/consumidor/defesadoconsumidor/noticias-senacon/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/consumidor/defesadoconsumidor/noticias-senacon/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 436,
+      "url_final": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/consumidor/defesadoconsumidor/noticias-senacon/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/consumidor/defesadoconsumidor/noticias-senacon?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/consumidor/defesadoconsumidor/noticias-senacon?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 482,
+      "url_final": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/consumidor/defesadoconsumidor/noticias-senacon?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/consumidor/defesadoconsumidor/noticias-senacon/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/consumidor/defesadoconsumidor/noticias-senacon/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 442,
+      "url_final": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/consumidor/defesadoconsumidor/noticias-senacon/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/mj/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/mj/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 439,
+      "url_final": "https://www.gov.br/mj/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/mj/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/mj/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 151082,
+      "ms": 427,
+      "url_final": "https://www.gov.br/mj/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 77,
+     "com_titulo": 77,
+     "com_link": 77,
+     "com_data": 1,
+     "com_descricao": 1,
+     "na_janela": 1,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "COAF | Notícias",
+   "url": "https://www.gov.br/coaf/pt-br/assuntos/noticias/ultimas-noticias",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/coaf/pt-br/assuntos/noticias/ultimas-noticias",
+     "http": {
+      "url": "https://www.gov.br/coaf/pt-br/assuntos/noticias/ultimas-noticias",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 151544,
+      "ms": 1057,
+      "url_final": "https://www.gov.br/coaf/pt-br/assuntos/noticias/ultimas-noticias",
+      "bloqueio": "HTTP 401"
+     }
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "desconhecida"
+  },
+  {
+   "fonte": "ANM | Notícias",
+   "url": "https://www.gov.br/anm/pt-br/assuntos/noticias",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/anm/pt-br/assuntos/noticias",
+     "http": {
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 342860,
+      "ms": 560,
+      "url_final": "https://www.gov.br/anm/pt-br/assuntos/noticias",
+      "bloqueio": ""
+     },
+     "publicacoes": 30,
+     "com_titulo": 30,
+     "com_link": 30,
+     "com_data": 30,
+     "com_descricao": 30,
+     "na_janela": 4,
+     "data_mais_antiga": "2015-11-10",
+     "data_mais_recente": "2026-09-30",
+     "amostra": [
+      {
+       "titulo": "Diretoria prorroga Agenda Regulatória para o exercício de 2027",
+       "data": "2026-09-30",
+       "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/diretoria-prorroga-agenda-regulatoria-para-o-exercicio-de-2027",
+       "descricao": "Com a decisao, ciclo regulatorio da agencia passa a ficar alinhado com a vigencia atual do Plano Estrategico, que foi estabelecido para o periodo de 2024-2027 tags: publicado Noticia"
+      },
+      {
+       "titulo": "Segurança de barragens e pilhas ganha novas perspectivas na Damsweek 2026",
+       "data": "2026-09-30",
+       "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/seguranca-de-barragens-e-pilhas-ganha-novas-perspectivas-na-damsweek-2026",
+       "descricao": "Evento realizado em Belem reuniu especialistas brasileiros e estrangeiros e trouxe discussoes sobre gestao de riscos, monitoramento, governanca e tecnologias aplicadas a fiscalizacao tags: publicado Noticia"
+      },
+      {
+       "titulo": "Parceria prevê pesquisa e formação em minerais críticos",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/parceria-preve-pesquisa-e-formacao-em-minerais-criticos",
+       "descricao": "Grupo Ser Educacional e Associacao de Minerais Criticos assinaram protocolo de intencoes em Brasilia; diretor da ANM destacou a importancia de agregar valor aos recursos minerais no pais tags: publicado Noticia"
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "Últimas Notícias — Agência Nacional de Mineração",
+     "chars_texto": 29917,
+     "links": 250,
+     "scripts": 34,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 432,
+      "url_final": "https://www.gov.br/anm/pt-br/assuntos/noticias/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 439,
+      "url_final": "https://www.gov.br/anm/pt-br/assuntos/noticias/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/anm/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 492,
+      "url_final": "https://www.gov.br/anm/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 492,
+      "url_final": "https://www.gov.br/anm/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/anm/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anm/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 501,
+      "url_final": "https://www.gov.br/anm/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/anm/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/anm/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 237638,
+      "ms": 558,
+      "url_final": "https://www.gov.br/anm/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 110,
+     "com_titulo": 110,
+     "com_link": 110,
+     "com_data": 1,
+     "com_descricao": 1,
+     "na_janela": 1,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "EPE | Notícias",
+   "url": "https://www.epe.gov.br/pt/imprensa/noticias",
+   "estado": "ativa",
+   "host": "www.epe.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.epe.gov.br/pt/imprensa/noticias",
+     "http": {
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 134670,
+      "ms": 3357,
+      "url_final": "https://www.epe.gov.br/pt/imprensa/noticias",
+      "bloqueio": ""
+     },
+     "publicacoes": 16,
+     "com_titulo": 16,
+     "com_link": 16,
+     "com_data": 10,
+     "com_descricao": 10,
+     "na_janela": 2,
+     "data_mais_antiga": "2026-09-24",
+     "data_mais_recente": "2026-09-30",
+     "amostra": [
+      {
+       "titulo": "Plano Nacional de Energia 2055 é aprovado e aponta caminhos para um sistema energético mais limpo, resiliente e competitivo",
+       "data": "2026-09-30",
+       "url": "https://www.epe.gov.br/pt/imprensa/noticias/plano-nacional-de-energia-2055-e-aprovado-e-aponta-caminhos-para-um-sistema-energetico-mais-limpo-resiliente-e-competitivo",
+       "descricao": "- O Ministerio de Minas e Energia (MME) publicou, em edicao extra do Diario Oficial da Uniao de terca-feira (29/09), a Portaria MME nº 938/2026, que aprova o Plano Nacional de Energia (PNE) 2055. Elaborado em conjunto com a Empresa de Pesquisa Energetica (EPE), o documento traca cenarios para o futu"
+      },
+      {
+       "titulo": "EPE publica caderno do estudo de estimativa volumétrica da Bacia de Pelotas",
+       "data": "2026-09-29",
+       "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-caderno-do-estudo-de-estimativa-volumetrica-da-bacia-de-pelotas",
+       "descricao": "- A Empresa de Pesquisa Energetica (EPE) lancou o Caderno de Estudos \"Estimativa Volumetrica da Bacia Pelotas\" durante a Rio Oil & Gas (ROG.e) 2026, evento realizado no Rio de Janeiro entre os dias 21 e 24 de setembro. O estudo integra um projeto de analises das Bacias Sedimentares brasileiras, inic"
+      }
+     ],
+     "plataforma": "sharepoint",
+     "titulo_pagina": "Notícias",
+     "chars_texto": 10492,
+     "links": 49,
+     "scripts": 45,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.epe.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "sharepoint"
+  },
+  {
+   "fonte": "ANTAQ | Notícias",
+   "url": "https://www.gov.br/antaq/pt-br/noticias",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/antaq/pt-br/noticias",
+     "http": {
+      "url": "https://www.gov.br/antaq/pt-br/noticias",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 276245,
+      "ms": 561,
+      "url_final": "https://www.gov.br/antaq/pt-br/noticias",
+      "bloqueio": ""
+     },
+     "publicacoes": 30,
+     "com_titulo": 30,
+     "com_link": 30,
+     "com_data": 30,
+     "com_descricao": 30,
+     "na_janela": 1,
+     "data_mais_antiga": "2026-08-11",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Sobrestadia de contêiner: webinário tem nova data",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/antaq/pt-br/noticias/sobrestadia-de-conteiner-webinario-tem-nova-data",
+       "descricao": "- Encontro sobre o Tema 2.6 da Agenda Regulatoria sera realizado em 08/10, as 15h; prazo para envio de contribuicoes permanece ate 20/10 Tags:"
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "Notícias — Agência Nacional de Transportes Aquaviários (ANTAQ)",
+     "chars_texto": 24620,
+     "links": 181,
+     "scripts": 36,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/antaq/pt-br/noticias/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/antaq/pt-br/noticias/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 441,
+      "url_final": "https://www.gov.br/antaq/pt-br/noticias/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/antaq/pt-br/noticias/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/antaq/pt-br/noticias/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 436,
+      "url_final": "https://www.gov.br/antaq/pt-br/noticias/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/antaq/pt-br/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/antaq/pt-br/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 491,
+      "url_final": "https://www.gov.br/antaq/pt-br/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/antaq/pt-br/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/antaq/pt-br/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 486,
+      "url_final": "https://www.gov.br/antaq/pt-br/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/antaq/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/antaq/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 491,
+      "url_final": "https://www.gov.br/antaq/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/antaq/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/antaq/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 169659,
+      "ms": 564,
+      "url_final": "https://www.gov.br/antaq/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 95,
+     "com_titulo": 95,
+     "com_link": 95,
+     "com_data": 2,
+     "com_descricao": 1,
+     "na_janela": 2,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      },
+      {
+       "titulo": "Relações Internacionais",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/antaq/pt-br/assuntos/atuacao-internacional",
+       "descricao": ""
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "CNPE | Comunicações",
+   "url": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes",
+     "http": {
+      "url": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 169498,
+      "ms": 1548,
+      "url_final": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes",
+      "bloqueio": ""
+     },
+     "publicacoes": 6,
+     "com_titulo": 6,
+     "com_link": 6,
+     "com_data": 6,
+     "com_descricao": 6,
+     "na_janela": 0,
+     "data_mais_antiga": "2026-07-24",
+     "data_mais_recente": "2026-07-24",
+     "amostra": [
+      {
+       "titulo": "CNPE aprova elevação do teor de etanol anidro na gasolina para 32%",
+       "data": "2026-07-24",
+       "url": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes/cnpe-aprova-elevacao-do-teor-de-etanol-anidro-na-gasolina-para-32",
+       "descricao": "— ultima modificacao Resolucao do colegiado atualiza percentual de etanol na gasolina comercializada em todo o pais por 180 dias"
+      },
+      {
+       "titulo": "Combate a fraudes e adulterações de combustíveis conta com novas diretrizes",
+       "data": "2026-07-24",
+       "url": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes/combate-a-fraudes-e-adulteracoes-de-combustiveis-conta-com-novas-diretrizes",
+       "descricao": "— ultima modificacao Resolucao do Conselho estabelece medidas para fortalecer a fiscalizacao, ampliar a rastreabilidade e aperfeicoar o monitoramento do setor"
+      },
+      {
+       "titulo": "CNPE revoga resolução sobre comercialização e uso voluntário de biodiesel",
+       "data": "2026-07-24",
+       "url": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes/cnpe-revoga-resolucao-sobre-comercializacao-e-uso-voluntario-de-biodiesel",
+       "descricao": "— ultima modificacao Medida atualiza o conjunto de normas da politica energetica apos alteracoes promovidas pela Lei nº 14.993/2024"
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "Comunicações — Ministério de Minas e Energia",
+     "chars_texto": 65741,
+     "links": 539,
+     "scripts": 35,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 441,
+      "url_final": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 439,
+      "url_final": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 492,
+      "url_final": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 439,
+      "url_final": "https://www.gov.br/mme/pt-br/assuntos/conselhos-e-comites/cnpe/comunicacoes/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/mme/pt-br",
+     "compartilhado_com": "MME | Notícias"
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/mme/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/mme/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 158064,
+      "ms": 1279,
+      "url_final": "https://www.gov.br/mme/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 70,
+     "com_titulo": 70,
+     "com_link": 70,
+     "com_data": 1,
+     "com_descricao": 1,
+     "na_janela": 1,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "Kollemata | Decretos",
+   "url": "https://sinoreg-es.org.br/decretos/",
+   "estado": "ativa",
+   "host": "sinoreg-es.org.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://sinoreg-es.org.br/decretos/",
+     "http": {
+      "url": "https://sinoreg-es.org.br/decretos/",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=UTF-8",
+      "bytes": 232416,
+      "ms": 421,
+      "url_final": "https://sinoreg-es.org.br/decretos/",
+      "bloqueio": ""
+     },
+     "publicacoes": 10,
+     "com_titulo": 10,
+     "com_link": 10,
+     "com_data": 10,
+     "com_descricao": 1,
+     "na_janela": 0,
+     "data_mais_antiga": "1974-11-26",
+     "data_mais_recente": "2020-07-13",
+     "amostra": [
+      {
+       "titulo": "Prorroga os prazos para celebrar os acordos de redução proporcional de jornada e de salário e de suspensão temporária do contrato de trabalho e para efetuar o pagamento dos benefícios emergenciais",
+       "data": "2020-07-13",
+       "url": "https://sinoreg-es.org.br/posts-diversos/decreto-federal-no-10-422-2020/",
+       "descricao": ""
+      },
+      {
+       "titulo": "Regulamenta o disposto no inciso X do caput do art. 3º da Lei nº 13.874, de 20 de setembro de 2019, e no art. 2º-A da Lei nº 12.682, de 9 de julho de 2012, para estabelecer a técnica e os requisitos p",
+       "data": "2020-03-18",
+       "url": "https://sinoreg-es.org.br/posts-diversos/decreto-federal-no-10-278/",
+       "descricao": ""
+      },
+      {
+       "titulo": "Altera o Decreto nº 9.309, de 15 de março de 2018, que dispõe sobre a regularização fundiária das áreas rurais",
+       "data": "2019-12-10",
+       "url": "https://sinoreg-es.org.br/posts-diversos/decreto-federal-no-10-165/",
+       "descricao": ""
+      }
+     ],
+     "plataforma": "wordpress",
+     "titulo_pagina": "Decretos – Sinoreg ES",
+     "chars_texto": 4252,
+     "links": 31,
+     "scripts": 78,
+     "parece_spa": false,
+     "feeds_anunciados": [
+      {
+       "url": "https://sinoreg-es.org.br/feed/",
+       "tipo": "application/rss+xml",
+       "titulo": "Feed para Sinoreg ES »"
+      },
+      {
+       "url": "https://sinoreg-es.org.br/comments/feed/",
+       "tipo": "application/rss+xml",
+       "titulo": "Feed de comentários para Sinoreg ES »"
+      }
+     ],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://sinoreg-es.org.br/feed/",
+     "anunciado": true,
+     "http": {
+      "url": "https://sinoreg-es.org.br/feed/",
+      "status": 200,
+      "erro": "",
+      "tipo": "application/rss+xml; charset=UTF-8",
+      "bytes": 74313,
+      "ms": 114,
+      "url_final": "https://sinoreg-es.org.br/feed/",
+      "bloqueio": ""
+     },
+     "publicacoes": 10,
+     "com_titulo": 10,
+     "com_link": 10,
+     "com_data": 10,
+     "com_descricao": 10,
+     "na_janela": 5,
+     "data_mais_antiga": "2026-09-28",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Notários e registradores capixabas encerram Congresso Internacional da Emes com tema “prova extrajudicial”",
+       "data": "2026-09-29",
+       "url": "https://sinoreg-es.org.br/notarios-e-registradores-capixabas-encerram-congresso-internacional-da-emes-com-tema-prova-extrajudicial/",
+       "descricao": "A produção, a valoração e o uso da prova extrajudicial na atividade notarial e registral foram tema do último painel [&#8230;]"
+      },
+      {
+       "titulo": "CNJ apresenta proposta para registros de mortes em contexto de ação de órgãos de segurança",
+       "data": "2026-09-29",
+       "url": "https://sinoreg-es.org.br/cnj-apresenta-proposta-para-registros-de-mortes-em-contexto-de-acao-de-orgaos-de-seguranca/",
+       "descricao": "O Conselho Nacional de Justiça (CNJ) apresentou, nesta terça-feira (29/9), proposta de resolução que cria regras nacionais para que os [&#8230;]"
+      },
+      {
+       "titulo": "CCJ pode votar mudança na contagem de prazos para agilizar inventários",
+       "data": "2026-09-29",
+       "url": "https://sinoreg-es.org.br/ccj-pode-votar-mudanca-na-contagem-de-prazos-para-agilizar-inventarios/",
+       "descricao": "A Comissão de Constituição e Justiça (CCJ) pode votar o projeto (PL 2260/2025) que busca acelerar os inventários judiciais. Os [&#8230;]"
+      }
+     ],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://sinoreg-es.org.br/comments/feed/",
+     "anunciado": true,
+     "http": {
+      "url": "https://sinoreg-es.org.br/comments/feed/",
+      "status": 200,
+      "erro": "",
+      "tipo": "application/rss+xml; charset=UTF-8",
+      "bytes": 670,
+      "ms": 127,
+      "url_final": "https://sinoreg-es.org.br/comments/feed/",
+      "bloqueio": ""
+     },
+     "publicacoes": 0,
+     "com_titulo": 0,
+     "com_link": 0,
+     "com_data": 0,
+     "com_descricao": 0,
+     "na_janela": 0,
+     "data_mais_antiga": "",
+     "data_mais_recente": "",
+     "amostra": [],
+     "ok": false
+    },
+    {
+     "metodo": "api_wordpress",
+     "url": "https://sinoreg-es.org.br/wp-json/wp/v2/posts?per_page=20&_fields=date,link,title,excerpt",
+     "http": {
+      "url": "https://sinoreg-es.org.br/wp-json/wp/v2/posts?per_page=20&_fields=date,link,title,excerpt",
+      "status": 200,
+      "erro": "",
+      "tipo": "application/json; charset=UTF-8",
+      "bytes": 10566,
+      "ms": 269,
+      "url_final": "https://sinoreg-es.org.br/wp-json/wp/v2/posts?per_page=20&_fields=date,link,title,excerpt",
+      "bloqueio": ""
+     },
+     "publicacoes": 20,
+     "com_titulo": 20,
+     "com_link": 20,
+     "com_data": 20,
+     "com_descricao": 20,
+     "na_janela": 5,
+     "data_mais_antiga": "2026-09-25",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Notários e registradores capixabas encerram Congresso Internacional da Emes com tema “prova extrajudicial”",
+       "data": "2026-09-29",
+       "url": "https://sinoreg-es.org.br/notarios-e-registradores-capixabas-encerram-congresso-internacional-da-emes-com-tema-prova-extrajudicial/",
+       "descricao": "A produção, a valoração e o uso da prova extrajudicial na atividade notarial e registral foram tema do último painel [&hellip;]"
+      },
+      {
+       "titulo": "CNJ apresenta proposta para registros de mortes em contexto de ação de órgãos de segurança",
+       "data": "2026-09-29",
+       "url": "https://sinoreg-es.org.br/cnj-apresenta-proposta-para-registros-de-mortes-em-contexto-de-acao-de-orgaos-de-seguranca/",
+       "descricao": "O Conselho Nacional de Justiça (CNJ) apresentou, nesta terça-feira (29/9), proposta de resolução que cria regras nacionais para que os [&hellip;]"
+      },
+      {
+       "titulo": "CCJ pode votar mudança na contagem de prazos para agilizar inventários",
+       "data": "2026-09-29",
+       "url": "https://sinoreg-es.org.br/ccj-pode-votar-mudanca-na-contagem-de-prazos-para-agilizar-inventarios/",
+       "descricao": "A Comissão de Constituição e Justiça (CCJ) pode votar o projeto (PL 2260/2025) que busca acelerar os inventários judiciais. Os [&hellip;]"
+      }
+     ],
+     "ok": true,
+     "chaves_do_item": [
+      "date",
+      "excerpt",
+      "link",
+      "title"
+     ],
+     "cobre_a_janela": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://sinoreg-es.org.br/decretos/feed/",
+     "anunciado": false,
+     "http": {
+      "url": "https://sinoreg-es.org.br/decretos/feed/",
+      "status": 200,
+      "erro": "",
+      "tipo": "application/rss+xml; charset=UTF-8",
+      "bytes": 669,
+      "ms": 795,
+      "url_final": "https://sinoreg-es.org.br/decretos/feed/",
+      "bloqueio": ""
+     },
+     "publicacoes": 0,
+     "com_titulo": 0,
+     "com_link": 0,
+     "com_data": 0,
+     "com_descricao": 0,
+     "na_janela": 0,
+     "data_mais_antiga": "",
+     "data_mais_recente": "",
+     "amostra": [],
+     "ok": false
+    },
+    {
+     "metodo": "feed",
+     "url": "https://sinoreg-es.org.br/feed/",
+     "anunciado": false,
+     "http": {
+      "url": "https://sinoreg-es.org.br/feed/",
+      "status": 200,
+      "erro": "",
+      "tipo": "application/rss+xml; charset=UTF-8",
+      "bytes": 74313,
+      "ms": 96,
+      "url_final": "https://sinoreg-es.org.br/feed/",
+      "bloqueio": ""
+     },
+     "publicacoes": 10,
+     "com_titulo": 10,
+     "com_link": 10,
+     "com_data": 10,
+     "com_descricao": 10,
+     "na_janela": 5,
+     "data_mais_antiga": "2026-09-28",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Notários e registradores capixabas encerram Congresso Internacional da Emes com tema “prova extrajudicial”",
+       "data": "2026-09-29",
+       "url": "https://sinoreg-es.org.br/notarios-e-registradores-capixabas-encerram-congresso-internacional-da-emes-com-tema-prova-extrajudicial/",
+       "descricao": "A produção, a valoração e o uso da prova extrajudicial na atividade notarial e registral foram tema do último painel [&#8230;]"
+      },
+      {
+       "titulo": "CNJ apresenta proposta para registros de mortes em contexto de ação de órgãos de segurança",
+       "data": "2026-09-29",
+       "url": "https://sinoreg-es.org.br/cnj-apresenta-proposta-para-registros-de-mortes-em-contexto-de-acao-de-orgaos-de-seguranca/",
+       "descricao": "O Conselho Nacional de Justiça (CNJ) apresentou, nesta terça-feira (29/9), proposta de resolução que cria regras nacionais para que os [&#8230;]"
+      },
+      {
+       "titulo": "CCJ pode votar mudança na contagem de prazos para agilizar inventários",
+       "data": "2026-09-29",
+       "url": "https://sinoreg-es.org.br/ccj-pode-votar-mudanca-na-contagem-de-prazos-para-agilizar-inventarios/",
+       "descricao": "A Comissão de Constituição e Justiça (CCJ) pode votar o projeto (PL 2260/2025) que busca acelerar os inventários judiciais. Os [&#8230;]"
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://sinoreg-es.org.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "wordpress"
+  },
+  {
+   "fonte": "ANATEL | Notícias",
+   "url": "https://www.gov.br/anatel/pt-br/assuntos/noticias",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/anatel/pt-br/assuntos/noticias",
+     "http": {
+      "url": "https://www.gov.br/anatel/pt-br/assuntos/noticias",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 437254,
+      "ms": 927,
+      "url_final": "https://www.gov.br/anatel/pt-br/assuntos/noticias",
+      "bloqueio": ""
+     },
+     "publicacoes": 28,
+     "com_titulo": 28,
+     "com_link": 28,
+     "com_data": 0,
+     "com_descricao": 1,
+     "na_janela": 0,
+     "data_mais_antiga": "",
+     "data_mais_recente": "",
+     "amostra": [
+      {
+       "titulo": "Atuação Internacional",
+       "data": "",
+       "url": "https://www.gov.br/anatel/pt-br/assuntos/atuacao-internacional",
+       "descricao": ""
+      },
+      {
+       "titulo": "Dicas contra Fraudes",
+       "data": "",
+       "url": "https://www.gov.br/anatel/pt-br/assuntos/dicas-contra-fraudes",
+       "descricao": ""
+      },
+      {
+       "titulo": "Processo Sancionador",
+       "data": "",
+       "url": "https://www.gov.br/anatel/pt-br/assuntos/processo-sancionador",
+       "descricao": ""
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "NotíciasPortal Gov.br",
+     "chars_texto": 9984,
+     "links": 121,
+     "scripts": 8,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/anatel/pt-br/assuntos/noticias/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/anatel/pt-br/assuntos/noticias/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 150149,
+      "ms": 789,
+      "url_final": "https://www.gov.br/anatel/pt-br/assuntos/noticias/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/anatel/pt-br/assuntos/noticias/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/anatel/pt-br/assuntos/noticias/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 147897,
+      "ms": 784,
+      "url_final": "https://www.gov.br/anatel/pt-br/assuntos/noticias/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/anatel/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anatel/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 437462,
+      "ms": 905,
+      "url_final": "https://www.gov.br/anatel/pt-br/assuntos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": ""
+     },
+     "erro_leitura": "resposta nao e JSON (text/html; charset=utf-8)"
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/anatel/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anatel/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 167034,
+      "ms": 1040,
+      "url_final": "https://www.gov.br/anatel/pt-br/assuntos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": ""
+     },
+     "erro_leitura": "resposta nao e JSON (text/html; charset=utf-8)"
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/anatel/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/anatel/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 167034,
+      "ms": 1071,
+      "url_final": "https://www.gov.br/anatel/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": ""
+     },
+     "erro_leitura": "resposta nao e JSON (text/html; charset=utf-8)"
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/anatel/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/anatel/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 167034,
+      "ms": 1114,
+      "url_final": "https://www.gov.br/anatel/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 0,
+     "com_titulo": 0,
+     "com_link": 0,
+     "com_data": 0,
+     "com_descricao": 0,
+     "na_janela": 0,
+     "data_mais_antiga": "",
+     "data_mais_recente": "",
+     "amostra": [],
+     "ok": false
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "SUSEP | Notícias",
+   "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias",
+     "http": {
+      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 327569,
+      "ms": 785,
+      "url_final": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias",
+      "bloqueio": ""
+     },
+     "publicacoes": 15,
+     "com_titulo": 15,
+     "com_link": 15,
+     "com_data": 0,
+     "com_descricao": 1,
+     "na_janela": 0,
+     "data_mais_antiga": "",
+     "data_mais_recente": "",
+     "amostra": [
+      {
+       "titulo": "Informações ao Cidadão",
+       "data": "",
+       "url": "https://www.gov.br/susep/pt-br/assuntos/cidadao",
+       "descricao": ""
+      },
+      {
+       "titulo": "Informações ao Corretor",
+       "data": "",
+       "url": "https://www.gov.br/susep/pt-br/assuntos/corretor-de-seguros",
+       "descricao": ""
+      },
+      {
+       "titulo": "Informações ao Mercado",
+       "data": "",
+       "url": "https://www.gov.br/susep/pt-br/assuntos/informacoes-ao-mercado",
+       "descricao": ""
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "NotíciasPortal Gov.br",
+     "chars_texto": 5908,
+     "links": 63,
+     "scripts": 8,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 150317,
+      "ms": 677,
+      "url_final": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 150192,
+      "ms": 633,
+      "url_final": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 327702,
+      "ms": 790,
+      "url_final": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": ""
+     },
+     "erro_leitura": "resposta nao e JSON (text/html; charset=utf-8)"
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 167013,
+      "ms": 998,
+      "url_final": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": ""
+     },
+     "erro_leitura": "resposta nao e JSON (text/html; charset=utf-8)"
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/susep/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/susep/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 167013,
+      "ms": 987,
+      "url_final": "https://www.gov.br/susep/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": ""
+     },
+     "erro_leitura": "resposta nao e JSON (text/html; charset=utf-8)"
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/susep/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/susep/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html; charset=utf-8",
+      "bytes": 167011,
+      "ms": 1087,
+      "url_final": "https://www.gov.br/susep/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 0,
+     "com_titulo": 0,
+     "com_link": 0,
+     "com_data": 0,
+     "com_descricao": 0,
+     "na_janela": 0,
+     "data_mais_antiga": "",
+     "data_mais_recente": "",
+     "amostra": [],
+     "ok": false
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  },
+  {
+   "fonte": "ANTT | Notícias - Defeso Eleitoral",
+   "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral",
+   "estado": "ativa",
+   "host": "www.gov.br",
+   "metodos": [
+    {
+     "metodo": "download_direto",
+     "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral",
+     "http": {
+      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 250959,
+      "ms": 561,
+      "url_final": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral",
+      "bloqueio": ""
+     },
+     "publicacoes": 30,
+     "com_titulo": 30,
+     "com_link": 30,
+     "com_data": 30,
+     "com_descricao": 30,
+     "na_janela": 2,
+     "data_mais_antiga": "2026-09-16",
+     "data_mais_recente": "2026-09-30",
+     "amostra": [
+      {
+       "titulo": "ANTT prorroga prazo para contribuições sobre alterações em soluções de engenharia",
+       "data": "2026-09-30",
+       "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-prorroga-prazo-para-contribuicoes-sobre-alteracoes-em-solucoes-de-engenharia",
+       "descricao": "- Participacoes na Reuniao Participativa nº 005/2026 poderao ser enviadas ate as 18h de 9 de outubro pelo sistema ParticipaANTT SANDBOX REGULATORIO | CORREDOR LOGISTICO SUSTENTAVEL"
+      },
+      {
+       "titulo": "ANTT aprova projeto da Motiva RioSP para implantação de Corredor Logístico Sustentável Multimodal",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-aprova-projeto-da-motiva-riosp-para-implantacao-de-corredor-logistico-sustentavel-multimodal",
+       "descricao": "- Projeto na Rodovia Presidente Dutra integra acoes de eletromobilidade, conexao com o Porto de Itaguai, seguranca viaria, sustentabilidade e desenvolvimento territorial ROTA DOS SERTOES | CONCESSAO RODOVIARIA"
+      }
+     ],
+     "plataforma": "plone",
+     "titulo_pagina": "Notícias - Defeso Eleitoral — Agência Nacional de Transportes Terrestres - ANTT",
+     "chars_texto": 16673,
+     "links": 60,
+     "scripts": 36,
+     "parece_spa": false,
+     "feeds_anunciados": [],
+     "ok": true
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/rss.xml",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/rss.xml",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 436,
+      "url_final": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/rss.xml",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "feed",
+     "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/RSS",
+     "anunciado": false,
+     "http": {
+      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/RSS",
+      "status": 404,
+      "erro": "HTTP 404",
+      "tipo": "application/json",
+      "bytes": 26,
+      "ms": 432,
+      "url_final": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/RSS",
+      "bloqueio": ""
+     }
+    },
+    {
+     "metodo": "api_plone_listagem",
+     "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 490,
+      "url_final": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral?b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_na_listagem",
+     "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 530,
+      "url_final": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/@search?sort_on=effective&sort_order=descending&b_size=40&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "api_plone_busca_no_escopo",
+     "url": "https://www.gov.br/antt/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+     "http": {
+      "url": "https://www.gov.br/antt/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "status": 401,
+      "erro": "HTTP 401",
+      "tipo": "application/json",
+      "bytes": 94,
+      "ms": 436,
+      "url_final": "https://www.gov.br/antt/pt-br/@search?sort_on=effective&sort_order=descending&b_size=60&metadata_fields=effective&metadata_fields=created&metadata_fields=Description",
+      "bloqueio": "HTTP 401"
+     }
+    },
+    {
+     "metodo": "busca_por_data_no_site",
+     "url": "https://www.gov.br/antt/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+     "http": {
+      "url": "https://www.gov.br/antt/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "status": 200,
+      "erro": "",
+      "tipo": "text/html;charset=utf-8",
+      "bytes": 174400,
+      "ms": 1196,
+      "url_final": "https://www.gov.br/antt/pt-br/@@search?SearchableText=&sort_on=Date&sort_order=reverse&created.query:record:list:date=2026-09-29&created.range:record=min",
+      "bloqueio": ""
+     },
+     "publicacoes": 109,
+     "com_titulo": 109,
+     "com_link": 109,
+     "com_data": 1,
+     "com_descricao": 1,
+     "na_janela": 1,
+     "data_mais_antiga": "2026-09-29",
+     "data_mais_recente": "2026-09-29",
+     "amostra": [
+      {
+       "titulo": "Ir para a Página Inicial 2",
+       "data": "2026-09-29",
+       "url": "https://www.gov.br/",
+       "descricao": "Termos mais buscados Termos mais buscados"
+      }
+     ],
+     "ok": true
+    }
+   ],
+   "robots": {
+    "url": "https://www.gov.br/robots.txt",
+    "status": 200,
+    "crawl_delay": null,
+    "erro": "",
+    "regras": "lidas",
+    "listagem_permitida": true
+   },
+   "plataforma": "plone"
+  }
+ ]
+}
