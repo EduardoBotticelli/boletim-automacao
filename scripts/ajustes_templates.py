@@ -389,6 +389,24 @@ def ancora_generica(config):
     return generica.get("ancora") or ""
 
 
+def aviso_sem_noticia(config):
+    """
+    Como as fontes sem notícia aparecem no sumário: cor, legenda e tamanho
+    da legenda.
+
+    Cada campo não declarado fica com o padrão do templates_radar. Legenda
+    vazia desliga a linha de texto e deixa só o cinza.
+    """
+    padrao = templates_radar.AVISO_SEM_NOTICIA
+    texto = config.get("texto_fonte_sem_noticia")
+
+    return templates_radar.AvisoSemNoticia(
+        cor=config.get("cor_fonte_sem_noticia") or padrao.cor,
+        texto=padrao.texto if texto is None else texto,
+        tamanho=config.get("tamanho_texto_sem_noticia") or padrao.tamanho,
+    )
+
+
 def aplicar_secao_generica(html, slug, config_generica, conteudo_vazio=None):
     """
     Cria no template do Radar a faixa que recebe as fontes sem faixa própria.
@@ -423,6 +441,66 @@ def aplicar_secao_generica(html, slug, config_generica, conteudo_vazio=None):
 
 
 # ---------------------------------------------------------------------------
+# 4. Espaçamento entre as notícias
+# ---------------------------------------------------------------------------
+
+
+def aplicar_espacamento_noticias(html, valor):
+    """
+    Aumenta o espaço vertical entre as notícias de uma mesma seção.
+
+    O parágrafo de notícia dos nove templates declara 'margin-bottom:4.0pt'.
+    Só esse número muda, e só na tag de abertura dos parágrafos das linhas de
+    notícia: nenhum outro parágrafo do template é tocado, nem o recuo, nem o
+    marcador da lista, nem a fonte.
+
+    Devolve (html, quantidade de parágrafos ajustados).
+    """
+    estrutura = templates_radar.analisar(html)
+    ajustados = 0
+
+    # Da última seção para a primeira, e dentro de cada uma do último
+    # parágrafo para o primeiro, para os deslocamentos não se moverem
+    # durante a substituição.
+    secoes = sorted(estrutura.secoes, key=lambda s: s.inicio_corpo, reverse=True)
+
+    for secao in secoes:
+        unidades = templates_radar._unidades_de_noticia(html, secao)
+        for inicio, _fim in reversed(unidades):
+            abertura = re.match(r"<p\b[^>]*>", html[inicio:])
+            if not abertura:
+                continue
+
+            tag = abertura.group(0)
+            nova = re.sub(
+                r"margin-bottom:[\d.]+(?:pt|cm|px)",
+                f"margin-bottom:{valor}",
+                tag,
+                count=1,
+            )
+
+            if nova == tag:
+                # Parágrafo sem margem inferior declarada: a margem entra no
+                # começo do style, onde as demais já estão.
+                nova = re.sub(
+                    r"style=(['\"])",
+                    lambda encontrada: (
+                        f"style={encontrada.group(1)}margin-bottom:{valor};"
+                    ),
+                    tag,
+                    count=1,
+                )
+
+            if nova == tag:
+                continue
+
+            html = html[:inicio] + nova + html[inicio + len(tag) :]
+            ajustados += 1
+
+    return html, ajustados
+
+
+# ---------------------------------------------------------------------------
 # Entrada
 # ---------------------------------------------------------------------------
 
@@ -437,6 +515,7 @@ def aplicar(html, slug, config):
         "ancora_sumario": False,
         "secoes_novas": [],
         "secao_generica": None,
+        "espacamento_entre_noticias": None,
     }
 
     nome_ancora = config.get("ancora_voltar_sumario")
@@ -465,5 +544,15 @@ def aplicar(html, slug, config):
             html, slug, generica, conteudo_vazio
         )
         relatorio["secao_generica"] = detalhe
+
+    # O espaçamento é o último ajuste: assim vale também para as seções
+    # criadas acima, que são cópias feitas antes desta troca.
+    espacamento = config.get("espacamento_entre_noticias")
+    if espacamento:
+        html, ajustados = aplicar_espacamento_noticias(html, espacamento)
+        relatorio["espacamento_entre_noticias"] = {
+            "valor": espacamento,
+            "paragrafos": ajustados,
+        }
 
     return html, relatorio

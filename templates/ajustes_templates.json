@@ -4,7 +4,7 @@
     "gerar a edição. Os arquivos .msg não são alterados: eles continuam sendo",
     "a fonte, somente leitura.",
     "",
-    "São três ajustes, todos autorizados e pendentes de incorporação oficial",
+    "São cinco ajustes, todos autorizados e pendentes de incorporação oficial",
     "pelo Marketing. A lista para envio está em docs/templates-oficiais.md.",
     "",
     "1. ancora_voltar_sumario: o link 'VOLTAR AO SUMÁRIO' aponta para",
@@ -22,6 +22,15 @@
     "   porque quem cai na faixa é publicado com o nome da própria fonte no",
     "   começo do título.",
     "",
+    "4. espacamento_entre_noticias: a margem inferior do parágrafo de notícia,",
+    "   que no template é 4.0pt e deixa as notícias muito juntas.",
+    "",
+    "5. cor_fonte_sem_noticia, texto_fonte_sem_noticia e",
+    "   tamanho_texto_sem_noticia: como a fonte sem notícia aparece no",
+    "   sumário. O sumário lista todas as fontes previstas no Radar; a que",
+    "   não publicou nada sai em cinza, sem link e com a legenda 'Sem",
+    "   publicações nesta edição' abaixo do nome.",
+    "",
     "Critério de posição: a seção nova entra depois da última seção existente,",
     "e a entrada no sumário ocupa a primeira célula livre da grade. É a única",
     "posição que não desloca nenhuma entrada já definida pelo Marketing nem",
@@ -30,6 +39,32 @@
   ],
 
   "ancora_voltar_sumario": "Sumario",
+
+  "_espacamento_leia_me": [
+    "Margem inferior de cada parágrafo de notícia. O template traz 4.0pt, que",
+    "deixa uma notícia colada na seguinte. Trocar só esse número não mexe em",
+    "recuo, marcador de lista, fonte nem em qualquer outro parágrafo.",
+    "Vazio desliga o ajuste e mantém o valor do template."
+  ],
+  "espacamento_entre_noticias": "10.0pt",
+
+  "_sem_noticia_leia_me": [
+    "Como a fonte sem notícia no período aparece no sumário.",
+    "",
+    "cor_fonte_sem_noticia: cinza médio sobre o fundo #D9D9D9 que o template",
+    "usa nas células da grade. Vazio usa o padrão do templates_radar.py.",
+    "",
+    "texto_fonte_sem_noticia: a legenda escrita logo abaixo do nome da fonte,",
+    "dentro da mesma célula. Sem ela, o cinza sozinho não explica se a fonte",
+    "foi consultada ou se nem faz parte do Radar. String vazia desliga a",
+    "legenda e deixa só o cinza.",
+    "",
+    "tamanho_texto_sem_noticia: o tamanho da legenda. O nome da fonte é 10pt",
+    "no template, então este valor precisa ser menor."
+  ],
+  "cor_fonte_sem_noticia": "#808080",
+  "texto_fonte_sem_noticia": "Sem publicações nesta edição",
+  "tamanho_texto_sem_noticia": "7.5pt",
 
   "secoes_novas": {
     "societario-ma": [

@@ -51,6 +51,7 @@ encontrado.
   "total_itens": 10,
   "total_aprovados": 9,
   "total_rejeitados": 1,
+  "radares_sem_conteudo_confirmados": ["contencioso-civel"],
   "decisoes": [
     {
       "id": "it-1a2b3c4d",
@@ -76,6 +77,7 @@ encontrado.
 | `confirmado_em`     | Momento da confirmação, em ISO 8601. |
 | `data_execucao`     | Edição do boletim que foi revisada. |
 | `decisoes`          | Uma entrada por item revisado, incluindo os rejeitados. |
+| `radares_sem_conteudo_confirmados` | Radares que saem sem nenhuma publicação, com ciência explícita de quem revisou. Lista vazia quando todos têm conteúdo. |
 
 ### Campos da decisão
 
@@ -105,6 +107,31 @@ desabilitado, o portal tem duas travas: o handler de confirmação recusa, e o
 Se mesmo assim chegar um `status: "pendente"` — por exemplo de um cliente
 antigo —, o gerador bloqueia a geração em vez de adivinhar, e preserva os
 e-mails da edição anterior.
+
+### Radar sem conteúdo
+
+Um Radar pode acabar sem nenhuma publicação. Em vez de sair só com a mensagem
+padrão sem que ninguém tenha reparado, o portal bloqueia a conclusão da
+revisão e oferece, para cada Radar vazio, as publicações coletadas naquela
+edição que não foram classificadas para ele.
+
+Para liberar, quem revisa faz uma das duas coisas:
+
+- inclui pelo menos uma publicação no Radar — o que é o mesmo ajuste manual
+  de Radar que já existia, e viaja em `radares_finais` como qualquer outro; ou
+- marca que o Radar pode sair vazio mesmo assim — e aí o slug entra em
+  `radares_sem_conteudo_confirmados`.
+
+A marcação vale para o Radar que está vazio no momento. Se ele receber uma
+publicação depois, a marcação é descartada: voltando a ficar vazio, a decisão
+precisa ser tomada de novo.
+
+**O gerador não inclui nada por conta própria.** Ele lê a lista só para
+registrar, no `resumo_geracao_final.json`, quais Radares saíram vazios
+(`radares_sem_conteudo.gerados_vazios`), quais tinham confirmação
+(`confirmados_no_portal`) e quais saíram vazios sem registro
+(`sem_registro_de_confirmacao`, que acontece com payload de um portal antigo).
+Nenhum desses casos bloqueia a geração.
 
 ## Quando o gerador se recusa a gerar
 

@@ -38,6 +38,24 @@ TEXTO_SEM_NOTICIAS = (
     "Não foram identificadas atualizações para este Radar no período analisado."
 )
 
+@dataclass(frozen=True)
+class AvisoSemNoticia:
+    """
+    Como uma fonte sem notícia no período aparece no sumário.
+
+    O cinza é médio sobre o fundo #D9D9D9 da grade, que é o que o próprio
+    template usa nas células. A legenda entra em um segundo parágrafo dentro
+    da mesma célula, menor que o nome da fonte (10pt no template), para o
+    cinza não ficar por conta própria explicando o que significa.
+    """
+
+    cor: str = "#808080"
+    texto: str = "Sem publicações nesta edição"
+    tamanho: str = "7.5pt"
+
+
+AVISO_SEM_NOTICIA = AvisoSemNoticia()
+
 _PLACEHOLDER_DATA = "00.00.2026"
 _PLACEHOLDER_TITULO = "Título | "
 _PLACEHOLDER_LINK = "Acesse a matéria"
@@ -532,6 +550,83 @@ def _unidade_sem_noticias(modelo, mensagem):
     return resultado
 
 
+_COR_PRETA = re.compile(r"color:(?:black|#000000|#000)\b")
+
+
+def _legenda_sem_noticia(fragmento, aviso):
+    """
+    Acrescenta, dentro da mesma célula, a linha "Sem publicações nesta
+    edição" abaixo do nome da fonte.
+
+    O parágrafo novo é uma cópia da tag de abertura do parágrafo do nome, com
+    a mesma classe e o mesmo alinhamento do template, e o texto vai em um
+    <span> com estilo em linha — a mesma forma que o template usa, que é a
+    que o Outlook preserva. Sem versalete e sem negrito: é legenda, não
+    outro nome de fonte.
+
+    A célula em si não é tocada: largura, altura declarada, bordas e fundo
+    continuam sendo os do template.
+    """
+    if not aviso.texto:
+        return fragmento
+
+    abertura = re.search(r"<p\b[^>]*>", fragmento)
+    fechamento = fragmento.rfind("</td>")
+    if not abertura or fechamento == -1:
+        return fragmento
+
+    legenda = (
+        abertura.group(0)
+        + "<span style='font-size:%s;font-family:\"Arial\",sans-serif;"
+        "color:%s'>%s<o:p></o:p></span></p>"
+        % (aviso.tamanho, aviso.cor, _escapar(aviso.texto))
+    )
+
+    return fragmento[:fechamento] + legenda + fragmento[fechamento:]
+
+
+def _celula_sem_noticia(fragmento, aviso):
+    """
+    A célula do sumário de uma fonte que não teve notícia no período.
+
+    Tira o link — não existe seção para onde ir —, troca a cor do texto pelo
+    cinza e escreve a legenda embaixo. Todo o resto vem intacto do template:
+    a célula com largura, fundo e bordas, o versalete, o espaçamento entre
+    letras e a fonte.
+    """
+    cor = aviso.cor
+    abertura = re.search(r'<a\b[^>]*href=["\']?#[^"\'>]+["\']?[^>]*>', fragmento)
+    if abertura:
+        fechamento = fragmento.find("</a>", abertura.end())
+        if fechamento != -1:
+            fragmento = (
+                fragmento[: abertura.start()]
+                + fragmento[abertura.end() : fechamento]
+                + fragmento[fechamento + len("</a>") :]
+            )
+
+    if _COR_PRETA.search(fragmento):
+        fragmento = _COR_PRETA.sub("color:" + cor, fragmento)
+        return _legenda_sem_noticia(fragmento, aviso)
+
+    # Célula que não declara cor: o cinza entra por fora, envolvendo o
+    # conteúdo, sem tocar no <td> nem no que há dentro.
+    abertura_td = re.match(r"<td\b[^>]*>", fragmento)
+    fim_td = fragmento.rfind("</td>")
+    if not abertura_td or fim_td == -1:
+        return fragmento
+
+    fragmento = (
+        fragmento[: abertura_td.end()]
+        + f"<span style='color:{cor}'>"
+        + fragmento[abertura_td.end() : fim_td]
+        + "</span>"
+        + fragmento[fim_td:]
+    )
+
+    return _legenda_sem_noticia(fragmento, aviso)
+
+
 def _corpo_preenchido(html_template, secao, noticias, mensagem_vazio=None):
     """Reescreve a linha de notícias de uma seção mantendo a linha original."""
     unidades = _unidades_de_noticia(html_template, secao)
@@ -554,16 +649,37 @@ def _corpo_preenchido(html_template, secao, noticias, mensagem_vazio=None):
     return antes + conteudo + depois
 
 
-def preencher(html_template, estrutura, data_edicao, noticias_por_ancora):
+def preencher(
+    html_template,
+    estrutura,
+    data_edicao,
+    noticias_por_ancora,
+    ancoras_opcionais=(),
+    aviso=AVISO_SEM_NOTICIA,
+):
     """
     Devolve o HTML da edição final.
 
     `noticias_por_ancora` mapeia a âncora da seção para a lista de notícias
-    aprovadas. Seções ausentes do mapa (ou com lista vazia) são removidas,
-    junto com a entrada correspondente no sumário.
+    aprovadas. Seções ausentes do mapa (ou com lista vazia) são removidas do
+    corpo: o Radar mostra só o que tem conteúdo.
+
+    O sumário, ao contrário, lista todas as fontes previstas no template. A
+    que teve notícia continua com o link para a seção; a que não teve aparece
+    em cinza, sem link e com a legenda do `aviso` logo abaixo do nome,
+    dizendo a quem lê que a fonte foi consultada e não houve publicação
+    relevante. Como nenhuma célula sai, a grade de três células por linha
+    fica intacta.
+
+    `ancoras_opcionais` são as âncoras que não representam fonte consultada e
+    por isso continuam saindo do sumário quando não têm notícia — hoje, a
+    faixa "Outras publicações". Se a âncora opcional divide a linha com
+    outras fontes, a célula dela fica em branco em vez de sumir, para a
+    grade continuar com três células; se a linha era só dela, a linha inteira
+    sai.
 
     Quando nenhuma seção tem notícia, o template é preservado e uma única
-    seção exibe a mensagem padrão.
+    seção exibe a mensagem padrão, com o sumário inteiro em cinza.
     """
     com_noticias = [
         secao
@@ -573,13 +689,22 @@ def preencher(html_template, estrutura, data_edicao, noticias_por_ancora):
     radar_vazio = not com_noticias
 
     ancoras_mantidas = {secao.ancora for secao in com_noticias}
+    opcionais = set(ancoras_opcionais or ())
 
-    # Sumário: remove as células das fontes sem notícia. Uma linha que perde
-    # todas as células é removida inteira, para não deixar faixa vazia.
+    # Sumário: a fonte sem notícia continua listada, só que em cinza e sem
+    # link. Saem do sumário apenas as âncoras opcionais sem notícia, que não
+    # são fonte consultada. Uma linha que perde todas as células é removida
+    # inteira, para não deixar faixa vazia.
     celulas_removidas = {
         (celula.inicio, celula.fim)
         for celula in estrutura.celulas_sumario
-        if celula.ancora not in ancoras_mantidas
+        if celula.ancora not in ancoras_mantidas and celula.ancora in opcionais
+    }
+
+    celulas_sem_noticia = {
+        (celula.inicio, celula.fim)
+        for celula in estrutura.celulas_sumario
+        if celula.ancora not in ancoras_mantidas and celula.ancora not in opcionais
     }
 
     linhas_esvaziadas = set()
@@ -619,8 +744,26 @@ def preencher(html_template, estrutura, data_edicao, noticias_por_ancora):
         for celula in estrutura.celulas_sumario:
             if celula.indice_linha != indice:
                 continue
-            if (celula.inicio, celula.fim) in celulas_removidas:
+            chave = (celula.inicio, celula.fim)
+            if chave in celulas_removidas:
+                # A célula é esvaziada, não retirada: tirar o <td> deixaria a
+                # linha com duas células e quebraria a grade de três. A célula
+                # vazia é uma das duas formas que os próprios templates usam
+                # quando sobra posição na grade.
                 emitir_ate(celula.inicio)
+                abertura = re.match(
+                    r"<td\b[^>]*>", html_template[celula.inicio : celula.fim]
+                )
+                if abertura:
+                    partes.append(abertura.group(0) + "</td>")
+                cursor = celula.fim
+            elif chave in celulas_sem_noticia:
+                emitir_ate(celula.inicio)
+                partes.append(
+                    _celula_sem_noticia(
+                        html_template[celula.inicio : celula.fim], aviso
+                    )
+                )
                 cursor = celula.fim
 
     # 3. Seções.

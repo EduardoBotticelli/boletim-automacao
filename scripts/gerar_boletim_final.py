@@ -979,6 +979,18 @@ def main():
         )
 
     agrupados = agrupar_por_radar(aprovados)
+
+    # Radares que saem só com a mensagem padrão. O portal só conclui a revisão
+    # depois que cada um deles recebeu uma publicação ou foi marcado para sair
+    # vazio, e manda a lista do que foi marcado. Aqui isso só é registrado: o
+    # gerador nunca inclui notícia por conta própria.
+    radares_vazios = [slug for slug in SLUGS if not agrupados[slug]]
+    vazios_confirmados = lista_slugs(
+        metadados.get("radares_sem_conteudo_confirmados")
+    )
+    vazios_sem_registro = [
+        slug for slug in radares_vazios if slug not in vazios_confirmados
+    ]
     config = boletim.get("boletins_config", {})
     nomes = config.get("nomes_radares", {}) if isinstance(config, dict) else {}
     nomes = {**NOMES_PADRAO, **nomes}
@@ -1022,6 +1034,7 @@ def main():
 
     # Distribui as notícias pelas seções antes de gravar, pelo mesmo motivo.
     ancora_generica = ajustes_templates.ancora_generica(config_ajustes)
+    aviso_sem_noticia = ajustes_templates.aviso_sem_noticia(config_ajustes)
 
     distribuicao = {}
     sem_secao = []
@@ -1068,6 +1081,11 @@ def main():
             estrutura,
             data_curta,
             por_ancora,
+            # A faixa genérica não é fonte consultada: ou tem notícia, ou
+            # não aparece. Toda fonte de verdade fica no sumário, em cinza
+            # quando não publicou nada no período.
+            ancoras_opcionais=[ancora_generica] if ancora_generica else [],
+            aviso=aviso_sem_noticia,
         )
 
         assunto = f"{assuntos.get(slug, nome_radar)} | {data_extenso}"
@@ -1125,6 +1143,11 @@ def main():
         "decisoes_sem_item_correspondente": decisoes_orfas,
         "ajustes_nos_templates": ajustes_aplicados,
         "noticias_em_outras_publicacoes": encaminhadas,
+        "radares_sem_conteudo": {
+            "gerados_vazios": radares_vazios,
+            "confirmados_no_portal": vazios_confirmados,
+            "sem_registro_de_confirmacao": vazios_sem_registro,
+        },
         "arquivos_gerados": arquivos_gerados,
     }
     escrever_json_atomico(RESUMO_PATH, resumo)
@@ -1136,6 +1159,14 @@ def main():
         )
 
     print("=" * 60)
+    if vazios_sem_registro:
+        print(
+            f"Aviso: {len(vazios_sem_registro)} Radar(es) saíram sem publicação "
+            "e sem registro de confirmação no portal: "
+            + ", ".join(vazios_sem_registro)
+            + "."
+        )
+
     if encaminhadas:
         print(
             f"Aviso: {len(encaminhadas)} notícia(s) sem faixa própria foram "

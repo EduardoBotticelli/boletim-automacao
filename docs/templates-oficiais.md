@@ -215,12 +215,12 @@ python scripts/inspecionar_templates.py
 
 ## Ajustes aplicados sobre o template
 
-Os `.msg` não podem ser reescritos no Linux (ver acima), então três ajustes
+Os `.msg` não podem ser reescritos no Linux (ver acima), então cinco ajustes
 autorizados são aplicados ao HTML extraído, na geração. Estão declarados em
 `templates/ajustes_templates.json` e implementados em
 `scripts/ajustes_templates.py`.
 
-Os três precisam ser incorporados oficialmente pelo Marketing. A lista para
+Os cinco precisam ser incorporados oficialmente pelo Marketing. A lista para
 envio está no fim deste documento.
 
 ### Ajuste 1 — âncora do "VOLTAR AO SUMÁRIO"
@@ -332,6 +332,52 @@ e vem antes da faixa genérica: é o jeito de mandar os itens manuais de um
 Radar para uma faixa escolhida. Ele muda a procedência aparente da notícia,
 então só serve quando a fonte digitada é mesmo a daquela faixa.
 
+### Ajuste 4 — espaço entre as notícias
+
+O parágrafo de notícia dos nove templates traz `margin-bottom:4.0pt`, o que
+deixa uma notícia colada na seguinte e atrapalha a leitura quando a seção tem
+várias. O valor passa a ser o declarado em `espacamento_entre_noticias`
+(hoje `10.0pt`).
+
+Só esse número muda, e só na tag de abertura dos parágrafos das linhas de
+notícia. Recuo, marcador de lista, fonte, tamanho e qualquer outro parágrafo
+do template ficam como vieram. O ajuste é o último a ser aplicado, então vale
+também para as seções criadas pelos Ajustes 2 e 3, que são cópias feitas
+antes dessa troca.
+
+### Ajuste 5 — sumário com todas as fontes
+
+Antes, a fonte sem notícia sumia do corpo **e** do sumário. Quem lia não tinha
+como saber se a fonte foi consultada e não publicou nada, ou se ela nem faz
+parte daquele Radar.
+
+Agora o sumário lista todas as fontes previstas no template:
+
+- fonte **com** notícia: como sempre, com link para a seção;
+- fonte **sem** notícia: em cinza (`cor_fonte_sem_noticia`, hoje `#808080`),
+  sem link — porque não existe seção para onde ir — e com a legenda
+  **"Sem publicações nesta edição"** logo abaixo do nome.
+
+A legenda existe porque o cinza sozinho é ambíguo: quem lê não tem como saber
+se aquilo quer dizer "consultamos e não saiu nada" ou "essa fonte não faz
+parte deste Radar". Ela fica dentro da mesma célula, em um segundo parágrafo,
+a `tamanho_texto_sem_noticia` (hoje `7.5pt`, menor que os 10pt do nome), sem
+versalete e sem negrito — é legenda, não outro nome de fonte.
+
+O corpo continua mostrando só as seções com notícia. A faixa "Outras
+publicações" é a única exceção no sumário: ela não é fonte consultada, então
+continua saindo quando está vazia — e por isso nunca recebe a legenda.
+
+Na prática o ajuste é feito na própria célula do template: o `<a>` é removido,
+a cor do texto é trocada e a legenda entra como parágrafo novo, copiando a tag
+de abertura do parágrafo do nome. A célula em si — largura, altura declarada,
+bordas e fundo — não é tocada, nem o versalete, o espaçamento entre letras e a
+fonte do nome. A linha fica mais alta porque há mais uma linha de texto nela;
+isso é inerente ao pedido.
+
+O estilo da legenda é declarado em linha, no `<span>`, que é a forma que o
+template já usa — é a que o Outlook preserva.
+
 ### Aliases
 
 Com as seções criadas, os aliases que desviavam ANEEL, ANATEL, ANTAQ, ANTT e
@@ -350,14 +396,16 @@ pendente** no arquivo oficial:
 - o "VOLTAR AO SUMÁRIO" aponta para `#Sumario`, e nenhum dos nove templates
   tem âncora com esse nome.
 
-## Consequência visual da remoção no sumário
+## A grade do sumário
 
-O sumário é uma grade de três células por linha. Ao remover as fontes sem
-notícia, as células restantes mantêm a largura original, então a grade pode
-ficar irregular (uma linha com duas células, outra com uma). É o efeito
-direto da regra "remover do sumário as fontes sem notícias" sobre uma grade
-de largura fixa. Redistribuir as células mudaria a largura delas, o que
-seria alterar o layout.
+O sumário é uma grade de três células por linha. Enquanto as fontes sem
+notícia eram removidas, a grade ficava irregular (uma linha com duas células,
+outra com uma), porque as que sobravam mantinham a largura original e
+redistribuí-las seria alterar o layout.
+
+Com o Ajuste 5 isso deixou de acontecer: nenhuma célula de fonte é removida,
+só muda de aparência. A grade sai com as mesmas linhas e as mesmas células do
+template, em qualquer edição.
 
 ## Lista para o Marketing
 
@@ -404,6 +452,27 @@ Eixos, RC Ambiental).
 A notícia publicada nessa faixa leva o nome da própria fonte no começo do
 título, então a procedência continua visível. A faixa só aparece na edição
 quando tem notícia.
+
+**4. Espaço entre as notícias — nos nove Radares**
+
+No bloco de notícias, o espaçamento depois do parágrafo está em 4 pt, o que
+deixa uma notícia colada na seguinte. Aumentar para **10 pt**. No Word:
+selecionar os parágrafos de notícia e, em Layout → Espaçamento → Depois,
+trocar 4 pt por 10 pt. Nada mais muda.
+
+**5. Sumário com todas as fontes — nos nove Radares**
+
+Hoje o sumário do arquivo oficial lista as fontes com link. A regra nova, já
+aplicada pelo pipeline, é: a fonte que não publicou nada no período continua
+listada, **em cinza (#808080), sem link e com a linha "Sem publicações nesta
+edição" (7,5 pt) abaixo do nome**, dentro da mesma célula. Isso mostra a quem
+lê que a fonte foi consultada, e mantém a grade de três células sempre
+completa.
+
+Para o arquivo oficial nada precisa mudar visualmente: o template é o estado
+"todas as fontes com link", e o cinza e a legenda só aparecem na edição
+gerada. A observação fica registrada para o caso de o Marketing querer
+padronizar o cinza e o tamanho da legenda em algum guia de estilo.
 
 São fontes que o Filtro 1 já autoriza para esses Radares. Sem a seção, uma
 notícia delas não teria onde ser publicada.
