@@ -122,9 +122,9 @@ escrito, então a ordem dos merges não abre brecha.
 `log_execucao.json` ganha `distribuicao_sem_ia`:
 
 ```json
-{"itens": 19, "com_radar_sugerido": 15,
- "por_metodo": {"matriz": 4, "palavras_chave": 1, "perfil_da_fonte": 10},
- "sem_radar": 4, "por_radar": {...}, "motivos_sem_radar": {...}, "por_fonte": {...}}
+{"itens": 19, "com_radar_sugerido": 14,
+ "por_metodo": {"matriz": 4, "palavras_chave": 1, "perfil_da_fonte": 9},
+ "sem_radar": 5, "por_radar": {...}, "motivos_sem_radar": {...}, "por_fonte": {...}}
 ```
 
 e `sugestao_indisponivel` quando os templates não puderam ser lidos. A
