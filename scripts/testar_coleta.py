@@ -661,6 +661,253 @@ def teste_dossier_guardado_refaz_o_mesmo_dossier():
     assert refeito == original, "o dossier refeito do disco difere do original"
 
 
+# ---------------------------------------------------------------------------
+# Coleta sem Firecrawl
+# ---------------------------------------------------------------------------
+
+import datetime as _dt
+
+import coleta_direta as cd  # noqa: E402
+
+INICIO, FIM = _dt.date(2026, 9, 29), _dt.date(2026, 9, 30)
+
+
+class ClienteHttpFalso:
+    """Responde por URL (ou pelo comeco dela) o que o teste manda."""
+
+    def __init__(self, respostas):
+        self.respostas = respostas
+        self.pedidos = []
+        self.requisicoes = 0
+
+    def baixar(self, url, aceitar=None, extras=None):
+        self.pedidos.append(url)
+        self.requisicoes += 1
+        resposta = next((v for k, v in self.respostas.items() if url.startswith(k)), (404, ""))
+        status, texto = resposta
+        return {"url": url, "status": status, "erro": "" if status == 200 else f"HTTP {status}", "tipo": "",
+                "bytes": len(texto), "ms": 0, "url_final": url, "texto": texto, "corpo": texto.encode(), "bloqueio": ""}
+
+
+LINHA_RECEITA = """<tr class='linhaResultados'>
+ <!-- <td width="10%"><a href='link.action?idAto=153836'>Ato Declaratório Executivo</a></td> -->
+ <td width="10%"><a href='https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836/vs/MTU=' target="_blank"> Ato Declarat&#xF3;rio Executivo </a></td>
+ <td width="10%"><a href='https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836/vs/MTU='> 79 </a></td>
+ <td width="10%"><div><a href='https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836/vs/MTU='> Corat</a></div></td>
+ <td width="10%"><a href='https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836/vs/MTU='> {data} </a></td>
+ <td><a href='https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836/vs/MTU='>Divulga a taxa de juros aplicável.</a></td>
+</tr>"""
+
+
+def teste_receita_le_as_linhas_da_tabela():
+    html_texto = "<table><thead></thead><tbody>" + LINHA_RECEITA.format(data="29/09/2026") + LINHA_RECEITA.format(data="25/09/2026").replace("153836", "153801") + "</tbody></table>"
+    publicacoes = cd.ler_linhas_receita(html_texto)
+    assert [p["data"] for p in publicacoes] == ["2026-09-29", "2026-09-25"], publicacoes
+    assert publicacoes[0]["titulo"] == "Ato Declaratório Executivo Corat nº 79", publicacoes[0]
+    assert publicacoes[0]["url"].endswith("/consulta/externa/153836")
+    assert publicacoes[0]["descricao"] == "Divulga a taxa de juros aplicável."
+
+
+def teste_receita_segue_a_paginacao_ate_sair_da_janela():
+    url = "http://normas.exemplo/consulta.action?ordem=DESC&p=1"
+    pagina1 = LINHA_RECEITA.format(data="30/09/2026") * 3
+    pagina2 = LINHA_RECEITA.format(data="29/09/2026") + LINHA_RECEITA.format(data="26/09/2026")
+    cliente = ClienteHttpFalso({url: (200, pagina1), url.replace("p=1", "p=2"): (200, pagina2)})
+    coleta = cd.coletar(cliente, {"fonte": "Receita", "url": url, "coleta": "receita"}, INICIO, FIM)
+    assert len(cliente.pedidos) == 2, cliente.pedidos
+    assert coleta["listadas"] == 5
+    assert sum(p["enviar"] for p in coleta["publicacoes"]) == 4
+
+
+def teste_b3_le_a_data_de_dois_digitos_e_o_pdf():
+    texto = (
+        "[29/09/26 062-2026-VPC-Ofício Circular Deslistagem do Futuro de S&P Merval](https://www.b3.com.br/x/#panel0a)\n\n"
+        "A negociação do contrato será descontinuada a partir de 01/10/2026.\n\n"
+        "[Download do Documento](https://www.b3.com.br/data/files/OC%20062.pdf)\n\n"
+        "[25/09/26 047-2026-VNC-Ofício Circular Prorrogação](https://www.b3.com.br/x/#panel1a)\n\nOutra chamada.\n"
+    )
+    publicacoes = cd.ler_oficios_b3(texto)
+    assert [p["data"] for p in publicacoes] == ["2026-09-29", "2026-09-25"]
+    assert publicacoes[0]["url"].endswith("OC%20062.pdf")
+    assert publicacoes[0]["titulo"].startswith("062-2026-VPC")
+    assert "descontinuada" in publicacoes[0]["descricao"] and "Download" not in publicacoes[0]["descricao"]
+
+
+def teste_volto_usa_a_api_e_devolve_o_endereco_publico():
+    resposta = json.dumps({"items": [
+        {"@id": "https://www.gov.br/anatel/++api++/pt-br/assuntos/noticias/n1", "@type": "News Item", "title": "N1", "description": "D1", "effective": "2026-09-29T10:00:00-03:00"},
+        {"@id": "https://www.gov.br/anatel/++api++/pt-br/assuntos/noticias/n0", "@type": "News Item", "title": "N0", "description": "D0", "effective": "2026-09-20T10:00:00-03:00"},
+    ]})
+    cliente = ClienteHttpFalso({"https://www.gov.br/anatel/++api++/pt-br/assuntos/noticias/@search": (200, resposta)})
+    coleta = cd.coletar(cliente, {"fonte": "ANATEL", "url": "https://www.gov.br/anatel/pt-br/assuntos/noticias", "coleta": "volto"}, INICIO, FIM)
+    assert "portal_type=News%20Item" in cliente.pedidos[0]
+    assert coleta["publicacoes"][0]["url"] == "https://www.gov.br/anatel/pt-br/assuntos/noticias/n1"
+    assert [p["enviar"] for p in coleta["publicacoes"]] == [True, False]
+
+
+def teste_bc_sem_normativo_na_janela_confere_se_a_api_responde():
+    vazio = json.dumps({"TotalRows": 0, "Rows": []})
+    ultimos = json.dumps({"Rows": [{"Title": "Comunicado 1", "Data1OWSDATE": "2026-09-20T03:00:00Z"}]})
+    cliente = ClienteHttpFalso({cd.BCB_BUSCA.format(linhas=100, filtro="")[:60]: (200, vazio)})
+    cliente.respostas = {"https://www.bcb.gov.br/api/search/app/normativos/buscanormativos?querytext=ContentType:normativo%20AND%20contentSource:normativos&rowlimit=100": (200, vazio),
+                         "https://www.bcb.gov.br/api/search/app/normativos/buscanormativos?querytext=ContentType:normativo%20AND%20contentSource:normativos&rowlimit=5": (200, ultimos)}
+    coleta = cd.coletar(cliente, {"fonte": "BC", "url": "x", "coleta": "api_bcb"}, INICIO, FIM)
+    assert coleta["publicacoes"] == [] and coleta["listadas"] == 1, coleta
+    assert len(cliente.pedidos) == 2
+
+
+def teste_listagem_tira_menu_sem_data_e_respeita_o_padrao_de_link():
+    base = "https://www.exemplo.gov.br/orgao/pt-br/noticias"
+    html_texto = ("<div id='content-core'>"
+                  + "".join(f"<article><a href='{base}/n{i}'>Publicação número {i} da listagem</a><span>2{i}/09/2026</span></article>" for i in range(6, 10))
+                  + f"<a href='{base}/menu'>Link de menu sem data qualquer</a></div>")
+    html_texto = html_texto.replace("id='content-core'", 'id="content-core"')
+    cliente = ClienteHttpFalso({base: (200, html_texto)})
+    coleta = cd.coletar(cliente, {"fonte": "X", "url": base, "coleta": "html"}, INICIO, FIM)
+    assert coleta["listadas"] == 4, [p["titulo"] for p in coleta["publicacoes"]]
+    assert [p["data"] for p in coleta["publicacoes"] if p["enviar"]] == ["2026-09-29"], coleta["publicacoes"]
+    coleta = cd.coletar(ClienteHttpFalso({base: (200, html_texto)}), {"fonte": "X", "url": base, "coleta": "html", "padrao_link": "/n9"}, INICIO, FIM)
+    assert coleta["listadas"] == 1
+
+
+def teste_pagina_do_ano_da_anp_so_le_o_que_esta_dentro_do_ano():
+    base = "https://www.gov.br/anp/pt-br/assuntos/consultas/consulta-previa"
+    html_texto = ('<div id="content-core">'
+                  f"<a href='{base}/2026/cp-2'>Consulta Prévia nº 2/2026 aberta hoje</a> 29/09/2026 "
+                  f"<a href='{base}/2026/cp-1'>Consulta Prévia nº 1/2026 com audiência</a> 13/10/2026 "
+                  "<a href='https://www.gov.br/anp/pt-br/assuntos/air'>Análise de Impacto Regulatório do menu</a></div>")
+    cliente = ClienteHttpFalso({f"{base}/2026": (200, html_texto)})
+    coleta = cd.coletar(cliente, {"fonte": "ANP", "url": base, "coleta": "anp_ano"}, INICIO, FIM)
+    assert coleta["listadas"] == 2, coleta["publicacoes"]
+    # Data futura pode ser a da audiencia: vai ao Gemini em vez de sumir.
+    assert all(p["enviar"] for p in coleta["publicacoes"])
+
+
+def teste_metodo_desconhecido_e_falha():
+    try:
+        cd.coletar(ClienteHttpFalso({}), {"fonte": "X", "url": "x", "coleta": "firecrawl"}, INICIO, FIM)
+    except cd.FalhaColeta:
+        return
+    raise AssertionError("devia ter falhado")
+
+
+def teste_bloqueio_e_falha_sem_nova_tentativa():
+    cliente = ClienteHttpFalso({"https://x.gov.br/l": (403, "")})
+    try:
+        cd.coletar(cliente, {"fonte": "X", "url": "https://x.gov.br/l", "coleta": "html"}, INICIO, FIM)
+    except cd.FalhaColeta as erro:
+        assert "403" in str(erro)
+        assert len(cliente.pedidos) == 1
+        return
+    raise AssertionError("devia ter falhado")
+
+
+# --- no pipeline -------------------------------------------------------------
+
+def publicacao(titulo, data, enviar=True):
+    return {"titulo": titulo, "url": f"https://x.gov.br/{titulo}", "data": data, "hora": "", "descricao": "d", "na_janela": enviar and bool(data), "enviar": enviar}
+
+
+def coletor_falso(respostas):
+    def coletor(cliente, fonte, inicio, fim):
+        resposta = respostas[fonte["fonte"]]
+        if isinstance(resposta, Exception):
+            raise resposta
+        return {"publicacoes": resposta, "listadas": len(resposta), "texto": "pagina", "requisicoes": 1}
+    return coletor
+
+
+FONTES_NOVAS = [
+    {"fonte": "Direta", "categoria": "C", "url": "https://x.gov.br/direta", "coleta": "html"},
+    {"fonte": "Quebrada", "categoria": "C", "url": "https://x.gov.br/quebrada", "coleta": "html"},
+    {"fonte": "Vazia", "categoria": "C", "url": "https://x.gov.br/vazia", "coleta": "html"},
+    {"fonte": "Pelo Firecrawl", "categoria": "C", "url": "https://y.gov.br/fc"},
+]
+
+
+def coletar_novo(respostas, historico=None, fontes=FONTES_NOVAS):
+    fc = FirecrawlFalso({f["url"]: "pagina do firecrawl " * 100 for f in fontes}, {})
+    material, buscas = gb.coletar(fc, fontes, INICIO, FIM, pausa=0, cliente=object(), historico=historico or {}, coletor=coletor_falso(respostas))
+    return fc, {m["fonte"]: m for m in material}, material, buscas
+
+
+def teste_fonte_gratuita_nao_gasta_firecrawl_e_a_que_falha_cai_para_ele():
+    respostas = {"Direta": [publicacao("a", "2026-09-29")], "Quebrada": cd.FalhaColeta("listagem: HTTP 500"), "Vazia": [publicacao("b", "2026-09-01", enviar=False)]}
+    fc, por_fonte, material, buscas = coletar_novo(respostas)
+    assert sorted(fc.coletas) == ["https://x.gov.br/quebrada", "https://y.gov.br/fc"], fc.coletas
+    assert por_fonte["Direta"]["metodo_usado"] == "html" and por_fonte["Direta"]["creditos_firecrawl"] == 0
+    assert por_fonte["Quebrada"]["queda_firecrawl"] and "HTTP 500" in por_fonte["Quebrada"]["motivo_queda"]
+    assert por_fonte["Quebrada"]["metodo_usado"] == "firecrawl" and por_fonte["Quebrada"]["creditos_firecrawl"] == 1
+    creditos = gb.creditos_estimados(material, buscas)
+    assert creditos["coletas"] == 2 and creditos["quedas_para_firecrawl"] == 1 and creditos["total"] == 2
+
+
+def teste_zero_publicacoes_e_falha_quando_a_fonte_costuma_trazer():
+    respostas = {"Direta": [], "Quebrada": [], "Vazia": [], }
+    fontes = FONTES_NOVAS[:3]
+    fc, por_fonte, _, _ = coletar_novo(respostas, historico={"Direta": 12, "Quebrada": None, "Vazia": 0}, fontes=fontes)
+    assert por_fonte["Direta"]["queda_firecrawl"] and "anterior: 12" in por_fonte["Direta"]["motivo_queda"]
+    assert por_fonte["Quebrada"]["queda_firecrawl"], "sem historico, zero tambem e falha"
+    assert not por_fonte["Vazia"]["queda_firecrawl"], "fonte que ja vinha vazia pode continuar vazia"
+    assert "https://x.gov.br/vazia" not in fc.coletas
+
+
+def teste_dossier_leva_so_o_que_interessa_e_registra_fonte_sem_janela():
+    respostas = {"Direta": [publicacao("na-janela", "2026-09-29"), publicacao("sem-data", ""), publicacao("antiga", "2026-09-01", enviar=False)],
+                 "Quebrada": [publicacao("outra", "2026-09-30")], "Vazia": [publicacao("velha", "2026-09-10", enviar=False)]}
+    _, _, material, _ = coletar_novo(respostas)
+    dossier, processadas = gb.montar_dossier(material)
+    por_fonte = {d["fonte"]: d for d in dossier}
+    assert "https://x.gov.br/na-janela" in por_fonte["Direta"]["conteudo"]
+    assert "https://x.gov.br/sem-data" in por_fonte["Direta"]["conteudo"], "sem data nunca sai"
+    assert "https://x.gov.br/antiga" not in por_fonte["Direta"]["conteudo"]
+    assert "Vazia" not in por_fonte, "fonte sem nada na janela nao vai ao Gemini"
+    vazia = next(p for p in processadas if p["fonte"] == "Vazia")
+    assert vazia["sem_publicacao_na_janela"] and vazia["publicacoes_listadas"] == 1
+    direta = next(p for p in processadas if p["fonte"] == "Direta")
+    assert (direta["metodo_usado"], direta["publicacoes_na_janela"], direta["publicacoes_enviadas"]) == ("html", 1, 2)
+
+
+def teste_dossier_estruturado_se_refaz_do_disco():
+    respostas = {"Direta": [publicacao("a", "2026-09-29"), publicacao("b", "")], "Quebrada": cd.FalhaColeta("x"), "Vazia": []}
+    _, _, material, buscas = coletar_novo(respostas, historico={"Vazia": 0})
+    original = gb.montar_dossier(material)
+    with tempfile.TemporaryDirectory() as pasta:
+        gb.salvar_dossier(material, {"data_execucao": "2026-09-30", "buscas_complementares": buscas}, pasta=Path(pasta))
+        _, recuperado = gb.carregar_dossier(pasta=Path(pasta))
+        assert gb.historico_de_listagem(Path(pasta)) == {"Direta": 2, "Quebrada": None, "Vazia": 0, "Pelo Firecrawl": None}
+    assert gb.montar_dossier(recuperado) == original
+
+
+def teste_busca_so_roda_onde_a_fonte_pede():
+    fontes = [dict(FONTES_NOVAS[0], busca=True), FONTES_NOVAS[3]]
+    fc = FirecrawlFalso({f["url"]: "pagina " * 1000 for f in fontes}, {"x.gov.br": [("https://x.gov.br/achado", "Achado", "d")]})
+    material, buscas = gb.coletar(fc, fontes, INICIO, FIM, pausa=0, cliente=object(), coletor=coletor_falso({"Direta": [publicacao("a", "2026-09-29")]}))
+    assert [b["escopo"] for b in buscas] == ["x.gov.br"], buscas
+    direta = material[0]
+    assert direta["creditos_firecrawl"] == gb.CREDITOS_POR_BUSCA and direta["descobertas"][0]["titulo"] == "Achado"
+
+
+def teste_fonte_reativada_com_erro_vai_para_o_log():
+    ativas = [{"fonte": "COAF", "suspenso": True, "reativar_em": "2026-10-26", "motivo_suspensao": "Defeso eleitoral"}, {"fonte": "Outra"}]
+    processadas = [{"fonte": "COAF", "status": "erro_conteudo_origem", "erro": "Conteúdo restrito"}, {"fonte": "Outra", "status": "erro"}]
+    avisos = gb.fontes_reativadas_com_erro(ativas, processadas, _dt.date(2026, 10, 27))
+    assert [a["fonte"] for a in avisos] == ["COAF"] and avisos[0]["erro"] == "Conteúdo restrito"
+    assert gb.fontes_reativadas_com_erro(ativas, [{"fonte": "COAF", "status": "ok"}], _dt.date(2026, 10, 27)) == []
+
+
+def teste_coleta_do_fontes_json_e_valida():
+    fontes = json.loads((BASE / "fontes.json").read_text(encoding="utf-8"))
+    for fonte in fontes:
+        assert fonte.get("coleta", "firecrawl") in set(cd.METODOS) | {"firecrawl"}, fonte
+    com_busca = sorted(f["fonte"] for f in fontes if f.get("busca"))
+    assert com_busca == ["CVM | Notícias", "Ministério da Agricultura | Notícias"], com_busca
+    coaf = next(f for f in fontes if f["fonte"].startswith("COAF"))
+    assert coaf["suspenso"] and coaf["reativar_em"] == "2026-10-26" and coaf["motivo_suspensao"] == "Defeso eleitoral"
+    mme = next(f for f in fontes if f["fonte"] == "MME | Consultas Públicas")
+    assert mme["suspenso"] and "reativar_em" not in mme
+
+
 TESTES = [
     teste_busca_sobrevive_em_pagina_grande,
     teste_sem_busca_o_comportamento_nao_muda,
@@ -690,6 +937,22 @@ TESTES = [
     teste_escopo_todo_com_erro_nao_gasta_busca,
     teste_pagina_pequena_com_resultado_de_busca_nao_e_descartada,
     teste_dossier_guardado_refaz_o_mesmo_dossier,
+    teste_receita_le_as_linhas_da_tabela,
+    teste_receita_segue_a_paginacao_ate_sair_da_janela,
+    teste_b3_le_a_data_de_dois_digitos_e_o_pdf,
+    teste_volto_usa_a_api_e_devolve_o_endereco_publico,
+    teste_bc_sem_normativo_na_janela_confere_se_a_api_responde,
+    teste_listagem_tira_menu_sem_data_e_respeita_o_padrao_de_link,
+    teste_pagina_do_ano_da_anp_so_le_o_que_esta_dentro_do_ano,
+    teste_metodo_desconhecido_e_falha,
+    teste_bloqueio_e_falha_sem_nova_tentativa,
+    teste_fonte_gratuita_nao_gasta_firecrawl_e_a_que_falha_cai_para_ele,
+    teste_zero_publicacoes_e_falha_quando_a_fonte_costuma_trazer,
+    teste_dossier_leva_so_o_que_interessa_e_registra_fonte_sem_janela,
+    teste_dossier_estruturado_se_refaz_do_disco,
+    teste_busca_so_roda_onde_a_fonte_pede,
+    teste_fonte_reativada_com_erro_vai_para_o_log,
+    teste_coleta_do_fontes_json_e_valida,
 ]
 
 

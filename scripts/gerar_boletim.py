@@ -340,8 +340,10 @@ def coletar(fc, ativas, inicio, hoje, pausa=PAUSA_FIRECRAWL, cliente=None, histo
                     raise coleta_direta.FalhaColeta(
                         "zero publicações listadas" + (f" (na execução anterior: {anterior})" if anterior else " e sem histórico da fonte")
                     )
+                if resultado.get("aviso"):
+                    print(f"::warning title=Coleta de {nome}::{resultado['aviso']}")
                 registro.update(
-                    estruturado=True, metodo_usado=metodo, publicacoes=resultado["publicacoes"],
+                    aviso_coleta=resultado.get("aviso", ""), estruturado=True, metodo_usado=metodo, publicacoes=resultado["publicacoes"],
                     publicacoes_listadas=resultado["listadas"], pagina=resultado["texto"],
                     chars_pagina=len(resultado["texto"]),
                 )
@@ -433,6 +435,8 @@ def montar_dossier(material):
             publicacoes = registro.get("publicacoes") or []
             enviar = [p for p in publicacoes if p.get("enviar")]
             contagem = {"publicacoes_listadas": registro.get("publicacoes_listadas"), "publicacoes_na_janela": sum(1 for p in publicacoes if p.get("na_janela")), "publicacoes_enviadas": len(enviar)}
+            if registro.get("aviso_coleta"):
+                contagem["aviso_coleta"] = registro["aviso_coleta"]
             if not enviar and not descobertas:
                 # Nada na janela: a fonte nao vai ao Gemini, e o registro diz por que.
                 processadas.append(dict({"fonte": nome, "status": "ok", "sem_publicacao_na_janela": True, "tamanho_chars": 0, "publicacoes_localizadas": 0, "busca_complementar_executada": registro.get("busca_executada", False)}, **origem, **contagem))

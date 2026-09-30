@@ -28,6 +28,7 @@ INTERVALO_HOST segundos entre requisicoes ao mesmo host.
 import datetime
 import email.utils
 import gzip
+import http.cookiejar
 import html
 import json
 import os
@@ -542,6 +543,9 @@ DESAFIOS = (
 class Cliente:
     def __init__(self, agente=USER_AGENT):
         self.agente = agente
+        # Cookies entre requisicoes, como um navegador: a paginacao da Receita
+        # depende da sessao aberta na primeira pagina.
+        self.abridor = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
         self.ultimo = {}
         self.robots = {}
         self.requisicoes = 0
@@ -614,7 +618,7 @@ class Cliente:
         comeco = time.monotonic()
         corpo, cabecalhos = b"", None
         try:
-            with urllib.request.urlopen(pedido, timeout=TIMEOUT) as resposta:
+            with self.abridor.open(pedido, timeout=TIMEOUT) as resposta:
                 corpo = resposta.read(LIMITE_BYTES + 1)
                 registro["status"] = resposta.status
                 registro["url_final"] = resposta.geturl()
@@ -823,17 +827,19 @@ def ler_linhas_receita(html_texto):
 
 def tabela_receita(cliente, fonte, inicio, fim, paginas=4):
     """A tabela vem em ordem de publicacao: segue a paginacao ate sair da janela."""
-    publicacoes, textos = [], []
+    publicacoes, textos, aviso = [], [], ""
     for pagina in range(1, paginas + 1):
         url = re.sub(r"([?&])p=\d+", rf"\g<1>p={pagina}", fonte["url"])
         registro = _exigir(cliente.baixar(url), "tabela da Receita")
         linhas = ler_linhas_receita(registro["texto"])
+        if pagina > 1 and not linhas and publicacoes and min(p["data"] for p in publicacoes if p["data"]) >= inicio.isoformat():
+            aviso = f"A página {pagina - 1} inteira está na janela e a página {pagina} veio vazia: pode haver atos da janela fora da coleta."
         publicacoes.extend(linhas)
         textos.extend(f"{p['data']} | {p['titulo']} | {p['url']} | {p['descricao']}" for p in linhas)
         datas = [p["data"] for p in linhas if p["data"]]
         if not linhas or not datas or min(datas) < inicio.isoformat() or url == fonte["url"] and "p=" not in url:
             break
-    return {"publicacoes": publicacoes, "listadas": len(publicacoes), "texto": "\n".join(textos)}
+    return {"publicacoes": publicacoes, "listadas": len(publicacoes), "texto": "\n".join(textos), "aviso": aviso}
 
 
 def ler_oficios_b3(texto):
@@ -916,6 +922,9 @@ METODOS = {
 }
 
 
+TITULO_UTILITARIO = re.compile(r"^(link para )?(copiar|compartilh|imprimir|ir para|voltar|acessibilidade)", re.I)
+
+
 def _normalizar(publicacao):
     limpo = {k: " ".join(html.unescape(str(publicacao.get(k) or "")).split())
              for k in ("titulo", "url", "data", "hora", "descricao")}
@@ -955,10 +964,13 @@ def coletar(cliente, fonte, inicio, fim):
         raise
     except (ValueError, KeyError, TypeError, AttributeError, IndexError) as erro:
         raise FalhaColeta(f"resposta inesperada: {' '.join(str(erro).split())[:160]}") from None
-    publicacoes = marcar_envio([_normalizar(p) for p in resultado["publicacoes"]], inicio, fim, futuras=metodo == "anp_ano")
+    publicacoes = [_normalizar(p) for p in resultado["publicacoes"]]
+    publicacoes = [p for p in publicacoes if p["titulo"] and not TITULO_UTILITARIO.match(p["titulo"])]
+    publicacoes = marcar_envio(publicacoes, inicio, fim, futuras=metodo == "anp_ano")
     return {
         "publicacoes": publicacoes,
         "listadas": resultado["listadas"],
         "texto": resultado["texto"][:LIMITE_TEXTO],
         "requisicoes": cliente.requisicoes - antes,
+        "aviso": resultado.get("aviso", ""),
     }
