@@ -259,11 +259,14 @@ Intelectual 2 × 2, Trabalhista 1 × 1, Societário 0 × 1, Contencioso 0 × 2.
   Radar, com o motivo "[Não classificada pela IA]", e o log conta por fonte.
   Na execução de 30/09 isso teria levado mais 38 itens ao portal (1 consulta
   da ANP com data futura ficaria só no registro).
+  Depois, esses itens passaram a chegar com um Radar sugerido sem IA quando dá
+  para sugerir com segurança: ver [sugestao-sem-ia.md](sugestao-sem-ia.md).
 - **A Receita só via a primeira página.** Sem filtro, a consulta trazia os 24
   atos mais recentes e a paginação voltava vazia. Com a consulta filtrada pela
   janela de publicação, o ensaio trouxe **52 atos** (28 de 29/09 e 24 de 30/09).
-  Muitos são atos de unidades locais (alfândegas, delegacias); restringir por
-  órgão é decisão editorial, não foi feita.
+  Muitos são atos de unidades locais (alfândegas, delegacias). Depois, a
+  Receita passou a mandar ao Gemini só os atos dos órgãos centrais: 13 dos 52
+  (ver [sugestao-sem-ia.md](sugestao-sem-ia.md#2-receita-federal-só-órgãos-centrais)).
 
 Essas duas correções não passaram por uma segunda execução completa, para
 manter a execução única pedida: estão cobertas pelos testes e pelo ensaio seco
