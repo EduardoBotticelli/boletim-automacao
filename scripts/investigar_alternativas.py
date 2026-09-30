@@ -67,6 +67,14 @@ TIMEOUT = 30
 LIMITE_BYTES = 6_000_000
 TETO_MINUTOS = 45
 AMOSTRA = 3
+# Fontes cujo texto lido fica guardado no resultado, para examinar a estrutura
+# das que o leitor generico nao entendeu.
+GUARDAR_TEXTO = {
+    "Receita Federal | Normas", "B3 | Ofícios e Comunicados", "ONS | Notícias", "CCEE | Noticias",
+    "ANP | Consultas e Audiências Públicas", "ANP | Consultas Prévias",
+    "ANP | Pautas e Atas da Diretoria Colegiada", "ANATEL | Notícias", "Ministério do Meio Ambiente | Notícias",
+    "CGU | Notícias", "Planalto | Resenha Diaria", "Ministério da Fazenda | Notícias", "Destaques do D.O.U.",
+}
 
 # ---------------------------------------------------------------------------
 # Datas
@@ -263,6 +271,19 @@ class Leitor(HTMLParser):
         return re.sub(r"\n{3,}", "\n\n", "\n".join(linhas)).strip()
 
 
+MARCAS_RESULTADOS = ('id="search-results"', 'class="searchResults', "class='searchResults", 'id="searchResults"', 'class="search-results')
+
+
+def regiao_de_resultados(html_texto):
+    """So a lista de resultados de uma pagina de busca, sem menu e rodape."""
+    posicoes = [html_texto.find(m) for m in MARCAS_RESULTADOS if m in html_texto]
+    if not posicoes:
+        return ""
+    inicio = min(posicoes)
+    fim = min([x for x in (html_texto.find('id="portal-footer', inicio), html_texto.find("<footer", inicio)) if x != -1] or [inicio + 250_000])
+    return html_texto[inicio:fim]
+
+
 def ler_html(html_texto, base):
     """Le o HTML duas vezes se preciso: sem navegacao e, se sobrar pouco, com."""
     leitor = Leitor(base, filtrar_navegacao=True)
@@ -325,6 +346,7 @@ DOMINIOS_RUIDO = (
     "soundcloud.com", "t.me",
 )
 PAGINACAO = ("b_start", "page", "pagina", "paged", "start", "offset")
+HORA = re.compile(r"(?<!\d)(\d{1,2})h(\d{2})(?!\d)|(?<!\d)(\d{1,2}):(\d{2})(?!\d)")
 LIXO_DESCRICAO = re.compile(
     r"(publicado em|atualizado em|compartilhe|leia mais|saiba mais|copiar para|"
     r"link para|\d{1,2}h\d{2}|\d{1,2}:\d{2})",
@@ -415,10 +437,12 @@ def publicacoes_da_listagem(texto, base, inicio, fim, minimo_titulo=15):
         vistos.add(c["chave"])
         datas = datas_em(c[lado]) or datas_em(c["titulo"])
         data = datas[0] if datas else None
+        hora = HORA.search(c[lado]) if data else None
         publicacoes.append({
             "titulo": c["titulo"][:200],
             "url": c["url"],
             "data": data.isoformat() if data else "",
+            "hora": (hora.group(0) if hora else ""),
             "descricao": _limpar_descricao(c["depois"])[:300],
             "na_janela": bool(data and inicio <= data <= fim),
         })
@@ -439,7 +463,24 @@ def resumo(publicacoes, inicio=None, fim=None):
             {k: p.get(k, "") for k in ("titulo", "data", "url", "descricao")}
             for p in ([p for p in publicacoes if p.get("na_janela")] or publicacoes)[:AMOSTRA]
         ],
+        "na_janela_lista": [
+            {k: (p.get(k, "") or "")[:200] for k in ("titulo", "data", "hora", "url", "descricao")}
+            for p in publicacoes if p.get("na_janela")
+        ][:60],
+        "primeiras": [
+            {k: (p.get(k, "") or "")[:120] for k in ("titulo", "data", "url")}
+            for p in publicacoes[:8]
+        ],
+        "ordenada_por_data": _ordenada([p.get("data") for p in publicacoes if p.get("data")]),
     }
+
+
+def _ordenada(datas):
+    """A listagem vem da mais nova para a mais antiga? None se nao da para dizer."""
+    if len(datas) < 3:
+        return None
+    fora = sum(1 for a, b in zip(datas, datas[1:]) if b > a)
+    return fora <= max(1, len(datas) // 10)
 
 
 # ---------------------------------------------------------------------------
@@ -759,6 +800,86 @@ def testar_json(cliente, nome, url, inicio, fim, leitura):
     return saida
 
 
+PUBLICADO = re.compile(r"publicad[oa]\s+em\s*:?\s*([^\n]{6,40})", re.I)
+META_DATA = ("article:published_time", "dc.date.created", "dc.date.issued", "dcterms.created", "dcterms.issued", "date", "publishdate")
+
+
+def datar_pelas_paginas(cliente, publicacoes, inicio, fim, limite=8):
+    """
+    Data de cada publicacao lida na propria pagina dela.
+
+    Para listagem que mostra titulo e link mas nao a data (ANATEL, ANVISA,
+    ANPD, SUSEP). Visita as primeiras, na ordem da listagem, e para ao achar
+    uma anterior a janela, se a listagem estiver em ordem.
+    """
+    visitadas = []
+    for publicacao in publicacoes[:limite]:
+        registro = cliente.baixar(publicacao["url"])
+        item = {"titulo": publicacao["titulo"][:120], "url": publicacao["url"], "status": registro["status"],
+                "data": "", "hora": "", "descricao": "", "fonte_da_data": ""}
+        if registro["status"] == 200 and registro["texto"]:
+            leitor = ler_html(registro["texto"], registro["url_final"])
+            data = None
+            for nome in META_DATA:
+                data = data_de_campo(leitor.meta.get(nome))
+                if data:
+                    item["fonte_da_data"] = "meta " + nome
+                    break
+            texto = leitor.texto()
+            if not data:
+                achado = PUBLICADO.search(sem_acento(texto))
+                if achado:
+                    datas = datas_em(achado.group(1))
+                    if datas:
+                        data, item["fonte_da_data"] = datas[0], "publicado em"
+                        hora = HORA.search(achado.group(1))
+                        item["hora"] = hora.group(0) if hora else ""
+            if not data:
+                datas = datas_em(texto[:4000])
+                if datas:
+                    data, item["fonte_da_data"] = datas[0], "primeira data do texto"
+            item["data"] = data.isoformat() if data else ""
+            item["descricao"] = " ".join((leitor.meta.get("description") or leitor.meta.get("og:description") or "").split())[:200]
+        visitadas.append(item)
+        if item["data"] and item["data"] < inicio.isoformat():
+            break
+    na_janela = [v for v in visitadas if v["data"] and inicio.isoformat() <= v["data"] <= fim.isoformat()]
+    return {
+        "metodo": "download_direto_com_paginas",
+        "visitadas": len(visitadas),
+        "com_data": sum(1 for v in visitadas if v["data"]),
+        "com_descricao": sum(1 for v in visitadas if v["descricao"]),
+        "na_janela": len(na_janela),
+        "publicacoes": len(visitadas),
+        "paginas": visitadas,
+        "ok": bool(na_janela) or any(v["data"] for v in visitadas),
+    }
+
+
+def investigar_sharepoint(cliente, url, inicio, fim):
+    """Busca REST do SharePoint, a mesma que serve a pagina do Banco Central."""
+    p = urlparse(url)
+    raiz = f"{p.scheme}://{p.netloc}"
+    caminho = url.split("?")[0].rstrip("/")
+    consultas = [
+        f"{raiz}/_api/search/query?querytext='path:\"{caminho}\"'&rowlimit=30"
+        "&sortlist='LastModifiedTime:descending'&selectproperties='Title,Path,Created,LastModifiedTime,Description'",
+        f"{raiz}/_api/search/query?querytext='*'&refinementfilters='path:\"{caminho}\"'&rowlimit=30"
+        "&sortlist='Created:descending'&selectproperties='Title,Path,Created,Description'",
+    ]
+
+    def leitura(dados):
+        linhas = (((dados.get("PrimaryQueryResult") or {}).get("RelevantResults") or {}).get("Table") or {}).get("Rows") or []
+        itens = []
+        for linha in linhas:
+            celulas = {c.get("Key"): c.get("Value") for c in linha.get("Cells") or []}
+            itens.append({"Title": celulas.get("Title"), "Path": celulas.get("Path"), "Created": celulas.get("Created"),
+                          "Description": celulas.get("Description")})
+        return itens_json_generico(itens, inicio, fim)
+
+    return [testar_json(cliente, "api_sharepoint_busca", c, inicio, fim, leitura) for c in consultas]
+
+
 def investigar_dou(cliente, inicio, fim):
     """Leitura do jornal: o HTML traz o JSON com todos os atos do dia."""
     resultados = []
@@ -840,6 +961,12 @@ def investigar_fonte(cliente, fonte, inicio, fim, escopos):
     saida = {"fonte": fonte["fonte"], "url": url, "estado": fonte.get("_estado", "ativa"),
              "host": urlparse(url).netloc, "metodos": []}
     leitor_robots, info = cliente.regras(url)
+    if url.startswith("http://") and info.get("status") is None:
+        # O servidor derrubou a conexao em HTTP: tenta o mesmo endereco em
+        # HTTPS, que e o protocolo que o navegador usaria.
+        url = "https://" + url[len("http://"):]
+        saida["url_https"] = url
+        leitor_robots, info = cliente.regras(url)
     saida["robots"] = dict(info, listagem_permitida=leitor_robots.can_fetch(AGENTE, url))
 
     # 1. Download direto
@@ -864,7 +991,12 @@ def investigar_fonte(cliente, fonte, inicio, fim, escopos):
         direto["ok"] = direto["publicacoes"] > 0 and not direto["parece_spa"] and not registro["bloqueio"]
         if direto["parece_spa"] or not direto["publicacoes"]:
             direto["pistas_de_api"] = pistas_de_api(registro["texto"])
+        if fonte["fonte"] in GUARDAR_TEXTO:
+            saida.setdefault("textos", {})["download_direto"] = texto[:40_000]
     saida["metodos"].append(direto)
+    if direto.get("publicacoes") and direto.get("com_data", 0) < 0.3 * direto["publicacoes"] and not direto.get("parece_spa"):
+        candidatas = publicacoes_da_listagem(texto, registro["url_final"], inicio, fim)
+        saida["metodos"].append(datar_pelas_paginas(cliente, candidatas, inicio, fim))
     saida["plataforma"] = plataforma_detectada
 
     host = urlparse(url).netloc.lower()
@@ -908,6 +1040,8 @@ def investigar_fonte(cliente, fonte, inicio, fim, escopos):
         saida["metodos"].extend(investigar_bcb(cliente, inicio, fim))
     if plataforma_detectada == "wordpress":
         saida["metodos"].extend(investigar_wordpress(cliente, url, inicio, fim))
+    if plataforma_detectada == "sharepoint" and not direto.get("ok"):
+        saida["metodos"].extend(investigar_sharepoint(cliente, url, inicio, fim))
 
     # 4. Busca por data no proprio site (Plone classico), so se a API falhou.
     api_ok = any(m.get("ok") for m in saida["metodos"] if str(m.get("metodo", "")).startswith("api_plone"))
@@ -918,10 +1052,22 @@ def investigar_fonte(cliente, fonte, inicio, fim, escopos):
         registro = cliente.baixar(busca)
         metodo = {"metodo": "busca_por_data_no_site", "url": busca, "http": enxuto(registro)}
         if registro["status"] == 200:
-            leitor_busca = ler_html(registro["texto"], registro["url_final"])
-            publicacoes = publicacoes_da_listagem(leitor_busca.texto(), registro["url_final"], inicio, fim)
-            metodo.update(resumo(publicacoes))
-            metodo["ok"] = metodo["na_janela"] > 0
+            regiao = regiao_de_resultados(registro["texto"])
+            metodo["regiao_de_resultados"] = bool(regiao)
+            if regiao:
+                leitor_busca = ler_html(regiao, registro["url_final"])
+                texto_busca = leitor_busca.texto()
+                # A busca ja filtrou por data de criacao: todo resultado conta
+                # como da janela, com ou sem data impressa ao lado.
+                publicacoes = publicacoes_da_listagem(texto_busca, raiz_plone(url) + "/", inicio, fim, minimo_titulo=10)
+                for publicacao in publicacoes:
+                    publicacao["na_janela"] = not publicacao["data"] or inicio.isoformat() <= publicacao["data"] <= fim.isoformat()
+                metodo.update(resumo(publicacoes))
+                anuncio = re.search(r"[^.<>]{0,40}\d+\s+(?:itens|resultados?)[^.<>]{0,40}", sem_acento(texto_busca), re.I)
+                metodo["total_anunciado"] = " ".join(anuncio.group(0).split())[:90] if anuncio else ""
+                metodo["ok"] = metodo["na_janela"] > 0
+                if fonte["fonte"] in GUARDAR_TEXTO:
+                    saida.setdefault("textos", {})["busca_por_data_no_site"] = texto_busca[:40_000]
         saida["metodos"].append(metodo)
 
     return saida
@@ -1050,6 +1196,10 @@ def autoteste():
     assert not parece_publicacao("https://www.gov.br/aneel/pt-br/assuntos/noticias/foto.jpg", base)
     assert parece_publicacao("https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/pauta.pdf",
                              "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/pautas")
+    assert _ordenada(["2026-09-30", "2026-09-29", "2026-09-29", "2026-09-20"]) is True
+    assert _ordenada(["2026-09-01", "2026-09-10", "2026-09-20", "2026-09-30"]) is False
+    busca = '<div id="portal-header">[menu]</div><div id="search-results"><ol class="searchResults"><li>x</li></ol></div><footer>r</footer>'
+    assert regiao_de_resultados(busca).startswith('id="search-results"') and "<footer" not in regiao_de_resultados(busca)
     assert _bloqueio(403, "") == "HTTP 403"
     assert _bloqueio(200, "<html><title>Just a moment...</title></html>") == "just a moment"
     assert _bloqueio(200, "<html>" + "texto " * 2000 + "captcha</html>") == ""
