@@ -40,6 +40,7 @@ import urllib.request
 import urllib.robotparser
 import xml.etree.ElementTree as ET
 import zlib
+from collections import Counter
 from html.parser import HTMLParser
 from urllib.parse import parse_qs, urljoin, urlparse
 from zoneinfo import ZoneInfo
@@ -821,8 +822,36 @@ def ler_linhas_receita(html_texto):
             "url": f"https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/{ato.group(1)}",
             "data": datas[0].isoformat() if datas else "",
             "descricao": (celulas[4] if len(celulas) > 4 else "")[:400],
+            "orgao": orgao,
         })
     return publicacoes
+
+
+def filtrar_por_orgao(publicacoes, orgaos):
+    """
+    So os atos dos orgaos da lista vao ao Gemini. Na Receita, a lista traz os
+    orgaos centrais (Cosit, Corat, Sutri...); os atos de alfandegas,
+    delegacias, inspetorias e superintendencias regionais (ALF/BSB, DRF/SOR,
+    IRF/SLS, SRRF08) ficam de fora. Em 30/09 eram 39 dos 52 atos da janela.
+
+    O orgao vale pela parte antes da barra: 'ALF/BSB' e a alfandega de
+    Brasilia, 'RFB/PGFN' e ato conjunto da RFB. Ato sem orgao informado
+    continua indo, porque nao da para saber de onde e.
+
+    Nada some: o ato excluido fica na coleta com 'enviar' falso e o motivo,
+    e vai assim para o dossier guardado. Devolve a contagem por orgao.
+    """
+    aceitos = {sem_acento(o).strip().lower() for o in orgaos if str(o).strip()}
+    excluidos = Counter()
+    for publicacao in publicacoes:
+        orgao = (publicacao.get("orgao") or "").strip()
+        raiz = orgao.split("/")[0].strip()
+        if not publicacao.get("enviar") or not raiz or sem_acento(raiz).lower() in aceitos:
+            continue
+        publicacao["enviar"] = False
+        publicacao["excluida_pelo_filtro"] = f"Órgão {orgao} fora da lista de órgãos da fonte."
+        excluidos[raiz] += 1
+    return dict(excluidos.most_common())
 
 
 def tabela_receita(cliente, fonte, inicio, fim, paginas=6):
@@ -938,6 +967,8 @@ def _normalizar(publicacao):
     limpo = {k: " ".join(html.unescape(str(publicacao.get(k) or "")).split())
              for k in ("titulo", "url", "data", "hora", "descricao")}
     limpo["url"] = limpo["url"].replace(" ", "%20")
+    if publicacao.get("orgao"):
+        limpo["orgao"] = " ".join(str(publicacao["orgao"]).split())
     return limpo
 
 
@@ -976,10 +1007,12 @@ def coletar(cliente, fonte, inicio, fim):
     publicacoes = [_normalizar(p) for p in resultado["publicacoes"]]
     publicacoes = [p for p in publicacoes if p["titulo"] and not TITULO_UTILITARIO.match(p["titulo"])]
     publicacoes = marcar_envio(publicacoes, inicio, fim, futuras=metodo == "anp_ano")
+    excluidas = filtrar_por_orgao(publicacoes, fonte["orgaos"]) if fonte.get("orgaos") else {}
     return {
         "publicacoes": publicacoes,
         "listadas": resultado["listadas"],
         "texto": resultado["texto"][:LIMITE_TEXTO],
         "requisicoes": cliente.requisicoes - antes,
         "aviso": resultado.get("aviso", ""),
+        "excluidas_por_orgao": excluidas,
     }

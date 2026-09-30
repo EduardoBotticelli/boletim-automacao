@@ -24,6 +24,7 @@ from google import genai
 from google.genai import types
 
 import coleta_direta
+import sugestao_sem_ia
 
 BASE = Path(__file__).resolve().parent.parent
 OUT = BASE / "output"
@@ -246,8 +247,17 @@ def fontes_execucao(inicio, agora, hoje):
     meses = ["janeiro", "fevereiro", "marco", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
     dinamicas = [
         # O servidor do Planalto derruba a conexao de coleta direta: fica no Firecrawl.
-        {"fonte": "Planalto | Resenha Diaria", "categoria": "Legislação Federal", "url": f"http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/{meses[hoje.month-1]}-resenha-diaria", "ativo": True, "coleta": "firecrawl"},
-        {"fonte": "Banco Central | Normas", "categoria": "Financeiro e Mercado de Capitais", "url": f"https://www.bcb.gov.br/estabilidadefinanceira/buscanormas?dataInicioBusca={di}&dataFimBusca={df}&tipoDocumento=Todos", "ativo": True, "coleta": "api_bcb"},
+        {"fonte": "Planalto | Resenha Diaria", "categoria": "Legislação Federal", "url": f"http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/{meses[hoje.month-1]}-resenha-diaria", "ativo": True, "coleta": "firecrawl", "generica": True},
+        {"fonte": "Banco Central | Normas", "categoria": "Financeiro e Mercado de Capitais", "url": f"https://www.bcb.gov.br/estabilidadefinanceira/buscanormas?dataInicioBusca={di}&dataFimBusca={df}&tipoDocumento=Todos", "ativo": True, "coleta": "api_bcb",
+         "radar_predominante": {"radar": "mercado-capitais-fundos", "base": "74 de 74 publicações classificadas de 13/07 a 29/09/2026"},
+         # Atos internos (inquerito, pessoal, organizacao) nao recebem Radar sugerido sem IA.
+         "sem_sugestao": {
+             "motivo": "ato interno do Banco Central (comissão de inquérito, pessoal ou organização interna)",
+             "tipos": ["Ato de Diretor", "Ato do Presidente"],
+             "assuntos": [r"inquerito", r"sindicancia", r"processo administrativo disciplinar", r"servidor(a|es|as)?",
+                          r"lotacao", r"funcao comissionada", r"substitut[oa]s?", r"ferias", r"delega(cao de)? competencia",
+                          r"regimento interno", r"estrutura organizacional", r"componente organizacional", r"departamento"],
+         }},
         # A propria busca da CCEE ja filtra a janela; os resultados sao os links "/-/".
         {"fonte": "CCEE | Noticias", "categoria": "Energia e Recursos", "url": f"https://www.ccee.org.br/busca-ccee?q=&dtIni={di}&dtFim={df}&structure=ccee-noticias&ordenacao=Mais%20recentes", "ativo": True, "coleta": "html", "padrao_link": "/-/"},
     ]
@@ -342,10 +352,13 @@ def coletar(fc, ativas, inicio, hoje, pausa=PAUSA_FIRECRAWL, cliente=None, histo
                     )
                 if resultado.get("aviso"):
                     print(f"::warning title=Coleta de {nome}::{resultado['aviso']}")
+                excluidas = resultado.get("excluidas_por_orgao") or {}
+                if excluidas:
+                    print(f"  {sum(excluidas.values())} ato(s) excluído(s) pelo filtro de órgãos: " + ", ".join(f"{o} {n}" for o, n in excluidas.items()))
                 registro.update(
                     aviso_coleta=resultado.get("aviso", ""), estruturado=True, metodo_usado=metodo, publicacoes=resultado["publicacoes"],
                     publicacoes_listadas=resultado["listadas"], pagina=resultado["texto"],
-                    chars_pagina=len(resultado["texto"]),
+                    chars_pagina=len(resultado["texto"]), excluidas_por_orgao=excluidas,
                 )
             except Exception as erro:
                 motivo = erro_resumo(erro, 240)
@@ -437,6 +450,10 @@ def montar_dossier(material):
             contagem = {"publicacoes_listadas": registro.get("publicacoes_listadas"), "publicacoes_na_janela": sum(1 for p in publicacoes if p.get("na_janela")), "publicacoes_enviadas": len(enviar)}
             if registro.get("aviso_coleta"):
                 contagem["aviso_coleta"] = registro["aviso_coleta"]
+            if registro.get("excluidas_por_orgao"):
+                # Os atos continuam no dossier guardado, com 'enviar' falso e o motivo.
+                contagem["excluidas_pelo_filtro_de_orgao"] = sum(registro["excluidas_por_orgao"].values())
+                contagem["orgaos_excluidos"] = registro["excluidas_por_orgao"]
             if not enviar and not descobertas:
                 # Nada na janela: a fonte nao vai ao Gemini, e o registro diz por que.
                 processadas.append(dict({"fonte": nome, "status": "ok", "sem_publicacao_na_janela": True, "tamanho_chars": 0, "publicacoes_localizadas": 0, "busca_complementar_executada": registro.get("busca_executada", False)}, **origem, **contagem))
@@ -761,9 +778,9 @@ def publicacoes_nao_devolvidas(material, itens, modelo):
     O modelo mais fraco da cascata devolve poucas publicacoes: em 30/09, com os
     outros em 503, ele devolveu 1 de 24 atos da Receita e 1 de 12 normativos
     do Banco Central. Como a coleta ja traz titulo, data, link e descricao,
-    nada disso precisa sumir: a publicacao vai ao portal sem Radar, com o
-    motivo escrito, e a pessoa decide. Vale tambem para lote que falhou
-    inteiro.
+    nada disso precisa sumir: a publicacao vai ao portal, com o motivo
+    escrito, e a pessoa decide. O Radar sugerido sem IA, quando ha, sai
+    depois, em distribuir_sem_ia. Vale tambem para lote que falhou inteiro.
 
     So entra o que esta na janela ou nao tem data. A publicacao com data
     futura (as consultas da ANP mostram a data da audiencia) fica so no
@@ -789,7 +806,7 @@ def publicacoes_nao_devolvidas(material, itens, modelo):
                 continue
             anotacao["ao_portal"] += 1
             novos.append({
-                "fonte": fonte["fonte"], "titulo": publicacao.get("titulo", ""), "url": publicacao.get("url", ""),
+                "fonte": fonte["fonte"], "categoria": fonte.get("categoria", ""), "titulo": publicacao.get("titulo", ""), "url": publicacao.get("url", ""),
                 "data_publicacao": publicacao.get("data", ""), "resumo": publicacao.get("descricao", ""),
                 "boletins_confirmados": [], "boletins_rejeitados": [], "palavras_chave_detectadas": [],
                 "motivo_filtragem": (
@@ -799,6 +816,47 @@ def publicacoes_nao_devolvidas(material, itens, modelo):
                 "nao_classificada_pela_ia": True,
             })
     return novos, registro
+
+
+def montar_sugestor(fontes):
+    """
+    O sugestor de Radar sem IA (sugestao_sem_ia.py), com o Filtro 1, as
+    palavras-chave do prompt.md e as secoes dos templates. Se os templates
+    nao puderem ser lidos, nao ha como respeitar as secoes: devolve None e o
+    motivo, e os itens seguem sem Radar.
+    """
+    try:
+        com_secao = sugestao_sem_ia.secoes_dos_templates(list(MAPA), SLUGS)
+        termos = sugestao_sem_ia.termos_do_prompt(PROMPT.read_text(encoding="utf-8"))
+    except (Exception, SystemExit) as erro:
+        return None, erro_resumo(erro, 200)
+    if not any(termos.values()):
+        return None, "nenhuma palavra-chave de Radar encontrada no prompt.md"
+    return sugestao_sem_ia.Sugestor(termos, MAPA, com_secao, {f["fonte"]: f for f in fontes}, NOMES), ""
+
+
+def distribuir_sem_ia(itens, fontes, modelo, sugestor=None):
+    """
+    Da um Radar sugerido, sem IA, a publicacao que o Gemini nao devolveu.
+    A sugestao fica em 'sugestao_sem_ia', fora de 'boletins': o portal a
+    mostra como pendente e identificada, e so vale se a pessoa confirmar.
+    Devolve o resumo para o log.
+    """
+    if not any(i.get("nao_classificada_pela_ia") for i in itens):
+        return sugestao_sem_ia.distribuir([], None, modelo, NOMES)
+    falha = ""
+    if sugestor is None:
+        sugestor, falha = montar_sugestor(fontes)
+    resumo = sugestao_sem_ia.distribuir(itens, sugestor, modelo, NOMES)
+    if falha:
+        resumo["sugestao_indisponivel"] = falha
+        print(f"::warning title=Sugestão sem IA indisponível::{falha}")
+    metodos = ", ".join(f"{sugestao_sem_ia.ROTULOS[m]} {n}" for m, n in resumo["por_metodo"].items() if n)
+    print(
+        f"::warning title=Publicações não devolvidas pela IA::{resumo['itens']} publicação(ões) coletada(s) voltaram ao portal para decisão humana: "
+        f"{resumo['com_radar_sugerido']} com Radar sugerido sem IA ({metodos or 'nenhum'}) e {resumo['sem_radar']} sem Radar."
+    )
+    return resumo
 
 
 def fontes_reativadas_com_erro(ativas, processadas, hoje):
@@ -872,10 +930,11 @@ def main():
     if cascata["aviso"]:
         print("::warning title=Cascata do Gemini::" + cascata["aviso"])
     quedas = [{"fonte": x["fonte"], "metodo": x.get("metodo"), "motivo": x.get("motivo_queda")} for x in processadas if x.get("queda_firecrawl")]
+    filtro_de_orgaos = {x["fonte"]: {"excluidas": x["excluidas_pelo_filtro_de_orgao"], "por_orgao": x.get("orgaos_excluidos", {}), "enviadas": x.get("publicacoes_enviadas", 0)} for x in processadas if x.get("excluidas_pelo_filtro_de_orgao")}
     reativadas_com_erro = fontes_reativadas_com_erro(ativas, processadas, hoje)
     for aviso in reativadas_com_erro:
         print(f"::warning title=Fonte reativada com erro::{aviso['fonte']} voltou em {aviso['reativada_em']} e continua com erro: {aviso['erro']}")
-    log = {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": inicio_iso, "fim": fim_iso}, "creditos_firecrawl_estimados": creditos, "fontes_com_queda_para_firecrawl": quedas, "fontes_reativadas_com_erro": reativadas_com_erro, "buscas_complementares": buscas, "cascata_gemini": cascata, "fontes_processadas": processadas, "fontes_suspensas": [{"fonte": f["fonte"], "motivo": f.get("motivo_suspensao", "Suspensão temporária"), "reativar_em": f.get("reativar_em", "")} for f in suspensas], "fontes_inativas": [{"fonte": f["fonte"]} for f in inativas], "tentativas_gemini": tentativas, "lotes_gemini": lotes_gemini}
+    log = {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": inicio_iso, "fim": fim_iso}, "creditos_firecrawl_estimados": creditos, "fontes_com_queda_para_firecrawl": quedas, "filtro_de_orgaos": filtro_de_orgaos, "fontes_reativadas_com_erro": reativadas_com_erro, "buscas_complementares": buscas, "cascata_gemini": cascata, "fontes_processadas": processadas, "fontes_suspensas": [{"fonte": f["fonte"], "motivo": f.get("motivo_suspensao", "Suspensão temporária"), "reativar_em": f.get("reativar_em", "")} for f in suspensas], "fontes_inativas": [{"fonte": f["fonte"]} for f in inativas], "tentativas_gemini": tentativas, "lotes_gemini": lotes_gemini}
     if args.reprocessar:
         log["reprocessado_em"] = datetime.datetime.now(ZoneInfo("America/Sao_Paulo")).isoformat()
         log["origem_da_coleta"] = "dossier guardado em output/dossier"
@@ -901,11 +960,9 @@ def main():
             item["data_publicacao"] = ""
         itens.append(item)
     nao_devolvidas, registro_nao_devolvidas = publicacoes_nao_devolvidas(material, itens, modelo)
-    if nao_devolvidas:
-        print(f"::warning title=Publicações não devolvidas pela IA::{len(nao_devolvidas)} publicação(ões) coletada(s) voltaram ao portal sem Radar, para decisão humana.")
-        itens.extend(nao_devolvidas)
+    itens.extend(nao_devolvidas)
     log["publicacoes_nao_devolvidas_pela_ia"] = {
-        "ao_portal_sem_radar": len(nao_devolvidas),
+        "ao_portal": len(nao_devolvidas),
         "so_registradas_data_futura": sum(r["so_registradas"] for r in registro_nao_devolvidas.values()),
         "por_fonte": registro_nao_devolvidas,
     }
@@ -932,6 +989,8 @@ def main():
         for r in rejs:
             if r.get("boletim"):
                 rejeicoes[r["boletim"]] += 1
+    distribuicao = distribuir_sem_ia(itens, ativas, modelo)
+    log["distribuicao_sem_ia"] = distribuicao
     resgates = resgatar_por_escassez(itens, PISO_RESGATE)
     if resgates:
         print(f"Resgate por escassez: {len(resgates)} publicação(ões) promovida(s).")
@@ -975,7 +1034,7 @@ def main():
             for titulo in titulos
             if titulo
         }
-    ), "rejeicoes_por_boletim": dict(rejeicoes), "resgates_por_escassez": resgates, "cascata_gemini": cascata, "nao_classificadas_pela_ia": len(nao_devolvidas), "top_palavras_chave_detectadas": [{"palavra": p, "ocorrencias": c} for p, c in palavras.most_common(20)]}
+    ), "rejeicoes_por_boletim": dict(rejeicoes), "resgates_por_escassez": resgates, "cascata_gemini": cascata, "nao_classificadas_pela_ia": len(nao_devolvidas), "sugestoes_sem_ia": {k: distribuicao[k] for k in ("com_radar_sugerido", "por_metodo", "sem_radar")}, "top_palavras_chave_detectadas": [{"palavra": p, "ocorrencias": c} for p, c in palavras.most_common(20)]}
     log["resultado"] = {"status": "sucesso", "modelo_gemini_utilizado": modelo, "itens_aceitos": len(itens), "fontes_ativas": len(material), "fontes_suspensas": len(suspensas), "fontes_inativas": len(inativas), "fontes_sem_resultado": len(sem_resultado), "fontes_sem_publicacao_hoje": len(sem_publicacao), "fontes_com_erro_tecnico": len(erros), "itens_por_boletim": stats, "filtro1_bloqueios": {s: len(v) for s, v in bloqueios.items()}, "auditoria": boletim["auditoria"]}
     if bloqueios:
         log["filtro1_bloqueios_detalhe"] = bloqueios

@@ -927,6 +927,207 @@ def teste_publicacao_que_a_ia_nao_devolve_vai_ao_portal_sem_radar():
     assert novos == []
 
 
+def _linha_receita(orgao, numero, data="30/09/2026", ato="1538"):
+    return (LINHA_RECEITA.replace("153836", f"{ato}{numero}").replace("> Corat<", f"> {orgao}<").replace("> 79 <", f"> {numero} <").format(data=data))
+
+
+def teste_receita_so_manda_ao_gemini_os_orgaos_da_lista():
+    url = "http://normas.exemplo/consulta.action?ordem=DESC&p=1"
+    pagina = "".join([
+        _linha_receita("Cosit", 190), _linha_receita("ALF/BSB", 47), _linha_receita("DRF/SOR", 1507),
+        _linha_receita("SRRF08", 1280), _linha_receita("RFB/PGFN", 12), _linha_receita("", 5),
+        _linha_receita("DRF/NHO", 34, data="20/09/2026"),
+    ])
+    cliente = ClienteHttpFalso({url: (200, pagina)})
+    fonte = {"fonte": "Receita", "url": url, "coleta": "receita", "orgaos": ["RFB", "Cosit", "Corat"]}
+    coleta = cd.coletar(cliente, fonte, INICIO, FIM)
+    por_titulo = {p["titulo"]: p for p in coleta["publicacoes"]}
+    assert por_titulo["Ato Declaratório Executivo Cosit nº 190"]["orgao"] == "Cosit"
+    enviadas = sorted(p["titulo"] for p in coleta["publicacoes"] if p["enviar"])
+    # Cosit e ato conjunto da RFB vao; ato sem orgao informado tambem, porque nao da para saber de onde e.
+    assert enviadas == ["Ato Declaratório Executivo Cosit nº 190", "Ato Declaratório Executivo RFB/PGFN nº 12", "Ato Declaratório Executivo nº 5"], enviadas
+    # Nada some: o excluido continua na coleta, com o motivo; o de fora da janela nao conta como excluido.
+    assert coleta["excluidas_por_orgao"] == {"ALF": 1, "DRF": 1, "SRRF08": 1}, coleta["excluidas_por_orgao"]
+    assert "ALF/BSB" in por_titulo["Ato Declaratório Executivo ALF/BSB nº 47"]["excluida_pelo_filtro"]
+    assert "excluida_pelo_filtro" not in por_titulo["Ato Declaratório Executivo DRF/NHO nº 34"]
+    assert coleta["listadas"] == 7
+    # Sem lista de orgaos, a fonte manda tudo o que esta na janela, como antes.
+    sem_lista = cd.coletar(ClienteHttpFalso({url: (200, pagina)}), dict(fonte, orgaos=[]), INICIO, FIM)
+    assert sum(p["enviar"] for p in sem_lista["publicacoes"]) == 6 and sem_lista["excluidas_por_orgao"] == {}
+
+
+def teste_dossier_e_log_registram_os_atos_excluidos_pelo_orgao():
+    fora = dict(publicacao("alfandega", "2026-09-30", enviar=False), na_janela=True, orgao="ALF/BSB", excluida_pelo_filtro="Órgão ALF/BSB fora da lista")
+    registro = {"fonte": "Receita Federal | Normas", "categoria": "Tributário", "url": "u", "status": "ok", "estruturado": True,
+                "publicacoes": [publicacao("cosit", "2026-09-30"), fora], "publicacoes_listadas": 2, "excluidas_por_orgao": {"ALF": 1}}
+    dossier, processadas = gb.montar_dossier([registro])
+    assert "cosit" in dossier[0]["conteudo"] and "alfandega" not in dossier[0]["conteudo"]
+    assert processadas[0]["excluidas_pelo_filtro_de_orgao"] == 1 and processadas[0]["orgaos_excluidos"] == {"ALF": 1}
+    assert processadas[0]["publicacoes_na_janela"] == 2 and processadas[0]["publicacoes_enviadas"] == 1
+    with tempfile.TemporaryDirectory() as pasta:
+        gb.salvar_dossier([dict(registro, pagina="")], {"data_execucao": "2026-09-30"}, pasta=Path(pasta))
+        _, material = gb.carregar_dossier(Path(pasta))
+    guardada = next(p for p in material[0]["publicacoes"] if p["titulo"] == "alfandega")
+    assert guardada["excluida_pelo_filtro"] and material[0]["excluidas_por_orgao"] == {"ALF": 1}
+
+
+def teste_receita_do_fontes_json_filtra_por_orgao_central():
+    fontes = json.loads(gb.FONTES.read_text(encoding="utf-8"))
+    receita = next(f for f in fontes if f["fonte"].startswith("Receita Federal"))
+    orgaos = {o.lower() for o in receita["orgaos"]}
+    assert {"cosit", "corat", "sutri", "coana", "rfb"} <= orgaos
+    assert not orgaos & {"alf", "drf", "irf", "decex", "srrf08", "drj"}
+
+
+PROMPT_FALSO = """
+# 1. Radar A
+Slug técnico: `a`
+## Palavras e temas indicativos
+oferta pública; debêntures; CVM; Banco Central; energia; ANA; comum.
+
+# 2. Radar B
+Slug técnico: `b`
+## Palavras e temas indicativos
+energia elétrica; transmissão; concessão; leilão; comum.
+## Projetos em acompanhamento
+- PL 2780/2024
+
+---
+
+# 3. Radar C
+Slug técnico: `c`
+## Palavras e temas indicativos
+licenciamento ambiental; desmatamento; carbono; comum.
+"""
+
+
+def _sugestor(com_secao=None, fontes=None):
+    import sugestao_sem_ia as ss
+    filtro1 = {"Unico | Noticias": ["b"], "Duas | Noticias": ["a", "b"], "Tres | Noticias": ["a", "b", "c"],
+               "Banco Central | Normas": ["a", "b"], "Planalto | Resenha Diaria": ["a", "b", "c"],
+               "Destaques do D.O.U.": ["a", "b"], "Sem Secao | Noticias": ["c"]}
+    com_secao = com_secao or {k: set(v) for k, v in filtro1.items() if k != "Sem Secao | Noticias"}
+    return ss.Sugestor(ss.termos_do_prompt(PROMPT_FALSO), filtro1, com_secao, fontes or {}, {"a": "Radar A", "b": "Radar B", "c": "Radar C"})
+
+
+def teste_termos_do_prompt_descartam_o_que_nao_distingue_radar():
+    import sugestao_sem_ia as ss
+    termos = ss.termos_do_prompt(PROMPT_FALSO)
+    chaves = {s: {t.chave for t in v} for s, v in termos.items()}
+    assert "comum" not in chaves["a"] | chaves["b"] | chaves["c"]  # esta nas tres listas
+    assert "pl 2780/2024" in chaves["b"] and "oferta publica" in chaves["a"]
+    ana = next(t for t in termos["a"] if t.original == "ANA")
+    assert ana.casa("Resolucao da ANA sobre outorga") and not ana.casa("Ana Paula assume a diretoria")
+    # O prompt real: nove Radares, todos com termos.
+    reais = ss.termos_do_prompt(gb.PROMPT.read_text(encoding="utf-8"))
+    assert sorted(reais) == sorted(gb.SLUGS) and all(len(v) > 20 for v in reais.values())
+
+
+def teste_sugestao_segue_matriz_palavras_e_perfil_nessa_ordem():
+    fontes = {"Banco Central | Normas": {"url": "https://www.bcb.gov.br/x", "radar_predominante": {"radar": "a", "base": "74 de 74"}},
+              "Duas | Noticias": {"url": "https://duas.gov.br"}}
+    s = _sugestor(fontes=fontes)
+    r = s.sugerir({"fonte": "Unico | Notícias", "titulo": "Qualquer coisa", "resumo": ""})
+    assert (r["radares"], r["metodo"]) == (["b"], "matriz"), r
+    r = s.sugerir({"fonte": "Duas | Noticias", "titulo": "CVM abre oferta pública de ações", "resumo": ""})
+    assert (r["radares"], r["metodo"]) == (["a"], "palavras_chave") and "oferta pública" in r["evidencia"], r
+    # Um termo so, de uma palavra, nao basta; sem perfil, fica sem Radar e diz por que.
+    r = s.sugerir({"fonte": "Duas | Noticias", "titulo": "Seminário discute energia", "resumo": ""})
+    assert r["radares"] == [] and "termo genérico" in r["motivo_sem_radar"], r
+    # Empate sem perfil: sem Radar.
+    r = s.sugerir({"fonte": "Duas | Noticias", "titulo": "Leilão de transmissão e debêntures da CVM", "resumo": ""})
+    assert r["radares"] == [] and "empatadas" in r["motivo_sem_radar"], r
+    # O nome da propria fonte nao conta como palavra-chave; o perfil decide.
+    r = s.sugerir({"fonte": "Banco Central | Normas", "titulo": "Comunicado nº 46.044", "resumo": "Divulga taxa do Banco Central (BCB)."})
+    assert (r["radares"], r["metodo"]) == (["a"], "perfil_da_fonte") and "74 de 74" in r["evidencia"], r
+    # Empate desfeito pelo perfil.
+    r = s.sugerir({"fonte": "Banco Central | Normas", "titulo": "Leilão e debêntures", "resumo": ""})
+    assert (r["radares"], r["metodo"]) == (["a"], "palavras_chave") and "empate" in r["evidencia"], r
+    # Radar sem secao no template nunca e sugerido, nem pela matriz.
+    r = s.sugerir({"fonte": "Sem Secao | Noticias", "titulo": "Licenciamento ambiental e carbono", "resumo": ""})
+    assert r["radares"] == [] and "seção" in r["motivo_sem_radar"], r
+    r = s.sugerir({"fonte": "Fonte Nova | Noticias", "titulo": "Oferta pública", "resumo": ""})
+    assert r["radares"] == [] and "Filtro 1" in r["motivo_sem_radar"], r
+
+
+def teste_fonte_generica_nunca_vai_para_todos_os_radares():
+    s = _sugestor(fontes={"Planalto | Resenha Diaria": {"radar_predominante": {"radar": "a", "base": "x"}}})
+    # Um termo so nao basta em fonte generica, nem com perfil declarado.
+    r = s.sugerir({"fonte": "Planalto | Resenha Diaria", "titulo": "Decreto sobre desmatamento", "resumo": ""})
+    assert r["radares"] == [] and "genérica" in r["motivo_sem_radar"], r
+    r = s.sugerir({"fonte": "Planalto | Resenha Diaria", "titulo": "Decreto regulamenta licenciamento ambiental e mercado de carbono", "resumo": ""})
+    assert (r["radares"], r["metodo"]) == (["c"], "palavras_chave"), r
+    # Dois Radares com dois termos cada: empate, sem Radar.
+    r = s.sugerir({"fonte": "Planalto | Resenha Diaria", "titulo": "Lei sobre carbono e desmatamento, leilão e concessão", "resumo": ""})
+    assert r["radares"] == [], r
+    # Pelo nome (DOU) a fonte e generica mesmo sem a marca no fontes.json, e a matriz nao vale para ela.
+    assert s.generica("Destaques do D.O.U.", ["a", "b"])
+    r = s.sugerir({"fonte": "Destaques do D.O.U.", "titulo": "Portaria sobre debêntures", "resumo": ""})
+    assert r["radares"] == [], r
+
+
+def teste_distribuir_marca_a_sugestao_sem_tocar_nos_boletins():
+    import sugestao_sem_ia as ss
+    itens = [
+        {"fonte": "Unico | Noticias", "titulo": "Leilão", "resumo": "", "boletins": [], "nao_classificada_pela_ia": True},
+        {"fonte": "Duas | Noticias", "titulo": "Evento", "resumo": "", "boletins": [], "nao_classificada_pela_ia": True},
+        {"fonte": "Unico | Noticias", "titulo": "Inscrições para o curso", "resumo": "", "boletins": [], "nao_classificada_pela_ia": True, "exclusao_editorial_automatica": "x"},
+        {"fonte": "Unico | Noticias", "titulo": "Classificada pela IA", "boletins": ["b"]},
+    ]
+    resumo = ss.distribuir(itens, _sugestor(), "gemini-3.5-flash-lite", {"b": "Radar B"})
+    assert resumo["itens"] == 3 and resumo["com_radar_sugerido"] == 1 and resumo["sem_radar"] == 2
+    assert resumo["por_metodo"] == {"matriz": 1, "palavras_chave": 0, "perfil_da_fonte": 0} and resumo["por_radar"] == {"b": 1}
+    assert resumo["por_fonte"]["Unico | Noticias"]["matriz"] == 1
+    assert all(i["boletins"] == [] for i in itens[:3]) and "sugestao_sem_ia" not in itens[3]
+    assert itens[0]["sugestao_sem_ia"]["radares"] == ["b"]
+    assert itens[0]["motivo_filtragem"].startswith("[Sugestão sem IA: Radar B, por matriz do Filtro 1]") and "não pela IA" in itens[0]["motivo_filtragem"]
+    assert itens[1]["motivo_filtragem"].startswith("[Não classificada pela IA]") and "flash-lite" in itens[1]["motivo_filtragem"]
+    assert "institucional" in itens[2]["sugestao_sem_ia"]["motivo_sem_radar"]
+    # Sem sugestor (templates ilegiveis), tudo segue sem Radar, com o motivo.
+    itens = [{"fonte": "Unico | Noticias", "titulo": "Leilão", "boletins": [], "nao_classificada_pela_ia": True}]
+    assert ss.distribuir(itens, None, "m", {})["sem_radar"] == 1 and "indisponível" in itens[0]["motivo_filtragem"]
+
+
+def teste_distribuicao_so_le_os_templates_quando_ha_o_que_distribuir():
+    original = gb.montar_sugestor
+    gb.montar_sugestor = lambda fontes: (_ for _ in ()).throw(AssertionError("não devia ler os templates"))
+    try:
+        assert gb.distribuir_sem_ia([{"fonte": "X", "boletins": ["b"]}], [], "m")["itens"] == 0
+        gb.montar_sugestor = lambda fontes: (None, "template ilegível")
+        itens = [{"fonte": "Unico | Noticias", "titulo": "Leilão", "boletins": [], "nao_classificada_pela_ia": True}]
+        resumo = gb.distribuir_sem_ia(itens, [], "m")
+        assert resumo["sugestao_indisponivel"] == "template ilegível" and resumo["sem_radar"] == 1
+    finally:
+        gb.montar_sugestor = original
+
+
+def teste_todo_radar_do_filtro1_tem_secao_no_template():
+    import sugestao_sem_ia as ss
+    com_secao = ss.secoes_dos_templates(list(gb.MAPA), gb.SLUGS)
+    faltam = {f: sorted(set(v) - com_secao[f]) for f, v in gb.MAPA.items() if set(v) - com_secao[f]}
+    assert faltam == {}, faltam
+
+
+def teste_ato_interno_do_bc_vai_sem_radar_com_o_motivo():
+    import datetime
+    import sugestao_sem_ia as ss
+    fontes = gb.fontes_execucao(datetime.datetime(2026, 9, 29), datetime.datetime(2026, 9, 30), datetime.date(2026, 9, 30))
+    bc = next(f for f in fontes if f["fonte"] == "Banco Central | Normas")
+    s = _sugestor(fontes={"Banco Central | Normas": dict(bc, radar_predominante={"radar": "a", "base": "74 de 74"})})
+    interno = {"fonte": "Banco Central | Normas", "titulo": "Ato de Diretor N° 705", "resumo": "Designa servidores para compor a Comissão que procederá a inquérito na Sefer."}
+    r = s.sugerir(interno)
+    assert r["radares"] == [] and r["excluida_da_sugestao"] and "ato interno do Banco Central" in r["motivo_sem_radar"], r
+    assert "Não recebe sugestão de Radar sem IA: ato interno" in ss.motivo(r, "m", {})
+    # O tipo sozinho nao basta: liquidacao extrajudicial e de instituicao de fora.
+    r = s.sugerir({"fonte": "Banco Central | Normas", "titulo": "Ato do Presidente n° 1.386", "resumo": "Decreta a liquidação extrajudicial da Sefer DTVM."})
+    assert "excluida_da_sugestao" not in r and r["radares"] == ["a"], r
+    # Nem o assunto sozinho: comunicado sobre administradores de instituicoes segue o perfil.
+    r = s.sugerir({"fonte": "Banco Central | Normas", "titulo": "Comunicado N° 46.040", "resumo": "Divulga nome aprovado de pessoas nomeadas para cargos de órgãos estatutários."})
+    assert r["radares"] == ["a"] and r["metodo"] == "perfil_da_fonte", r
+    resumo = ss.distribuir([dict(interno, boletins=[], nao_classificada_pela_ia=True)], s, "m", {})
+    assert resumo["sem_radar"] == 1 and list(resumo["motivos_sem_radar"]) == ["ato interno do Banco Central (comissão de inquérito, pessoal ou organização interna)"]
+
+
 TESTES = [
     teste_busca_sobrevive_em_pagina_grande,
     teste_sem_busca_o_comportamento_nao_muda,
@@ -973,6 +1174,16 @@ TESTES = [
     teste_fonte_reativada_com_erro_vai_para_o_log,
     teste_coleta_do_fontes_json_e_valida,
     teste_publicacao_que_a_ia_nao_devolve_vai_ao_portal_sem_radar,
+    teste_receita_so_manda_ao_gemini_os_orgaos_da_lista,
+    teste_dossier_e_log_registram_os_atos_excluidos_pelo_orgao,
+    teste_receita_do_fontes_json_filtra_por_orgao_central,
+    teste_termos_do_prompt_descartam_o_que_nao_distingue_radar,
+    teste_sugestao_segue_matriz_palavras_e_perfil_nessa_ordem,
+    teste_fonte_generica_nunca_vai_para_todos_os_radares,
+    teste_distribuir_marca_a_sugestao_sem_tocar_nos_boletins,
+    teste_distribuicao_so_le_os_templates_quando_ha_o_que_distribuir,
+    teste_todo_radar_do_filtro1_tem_secao_no_template,
+    teste_ato_interno_do_bc_vai_sem_radar_com_o_motivo,
 ]
 
 
