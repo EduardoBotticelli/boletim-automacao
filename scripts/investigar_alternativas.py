@@ -1195,6 +1195,136 @@ def sondar(cliente, url):
     return saida
 
 
+VOLTO = {
+    "ANATEL | Notícias": ("anatel", "pt-br/assuntos/noticias"),
+    "ANVISA | Notícias": ("anvisa", "pt-br/assuntos/noticias-anvisa"),
+    "ANPD | Notícias": ("anpd", "pt-br/assuntos/noticias"),
+    "SUSEP | Notícias": ("susep", "pt-br/central-de-conteudos/noticias"),
+}
+ANOS_ANP = {
+    "ANP | Consultas e Audiências Públicas": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/{ano}",
+    "ANP | Consultas Prévias": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa/{ano}",
+    "ANP | Pautas e Atas da Diretoria Colegiada": "https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada/{ano}",
+}
+CAMPOS_PLONE = "metadata_fields=effective&metadata_fields=created&metadata_fields=Description"
+
+
+def descrever_json(dados):
+    if isinstance(dados, dict):
+        blocos = dados.get("blocks") or {}
+        return {
+            "chaves": sorted(dados.keys())[:30],
+            "tipo": dados.get("@type"),
+            "itens": len(dados.get("items") or []),
+            "tipos_de_bloco": sorted({str(b.get("@type")) for b in blocos.values() if isinstance(b, dict)}),
+            "consultas_de_bloco": [b.get("querystring") for b in blocos.values() if isinstance(b, dict) and b.get("querystring")][:3],
+        }
+    return {"tipo_python": type(dados).__name__}
+
+
+def sondar_volto(cliente, site, caminho, inicio, fim):
+    base = f"https://www.gov.br/{site}"
+    tentativas = [
+        ("conteudo", f"{base}/++api++/{caminho}"),
+        ("busca", f"{base}/++api++/{caminho}/@search?sort_on=effective&sort_order=descending&b_size=30&{CAMPOS_PLONE}"),
+        ("busca_noticias", f"{base}/++api++/{caminho}/@search?portal_type=News%20Item&sort_on=effective&sort_order=descending&b_size=30&{CAMPOS_PLONE}"),
+        ("conteudo_raiz", f"https://www.gov.br/++api++/{site}/{caminho}"),
+    ]
+    saida = []
+    for nome, url in tentativas:
+        registro = cliente.baixar(url, aceitar="application/json")
+        item = {"tentativa": nome, "url": url, "http": enxuto(registro)}
+        if registro["status"] == 200:
+            try:
+                dados = json.loads(registro["texto"])
+                item["json"] = descrever_json(dados)
+                if isinstance(dados, dict) and dados.get("items"):
+                    item.update(resumo(itens_plone(dados, inicio, fim)))
+            except ValueError:
+                item["erro_leitura"] = "nao e JSON (" + (registro["tipo"] or "?") + ")"
+        saida.append(item)
+    return saida
+
+
+def sondar_receita(cliente, url, inicio, fim):
+    registro = cliente.baixar(url)
+    html_texto = registro["texto"] or ""
+    pedacos = html_texto.split('class="linhaResultados')[1:]
+    linhas = []
+    for pedaco in pedacos[:60]:
+        trecho = pedaco[:4000]
+        ato = re.search(r"link\.action\?[^\"'\s>]*idAto=(\d+)[^\"'\s>]*", trecho)
+        texto_linha = " ".join(re.sub(r"<[^>]+>", " ", trecho).split())
+        datas = datas_em(texto_linha)
+        linhas.append({
+            "idAto": ato.group(1) if ato else "",
+            "url": urljoin(registro["url_final"], ato.group(0)) if ato else "",
+            "texto": texto_linha[:260],
+            "datas": [d.isoformat() for d in datas][:4],
+        })
+    return {"http": enxuto(registro), "linhas": len(pedacos), "amostra_linhas": linhas[:6],
+            "trecho_html": ('class="linhaResultados' + pedacos[0][:2500]) if pedacos else "",
+            "com_data_na_janela": sum(1 for l in linhas if any(inicio.isoformat() <= d <= fim.isoformat() for d in l["datas"]))}
+
+
+def sondar_ons(cliente):
+    raiz = "https://www.ons.org.br"
+    achados = []
+    for caminho in ("/Style Library/custom/js/interna.js", "/Style Library/custom/js/script.js",
+                    "/Style Library/custom/js/global.js", "/Style Library/custom/js/ready.js",
+                    "https://www.ons.org.br/cdn/SiteAssets/custom/js/variables.js"):
+        url = caminho if caminho.startswith("http") else raiz + caminho.replace(" ", "%20")
+        registro = cliente.baixar(url, aceitar="*/*")
+        corpo = registro["texto"] or ""
+        for marca in ("noticiasLoad", "_api/", "getbytitle", "Noticias", "apiUrl", "urlApi", "https://"):
+            posicao = corpo.find(marca)
+            if posicao != -1:
+                achados.append({"script": url[-50:], "status": registro["status"], "marca": marca,
+                                "trecho": " ".join(corpo[max(0, posicao - 300): posicao + 1200].split())})
+        if not corpo:
+            achados.append({"script": url[-50:], "status": registro["status"], "marca": "", "trecho": ""})
+    return achados
+
+
+def executar_sondagem_final(cliente, inicio, fim, destino):
+    resultado = {"volto": {}, "anp_por_ano": {}, "receita": None, "ons": None, "volto_config": None}
+    for nome, (site, caminho) in VOLTO.items():
+        resultado["volto"][nome] = sondar_volto(cliente, site, caminho, inicio, fim)
+        for t in resultado["volto"][nome]:
+            print(f"{nome[:22]:<22} {t['tentativa']:<15} {(t['http'] or {}).get('status')} {t.get('json', {}).get('tipo', '')} "
+                  f"itens={t.get('json', {}).get('itens', '')} janela={t.get('na_janela', '')} {t.get('erro_leitura', '')}")
+    # Configuracao do Volto embutida na pagina: onde o frontend busca a API.
+    registro = cliente.baixar("https://www.gov.br/anatel/pt-br/assuntos/noticias")
+    config = re.findall(r'"(?:apiPath|internalApiPath|apiExpanders|publicURL|devProxyToApiPath)":"?[^,}]{0,160}', registro["texto"] or "")
+    resultado["volto_config"] = config[:12]
+    print("config volto:", config[:6])
+    for nome, modelo in ANOS_ANP.items():
+        resultado["anp_por_ano"][nome] = []
+        for ano in (fim.year, fim.year + 1):
+            url = modelo.format(ano=ano)
+            registro = cliente.baixar(url)
+            item = {"url": url, "http": enxuto(registro)}
+            if registro["status"] == 200:
+                html_texto = registro["texto"]
+                posicao = html_texto.find('id="content-core"')
+                trecho = html_texto[posicao:posicao + 400_000] if posicao != -1 else html_texto
+                leitor = ler_html(trecho, registro["url_final"])
+                texto = leitor.texto()
+                item.update(resumo(publicacoes_da_listagem(texto, registro["url_final"], inicio, fim)))
+                item["texto_principal"] = texto[:6000]
+            resultado["anp_por_ano"][nome].append(item)
+            print(f"{nome[:30]:<30} {ano} {(item['http'] or {}).get('status')} pub={item.get('publicacoes', '')} data={item.get('com_data', '')} janela={item.get('na_janela', '')}")
+    resultado["receita"] = sondar_receita(
+        cliente, "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1",
+        inicio, fim)
+    print("receita:", resultado["receita"]["http"].get("status"), "linhas", resultado["receita"]["linhas"], "na janela", resultado["receita"]["com_data_na_janela"])
+    resultado["ons"] = sondar_ons(cliente)
+    print("ons:", [(a["script"], a["status"], a["marca"]) for a in resultado["ons"]])
+    if destino:
+        Path(destino).write_text(json.dumps(resultado, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"Detalhe em {destino}")
+
+
 def executar_sondagem(cliente, inicio, destino):
     resultado = {}
     for nome, url in SONDAR:
@@ -1300,6 +1430,7 @@ def main():
     parser.add_argument("--json", default="")
     parser.add_argument("--autoteste", action="store_true")
     parser.add_argument("--sondar", action="store_true", help="examina de onde vem o conteudo das paginas montadas por JavaScript")
+    parser.add_argument("--sondar-final", action="store_true", help="testa a API do Volto, as paginas de ano da ANP, as linhas da Receita e o script do ONS")
     args = parser.parse_args()
 
     if args.autoteste:
@@ -1313,6 +1444,10 @@ def main():
 
     hoje = datetime.datetime.now(FUSO).date()
     fontes, inicio = fontes_da_execucao(hoje)
+    if args.sondar_final:
+        executar_sondagem_final(cliente, inicio, hoje, args.json)
+        print(f"{cliente.requisicoes} requisicoes, nenhuma ao Firecrawl.")
+        return
     if args.sondar:
         executar_sondagem(cliente, inicio, args.json)
         print(f"{cliente.requisicoes} requisicoes, nenhuma ao Firecrawl.")
