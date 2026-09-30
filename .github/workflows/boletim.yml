@@ -13,6 +13,7 @@ on:
           - ambas
           - comparar_extracao
           - alternativas
+          - reprocessar
       fontes_cobertura:
         description: Fontes a conferir na cobertura (vazio = todas)
         required: false
@@ -117,6 +118,27 @@ jobs:
           python scripts/gerar_boletim.py
           python scripts/gerar_html.py
           python scripts/gerar_auditoria_html.py
+      - name: Guardar o dossier da coleta
+        # Roda mesmo se a classificacao falhar: e nesse caso que o dossier
+        # guardado permite reprocessar sem gastar Firecrawl de novo.
+        if: ${{ always() && (inputs.etapa == 'coleta' || inputs.etapa == 'ambas') }}
+        run: |
+          if [ ! -f output/dossier/indice.json ]; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/dossier output/log_execucao.json
+          if git diff --staged --quiet; then exit 0; fi
+          git commit -m "Guarda a coleta de $(date +'%Y-%m-%d')"
+          git push
+      - name: Reprocessar o dossier guardado
+        # Sem FIRECRAWL_API_KEY: o reprocessamento nao tem como gastar credito.
+        if: ${{ inputs.etapa == 'reprocessar' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python scripts/gerar_boletim.py --reprocessar
+          python scripts/gerar_html.py
+          python scripts/gerar_auditoria_html.py
       - name: Testar DOU
         # So nas etapas que geram Radares: as de medicao nao gastam credito
         # com a prova de conceito do DOU.
@@ -135,7 +157,7 @@ jobs:
           path: output/cobertura.json
 
       - uses: actions/upload-artifact@v4
-        if: ${{ inputs.etapa == 'coleta' || inputs.etapa == 'ambas' }}
+        if: ${{ inputs.etapa == 'coleta' || inputs.etapa == 'ambas' || inputs.etapa == 'reprocessar' }}
         with:
           name: radares-validacao-${{ github.run_number }}
           retention-days: 14
@@ -154,11 +176,15 @@ jobs:
             output/teste_dou_regulatorio.json
             output/teste_dou_regulatorio.html
       - name: Commit oficial
-        if: ${{ inputs.etapa == 'coleta' || inputs.etapa == 'ambas' }}
+        if: ${{ inputs.etapa == 'coleta' || inputs.etapa == 'ambas' || inputs.etapa == 'reprocessar' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add output/boletim.json output/log_execucao.json output/auditoria.html output/validacao_*.html
           if git diff --staged --quiet; then exit 0; fi
-          git commit -m "Atualiza Radares - $(date +'%Y-%m-%d')"
+          if [ "${{ inputs.etapa }}" = "reprocessar" ]; then
+            git commit -m "Reprocessa Radares - $(date +'%Y-%m-%d')"
+          else
+            git commit -m "Atualiza Radares - $(date +'%Y-%m-%d')"
+          fi
           git push

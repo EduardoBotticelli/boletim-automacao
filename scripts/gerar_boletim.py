@@ -1,7 +1,17 @@
-"""Coleta, complementa, classifica e audita as fontes dos Radares."""
+"""Coleta, complementa, classifica e audita as fontes dos Radares.
+
+Uso:
+    python scripts/gerar_boletim.py                 # coleta e classifica
+    python scripts/gerar_boletim.py --reprocessar   # classifica de novo o
+                                                    # dossier guardado, sem
+                                                    # chamar o Firecrawl
+"""
+import argparse
 import datetime
 import json
+import math
 import os
+import re
 import time
 import unicodedata
 from collections import Counter
@@ -84,6 +94,25 @@ LOTE_FONTES = 6
 INTERVALO_LOTES = 20
 # Piso de publicacoes por Radar para o resgate por escassez.
 PISO_RESGATE = 5
+# Pausa entre chamadas ao Firecrawl, coleta ou busca.
+PAUSA_FIRECRAWL = 6.5
+# O Firecrawl cobra 2 creditos a cada 10 resultados de busca pedidos.
+CREDITOS_POR_BUSCA = 2 * math.ceil(BUSCA_LIMITE / 10)
+# O 503 UNAVAILABLE e sobrecarga do lado do Google, temporaria por definicao.
+# Na execucao de 29/09 foram 27 erros 503 e nenhum 429, e a cascata antiga
+# (duas tentativas por modelo, 10 s entre elas) se esgotava em uns 100
+# segundos e entregava quatro dos cinco lotes ao modelo mais fraco. Agora o
+# primeiro modelo espera e repete nestes intervalos antes de ceder a vez.
+ESPERAS_SOBRECARGA = (30, 60, 120)
+# Teto da espera por sobrecarga, somada em todos os lotes da execucao. Passado
+# o teto, a cascata volta a descer sem esperar, para caber no workflow.
+TETO_ESPERA_SOBRECARGA = 15 * 60
+CODIGO_HTTP = re.compile(r"^\s*(\d{3})\b")
+# O dossier guardado: uma pagina por arquivo e um indice.json com o resto.
+DOSSIER = OUT / "dossier"
+# Quanto de cada pagina fica guardado. O Gemini so ve MAX_CHARS; o dobro
+# permite medir depois o que o corte deixou de fora.
+LIMITE_PAGINA_GUARDADA = MAX_CHARS * 2
 
 
 def sem_acento(valor):
@@ -131,15 +160,23 @@ def escopo(url):
     return p.netloc + ("/" + "/".join(partes[:2]) if p.netloc.endswith("gov.br") and len(partes) >= 2 else "")
 
 
-def busca_complementar(fc, fonte, inicio, fim):
-    consulta = f"site:{escopo(fonte['url'])} after:{inicio.isoformat()} before:{(fim + datetime.timedelta(days=1)).isoformat()}"
+def busca_complementar(fc, escopo_busca, inicio, fim, excluir=()):
+    """
+    Publicacoes do escopo dentro da janela, pela busca do Firecrawl.
+
+    Recebe o escopo, e nao a fonte: a busca e feita uma vez por escopo e
+    repartida entre as fontes que o dividem (ver coletar). 'excluir' sao as
+    URLs das proprias listagens, que a busca tambem devolve.
+    """
+    consulta = f"site:{escopo_busca} after:{inicio.isoformat()} before:{(fim + datetime.timedelta(days=1)).isoformat()}"
     resultado = fc.search(consulta, limit=BUSCA_LIMITE)
+    ignorar = {str(u).rstrip("/") for u in excluir}
     registros, vistos = [], set()
     for item in getattr(resultado, "web", None) or []:
         url = str(getattr(item, "url", "") or "").strip()
         titulo = str(getattr(item, "title", "") or "").strip()
         descricao = str(getattr(item, "description", "") or getattr(item, "snippet", "") or "").strip()
-        if not url or url in vistos or url.rstrip("/") == fonte["url"].rstrip("/"):
+        if not url or url in vistos or url.rstrip("/") in ignorar:
             continue
         vistos.add(url)
         registros.append({"titulo": titulo, "url": url, "descricao": descricao})
@@ -212,10 +249,258 @@ def fontes_execucao(inicio, agora, hoje):
     return dinamicas + fontes
 
 
-def gemini(cliente, prompt):
+def precisa_busca(fonte, bruto):
+    """A regra de sempre: pagina pequena, pagina grande ou tipo que pede busca."""
+    return (
+        len(bruto) < LIMIAR_DINAMICO
+        or len(bruto) > MAX_CHARS
+        or fonte.get("tipo_coleta") in {"lista_estruturada", "indice_documentos"}
+    )
+
+
+def _caminho(url):
+    p = urlparse(url)
+    host = p.netloc.lower()
+    host = host[4:] if host.startswith("www.") else host
+    return host + p.path.rstrip("/").lower()
+
+
+def repartir_busca(achados, fontes):
+    """
+    Reparte o resultado de uma busca entre as fontes que dividem o escopo.
+
+    Cada publicacao vai para a fonte cujo endereco e o prefixo mais longo do
+    endereco dela: uma consulta publica da ANP cai em "ANP | Consultas e
+    Audiencias Publicas", e nao nas quatro fontes da ANP ao mesmo tempo. O
+    que nao casa com nenhuma fica com a primeira, na ordem do fontes.json.
+
+    Devolve uma lista por fonte, na ordem de 'fontes'.
+    """
+    caminhos = [_caminho(f["url"]) for f in fontes]
+    partes = [[] for _ in fontes]
+    for achado in achados:
+        alvo = _caminho(achado["url"])
+        destino, maior = 0, -1
+        for posicao, caminho in enumerate(caminhos):
+            if (alvo == caminho or alvo.startswith(caminho + "/")) and len(caminho) > maior:
+                destino, maior = posicao, len(caminho)
+        partes[destino].append(achado)
+    return partes
+
+
+def coletar(fc, ativas, inicio, hoje, pausa=PAUSA_FIRECRAWL):
+    """
+    Coleta as paginas e faz a busca complementar, uma vez por escopo.
+
+    Primeiro coleta todas as paginas e decide, com a regra de sempre, quais
+    precisam de busca. Depois faz uma busca por escopo e reparte o resultado
+    entre as fontes daquele escopo. As quatro fontes da ANP dividem
+    www.gov.br/anp/pt-br: pagavam quatro buscas identicas e mandavam o mesmo
+    bloco quatro vezes ao Gemini. Agora pagam uma, e cada publicacao entra
+    uma vez no dossier.
+
+    O que a busca acha nunca some sem registro. O resultado vai so para
+    fontes cuja pagina veio de pe; se nenhuma do escopo veio, a busca nem e
+    feita, e o motivo fica em 'buscas'.
+
+    Devolve (material, buscas). 'material' e uma entrada por fonte, com a
+    pagina inteira e o que a busca achou para ela: e o que montar_dossier
+    transforma no dossier do Gemini e o que salvar_dossier guarda em disco.
+    """
+    material = []
+    for indice, fonte in enumerate(ativas, 1):
+        nome = fonte["fonte"]
+        print(f"[{indice}/{len(ativas)}] {nome}")
+        registro = {
+            "fonte": nome, "categoria": fonte["categoria"], "url": fonte["url"],
+            "tipo_coleta": fonte.get("tipo_coleta", "pagina"),
+            "pagina_inteira": bool(fonte.get("pagina_inteira")),
+            "status": "ok", "erro": "", "pagina": "", "chars_pagina": 0,
+            "busca_pedida": False, "busca_executada": False, "descobertas": [],
+        }
+        try:
+            resultado = scrape_retry(fc, fonte["url"], not fonte.get("pagina_inteira"))
+            bruto = resultado.markdown or ""
+            registro.update(pagina=bruto, chars_pagina=len(bruto), busca_pedida=precisa_busca(fonte, bruto))
+            marcador = pagina_erro(bruto[:MAX_CHARS])
+            if marcador:
+                registro.update(status="erro_conteudo_origem", erro=f"A origem retornou página de erro/manutenção ({marcador}).")
+        except Exception as erro:
+            registro.update(status="erro", erro=erro_resumo(erro, 300))
+        material.append(registro)
+        if indice < len(ativas):
+            time.sleep(pausa)
+
+    grupos = {}
+    for registro in material:
+        if registro["busca_pedida"]:
+            grupos.setdefault(escopo(registro["url"]), []).append(registro)
+
+    buscas = []
+    for alvo, grupo in grupos.items():
+        nomes = [r["fonte"] for r in grupo]
+        de_pe = [r for r in grupo if r["status"] == "ok"]
+        busca = {"escopo": alvo, "fontes": nomes, "executada": False, "resultados": 0, "erro": ""}
+        buscas.append(busca)
+        for registro in grupo:
+            registro["escopo_busca"] = alvo
+            registro["busca_compartilhada_com"] = [n for n in nomes if n != registro["fonte"]]
+        if not de_pe:
+            busca["erro"] = "Busca não executada: a página de todas as fontes deste escopo falhou."
+            continue
+        time.sleep(pausa)
+        try:
+            achados = busca_complementar(fc, alvo, inicio, hoje, excluir=[r["url"] for r in grupo])
+        except Exception as erro:
+            busca["erro"] = "Busca complementar falhou: " + erro_resumo(erro, 180)
+            print(busca["erro"])
+            continue
+        busca.update(executada=True, resultados=len(achados))
+        for registro, parte in zip(de_pe, repartir_busca(achados, de_pe)):
+            registro.update(descobertas=parte, busca_executada=True)
+        if len(grupo) > 1:
+            print(f"Busca em {alvo}: {len(achados)} resultado(s) repartido(s) entre {len(grupo)} fontes.")
+    return material, buscas
+
+
+def montar_dossier(material):
+    """
+    O dossier que vai ao Gemini, a partir do que a coleta trouxe.
+
+    Serve a coleta e o reprocessamento: o dossier de uma execucao pode ser
+    refeito do que ficou guardado em disco, sem chamar o Firecrawl.
+
+    Devolve (dossier, processadas).
+    """
+    dossier, processadas = [], []
+    for registro in material:
+        nome = registro["fonte"]
+        base = {"fonte": nome, "categoria": registro["categoria"], "url": registro["url"]}
+        descobertas = registro.get("descobertas") or []
+        if registro["status"] == "erro":
+            dossier.append(dict(base, conteudo="", erro_tecnico=registro["erro"]))
+            processadas.append({"fonte": nome, "status": "erro", "erro": registro["erro"]})
+            continue
+        if registro["status"] == "erro_conteudo_origem":
+            dossier.append(dict(base, conteudo="", erro_tecnico=registro["erro"]))
+            processadas.append({"fonte": nome, "status": "erro_conteudo_origem", "tamanho_chars": registro.get("chars_pagina", 0), "erro": registro["erro"]})
+            continue
+        conteudo, chars_busca, truncado = montar_conteudo(registro.get("pagina", ""), descobertas)
+        if len(conteudo) < MIN_CHARS and not descobertas:
+            motivo = f"Conteúdo insuficiente ({len(conteudo)} caracteres)."
+            dossier.append(dict(base, conteudo="", erro_tecnico=motivo))
+            processadas.append({"fonte": nome, "status": "erro_tecnico", "tamanho_chars": len(conteudo), "erro": motivo})
+            continue
+        dossier.append(dict(base, tipo_coleta=registro.get("tipo_coleta", "pagina"), publicacoes_localizadas=len(descobertas), conteudo=conteudo))
+        processada = {"fonte": nome, "status": "ok", "tamanho_chars": len(conteudo), "publicacoes_localizadas": len(descobertas), "busca_complementar_executada": registro.get("busca_executada", False), "chars_busca_complementar": chars_busca, "conteudo_truncado": truncado, "pagina_inteira": registro.get("pagina_inteira", False)}
+        if registro.get("escopo_busca"):
+            processada["escopo_busca"] = registro["escopo_busca"]
+        if registro.get("busca_compartilhada_com"):
+            processada["busca_compartilhada_com"] = registro["busca_compartilhada_com"]
+        processadas.append(processada)
+    return dossier, processadas
+
+
+def creditos_estimados(material, buscas):
+    """Estimativa conservadora: toda coleta e toda busca tentadas contam."""
+    tentadas = sum(1 for b in buscas if b["executada"] or b["erro"].startswith("Busca complementar falhou"))
+    return {
+        "coletas": len(material),
+        "buscas": tentadas,
+        "creditos_por_busca": CREDITOS_POR_BUSCA,
+        "total": len(material) + tentadas * CREDITOS_POR_BUSCA,
+    }
+
+
+def nome_de_arquivo(fonte):
+    return re.sub(r"[^a-z0-9]+", "-", sem_acento(fonte).lower()).strip("-")[:80] or "fonte"
+
+
+def salvar_dossier(material, meta, pasta=None):
+    """
+    Guarda o que a coleta trouxe, para reprocessar sem o Firecrawl.
+
+    Uma pagina por arquivo .md, como o Firecrawl entregou (ate
+    LIMITE_PAGINA_GUARDADA caracteres), e um indice.json com o resto: o
+    estado de cada fonte, o que a busca complementar achou para ela e a
+    janela da execucao. Um arquivo por fonte deixa o historico do git
+    comparar cada pagina com a do dia anterior.
+    """
+    pasta = pasta or DOSSIER
+    pasta.mkdir(parents=True, exist_ok=True)
+    fontes, usados = [], set()
+    for registro in material:
+        arquivo = nome_de_arquivo(registro["fonte"])
+        sufixo = 2
+        while arquivo + ".md" in usados:
+            arquivo = f"{nome_de_arquivo(registro['fonte'])}-{sufixo}"
+            sufixo += 1
+        arquivo += ".md"
+        usados.add(arquivo)
+        (pasta / arquivo).write_text(registro.get("pagina", "")[:LIMITE_PAGINA_GUARDADA], encoding="utf-8")
+        fontes.append(dict({k: v for k, v in registro.items() if k != "pagina"}, arquivo=arquivo))
+    for antigo in pasta.glob("*.md"):
+        if antigo.name not in usados:
+            antigo.unlink()
+    salvar(pasta / "indice.json", dict(meta, fontes=fontes))
+
+
+def carregar_dossier(pasta=None):
+    """O inverso de salvar_dossier: devolve (indice, material)."""
+    pasta = pasta or DOSSIER
+    indice_path = pasta / "indice.json"
+    if not indice_path.exists():
+        raise SystemExit(f"Nao ha dossier guardado em {indice_path}.")
+    indice = json.loads(indice_path.read_text(encoding="utf-8"))
+    material = []
+    for registro in indice.get("fontes") or []:
+        arquivo = pasta / registro.get("arquivo", "")
+        pagina = arquivo.read_text(encoding="utf-8") if registro.get("arquivo") and arquivo.exists() else ""
+        material.append(dict(registro, pagina=pagina))
+    return indice, material
+
+
+def tipo_de_erro(erro):
+    """
+    'cota' para 429 (acabou a cota: insistir no mesmo modelo nao adianta),
+    'sobrecarga' para 5xx (o modelo esta cheio agora; costuma passar) e
+    'outro' para o resto (JSON invalido, resposta sem itens).
+    """
+    codigo = getattr(erro, "code", None)
+    if not isinstance(codigo, int):
+        achado = CODIGO_HTTP.match(str(erro))
+        codigo = int(achado.group(1)) if achado else None
+    texto = str(erro).upper()
+    if codigo == 429 or "RESOURCE_EXHAUSTED" in texto:
+        return "cota"
+    if codigo in (500, 502, 503, 504) or "UNAVAILABLE" in texto or "OVERLOADED" in texto:
+        return "sobrecarga"
+    return "outro"
+
+
+def gemini(cliente, prompt, orcamento=None):
+    """
+    Passa um lote pela cascata de modelos. Cada erro tem sua resposta:
+
+    - sobrecarga (503 e outros 5xx): o primeiro modelo espera e repete nos
+      intervalos de ESPERAS_SOBRECARGA, enquanto 'orcamento' deixar; os
+      outros repetem uma vez depois de 10 s, como sempre;
+    - cota (429): desce na hora. A mensagem vai inteira para o log, porque e
+      ela que diz se a cota estourada e por minuto ou por dia;
+    - outro: repete uma vez depois de 10 s, como sempre.
+
+    'orcamento' e compartilhado pelos lotes de uma execucao e soma quanto ja
+    se esperou por sobrecarga, contra TETO_ESPERA_SOBRECARGA.
+    """
+    if orcamento is None:
+        orcamento = {"espera": 0}
     logs = []
-    for modelo in MODELOS:
-        for tentativa in (1, 2):
+    for posicao, modelo in enumerate(MODELOS):
+        esperas_sobrecarga = list(ESPERAS_SOBRECARGA) if posicao == 0 else [10]
+        repeticoes = 1
+        tentativa = 0
+        while True:
+            tentativa += 1
             try:
                 resposta = cliente.models.generate_content(model=modelo, contents=prompt, config=types.GenerateContentConfig(temperature=0.15, response_mime_type="application/json"))
                 dados = json.loads(resposta.text or "")
@@ -224,9 +509,22 @@ def gemini(cliente, prompt):
                 logs.append({"modelo": modelo, "tentativa": tentativa, "status": "sucesso"})
                 return dados, modelo, logs
             except Exception as erro:
-                logs.append({"modelo": modelo, "tentativa": tentativa, "status": "erro", "erro": erro_resumo(erro)})
-                if tentativa == 1:
-                    time.sleep(10)
+                tipo = tipo_de_erro(erro)
+                registro = {"modelo": modelo, "tentativa": tentativa, "status": "erro", "tipo_erro": tipo, "erro": erro_resumo(erro, 4000 if tipo == "cota" else 400)}
+                logs.append(registro)
+                espera = 0
+                if tipo == "sobrecarga" and esperas_sobrecarga:
+                    if posicao > 0 or orcamento["espera"] + esperas_sobrecarga[0] <= TETO_ESPERA_SOBRECARGA:
+                        espera = esperas_sobrecarga.pop(0)
+                        if posicao == 0:
+                            orcamento["espera"] += espera
+                elif tipo == "outro" and repeticoes:
+                    repeticoes -= 1
+                    espera = 10
+                if not espera:
+                    break
+                registro["espera_antes_da_proxima_s"] = espera
+                time.sleep(espera)
     return None, "", logs
 
 
@@ -253,13 +551,17 @@ def classificar(cliente, base, contexto, dossier):
     itens, sem_publicacao, sem_resultado, com_erro = [], [], [], []
     modelos, registro, falharam = [], [], []
     total = len(list(lotes_de(dossier, LOTE_FONTES)))
+    orcamento = {"espera": 0}
 
     for numero, lote in enumerate(lotes_de(dossier, LOTE_FONTES), 1):
         nomes = [d.get("fonte", "") for d in lote]
         print(f"Gemini lote {numero}/{total}: {len(lote)} fonte(s)")
         prompt = base + contexto + json.dumps(lote, ensure_ascii=False)
-        dados, modelo, tentativas = gemini(cliente, prompt)
-        registro.append({"lote": numero, "fontes": nomes, "modelo": modelo, "tentativas": tentativas})
+        antes = orcamento["espera"]
+        dados, modelo, tentativas = gemini(cliente, prompt, orcamento)
+        registro.append({"lote": numero, "fontes": nomes, "modelo": modelo, "tentativas": tentativas, "espera_por_sobrecarga_s": orcamento["espera"] - antes})
+        if modelo and modelo != MODELOS[0]:
+            print(f"  lote {numero} atendido por {modelo}, nao por {MODELOS[0]}")
 
         if dados is None:
             print(f"  lote {numero} falhou em todos os modelos")
@@ -284,6 +586,25 @@ def classificar(cliente, base, contexto, dossier):
         "fontes_com_erro_tecnico": com_erro,
     }
     return unido, modelos, registro, falharam
+
+
+def resumo_cascata(lotes):
+    """Qual modelo atendeu cada lote, para a queda nunca passar despercebida."""
+    preferido = MODELOS[0]
+    fora = [r for r in lotes if r.get("modelo") != preferido]
+    return {
+        "modelo_preferido": preferido,
+        "lotes": [
+            {"lote": r["lote"], "modelo": r.get("modelo") or "falhou", "fontes": r.get("fontes", []), "espera_por_sobrecarga_s": r.get("espera_por_sobrecarga_s", 0)}
+            for r in lotes
+        ],
+        "lotes_fora_do_preferido": len(fora),
+        "espera_por_sobrecarga_s": sum(r.get("espera_por_sobrecarga_s", 0) for r in lotes),
+        "aviso": (
+            f"{len(fora)} de {len(lotes)} lote(s) não usaram {preferido}: "
+            + "; ".join(f"lote {r['lote']} em {r.get('modelo') or 'nenhum modelo'}" for r in fora)
+        ) if fora else "",
+    }
 
 
 def resgatar_por_escassez(itens, piso):
@@ -349,51 +670,40 @@ def resgatar_por_escassez(itens, piso):
     return resgates
 
 
+def argumentos():
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--reprocessar", action="store_true", help="classifica de novo o dossier guardado em output/dossier, sem chamar o Firecrawl")
+    return parser.parse_args()
+
+
 def main():
-    if not os.getenv("FIRECRAWL_API_KEY") or not os.getenv("GEMINI_API_KEY"):
-        raise SystemExit("FIRECRAWL_API_KEY e GEMINI_API_KEY são obrigatórias.")
+    args = argumentos()
+    if not os.getenv("GEMINI_API_KEY") or (not args.reprocessar and not os.getenv("FIRECRAWL_API_KEY")):
+        raise SystemExit("GEMINI_API_KEY é obrigatória, e FIRECRAWL_API_KEY também, exceto com --reprocessar.")
     OUT.mkdir(exist_ok=True)
-    agora = datetime.datetime.now(ZoneInfo("America/Sao_Paulo"))
-    hoje = agora.date()
-    inicio = hoje - datetime.timedelta(days=3 if hoje.weekday() == 0 else 1)
+    if args.reprocessar:
+        indice, material = carregar_dossier()
+        agora = datetime.datetime.fromisoformat(indice["executado_em"])
+        hoje = datetime.date.fromisoformat(indice["data_execucao"])
+        inicio = datetime.date.fromisoformat(indice["janela"]["inicio"][:10])
+        buscas = indice.get("buscas_complementares") or []
+        creditos = {"coletas": 0, "buscas": 0, "creditos_por_busca": CREDITOS_POR_BUSCA, "total": 0}
+        print(f"Reprocessando o dossier de {hoje.isoformat()}: {len(material)} fonte(s), sem Firecrawl.")
+    else:
+        agora = datetime.datetime.now(ZoneInfo("America/Sao_Paulo"))
+        hoje = agora.date()
+        inicio = hoje - datetime.timedelta(days=3 if hoje.weekday() == 0 else 1)
     fontes = fontes_execucao(datetime.datetime.combine(inicio, datetime.time(), tzinfo=agora.tzinfo), agora, hoje)
     ativas = [f for f in fontes if estado(f, hoje) == "ativa"]
     suspensas = [f for f in fontes if estado(f, hoje) == "suspensa"]
     inativas = [f for f in fontes if estado(f, hoje) == "inativa"]
-    fc = Firecrawl(api_key=os.environ["FIRECRAWL_API_KEY"])
-    dossier, processadas = [], []
-    for indice, fonte in enumerate(ativas, 1):
-        nome = fonte["fonte"]
-        print(f"[{indice}/{len(ativas)}] {nome}")
-        try:
-            resultado = scrape_retry(fc, fonte["url"], not fonte.get("pagina_inteira"))
-            bruto = resultado.markdown or ""
-            complementar = len(bruto) < LIMIAR_DINAMICO or len(bruto) > MAX_CHARS or fonte.get("tipo_coleta") in {"lista_estruturada", "indice_documentos"}
-            descobertas = []
-            if complementar:
-                try:
-                    descobertas = busca_complementar(fc, fonte, inicio, hoje)
-                except Exception as erro:
-                    print("Busca complementar falhou: " + erro_resumo(erro, 180))
-            conteudo, chars_busca, truncado = montar_conteudo(bruto, descobertas)
-            marcador = pagina_erro(conteudo)
-            if marcador:
-                motivo = f"A origem retornou página de erro/manutenção ({marcador})."
-                dossier.append({"fonte": nome, "categoria": fonte["categoria"], "url": fonte["url"], "conteudo": "", "erro_tecnico": motivo})
-                processadas.append({"fonte": nome, "status": "erro_conteudo_origem", "tamanho_chars": len(conteudo), "erro": motivo})
-            elif len(conteudo) < MIN_CHARS:
-                motivo = f"Conteúdo insuficiente ({len(conteudo)} caracteres)."
-                dossier.append({"fonte": nome, "categoria": fonte["categoria"], "url": fonte["url"], "conteudo": "", "erro_tecnico": motivo})
-                processadas.append({"fonte": nome, "status": "erro_tecnico", "tamanho_chars": len(conteudo), "erro": motivo})
-            else:
-                dossier.append({"fonte": nome, "categoria": fonte["categoria"], "url": fonte["url"], "tipo_coleta": fonte.get("tipo_coleta", "pagina"), "publicacoes_localizadas": len(descobertas), "conteudo": conteudo})
-                processadas.append({"fonte": nome, "status": "ok", "tamanho_chars": len(conteudo), "publicacoes_localizadas": len(descobertas), "busca_complementar_executada": complementar, "chars_busca_complementar": chars_busca, "conteudo_truncado": truncado, "pagina_inteira": bool(fonte.get("pagina_inteira"))})
-        except Exception as erro:
-            motivo = erro_resumo(erro, 300)
-            dossier.append({"fonte": nome, "categoria": fonte["categoria"], "url": fonte["url"], "conteudo": "", "erro_tecnico": motivo})
-            processadas.append({"fonte": nome, "status": "erro", "erro": motivo})
-        if indice < len(ativas):
-            time.sleep(6.5)
+    if not args.reprocessar:
+        fc = Firecrawl(api_key=os.environ["FIRECRAWL_API_KEY"])
+        material, buscas = coletar(fc, ativas, inicio, hoje)
+        creditos = creditos_estimados(material, buscas)
+        salvar_dossier(material, {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": f"{inicio.isoformat()}T00:00", "fim": agora.strftime("%Y-%m-%dT%H:%M")}, "buscas_complementares": buscas, "creditos_firecrawl_estimados": creditos})
+        print(f"Firecrawl: {creditos['coletas']} coleta(s) e {creditos['buscas']} busca(s), cerca de {creditos['total']} créditos.")
+    dossier, processadas = montar_dossier(material)
     inicio_iso = f"{inicio.isoformat()}T00:00"
     fim_iso = agora.strftime("%Y-%m-%dT%H:%M")
     contexto = f"\n\n## Contexto\ndata_execucao: {hoje.isoformat()}\njanela_inicio: {inicio_iso}\njanela_fim: {fim_iso}\n\n## Dossier\n"
@@ -404,9 +714,15 @@ def main():
         client.close()
     modelo = ", ".join(dict.fromkeys(modelos))
     tentativas = [dict(t, lote=r["lote"]) for r in lotes_gemini for t in r["tentativas"]]
-    log = {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": inicio_iso, "fim": fim_iso}, "fontes_processadas": processadas, "fontes_suspensas": [{"fonte": f["fonte"], "motivo": f.get("motivo_suspensao", "Suspensão temporária"), "reativar_em": f.get("reativar_em", "")} for f in suspensas], "fontes_inativas": [{"fonte": f["fonte"]} for f in inativas], "tentativas_gemini": tentativas, "lotes_gemini": lotes_gemini}
+    cascata = resumo_cascata(lotes_gemini)
+    if cascata["aviso"]:
+        print("::warning title=Cascata do Gemini::" + cascata["aviso"])
+    log = {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": inicio_iso, "fim": fim_iso}, "creditos_firecrawl_estimados": creditos, "buscas_complementares": buscas, "cascata_gemini": cascata, "fontes_processadas": processadas, "fontes_suspensas": [{"fonte": f["fonte"], "motivo": f.get("motivo_suspensao", "Suspensão temporária"), "reativar_em": f.get("reativar_em", "")} for f in suspensas], "fontes_inativas": [{"fonte": f["fonte"]} for f in inativas], "tentativas_gemini": tentativas, "lotes_gemini": lotes_gemini}
+    if args.reprocessar:
+        log["reprocessado_em"] = datetime.datetime.now(ZoneInfo("America/Sao_Paulo")).isoformat()
+        log["origem_da_coleta"] = "dossier guardado em output/dossier"
     if boletim is None:
-        log["resultado"] = {"status": "falha_gemini", "boletim_anterior_preservado": BOLETIM.exists()}
+        log["resultado"] = {"status": "falha_gemini", "boletim_anterior_preservado": BOLETIM.exists(), "dossier_guardado": (DOSSIER / "indice.json").exists()}
         salvar(LOG, log)
         raise SystemExit("Cascata Gemini falhou em todos os lotes; boletim anterior preservado.")
     itens = []
@@ -486,8 +802,8 @@ def main():
             for titulo in titulos
             if titulo
         }
-    ), "rejeicoes_por_boletim": dict(rejeicoes), "resgates_por_escassez": resgates, "top_palavras_chave_detectadas": [{"palavra": p, "ocorrencias": c} for p, c in palavras.most_common(20)]}
-    log["resultado"] = {"status": "sucesso", "modelo_gemini_utilizado": modelo, "itens_aceitos": len(itens), "fontes_ativas": len(ativas), "fontes_suspensas": len(suspensas), "fontes_inativas": len(inativas), "fontes_sem_resultado": len(sem_resultado), "fontes_sem_publicacao_hoje": len(sem_publicacao), "fontes_com_erro_tecnico": len(erros), "itens_por_boletim": stats, "filtro1_bloqueios": {s: len(v) for s, v in bloqueios.items()}, "auditoria": boletim["auditoria"]}
+    ), "rejeicoes_por_boletim": dict(rejeicoes), "resgates_por_escassez": resgates, "cascata_gemini": cascata, "top_palavras_chave_detectadas": [{"palavra": p, "ocorrencias": c} for p, c in palavras.most_common(20)]}
+    log["resultado"] = {"status": "sucesso", "modelo_gemini_utilizado": modelo, "itens_aceitos": len(itens), "fontes_ativas": len(material), "fontes_suspensas": len(suspensas), "fontes_inativas": len(inativas), "fontes_sem_resultado": len(sem_resultado), "fontes_sem_publicacao_hoje": len(sem_publicacao), "fontes_com_erro_tecnico": len(erros), "itens_por_boletim": stats, "filtro1_bloqueios": {s: len(v) for s, v in bloqueios.items()}, "auditoria": boletim["auditoria"]}
     if bloqueios:
         log["filtro1_bloqueios_detalhe"] = bloqueios
     salvar(BOLETIM, boletim)
