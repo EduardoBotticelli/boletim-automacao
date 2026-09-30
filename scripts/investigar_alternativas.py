@@ -1286,6 +1286,24 @@ def sondar_ons(cliente):
     return achados
 
 
+def sondar_receita_html(cliente, inicio, fim, destino):
+    """O HTML em volta dos primeiros atos, nas duas URLs, para escrever o leitor da Receita."""
+    resultado = {}
+    for url in ("http://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1",
+                "https://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1"):
+        registro = cliente.baixar(url)
+        html_texto = registro["texto"] or ""
+        posicoes = [m.start() for m in re.finditer("idAto", html_texto)]
+        resultado[url] = {
+            "http": enxuto(registro),
+            "idAto": len(posicoes),
+            "trechos": [html_texto[max(0, p - 1500): p + 1500] for p in posicoes[:1]] + [html_texto[posicoes[2] - 800: posicoes[2] + 800]] if len(posicoes) > 2 else [],
+            "classes_em_volta": sorted(set(re.findall(r'class="([^"]*)"', html_texto[posicoes[0] - 3000: posicoes[0] + 3000])))[:30] if posicoes else [],
+        }
+        print(url[:5], registro["status"], "idAto", len(posicoes))
+    Path(destino).write_text(json.dumps(resultado, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
 def executar_sondagem_final(cliente, inicio, fim, destino):
     resultado = {"volto": {}, "anp_por_ano": {}, "receita": None, "ons": None, "volto_config": None}
     for nome, (site, caminho) in VOLTO.items():
@@ -1444,6 +1462,10 @@ def main():
 
     hoje = datetime.datetime.now(FUSO).date()
     fontes, inicio = fontes_da_execucao(hoje)
+    if args.sondar_final and os.getenv("SONDAR_SO_RECEITA"):
+        sondar_receita_html(cliente, inicio, hoje, args.json)
+        print(f"{cliente.requisicoes} requisicoes, nenhuma ao Firecrawl.")
+        return
     if args.sondar_final:
         executar_sondagem_final(cliente, inicio, hoje, args.json)
         print(f"{cliente.requisicoes} requisicoes, nenhuma ao Firecrawl.")

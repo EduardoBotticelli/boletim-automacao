@@ -86,7 +86,7 @@ jobs:
         run: |
           python scripts/investigar_alternativas.py --autoteste
           if [ "${{ inputs.etapa }}" = "sondar" ]; then
-            python scripts/investigar_alternativas.py --sondar-final --json output/alternativas_sonda.json
+            SONDAR_SO_RECEITA=1 python scripts/investigar_alternativas.py --sondar-final --json output/alternativas_sonda.json
             exit 0
           fi
           argumentos=""
