@@ -839,8 +839,10 @@ def tabela_receita(cliente, fonte, inicio, fim, paginas=6):
         url = re.sub(r"([?&])p=\d+", rf"\g<1>p={pagina}", base)
         registro = _exigir(cliente.baixar(url), "tabela da Receita")
         linhas = ler_linhas_receita(registro["texto"])
-        if pagina > 1 and not linhas and publicacoes and min(p["data"] for p in publicacoes if p["data"]) >= inicio.isoformat():
-            aviso = f"A página {pagina - 1} inteira está na janela e a página {pagina} veio vazia: pode haver atos da janela fora da coleta."
+        if pagina == 2 and not linhas and len(publicacoes) >= 100:
+            # Com o filtro da janela, pagina 2 vazia quer dizer que acabou. So
+            # desconfia quando a primeira veio grande a ponto de parecer corte.
+            aviso = f"A página 1 trouxe {len(publicacoes)} atos e a página 2 veio vazia: pode haver atos da janela fora da coleta."
         publicacoes.extend(linhas)
         textos.extend(f"{p['data']} | {p['titulo']} | {p['url']} | {p['descricao']}" for p in linhas)
         datas = [p["data"] for p in linhas if p["data"]]
