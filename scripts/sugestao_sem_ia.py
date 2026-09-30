@@ -18,6 +18,10 @@ quando uma regra fixa consegue decidir com seguranca, na ordem:
    em "radar_predominante" na definicao dela (Banco Central -> Mercado de
    Capitais: 74 de 74 publicacoes de 13/07 a 29/09).
 
+Antes das tres, a definicao da fonte pode excluir publicacoes da sugestao
+("sem_sugestao"): os atos internos do Banco Central (comissao de inquerito,
+pessoal, organizacao interna) vao sem Radar, com o motivo.
+
 Fonte generica (Planalto, Diario Oficial, Destaques do DOU, Ministerio da
 Fazenda) nunca passa pela matriz nem pelo perfil: so recebe sugestao por
 palavras-chave, com dois termos diferentes e um Radar a frente dos outros.
@@ -165,6 +169,27 @@ class Sugestor:
             len(permitidos) > 1 and set(permitidos) >= self.todos
         )
 
+    def excluida(self, item):
+        """
+        O motivo, se a publicacao cai em "sem_sugestao" da definicao da fonte:
+        um dos tipos de ato ('tipos', no comeco do titulo) com um dos assuntos
+        ('assuntos', expressoes regulares sem acento, no titulo ou na
+        descricao). E o caso dos atos internos do Banco Central, como o Ato de
+        Diretor que designa servidores para comissao de inquerito: o perfil da
+        fonte os mandaria ao Mercado de Capitais. So o tipo nao basta: o Ato do
+        Presidente que decreta liquidacao extrajudicial nao e interno.
+        """
+        regra = (self.fontes.get(normalizar(item.get("fonte", ""))) or {}).get("sem_sugestao")
+        if not regra:
+            return ""
+        titulo = normalizar(item.get("titulo", ""))
+        if not any(titulo.startswith(normalizar(tipo)) for tipo in regra.get("tipos", [])):
+            return ""
+        texto = normalizar(f"{item.get('titulo', '')} {item.get('resumo', '')}")
+        if any(re.search(r"(?<![a-z0-9])(?:" + assunto + r")(?![a-z0-9])", texto) for assunto in regra.get("assuntos", [])):
+            return regra.get("motivo", "publicação excluída da sugestão pela definição da fonte")
+        return ""
+
     def _nome_da_fonte(self, fonte):
         definicao = self.fontes.get(normalizar(fonte)) or {}
         host = (urlparse(definicao.get("url", "")).hostname or "").replace(".", " ")
@@ -196,6 +221,9 @@ class Sugestor:
         permitidos = [s for s in filtro if s in self.com_secao.get(chave, set())]
         if not permitidos:
             return {"radares": [], "metodo": None, "motivo_sem_radar": "nenhum Radar do Filtro 1 tem seção para a fonte no template"}
+        excluida = self.excluida(item)
+        if excluida:
+            return {"radares": [], "metodo": None, "motivo_sem_radar": excluida, "excluida_da_sugestao": True}
         generica = self.generica(fonte, permitidos)
         if len(permitidos) == 1 and not generica:
             slug = permitidos[0]
@@ -250,6 +278,11 @@ def motivo(sugestao, modelo, nomes):
             f"[Sugestão sem IA: {radares}, por {ROTULOS[sugestao['metodo']]}] {inicio} "
             f"O Radar foi sugerido por regra fixa, não pela IA: {sugestao['evidencia']}. "
             "Confirme, troque o Radar ou rejeite."
+        )
+    if sugestao.get("excluida_da_sugestao"):
+        return (
+            f"[Não classificada pela IA] {inicio} Não recebe sugestão de Radar sem IA: "
+            f"{sugestao['motivo_sem_radar']}. Escolha o Radar ou rejeite."
         )
     return (
         f"[Não classificada pela IA] {inicio} Nenhuma regra sem IA sugeriu Radar com segurança "

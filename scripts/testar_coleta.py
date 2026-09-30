@@ -1108,6 +1108,26 @@ def teste_todo_radar_do_filtro1_tem_secao_no_template():
     assert faltam == {}, faltam
 
 
+def teste_ato_interno_do_bc_vai_sem_radar_com_o_motivo():
+    import datetime
+    import sugestao_sem_ia as ss
+    fontes = gb.fontes_execucao(datetime.datetime(2026, 9, 29), datetime.datetime(2026, 9, 30), datetime.date(2026, 9, 30))
+    bc = next(f for f in fontes if f["fonte"] == "Banco Central | Normas")
+    s = _sugestor(fontes={"Banco Central | Normas": dict(bc, radar_predominante={"radar": "a", "base": "74 de 74"})})
+    interno = {"fonte": "Banco Central | Normas", "titulo": "Ato de Diretor N° 705", "resumo": "Designa servidores para compor a Comissão que procederá a inquérito na Sefer."}
+    r = s.sugerir(interno)
+    assert r["radares"] == [] and r["excluida_da_sugestao"] and "ato interno do Banco Central" in r["motivo_sem_radar"], r
+    assert "Não recebe sugestão de Radar sem IA: ato interno" in ss.motivo(r, "m", {})
+    # O tipo sozinho nao basta: liquidacao extrajudicial e de instituicao de fora.
+    r = s.sugerir({"fonte": "Banco Central | Normas", "titulo": "Ato do Presidente n° 1.386", "resumo": "Decreta a liquidação extrajudicial da Sefer DTVM."})
+    assert "excluida_da_sugestao" not in r and r["radares"] == ["a"], r
+    # Nem o assunto sozinho: comunicado sobre administradores de instituicoes segue o perfil.
+    r = s.sugerir({"fonte": "Banco Central | Normas", "titulo": "Comunicado N° 46.040", "resumo": "Divulga nome aprovado de pessoas nomeadas para cargos de órgãos estatutários."})
+    assert r["radares"] == ["a"] and r["metodo"] == "perfil_da_fonte", r
+    resumo = ss.distribuir([dict(interno, boletins=[], nao_classificada_pela_ia=True)], s, "m", {})
+    assert resumo["sem_radar"] == 1 and list(resumo["motivos_sem_radar"]) == ["ato interno do Banco Central (comissão de inquérito, pessoal ou organização interna)"]
+
+
 TESTES = [
     teste_busca_sobrevive_em_pagina_grande,
     teste_sem_busca_o_comportamento_nao_muda,
@@ -1163,6 +1183,7 @@ TESTES = [
     teste_distribuir_marca_a_sugestao_sem_tocar_nos_boletins,
     teste_distribuicao_so_le_os_templates_quando_ha_o_que_distribuir,
     teste_todo_radar_do_filtro1_tem_secao_no_template,
+    teste_ato_interno_do_bc_vai_sem_radar_com_o_motivo,
 ]
 
 

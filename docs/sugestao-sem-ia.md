@@ -50,7 +50,17 @@ Também foram consideradas e deixadas de lado:
 
 ### Regras adotadas (`scripts/sugestao_sem_ia.py`)
 
-A primeira regra que decide vale:
+Antes de tudo, a definição da fonte pode tirar publicações da sugestão
+(`sem_sugestao`). É o caso dos **atos internos do Banco Central**: Ato de
+Diretor ou Ato do Presidente cujo título ou descrição fala de inquérito,
+sindicância, servidores, lotação, função comissionada, substituição, férias,
+delegação de competência, regimento ou estrutura organizacional. Vão sem
+Radar, com o motivo "ato interno do Banco Central (comissão de inquérito,
+pessoal ou organização interna)". O tipo sozinho não basta: o Ato do
+Presidente que decreta a liquidação extrajudicial de uma distribuidora não é
+interno e segue as regras abaixo.
+
+Depois, a primeira regra que decide vale:
 
 1. **Matriz**: se o Filtro 1 liga a fonte a um Radar só (Receita →
    Tributário, INPI → Propriedade Intelectual, B3 → Mercado de Capitais), é
@@ -127,8 +137,8 @@ Reproduzido do dossier guardado e da resposta guardada da IA:
 
 | | Itens | Com Radar sugerido | Matriz | Palavras-chave | Perfil | Sem Radar |
 |---|---|---|---|---|---|---|
-| Como foi (sem filtro de órgãos) | 38 | 34 | 23 | 1 | 10 | 4 |
-| Com o filtro de órgãos da Receita | 19 | 15 | 4 | 1 | 10 | 4 |
+| Como foi (sem filtro de órgãos) | 38 | 33 | 23 | 1 | 9 | 5 |
+| Com o filtro de órgãos da Receita | 19 | 14 | 4 | 1 | 9 | 5 |
 
 Exemplos:
 
@@ -139,7 +149,7 @@ Exemplos:
 | BC Comunicado nº 46.038 (operações compromissadas, módulo Oferta Pública) | Mercado de Capitais | palavra-chave "oferta pública" |
 | BC Comunicado nº 46.039 (TBF, Redutor R e TR de 29/09) | Mercado de Capitais | perfil da fonte (74 de 74) |
 | BC Comunicado nº 46.037 (cancelamento de autorização de administradora de consórcios) | Mercado de Capitais | perfil da fonte |
-| BC Ato de Diretor nº 705 (designa comissão de inquérito) | Mercado de Capitais | perfil da fonte; **sugestão ruim**: é ato interno |
+| BC Ato de Diretor nº 705 (designa servidores para comissão de inquérito) | sem Radar | ato interno do Banco Central |
 | CCEE: "Últimos dias para inscrição no curso de Formação de Preços" | sem Radar | só um termo solto ("energia") |
 | CCEE: "Confira a apresentação e o vídeo do Encontro do PLD" | sem Radar | nenhuma palavra-chave |
 | Fazenda: "Governo Central registra em agosto déficit primário" | sem Radar | fonte genérica sem palavra-chave |
@@ -147,9 +157,9 @@ Exemplos:
 
 Limites conhecidos:
 
-- O perfil da fonte sugere o Radar predominante mesmo para o ato irrelevante
-  da fonte (o Ato de Diretor do BC acima). A matriz faz o mesmo com aviso
-  operacional ("Serviços do INPI estão temporariamente indisponíveis"). Nos
+- O perfil da fonte sugere o Radar predominante mesmo para publicação
+  irrelevante da fonte que não esteja em `sem_sugestao`. A matriz faz o mesmo
+  com aviso operacional ("Serviços do INPI estão temporariamente indisponíveis"). Nos
   148 itens de teste foram 3 sugestões em itens que ficaram sem Radar (os
   avisos de sistema fora do ar do INPI e da ANP e uma notícia de projeto de
   lei do Kollemata). Como o item chega pendente, a pessoa rejeita.

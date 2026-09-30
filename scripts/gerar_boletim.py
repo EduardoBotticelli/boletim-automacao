@@ -249,7 +249,15 @@ def fontes_execucao(inicio, agora, hoje):
         # O servidor do Planalto derruba a conexao de coleta direta: fica no Firecrawl.
         {"fonte": "Planalto | Resenha Diaria", "categoria": "Legislação Federal", "url": f"http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/{meses[hoje.month-1]}-resenha-diaria", "ativo": True, "coleta": "firecrawl", "generica": True},
         {"fonte": "Banco Central | Normas", "categoria": "Financeiro e Mercado de Capitais", "url": f"https://www.bcb.gov.br/estabilidadefinanceira/buscanormas?dataInicioBusca={di}&dataFimBusca={df}&tipoDocumento=Todos", "ativo": True, "coleta": "api_bcb",
-         "radar_predominante": {"radar": "mercado-capitais-fundos", "base": "74 de 74 publicações classificadas de 13/07 a 29/09/2026"}},
+         "radar_predominante": {"radar": "mercado-capitais-fundos", "base": "74 de 74 publicações classificadas de 13/07 a 29/09/2026"},
+         # Atos internos (inquerito, pessoal, organizacao) nao recebem Radar sugerido sem IA.
+         "sem_sugestao": {
+             "motivo": "ato interno do Banco Central (comissão de inquérito, pessoal ou organização interna)",
+             "tipos": ["Ato de Diretor", "Ato do Presidente"],
+             "assuntos": [r"inquerito", r"sindicancia", r"processo administrativo disciplinar", r"servidor(a|es|as)?",
+                          r"lotacao", r"funcao comissionada", r"substitut[oa]s?", r"ferias", r"delega(cao de)? competencia",
+                          r"regimento interno", r"estrutura organizacional", r"componente organizacional", r"departamento"],
+         }},
         # A propria busca da CCEE ja filtra a janela; os resultados sao os links "/-/".
         {"fonte": "CCEE | Noticias", "categoria": "Energia e Recursos", "url": f"https://www.ccee.org.br/busca-ccee?q=&dtIni={di}&dtFim={df}&structure=ccee-noticias&ordenacao=Mais%20recentes", "ativo": True, "coleta": "html", "padrao_link": "/-/"},
     ]
