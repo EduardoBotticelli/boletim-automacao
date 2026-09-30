@@ -1,5 +1,9 @@
 # Coleta dentro de 1.000 créditos por mês
 
+> **Estado:** aprovado e implementado em `scripts/coleta_direta.py` e
+> `scripts/gerar_boletim.py`. A seção "Implementação" no fim registra o que
+> mudou em relação à proposta e o resultado da primeira execução.
+
 Restrição fixa do projeto: plano gratuito do Firecrawl, 1.000 créditos por mês,
 uma execução por dia útil (cerca de 22 por mês), ou seja, **no máximo ~45
 créditos por execução**, com folga para repetir uma execução que falhe.
@@ -162,3 +166,67 @@ mil tokens de entrada. Isso também afasta o 429.
 - **Passo "Testar DOU" do workflow**: roda por padrão em toda coleta, gasta 1
   crédito e uma chamada ao Gemini com 60 mil caracteres, sempre para a data
   fixa de 24/08. Sugiro desligar por padrão (22 créditos por mês).
+
+---
+
+## Implementação
+
+O que foi aprovado e como ficou.
+
+- **Método por fonte** no `fontes.json` (`"coleta"`): `html`, `volto`,
+  `api_bcb`, `receita`, `b3`, `anp_ano`, `wordpress` ou `firecrawl`. As
+  fontes montadas por data (Planalto, Banco Central, CCEE) declaram o método em
+  `fontes_execucao()`.
+- **Queda para o Firecrawl**: qualquer falha do método gratuito (erro de rede,
+  HTTP de erro, bloqueio, `robots.txt`, resposta inesperada) faz a fonte ser
+  coletada pelo Firecrawl naquele dia. O motivo vai para o log e vira aviso no
+  workflow.
+- **Zero suspeito**: fonte que lista zero publicações quando na execução
+  anterior listava alguma, ou sem histórico, conta como falha e cai para o
+  Firecrawl. Fonte que já listava zero pode continuar em zero. O histórico é o
+  `output/dossier/indice.json` da execução anterior.
+- **Log por fonte** (`fontes_processadas` no `log_execucao.json`): `metodo`,
+  `metodo_usado`, `creditos_firecrawl`, `queda_firecrawl`, `motivo_queda`,
+  `publicacoes_listadas`, `publicacoes_na_janela`, `publicacoes_enviadas`.
+  No nível da execução: `creditos_firecrawl_estimados`,
+  `fontes_com_queda_para_firecrawl` e `fontes_reativadas_com_erro`.
+- **Busca complementar** só nas fontes com `"busca": true`: **Agricultura e
+  CVM**, as duas em que a listagem comprovadamente deixou publicação de fora.
+  As outras sete da proposta ficaram sem busca; basta acrescentar
+  `"busca": true` se o dossier mostrar necessidade. A busca volta 10
+  resultados (2 créditos).
+- **Dossier ao Gemini**: fonte coletada sem Firecrawl manda só o que cai na
+  janela e o que não tem data (nunca descartado). Fonte sem nada na janela não
+  vai ao Gemini e é registrada como "sem publicação na janela".
+- **Respeito ao site**: User-Agent `BoletimRadarBot/1.0` (a variável
+  `COLETA_CONTATO` acrescenta um contato), `robots.txt` lido por host, 3 s entre
+  requisições ao mesmo host, cookies de sessão como um navegador, nenhuma
+  tentativa de contornar bloqueio.
+- **Teste do DOU** (`executar_teste_dou`) desligado por padrão.
+
+### Suspensões
+
+- **COAF**: "Conteúdo Restrito" é a mesma página que CGU e MMA exibem no
+  defeso eleitoral. Suspenso com motivo "Defeso eleitoral" e `reativar_em`
+  2026-10-26, como as demais. Se voltar com erro depois dessa data, a execução
+  registra em `fontes_reativadas_com_erro` e gera aviso no workflow.
+- **MME Consultas Públicas**: suspenso sem data de retomada. Ver pendência
+  abaixo.
+
+### Pendência: MME Consultas Públicas
+
+Verificação feita nas execuções guardadas, como pedido:
+
+| | Resultado |
+|---|---|
+| Execuções guardadas no histórico do git | 24, de 26/06 a 29/09 |
+| Itens produzidos por MME \| Consultas Públicas | **zero em todas** as execuções em que foi coletado (6 com log detalhado, 25/08 a 29/09) |
+| Anúncios de consulta pública em MME \| Notícias nessas execuções | **6**: Mineração Artesanal (10/07), POTEE 2026 (14/07), ERCAP, comercialização e armazenamento, Taxa de Fiscalização (as três em 25/08), concessões de hidrelétricas (23/09) |
+| Na listagem direta de MME \| Notícias em 30/09 | também o da RenovaBio (15/09), que caiu num dia sem execução |
+
+As consultas públicas do MME **aparecem** em MME Notícias, e essa fonte
+continua coletada. **O que não dá para confirmar** é se toda consulta aberta no
+portal `consultas-publicas.mme.gov.br` é anunciada em notícia: o portal é
+montado por JavaScript e não expõe uma listagem legível. Para fechar a
+pendência, é preciso encontrar a API que alimenta o portal, ou comparar à mão,
+por algumas semanas, o que o portal lista com o que MME Notícias anuncia.

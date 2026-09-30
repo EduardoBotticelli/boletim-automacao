@@ -15,6 +15,7 @@ on:
           - alternativas
           - reprocessar
           - sondar
+          - demo_dou
       fontes_cobertura:
         description: Fontes a conferir na cobertura (vazio = todas)
         required: false
@@ -109,6 +110,28 @@ jobs:
           git pull --rebase origin "${{ github.ref_name }}"
           git push origin "HEAD:${{ github.ref_name }}"
 
+      - name: Demonstracao do DOU em quatro modelos
+        # So demonstracao: grava em output/demo_dou e nao commita nada. Baixa o
+        # DOU pelo INLABS, o servico oficial da Imprensa Nacional, porque o
+        # in.gov.br derruba a conexao vinda do runner. Nao recebe a chave do
+        # Firecrawl nem a do Gemini.
+        if: ${{ inputs.etapa == 'demo_dou' }}
+        env:
+          INLABS_EMAIL: ${{ secrets.INLABS_EMAIL }}
+          INLABS_SENHA: ${{ secrets.INLABS_SENHA }}
+        run: |
+          pip install pypdf
+          python scripts/demo_dou.py --autoteste
+          python scripts/demo_dou.py --origem inlabs --data "${{ inputs.dou_data }}"
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() && inputs.etapa == 'demo_dou' }}
+        with:
+          name: demo-dou-${{ github.run_number }}
+          retention-days: 14
+          if-no-files-found: warn
+          path: output/demo_dou/
+
       - name: Mostrar o detalhe da cobertura
         if: ${{ always() && inputs.etapa != 'coleta' }}
         run: |
@@ -136,7 +159,8 @@ jobs:
           git add output/dossier output/log_execucao.json
           if git diff --staged --quiet; then exit 0; fi
           git commit -m "Guarda a coleta de $(date +'%Y-%m-%d')"
-          git push
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
       - name: Reprocessar o dossier guardado
         # Sem FIRECRAWL_API_KEY: o reprocessamento nao tem como gastar credito.
         if: ${{ inputs.etapa == 'reprocessar' }}
