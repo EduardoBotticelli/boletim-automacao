@@ -512,11 +512,13 @@ def teste_resumo_da_cascata_aponta_a_queda():
 # ---------------------------------------------------------------------------
 
 ANP = "https://www.gov.br/anp/pt-br"
+# Coletadas pelo Firecrawl ("coleta" ausente) e com "busca": true, que e o que
+# faz a busca complementar rodar.
 FONTES_ANP = [
-    {"fonte": "ANP | Notícias", "categoria": "Energia", "url": f"{ANP}/canais_atendimento/imprensa/noticias-comunicados", "pagina_inteira": True},
-    {"fonte": "ANP | Consultas e Audiências Públicas", "categoria": "Energia", "url": f"{ANP}/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica", "tipo_coleta": "lista_estruturada"},
-    {"fonte": "ANP | Consultas Prévias", "categoria": "Energia", "url": f"{ANP}/assuntos/consultas-e-audiencias-publicas/consulta-previa", "tipo_coleta": "indice_documentos"},
-    {"fonte": "ANP | Pautas e Atas", "categoria": "Energia", "url": f"{ANP}/composicao/diretoria-colegiada/pautas", "tipo_coleta": "indice_documentos"},
+    {"fonte": "ANP | Notícias", "categoria": "Energia", "url": f"{ANP}/canais_atendimento/imprensa/noticias-comunicados", "pagina_inteira": True, "busca": True},
+    {"fonte": "ANP | Consultas e Audiências Públicas", "categoria": "Energia", "url": f"{ANP}/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica", "busca": True},
+    {"fonte": "ANP | Consultas Prévias", "categoria": "Energia", "url": f"{ANP}/assuntos/consultas-e-audiencias-publicas/consulta-previa", "busca": True},
+    {"fonte": "ANP | Pautas e Atas", "categoria": "Energia", "url": f"{ANP}/composicao/diretoria-colegiada/pautas", "busca": True},
 ]
 ANEEL = {"fonte": "ANEEL | Últimas Notícias", "categoria": "Energia", "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias"}
 ACHADOS_ANP = [

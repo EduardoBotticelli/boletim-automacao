@@ -23,6 +23,8 @@ from firecrawl import Firecrawl
 from google import genai
 from google.genai import types
 
+import coleta_direta
+
 BASE = Path(__file__).resolve().parent.parent
 OUT = BASE / "output"
 FONTES = BASE / "fontes.json"
@@ -79,8 +81,9 @@ MAPA = {
 }
 MAX_CHARS = 30000
 MIN_CHARS = 500
-LIMIAR_DINAMICO = 5000
-BUSCA_LIMITE = 30
+# Resultados por busca complementar. O Firecrawl cobra 2 creditos a cada 10;
+# com 30 cada busca custava 6.
+BUSCA_LIMITE = 10
 # Teto do bloco da busca complementar dentro de MAX_CHARS. Garante que a
 # pagina continue tendo espaco mesmo quando a busca traz muitos resultados.
 LIMITE_BUSCA_CHARS = MAX_CHARS * 2 // 5
@@ -242,20 +245,13 @@ def fontes_execucao(inicio, agora, hoje):
     df = agora.strftime("%d/%m/%Y").replace("/", "%2F")
     meses = ["janeiro", "fevereiro", "marco", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
     dinamicas = [
-        {"fonte": "Planalto | Resenha Diaria", "categoria": "Legislação Federal", "url": f"http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/{meses[hoje.month-1]}-resenha-diaria", "ativo": True},
-        {"fonte": "Banco Central | Normas", "categoria": "Financeiro e Mercado de Capitais", "url": f"https://www.bcb.gov.br/estabilidadefinanceira/buscanormas?dataInicioBusca={di}&dataFimBusca={df}&tipoDocumento=Todos", "ativo": True},
-        {"fonte": "CCEE | Noticias", "categoria": "Energia e Recursos", "url": f"https://www.ccee.org.br/busca-ccee?q=&dtIni={di}&dtFim={df}&structure=ccee-noticias&ordenacao=Mais%20recentes", "ativo": True},
+        # O servidor do Planalto derruba a conexao de coleta direta: fica no Firecrawl.
+        {"fonte": "Planalto | Resenha Diaria", "categoria": "Legislação Federal", "url": f"http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/{meses[hoje.month-1]}-resenha-diaria", "ativo": True, "coleta": "firecrawl"},
+        {"fonte": "Banco Central | Normas", "categoria": "Financeiro e Mercado de Capitais", "url": f"https://www.bcb.gov.br/estabilidadefinanceira/buscanormas?dataInicioBusca={di}&dataFimBusca={df}&tipoDocumento=Todos", "ativo": True, "coleta": "api_bcb"},
+        # A propria busca da CCEE ja filtra a janela; os resultados sao os links "/-/".
+        {"fonte": "CCEE | Noticias", "categoria": "Energia e Recursos", "url": f"https://www.ccee.org.br/busca-ccee?q=&dtIni={di}&dtFim={df}&structure=ccee-noticias&ordenacao=Mais%20recentes", "ativo": True, "coleta": "html", "padrao_link": "/-/"},
     ]
     return dinamicas + fontes
-
-
-def precisa_busca(fonte, bruto):
-    """A regra de sempre: pagina pequena, pagina grande ou tipo que pede busca."""
-    return (
-        len(bruto) < LIMIAR_DINAMICO
-        or len(bruto) > MAX_CHARS
-        or fonte.get("tipo_coleta") in {"lista_estruturada", "indice_documentos"}
-    )
 
 
 def _caminho(url):
@@ -288,48 +284,85 @@ def repartir_busca(achados, fontes):
     return partes
 
 
-def coletar(fc, ativas, inicio, hoje, pausa=PAUSA_FIRECRAWL):
+def coletar(fc, ativas, inicio, hoje, pausa=PAUSA_FIRECRAWL, cliente=None, historico=None, coletor=None):
     """
-    Coleta as paginas e faz a busca complementar, uma vez por escopo.
+    Coleta as fontes, cada uma pelo metodo que o fontes.json declara.
 
-    Primeiro coleta todas as paginas e decide, com a regra de sempre, quais
-    precisam de busca. Depois faz uma busca por escopo e reparte o resultado
-    entre as fontes daquele escopo. As quatro fontes da ANP dividem
-    www.gov.br/anp/pt-br: pagavam quatro buscas identicas e mandavam o mesmo
-    bloco quatro vezes ao Gemini. Agora pagam uma, e cada publicacao entra
-    uma vez no dossier.
+    Fonte com coleta gratuita (download direto ou API, ver coleta_direta.py)
+    traz as publicacoes ja separadas, com titulo, data, link e descricao. Se o
+    metodo falhar, a fonte cai para o Firecrawl naquele dia e o motivo fica
+    registrado. Conta como falha tambem a fonte que listou zero publicacoes
+    quando na execucao anterior listava alguma ('historico'): leitor quebrado
+    costuma aparecer assim, com HTTP 200 e nada dentro.
 
-    O que a busca acha nunca some sem registro. O resultado vai so para
-    fontes cuja pagina veio de pe; se nenhuma do escopo veio, a busca nem e
-    feita, e o motivo fica em 'buscas'.
+    A busca complementar so roda nas fontes com "busca": true, e uma vez por
+    escopo, repartida entre as fontes que o dividem. O que a busca acha nunca
+    vai para fonte com pagina de erro; se nenhuma do escopo veio de pe, a
+    busca nem e feita, e o motivo fica em 'buscas'.
 
-    Devolve (material, buscas). 'material' e uma entrada por fonte, com a
-    pagina inteira e o que a busca achou para ela: e o que montar_dossier
-    transforma no dossier do Gemini e o que salvar_dossier guarda em disco.
+    Devolve (material, buscas). 'material' e uma entrada por fonte: e o que
+    montar_dossier transforma no dossier do Gemini e o que salvar_dossier
+    guarda em disco.
     """
+    cliente = cliente or coleta_direta.novo_cliente()
+    historico = historico or {}
+    coletor = coletor or coleta_direta.coletar
+    ultimo_firecrawl = [None]
+
+    def esperar_firecrawl():
+        if ultimo_firecrawl[0] is not None:
+            falta = pausa - (time.monotonic() - ultimo_firecrawl[0])
+            if falta > 0:
+                time.sleep(falta)
+        ultimo_firecrawl[0] = time.monotonic()
+
     material = []
     for indice, fonte in enumerate(ativas, 1):
         nome = fonte["fonte"]
-        print(f"[{indice}/{len(ativas)}] {nome}")
+        metodo = fonte.get("coleta", "firecrawl")
+        print(f"[{indice}/{len(ativas)}] {nome} ({metodo})")
         registro = {
             "fonte": nome, "categoria": fonte["categoria"], "url": fonte["url"],
             "tipo_coleta": fonte.get("tipo_coleta", "pagina"),
             "pagina_inteira": bool(fonte.get("pagina_inteira")),
+            "metodo": metodo, "metodo_usado": "", "queda_firecrawl": False, "motivo_queda": "",
+            "creditos_firecrawl": 0, "requisicoes_diretas": 0, "estruturado": False,
+            "publicacoes": [], "publicacoes_listadas": None,
             "status": "ok", "erro": "", "pagina": "", "chars_pagina": 0,
-            "busca_pedida": False, "busca_executada": False, "descobertas": [],
+            "busca_pedida": bool(fonte.get("busca")), "busca_executada": False, "descobertas": [],
         }
-        try:
-            resultado = scrape_retry(fc, fonte["url"], not fonte.get("pagina_inteira"))
-            bruto = resultado.markdown or ""
-            registro.update(pagina=bruto, chars_pagina=len(bruto), busca_pedida=precisa_busca(fonte, bruto))
-            marcador = pagina_erro(bruto[:MAX_CHARS])
-            if marcador:
-                registro.update(status="erro_conteudo_origem", erro=f"A origem retornou página de erro/manutenção ({marcador}).")
-        except Exception as erro:
-            registro.update(status="erro", erro=erro_resumo(erro, 300))
+        if metodo != "firecrawl":
+            try:
+                resultado = coletor(cliente, fonte, inicio, hoje)
+                registro["requisicoes_diretas"] = resultado.get("requisicoes", 0)
+                anterior = historico.get(nome)
+                if resultado["listadas"] == 0 and anterior != 0:
+                    raise coleta_direta.FalhaColeta(
+                        "zero publicações listadas" + (f" (na execução anterior: {anterior})" if anterior else " e sem histórico da fonte")
+                    )
+                registro.update(
+                    estruturado=True, metodo_usado=metodo, publicacoes=resultado["publicacoes"],
+                    publicacoes_listadas=resultado["listadas"], pagina=resultado["texto"],
+                    chars_pagina=len(resultado["texto"]),
+                )
+            except Exception as erro:
+                motivo = erro_resumo(erro, 240)
+                registro.update(queda_firecrawl=True, motivo_queda=motivo)
+                print(f"::warning title=Queda para o Firecrawl::{nome}: {motivo}")
+        if not registro["estruturado"]:
+            registro["metodo_usado"] = "firecrawl"
+            registro["creditos_firecrawl"] = 1
+            esperar_firecrawl()
+            try:
+                resultado = scrape_retry(fc, fonte["url"], not fonte.get("pagina_inteira"))
+                bruto = resultado.markdown or ""
+                registro.update(pagina=bruto, chars_pagina=len(bruto))
+                marcador = pagina_erro(bruto[:MAX_CHARS])
+                if marcador:
+                    registro.update(status="erro_conteudo_origem", erro=f"A origem retornou página de erro/manutenção ({marcador}).")
+            except Exception as erro:
+                registro.update(status="erro", erro=erro_resumo(erro, 300))
         material.append(registro)
-        if indice < len(ativas):
-            time.sleep(pausa)
 
     grupos = {}
     for registro in material:
@@ -348,7 +381,8 @@ def coletar(fc, ativas, inicio, hoje, pausa=PAUSA_FIRECRAWL):
         if not de_pe:
             busca["erro"] = "Busca não executada: a página de todas as fontes deste escopo falhou."
             continue
-        time.sleep(pausa)
+        esperar_firecrawl()
+        de_pe[0]["creditos_firecrawl"] += CREDITOS_POR_BUSCA
         try:
             achados = busca_complementar(fc, alvo, inicio, hoje, excluir=[r["url"] for r in grupo])
         except Exception as erro:
@@ -361,6 +395,15 @@ def coletar(fc, ativas, inicio, hoje, pausa=PAUSA_FIRECRAWL):
         if len(grupo) > 1:
             print(f"Busca em {alvo}: {len(achados)} resultado(s) repartido(s) entre {len(grupo)} fontes.")
     return material, buscas
+
+
+def texto_estruturado(publicacoes):
+    """As publicacoes de uma fonte coletada sem Firecrawl, no formato do dossier."""
+    linhas = ["## Publicações coletadas direto da fonte (título, data, link e descrição informados por ela)"]
+    for p in publicacoes:
+        data = f"{p['data']} {p.get('hora', '')}".strip() if p.get("data") else "não informada na listagem"
+        linhas.append(f"- Título: {p['titulo']}\n  Data: {data}\n  URL: {p['url']}\n  Descrição: {p.get('descricao', '')}")
+    return "\n".join(linhas)
 
 
 def montar_dossier(material):
@@ -377,22 +420,38 @@ def montar_dossier(material):
         nome = registro["fonte"]
         base = {"fonte": nome, "categoria": registro["categoria"], "url": registro["url"]}
         descobertas = registro.get("descobertas") or []
+        origem = {k: registro.get(k) for k in ("metodo", "metodo_usado", "queda_firecrawl", "motivo_queda", "creditos_firecrawl", "requisicoes_diretas") if k in registro}
         if registro["status"] == "erro":
             dossier.append(dict(base, conteudo="", erro_tecnico=registro["erro"]))
-            processadas.append({"fonte": nome, "status": "erro", "erro": registro["erro"]})
+            processadas.append(dict({"fonte": nome, "status": "erro", "erro": registro["erro"]}, **origem))
             continue
         if registro["status"] == "erro_conteudo_origem":
             dossier.append(dict(base, conteudo="", erro_tecnico=registro["erro"]))
-            processadas.append({"fonte": nome, "status": "erro_conteudo_origem", "tamanho_chars": registro.get("chars_pagina", 0), "erro": registro["erro"]})
+            processadas.append(dict({"fonte": nome, "status": "erro_conteudo_origem", "tamanho_chars": registro.get("chars_pagina", 0), "erro": registro["erro"]}, **origem))
+            continue
+        if registro.get("estruturado"):
+            publicacoes = registro.get("publicacoes") or []
+            enviar = [p for p in publicacoes if p.get("enviar")]
+            contagem = {"publicacoes_listadas": registro.get("publicacoes_listadas"), "publicacoes_na_janela": sum(1 for p in publicacoes if p.get("na_janela")), "publicacoes_enviadas": len(enviar)}
+            if not enviar and not descobertas:
+                # Nada na janela: a fonte nao vai ao Gemini, e o registro diz por que.
+                processadas.append(dict({"fonte": nome, "status": "ok", "sem_publicacao_na_janela": True, "tamanho_chars": 0, "publicacoes_localizadas": 0, "busca_complementar_executada": registro.get("busca_executada", False)}, **origem, **contagem))
+                continue
+            conteudo, chars_busca, truncado = montar_conteudo(texto_estruturado(enviar), descobertas)
+            dossier.append(dict(base, tipo_coleta=registro.get("tipo_coleta", "pagina"), publicacoes_localizadas=len(enviar) + len(descobertas), conteudo=conteudo))
+            processada = dict({"fonte": nome, "status": "ok", "tamanho_chars": len(conteudo), "publicacoes_localizadas": len(enviar) + len(descobertas), "busca_complementar_executada": registro.get("busca_executada", False), "chars_busca_complementar": chars_busca, "conteudo_truncado": truncado}, **origem, **contagem)
+            if registro.get("escopo_busca"):
+                processada["escopo_busca"] = registro["escopo_busca"]
+            processadas.append(processada)
             continue
         conteudo, chars_busca, truncado = montar_conteudo(registro.get("pagina", ""), descobertas)
         if len(conteudo) < MIN_CHARS and not descobertas:
             motivo = f"Conteúdo insuficiente ({len(conteudo)} caracteres)."
             dossier.append(dict(base, conteudo="", erro_tecnico=motivo))
-            processadas.append({"fonte": nome, "status": "erro_tecnico", "tamanho_chars": len(conteudo), "erro": motivo})
+            processadas.append(dict({"fonte": nome, "status": "erro_tecnico", "tamanho_chars": len(conteudo), "erro": motivo}, **origem))
             continue
         dossier.append(dict(base, tipo_coleta=registro.get("tipo_coleta", "pagina"), publicacoes_localizadas=len(descobertas), conteudo=conteudo))
-        processada = {"fonte": nome, "status": "ok", "tamanho_chars": len(conteudo), "publicacoes_localizadas": len(descobertas), "busca_complementar_executada": registro.get("busca_executada", False), "chars_busca_complementar": chars_busca, "conteudo_truncado": truncado, "pagina_inteira": registro.get("pagina_inteira", False)}
+        processada = {**origem, "fonte": nome, "status": "ok", "tamanho_chars": len(conteudo), "publicacoes_localizadas": len(descobertas), "busca_complementar_executada": registro.get("busca_executada", False), "chars_busca_complementar": chars_busca, "conteudo_truncado": truncado, "pagina_inteira": registro.get("pagina_inteira", False)}
         if registro.get("escopo_busca"):
             processada["escopo_busca"] = registro["escopo_busca"]
         if registro.get("busca_compartilhada_com"):
@@ -404,12 +463,25 @@ def montar_dossier(material):
 def creditos_estimados(material, buscas):
     """Estimativa conservadora: toda coleta e toda busca tentadas contam."""
     tentadas = sum(1 for b in buscas if b["executada"] or b["erro"].startswith("Busca complementar falhou"))
+    coletas = sum(1 for m in material if m.get("metodo_usado", "firecrawl") == "firecrawl")
     return {
-        "coletas": len(material),
+        "coletas": coletas,
+        "coletas_sem_firecrawl": len(material) - coletas,
         "buscas": tentadas,
         "creditos_por_busca": CREDITOS_POR_BUSCA,
-        "total": len(material) + tentadas * CREDITOS_POR_BUSCA,
+        "total": coletas + tentadas * CREDITOS_POR_BUSCA,
+        "quedas_para_firecrawl": sum(1 for m in material if m.get("queda_firecrawl")),
     }
+
+
+def historico_de_listagem(pasta=None):
+    """Quantas publicacoes cada fonte listou na execucao anterior."""
+    indice_path = (pasta or DOSSIER) / "indice.json"
+    try:
+        indice = json.loads(indice_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return {f["fonte"]: f.get("publicacoes_listadas") for f in indice.get("fontes") or [] if f.get("fonte")}
 
 
 def nome_de_arquivo(fonte):
@@ -670,6 +742,23 @@ def resgatar_por_escassez(itens, piso):
     return resgates
 
 
+def fontes_reativadas_com_erro(ativas, processadas, hoje):
+    """
+    Fonte que estava suspensa com data de retomada, ja voltou e continua com
+    erro. E o caso do COAF, suspenso no defeso eleitoral: se depois de
+    26/10 a pagina continuar restrita, o log precisa dizer.
+    """
+    por_nome = {x["fonte"]: x for x in processadas}
+    avisos = []
+    for fonte in ativas:
+        if not (fonte.get("suspenso") and fonte.get("reativar_em")):
+            continue
+        processada = por_nome.get(fonte["fonte"]) or {}
+        if processada.get("status", "ok") != "ok":
+            avisos.append({"fonte": fonte["fonte"], "reativada_em": fonte["reativar_em"], "motivo_da_suspensao": fonte.get("motivo_suspensao", ""), "erro": processada.get("erro", "")})
+    return avisos
+
+
 def argumentos():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--reprocessar", action="store_true", help="classifica de novo o dossier guardado em output/dossier, sem chamar o Firecrawl")
@@ -699,7 +788,9 @@ def main():
     inativas = [f for f in fontes if estado(f, hoje) == "inativa"]
     if not args.reprocessar:
         fc = Firecrawl(api_key=os.environ["FIRECRAWL_API_KEY"])
-        material, buscas = coletar(fc, ativas, inicio, hoje)
+        # Lido antes de coletar: a coleta de hoje sobrescreve o dossier.
+        historico = historico_de_listagem()
+        material, buscas = coletar(fc, ativas, inicio, hoje, historico=historico)
         creditos = creditos_estimados(material, buscas)
         salvar_dossier(material, {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": f"{inicio.isoformat()}T00:00", "fim": agora.strftime("%Y-%m-%dT%H:%M")}, "buscas_complementares": buscas, "creditos_firecrawl_estimados": creditos})
         print(f"Firecrawl: {creditos['coletas']} coleta(s) e {creditos['buscas']} busca(s), cerca de {creditos['total']} créditos.")
@@ -707,17 +798,25 @@ def main():
     inicio_iso = f"{inicio.isoformat()}T00:00"
     fim_iso = agora.strftime("%Y-%m-%dT%H:%M")
     contexto = f"\n\n## Contexto\ndata_execucao: {hoje.isoformat()}\njanela_inicio: {inicio_iso}\njanela_fim: {fim_iso}\n\n## Dossier\n"
-    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
-    try:
-        boletim, modelos, lotes_gemini, lotes_falhos = classificar(client, PROMPT.read_text(encoding="utf-8"), contexto, dossier)
-    finally:
-        client.close()
+    if dossier:
+        client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+        try:
+            boletim, modelos, lotes_gemini, lotes_falhos = classificar(client, PROMPT.read_text(encoding="utf-8"), contexto, dossier)
+        finally:
+            client.close()
+    else:
+        # Nenhuma fonte com publicacao na janela: nao ha o que mandar ao Gemini.
+        boletim, modelos, lotes_gemini, lotes_falhos = {"itens": [], "fontes_sem_publicacao_hoje": [], "fontes_sem_resultado": [], "fontes_com_erro_tecnico": []}, [], [], []
     modelo = ", ".join(dict.fromkeys(modelos))
     tentativas = [dict(t, lote=r["lote"]) for r in lotes_gemini for t in r["tentativas"]]
     cascata = resumo_cascata(lotes_gemini)
     if cascata["aviso"]:
         print("::warning title=Cascata do Gemini::" + cascata["aviso"])
-    log = {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": inicio_iso, "fim": fim_iso}, "creditos_firecrawl_estimados": creditos, "buscas_complementares": buscas, "cascata_gemini": cascata, "fontes_processadas": processadas, "fontes_suspensas": [{"fonte": f["fonte"], "motivo": f.get("motivo_suspensao", "Suspensão temporária"), "reativar_em": f.get("reativar_em", "")} for f in suspensas], "fontes_inativas": [{"fonte": f["fonte"]} for f in inativas], "tentativas_gemini": tentativas, "lotes_gemini": lotes_gemini}
+    quedas = [{"fonte": x["fonte"], "metodo": x.get("metodo"), "motivo": x.get("motivo_queda")} for x in processadas if x.get("queda_firecrawl")]
+    reativadas_com_erro = fontes_reativadas_com_erro(ativas, processadas, hoje)
+    for aviso in reativadas_com_erro:
+        print(f"::warning title=Fonte reativada com erro::{aviso['fonte']} voltou em {aviso['reativada_em']} e continua com erro: {aviso['erro']}")
+    log = {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": inicio_iso, "fim": fim_iso}, "creditos_firecrawl_estimados": creditos, "fontes_com_queda_para_firecrawl": quedas, "fontes_reativadas_com_erro": reativadas_com_erro, "buscas_complementares": buscas, "cascata_gemini": cascata, "fontes_processadas": processadas, "fontes_suspensas": [{"fonte": f["fonte"], "motivo": f.get("motivo_suspensao", "Suspensão temporária"), "reativar_em": f.get("reativar_em", "")} for f in suspensas], "fontes_inativas": [{"fonte": f["fonte"]} for f in inativas], "tentativas_gemini": tentativas, "lotes_gemini": lotes_gemini}
     if args.reprocessar:
         log["reprocessado_em"] = datetime.datetime.now(ZoneInfo("America/Sao_Paulo")).isoformat()
         log["origem_da_coleta"] = "dossier guardado em output/dossier"
@@ -725,6 +824,12 @@ def main():
         log["resultado"] = {"status": "falha_gemini", "boletim_anterior_preservado": BOLETIM.exists(), "dossier_guardado": (DOSSIER / "indice.json").exists()}
         salvar(LOG, log)
         raise SystemExit("Cascata Gemini falhou em todos os lotes; boletim anterior preservado.")
+    # Fonte coletada sem Firecrawl e sem nada na janela nao foi ao Gemini; o
+    # registro de "sem publicacao" sai daqui, e nao da resposta dele.
+    boletim.setdefault("fontes_sem_publicacao_hoje", [])
+    for x in processadas:
+        if x.get("sem_publicacao_na_janela"):
+            boletim["fontes_sem_publicacao_hoje"].append({"fonte": x["fonte"], "motivo": f"A fonte listou {x.get('publicacoes_listadas')} publicação(ões), nenhuma dentro da janela."})
     itens = []
     for item in boletim.get("itens", []):
         if not isinstance(item, dict):
