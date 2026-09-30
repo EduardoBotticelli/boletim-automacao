@@ -650,10 +650,10 @@ class Cliente:
             self.robots[host] = (leitor, info)
         return self.robots[host]
 
-    def baixar(self, url, aceitar=None):
-        return self._baixar(url, aceitar=aceitar, respeitar_robots=True)
+    def baixar(self, url, aceitar=None, extras=None):
+        return self._baixar(url, aceitar=aceitar, respeitar_robots=True, extras=extras)
 
-    def _baixar(self, url, aceitar=None, respeitar_robots=True):
+    def _baixar(self, url, aceitar=None, respeitar_robots=True, extras=None):
         host = urlparse(url).netloc.lower()
         registro = {"url": url, "status": None, "erro": "", "tipo": "", "bytes": 0, "ms": 0,
                     "url_final": url, "texto": "", "corpo": b"", "bloqueio": ""}
@@ -671,6 +671,7 @@ class Cliente:
             "Accept": aceitar or "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
             "Accept-Language": "pt-BR,pt;q=0.9",
             "Accept-Encoding": "gzip, deflate",
+            **(extras or {}),
         })
         comeco = time.monotonic()
         corpo, cabecalhos = b"", None
@@ -694,6 +695,7 @@ class Cliente:
         self.requisicoes += 1
         if cabecalhos is not None:
             registro["tipo"] = cabecalhos.get("Content-Type", "")
+            registro["tamanho_declarado"] = cabecalhos.get("Content-Range") or cabecalhos.get("Content-Length") or ""
             codificacao = (cabecalhos.get("Content-Encoding") or "").lower()
             try:
                 if "gzip" in codificacao:
@@ -1304,6 +1306,40 @@ def sondar_receita_html(cliente, inicio, fim, destino):
     Path(destino).write_text(json.dumps(resultado, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
+def sondar_dou(cliente, inicio, fim, destino):
+    """Onde o DOU pode ser baixado sem Firecrawl: PDF completo, pagina e leitura."""
+    resultado = []
+    dia = fim
+    while len(resultado) < 2 * 6 and dia >= fim - datetime.timedelta(days=5):
+        if dia.weekday() < 5:
+            a, m, d = dia.strftime("%Y"), dia.strftime("%m"), dia.strftime("%d")
+            testes = [
+                ("pdf_secao1_completo", f"https://download.in.gov.br/do/secao1/{a}/{a}_{m}_{d}/{a}_{m}_{d}_ASSINADO_do1.pdf", {"Range": "bytes=0-4095"}),
+                ("pdf_pagina_1", f"https://pesquisa.in.gov.br/imprensa/servlet/INPDFViewer?jornal=515&pagina=1&data={d}/{m}/{a}&captchafield=firstAccess", {"Range": "bytes=0-4095"}),
+                ("visualizador_pagina_1", f"https://pesquisa.in.gov.br/imprensa/jsp/visualiza/index.jsp?jornal=515&pagina=1&data={d}/{m}/{a}", None),
+                ("leitura_do_jornal", f"https://www.in.gov.br/leiturajornal?data={d}-{m}-{a}&secao=do1", None),
+                ("inlabs", "https://inlabs.in.gov.br/", None),
+            ]
+            for nome, url, extras in testes:
+                if nome == "inlabs" and any(r["teste"] == "inlabs" for r in resultado):
+                    continue
+                registro = cliente.baixar(url, aceitar="*/*", extras=extras)
+                item = {"dia": dia.isoformat(), "teste": nome, "url": url, "http": enxuto(registro),
+                        "comeco": (registro["corpo"] or b"")[:8].decode("latin-1", "replace")}
+                if nome == "leitura_do_jornal" and registro["status"] == 200:
+                    leitor = ler_html(registro["texto"], url)
+                    params = next((j for j in leitor.json_embutido if j["id"] == "params"), None)
+                    item["atos"] = len(json.loads(params["texto"]).get("jsonArray") or []) if params else 0
+                resultado.append(item)
+                h = item["http"]
+                print(f"{dia} {nome:<22} {h.get('status')} {h.get('tipo','')[:30]:<30} {h.get('tamanho_declarado','')} {item['comeco']!r} {h.get('erro','')[:60]} {item.get('atos','')}")
+            break
+        dia -= datetime.timedelta(days=1)
+    info = {h: i for h, (_, i) in cliente.robots.items()}
+    print("robots:", {h: (i.get("status"), i.get("regras")) for h, i in info.items()})
+    Path(destino).write_text(json.dumps({"testes": resultado, "robots": info}, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
 def executar_sondagem_final(cliente, inicio, fim, destino):
     resultado = {"volto": {}, "anp_por_ano": {}, "receita": None, "ons": None, "volto_config": None}
     for nome, (site, caminho) in VOLTO.items():
@@ -1449,6 +1485,7 @@ def main():
     parser.add_argument("--autoteste", action="store_true")
     parser.add_argument("--sondar", action="store_true", help="examina de onde vem o conteudo das paginas montadas por JavaScript")
     parser.add_argument("--sondar-final", action="store_true", help="testa a API do Volto, as paginas de ano da ANP, as linhas da Receita e o script do ONS")
+    parser.add_argument("--sondar-alvo", default="", help="final, receita ou dou")
     args = parser.parse_args()
 
     if args.autoteste:
@@ -1462,11 +1499,11 @@ def main():
 
     hoje = datetime.datetime.now(FUSO).date()
     fontes, inicio = fontes_da_execucao(hoje)
-    if args.sondar_final and os.getenv("SONDAR_SO_RECEITA"):
-        sondar_receita_html(cliente, inicio, hoje, args.json)
+    if args.sondar_alvo in ("receita", "dou"):
+        (sondar_receita_html if args.sondar_alvo == "receita" else sondar_dou)(cliente, inicio, hoje, args.json)
         print(f"{cliente.requisicoes} requisicoes, nenhuma ao Firecrawl.")
         return
-    if args.sondar_final:
+    if args.sondar_final or args.sondar_alvo == "final":
         executar_sondagem_final(cliente, inicio, hoje, args.json)
         print(f"{cliente.requisicoes} requisicoes, nenhuma ao Firecrawl.")
         return
