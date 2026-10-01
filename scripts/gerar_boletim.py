@@ -12,6 +12,8 @@ import json
 import math
 import os
 import re
+import sys
+import threading
 import time
 import unicodedata
 from collections import Counter
@@ -111,6 +113,19 @@ ESPERAS_SOBRECARGA = (30, 60, 120)
 # Teto da espera por sobrecarga, somada em todos os lotes da execucao. Passado
 # o teto, a cascata volta a descer sem esperar, para caber no workflow.
 TETO_ESPERA_SOBRECARGA = 15 * 60
+# Tempo-limite de cada chamada ao Gemini. Sem ele a biblioteca espera para
+# sempre: em 01/10 a primeira chamada ficou 58 minutos sem resposta e o
+# workflow foi cancelado aos 60, sem edicao. Nas execucoes normais cada lote
+# volta em menos de um minuto. Passado o limite, a cascata desce na hora.
+TEMPO_CHAMADA = 180
+# Prazo da etapa da IA, contado do primeiro lote, e prazo do script inteiro,
+# para sobrar tempo de gravar a edicao dentro dos 60 minutos do workflow
+# mesmo quando a coleta demora. Vale o que vencer primeiro. O que a IA nao
+# classificou no prazo segue pelas regras sem IA (sugestao_sem_ia.py).
+PRAZO_IA = 25 * 60
+PRAZO_EXECUCAO = 45 * 60
+# Chamada que nao teria nem este tempo antes do prazo nem comeca.
+MINIMO_CHAMADA = 30
 CODIGO_HTTP = re.compile(r"^\s*(\d{3})\b")
 # O dossier guardado: uma pagina por arquivo e um indice.json com o resto.
 DOSSIER = OUT / "dossier"
@@ -555,20 +570,72 @@ def carregar_dossier(pasta=None):
 
 def tipo_de_erro(erro):
     """
-    'cota' para 429 (acabou a cota: insistir no mesmo modelo nao adianta),
-    'sobrecarga' para 5xx (o modelo esta cheio agora; costuma passar) e
-    'outro' para o resto (JSON invalido, resposta sem itens).
+    'tempo' para a chamada que passou do tempo-limite (repetir pode travar
+    de novo), 'cota' para 429 (acabou a cota: insistir no mesmo modelo nao
+    adianta), 'sobrecarga' para 5xx (o modelo esta cheio agora; costuma
+    passar) e 'outro' para o resto (JSON invalido, resposta sem itens).
     """
     codigo = getattr(erro, "code", None)
     if not isinstance(codigo, int):
         achado = CODIGO_HTTP.match(str(erro))
         codigo = int(achado.group(1)) if achado else None
     texto = str(erro).upper()
+    # O 504 tambem: o pedido ja gastou o tempo dele, e repetir o mesmo lote
+    # no mesmo modelo tende a esbarrar no mesmo limite.
+    if codigo == 504 or isinstance(erro, TimeoutError) or "TIMEOUT" in type(erro).__name__.upper() or "DEADLINE_EXCEEDED" in texto or "TIMED OUT" in texto:
+        return "tempo"
     if codigo == 429 or "RESOURCE_EXHAUSTED" in texto:
         return "cota"
-    if codigo in (500, 502, 503, 504) or "UNAVAILABLE" in texto or "OVERLOADED" in texto:
+    if codigo in (500, 502, 503) or "UNAVAILABLE" in texto or "OVERLOADED" in texto:
         return "sobrecarga"
     return "outro"
+
+
+class SemResposta(TimeoutError):
+    """A chamada ao Gemini passou do tempo-limite sem responder."""
+
+
+def chamar_com_limite(funcao, segundos):
+    """
+    Roda 'funcao' com tempo-limite de relogio. O tempo-limite do HTTP, posto
+    no cliente (cliente_gemini), ja derruba a conexao parada; este e a
+    garantia para quando ele nao derrubar. A thread que estoura fica para
+    tras como daemon e nao segura o fim do script.
+    """
+    resultado = {}
+
+    def executar():
+        try:
+            resultado["valor"] = funcao()
+        except BaseException as erro:  # vai para quem chamou
+            resultado["erro"] = erro
+
+    linha = threading.Thread(target=executar, daemon=True)
+    linha.start()
+    linha.join(segundos)
+    if linha.is_alive():
+        raise SemResposta(f"Sem resposta em {segundos:.0f} s (tempo-limite da chamada).")
+    if "erro" in resultado:
+        raise resultado["erro"]
+    return resultado["valor"]
+
+
+def cliente_gemini():
+    """O cliente do Gemini, com o tempo-limite de cada chamada (em ms)."""
+    return genai.Client(api_key=os.environ["GEMINI_API_KEY"], http_options=types.HttpOptions(timeout=TEMPO_CHAMADA * 1000))
+
+
+def duracao_legivel(segundos):
+    return f"{segundos / 60:.0f} min" if segundos >= 120 else f"{segundos:.0f} s"
+
+
+def restante(orcamento):
+    """Segundos ate o prazo da etapa da IA; infinito se nao ha prazo."""
+    limite = orcamento.get("limite")
+    return math.inf if limite is None else limite - time.monotonic()
+
+
+ROTULO_ERRO = {"tempo": "sem resposta no tempo-limite", "cota": "cota esgotada (429)", "sobrecarga": "sobrecarga", "outro": "resposta inválida ou erro"}
 
 
 def gemini(cliente, prompt, orcamento=None):
@@ -580,10 +647,13 @@ def gemini(cliente, prompt, orcamento=None):
       outros repetem uma vez depois de 10 s, como sempre;
     - cota (429): desce na hora. A mensagem vai inteira para o log, porque e
       ela que diz se a cota estourada e por minuto ou por dia;
+    - tempo (passou de TEMPO_CHAMADA sem resposta): desce na hora;
     - outro: repete uma vez depois de 10 s, como sempre.
 
-    'orcamento' e compartilhado pelos lotes de uma execucao e soma quanto ja
-    se esperou por sobrecarga, contra TETO_ESPERA_SOBRECARGA.
+    'orcamento' e compartilhado pelos lotes de uma execucao: soma quanto ja
+    se esperou por sobrecarga, contra TETO_ESPERA_SOBRECARGA, e guarda em
+    'limite' o prazo da etapa da IA (time.monotonic). Sem tempo para mais
+    uma chamada antes do prazo, devolve nada e marca 'esgotado'.
     """
     if orcamento is None:
         orcamento = {"espera": 0}
@@ -594,26 +664,41 @@ def gemini(cliente, prompt, orcamento=None):
         tentativa = 0
         while True:
             tentativa += 1
+            limite = min(TEMPO_CHAMADA, restante(orcamento))
+            if limite < MINIMO_CHAMADA:
+                orcamento["esgotado"] = True
+                print("  prazo da etapa da IA esgotado")
+                return None, "", logs
+            config = types.GenerateContentConfig(temperature=0.15, response_mime_type="application/json")
+            comeco = time.monotonic()
             try:
-                resposta = cliente.models.generate_content(model=modelo, contents=prompt, config=types.GenerateContentConfig(temperature=0.15, response_mime_type="application/json"))
+                resposta = chamar_com_limite(lambda modelo=modelo, config=config: cliente.models.generate_content(model=modelo, contents=prompt, config=config), limite)
                 dados = json.loads(resposta.text or "")
                 if not isinstance(dados, dict) or not isinstance(dados.get("itens"), list):
                     raise ValueError("JSON sem itens")
-                logs.append({"modelo": modelo, "tentativa": tentativa, "status": "sucesso"})
+                duracao = round(time.monotonic() - comeco)
+                logs.append({"modelo": modelo, "tentativa": tentativa, "status": "sucesso", "duracao_s": duracao})
+                print(f"  {modelo}: respondeu em {duracao} s")
                 return dados, modelo, logs
             except Exception as erro:
+                duracao = round(time.monotonic() - comeco)
                 tipo = tipo_de_erro(erro)
-                registro = {"modelo": modelo, "tentativa": tentativa, "status": "erro", "tipo_erro": tipo, "erro": erro_resumo(erro, 4000 if tipo == "cota" else 400)}
+                registro = {"modelo": modelo, "tentativa": tentativa, "status": "erro", "tipo_erro": tipo, "duracao_s": duracao, "erro": erro_resumo(erro, 4000 if tipo == "cota" else 400)}
                 logs.append(registro)
                 espera = 0
                 if tipo == "sobrecarga" and esperas_sobrecarga:
                     if posicao > 0 or orcamento["espera"] + esperas_sobrecarga[0] <= TETO_ESPERA_SOBRECARGA:
                         espera = esperas_sobrecarga.pop(0)
-                        if posicao == 0:
-                            orcamento["espera"] += espera
                 elif tipo == "outro" and repeticoes:
                     repeticoes -= 1
                     espera = 10
+                if espera + MINIMO_CHAMADA > restante(orcamento):
+                    # Esperar e repetir passaria do prazo.
+                    espera = 0
+                if espera and tipo == "sobrecarga" and posicao == 0:
+                    orcamento["espera"] += espera
+                seguinte = f"nova tentativa em {espera} s" if espera else "passa ao próximo modelo" if posicao + 1 < len(MODELOS) else "último modelo da cascata"
+                print(f"  {modelo}: {ROTULO_ERRO[tipo]} em {duracao} s; {seguinte}")
                 if not espera:
                     break
                 registro["espera_antes_da_proxima_s"] = espera
@@ -626,7 +711,7 @@ def lotes_de(dossier, tamanho):
         yield dossier[inicio : inicio + tamanho]
 
 
-def classificar(cliente, base, contexto, dossier):
+def classificar(cliente, base, contexto, dossier, limite=None):
     """
     Classifica o dossier em lotes de fontes, um lote por chamada.
 
@@ -639,25 +724,40 @@ def classificar(cliente, base, contexto, dossier):
     inteiro nao derruba os outros: as fontes dele voltam em 'falharam' e sao
     registradas como erro tecnico, para nao sumirem em silencio.
 
+    'limite' e o prazo da etapa (time.monotonic). O lote que ja nao cabe no
+    prazo nem e enviado; o registro dele diz 'fora_do_prazo' e as fontes
+    voltam em 'falharam' do mesmo jeito. As publicacoes que a coleta ja
+    separou dessas fontes seguem pelas regras sem IA.
+
     Devolve (boletim unido, modelos usados, registro por lote, fontes falhas).
     """
     itens, sem_publicacao, sem_resultado, com_erro = [], [], [], []
     modelos, registro, falharam = [], [], []
-    total = len(list(lotes_de(dossier, LOTE_FONTES)))
-    orcamento = {"espera": 0}
+    lotes = list(lotes_de(dossier, LOTE_FONTES))
+    total = len(lotes)
+    orcamento = {"espera": 0, "limite": limite}
 
-    for numero, lote in enumerate(lotes_de(dossier, LOTE_FONTES), 1):
+    for numero, lote in enumerate(lotes, 1):
         nomes = [d.get("fonte", "") for d in lote]
-        print(f"Gemini lote {numero}/{total}: {len(lote)} fonte(s)")
+        if orcamento.get("esgotado") or restante(orcamento) < MINIMO_CHAMADA:
+            orcamento["esgotado"] = True
+            print(f"Lote {numero}/{total} da IA: fora do prazo, segue pelas regras sem IA")
+            registro.append({"lote": numero, "fontes": nomes, "modelo": "", "situacao": "fora_do_prazo", "tentativas": [], "espera_por_sobrecarga_s": 0, "duracao_s": 0})
+            falharam.extend(nomes)
+            continue
+        folga = restante(orcamento)
+        print(f"Lote {numero}/{total} da IA: {len(lote)} fonte(s)" + (f", {duracao_legivel(folga)} até o prazo" if folga != math.inf else ""))
         prompt = base + contexto + json.dumps(lote, ensure_ascii=False)
         antes = orcamento["espera"]
+        comeco = time.monotonic()
         dados, modelo, tentativas = gemini(cliente, prompt, orcamento)
-        registro.append({"lote": numero, "fontes": nomes, "modelo": modelo, "tentativas": tentativas, "espera_por_sobrecarga_s": orcamento["espera"] - antes})
+        situacao = "classificado" if dados is not None else "fora_do_prazo" if orcamento.get("esgotado") else "falhou"
+        registro.append({"lote": numero, "fontes": nomes, "modelo": modelo, "situacao": situacao, "tentativas": tentativas, "espera_por_sobrecarga_s": orcamento["espera"] - antes, "duracao_s": round(time.monotonic() - comeco)})
         if modelo and modelo != MODELOS[0]:
             print(f"  lote {numero} atendido por {modelo}, nao por {MODELOS[0]}")
 
         if dados is None:
-            print(f"  lote {numero} falhou em todos os modelos")
+            print(f"  lote {numero} " + ("ficou fora do prazo; segue pelas regras sem IA" if situacao == "fora_do_prazo" else "falhou em todos os modelos"))
             falharam.extend(nomes)
         else:
             modelos.append(modelo)
@@ -666,7 +766,7 @@ def classificar(cliente, base, contexto, dossier):
             sem_resultado.extend(dados.get("fontes_sem_resultado") or [])
             com_erro.extend(dados.get("fontes_com_erro_tecnico") or [])
 
-        if numero < total:
+        if numero < total and restante(orcamento) >= INTERVALO_LOTES + MINIMO_CHAMADA:
             time.sleep(INTERVALO_LOTES)
 
     if not modelos:
@@ -688,14 +788,14 @@ def resumo_cascata(lotes):
     return {
         "modelo_preferido": preferido,
         "lotes": [
-            {"lote": r["lote"], "modelo": r.get("modelo") or "falhou", "fontes": r.get("fontes", []), "espera_por_sobrecarga_s": r.get("espera_por_sobrecarga_s", 0)}
+            {"lote": r["lote"], "modelo": r.get("modelo") or ("fora do prazo" if r.get("situacao") == "fora_do_prazo" else "falhou"), "fontes": r.get("fontes", []), "espera_por_sobrecarga_s": r.get("espera_por_sobrecarga_s", 0)}
             for r in lotes
         ],
         "lotes_fora_do_preferido": len(fora),
         "espera_por_sobrecarga_s": sum(r.get("espera_por_sobrecarga_s", 0) for r in lotes),
         "aviso": (
             f"{len(fora)} de {len(lotes)} lote(s) não usaram {preferido}: "
-            + "; ".join(f"lote {r['lote']} em {r.get('modelo') or 'nenhum modelo'}" for r in fora)
+            + "; ".join(f"lote {r['lote']} " + (f"em {r['modelo']}" if r.get("modelo") else "fora do prazo" if r.get("situacao") == "fora_do_prazo" else "em nenhum modelo") for r in fora)
         ) if fora else "",
     }
 
@@ -859,6 +959,44 @@ def distribuir_sem_ia(itens, fontes, modelo, sugestor=None):
     return resumo
 
 
+def resumo_etapa_ia(lotes, prazo, duracao, material):
+    """
+    Como terminou a etapa da IA: 'completa', 'parcial' (algum lote ficou
+    fora do prazo ou falhou em todos os modelos) ou 'sem_ia' (nenhum lote
+    classificado). Diz tambem, por fonte nao classificada, se as publicacoes
+    dela seguiram pelas regras sem IA (coleta estruturada) ou se a pagina
+    ficou sem leitura (coleta pelo Firecrawl).
+    """
+    estruturadas = {f["fonte"] for f in material if f.get("estruturado")}
+    por_situacao = Counter(r.get("situacao", "classificado" if r.get("modelo") else "falhou") for r in lotes)
+    classificados = por_situacao.get("classificado", 0)
+    situacao = "completa" if classificados == len(lotes) else "sem_ia" if not classificados else "parcial"
+    fontes = {}
+    for r in lotes:
+        if r.get("situacao") in ("fora_do_prazo", "falhou"):
+            for nome in r.get("fontes", []):
+                fontes[nome] = {"situacao": r["situacao"], "lote": r["lote"], "publicacoes_seguem_pelas_regras": nome in estruturadas}
+    return {
+        "situacao": situacao,
+        "prazo_s": round(prazo),
+        "duracao_s": round(duracao),
+        "tempo_limite_por_chamada_s": TEMPO_CHAMADA,
+        "lotes": len(lotes),
+        "lotes_classificados": classificados,
+        "lotes_fora_do_prazo": por_situacao.get("fora_do_prazo", 0),
+        "lotes_que_falharam": por_situacao.get("falhou", 0),
+        "chamadas_sem_resposta": sum(t.get("tipo_erro") == "tempo" for r in lotes for t in r.get("tentativas", [])),
+        "fontes_nao_classificadas": fontes,
+    }
+
+
+def motivo_fonte_nao_classificada(registro):
+    """O motivo, no log e na auditoria, da fonte que a IA nao classificou."""
+    causa = "A etapa da IA passou do prazo antes de classificar esta fonte" if registro["situacao"] == "fora_do_prazo" else "A classificação deste lote falhou em todos os modelos da cascata"
+    destino = "as publicações coletadas seguiram pelas regras sem IA." if registro["publicacoes_seguem_pelas_regras"] else "a página coletada não foi lida."
+    return f"{causa}; {destino}"
+
+
 def fontes_reativadas_com_erro(ativas, processadas, hoje):
     """
     Fonte que estava suspensa com data de retomada, ja voltou e continua com
@@ -883,6 +1021,10 @@ def argumentos():
 
 
 def main():
+    # O log do workflow mostra o andamento linha a linha, e nao tudo no fim.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(line_buffering=True)
+    comeco_execucao = time.monotonic()
     args = argumentos()
     if not os.getenv("GEMINI_API_KEY") or (not args.reprocessar and not os.getenv("FIRECRAWL_API_KEY")):
         raise SystemExit("GEMINI_API_KEY é obrigatória, e FIRECRAWL_API_KEY também, exceto com --reprocessar.")
@@ -915,15 +1057,37 @@ def main():
     inicio_iso = f"{inicio.isoformat()}T00:00"
     fim_iso = agora.strftime("%Y-%m-%dT%H:%M")
     contexto = f"\n\n## Contexto\ndata_execucao: {hoje.isoformat()}\njanela_inicio: {inicio_iso}\njanela_fim: {fim_iso}\n\n## Dossier\n"
+    vazio = {"itens": [], "fontes_sem_publicacao_hoje": [], "fontes_sem_resultado": [], "fontes_com_erro_tecnico": []}
+    prazo = max(0, min(PRAZO_IA, PRAZO_EXECUCAO - (time.monotonic() - comeco_execucao)))
+    comeco_ia = time.monotonic()
     if dossier:
-        client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+        print(f"Etapa da IA: {len(dossier)} fonte(s) em lotes de {LOTE_FONTES}; prazo de {duracao_legivel(prazo)}, até {TEMPO_CHAMADA} s por chamada.")
+        client = cliente_gemini()
         try:
-            boletim, modelos, lotes_gemini, lotes_falhos = classificar(client, PROMPT.read_text(encoding="utf-8"), contexto, dossier)
+            boletim, modelos, lotes_gemini, lotes_falhos = classificar(client, PROMPT.read_text(encoding="utf-8"), contexto, dossier, limite=comeco_ia + prazo)
         finally:
-            client.close()
+            # Uma chamada abandonada pelo tempo-limite pode ainda segurar o
+            # cliente; o fechamento tambem tem limite para nao travar o fim.
+            try:
+                chamar_com_limite(client.close, 10)
+            except Exception:
+                pass
     else:
         # Nenhuma fonte com publicacao na janela: nao ha o que mandar ao Gemini.
-        boletim, modelos, lotes_gemini, lotes_falhos = {"itens": [], "fontes_sem_publicacao_hoje": [], "fontes_sem_resultado": [], "fontes_com_erro_tecnico": []}, [], [], []
+        boletim, modelos, lotes_gemini, lotes_falhos = dict(vazio), [], [], []
+    etapa_ia = resumo_etapa_ia(lotes_gemini, prazo, time.monotonic() - comeco_ia, material)
+    if boletim is None:
+        # Nenhum lote classificado. A edicao sai assim mesmo: as publicacoes
+        # que a coleta separou seguem pelas regras sem IA, e as fontes lidas
+        # so como pagina ficam registradas como erro tecnico.
+        boletim = dict(vazio)
+    if etapa_ia["situacao"] != "completa":
+        regras = sum(r["publicacoes_seguem_pelas_regras"] for r in etapa_ia["fontes_nao_classificadas"].values())
+        print(
+            f"::warning title=Etapa da IA incompleta::{etapa_ia['lotes'] - etapa_ia['lotes_classificados']} de {etapa_ia['lotes']} lote(s) sem classificação pela IA "
+            f"({etapa_ia['lotes_fora_do_prazo']} fora do prazo, {etapa_ia['lotes_que_falharam']} com falha em todos os modelos). "
+            f"De {len(etapa_ia['fontes_nao_classificadas'])} fonte(s), {regras} seguiram pelas regras sem IA; as demais ficam como erro técnico. A edição sai assim mesmo."
+        )
     modelo = ", ".join(dict.fromkeys(modelos))
     tentativas = [dict(t, lote=r["lote"]) for r in lotes_gemini for t in r["tentativas"]]
     cascata = resumo_cascata(lotes_gemini)
@@ -938,10 +1102,7 @@ def main():
     if args.reprocessar:
         log["reprocessado_em"] = datetime.datetime.now(ZoneInfo("America/Sao_Paulo")).isoformat()
         log["origem_da_coleta"] = "dossier guardado em output/dossier"
-    if boletim is None:
-        log["resultado"] = {"status": "falha_gemini", "boletim_anterior_preservado": BOLETIM.exists(), "dossier_guardado": (DOSSIER / "indice.json").exists()}
-        salvar(LOG, log)
-        raise SystemExit("Cascata Gemini falhou em todos os lotes; boletim anterior preservado.")
+    log["etapa_ia"] = etapa_ia
     # Fonte coletada sem Firecrawl e sem nada na janela nao foi ao Gemini; o
     # registro de "sem publicacao" sai daqui, e nao da resposta dele.
     boletim.setdefault("fontes_sem_publicacao_hoje", [])
@@ -1014,7 +1175,7 @@ def main():
     ja_com_erro = {e["fonte"] for e in erros}
     for nome in lotes_falhos:
         if nome not in ja_com_erro:
-            erros.append({"fonte": nome, "motivo": "A classificação deste lote falhou em todos os modelos da cascata."})
+            erros.append({"fonte": nome, "motivo": motivo_fonte_nao_classificada(etapa_ia["fontes_nao_classificadas"][nome])})
             ja_com_erro.add(nome)
     nomes_erro = {x["fonte"] for x in erros}
     def lista(chave, padrao):
@@ -1045,12 +1206,12 @@ def main():
             if titulo
         }
     ), "rejeicoes_por_boletim": dict(rejeicoes), "resgates_por_escassez": resgates, "cascata_gemini": cascata, "nao_classificadas_pela_ia": len(nao_devolvidas), "sugestoes_sem_ia": {k: distribuicao[k] for k in ("com_radar_sugerido", "por_metodo", "sem_radar")}, "top_palavras_chave_detectadas": [{"palavra": p, "ocorrencias": c} for p, c in palavras.most_common(20)]}
-    log["resultado"] = {"status": "sucesso", "modelo_gemini_utilizado": modelo, "itens_aceitos": len(itens), "fontes_ativas": len(material), "fontes_suspensas": len(suspensas), "fontes_inativas": len(inativas), "fontes_sem_resultado": len(sem_resultado), "fontes_sem_publicacao_hoje": len(sem_publicacao), "fontes_com_erro_tecnico": len(erros), "itens_por_boletim": stats, "filtro1_bloqueios": {s: len(v) for s, v in bloqueios.items()}, "auditoria": boletim["auditoria"]}
+    log["resultado"] = {"status": "sucesso", "etapa_ia": etapa_ia["situacao"], "modelo_gemini_utilizado": modelo, "itens_aceitos": len(itens), "fontes_ativas": len(material), "fontes_suspensas": len(suspensas), "fontes_inativas": len(inativas), "fontes_sem_resultado": len(sem_resultado), "fontes_sem_publicacao_hoje": len(sem_publicacao), "fontes_com_erro_tecnico": len(erros), "itens_por_boletim": stats, "filtro1_bloqueios": {s: len(v) for s, v in bloqueios.items()}, "auditoria": boletim["auditoria"]}
     if bloqueios:
         log["filtro1_bloqueios_detalhe"] = bloqueios
     salvar(BOLETIM, boletim)
     salvar(LOG, log)
-    print(f"Concluído: {len(itens)} itens; modelo {modelo}.")
+    print(f"Concluído: {len(itens)} itens; modelo {modelo or 'nenhum'}; etapa da IA {etapa_ia['situacao']}.")
 
 if __name__ == "__main__":
     main()
