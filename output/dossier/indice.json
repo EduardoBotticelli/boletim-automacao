@@ -1,9 +1,9 @@
 {
-  "data_execucao": "2026-09-30",
-  "executado_em": "2026-09-30T19:04:04.037929-03:00",
+  "data_execucao": "2026-10-01",
+  "executado_em": "2026-10-01T07:38:41.549513-03:00",
   "janela": {
-    "inicio": "2026-09-29T00:00",
-    "fim": "2026-09-30T19:04"
+    "inicio": "2026-09-30T00:00",
+    "fim": "2026-10-01T07:38"
   },
   "buscas_complementares": [
     {
@@ -37,7 +37,7 @@
     {
       "fonte": "Planalto | Resenha Diaria",
       "categoria": "Legislação Federal",
-      "url": "http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/setembro-resenha-diaria",
+      "url": "http://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/outubro-resenha-diaria",
       "tipo_coleta": "pagina",
       "pagina_inteira": false,
       "metodo": "firecrawl",
@@ -51,7 +51,7 @@
       "publicacoes_listadas": null,
       "status": "ok",
       "erro": "",
-      "chars_pagina": 29503,
+      "chars_pagina": 5231,
       "busca_pedida": false,
       "busca_executada": false,
       "descobertas": [],
@@ -60,7 +60,7 @@
     {
       "fonte": "Banco Central | Normas",
       "categoria": "Financeiro e Mercado de Capitais",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/buscanormas?dataInicioBusca=29%2F09%2F2026&dataFimBusca=30%2F09%2F2026&tipoDocumento=Todos",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/buscanormas?dataInicioBusca=30%2F09%2F2026&dataFimBusca=01%2F10%2F2026&tipoDocumento=Todos",
       "tipo_coleta": "pagina",
       "pagina_inteira": false,
       "metodo": "api_bcb",
@@ -71,6 +71,15 @@
       "requisicoes_diretas": 2,
       "estruturado": true,
       "publicacoes": [
+        {
+          "titulo": "Comunicado N° 46.048",
+          "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46048",
+          "data": "2026-09-30",
+          "hora": "",
+          "descricao": "Divulga nome de pessoa com interesse em assumir a condição de controlador de sociedade de crédito, financiamento e investimento, conforme consta do pedido de alteração de controle de 30 de janeiro de 2026.",
+          "na_janela": true,
+          "enviar": true
+        },
         {
           "titulo": "Comunicado N° 46.047",
           "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46047",
@@ -214,75 +223,12 @@
           "descricao": "Divulga a Taxa Básica Financeira (TBF), o Redutor \"R\" e a Taxa Referencial (TR) relativos a 29 de setembro de 2026.",
           "na_janela": true,
           "enviar": true
-        },
-        {
-          "titulo": "Comunicado N° 46.038",
-          "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46038",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Divulga condições para a realização de operações compromissadas com instituições financeiras participantes do módulo Oferta Pública (Ofpub).",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "Ato de Diretor N° 705",
-          "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Ato%20de%20Diretor&numero=705",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Designa servidores para compor a Comissão que procederá a inquérito na Sefer.",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "Comunicado N° 46.037",
-          "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46037",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Divulga pedido de cancelamento da autorização para funcionamento da H. Administradora de Consórcios Ltda.",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "Comunicado N° 46.036",
-          "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46036",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Divulga, para fins de recebimento de eventuais objeções, nomes de pessoas eleitas ou nomeadas para ocupar cargos de administração em instituições autorizadas a funcionar",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "Comunicado N° 46.035",
-          "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46035",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Divulga nome aprovado de pessoas eleitas/nomeadas para cargos de órgãos estatutários ou contratuais de sociedades autorizadas a funcionar pelo Banco Central do Brasil.",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "Comunicado N° 46.034",
-          "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46034",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Divulga as Taxas Básicas Financeiras (TBF), os Redutores \"R\" e as Taxas Referenciais (TR) relativos a 26, 27 e 28 de setembro de 2026.",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "Resolução BCB N° 590",
-          "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=590",
-          "data": "2026-09-28",
-          "hora": "",
-          "descricao": "Dispõe sobre a vedação de processar, liquidar ou viabilizar transações destinadas a loterias de aposta de quota fixa estabelecida pelo art. 14 da Medida Provisória nº 1.394, de 25 de setembro de 2026.",
-          "na_janela": false,
-          "enviar": false
         }
       ],
-      "publicacoes_listadas": 23,
+      "publicacoes_listadas": 17,
       "status": "ok",
       "erro": "",
-      "chars_pagina": 6845,
+      "chars_pagina": 5270,
       "busca_pedida": false,
       "busca_executada": false,
       "descobertas": [],
@@ -293,7 +239,7 @@
     {
       "fonte": "CCEE | Noticias",
       "categoria": "Energia e Recursos",
-      "url": "https://www.ccee.org.br/busca-ccee?q=&dtIni=29%2F09%2F2026&dtFim=30%2F09%2F2026&structure=ccee-noticias&ordenacao=Mais%20recentes",
+      "url": "https://www.ccee.org.br/busca-ccee?q=&dtIni=30%2F09%2F2026&dtFim=01%2F10%2F2026&structure=ccee-noticias&ordenacao=Mais%20recentes",
       "tipo_coleta": "pagina",
       "pagina_inteira": false,
       "metodo": "html",
@@ -309,33 +255,15 @@
           "url": "https://www.ccee.org.br/-/confira-a-apresentacao-e-o-video-do-encontro-do-pld-realizado-em-26-09",
           "data": "2026-09-30",
           "hora": "",
-          "descricao": "Evento apresentou analises de comportamento do preco e projecoes : NOTICIAS",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "CCEE amplia módulo digital para processos de Monitoramento Intensivo",
-          "url": "https://www.ccee.org.br/-/ccee-amplia-modulo-digital-para-processos-de-monitoramento-intensivo",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Solucao passa a atender mais uma frente de monitoramento e avanca na digitalizacao e integracao dos processos da organizacao : NOTICIAS",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "Últimos dias para inscrição no curso de Formação de Preços em parceria com a PSR",
-          "url": "https://www.ccee.org.br/-/ultimos-dias-para-inscricao-no-curso-de-formacao-de-precos-em-parceria-com-a-psr",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Primeira edicao on-line da capacitacao apresenta diferentes modelos e perspectivas sobre a formacao de precos no mercado de energia : 1 de 1 Loading... Menu de Navegacao a ccee comunicacao ajuda tecnologia dados e analises precos mercado CCEE Academy documentos Fechar Ao clicar em ‘Aceitar todos os",
+          "descricao": "Evento apresentou analises de comportamento do preco e projecoes : 1 de 1 Loading... Menu de Navegacao a ccee comunicacao ajuda tecnologia dados e analises precos mercado CCEE Academy documentos Fechar Ao clicar em ‘Aceitar todos os Cookies’, voce concorda com o armazenamento de cookies pela CCEE e",
           "na_janela": true,
           "enviar": true
         }
       ],
-      "publicacoes_listadas": 3,
+      "publicacoes_listadas": 1,
       "status": "ok",
       "erro": "",
-      "chars_pagina": 2235,
+      "chars_pagina": 1544,
       "busca_pedida": false,
       "busca_executada": false,
       "descobertas": [],
@@ -360,7 +288,7 @@
       "publicacoes_listadas": null,
       "status": "ok",
       "erro": "",
-      "chars_pagina": 15332,
+      "chars_pagina": 15390,
       "busca_pedida": false,
       "busca_executada": false,
       "descobertas": [],
@@ -380,6 +308,149 @@
       "requisicoes_diretas": 3,
       "estruturado": true,
       "publicacoes": [
+        {
+          "titulo": "Ato Declaratório Executivo SRRF02 nº 4",
+          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153871",
+          "data": "2026-10-01",
+          "hora": "",
+          "descricao": "Alfandegamento de instalação portuária administrada pela empresa NAVEMAZÔNIA NAVEGAÇÃO LTDA.",
+          "orgao": "SRRF02",
+          "na_janela": true,
+          "enviar": false,
+          "excluida_pelo_filtro": "Órgão SRRF02 fora da lista de órgãos da fonte."
+        },
+        {
+          "titulo": "Ato Declaratório Executivo SRRF07 nº 16",
+          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153877",
+          "data": "2026-10-01",
+          "hora": "",
+          "descricao": "Altera o alfandegamento do CLIA administrado por GDL TRANSPORTES E ARMAZENS GERAIS S/A.",
+          "orgao": "SRRF07",
+          "na_janela": true,
+          "enviar": false,
+          "excluida_pelo_filtro": "Órgão SRRF07 fora da lista de órgãos da fonte."
+        },
+        {
+          "titulo": "Ato Declaratório Executivo Decex/RJO nº 192",
+          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153880",
+          "data": "2026-10-01",
+          "hora": "",
+          "descricao": "Declara habilitada ao regime aduaneiro especial de utilização econômica destinado a bens a serem utilizados nas atividades de exploração, desenvolvimento e produção de petróleo e de gás natural (Repetro), na modalidade Repetro-Sped, a pessoa jurídica que menciona.",
+          "orgao": "Decex/RJO",
+          "na_janela": true,
+          "enviar": false,
+          "excluida_pelo_filtro": "Órgão Decex/RJO fora da lista de órgãos da fonte."
+        },
+        {
+          "titulo": "Ato Declaratório Executivo Decex/RJO nº 191",
+          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153876",
+          "data": "2026-10-01",
+          "hora": "",
+          "descricao": "Libera restrição do tratamento de isenção de tributos de veículo importado para transferência, por decurso de prazo.",
+          "orgao": "Decex/RJO",
+          "na_janela": true,
+          "enviar": false,
+          "excluida_pelo_filtro": "Órgão Decex/RJO fora da lista de órgãos da fonte."
+        },
+        {
+          "titulo": "Ato Declaratório Executivo ALF/STS nº 49",
+          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153868",
+          "data": "2026-10-01",
+          "hora": "",
+          "descricao": "Declara a concessão de habilitação para empresa exercer procedimento simplificado de embarque mediante transbordo e despacho aduaneiro de exportação de petróleo em área marítima situada em águas jurisdicionais brasileiras.",
+          "orgao": "ALF/STS",
+          "na_janela": true,
+          "enviar": false,
+          "excluida_pelo_filtro": "Órgão ALF/STS fora da lista de órgãos da fonte."
+        },
+        {
+          "titulo": "Ato Declaratório Executivo DRF/SOR nº 1516",
+          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153870",
+          "data": "2026-10-01",
+          "hora": "",
+          "descricao": "Cancela, a pedido, habilitação definitiva ao Programa Mais Leite Saudável à pessoa jurídica que menciona.",
+          "orgao": "DRF/SOR",
+          "na_janela": true,
+          "enviar": false,
+          "excluida_pelo_filtro": "Órgão DRF/SOR fora da lista de órgãos da fonte."
+        },
+        {
+          "titulo": "Ato Declaratório Executivo DRF/SOR nº 1515",
+          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153869",
+          "data": "2026-10-01",
+          "hora": "",
+          "descricao": "Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.",
+          "orgao": "DRF/SOR",
+          "na_janela": true,
+          "enviar": false,
+          "excluida_pelo_filtro": "Órgão DRF/SOR fora da lista de órgãos da fonte."
+        },
+        {
+          "titulo": "Ato Declaratório Executivo DRF/SOR nº 1514",
+          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153878",
+          "data": "2026-10-01",
+          "hora": "",
+          "descricao": "Cancela a habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (Reidi) da pessoa jurídica que menciona.",
+          "orgao": "DRF/SOR",
+          "na_janela": true,
+          "enviar": false,
+          "excluida_pelo_filtro": "Órgão DRF/SOR fora da lista de órgãos da fonte."
+        },
+        {
+          "titulo": "Ato Declaratório Executivo DRF/SOR nº 1513",
+          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153875",
+          "data": "2026-10-01",
+          "hora": "",
+          "descricao": "Concede Habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.",
+          "orgao": "DRF/SOR",
+          "na_janela": true,
+          "enviar": false,
+          "excluida_pelo_filtro": "Órgão DRF/SOR fora da lista de órgãos da fonte."
+        },
+        {
+          "titulo": "Ato Declaratório Executivo DRF/SOR nº 1512",
+          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153874",
+          "data": "2026-10-01",
+          "hora": "",
+          "descricao": "Concede Habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.",
+          "orgao": "DRF/SOR",
+          "na_janela": true,
+          "enviar": false,
+          "excluida_pelo_filtro": "Órgão DRF/SOR fora da lista de órgãos da fonte."
+        },
+        {
+          "titulo": "Ato Declaratório Executivo DRF/SOR nº 1510",
+          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153873",
+          "data": "2026-10-01",
+          "hora": "",
+          "descricao": "Concede Habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.",
+          "orgao": "DRF/SOR",
+          "na_janela": true,
+          "enviar": false,
+          "excluida_pelo_filtro": "Órgão DRF/SOR fora da lista de órgãos da fonte."
+        },
+        {
+          "titulo": "Ato Declaratório Executivo DRF/SOR nº 1509",
+          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153872",
+          "data": "2026-10-01",
+          "hora": "",
+          "descricao": "Concede Coabilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.",
+          "orgao": "DRF/SOR",
+          "na_janela": true,
+          "enviar": false,
+          "excluida_pelo_filtro": "Órgão DRF/SOR fora da lista de órgãos da fonte."
+        },
+        {
+          "titulo": "Ato Declaratório Executivo DRF/SOR nº 1508",
+          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153879",
+          "data": "2026-10-01",
+          "hora": "",
+          "descricao": "Concede Habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.",
+          "orgao": "DRF/SOR",
+          "na_janela": true,
+          "enviar": false,
+          "excluida_pelo_filtro": "Órgão DRF/SOR fora da lista de órgãos da fonte."
+        },
         {
           "titulo": "Ato Declaratório Executivo Corat nº 79",
           "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836",
@@ -633,330 +704,30 @@
           "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153857",
           "data": "2026-09-30",
           "hora": "",
-          "descricao": "nscreve no Registro Especial e autoriza engarrafamento dos produtos que menciona.",
+          "descricao": "Inscreve no Registro Especial e autoriza engarrafamento dos produtos que menciona.",
           "orgao": "DRF/NHO",
           "na_janela": true,
           "enviar": false,
           "excluida_pelo_filtro": "Órgão DRF/NHO fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo Corat nº 78",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153803",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Divulga a Agenda Tributária do mês de outubro de 2026.",
-          "orgao": "Corat",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "Solução de Consulta Cosit nº 193",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153829",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Assunto: Simples Nacional INOVAÇÃO TECNOLÓGICA. CARACTERIZAÇÃO E CRITÉRIOS. INCENTIVOS FISCAIS. MICROEMPRESAS E EMPRESAS DE PEQUENO PORTE. SIMPLES NACIONAL. Desde que observados critérios específicos, os trabalhos envolvendo análise e melhoria de processos, automação e integração de inteligência artificial são passíveis de ser considerados inovação tecnológica para fins de enquadramento nos incent",
-          "orgao": "Cosit",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "Solução de Consulta Cosit nº 192",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153822",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Assunto: Normas Gerais de Direito Tributário DENÚNCIA ESPONTÂNEA. DÉBITO ORIGINAL DECLARADO A MENOR E COMPENSADO. POSTERIOR RETIFICAÇÃO PARA MAIOR, ACOMPANHADA DO PAGAMENTO INTEGRAL DA DIFERENÇA E DOS JUROS DE MORA. APLICABILIDADE DOS BENEFÍCIOS PREVISTOS NO ART. 138 DO CÓDIGO TRIBUTÁRIO NACIONAL. Aplicam-se os benefícios da denúncia espontânea quando o sujeito passivo declara a menor o valor que",
-          "orgao": "Cosit",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "Solução de Consulta Cosit nº 191",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153821",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Assunto: Simples Nacional SIMPLES NACIONAL. SIMEI. DESENQUADRAMENTO. CONTINUIDADE DA ATIVIDADE. FATOR \"R\". RECEITA BRUTA E FOLHA DE SALÁRIOS DOS DOZE MESES ANTERIORES. Os montantes relativos à folha de salários e à receita bruta apurados sob o regime do MEI relativos ao período anterior à migração para microempresa devem ser considerados no cálculo do fator \"r\" para fins de determinação do anexo d",
-          "orgao": "Cosit",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "Solução de Consulta Cosit nº 189",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153820",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Assunto: Contribuição para o PIS/Pasep SERVIÇOS DE SEGURANÇA PRIVADA. MONITORAMENTO DE SISTEMAS ELETRÔNICOS DE SEGURANÇA. REGIME DE APURAÇÃO. Sob a vigência da Lei nº 7.102, de 20 de junho de 1983, a atividade de monitoramento de sistemas eletrônicos de segurança não era uma atividade exclusiva das empresas especializadas de vigilância. Por consequência, as pessoas jurídicas que prestavam o respec",
-          "orgao": "Cosit",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "Solução de Consulta Cosit nº 188",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153828",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Assunto: Imposto sobre a Renda de Pessoa Física - IRPF DÉCIMO TERCEIRO SALÁRIO PROPORCIONAL RELACIONADO AO PERÍODO DO AVISO PRÉVIO INDENIZADO. NATUREZA. TRIBUTAÇÃO. O décimo terceiro salário proporcional relacionado ao período do aviso prévio indenizado tem natureza salarial e integra o décimo terceiro proporcional decorrente da rescisão do contrato de trabalho para fins de incidência do Imposto s",
-          "orgao": "Cosit",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "Solução de Consulta Cosit nº 187",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153819",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Assunto: Obrigações Acessórias DECLARAÇÃO DE INCENTIVOS, RENÚNCIAS, BENEFÍCIOS E IMUNIDADES DE NATUREZA TRIBUTÁRIA. DIRBI. CRÉDITO PRESUMIDO DE ICMS. OBRIGATORIEDADE DE DECLARAÇÃO APENAS EM CASO DE HABILITAÇÃO AO CRÉDITO FISCAL PREVISTO NA LEI Nº 14.789, DE 2023. Desde 1º de janeiro de 2024, as subvenções para investimento e seus efeitos tributários estão regidos pela Lei nº 14.789, de 29 de dezem",
-          "orgao": "Cosit",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "Solução de Consulta Cosit nº 185",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153818",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Assunto: Simples Nacional PRESTAÇÃO DE SERVIÇOS MÉDICOS. CESSÃO OU LOCAÇÃO DE MÃO DE OBRA. INGRESSO OU PERMANÊNCIA NO REGIME. POSSIBILIDADE. Para fins de ingresso ou permanência no Simples Nacional, a vedação relacionada à realização de cessão ou locação de mão de obra se aplica à atividade de prestação de serviços médicos. Somente as atividades expressamente elencadas no § 5º-H do art. 18 da Lei",
-          "orgao": "Cosit",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "Ato Declaratório Executivo ALF/MNS nº 55",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153815",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Inscreve peticionário no Registro de Ajudantes de Despachantes Aduaneiros, mantido pela Secretaria da Receita Federal do Brasil.",
-          "orgao": "ALF/MNS",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão ALF/MNS fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo ALF/MNS nº 54",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153809",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Inscreve peticionário no Registro de Ajudantes de Despachantes Aduaneiros, mantido pela Secretaria da Receita Federal do Brasil.",
-          "orgao": "ALF/MNS",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão ALF/MNS fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo SRRF03 nº 6",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153807",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Declara alfandegado a Instalação Portuária de Uso Privativo, localizado no município de Luís Correia, Estado do Piauí, administrada pela empresa COMPANHIA DE TERMINAIS, PORTOS E HIDROVIAS DO PIAUÍ S/A, nos termos e condições normativos vigentes.",
-          "orgao": "SRRF03",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão SRRF03 fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo ALF/BHE nº 57",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153825",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Certifica como Operador Econômico Autorizado a empresa que especifica.",
-          "orgao": "ALF/BHE",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão ALF/BHE fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo ALF/BHE nº 56",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153806",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Altera o Ato Declaratório Executivo nº55, de 21 de setembro de 2026, para fins de readequação do resultado do processo seletivo.",
-          "orgao": "ALF/BHE",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão ALF/BHE fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo Decex/RJO nº 190",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153816",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Declara habilitada ao regime aduaneiro especial de utilização econômica destinado a bens a serem utilizados nas atividades de exploração, desenvolvimento e produção de petróleo e de gás natural Repetro, na modalidade Repetro-Sped, a pessoa jurídica que menciona.",
-          "orgao": "Decex/RJO",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão Decex/RJO fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo ALF/VCP nº 15",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153802",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Inclui inscrições no Registro de Ajudantes de Despachantes Aduaneiros.",
-          "orgao": "ALF/VCP",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão ALF/VCP fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo Decex/SPO nº 106",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153827",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Certifica como Operador Econômico Autorizado a empresa que especifica.",
-          "orgao": "Decex/SPO",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão Decex/SPO fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo Decex/SPO nº 105",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153808",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Certifica como Operador Econômico Autorizado a empresa que especifica.",
-          "orgao": "Decex/SPO",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão Decex/SPO fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo Decex/SPO nº 102",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153805",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Certifica como Operador Econômico Autorizado a empresa que especifica.",
-          "orgao": "Decex/SPO",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão Decex/SPO fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo DRF/SOR nº 1502",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153804",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infra-Estrutura (Reidi) à pessoa jurídica que menciona.",
-          "orgao": "DRF/SOR",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão DRF/SOR fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo DRF/SOR nº 1501",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153810",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infra-Estrutura (Reidi) à pessoa jurídica que menciona.",
-          "orgao": "DRF/SOR",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão DRF/SOR fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo DRF/SOR nº 1500",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153811",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.",
-          "orgao": "DRF/SOR",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão DRF/SOR fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo DRF/SOR nº 1499",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153817",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Declara a anulação do ADE DRF/REC Nº 101/2023, que concedeu habilitação definitiva ao Programa Mais Leite Saudável, à pessoa jurídica que menciona, em duplicidade.",
-          "orgao": "DRF/SOR",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão DRF/SOR fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo DRF/SOR nº 1498",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153826",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infra-Estrutura (Reidi) à pessoa jurídica que menciona.",
-          "orgao": "DRF/SOR",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão DRF/SOR fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo DRF/SOR nº 1497",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153814",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Concede habilitação definitiva ao Programa Mais Leite Saudável à pessoa jurídica que menciona.",
-          "orgao": "DRF/SOR",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão DRF/SOR fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo DRF/SOR nº 1496",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153813",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Concede habilitação definitiva ao Programa Mais Leite Saudável à pessoa jurídica que menciona.",
-          "orgao": "DRF/SOR",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão DRF/SOR fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo DRF/SOR nº 1495",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153812",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Concede habilitação definitiva ao Programa Mais Leite Saudável à pessoa jurídica que menciona.",
-          "orgao": "DRF/SOR",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão DRF/SOR fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo DRF/SOR nº 1494",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153824",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infra-Estrutura (Reidi) à pessoa jurídica que menciona.",
-          "orgao": "DRF/SOR",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão DRF/SOR fora da lista de órgãos da fonte."
-        },
-        {
-          "titulo": "Ato Declaratório Executivo SRRF09 nº 30",
-          "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153823",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Concede a segunda alteração do regime especial de emissão de documentos e escrituração de livros fiscais referentes ao Imposto sobre Produtos Industrializados (IPI) concedido originalmente pelo Ato Declaratório Executivo (ADE) SRRF09 nº 2, de 16/01/2024.",
-          "orgao": "SRRF09",
-          "na_janela": true,
-          "enviar": false,
-          "excluida_pelo_filtro": "Órgão SRRF09 fora da lista de órgãos da fonte."
         }
       ],
-      "publicacoes_listadas": 52,
+      "publicacoes_listadas": 37,
       "status": "ok",
       "erro": "",
-      "chars_pagina": 16179,
+      "chars_pagina": 10608,
       "busca_pedida": false,
       "busca_executada": false,
       "descobertas": [],
       "aviso_coleta": "",
       "excluidas_por_orgao": {
-        "DRF": 20,
-        "ALF": 9,
-        "Decex": 4,
+        "DRF": 19,
+        "ALF": 5,
+        "Decex": 2,
         "SRRF08": 2,
+        "SRRF02": 1,
+        "SRRF07": 1,
         "IRF": 1,
-        "SRRF10": 1,
-        "SRRF03": 1,
-        "SRRF09": 1
+        "SRRF10": 1
       },
       "arquivo": "receita-federal-normas.md"
     },
@@ -998,8 +769,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "- Em agosto do ano passado, o deficit foi de R$ 15,5 bilhoes, em valores correntes Tags: FIQUE ATENTO",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "Simples Nacional 2027 tem novos prazos para microempresas e empresas de pequeno porte",
@@ -1007,8 +778,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "- Resolucao com as novas datas foi publicada na segunda-feira (28/09) Tags: RELATORIO",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "Dívida Pública Federal totaliza R$ 9,29 trilhões em agosto",
@@ -1581,8 +1352,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "- Processos serao julgados a partir das 15h Tags: EVENTO",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "Presidente Otto Lobo e Diretor Igor Muniz são apresentados ao mercado em cerimônia na sede da CVM",
@@ -1845,9 +1616,9 @@
       "busca_executada": true,
       "descobertas": [
         {
-          "titulo": "Sessão de Julgamento em 29/9 - Portal Gov.br",
-          "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/sessao-de-julgamento-em-29-9",
-          "descricao": "1 day ago · A Comissão de Valores Mobiliários (CVM) realizará nesta terça-feira (29/9), a partir das 15h, sessão de julgamento dos seguintes processos administrativos ..."
+          "titulo": "Colegiado da CVM aceita proposta de Termo de Compromisso de mais ...",
+          "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/colegiado-da-cvm-aceita-proposta-de-termo-de-compromisso-de-mais-de-r-2-3-milhoes-em-caso-envolvendo-a-atual-tc-s-a",
+          "descricao": "13 hours ago · O Colegiado da CVM acompanhou a conclusão do parecer do CTC e rejeitou as propostas para celebração de Termo de Compromisso com Jaime Barrios da Costa, Pompílio ..."
         }
       ],
       "aviso_coleta": "",
@@ -1876,8 +1647,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "A negociação do contrato Futuro de S&P Merval será descontinuada a partir de 01/10/2026.",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "056-2026-VNC-Comunicado Externo ePUMA | Preservação de Foco em Boletas durante o Recebimento de Notícias",
@@ -1885,8 +1656,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "A nova configuração permite manter a interação contínua com a boleta em preenchimento na plataforma.",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "041-2026-PRE-Ofício Circular Alteração no Programa de Formador de Mercado para Produtos Indexados à Inflação (IPCA)",
@@ -1894,8 +1665,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "A partir de 03/11/2026, as Operações Casadas de DAP com NTN-B via plataforma Trademate deixarão de integrar o programa.",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "047-2026-VNC-Ofício Circular Prorrogação da alteração no término dos calls de fechamento dos ETFs de Renda Variável e Renda fixa",
@@ -1992,8 +1763,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "- Gravacao esta disponivel no canal da Agencia no YouTube Royalties",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "Royalties: valores referentes à produção de julho foram distribuídos hoje a estados e municípios",
@@ -2001,8 +1772,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "2° Workshop sobre Gas Release terá transmissão ao vivo pelo canal da ANP no YouTube",
@@ -2010,8 +1781,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "Balanço semanal: ANP participa de Operação Carga Pesada, em parceria com a Senacon, de 23 a 25/9",
@@ -2956,7 +2727,7 @@
       "publicacoes_listadas": null,
       "status": "ok",
       "erro": "",
-      "chars_pagina": 5059,
+      "chars_pagina": 2415,
       "busca_pedida": false,
       "busca_executada": false,
       "descobertas": [],
@@ -2977,6 +2748,15 @@
       "estruturado": true,
       "publicacoes": [
         {
+          "titulo": "ANEEL, ONS e EPE divulgam nota técnica sobre capacidade para conexão de sistemas de armazenamento nos Leilões de Reserva de Capacidade 2026",
+          "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-ons-e-epe-divulgam-nota-tecnica-sobre-capacidade-para-conexao-de-sistemas-de-armazenamento-nos-leiloes-de-reserva-de-capacidade-2026",
+          "data": "2026-09-30",
+          "hora": "",
+          "descricao": "- Documento encontra-se disponivel nos portais oficiais da ANEEL, ONS e da EPE Energia, Minerais e Combustiveis",
+          "na_janela": true,
+          "enviar": true
+        },
+        {
           "titulo": "ANEEL firma acordo para formar Agentes Comunitários de Energia na Amazônia Legal",
           "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-firma-acordo-para-formar-agentes-comunitarios-de-energia-na-amazonia-legal",
           "data": "2026-09-30",
@@ -2991,8 +2771,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "- ANEEL recebera contribuicoes de 1º a 30 de outubro Distribuicao",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "ANEEL nega recurso da Enel SP contra decisão que indeferiu perícia técnica relacionada aos eventos climáticos extremos",
@@ -3000,8 +2780,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "- Com a decisao, fica encerrada a fase instrutoria do procedimento administrativo tendente a caducidade da concessao. ELEICAO",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "Eleições 2026: ANEEL determina planos especiais de atendimento para garantir energia durante o período",
@@ -3009,8 +2789,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "- As distribuidoras de energia devem ter atencao especial aos locais de votacao, aos tribunais regionais eleitorais e ao Tribunal Superior Eleitoral (TSE), alem do atendimento em toda a area de concessao. Tarifas",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "Outubro terá bandeira verde: contas de luz sem custo extra",
@@ -3233,16 +3013,7 @@
           "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-mantem-bandeira-tarifaria-amarela-em-setembro",
           "data": "2026-08-28",
           "hora": "",
-          "descricao": "- Condicoes menos favoraveis de geracao de energia mantem cobranca adicional de R$ 1,885 na conta de luz a cada 100 quilowatts-hora (kWh) consumidos TARIFAS",
-          "na_janela": false,
-          "enviar": false
-        },
-        {
-          "titulo": "Revisão tarifária da Neoenergia Distribuição Brasília é discutida durante Audiência Pública",
-          "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/revisao-tarifaria-da-neoenergia-distribuicao-brasilia-e-discutida-durante-audiencia-publica",
-          "data": "2026-08-27",
-          "hora": "",
-          "descricao": "- A sessao contou com a participacao de cerca de 40 pessoas. Interessados podem enviar contribuicoes ao processo por e-mail ate 12/9. « Anterior 1 : [ por Tw",
+          "descricao": "- Condicoes menos favoraveis de geracao de energia mantem cobranca adicional de R$ 1,885 na conta de luz a cada 100 quilowatts-hora (kWh) consumidos « Anterior 1 : [Com",
           "na_janela": false,
           "enviar": false
         }
@@ -3250,7 +3021,7 @@
       "publicacoes_listadas": 30,
       "status": "ok",
       "erro": "",
-      "chars_pagina": 13168,
+      "chars_pagina": 13214,
       "busca_pedida": false,
       "busca_executada": false,
       "descobertas": [],
@@ -3278,8 +3049,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "União Europeia publica relatório final de auditoria no Brasil que avaliou a produção de carne de aves e de mel",
@@ -3553,52 +3324,52 @@
         {
           "titulo": "Notificação de suspeitas de doenças em animais",
           "url": "https://www.gov.br/agricultura/pt-br/sisbravet/",
-          "descricao": "1 day ago · Serviço Veterinário Oficial de ocorrências de determinadas doenças animais é de fundamental importância para a proteção da pecuária nacional"
+          "descricao": "6 hours ago · A notificação imediata ao Serviço Veterinário Oficial de ocorrências de determinadas doenças animais é de fundamental importância para a proteção da pecuária ..."
         },
         {
-          "titulo": "Imprensa — Ministério da Agricultura e Pecuária - Portal Gov.br",
-          "url": "https://www.gov.br/agricultura/pt-br/canais_atendimento/area-de-imprensa",
-          "descricao": "1 day ago · Ministério da Agricultura e Pecuária (Mapa). Email: imprensa@agro.gov.br (61) 3218-2708 Esplanada dos Ministérios. CEP: 70.043-900"
+          "titulo": "AVISO DE LICITAÇÃO - PREGÃO ELETRÔNICO - Edital nº 181/2026",
+          "url": "https://www.gov.br/agricultura/pt-br/acesso-a-informacao/licitacoes-e-contratos/edital/2026/aviso-de-licitacao-pregao-eletronico-edital-no-181-2026",
+          "descricao": "7 hours ago · Objeto: Contratação de serviços contínuos de engenharia, mediante disponibilização de equipe técnica residente, em regime de dedicação exclusiva de mão"
         },
         {
-          "titulo": "CONTRATO Nº 66/2026 - SERVIÇOS CONTÍNUOS DE SUPERVISORES ...",
-          "url": "https://www.gov.br/agricultura/pt-br/acesso-a-informacao/licitacoes-e-contratos/contratos/mapa-sede/2026/contrato-no-66-2026-servicos-continuos-de-supervisores-administrativos-e-engenheiros",
-          "descricao": "1 day ago · Objeto: Contratação de serviços contínuos de supervisores administrativos e engenheiros, a serem executados com regime de dedicação exclusiva de mão de obra."
+          "titulo": "Relatorio_Final_GT.pdf — Ministério da Agricultura e Pecuária",
+          "url": "https://www.gov.br/agricultura/pt-br/campanhas/el-nino-agro/relatorio_final_gt.pdf/view",
+          "descricao": "14 hours ago · Relatorio_Final_GT.pdf ・ à Informação Institucional Estrutura Organizacional Comissão de Ética O Ministério Vinculadas, Autarquias e Outros ・ a sua experiê ..."
         },
         {
-          "titulo": "agroinsight animal 04/2025 — Ministério da Agricultura e Pecuária",
-          "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/nigeria/NIGRIAMERCADOEPRODUODEOVOSNANIGRIA.pdf/view",
-          "descricao": "23 hours ago · agroinsight animal 04/2025. O Ministério Vinculadas, Autarquias. Atendimento Agendas de Autoridades Atos Normativos Ações e Programas Programas, Projetos, Açõ ..."
+          "titulo": "Painel El Niño Inmet — Ministério da Agricultura e Pecuária - Portal Gov.br",
+          "url": "https://www.gov.br/agricultura/pt-br/campanhas/el-nino-agro/painel-el-nino-inmet",
+          "descricao": "13 hours ago · Painel El Niño Inmet ; Painel El Niño Setembro/2026 - Edição 4, Arquivo, 30/09/2026 18h25 ; Painel El Niño Agosto/2026 - Edição 3, Arquivo, 30/09/2026 18h25."
         },
         {
-          "titulo": "agroinsight vegetal 04/2025 — Ministério da Agricultura e Pecuária",
-          "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/china/CHINAMERCADOCHINSDEPRODUTOSDEORIGEMVEGETALSUSTENTVEISEOPORTUNIDADESDOBRASILPARAAEXPORTAODECASTANHAS.pdf/view",
-          "descricao": "23 hours ago · Institucional · Estrutura Organizacional · Ações e Programas · Programas, Projetos, Ações, Obras e Atividades · Participação Social · Ouvidoria · Auditorias."
+          "titulo": "Painel-El-Niño 4 Edição.pdf — Ministério da Agricultura e Pecuária",
+          "url": "https://www.gov.br/agricultura/pt-br/campanhas/el-nino-agro/painel-el-nino-4-edicao.pdf/view",
+          "descricao": "16 hours ago · Painel-El-Niño 4 Edição.pdf. Agendas de Autoridades Atos Normativos Ações e Programas Programas, Projetos, Ações, Obras e"
         },
         {
-          "titulo": "agroinsight vegetal 04/2025 — Ministério da Agricultura e Pecuária",
-          "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/indonesia/INDONSIAOMERCADODEVINHOSNAINDONSIA.pdf/view",
-          "descricao": "23 hours ago · Você está aqui: Página Inicial Assuntos Relações Internacionais Adidos Agrícolas Indonésia agroinsight vegetal 04/2025."
+          "titulo": "catalogo.pdf — Ministério da Agricultura e Pecuária - Portal Gov.br",
+          "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/eventos-internacionais/feiras-internacionais/viv-africa/catalogo.pdf/view",
+          "descricao": "14 hours ago · Ministério Vinculadas, Autarquias. Agendas de Autoridades Atos Normativos Ações e Programas Programas, Projetos, Ações, Obras"
         },
         {
-          "titulo": "agroinsight vegetal 04/2025 — Ministério da Agricultura e Pecuária",
-          "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/russia/copy2_of_RSSIACOMRCIODEPRODUTOSVEGETAISNARSSIA.pdf/view",
-          "descricao": "23 hours ago · Empresas e Negócios … agroinsight vegetal 04/2025 Info. Para melhorar a sua experiência na plataforma e prover serviços personalizados, , você terá acesso a ..."
+          "titulo": "Malasia__30_09_2026.xlsx — Ministério da Agricultura e Pecuária",
+          "url": "https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-animal/empresario/divisao-habilitacao-certificacao/malasia-1/Malasia__30_09_2026.xlsx/view",
+          "descricao": "21 hours ago · MALÁSIA Malasia__30_09_2026.xlsx. Para melhorar a sua experiência na plataforma e prover serviços personalizados, utilizamos cookies."
         },
         {
-          "titulo": "agroinsight vegetal 04/2025 — Ministério da Agricultura e Pecuária",
-          "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/india/NDIAARROZEANDIA_UMAVISOGERAL.pdf/view",
-          "descricao": "23 hours ago · Ministério Vinculadas, ário de Atendimento Agendas de Autoridades Atos Normativos Ações e Programas Programas, Projetos, Ações, Obras"
+          "titulo": "Uniao Europeia 29_09_2026 — Ministério da Agricultura e Pecuária",
+          "url": "https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-animal/empresario/divisao-habilitacao-certificacao/uniao-europeia-1/Uniao_Europeia_29_09_26.xlsx/view",
+          "descricao": "23 hours ago · Você está aqui: Página Inicial Assuntos Inspeção Produtos de Origem Animal Empresário Habilitação e Certificação UNIÃO EUROPEIA Uniao Europeia 29_09_2026."
         },
         {
-          "titulo": "agroinsight animal 04/2025 — Ministério da Agricultura e Pecuária",
-          "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/mexico/MXICOMXICOUMGRANDECONSUMIDORDECARNEDEPERUQUEIMPORTA89DOQUECONSOME.pdf/view",
-          "descricao": "23 hours ago · Para melhorar a sua experiência na plataforma e prover serviços personalizados, utilizamos cookies. Ao aceitar, você terá acesso a todas as funcionalidades do ..."
+          "titulo": "Painel El Niño Setembro/2026 - Edição 4",
+          "url": "https://www.gov.br/agricultura/pt-br/campanhas/el-nino-agro/painel-el-nino-inmet/painel-el-nino-4-edicao.pdf/view",
+          "descricao": "16 hours ago · Painel El Niño Setembro/2026 - Edição 4. Publicado em 30/09/2026 15h50 Atualizado em 30/09/2026 18h25. application/pdf Painel-El-Niño 4 Edição.pdf — 2748 KB."
         },
         {
-          "titulo": "agroinsight animal 04/2025 — Ministério da Agricultura e Pecuária",
-          "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/singapura/SINGAPURASINGAPURA_PETFOODUMMERCADOEMASCENSO.pdf/view",
-          "descricao": "23 hours ago · Você está aqui: Página Inicial Assuntos Relações Internacionais Adidos Agrícolas Singapura agroinsight animal 04/2025."
+          "titulo": "Painel El Niño Julho/2026 - Edição 2 — Ministério da Agricultura e ...",
+          "url": "https://www.gov.br/agricultura/pt-br/campanhas/el-nino-agro/painel-el-nino-inmet/painel-el-nino-2edicaofinal-2.pdf/view",
+          "descricao": "13 hours ago · Painel El Niño Julho/2026 - Edição 2. Publicado em 30/09/2026 18h16 Atualizado em 30/09/2026 18h25. application/pdf Painel-El-Niño-2edicaofinal - 2.pdf ..."
         }
       ],
       "aviso_coleta": "",
@@ -3645,8 +3416,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "Evento será realizado no dia 8/10, às 15h. Participe!",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "Vigilâncias Sanitárias: veja o que muda no acesso e no uso do SNCR",
@@ -3654,8 +3425,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "Novo cadastro de usuários e atribuição de numerações para Notificações de Receita eletrônicas entram em vigor em 30 de setembro",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "Acompanhe a 18ª Reunião Ordinária Pública da Diretoria Colegiada da Anvisa",
@@ -3663,8 +3434,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "Encontro será transmitido ao vivo a partir das 9h30 desta quarta-feira (30/9)",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "SNCR: perfis de acesso ao sistema estão disponíveis no cadastro Anvisa a partir desta terça (29/9)",
@@ -3672,8 +3443,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "Responsáveis legais pelo cadastro de farmácias, drogarias e vigilâncias sanitárias devem estar habilitados no Sistema Nacional de Controle de Receituários até 30 de setembro de 2026",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "CMED divulga 9° edição do Anuário Estatístico do Mercado Farmacêutico",
@@ -3923,8 +3694,8 @@
           "data": "2026-09-29",
           "hora": "13h44",
           "descricao": "",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "INPI reconhece a Indicação Geográfica para a renda renascença de Poção (PE)",
@@ -3932,8 +3703,8 @@
           "data": "2026-09-29",
           "hora": "08h14",
           "descricao": "tags: publicado Noticia tags: publicado Noticia tags: publicado Noticia",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "INPI reconhece a Indicação Geográfica para a bebida tiquira do Maranhão",
@@ -4506,8 +4277,8 @@
           "data": "2026-09-29",
           "hora": "17h01",
           "descricao": "Evento realizado em Belem reuniu especialistas brasileiros e estrangeiros e trouxe discussoes sobre gestao de riscos, monitoramento, governanca e tecnologias aplicadas a fiscalizacao tags: publicado Noticia",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "Parceria prevê pesquisa e formação em minerais críticos",
@@ -4515,8 +4286,8 @@
           "data": "2026-09-29",
           "hora": "14h32",
           "descricao": "Grupo Ser Educacional e Associacao de Minerais Criticos assinaram protocolo de intencoes em Brasilia; diretor da ANM destacou a importancia de agregar valor aos recursos minerais no pais tags: publicado Noticia",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "Publicada lista provisória de municípios afetados pela atividade de mineração",
@@ -4770,6 +4541,15 @@
       "estruturado": true,
       "publicacoes": [
         {
+          "titulo": "EPE, ONS E ANEEL divulgam nota tecnica que contempla os quantitativos da capacidade remanescente para conexao de sistemas de armazenamento de energia no ambito dos leiloes de reserva de capacidade 202",
+          "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-ons-e-aneel-divulgam-nota-tecnica-que-contempla-os-quantitativos-da-capacidade-remanescente-para-conexao-de-sistemas-de-armazenamento-de-energia-no-ambito-dos-leiloes-de-reserva-de-capacidade-2026",
+          "data": "2026-09-30",
+          "hora": "",
+          "descricao": "- O Operador Nacional do Sistema Eletrico (ONS) divulga hoje, dia 30/09, em conjunto com a Agencia Nacional de Energia Eletrica (ANEEL) e a Empresa de Pesquisa Energetica (EPE) a Nota Tecnica NT-ONS DPL 0095/2026. O documento apresenta os quantitativos da Capacidade Remanescente do Sistema Interliga",
+          "na_janela": true,
+          "enviar": true
+        },
+        {
           "titulo": "EPE lança Nota Técnica sobre a movimentação de hidrogênio de baixa emissão de carbono em infraestruturas de transporte de gás natural​",
           "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-lanca-nota-tecnica-sobre-a-movimentacao-de-hidrogenio-de-baixa-emissao-de-carbono-em-infraestruturas-de-transporte-de-gas-natural-",
           "data": "2026-09-30",
@@ -4820,8 +4600,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "- A Empresa de Pesquisa Energetica (EPE) lancou o Caderno de Estudos \"Estimativa Volumetrica da Bacia Pelotas\" durante a Rio Oil & Gas (ROG.e) 2026, evento realizado no Rio de Janeiro entre os dias 21 e 24 de setembro. O estudo integra um projeto de analises das Bacias Sedimentares brasileiras, inic",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "EPE participa do Smart Energy 2026",
@@ -4849,21 +4629,12 @@
           "descricao": "- O segundo dia de ROG.e contou com a participacao do presidente da EPE, Thiago Prado, na mesa “Implementacao das politicas publicas e regulamentos para diversidade energetica e solucoes de baixo carbono no Brasil\". Um dos maiores eventos sobre oleo e gas da America Latina, a ROG.e foi realizada de",
           "na_janela": false,
           "enviar": false
-        },
-        {
-          "titulo": "EPE debate riscos e oportunidades do setor de energia no BB Corporate Connections",
-          "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-debate-riscos-e-oportunidades-do-setor-de-energia-no-bb-corporate-connections",
-          "data": "2026-09-25",
-          "hora": "",
-          "descricao": "- No dia 23 de setembro, a Empresa de Pesquisa Energetica (EPE) esteve presente, em Sao Paulo, na edicao de 2026 do BB Corporate Connections Energia, evento anual do Banco do Brasil no qual foram debatidos riscos (taxas de juros globais, geopolitica, inteligencia artificial, clima) e oportunidades (",
-          "na_janela": false,
-          "enviar": false
         }
       ],
       "publicacoes_listadas": 10,
       "status": "ok",
       "erro": "",
-      "chars_pagina": 11507,
+      "chars_pagina": 12421,
       "busca_pedida": false,
       "busca_executada": false,
       "descobertas": [],
@@ -4891,8 +4662,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "- Encontro sobre o Tema 2.6 da Agenda Regulatoria sera realizado em 08/10, as 15h; prazo para envio de contribuicoes permanece ate 20/10 Tags:",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "Uso de drones amplia recursos para fiscalização do transporte aquaviário",
@@ -5350,54 +5121,9 @@
           "descricao": "Rolar para cima Entre em contato! Os cookies necessarios sao cruciais para as funcoes basicas do site e o site nao funcionara como pretendido sem eles. Esses cookies nao armazenam nenhum dado pessoalmente identificavel. Aceitar",
           "na_janela": false,
           "enviar": false
-        },
-        {
-          "titulo": "Notários e registradores capixabas encerram Congresso Internacional da Emes com tema “prova extrajudicial”",
-          "url": "https://sinoreg-es.org.br/notarios-e-registradores-capixabas-encerram-congresso-internacional-da-emes-com-tema-prova-extrajudicial/",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "A produção, a valoração e o uso da prova extrajudicial na atividade notarial e registral foram tema do último painel […]",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "CNJ apresenta proposta para registros de mortes em contexto de ação de órgãos de segurança",
-          "url": "https://sinoreg-es.org.br/cnj-apresenta-proposta-para-registros-de-mortes-em-contexto-de-acao-de-orgaos-de-seguranca/",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "O Conselho Nacional de Justiça (CNJ) apresentou, nesta terça-feira (29/9), proposta de resolução que cria regras nacionais para que os […]",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "CCJ pode votar mudança na contagem de prazos para agilizar inventários",
-          "url": "https://sinoreg-es.org.br/ccj-pode-votar-mudanca-na-contagem-de-prazos-para-agilizar-inventarios/",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "A Comissão de Constituição e Justiça (CCJ) pode votar o projeto (PL 2260/2025) que busca acelerar os inventários judiciais. Os […]",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "Artigo – Prescrição da pretensão punitiva disciplinar contra notários e registradores após a lei 15.509/26",
-          "url": "https://sinoreg-es.org.br/artigo-prescricao-da-pretensao-punitiva-disciplinar-contra-notarios-e-registradores-apos-a-lei-15-509-26/",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Por Cintia Rosa Pereira de Lima, Edson Rodrigo Neves e Robson Passos Caires Introdução A lei 8.935/1994 disciplinou as infrações, […]",
-          "na_janela": true,
-          "enviar": true
-        },
-        {
-          "titulo": "Inteligência Artificial pode tornar os serviços dos Cartórios de Registro Civil mais ágeis",
-          "url": "https://sinoreg-es.org.br/inteligencia-artificial-pode-tornar-os-servicos-dos-cartorios-de-registro-civil-mais-ageis/",
-          "data": "2026-09-29",
-          "hora": "",
-          "descricao": "Ferramentas como a ARIA apoiam a consulta e a organização de informações, reduzem tarefas repetitivas e ajudam a aprimorar a […]",
-          "na_janela": true,
-          "enviar": true
         }
       ],
-      "publicacoes_listadas": 15,
+      "publicacoes_listadas": 10,
       "status": "ok",
       "erro": "",
       "chars_pagina": 4221,
@@ -5733,8 +5459,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "Proposta regulamenta credenciamento de responsáveis pelos procedimentos e envio e divulgação de informações sobre conflitos resolvidos por meios alternativos",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "Susep abre consultas públicas para revisão da regulamentação de títulos de capitalização",
@@ -5742,8 +5468,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "Propostas integram o Plano de Regulação 2026 e incorporam resultados das Análises de Impacto Regulatório realizadas pela Autarquia",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "Susep coloca em consulta pública proposta de regulamentação dos procedimentos operacionais de resseguro",
@@ -5751,8 +5477,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "Minuta atualiza regras atualmente previstas na Circular Susep nº 683/2022 e adequa procedimentos à nova regulamentação do setor",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "Presidente sanciona lei que altera regras tributárias para resseguradoras locais",
@@ -5760,8 +5486,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "Lei nº 15.525/2026 reduz a alíquota da CSLL aplicável às resseguradoras locais e promove outras alterações tributárias",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "Susep divulga relatório final do Grupo de Trabalho Seguro Catástrofe",
@@ -6047,8 +5773,8 @@
           "data": "2026-09-29",
           "hora": "",
           "descricao": "- Projeto na Rodovia Presidente Dutra integra acoes de eletromobilidade, conexao com o Porto de Itaguai, seguranca viaria, sustentabilidade e desenvolvimento territorial ROTA DOS SERTOES | CONCESSAO RODOVIARIA",
-          "na_janela": true,
-          "enviar": true
+          "na_janela": false,
+          "enviar": false
         },
         {
           "titulo": "ANTT aprova emissão do Ato de Outorga da Rota dos Sertões e autoriza assinatura do contrato",

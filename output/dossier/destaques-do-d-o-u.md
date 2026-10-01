@@ -87,29 +87,25 @@ PESQUISAR
 
 ## Leitura Jornal
 
-- [SEÇÃO 1](https://www.in.gov.br/leiturajornal?data=30-09-2026&secao=do1)
+- [SEÇÃO 1](https://www.in.gov.br/leiturajornal?data=01-10-2026&secao=do1)
 SUPLEMENTO
 
 EDIÇÃO EXTRA
 
 EDIÇÃO ESPECIAL
 ATOS NORMATIVOS
-- [SEÇÃO 2](https://www.in.gov.br/leiturajornal?data=30-09-2026&secao=do2)
+- [SEÇÃO 2](https://www.in.gov.br/leiturajornal?data=01-10-2026&secao=do2)
 EDIÇÃO EXTRA
 
 EDIÇÃO ESPECIAL
 ATOS DE PESSOAL
-- [SEÇÃO 3](https://www.in.gov.br/leiturajornal?data=30-09-2026&secao=do3)
+- [SEÇÃO 3](https://www.in.gov.br/leiturajornal?data=01-10-2026&secao=do3)
 EDIÇÃO EXTRA
 CONTRATOS, EDITAIS E AVISOS
 
 Selecione o dia desejado
 
 ## Daypicker BuscaDOU
-
-- 27
-
-dom.
 
 - 28
 
@@ -135,113 +131,133 @@ sex.
 
 sáb.
 
+- 4
+
+dom.
+
 
 ## Leitura DOU
 
 VOCÊ ESTÁ VENDO:
 
-Seção 1, dia 30 de setembro de 2026
+Seção 1, dia 1 de outubro de 2026
 
 VISUALIZAR EM LISTA
 VISUALIZAR EM SUMÁRIO
 VERSÃO CERTIFICADA DIÁRIO COMPLETO
 
-Selecionar Organização PrincipalTodosAtos do Poder JudiciárioAtos do Poder LegislativoAtos do Poder ExecutivoPresidência da RepúblicaMinistério da Agricultura e PecuáriaMinistério da Ciência, Tecnologia e InovaçãoMinistério das ComunicaçõesMinistério da CulturaMinistério da DefesaMinistério do Desenvolvimento Agrário e Agricultura FamiliarMinistério do Desenvolvimento e Assistência Social, Família e Combate à FomeMinistério do Desenvolvimento, Indústria, Comércio e ServiçosMinistério dos Direitos Humanos e da CidadaniaMinistério da EducaçãoMinistério do Empreendedorismo, da Microempresa e da Empresa de Pequeno PorteMinistério do EsporteMinistério da FazendaMinistério da Gestão e da Inovação em Serviços PúblicosMinistério da Integração e do Desenvolvimento RegionalMinistério da Justiça e Segurança PúblicaMinistério de Minas e EnergiaMinistério das MulheresMinistério da Pesca e AquiculturaMinistério de Portos e AeroportosMinistério dos Povos IndígenasMinistério da Previdência SocialMinistério das Relações ExterioresMinistério da SaúdeMinistério do Trabalho e EmpregoMinistério dos TransportesBanco Central do BrasilDefensoria Pública da UniãoPoder LegislativoPoder JudiciárioEntidades de Fiscalização do Exercício das Profissões Liberais
+Selecionar Organização PrincipalTodosAtos do Poder ExecutivoPresidência da RepúblicaMinistério da Agricultura e PecuáriaMinistério das CidadesMinistério da Ciência, Tecnologia e InovaçãoMinistério das ComunicaçõesMinistério da CulturaMinistério da DefesaMinistério do Desenvolvimento Agrário e Agricultura FamiliarMinistério do Desenvolvimento e Assistência Social, Família e Combate à FomeMinistério do Desenvolvimento, Indústria, Comércio e ServiçosMinistério dos Direitos Humanos e da CidadaniaMinistério da EducaçãoMinistério do EsporteMinistério da FazendaMinistério da Gestão e da Inovação em Serviços PúblicosMinistério da Igualdade RacialMinistério da Integração e do Desenvolvimento RegionalMinistério da Justiça e Segurança PúblicaMinistério do Meio Ambiente e Mudança do ClimaMinistério de Minas e EnergiaMinistério da Pesca e AquiculturaMinistério do Planejamento e OrçamentoMinistério de Portos e AeroportosMinistério da Previdência SocialMinistério da SaúdeMinistério do Trabalho e EmpregoMinistério dos Transportes
 
-Selecionar Organização SubordinadaTodosAdvocacia-Geral da UniãoAgência Nacional de Aviação CivilAgência Nacional de Energia ElétricaAgência Nacional de MineraçãoAgência Nacional de TelecomunicaçõesAgência Nacional de Transportes AquaviáriosAgência Nacional de Transportes TerrestresAgência Nacional de Vigilância SanitáriaAgência Nacional de Águas e Saneamento BásicoAgência Nacional do Petróleo, Gás Natural e BiocombustíveisCONSELHO REGIONAL DE CONTABILIDADE DE RORAIMACONSELHO REGIONAL DE EDUCAÇÃO FÍSICA DA 20ª REGIÃOCONSELHO REGIONAL DE EDUCAÇÃO FÍSICA DA 3ª REGIÃOCONSELHO REGIONAL DE ENFERMAGEM DO PIAUÍCasa CivilComissão Nacional de Energia NuclearComissão de Valores MobiliáriosConselho Administrativo de Defesa EconômicaConselho Administrativo de Recursos FiscaisConselho Federal de BiblioteconomiaConselho Federal de EnfermagemConselho Federal de FarmáciaConselho Federal de Medicina VeterináriaConselho Federal de OdontologiaConselho Nacional de Controle de Experimentação AnimalConselho Nacional de EducaçãoConselho Regional de Contabilidade de Minas GeraisConselho Regional de Educação Física da 11ª RegiãoConselho Regional de Educação Física da 7ª RegiãoConselho Regional de Medicina do Estado do Rio Grande do SulCâmara dos DeputadosDepartamento Nacional de Infraestrutura de TransportesDiretoria ColegiadaEstado-Maior Conjunto das Forças ArmadasFundação Coordenação de Aperfeiçoamento de Pessoal de Nível SuperiorFundação Cultural PalmaresFundação Nacional de SaúdeGabinete da Defensora Pública-Geral FederalGabinete da MinistraGabinete do MinistroInstituto Federal de Educação, Ciência e Tecnologia CatarinenseInstituto Nacional da Propriedade IndustrialInstituto Nacional de Colonização e Reforma AgráriaInstituto Nacional de Estudos e Pesquisas Educacionais Anísio TeixeiraInstituto Nacional de Tecnologia da InformaçãoPolícia FederalSecretaria Especial da Receita Federal do BrasilSecretaria ExecutivaSecretaria Nacional de Direitos DigitaisSecretaria Nacional de JustiçaSecretaria Nacional de Proteção e Defesa CivilSecretaria Nacional de Transporte RodoviárioSecretaria de Atenção Especializada à SaúdeSecretaria de Ciência, Tecnologia e Inovação em SaúdeSecretaria de Comércio ExteriorSecretaria de Desenvolvimento Industrial, Inovação, Comércio e ServiçosSecretaria de Fomento e Incentivo à CulturaSecretaria de Inspeção do TrabalhoSecretaria de RadiodifusãoSecretaria de Regulação e Supervisão da Educação SuperiorSecretaria de Relações do TrabalhoSecretaria do AudiovisualSecretaria do Tesouro NacionalSuperintendência Nacional de Previdência ComplementarSuperintendência de Seguros PrivadosSuperintendência do Desenvolvimento do NordesteSupremo Tribunal FederalTribunal Regional do Trabalho da 10ª RegiãoTribunal Regional do Trabalho da 11ª RegiãoTribunal Regional do Trabalho da 13ª RegiãoUniversidade Federal de Itajubá
+Selecionar Organização SubordinadaTodosAgência Nacional de Aviação CivilAgência Nacional de Energia ElétricaAgência Nacional de MineraçãoAgência Nacional de Saúde SuplementarAgência Nacional de TelecomunicaçõesAgência Nacional de Transportes AquaviáriosAgência Nacional de Transportes TerrestresAgência Nacional de Vigilância SanitáriaAgência Nacional do Petróleo, Gás Natural e BiocombustíveisCasa CivilComando da MarinhaComissão Técnica Nacional de BiossegurançaComissão de Financiamentos ExternosComissão de Valores MobiliáriosConselho Administrativo de Defesa EconômicaConselho Nacional de Controle de Experimentação AnimalConselho Nacional de Política FazendáriaDepartamento Nacional de Infraestrutura de TransportesFundação Universidade Federal de SergipeFundação Universidade Federal de ViçosaGabinete da MinistraGabinete do MinistroInstituto Benjamin ConstantInstituto Chico Mendes de Conservação da BiodiversidadeInstituto Nacional de Colonização e Reforma AgráriaInstituto Nacional de Estudos e Pesquisas Educacionais Anísio TeixeiraInstituto Nacional de Metrologia, Qualidade e TecnologiaPolícia FederalPolícia Rodoviária FederalSecretaria Especial da Receita Federal do BrasilSecretaria ExecutivaSecretaria Extraordinária de Combate à Pobreza e à FomeSecretaria Nacional de Direitos DigitaisSecretaria Nacional de JustiçaSecretaria Nacional de Proteção e Defesa CivilSecretaria de Atenção Especializada à SaúdeSecretaria de Defesa AgropecuáriaSecretaria de Educação BásicaSecretaria de Fomento e Incentivo à CulturaSecretaria de Gestão do Trabalho e da Educação na SaúdeSecretaria de Inspeção do TrabalhoSecretaria de Orçamento FederalSecretaria de RadiodifusãoSecretaria de Regulação e Supervisão da Educação SuperiorSecretaria de Relações do TrabalhoSecretaria do Patrimônio da UniãoSecretaria-GeralSuperintendência Nacional de Previdência ComplementarSuperintendência de Seguros PrivadosUniversidade Federal de ItajubáUniversidade Federal de UberlândiaUniversidade Federal do Norte do TocantinsUniversidade Federal do Triângulo Mineiro
 
-Selecionar Tipo do AtoTodosAcórdãoAlvaráAtaAtoAto DeclaratórioAutorizaçãoAviso de Consulta PúblicaAção Direta de Inconstitucionalidade e Ação Declaratória de ConstitucionalidadeCircularDecisãoDecreto numeradoDeliberaçãoDespachoEstatutoExtrato de Parecer TécnicoLeiMensagemPautaPortariaPortaria ConjuntaRelatóriosResoluçãoRetificaçãoSolução de ConsultaSúmula
+Selecionar Tipo do AtoTodosAcórdãoArestoAtoAto DeclaratórioAto NormativoDecisãoDecreto numeradoDeliberaçãoDespachoExtrato de Parecer TécnicoPautaPortariaResoluçãoRetificação
 
 LIMPAR TODOS OS FILTROSRETRAIR TUDO
 
 - 1. Seção 1
-2. Atos do Poder Judiciário
-3. Supremo Tribunal Federal
-4. Plenário
-5. Edição Nº 185 de 30/09/2026 - Pág. 1
-
-##### [DECISÕES](https://www.in.gov.br/web/dou/-/decisoes-735381836)
-
-DECISÕES Ação Direta de Inconstitucionalidade e Ação Declaratória de Constitucionalidade (Publicação determinada pela Lei nº 9.868, de 10.11.1999) ADI 4376 Mérito Relator(a):Min. Gilmar Mendes Público Plenário Seção Especial - ADIN/ADC Divulgação 28/09/2026 19:00 REQUERENTE(S): Confederacao Nacional do Comercio de Bens, Servicos e Turismo - Cnc ADVOGADO(A/S): Orlando Spinetti de Santa Rita Matta e...
-
-- 1. Seção 1
-2. Atos do Poder Legislativo
-3. Edição Nº 185 de 30/09/2026 - Pág. 2
-
-##### [LEI Nº 15.526, DE 29 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/lei-n-15.526-de-29-de-setembro-de-2026-735384105)
-
-LEI Nº 15.526, DE 29 DE SETEMBRO DE 2026 Altera a Lei nº 8.171, de 17 de janeiro de 1991, a Lei nº 10.823, de 19 de dezembro de 2003, e a Lei Complementar nº 137, de 26 de agosto de 2010, para aperfeiçoar o marco legal do seguro rural. O PRESIDENTE DA REPÚBLICA Faço saber que o Congresso Nacional decreta e eu sanciono a seguinte Lei: Art. 1º Esta Lei altera a Lei nº 8.171, de 17 de janeiro de 1991...
-
-- 1. Seção 1
 2. Atos do Poder Executivo
-3. Edição Nº 185 de 30/09/2026 - Pág. 4
+3. Edição Nº 186 de 01/10/2026 - Pág. 1
 
-##### [DECRETO Nº 13.129, DE 29 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/decreto-n-13.129-de-29-de-setembro-de-2026-735391514)
+##### [DECRETO Nº 13.131, DE 30 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/decreto-n-13.131-de-30-de-setembro-de-2026-735702683)
 
-DECRETO Nº 13.129, DE 29 DE SETEMBRO DE 2026 Altera o Decreto nº 11.703, de 14 de setembro de 2023, que remaneja, em caráter temporário, cargos em comissão e funções de confiança para o Ministério da Fazenda. O PRESIDENTE DA REPÚBLICA, no uso da atribuição que lhe confere o art. 84,caput, inciso VI, alínea "a", da Constituição, D E C R E T A : Art. 1º O Decreto nº 11.703, de 14 de setembro de 2023...
-
-- 1. Seção 1
-2. Presidência da República
-3. Edição Nº 185 de 30/09/2026 - Pág. 4
-
-##### [DESPACHO DO PRESIDENTE DA REPÚBLICA](https://www.in.gov.br/web/dou/-/despacho-do-presidente-da-republica-735389573)
-
-DESPACHO DO PRESIDENTE DA REPÚBLICA MINISTÉRIO DA FAZENDA Exposição de Motivos Interministerial nº 2.135, de 28 setembro de 2026 (em conjunto com a Controladoria-Geral da União). Relatório de Gestão Fiscal do Poder Executivo federal, referente ao período de janeiro a agosto de 2026. Aprovo. Em 29 de setembro de 2026.
-
-- 1. Seção 1
-2. Presidência da República
-3. Edição Nº 185 de 30/09/2026 - Pág. 11
-
-##### [DESPACHOS DO PRESIDENTE DA REPÚBLICA](https://www.in.gov.br/web/dou/-/despachos-do-presidente-da-republica-735356906)
-
-DESPACHOS DO PRESIDENTE DA REPÚBLICA MENSAGEM Nº 792, de 29 de setembro de 2026. Encaminhamento ao Congresso Nacional do Relatório de Gestão Fiscal referente ao 2º Quadrimestre de 2026. Nº 793, de 29 de setembro de 2026. Encaminhamento ao Tribunal de Contas da União do Relatório de Gestão Fiscal referente ao 2º Quadrimestre de 2026. Nº 794, de 29 de setembro de 2026. Senhor Presidente do Senado Fe...
+DECRETO Nº 13.131, DE 30 DE SETEMBRO DE 2026 Altera o Decreto nº 11.348, de 1º de janeiro de 2023, que aprova a Estrutura Regimental e o Quadro Demonstrativo dos Cargos em Comissão e das Funções de Confiança do Ministério da Justiça e Segurança Pública, e remaneja e transforma cargos em comissão e funções de confiança. O PRESIDENTE DA REPÚBLICA, no uso da atribuição que lhe confere o art. 84,caput...
 
 - 1. Seção 1
 2. Presidência da República
 3. Casa Civil
-4. Câmara-Executiva Federal de Identificação do Cidadão
-5. Edição Nº 185 de 30/09/2026 - Pág. 11
+4. Comitê do Rio Doce
+5. Edição Nº 186 de 01/10/2026 - Pág. 6
 
-##### [RESOLUÇÃO Nº 34, DE 15 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-n-34-de-15-de-setembro-de-2026-735389750)
+##### [RESOLUÇÃO CRD Nº 42, DE 23 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-crd-n-42-de-23-de-setembro-de-2026-735707400)
 
-RESOLUÇÃO Nº 34, DE 15 DE SETEMBRO DE 2026 Institui o Plano de Implantação do Serviço de Controle de Fluxo - SCF-CIN. O COORDENADOR DA CÂMARA-EXECUTIVA FEDERAL DE IDENTIFICAÇÃO DO CIDADÃO - CEFIC, no uso das atribuições que lhe confere o art. 6º, §1º, inc. IV, do Regimento Interno da Cefic, aprovado pela Resolução nº 10, de 6 de abril de 2023, torna público que a CÂMARA-EXECUTIVA FEDERAL DE IDENTI...
+RESOLUÇÃO CRD Nº 42, DE 23 DE SETEMBRO DE 2026 Dispõe sobre o procedimento de quitação das obrigações de fazer previstas no Anexo 19 - Transição e encerramento dos programas, medidas, responsabilidades e obrigações decorrentes do rompimento e seus desdobramentos ("Anexo 19"), sob fiscalização da Governança da UNIÃO no âmbito do Acordo Judicial para reparação integral e definitiva relativa ao rompi...
 
 - 1. Seção 1
 2. Presidência da República
 3. Casa Civil
-4. Câmara-Executiva Federal de Identificação do Cidadão
-5. Edição Nº 185 de 30/09/2026 - Pág. 12
+4. Comitê do Rio Doce
+5. Edição Nº 186 de 01/10/2026 - Pág. 6
 
-##### [RESOLUÇÃO Nº 35, DE 15 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-n-35-de-15-de-setembro-de-2026-735394686)
+##### [RESOLUÇÃO CRD Nº 41, DE 23 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-crd-n-41-de-23-de-setembro-de-2026-735706361)
 
-RESOLUÇÃO Nº 35, DE 15 DE SETEMBRO DE 2026 Altera a Resolução Cefic nº 33, de 3 de junho de 2026, para dispor sobre a atualização do Anexo I. O COORDENADOR DA CÂMARA-EXECUTIVA FEDERAL DE IDENTIFICAÇÃO DO CIDADÃO - CEFIC, no uso das atribuições que lhe confere o art. 6º, §1º, inc. IV, do Regimento Interno da Cefic, aprovado pela Resolução nº 10, de 6 de abril de 2023, torna público que a CÂMARA-EXE...
-
-- 1. Seção 1
-2. Presidência da República
-3. Advocacia-Geral da União
-4. Edição Nº 185 de 30/09/2026 - Pág. 12
-
-##### [PORTARIA NORMATIVA AGU Nº 237, DE 29 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-normativa-agu-n-237-de-29-de-setembro-de-2026-735407862)
-
-PORTARIA NORMATIVA AGU Nº 237, DE 29 DE SETEMBRO DE 2026 Estabelece critérios e orientações para a execução orçamentária e financeira, no âmbito da Advocacia-Geral da União, das programações oriundas de emendas parlamentares individuais, de bancada estadual ou do Distrito Federal, de comissão permanente da Câmara dos Deputados e do Senado Federal e de comissão mista permanente do Congresso Naciona...
+RESOLUÇÃO CRD Nº 41, DE 23 DE SETEMBRO DE 2026 Dispõe sobre a aprovação do Projeto de Intervenção "Execução da Verba de Apoio Familiar (VAF) da Comunidade Quilombola de Povoação", deliberado na 10ª Reunião Extraordinária de 2026 do Comitê do Rio Doce. APRESIDENTA DO COMITÊ DO RIO DOCE, substituta, no uso da atribuição que lhe confere o artigo 28, § 3º, do Decreto nº 12.412, de 18 de março de 2025,...
 
 - 1. Seção 1
 2. Ministério da Agricultura e Pecuária
-3. Gabinete do Ministro
-4. Edição Nº 185 de 30/09/2026 - Pág. 14
+3. Secretaria Executiva
+4. Subsecretaria de Governança das Superintendências
+5. Superintendência de Agricultura e Pecuária do Estado da Bahia
+6. Edição Nº 186 de 01/10/2026 - Pág. 7
 
-##### [PORTARIA MAPA Nº 957, DE 29 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-mapa-n-957-de-29-de-setembro-de-2026-735407702)
+##### [PORTARIA SFA-BA/MAPA Nº 1.034, DE 29 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-ba/mapa-n-1.034-de-29-de-setembro-de-2026-735708572)
 
-PORTARIA MAPA Nº 957, DE 29 DE SETEMBRO DE 2026 Estabelece critérios e orientações para a indicação, análise e execução, no exercício de 2027, de programações financiadas por emendas individuais, de bancada estadual e de comissão permanente, no âmbito do Ministério da Agricultura e Pecuária e de sua entidade vinculada. O MINISTRO DE ESTADO DA AGRICULTURA E PECUÁRIA, no uso das atribuições que lhe ...
+PORTARIA SFA-BA/MAPA Nº 1.034, DE 29 DE SETEMBRO DE 2026 O SUPERINTENDENTE FEDERAL DE AGRICULTURA E PECUÁRIA NO ESTADO DA BAHIA, no uso da competência conferida no art. 40 e no art. 49 do Anexo I ao Decreto nº 12.642, de 1º de outubro de 2025, e tendo em vista o disposto no art. nº 262 da Portaria nº 561, de 11 de abril de 2018, do Ministério da Agricultura e Pecuária, na Instrução Normativa nº 22...
 
 - 1. Seção 1
 2. Ministério da Agricultura e Pecuária
-3. Gabinete do Ministro
-4. Edição Nº 185 de 30/09/2026 - Pág. 14
+3. Secretaria Executiva
+4. Subsecretaria de Governança das Superintendências
+5. Superintendência de Agricultura e Pecuária do Estado de Santa Catarina
+6. Edição Nº 186 de 01/10/2026 - Pág. 7
 
-##### [PORTARIA MAPA Nº 956, DE 29 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-mapa-n-956-de-29-de-setembro-de-2026-735394607)
+##### [PORTARIA SFA-SC/MAPA Nº 1.398, DE 29 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-sc/mapa-n-1.398-de-29-de-setembro-de-2026-735715217)
 
-PORTARIA MAPA Nº 956, DE 29 DE SETEMBRO DE 2026 Altera o art. 44 da Portaria MAPA nº 788, de 14 de abril de 2025, que dispõe sobre a jornada de trabalho e o controle de frequência dos agentes públicos no âmbito do Ministério da Agricultura e Pecuária. O MINISTRO DE ESTADO DA AGRICULTURA E PECUÁRIA, no uso da atribuição que lhe confere o art. 87, parágrafo único, inciso II, da Constituição, e tendo...
+PORTARIA SFA-SC/MAPA Nº 1.398, DE 29 DE SETEMBRO DE 2026 O SUPERINTENDENTE DE AGRICULTURA E PECUÁRIA NO ESTADO DE SANTA CATARINA SUBSTITUTO, no uso das competências que lhe conferem o art. 40 e o art. 49 do Anexo I ao Decreto nº 12.642, de 1º de outubro de 2025, e o art. 262 do Anexo à Portaria nº 561, de 11 de abril de 2018, do Ministério da Agricultura e Pecuária, e tendo em vista o disposto no ...
+
+- 1. Seção 1
+2. Ministério da Agricultura e Pecuária
+3. Secretaria Executiva
+4. Subsecretaria de Governança das Superintendências
+5. Superintendência de Agricultura e Pecuária do Estado de Santa Catarina
+6. Edição Nº 186 de 01/10/2026 - Pág. 7
+
+##### [PORTARIA SFA-SC/MAPA Nº 1.401, DE 30 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-sc/mapa-n-1.401-de-30-de-setembro-de-2026-735707979)
+
+PORTARIA SFA-SC/MAPA Nº 1.401, DE 30 DE SETEMBRO DE 2026 O SUPERINTENDENTE DE AGRICULTURA E PECUÁRIA NO ESTADO DE SANTA CATARINA SUBSTITUTO, no uso das competências conferidas no art. 40 e no art. 49 do Anexo I ao Decreto nº 12.642, de 1º de outubro de 2025, no art. 262 do Anexo à Portaria nº 561, de 11 de abril de 2018, do Ministério da Agricultura e Pecuária, e tendo em vista o disposto no Decre...
+
+- 1. Seção 1
+2. Ministério da Agricultura e Pecuária
+3. Secretaria Executiva
+4. Subsecretaria de Governança das Superintendências
+5. Superintendência de Agricultura e Pecuária do Estado de São Paulo
+6. Edição Nº 186 de 01/10/2026 - Pág. 7
+
+##### [Portaria SFA-SP/MAPA Nº 1.010, DE 29 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-sp/mapa-n-1.010-de-29-de-setembro-de-2026-735706126)
+
+Portaria SFA-SP/MAPA Nº 1.010, DE 29 DE SETEMBRO DE 2026 O SUPERINTENDENTE DE AGRICULTURA E PECUÁRIA NO ESTADO DE SÃO PAULO - SUBSTITUTO, no uso das atribuições que lhe confere o art. 40 e o art. 49 do Anexo I ao Decreto nº 12.642, de 1º de outubro de 2025, o art. 262 do Anexo à Portaria nº 561, de 11 de abril de 2018, do Ministério da Agricultura e Pecuária, e tendo em vista o disposto na Instruç...
+
+- 1. Seção 1
+2. Ministério da Agricultura e Pecuária
+3. Secretaria Executiva
+4. Subsecretaria de Governança das Superintendências
+5. Superintendência de Agricultura e Pecuária do Estado do Espírito Santo
+6. Edição Nº 186 de 01/10/2026 - Pág. 7
+
+##### [Portaria SFA-ES Nº 569, DE 29 DE Setembro DE 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-es-n-569-de-29-de-setembro-de-2026-735712377)
+
+Portaria SFA-ES Nº 569, DE 29 DE Setembro DE 2026 O SUPERINTENDENTE DE AGRICULTURA E PECUÁRIA NO ESTADO DO ESPÍRITO SANTO, no uso das atribuições que lhe confere o art. 40 e o art. 49 do Anexo I ao Decreto no 12.642, de 1º de outubro de 2025, o art. 262 do Anexo à Portaria nº 561, de 11 de abril de 2018, do Ministério da Agricultura e Pecuária, e tendo em vista o disposto na Instrução Normativa nº...
+
+- 1. Seção 1
+2. Ministério da Agricultura e Pecuária
+3. Secretaria Executiva
+4. Subsecretaria de Governança das Superintendências
+5. Superintendência de Agricultura e Pecuária do Estado do Paraná
+6. Edição Nº 186 de 01/10/2026 - Pág. 8
+
+##### [PORTARIA SFA-PR/MAPA Nº 1.272, DE 29 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-pr/mapa-n-1.272-de-29-de-setembro-de-2026-735707322)
+
+PORTARIA SFA-PR/MAPA Nº 1.272, DE 29 DE SETEMBRO DE 2026 O SUPERINTENDENTE DE AGRICULTURA E PECUÁRIA NO PARANÁ, no uso das atribuições que lhe confere os artigos 40 e 49 do Anexo I do Decreto nº 12642, de 1º de outubro de 2025; o Art. 262 do Regimento Interno da Secretaria Executiva do Ministério da Agricultura e Pecuária, aprovado pela Portaria nº 561, de 11 de abril de 2018; e tendo em vista o d...
+
+- 1. Seção 1
+2. Ministério da Agricultura e Pecuária
+3. Secretaria Executiva
+4. Subsecretaria de Governança das Superintendências
+5. Superintendência de Agricultura e Pecuária do Estado do Piauí
+6. Edição Nº 186 de 01/10/2026 - Pág. 8
+
+##### [Portaria SFA-PI/SE/MAPA nº 171, de 30 de setembro de 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-pi/se/mapa-n-171-de-30-de-setembro-de-2026-735710671)
+
+Portaria SFA-PI/SE/MAPA nº 171, de 30 de setembro de 2026 O SUPERINTENDENTE FEDERAL DE AGRICULTURA E PECUÁRIA NO ESTADO DO PIAUÍ, no uso das atribuições que lhe confere o art. 292 do Regimento Interno da Secretaria Executiva do Ministério da Agricultura e Pecuária, aprovado pela Portaria nº 561, de 11 de abril de 2018, os arts. 40 e 49 do Anexo I ao Decreto nº 12.642, de 1º de outubro de 2025, o d...
 
 12345 **Próximo »**
 
@@ -252,12 +268,12 @@ REPORTAR ERRO
 
 <AnteriorPróximo>
 
-Set2026
+Out2026
 
 | Dom | Seg | Ter | Qua | Qui | Sex | Sáb |
 | --- | --- | --- | --- | --- | --- | --- |
-|  |  | [1](https://www.in.gov.br/leiturajornal#) | [2](https://www.in.gov.br/leiturajornal#) | [3](https://www.in.gov.br/leiturajornal#) | [4](https://www.in.gov.br/leiturajornal#) | [5](https://www.in.gov.br/leiturajornal#) |
-| [6](https://www.in.gov.br/leiturajornal#) | [7](https://www.in.gov.br/leiturajornal#) | [8](https://www.in.gov.br/leiturajornal#) | [9](https://www.in.gov.br/leiturajornal#) | [10](https://www.in.gov.br/leiturajornal#) | [11](https://www.in.gov.br/leiturajornal#) | [12](https://www.in.gov.br/leiturajornal#) |
-| [13](https://www.in.gov.br/leiturajornal#) | [14](https://www.in.gov.br/leiturajornal#) | [15](https://www.in.gov.br/leiturajornal#) | [16](https://www.in.gov.br/leiturajornal#) | [17](https://www.in.gov.br/leiturajornal#) | [18](https://www.in.gov.br/leiturajornal#) | [19](https://www.in.gov.br/leiturajornal#) |
-| [20](https://www.in.gov.br/leiturajornal#) | [21](https://www.in.gov.br/leiturajornal#) | [22](https://www.in.gov.br/leiturajornal#) | [23](https://www.in.gov.br/leiturajornal#) | [24](https://www.in.gov.br/leiturajornal#) | [25](https://www.in.gov.br/leiturajornal#) | [26](https://www.in.gov.br/leiturajornal#) |
-| [27](https://www.in.gov.br/leiturajornal#) | [28](https://www.in.gov.br/leiturajornal#) | [29](https://www.in.gov.br/leiturajornal#) | [30](https://www.in.gov.br/leiturajornal#) |  |  |  |
+|  |  |  |  | [1](https://www.in.gov.br/leiturajornal#) | [2](https://www.in.gov.br/leiturajornal#) | [3](https://www.in.gov.br/leiturajornal#) |
+| [4](https://www.in.gov.br/leiturajornal#) | [5](https://www.in.gov.br/leiturajornal#) | [6](https://www.in.gov.br/leiturajornal#) | [7](https://www.in.gov.br/leiturajornal#) | [8](https://www.in.gov.br/leiturajornal#) | [9](https://www.in.gov.br/leiturajornal#) | [10](https://www.in.gov.br/leiturajornal#) |
+| [11](https://www.in.gov.br/leiturajornal#) | [12](https://www.in.gov.br/leiturajornal#) | [13](https://www.in.gov.br/leiturajornal#) | [14](https://www.in.gov.br/leiturajornal#) | [15](https://www.in.gov.br/leiturajornal#) | [16](https://www.in.gov.br/leiturajornal#) | [17](https://www.in.gov.br/leiturajornal#) |
+| [18](https://www.in.gov.br/leiturajornal#) | [19](https://www.in.gov.br/leiturajornal#) | [20](https://www.in.gov.br/leiturajornal#) | [21](https://www.in.gov.br/leiturajornal#) | [22](https://www.in.gov.br/leiturajornal#) | [23](https://www.in.gov.br/leiturajornal#) | [24](https://www.in.gov.br/leiturajornal#) |
+| [25](https://www.in.gov.br/leiturajornal#) | [26](https://www.in.gov.br/leiturajornal#) | [27](https://www.in.gov.br/leiturajornal#) | [28](https://www.in.gov.br/leiturajornal#) | [29](https://www.in.gov.br/leiturajornal#) | [30](https://www.in.gov.br/leiturajornal#) | [31](https://www.in.gov.br/leiturajornal#) |

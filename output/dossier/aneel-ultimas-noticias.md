@@ -49,6 +49,15 @@ Viagens e Turismo
 Limpar
 Aplicar
 
+ARMAZENAMENTO
+
+[ANEEL, ONS e EPE divulgam nota técnica sobre capacidade para conexão de sistemas de armazenamento nos Leilões de Reserva de Capacidade 2026](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-ons-e-epe-divulgam-nota-tecnica-sobre-capacidade-para-conexao-de-sistemas-de-armazenamento-nos-leiloes-de-reserva-de-capacidade-2026)
+
+30/09/2026
+
+-
+Documento encontra-se disponível nos portais oficiais da ANEEL, ONS e da EPE
+
 Energia, Minerais e Combustíveis
 
 [ANEEL firma acordo para formar Agentes Comunitários de Energia na Amazônia Legal](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-firma-acordo-para-formar-agentes-comunitarios-de-energia-na-amazonia-legal)
@@ -309,15 +318,6 @@ Bandeira tarifária
 
 -
 Condições menos favoráveis de geração de energia mantém cobrança adicional de R$ 1,885 na conta de luz a cada 100 quilowatts-hora (kWh) consumidos
-
-TARIFAS
-
-[Revisão tarifária da Neoenergia Distribuição Brasília é discutida durante Audiência Pública](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/revisao-tarifaria-da-neoenergia-distribuicao-brasilia-e-discutida-durante-audiencia-publica)
-
-27/08/2026
-
--
-A sessão contou com a participação de cerca de 40 pessoas. Interessados podem enviar contribuições ao processo por e-mail até 12/9.
 
 «
 Anterior

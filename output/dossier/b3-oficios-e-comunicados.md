@@ -114,11 +114,11 @@ Ofícios revogados
 
 Todos os Ofícios Circulares revogados pela B3 recebem a indicação de revogação tanto em sua descrição do site B3 quanto em seu texto original.
 
-Para obter cópias dos Ofícios Circulares publicados antes de 2003 que não estejam publicados no site B3, envie um e-mail para [(email protected)](https://www.b3.com.br/cdn-cgi/l/email-protection#1f767179705f7d2c317c7072317d6d) indicando o número do ofício desejado.
+Para obter cópias dos Ofícios Circulares publicados antes de 2003 que não estejam publicados no site B3, envie um e-mail para [(email protected)](https://www.b3.com.br/cdn-cgi/l/email-protection#6900070f06290b5a470a0604470b1b) indicando o número do ofício desejado.
 
 Cadastre-se
 
-Envie um e-mail para [(email protected)](https://www.b3.com.br/cdn-cgi/l/email-protection#85eae3ece6eceaf6e0e6eae8f0ebece6e4e1eaf6c5e7b6abe6eae8abe7f7) e receba as comunicações de Ofícios Circulares e Comunicados Externos.
+Envie um e-mail para [(email protected)](https://www.b3.com.br/cdn-cgi/l/email-protection#79161f101a10160a1c1a16140c17101a181d160a391b4a571a1614571b0b) e receba as comunicações de Ofícios Circulares e Comunicados Externos.
 
 Documentos históricos
 

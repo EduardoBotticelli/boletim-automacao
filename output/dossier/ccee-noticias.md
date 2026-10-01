@@ -8,17 +8,17 @@ Busca Avançada
 
 Notícias
 
-Comercialização (2)
+Comercialização (1)
 
-Consumo (2)
+Consumo (1)
 
-Distribuição (2)
+Distribuição (1)
 
-Geração (2)
+Geração (1)
 
-Mercado (2)
+Mercado (1)
 
-3 Documentos listados
+1 Documentos listados
 
 Ordenados por
 
@@ -42,27 +42,11 @@ Evento apresentou análises de comportamento do preço e projeções
 
 Publicado em: 30/09/2026
 
-NOTICIAS
-
-[CCEE amplia módulo digital para processos de Monitoramento Intensivo](https://www.ccee.org.br/-/ccee-amplia-modulo-digital-para-processos-de-monitoramento-intensivo)
-
-Solução passa a atender mais uma frente de monitoramento e avança na digitalização e integração dos processos da organização
-
-Publicado em: 29/09/2026
-
-NOTICIAS
-
-[Últimos dias para inscrição no curso de Formação de Preços em parceria com a PSR](https://www.ccee.org.br/-/ultimos-dias-para-inscricao-no-curso-de-formacao-de-precos-em-parceria-com-a-psr)
-
-Primeira edição on-line da capacitação apresenta diferentes modelos e perspectivas sobre a formação de preços no mercado de energia
-
-Publicado em: 29/09/2026
-
 1 de 1
 
 Loading...
 
-[Mapa do site](https://www.ccee.org.br/busca-ccee?q=&dtIni=29%2F09%2F2026&dtFim=30%2F09%2F2026&structure=ccee-noticias&ordenacao=Mais%20recentes)
+[Mapa do site](https://www.ccee.org.br/busca-ccee?q=&dtIni=30%2F09%2F2026&dtFim=01%2F10%2F2026&structure=ccee-noticias&ordenacao=Mais%20recentes)
 
 Menu de Navegação
 

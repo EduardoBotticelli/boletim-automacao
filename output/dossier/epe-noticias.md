@@ -64,6 +64,17 @@ Produtos/Publicações da EPE
 
 Filtrar
 
+[EPE, ONS E ANEEL divulgam nota tecnica que contempla os quantitativos da capacidade remanescente para conexao de sistemas de armazenamento de energia no ambito dos leiloes de reserva de capacidade 2026](https://www.epe.gov.br/pt/imprensa/noticias/epe-ons-e-aneel-divulgam-nota-tecnica-que-contempla-os-quantitativos-da-capacidade-remanescente-para-conexao-de-sistemas-de-armazenamento-de-energia-no-ambito-dos-leiloes-de-reserva-de-capacidade-2026)
+
+30/09/2026 -
+O Operador Nacional do Sistema Elétrico (ONS) divulga hoje, dia 30/09, em conjunto com a Agência Nacional de Energia Elétrica (ANEEL) e a Empresa de Pesquisa Energética (EPE) a Nota Técnica NT-ONS DPL 0095/2026. O documento apresenta os quantitativos da Capacidade Remanescente do Sistema Interligado Nacional (SIN) para conexão de novos Sistemas de Armazenamento de Energia nas instalações da Rede Básica, Demais Instalações de Transmissão (DIT) e Instalações de Interesse Exclusivo de Centrais de Geração para Conexão Compartilhada (ICG), inclusive para conexões indiretas por meio dos sistemas de distribuição, no âmbito dos LRCAPs de 2026 – Armazenamento Nacional e Armazenamento, conforme estabelecido nas Portarias nº 444/GM/MME/2016 e nº 136/GM/MME/2026.
+
+[Leilões](https://www.epe.gov.br/pt/imprensa/noticias/area-2)
+[Energia Elétrica](https://www.epe.gov.br/pt/imprensa/noticias/area-3)
+[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
+[Planejamento Energético](https://www.epe.gov.br/pt/imprensa/noticias/area-6)
+[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
+
 [EPE lança Nota Técnica sobre a movimentação de hidrogênio de baixa emissão de carbono em infraestruturas de transporte de gás natural​](https://www.epe.gov.br/pt/imprensa/noticias/epe-lanca-nota-tecnica-sobre-a-movimentacao-de-hidrogenio-de-baixa-emissao-de-carbono-em-infraestruturas-de-transporte-de-gas-natural-)
 
 30/09/2026 -
@@ -141,13 +152,6 @@ O segundo dia de ROG.e contou com a participação do presidente da EPE, Thiago 
 [Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
 [Petróleo, Gás Natural e Biocombustíveis](https://www.epe.gov.br/pt/imprensa/noticias/area-4)
 [Planejamento Energético](https://www.epe.gov.br/pt/imprensa/noticias/area-6)
-
-[EPE debate riscos e oportunidades do setor de energia no BB Corporate Connections](https://www.epe.gov.br/pt/imprensa/noticias/epe-debate-riscos-e-oportunidades-do-setor-de-energia-no-bb-corporate-connections)
-
-25/09/2026 -
-No dia 23 de setembro, a Empresa de Pesquisa Energética (EPE) esteve presente, em São Paulo, na edição de 2026 do BB Corporate Connections Energia, evento anual do Banco do Brasil no qual foram debatidos riscos (taxas de juros globais, geopolítica, inteligência artificial, clima) e oportunidades (armazenamento, dupla contabilização, abertura de mercado, data centers) do setor.
-
-[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
 
 «
 
