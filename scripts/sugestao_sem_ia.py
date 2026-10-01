@@ -31,10 +31,12 @@ O Radar sugerido precisa estar no Filtro 1 da fonte e ter secao propria
 para ela no template (a mesma resolucao do gerador final). Se os templates
 nao puderem ser lidos, nenhuma sugestao e feita.
 
-A sugestao nunca vai para 'boletins': fica em 'sugestao_sem_ia', e o
-motivo_filtragem diz que ela nao veio da IA. O portal mostra o item como
-pendente, com o Radar ja marcado, e a pessoa confirma, troca ou rejeita.
-O que nenhuma regra decide continua indo sem Radar, com o motivo.
+O Radar sugerido vira o Radar do item ('boletins'), como o da IA: o item
+chega ao portal ja incluido, e quem revisa so age para retirar ou mudar o
+Radar. Na revisao real de 30/09, as 29 sugestoes foram confirmadas no mesmo
+Radar. A origem fica registrada para o log e a auditoria: 'sugestao_sem_ia'
+guarda o metodo e a evidencia, e o motivo_filtragem diz que o Radar nao
+veio da IA. O que nenhuma regra decide continua sem Radar, com o motivo.
 
 Avaliacao nos 148 itens de 01/09 a 29/09 (decisao da curadoria quando
 havia, da IA nos demais; perfil calculado so com 13/07 a 31/08): 49
@@ -293,8 +295,9 @@ def motivo(sugestao, modelo, nomes):
 def distribuir(itens, sugestor, modelo, nomes):
     """
     Aplica o sugestor aos itens marcados com 'nao_classificada_pela_ia' e
-    devolve o resumo para o log. 'boletins' nao e tocado: a sugestao fica em
-    'sugestao_sem_ia' e so vale depois que a pessoa confirmar no portal.
+    devolve o resumo para o log. O Radar sugerido vai para 'boletins' (o
+    item chega ao portal incluido); o metodo e a evidencia ficam em
+    'sugestao_sem_ia'.
     """
     resumo = {"itens": 0, "com_radar_sugerido": 0, "por_metodo": {m: 0 for m in METODOS}, "sem_radar": 0,
               "por_radar": {}, "motivos_sem_radar": {}, "por_fonte": {}}
@@ -313,6 +316,7 @@ def distribuir(itens, sugestor, modelo, nomes):
         por_fonte = resumo["por_fonte"].setdefault(item.get("fonte", ""), {"itens": 0, "sem_radar": 0, **{m: 0 for m in METODOS}})
         por_fonte["itens"] += 1
         if sugestao["radares"]:
+            item["boletins"] = list(sugestao["radares"])
             resumo["com_radar_sugerido"] += 1
             resumo["por_metodo"][sugestao["metodo"]] += 1
             por_fonte[sugestao["metodo"]] += 1

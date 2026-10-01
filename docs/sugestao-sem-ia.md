@@ -103,7 +103,12 @@ O que nenhuma regra decide continua indo sem Radar, com o motivo escrito.
 
 ### Como chega ao portal
 
-A sugestão nunca entra em `boletins`. O item leva:
+O Radar sugerido entra em `boletins`, como o da IA, e o item chega ao portal
+já incluído: quem revisa só age para retirar ou mudar o Radar. Na revisão real
+de 30/09, com as sugestões ainda chegando como pendentes, as 29 foram
+confirmadas no mesmo Radar.
+
+O portal não mostra a origem do Radar. Ela fica para o log e a auditoria:
 
 - `sugestao_sem_ia`: `{"radares": [...], "metodo": "matriz" | "palavras_chave" | "perfil_da_fonte", "evidencia": "..."}`, ou `radares` vazio e `motivo_sem_radar`;
 - `nao_classificada_pela_ia: true`;
@@ -111,11 +116,8 @@ A sugestão nunca entra em `boletins`. O item leva:
   e dizendo que o Radar veio de regra fixa, não da IA; ou por `[Não
   classificada pela IA]` com o motivo de não haver sugestão.
 
-No portal (PR separado no Curadoria-Boletim), o item chega **pendente**, com
-o selo "Sugestão sem IA" e o Radar já marcado no painel. Só entra no boletim
-se a pessoa confirmar; enquanto estiver pendente, a revisão não fecha. Sem o
-PR do portal, o item aparece como hoje: pendente, sem Radar, com o motivo
-escrito, então a ordem dos merges não abre brecha.
+O item sem Radar vai para a lista "Sem Radar definido" do portal, que não
+bloqueia a confirmação (ver `docs/contrato-decisoes.md`).
 
 ### Log
 
@@ -162,7 +164,8 @@ Limites conhecidos:
   com aviso operacional ("Serviços do INPI estão temporariamente indisponíveis"). Nos
   148 itens de teste foram 3 sugestões em itens que ficaram sem Radar (os
   avisos de sistema fora do ar do INPI e da ANP e uma notícia de projeto de
-  lei do Kollemata). Como o item chega pendente, a pessoa rejeita.
+  lei do Kollemata). Com o item chegando incluído, esses casos vão para o
+  e-mail se ninguém os retirar na revisão.
 - O perfil é declarado no `fontes.json` (e no `gerar_boletim.py` para o
   Banco Central). Não se atualiza sozinho: se a fonte mudar de perfil, a
   declaração precisa ser revista.

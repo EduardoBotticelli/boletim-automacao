@@ -588,6 +588,28 @@ def resumo_do_item(item, motivo=None):
     return registro
 
 
+MOTIVO_RETIRADA = "Retirada na revisão."
+MOTIVO_SEM_RADAR = "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão."
+
+
+def fora_do_email(item, decisao):
+    """
+    Registro de um item que nao vai para o e-mail, com o motivo.
+
+    O portal manda o motivo na decisao; decisao antiga, sem ele, recebe o
+    motivo pelo status_portal. Assim o resumo da geracao diz, item a item,
+    o que foi retirado por quem revisou e o que so nao tinha Radar.
+    """
+    status_portal = str(decisao.get("status_portal") or "").strip().lower()
+    motivo = texto_limpo(decisao.get("motivo")) or (
+        MOTIVO_SEM_RADAR if status_portal == "sem_radar" else MOTIVO_RETIRADA
+    )
+    registro = resumo_do_item(item, motivo)
+    if decisao.get("acao_revisao"):
+        registro["acao_revisao"] = texto_limpo(decisao.get("acao_revisao"))
+    return registro
+
+
 def aplicar_decisoes(itens_originais, decisoes):
     indice = defaultdict(list)
 
@@ -597,7 +619,7 @@ def aplicar_decisoes(itens_originais, decisoes):
 
     aprovados = []
     manuais = 0
-    rejeitados = 0
+    rejeitados = []
     sem_decisao = []
     decisoes_sem_item = set(range(len(decisoes)))
     mapa_indices = {id(decisao): posicao for posicao, decisao in enumerate(decisoes)}
@@ -613,7 +635,7 @@ def aplicar_decisoes(itens_originais, decisoes):
         status = obter_status(decisao)
 
         if status == "rejeitado":
-            rejeitados += 1
+            rejeitados.append(fora_do_email(item, decisao))
             continue
 
         if status != "aprovado":
@@ -642,7 +664,7 @@ def aplicar_decisoes(itens_originais, decisoes):
         status = obter_status(decisao)
 
         if status == "rejeitado":
-            rejeitados += 1
+            rejeitados.append(fora_do_email(decisao, decisao))
             continue
 
         item_manual = item_de_decisao(decisao)
@@ -1139,7 +1161,8 @@ def main():
         "total_decisoes": len(decisoes),
         "total_aprovados": len(aprovados),
         "total_itens_manuais": manuais,
-        "total_rejeitados": rejeitados,
+        "total_rejeitados": len(rejeitados),
+        "fora_do_email": rejeitados,
         "decisoes_sem_item_correspondente": decisoes_orfas,
         "ajustes_nos_templates": ajustes_aplicados,
         "noticias_em_outras_publicacoes": encaminhadas,
@@ -1175,7 +1198,10 @@ def main():
         )
 
     print(f"Itens aprovados: {len(aprovados)} (dos quais {manuais} manuais)")
-    print(f"Itens rejeitados: {rejeitados}")
+    print(
+        f"Itens fora do e-mail: {len(rejeitados)} "
+        f"({sum(1 for r in rejeitados if r.get('acao_revisao') == 'sem_radar' or r['motivo'] == MOTIVO_SEM_RADAR)} sem Radar definido)"
+    )
     print(f"Radares gerados: {len(arquivos_gerados)}")
     print(f"Resumo: {RESUMO_PATH}")
     print("Concluído")

@@ -297,3 +297,30 @@ O mesmo bloqueio vale para a produção: os modelos B e C precisam do PDF, e o
 Firecrawl não devolve PDF. O modelo A precisa do número da página, que a coleta
 atual do DOU pelo Firecrawl não traz. Qualquer um dos quatro em produção passa
 pelo INLABS.
+
+## Resumos sem restos de página
+
+O resumo de cada publicação vinha do trecho entre o link dela e o da próxima,
+e levava junto o que a página põe ali: a data, o "-" do começo, "Tags: ...",
+o chapéu da notícia seguinte ("PLANEJAMENTO ENERGÉTICO", "RenovaBio") e, na
+última da página, o rodapé ("Loading...", "Menu de Navegação", aviso de
+cookies, paginação). A limpeza da data também tirava o acento do resumo
+inteiro ("numero", "serao").
+
+Agora (`coleta_direta._limpar_descricao` e `limpar_resumo`):
+
+- o resumo é montado linha a linha: linha que só tem data, hora ou
+  "última modificação" sai; linha com frase fica inteira, com as datas que
+  fazem parte dela; a lista de tags encerra o resumo; a última linha sai
+  quando é o chapéu da próxima notícia;
+- `limpar_resumo` corta no primeiro resto de página e tira o contador do
+  carrossel ("1 de 3") e a categoria colada no fim (" : NOTICIAS");
+- se não sobra texto de verdade, o resumo fica vazio;
+- o `gerar_boletim.py` passa o mesmo filtro em todo resumo do boletim.json,
+  da coleta ou da IA, e conta no log (`resumos_limpos`).
+
+Nas 593 publicações guardadas da coleta de 30/09, 341 resumos mudaram (a
+maioria só ganhou de volta os acentos e perdeu o "-") e 4 ficaram vazios:
+três do INPI, que eram só "tags: publicado Noticia", e um do Kollemata, que
+era o aviso de cookies.
+

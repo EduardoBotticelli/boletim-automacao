@@ -1066,7 +1066,7 @@ def teste_fonte_generica_nunca_vai_para_todos_os_radares():
     assert r["radares"] == [], r
 
 
-def teste_distribuir_marca_a_sugestao_sem_tocar_nos_boletins():
+def teste_distribuir_poe_o_radar_sugerido_em_boletins():
     import sugestao_sem_ia as ss
     itens = [
         {"fonte": "Unico | Noticias", "titulo": "Leilão", "resumo": "", "boletins": [], "nao_classificada_pela_ia": True},
@@ -1078,7 +1078,9 @@ def teste_distribuir_marca_a_sugestao_sem_tocar_nos_boletins():
     assert resumo["itens"] == 3 and resumo["com_radar_sugerido"] == 1 and resumo["sem_radar"] == 2
     assert resumo["por_metodo"] == {"matriz": 1, "palavras_chave": 0, "perfil_da_fonte": 0} and resumo["por_radar"] == {"b": 1}
     assert resumo["por_fonte"]["Unico | Noticias"]["matriz"] == 1
-    assert all(i["boletins"] == [] for i in itens[:3]) and "sugestao_sem_ia" not in itens[3]
+    # O Radar sugerido vira o Radar do item: chega ao portal incluido, como o da IA.
+    assert itens[0]["boletins"] == ["b"] and itens[1]["boletins"] == [] and itens[2]["boletins"] == []
+    assert itens[3]["boletins"] == ["b"] and "sugestao_sem_ia" not in itens[3]
     assert itens[0]["sugestao_sem_ia"]["radares"] == ["b"]
     assert itens[0]["motivo_filtragem"].startswith("[Sugestão sem IA: Radar B, por matriz do Filtro 1]") and "não pela IA" in itens[0]["motivo_filtragem"]
     assert itens[1]["motivo_filtragem"].startswith("[Não classificada pela IA]") and "flash-lite" in itens[1]["motivo_filtragem"]
@@ -1126,6 +1128,49 @@ def teste_ato_interno_do_bc_vai_sem_radar_com_o_motivo():
     assert r["radares"] == ["a"] and r["metodo"] == "perfil_da_fonte", r
     resumo = ss.distribuir([dict(interno, boletins=[], nao_classificada_pela_ia=True)], s, "m", {})
     assert resumo["sem_radar"] == 1 and list(resumo["motivos_sem_radar"]) == ["ato interno do Banco Central (comissão de inquérito, pessoal ou organização interna)"]
+
+
+def teste_resumo_perde_os_restos_da_pagina():
+    casos = {
+        # CCEE: contador do carrossel, carregamento, menu e aviso de cookies.
+        "Primeira edição on-line da capacitação apresenta modelos de formação de preços : 1 de 3 Loading... Menu de Navegação a ccee comunicação ajuda Fechar Ao clicar em ‘Aceitar todos os":
+            "Primeira edição on-line da capacitação apresenta modelos de formação de preços",
+        "Evento apresentou análises de comportamento do preço e projeções : NOTICIAS":
+            "Evento apresentou análises de comportamento do preço e projeções",
+        "- Dados trazem o número mais atual Tags: TESOURO": "Dados trazem o número mais atual",
+        "Espaços voltam a receber exposições tags: publicado Noticia CONSUMIDOR": "Espaços voltam a receber exposições",
+        "Houve ações em 17 estados. Anterior [6](https://www.gov.br/anp/pt-br/assun": "Houve ações em 17 estados.",
+        "Resolução cria mecanismos de transparência [Compartilhe por LinkedIn](https://www.linkedin.c":
+            "Resolução cria mecanismos de transparência",
+        # So resto de pagina: fica vazio, em vez de texto quebrado.
+        "tags: publicado Noticia tags: publicado Noticia": "",
+        "Rolar para cima Entre em contato! Os cookies necessários são cruciais": "",
+        # Texto de verdade passa intacto, com data, numero e sigla.
+        "Lei nº 15.526, de 29 de setembro de 2026": "Lei nº 15.526, de 29 de setembro de 2026",
+        "Reunião, realizada em 29/9/2026, também rejeitou acordo (REIDI).": "Reunião, realizada em 29/9/2026, também rejeitou acordo (REIDI).",
+        "Retificação": "Retificação",
+    }
+    for entrada, esperado in casos.items():
+        assert cd.limpar_resumo(entrada) == esperado, (entrada, cd.limpar_resumo(entrada))
+
+
+def teste_listagem_tira_data_tags_e_chapeu_e_mantem_os_acentos():
+    base = "https://www.gov.br/mme/pt-br/assuntos/noticias"
+    texto = (
+        f"[MME abre consulta pública sobre concessões de hidrelétricas]({base}/consulta-hidreletricas)\n\n"
+        "29/09/2026\n\n-\nContribuições poderão ser enviadas até 23 de outubro e vão subsidiar a elaboração de decreto\n\n"
+        "Tags:\n\nTESOURO\n\nRenovaBio\n\n"
+        f"[MME abre consulta pública sobre metas do RenovaBio para 2027]({base}/renovabio)\n\n"
+        "30/09/2026\n\n—\núltima modificação\n30/09/2026 10h58\n\n"
+        "Reunião, realizada em 29/9/2026, também aprovou o cronograma\n\nPLANEJAMENTO ENERGÉTICO | TRANSIÇÃO\n\n"
+        f"[Saiba como evitar acidentes elétricos dentro de casa]({base}/acidentes)\n\n"
+        "29/09/2026\n\n-\nA redução tarifária média foi de 14,67%\n\nDistribuição\n\n"
+        f"[Anterior]({base}?b_start=0) [6]({base}?b_start=50)\n"
+    )
+    publicacoes = {p["url"].rsplit("/", 1)[-1]: p["descricao"] for p in cd.publicacoes_da_listagem(texto, base, INICIO, FIM)}
+    assert publicacoes["consulta-hidreletricas"] == "Contribuições poderão ser enviadas até 23 de outubro e vão subsidiar a elaboração de decreto", publicacoes
+    assert publicacoes["renovabio"] == "Reunião, realizada em 29/9/2026, também aprovou o cronograma", publicacoes
+    assert publicacoes["acidentes"] == "A redução tarifária média foi de 14,67%", publicacoes
 
 
 TESTES = [
@@ -1180,10 +1225,12 @@ TESTES = [
     teste_termos_do_prompt_descartam_o_que_nao_distingue_radar,
     teste_sugestao_segue_matriz_palavras_e_perfil_nessa_ordem,
     teste_fonte_generica_nunca_vai_para_todos_os_radares,
-    teste_distribuir_marca_a_sugestao_sem_tocar_nos_boletins,
+    teste_distribuir_poe_o_radar_sugerido_em_boletins,
     teste_distribuicao_so_le_os_templates_quando_ha_o_que_distribuir,
     teste_todo_radar_do_filtro1_tem_secao_no_template,
     teste_ato_interno_do_bc_vai_sem_radar_com_o_motivo,
+    teste_resumo_perde_os_restos_da_pagina,
+    teste_listagem_tira_data_tags_e_chapeu_e_mantem_os_acentos,
 ]
 
 

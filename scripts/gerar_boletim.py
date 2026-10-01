@@ -837,10 +837,10 @@ def montar_sugestor(fontes):
 
 def distribuir_sem_ia(itens, fontes, modelo, sugestor=None):
     """
-    Da um Radar sugerido, sem IA, a publicacao que o Gemini nao devolveu.
-    A sugestao fica em 'sugestao_sem_ia', fora de 'boletins': o portal a
-    mostra como pendente e identificada, e so vale se a pessoa confirmar.
-    Devolve o resumo para o log.
+    Da um Radar, sem IA, a publicacao que o Gemini nao devolveu. O Radar
+    vai para 'boletins' e o item chega ao portal incluido, como os da IA;
+    o metodo e a evidencia ficam em 'sugestao_sem_ia', para o log e a
+    auditoria. Devolve o resumo para o log.
     """
     if not any(i.get("nao_classificada_pela_ia") for i in itens):
         return sugestao_sem_ia.distribuir([], None, modelo, NOMES)
@@ -967,7 +967,16 @@ def main():
         "por_fonte": registro_nao_devolvidas,
     }
     bloqueios, rejeicoes, palavras = {}, Counter(), Counter()
+    resumos_limpos = {"alterados": 0, "esvaziados": 0}
     for item in itens:
+        # Restos da pagina da fonte ("Loading...", menu, tags) nao chegam ao
+        # portal nem ao e-mail, venha o resumo da coleta ou da IA.
+        resumo = item.get("resumo") or ""
+        limpo = coleta_direta.limpar_resumo(resumo)
+        if limpo != " ".join(resumo.split()):
+            resumos_limpos["alterados"] += 1
+            resumos_limpos["esvaziados"] += not limpo and bool(resumo.strip())
+        item["resumo"] = limpo
         fonte = item.get("fonte", "")
         permitidos = set(MAPA.get(chave_fonte(fonte), []))
         sugeridos = {s for s in item.get("boletins_confirmados", []) if s in SLUGS}
@@ -989,6 +998,7 @@ def main():
         for r in rejs:
             if r.get("boletim"):
                 rejeicoes[r["boletim"]] += 1
+    log["resumos_limpos"] = resumos_limpos
     distribuicao = distribuir_sem_ia(itens, ativas, modelo)
     log["distribuicao_sem_ia"] = distribuicao
     resgates = resgatar_por_escassez(itens, PISO_RESGATE)
