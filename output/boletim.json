@@ -1,28 +1,59 @@
 {
   "itens": [
     {
-      "fonte": "Planalto | Resenha Diaria",
-      "categoria": "Legislação Federal",
-      "titulo": "Lei nº 15.526, de 29 de setembro de 2026",
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado N° 46.048",
       "data_publicacao": "2026-09-30",
-      "resumo": "Altera a Lei nº 8.171, de 17 de janeiro de 1991, a Lei nº 10.823, de 19 de dezembro de 2003, e a Lei Complementar nº 137, de 26 de agosto de 2010, para aperfeiçoar o marco legal do seguro rural.",
-      "motivo_filtragem": "A publicação altera o marco legal do seguro rural, gerando reflexos nas atividades do agronegócio e gestão de riscos, com aderência potencial para o setor imobiliário e de infraestrutura rural.",
+      "resumo": "Divulga nome de pessoa com interesse em assumir a condição de controlador de sociedade de crédito, financiamento e investimento, conforme consta do pedido de alteração de controle de 30 de janeiro de 2026.",
+      "motivo_filtragem": "Trata de alteração de controle societário em instituição financeira regulada pelo Banco Central, enquadrando-se nos temas de governança, controle e regulação de entidades financeiras.",
       "palavras_chave_detectadas": [
-        "seguro rural",
-        "lei"
+        "controlador",
+        "sociedade de crédito",
+        "alteração de controle"
       ],
       "boletins_confirmados": [
-        "imobiliario-infraestrutura"
+        "mercado-capitais-fundos",
+        "societario-ma"
       ],
       "boletins_rejeitados": [
         {
-          "boletim": "direito-tributario",
-          "motivo": "O foco é o marco legal do seguro rural e não a criação ou alteração direta de tributos."
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Não envolve regulação de infraestrutura ou óleo e gás."
         }
       ],
-      "url": "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15526.htm",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46048",
       "boletins": [
-        "imobiliario-infraestrutura"
+        "societario-ma",
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado N° 46.047",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Divulga condições para a realização de operações compromissadas com instituições financeiras participantes do módulo Oferta Pública (Ofpub).",
+      "motivo_filtragem": "[Resgatado por escassez: Radar Societário, Fusões e Aquisições] Regulamenta operações compromissadas e ofertas públicas no âmbito das instituições financeiras, tema central do mercado de capitais.",
+      "palavras_chave_detectadas": [
+        "operações compromissadas",
+        "instituições financeiras",
+        "Oferta Pública"
+      ],
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [],
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46047",
+      "boletins": [
+        "societario-ma",
+        "mercado-capitais-fundos"
+      ],
+      "resgates": [
+        {
+          "boletim": "societario-ma",
+          "motivo_da_recusa": "Não trata de fusões, aquisições ou reorganizações societárias corporativas."
+        }
       ]
     },
     {
@@ -31,19 +62,19 @@
       "titulo": "Resolução BCB N° 597",
       "data_publicacao": "2026-09-30",
       "resumo": "Altera o regulamento anexo à Resolução BCB nº 1, de 12 de agosto de 2020, que institui o arranjo de pagamentos Pix, para prever a vedação de processar, liquidar ou viabilizar transações destinadas a loterias de aposta de quota fixa.",
-      "motivo_filtragem": "Trata de regras para meios de pagamento eletrônico (Pix) aplicadas por instituições financeiras e de pagamento reguladas pelo Banco Central.",
+      "motivo_filtragem": "Altera as regras do arranjo de pagamentos Pix, impactando diretamente as instituições de pagamento e o ecossistema de meios de pagamento.",
       "palavras_chave_detectadas": [
         "Pix",
         "arranjo de pagamentos",
-        "BCB"
+        "transações"
       ],
       "boletins_confirmados": [
         "mercado-capitais-fundos"
       ],
       "boletins_rejeitados": [
         {
-          "boletim": "direito-tributario",
-          "motivo": "A norma disciplina arranjos de pagamento e veda transações para apostas, sem natureza tributária direta."
+          "boletim": "propriedade-intelectual",
+          "motivo": "Embora envolva tecnologia de pagamentos, o foco é estritamente regulatório financeiro e de conformidade de transações."
         }
       ],
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=597",
@@ -57,19 +88,19 @@
       "titulo": "Resolução BCB N° 596",
       "data_publicacao": "2026-09-30",
       "resumo": "Altera a Resolução BCB nº 443, de 12 de dezembro de 2024, que disciplina o arranjo de pagamento do boleto, para dispor sobre a vedação de processar, liquidar ou viabilizar transações destinadas a loterias de aposta de quota fixa.",
-      "motivo_filtragem": "Modifica regras de arranjos de pagamento de boletos por instituições reguladas.",
+      "motivo_filtragem": "Regula o arranjo de pagamento de boletos bancários, afetando as normas operacionais de meios de pagamento supervisionados pelo Banco Central.",
       "palavras_chave_detectadas": [
         "boleto",
         "arranjo de pagamento",
-        "BCB"
+        "transações"
       ],
       "boletins_confirmados": [
         "mercado-capitais-fundos"
       ],
       "boletins_rejeitados": [
         {
-          "boletim": "direito-tributario",
-          "motivo": "Trata de meios de pagamento e não de obrigações tributárias."
+          "boletim": "propriedade-intelectual",
+          "motivo": "Trata de regulação de meios de pagamento tradicionais, sem relação direta com propriedade intelectual ou privacidade de dados."
         }
       ],
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=596",
@@ -83,19 +114,19 @@
       "titulo": "Resolução BCB N° 595",
       "data_publicacao": "2026-09-30",
       "resumo": "Altera a Resolução BCB nº 256, de 1º de novembro de 2022, que regulamenta a Transferência Eletrônica Disponível – TED, para dispor sobre a vedação de processar, liquidar ou viabilizar transações destinadas a loterias de aposta de quota fixa.",
-      "motivo_filtragem": "Regula o funcionamento da Transferência Eletrônica Disponível (TED) no âmbito do sistema financeiro.",
+      "motivo_filtragem": "Modifica as regras operacionais de transferências bancárias via TED, inserindo-se no escopo de regulação de meios de pagamento e instituições financeiras.",
       "palavras_chave_detectadas": [
         "TED",
         "Transferência Eletrônica Disponível",
-        "BCB"
+        "transações"
       ],
       "boletins_confirmados": [
         "mercado-capitais-fundos"
       ],
       "boletins_rejeitados": [
         {
-          "boletim": "direito-tributario",
-          "motivo": "A matéria restringe-se à regulamentação de infraestrutura de pagamentos."
+          "boletim": "propriedade-intelectual",
+          "motivo": "Foco exclusivo em regras de liquidação financeira de transferências bancárias."
         }
       ],
       "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=595",
@@ -106,20 +137,20 @@
     {
       "fonte": "Banco Central | Normas",
       "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Resolução BCB N° 591",
+      "titulo": "Resolução BCB N° 594",
       "data_publicacao": "2026-09-30",
-      "resumo": "Altera a Circular nº 3.978, de 23 de janeiro de 2020, que dispõe sobre a política, os procedimentos e os controles internos a serem adotados pelas instituições autorizadas a funcionar pelo Banco Central do Brasil visando à prevenção da utilização do sistema financeiro para a prática de crimes.",
-      "motivo_filtragem": "[Resgatado por escassez: Radar Societário, Fusões e Aquisições] Modifica controles internos e diretrizes de PLD/FT para instituições financeiras autorizadas.",
+      "resumo": "Altera o Quadro I – Atos públicos de liberação com nível de risco III, constante do anexo à Resolução BCB nº 317, de 27 de abril de 2023, que fixa prazos máximos para a decisão administrativa dos pedidos de atos públicos de liberação da atividade econômica requeridos ao Banco Central do Brasil.",
+      "motivo_filtragem": "[Resgatado por escassez: Radar Societário, Fusões e Aquisições] Regula prazos e procedimentos administrativos para liberação de atividades econômicas sob a supervisão do Banco Central.",
       "palavras_chave_detectadas": [
-        "PLD",
-        "controles internos",
-        "BCB"
+        "atos públicos de liberação",
+        "decisão administrativa",
+        "Banco Central"
       ],
       "boletins_confirmados": [
         "mercado-capitais-fundos"
       ],
       "boletins_rejeitados": [],
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=591",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=594",
       "boletins": [
         "societario-ma",
         "mercado-capitais-fundos"
@@ -127,8 +158,597 @@
       "resgates": [
         {
           "boletim": "societario-ma",
-          "motivo_da_recusa": "Apesar de tratar de compliance, o foco normativo é regulatório financeiro do Banco Central."
+          "motivo_da_recusa": "Não trata de reorganizações societárias ou fusões e aquisições."
         }
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Resolução BCB N° 593",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Altera a Resolução BCB nº 478, de 30 de maio de 2025.",
+      "motivo_filtragem": "Ato normativo emitido pelo Banco Central do Brasil que altera regulamentação anterior aplicável ao sistema financeiro.",
+      "palavras_chave_detectadas": [
+        "Resolução BCB"
+      ],
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não possui natureza fiscal ou tributária."
+        }
+      ],
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=593",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Resolução BCB N° 592",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Altera a Resolução BCB nº 111, de 6 de julho de 2021, a Resolução BCB nº 313, de 26 de abril de 2023, a Resolução BCB nº 470, de 30 de abril de 2025, a Circular nº 3.876, de 31 de janeiro de 2018, e a Circular nº 3.641, de 4 de março de 2013.",
+      "motivo_filtragem": "Ato normativo do Banco Central que altera diversas normas e circulares anteriores aplicáveis ao mercado financeiro.",
+      "palavras_chave_detectadas": [
+        "Resolução BCB",
+        "Circular"
+      ],
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não possui natureza fiscal ou tributária."
+        }
+      ],
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=592",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Resolução BCB N° 591",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Altera a Circular nº 3.978, de 23 de janeiro de 2020, que dispõe sobre a política, os procedimentos e os controles internos a serem adotados pelas instituições autorizadas a funcionar pelo Banco Central do Brasil visando à prevenção da utilização do sistema financeiro para a prática dos crimes de lavagem de dinheiro e financiamento ao terrorismo.",
+      "motivo_filtragem": "Trata de políticas de compliance, controles internos e prevenção à lavagem de dinheiro (PLD/FT) exigidos de instituições financeiras.",
+      "palavras_chave_detectadas": [
+        "controles internos",
+        "prevenção",
+        "sistema financeiro"
+      ],
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "societario-ma",
+          "motivo": "Embora compliance seja relevante para M&A, a norma é de caráter estritamente regulatório financeiro para instituições autorizadas."
+        }
+      ],
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=591",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado N° 46.046",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Divulga pedido de cancelamento da autorização para funcionamento da Onnix Corretora de Câmbio Ltda.",
+      "motivo_filtragem": "Refere-se ao processo de autorização e funcionamento de corretora de câmbio perante o Banco Central.",
+      "palavras_chave_detectadas": [
+        "cancelamento da autorização",
+        "Corretora de Câmbio"
+      ],
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "societario-ma",
+          "motivo": "Não se trata de reorganização societária ou M&A, mas de cancelamento de outorga regulatória."
+        }
+      ],
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46046",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado N° 46.045",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Divulga pedido de cancelamento da autorização para funcionamento da Eagle Instituição de Pagamento Ltda.",
+      "motivo_filtragem": "Refere-se ao processo de autorização e funcionamento de instituição de pagamento perante o Banco Central.",
+      "palavras_chave_detectadas": [
+        "cancelamento da autorização",
+        "Instituição de Pagamento"
+      ],
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "societario-ma",
+          "motivo": "Trata-se de cancelamento de outorga regulatória de funcionamento, sem transação societária associada."
+        }
+      ],
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46045",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado N° 46.044",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Divulga as taxas de juros \"Pm\" e \"PMm\" vigentes em outubro de 2026.",
+      "motivo_filtragem": "Divulgação de taxas de juros de referência do mercado financeiro pelo Banco Central.",
+      "palavras_chave_detectadas": [
+        "taxas de juros"
+      ],
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não se refere a taxas de juros de mora tributária."
+        }
+      ],
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46044",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado N° 46.043",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Divulga a taxa de juros \"Jm\" e o fator de ajuste \"a5\" vigentes em outubro de 2026.",
+      "motivo_filtragem": "Divulgação de parâmetros financeiros e taxas de juros pelo Banco Central.",
+      "palavras_chave_detectadas": [
+        "taxa de juros",
+        "fator de ajuste"
+      ],
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não possui natureza fiscal ou tributária."
+        }
+      ],
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46043",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado N° 46.042",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Divulga a Taxa de Juros de Longo Prazo (TJLP) para o quarto trimestre de 2026.",
+      "motivo_filtragem": "Divulgação da TJLP, taxa de referência para financiamentos de longo prazo e contratos financeiros.",
+      "palavras_chave_detectadas": [
+        "Taxa de Juros de Longo Prazo",
+        "TJLP"
+      ],
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Embora a TJLP possa ser utilizada em contextos fiscais, a divulgação em si é de natureza financeira e monetária."
+        }
+      ],
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46042",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado N° 46.041",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Divulga, para fins de recebimento de eventuais objeções, nomes de pessoas eleitas ou nomeadas para ocupar cargos de administração em instituições autorizadas a funcionar.",
+      "motivo_filtragem": "Trata de governança corporativa e nomeação de administradores em instituições financeiras reguladas.",
+      "palavras_chave_detectadas": [
+        "eleitas",
+        "nomeadas",
+        "cargos de administração"
+      ],
+      "boletins_confirmados": [
+        "mercado-capitais-fundos",
+        "societario-ma"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não se trata de relação de emprego ou remuneração de executivos, mas de governança corporativa e regulação."
+        }
+      ],
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46041",
+      "boletins": [
+        "societario-ma",
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado N° 46.040",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Divulga nome aprovado de pessoas eleitas/nomeadas para cargos de órgãos estatutários ou contratuais de sociedades autorizadas a funcionar pelo Banco Central do Brasil.",
+      "motivo_filtragem": "Trata de governança corporativa e aprovação de administradores em sociedades reguladas pelo Banco Central.",
+      "palavras_chave_detectadas": [
+        "eleitas",
+        "nomeadas",
+        "órgãos estatutários"
+      ],
+      "boletins_confirmados": [
+        "mercado-capitais-fundos",
+        "societario-ma"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não envolve relações de trabalho ou direito trabalhista."
+        }
+      ],
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46040",
+      "boletins": [
+        "societario-ma",
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "Banco Central | Normas",
+      "categoria": "Financeiro e Mercado de Capitais",
+      "titulo": "Comunicado N° 46.039",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Divulga a Taxa Básica Financeira (TBF), o Redutor \"R\" e a Taxa Referencial (TR) relativos a 29 de setembro de 2026.",
+      "motivo_filtragem": "Divulgação de taxas financeiras de referência (TBF, TR) pelo Banco Central.",
+      "palavras_chave_detectadas": [
+        "Taxa Básica Financeira",
+        "TBF",
+        "Taxa Referencial",
+        "TR"
+      ],
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Não possui natureza fiscal ou tributária."
+        }
+      ],
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46039",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "fonte": "CCEE | Noticias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Confira a apresentação e o vídeo do Encontro do PLD realizado em 26/09",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Evento apresentou análises de comportamento do preço e projeções do Preço de Liquidação das Diferenças (PLD).",
+      "motivo_filtragem": "Trata do comportamento de preços e projeções do PLD no mercado de energia elétrica, tema de infraestrutura e energia.",
+      "palavras_chave_detectadas": [
+        "PLD",
+        "preço",
+        "mercado"
+      ],
+      "boletins_confirmados": [
+        "imobiliario-infraestrutura"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "Embora seja do setor de energia, o PLD é específico do setor elétrico, não abrangendo óleo e gás."
+        }
+      ],
+      "url": "https://www.ccee.org.br/-/confira-a-apresentacao-e-o-video-do-encontro-do-pld-realizado-em-26-09",
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "DECRETO Nº 13.131, DE 30 DE SETEMBRO DE 2026",
+      "data_publicacao": "2026-10-01",
+      "resumo": "Altera o Decreto nº 11.348, de 1º de janeiro de 2023, que aprova a Estrutura Regimental e o Quadro Demonstrativo dos Cargos em Comissão e das Funções de Confiança do Ministério da Justiça e Segurança Pública, e remaneja e transforma cargos em comissão e funções de confiança.",
+      "motivo_filtragem": "[Resgatado por escassez: Radar Trabalhista Empresarial] Trata-se de ato puramente administrativo de organização interna e cargos em comissão do Ministério da Justiça, sem relevância temática para os Radares.",
+      "palavras_chave_detectadas": [
+        "Estrutura Regimental",
+        "Cargos em Comissão"
+      ],
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "societario-ma",
+          "motivo": "Não envolve governança corporativa ou reorganizações societárias de direito privado."
+        }
+      ],
+      "url": "https://www.in.gov.br/web/dou/-/decreto-n-13.131-de-30-de-setembro-de-2026-735702683",
+      "boletins": [
+        "trabalhista-empresarial"
+      ],
+      "resgates": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo_da_recusa": "Refere-se a cargos públicos estatutários e funções de confiança, sem relação com o direito do trabalho empresarial."
+        }
+      ]
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "RESOLUÇÃO CRD Nº 42, DE 23 DE SETEMBRO DE 2026",
+      "data_publicacao": "2026-10-01",
+      "resumo": "Dispõe sobre o procedimento de quitação das obrigações de fazer previstas no Anexo 19 - Transição e encerramento dos programas, medidas, responsabilidades e obrigações decorrentes do rompimento e seus desdobramentos, sob fiscalização da Governança da UNIÃO no âmbito do Acordo Judicial para reparação integral e definitiva relativa ao rompimento da barragem do Rio Doce.",
+      "motivo_filtragem": "Trata de procedimento de quitação de obrigações de fazer decorrentes de acordo judicial de reparação socioambiental de desastre (rompimento de barragem), enquadrando-se em temas ambientais/ESG e solução de conflitos judiciais.",
+      "palavras_chave_detectadas": [
+        "quitação das obrigações",
+        "Acordo Judicial",
+        "reparação"
+      ],
+      "boletins_confirmados": [
+        "ambiental-esg",
+        "contencioso-civel"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Não se trata de projeto ativo de infraestrutura ou concessão, mas de reparação de danos."
+        },
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Filtro 1: fonte 'Destaques do D.O.U.' não está mapeada para este Radar"
+        }
+      ],
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-crd-n-42-de-23-de-setembro-de-2026-735707400",
+      "boletins": [
+        "contencioso-civel"
+      ]
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "RESOLUÇÃO CRD Nº 41, DE 23 DE SETEMBRO DE 2026",
+      "data_publicacao": "2026-10-01",
+      "resumo": "Dispõe sobre a aprovação do Projeto de Intervenção \"Execução da Verba de Apoio Familiar (VAF) da Comunidade Quilombola de Povoação\", deliberado na 10ª Reunião Extraordinária de 2026 do Comitê do Rio Doce.",
+      "motivo_filtragem": "[Resgatado por escassez: Radar Trabalhista Empresarial] Trata de projeto de intervenção e apoio a comunidades tradicionais (quilombolas) no âmbito da reparação socioambiental do Comitê do Rio Doce.",
+      "palavras_chave_detectadas": [
+        "Comunidade Quilombola",
+        "Comitê do Rio Doce"
+      ],
+      "boletins_confirmados": [
+        "ambiental-esg"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Filtro 1: fonte 'Destaques do D.O.U.' não está mapeada para este Radar"
+        }
+      ],
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-crd-n-41-de-23-de-setembro-de-2026-735706361",
+      "boletins": [
+        "trabalhista-empresarial"
+      ],
+      "resgates": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo_da_recusa": "A verba de apoio familiar mencionada não possui natureza de remuneração ou verba trabalhista."
+        }
+      ]
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "PORTARIA SFA-BA/MAPA Nº 1.034, DE 29 DE SETEMBRO DE 2026",
+      "data_publicacao": "2026-10-01",
+      "resumo": "Portaria do Superintendente Federal de Agropecuária no Estado da Bahia no uso de suas competências regimentais.",
+      "motivo_filtragem": "Trata-se de ato administrativo local e operacional do Ministério da Agricultura, sem relevância temática para os Radares.",
+      "palavras_chave_detectadas": [
+        "SUPERINTENDENTE"
+      ],
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não trata de licenciamento, conservação ou temas de sustentabilidade."
+        }
+      ],
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-ba/mapa-n-1.034-de-29-de-setembro-de-2026-735708572",
+      "boletins": []
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "PORTARIA SFA-SC/MAPA Nº 1.398, DE 29 DE SETEMBRO DE 2026",
+      "data_publicacao": "2026-10-01",
+      "resumo": "Portaria do Superintendente de Agricultura e Pecuária no Estado de Santa Catarina Substituto no uso de suas competências regimentais.",
+      "motivo_filtragem": "Ato administrativo interno e operacional do Ministério da Agricultura, sem relevância temática para os Radares.",
+      "palavras_chave_detectadas": [
+        "SUPERINTENDENTE"
+      ],
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não possui conteúdo relacionado a licenciamento ou passivos ambientais."
+        }
+      ],
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-sc/mapa-n-1.398-de-29-de-setembro-de-2026-735715217",
+      "boletins": []
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "PORTARIA SFA-SC/MAPA Nº 1.401, DE 30 DE SETEMBRO DE 2026",
+      "data_publicacao": "2026-10-01",
+      "resumo": "Portaria do Superintendente de Agricultura e Pecuária no Estado de Santa Catarina Substituto no uso de suas competências regimentais.",
+      "motivo_filtragem": "Ato administrativo interno e operacional do Ministério da Agricultura, sem relevância temática para os Radares.",
+      "palavras_chave_detectadas": [
+        "SUPERINTENDENTE"
+      ],
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não possui conteúdo relacionado a licenciamento ou passivos ambientais."
+        }
+      ],
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-sc/mapa-n-1.401-de-30-de-setembro-de-2026-735707979",
+      "boletins": []
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "Portaria SFA-SP/MAPA Nº 1.010, DE 29 DE SETEMBRO DE 2026",
+      "data_publicacao": "2026-10-01",
+      "resumo": "Portaria do Superintendente de Agricultura e Pecuária no Estado de São Paulo - Substituto no uso de suas competências regimentais.",
+      "motivo_filtragem": "Ato administrativo interno e operacional do Ministério da Agricultura, sem relevância temática para os Radares.",
+      "palavras_chave_detectadas": [
+        "SUPERINTENDENTE"
+      ],
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não possui conteúdo relacionado a licenciamento ou passivos ambientais."
+        }
+      ],
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-sp/mapa-n-1.010-de-29-de-setembro-de-2026-735706126",
+      "boletins": []
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "Portaria SFA-ES Nº 569, DE 29 DE Setembro DE 2026",
+      "data_publicacao": "2026-10-01",
+      "resumo": "Portaria do Superintendente de Agricultura e Pecuária no Estado do Espírito Santo no uso de suas competências regimentais.",
+      "motivo_filtragem": "Ato administrativo interno e operacional do Ministério da Agricultura, sem relevância temática para os Radares.",
+      "palavras_chave_detectadas": [
+        "SUPERINTENDENTE"
+      ],
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não possui conteúdo relacionado a licenciamento ou passivos ambientais."
+        }
+      ],
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-es-n-569-de-29-de-setembro-de-2026-735712377",
+      "boletins": []
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "PORTARIA SFA-PR/MAPA Nº 1.272, DE 29 DE SETEMBRO DE 2026",
+      "data_publicacao": "2026-10-01",
+      "resumo": "Portaria do Superintendente de Agricultura e Pecuária no Paraná no uso de suas competências regimentais.",
+      "motivo_filtragem": "Ato administrativo interno e operacional do Ministério da Agricultura, sem relevância temática para os Radares.",
+      "palavras_chave_detectadas": [
+        "SUPERINTENDENTE"
+      ],
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não possui conteúdo relacionado a licenciamento ou passivos ambientais."
+        }
+      ],
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-pr/mapa-n-1.272-de-29-de-setembro-de-2026-735707322",
+      "boletins": []
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "categoria": "Legislação Federal",
+      "titulo": "Portaria SFA-PI/SE/MAPA nº 171, de 30 de setembro de 2026",
+      "data_publicacao": "2026-10-01",
+      "resumo": "Portaria do Superintendente Federal de Agricultura e Pecuária no Estado do Piauí no uso de suas competências regimentais.",
+      "motivo_filtragem": "Ato administrativo interno e operacional do Ministério da Agricultura, sem relevância temática para os Radares.",
+      "palavras_chave_detectadas": [
+        "SUPERINTENDENTE"
+      ],
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Não possui conteúdo relacionado a licenciamento ou passivos ambientais."
+        }
+      ],
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-pi/se/mapa-n-171-de-30-de-setembro-de-2026-735710671",
+      "boletins": []
+    },
+    {
+      "fonte": "Receita Federal | Normas",
+      "categoria": "Tributário",
+      "titulo": "Ato Declaratório Executivo Corat nº 79",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Altera os Anexos Únicos dos Atos Declaratórios Executivos Corat nº 63, de 26 de agosto de 2026, e nº 78, de 28 de setembro de 2026, que divulgam as Agendas Tributárias dos meses de setembro e outubro de 2026, respectivamente.",
+      "motivo_filtragem": "Altera as Agendas Tributárias federais, tratando diretamente do cumprimento de obrigações tributárias acessórias e prazos de recolhimento.",
+      "palavras_chave_detectadas": [
+        "Agendas Tributárias",
+        "Atos Declaratórios Executivos"
+      ],
+      "boletins_confirmados": [
+        "direito-tributario"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "trabalhista-empresarial",
+          "motivo": "Não envolve obrigações de natureza trabalhista ou previdenciária patronal direta."
+        }
+      ],
+      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836",
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "fonte": "Receita Federal | Normas",
+      "categoria": "Tributário",
+      "titulo": "Ato Declaratório Executivo Sutri nº 9",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Vincula a Secretaria Especial da Receita Federal do Brasil e a pessoa jurídica que menciona a Termo de Consensualidade firmado no âmbito do Procedimento de Consensualidade Fiscal - Receita de Consenso.",
+      "motivo_filtragem": "Trata de procedimento de consensualidade fiscal e resolução consensual de disputas tributárias no âmbito do programa Receita de Consenso.",
+      "palavras_chave_detectadas": [
+        "Consensualidade Fiscal",
+        "Receita de Consenso"
+      ],
+      "boletins_confirmados": [
+        "direito-tributario"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "contencioso-civel",
+          "motivo": "Embora envolva consensualidade, trata-se de procedimento administrativo fiscal específico, melhor alocado no Radar Tributário."
+        }
+      ],
+      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153837",
+      "boletins": [
+        "direito-tributario"
       ]
     },
     {
@@ -136,13 +756,13 @@
       "categoria": "Tributário",
       "titulo": "Solução de Consulta Cosit nº 195",
       "data_publicacao": "2026-09-30",
-      "resumo": "Dispõe sobre a incidência do Imposto sobre a Renda de Pessoa Jurídica (IRPJ) sobre repasses de receitas e subvenções recebidas por empresas públicas dependentes, com análise sobre a inaplicabilidade de créditos fiscais específicos.",
-      "motivo_filtragem": "Interpretação da legislação fiscal federal sobre tributação de subvenções e IRPJ para empresas públicas dependentes.",
+      "resumo": "Assunto: Imposto sobre a Renda de Pessoa Jurídica - IRPJ. Incidência. Repasses de recursos. Orçamento geral do estado. Empresas dependentes. Subvenção. Incidência tributária. Inaplicabilidade do crédito fiscal previsto na Lei nº 14.789/2023.",
+      "motivo_filtragem": "Solução de consulta sobre incidência de IRPJ, subvenções governamentais e aplicação de crédito fiscal da Lei nº 14.789/2023.",
       "palavras_chave_detectadas": [
         "IRPJ",
         "subvenção",
-        "Receita Federal",
-        "Cosit"
+        "crédito fiscal",
+        "incidência tributária"
       ],
       "boletins_confirmados": [
         "direito-tributario"
@@ -150,7 +770,7 @@
       "boletins_rejeitados": [
         {
           "boletim": "societario-ma",
-          "motivo": "Trata estritamente de interpretação de incidência de tributo federal (IRPJ) e subvenção."
+          "motivo": "Não trata de reorganizações societárias ou M&A diretamente."
         }
       ],
       "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153838",
@@ -163,12 +783,12 @@
       "categoria": "Tributário",
       "titulo": "Solução de Consulta Cosit nº 190",
       "data_publicacao": "2026-09-30",
-      "resumo": "Esclarece que importâncias pagas por pessoas jurídicas por serviços de manutenção e reparação elétrica e de manutenção de elevadores não estão sujeitas à retenção na fonte do Imposto sobre a Renda.",
-      "motivo_filtragem": "Análise de obrigações tributárias acessórias e retenção na fonte de IRPJ/contribuições.",
+      "resumo": "Assunto: Imposto sobre a Renda Retido na Fonte - IRRF. Serviços de manutenção e reparação elétrica e de manutenção de elevadores. Não incidência de retenção na fonte.",
+      "motivo_filtragem": "Solução de consulta sobre a não incidência de retenção na fonte de IRRF sobre serviços de manutenção elétrica e de elevadores.",
       "palavras_chave_detectadas": [
         "IRRF",
         "retenção na fonte",
-        "Cosit"
+        "não incidência"
       ],
       "boletins_confirmados": [
         "direito-tributario"
@@ -176,7 +796,7 @@
       "boletins_rejeitados": [
         {
           "boletim": "imobiliario-infraestrutura",
-          "motivo": "O objeto principal é a regra de retenção tributária federal, e não a gestão imobiliária ou contratos de manutenção em si."
+          "motivo": "Embora mencione manutenção de elevadores e elétrica, o tema central é estritamente a incidência tributária."
         }
       ],
       "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153839",
@@ -187,127 +807,12 @@
     {
       "fonte": "Receita Federal | Normas",
       "categoria": "Tributário",
-      "titulo": "Solução de Consulta Cosit nº 193",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Define critérios para que trabalhos envolvendo análise e melhoria de processos, automação e integração de inteligência artificial sejam considerados inovação tecnológica para fins de incentivos fiscais no Simples Nacional.",
-      "motivo_filtragem": "Envolve incentivos fiscais, inovação tecnológica e aplicação do regime do Simples Nacional.",
+      "titulo": "Ato Declaratório Executivo Coana nº 136",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Certifica como Operador Econômico Autorizado a pessoa jurídica que especifica.",
+      "motivo_filtragem": "Trata da certificação de Operador Econômico Autorizado (OEA), tema relevante para o comércio exterior e aduana.",
       "palavras_chave_detectadas": [
-        "Simples Nacional",
-        "inovação tecnológica",
-        "incentivos fiscais",
-        "Cosit"
-      ],
-      "boletins_confirmados": [
-        "direito-tributario"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "propriedade-intelectual",
-          "motivo": "Apesar de citar inteligência artificial, o enfoque regulatório da consulta é o enquadramento fiscal e de incentivos tributários."
-        }
-      ],
-      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153829",
-      "boletins": [
-        "direito-tributario"
-      ]
-    },
-    {
-      "fonte": "Receita Federal | Normas",
-      "categoria": "Tributário",
-      "titulo": "Solução de Consulta Cosit nº 192",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Trata da aplicabilidade dos benefícios da denúncia espontânea (art. 138 do CTN) quando há declaração a menor de débito compensado, seguida de retificação e pagamento integral da diferença com juros.",
-      "motivo_filtragem": "Interpretação de normas gerais de direito tributário relativas a denúncia espontânea e extinção do crédito tributário.",
-      "palavras_chave_detectadas": [
-        "denúncia espontânea",
-        "CTN",
-        "crédito tributário",
-        "compensação tributária"
-      ],
-      "boletins_confirmados": [
-        "direito-tributario"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "contencioso-civel",
-          "motivo": "A matéria abordada é estritamente de direito tributário material e administrativo-fiscal."
-        }
-      ],
-      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153822",
-      "boletins": [
-        "direito-tributario"
-      ]
-    },
-    {
-      "fonte": "Receita Federal | Normas",
-      "categoria": "Tributário",
-      "titulo": "Solução de Consulta Cosit nº 191",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Orienta sobre o cômputo de montantes de folha de salários e receita bruta do período anterior sob o regime do MEI para o cálculo do fator 'r' após a migração para microempresa no Simples Nacional.",
-      "motivo_filtragem": "Aborda regras de apuração do Simples Nacional, folha de salários e enquadramento tributário.",
-      "palavras_chave_detectadas": [
-        "Simples Nacional",
-        "fator r",
-        "receita bruta",
-        "folha de salários"
-      ],
-      "boletins_confirmados": [
-        "direito-tributario"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "trabalhista-empresarial",
-          "motivo": "O uso de dados de folha de salários serve exclusivamente ao cálculo fiscal e enquadramento no Simples Nacional."
-        }
-      ],
-      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153821",
-      "boletins": [
-        "direito-tributario"
-      ]
-    },
-    {
-      "fonte": "Receita Federal | Normas",
-      "categoria": "Tributário",
-      "titulo": "Solução de Consulta Cosit nº 188",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Define que o décimo terceiro salário proporcional relativo ao período do aviso prévio indenizado possui natureza salarial e integra a base para incidência do Imposto sobre a Renda da Pessoa Física (IRPF).",
-      "motivo_filtragem": "Analisa a incidência de tributo federal (IRPF) sobre verbas de natureza trabalhista decorrentes de rescisão.",
-      "palavras_chave_detectadas": [
-        "IRPF",
-        "aviso prévio indenizado",
-        "décimo terceiro salário"
-      ],
-      "boletins_confirmados": [
-        "direito-tributario",
-        "trabalhista-empresarial"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "contencioso-civel",
-          "motivo": "Trata de interpretação de incidência tributária e verbas trabalhistas em sede de consulta fiscal, sem constituir contencioso judicial."
-        },
-        {
-          "boletim": "trabalhista-empresarial",
-          "motivo": "Filtro 1: fonte 'Receita Federal | Normas' não está mapeada para este Radar"
-        }
-      ],
-      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153828",
-      "boletins": [
-        "direito-tributario"
-      ]
-    },
-    {
-      "fonte": "Receita Federal | Normas",
-      "categoria": "Tributário",
-      "titulo": "Solução de Consulta Cosit nº 187",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Esclarece sobre a obrigatoriedade de declaração na DIRBI de crédito presumido de ICMS apenas em caso de habilitação ao crédito fiscal previsto na Lei nº 14.789/2023.",
-      "motivo_filtragem": "Disciplina obrigações acessórias (DIRBI) relacionadas a subvenções para investimento e incentivos fiscais de ICMS.",
-      "palavras_chave_detectadas": [
-        "DIRBI",
-        "crédito presumido de ICMS",
-        "incentivo fiscal",
-        "subvenções para investimento"
+        "Operador Econômico Autorizado"
       ],
       "boletins_confirmados": [
         "direito-tributario"
@@ -315,36 +820,10 @@
       "boletins_rejeitados": [
         {
           "boletim": "societario-ma",
-          "motivo": "O conteúdo refere-se estritamente ao cumprimento de obrigação acessória federal e incentivos tributários."
+          "motivo": "Não envolve reorganizações societárias ou governança corporativa."
         }
       ],
-      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153819",
-      "boletins": [
-        "direito-tributario"
-      ]
-    },
-    {
-      "fonte": "Receita Federal | Normas",
-      "categoria": "Tributário",
-      "titulo": "Solução de Consulta Cosit nº 185",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Examina a vedação relacionada à cessão ou locação de mão de obra para fins de ingresso ou permanência no Simples Nacional no âmbito da prestação de serviços médicos.",
-      "motivo_filtragem": "Analisa regras de restrição de regime tributário (Simples Nacional) associadas a modelos contratuais de prestação de serviços.",
-      "palavras_chave_detectadas": [
-        "Simples Nacional",
-        "cessão de mão de obra",
-        "prestação de serviços"
-      ],
-      "boletins_confirmados": [
-        "direito-tributario"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "trabalhista-empresarial",
-          "motivo": "O exame foca o enquadramento em regime tributário e restrições legais de opção, e não nas relações de emprego."
-        }
-      ],
-      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153818",
+      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153835",
       "boletins": [
         "direito-tributario"
       ]
@@ -354,13 +833,12 @@
       "categoria": "Tributário",
       "titulo": "Receita publica novo balanço de solicitações de opção pelo Simples Nacional e pelo regime regular do IBS e da CBS",
       "data_publicacao": "2026-09-30",
-      "resumo": "Divulga dados atualizados sobre os pedidos de opção pelo Simples Nacional e pelo regime regular dos novos tributos da Reforma Tributária (IBS e CBS).",
-      "motivo_filtragem": "Aborda o andamento de opções por regimes tributários, incluindo a transição para a Reforma Tributária (IBS e CBS).",
+      "resumo": "Divulga dados atualizados sobre as solicitações de opção pelo Simples Nacional e pelo regime regular do IBS e da CBS.",
+      "motivo_filtragem": "Trata de dados de adesão ao Simples Nacional e aos novos tributos da Reforma Tributária (IBS e CBS).",
       "palavras_chave_detectadas": [
         "Simples Nacional",
         "IBS",
-        "CBS",
-        "Reforma Tributária"
+        "CBS"
       ],
       "boletins_confirmados": [
         "direito-tributario"
@@ -368,7 +846,7 @@
       "boletins_rejeitados": [
         {
           "boletim": "mercado-capitais-fundos",
-          "motivo": "Trata de dados estatísticos de adesão a regimes tributários, sem relação com mercado de capitais."
+          "motivo": "Não envolve regulação do mercado financeiro ou de capitais."
         }
       ],
       "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/receita-publica-novo-balanco-de-solicitacoes-de-opcao-pelo-simples-nacional-e-pelo-regime-regular-do-ibs-e-da-cbs",
@@ -377,16 +855,42 @@
       ]
     },
     {
+      "fonte": "Ministério da Fazenda | Notícias",
+      "categoria": "Tributário",
+      "titulo": "Saldo de operações de crédito garantidas pela União atinge R$ 353,64 bilhões no 2º quadrimestre de 2026",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Divulga dados do Relatório Quadrimestral de Operações de Crédito Garantidas pelo Tesouro Nacional.",
+      "motivo_filtragem": "Trata de operações de crédito e garantias soberanas, tema relacionado a financiamentos estruturados e crédito.",
+      "palavras_chave_detectadas": [
+        "operações de crédito",
+        "garantidas pela União"
+      ],
+      "boletins_confirmados": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "direito-tributario",
+          "motivo": "Trata de finanças públicas e crédito, sem natureza tributária direta."
+        }
+      ],
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/saldo-de-operacoes-de-credito-garantidas-pela-uniao-atinge-r-353-64-bilhoes-no-2o-quadrimestre-de-2026",
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
       "fonte": "CVM | Notícias",
       "categoria": "Financeiro e Mercado de Capitais",
       "titulo": "Colegiado da CVM aceita proposta de Termo de Compromisso de mais de R$ 2.3 milhões em caso envolvendo a atual TC S.A.",
       "data_publicacao": "2026-09-30",
-      "resumo": "O Colegiado da CVM aceitou proposta de Termo de Compromisso no valor superior a R$ 2,3 milhões em caso envolvendo a TC S.A., e rejeitou acordo com administradores da Construtora Sultepa S/A, que está em recuperação judicial.",
-      "motivo_filtragem": "A publicação trata de decisão do Colegiado da CVM sobre termo de compromisso e menção a empresa em recuperação judicial, gerando aderência aos radares de mercado de capitais e contencioso cível.",
+      "resumo": "O Colegiado da CVM aceitou proposta de Termo de Compromisso envolvendo a atual TC S.A. e rejeitou acordo com administradores da Construtora Sultepa S/A, que está em recuperação judicial.",
+      "motivo_filtragem": "Trata de deliberação do Colegiado da CVM sobre Termo de Compromisso e menção a companhia aberta/situação de recuperação judicial, com pertinência para mercado de capitais, companhias abertas e contencioso/insolvência.",
       "palavras_chave_detectadas": [
         "CVM",
         "Colegiado da CVM",
         "Termo de Compromisso",
+        "companhia aberta",
         "Recuperação Judicial"
       ],
       "boletins_confirmados": [
@@ -396,7 +900,7 @@
       "boletins_rejeitados": [
         {
           "boletim": "societario-ma",
-          "motivo": "O foco da notícia é a atuação regulatória e sancionatória da CVM e insolvência, sem tratar de M&A ou reorganização societária."
+          "motivo": "Embora envolva companhia aberta, o foco principal é a celebração de termo de compromisso sancionatório/administrativo junto à CVM e insolvência, sem configurar operação societária de M&A stricto sensu."
         },
         {
           "boletim": "contencioso-civel",
@@ -409,186 +913,36 @@
       ]
     },
     {
-      "fonte": "CVM | Notícias",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Sessão de Julgamento em 29/9",
-      "data_publicacao": "2026-09-29",
-      "resumo": "A Comissão de Valores Mobiliários realizou sessão de julgamento de processos administrativos a partir das 15h do dia 29 de setembro de 2026.",
-      "motivo_filtragem": "Trata de julgamentos administrativos conduzidos pela CVM, com pertinência ao mercado de capitais e fundos.",
-      "palavras_chave_detectadas": [
-        "CVM",
-        "processos administrativos",
-        "sessão de julgamento"
-      ],
-      "boletins_confirmados": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "contencioso-civel",
-          "motivo": "A matéria relata julgamento administrativo interno na autarquia e não contencioso judicial ou arbitragem."
-        }
-      ],
-      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/sessao-de-julgamento-em-29-9",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "fonte": "B3 | Ofícios e Comunicados",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "062-2026-VPC-Ofício Circular Deslistagem do Futuro de S&P Merval e republicação dos Contratos de Derivativos de Equities",
-      "data_publicacao": "2026-09-29",
-      "resumo": "A B3 informou a descontinuação da negociação do contrato Futuro de S&P Merval a partir de 01/10/2026 e a republicação de contratos de derivativos de equities.",
-      "motivo_filtragem": "Ofício da B3 sobre derivativos e negociação de ativos no mercado financeiro.",
-      "palavras_chave_detectadas": [
-        "B3",
-        "derivativos",
-        "contrato Futuro"
-      ],
-      "boletins_confirmados": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "societario-ma",
-          "motivo": "Trata de regras de negociação de bolsa e derivativos, sem relação com fusões, aquisições ou governança corporativa de companhias."
-        }
-      ],
-      "url": "https://www.b3.com.br/data/files/91/13/BC/F1/1DEE0A105BF9020AAC094EA8/OC%20062-2026-VPC%20DESLISTAGEM%20DO%20FUTURO%20DE%20SP%20MERVAL%20E%20REPUBLICACAO%20DOS%20CONTRATOS%20DE%20DERIVATIVOS%20DE%20EQUITIES_PT.pdf",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "fonte": "B3 | Ofícios e Comunicados",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "056-2026-VNC-Comunicado Externo ePUMA | Preservação de Foco em Boletas durante o Recebimento de Notícias",
-      "data_publicacao": "2026-09-29",
-      "resumo": "A B3 emitiu comunicado externo sobre a nova configuração da plataforma ePUMA para preservação de foco em boletas durante o recebimento de notícias.",
-      "motivo_filtragem": "Comunicado operacional da B3 direcionado ao funcionamento de plataformas de negociação.",
-      "palavras_chave_detectadas": [
-        "B3",
-        "ePUMA",
-        "plataforma"
-      ],
-      "boletins_confirmados": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "propriedade-intelectual",
-          "motivo": "Trata-se de ajuste operacional em plataforma de negociação da B3, sem discussão de software, LGPD ou tecnologia protegida."
-        }
-      ],
-      "url": "https://www.b3.com.br/data/files/CB/54/E6/F9/EBDE0A105BF9020AAC094EA8/CE%20056-2026-VNC%20EPUMA%20PRESERVACAO%20DE%20FOCO%20EM%20BOLETAS%20DURANTE%20O%20RECEBIMENTO%20DE%20NOTICIAS_PT.pdf",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "fonte": "B3 | Ofícios e Comunicados",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "041-2026-PRE-Ofício Circular Alteração no Programa de Formador de Mercado para Produtos Indexados à Inflação (IPCA)",
-      "data_publicacao": "2026-09-29",
-      "resumo": "A B3 comunicou alterações no Programa de Formador de Mercado para Produtos Indexados à Inflação (IPCA), especificando que operações casadas de DAP com NTN-B via Trademate deixarão de integrar o programa a partir de 03/11/2026.",
-      "motivo_filtragem": "Ofício circular da B3 regulando programa de formador de mercado e produtos de renda fixa/inflação.",
-      "palavras_chave_detectadas": [
-        "B3",
-        "Formador de Mercado",
-        "IPCA",
-        "NTN-B"
-      ],
-      "boletins_confirmados": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "direito-tributario",
-          "motivo": "A menção a índices de inflação e títulos públicos serve apenas ao contexto de negociação de mercado de capitais, sem tratar de contencioso ou planejamento tributário."
-        }
-      ],
-      "url": "https://www.b3.com.br/data/files/35/27/0D/AF/CADE0A105BF9020AAC094EA8/OC%20041-2026%20PRE_PROGRAMA%20DE%20FORMADOR%20DE%20MERCADO%20PARA%20PRODUTOS%20INDEXADOS%20A%20INFLACAO%20IPCA%20ALTERACAO%20NO%20BENEFICIO%20ADICIONAL_PT.pdf",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "fonte": "ANP | Notícias",
+      "fonte": "ANEEL | Últimas Notícias",
       "categoria": "Energia e Recursos",
-      "titulo": "ANP realiza 2° Workshop para debater Gas Release",
-      "data_publicacao": "2026-09-29",
-      "resumo": "A ANP realizou o segundo workshop para debater o Gas Release, com gravação disponibilizada no canal da agência.",
-      "motivo_filtragem": "Evento regulatório do setor de óleo e gás promovido pela ANP.",
+      "titulo": "ANEEL, ONS e EPE divulgam nota técnica sobre capacidade para conexão de sistemas de armazenamento nos Leilões de Reserva de Capacidade 2026",
+      "data_publicacao": "2026-09-30",
+      "resumo": "ANEEL, ONS e EPE divulgaram nota técnica conjunta abordando a capacidade para conexão de sistemas de armazenamento no âmbito dos Leilões de Reserva de Capacidade de 2026.",
+      "motivo_filtragem": "[Resgatado por escassez: Radar Ambiental e ESG] Envolve regulação setorial de energia elétrica, atuação de agência reguladora e leilões de capacidade com sistemas de armazenamento.",
       "palavras_chave_detectadas": [
-        "ANP",
-        "Gas Release",
-        "gás natural"
+        "ANEEL",
+        "ONS",
+        "EPE",
+        "Leilões de Reserva de Capacidade",
+        "sistemas de armazenamento",
+        "energia"
       ],
       "boletins_confirmados": [
-        "regulatorio-oleo-gas"
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
       ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "imobiliario-infraestrutura",
-          "motivo": "O tema central é a regulação de mercado de gás natural pela ANP, e não infraestrutura de transporte ou gasodutos."
-        }
-      ],
-      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-realiza-2deg-workshop-para-debater-gas-release",
+      "boletins_rejeitados": [],
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-ons-e-epe-divulgam-nota-tecnica-sobre-capacidade-para-conexao-de-sistemas-de-armazenamento-nos-leiloes-de-reserva-de-capacidade-2026",
       "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "fonte": "ANP | Notícias",
-      "categoria": "Energia e Recursos",
-      "titulo": "Royalties: valores referentes à produção de julho foram distribuídos hoje a estados e municípios",
-      "data_publicacao": "2026-09-29",
-      "resumo": "A ANP efetuou a distribuição dos valores de royalties referentes à produção de petróleo e gás de julho para estados e municípios.",
-      "motivo_filtragem": "Notícia sobre distribuição de royalties de óleo e gás pela ANP.",
-      "palavras_chave_detectadas": [
-        "ANP",
-        "royalties",
-        "petróleo",
-        "produção"
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
       ],
-      "boletins_confirmados": [
-        "regulatorio-oleo-gas"
-      ],
-      "boletins_rejeitados": [
+      "resgates": [
         {
-          "boletim": "direito-tributario",
-          "motivo": "Trata-se de compensação financeira setorial gerida pela ANP e não de tributos strictu sensu."
+          "boletim": "ambiental-esg",
+          "motivo_da_recusa": "A matéria trata estritamente da capacidade técnica de conexão elétrica e leilões de capacidade, sem focar em licenciamento ambiental ou métricas ESG."
         }
-      ],
-      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/royalties-valores-referentes-a-producao-de-julho-foram-distribuidos-hoje-a-estados-e-municipios",
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "fonte": "ANP | Notícias",
-      "categoria": "Energia e Recursos",
-      "titulo": "2° Workshop sobre Gas Release terá transmissão ao vivo pelo canal da ANP no YouTube",
-      "data_publicacao": "2026-09-29",
-      "resumo": "A ANP informou a transmissão ao vivo do segundo workshop sobre Gas Release em seu canal no YouTube.",
-      "motivo_filtragem": "Divulgação de evento institucional da ANP relativo ao mercado de gás natural.",
-      "palavras_chave_detectadas": [
-        "ANP",
-        "Gas Release"
-      ],
-      "boletins_confirmados": [
-        "regulatorio-oleo-gas"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "imobiliario-infraestrutura",
-          "motivo": "O foco é a regulação de gás natural pela ANP e não obras ou concessões de infraestrutura."
-        }
-      ],
-      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/2deg-workshop-sobre-gas-release-tera-transmissao-ao-vivo-pelo-canal-da-anp-no-youtube",
-      "boletins": [
-        "regulatorio-oleo-gas"
       ]
     },
     {
@@ -596,13 +950,13 @@
       "categoria": "Energia e Recursos",
       "titulo": "ANEEL firma acordo para formar Agentes Comunitários de Energia na Amazônia Legal",
       "data_publicacao": "2026-09-30",
-      "resumo": "A ANEEL firmou acordo com parceiros para capacitar integrantes de comunidades tradicionais da Amazônia Legal como Agentes Comunitários de Energia.",
-      "motivo_filtragem": "Iniciativa institucional da ANEEL voltada ao setor elétrico e comunidades tradicionais.",
+      "resumo": "A ANEEL firmou acordo visando à formação de Agentes Comunitários de Energia na Amazônia Legal, envolvendo capacitação de integrantes de comunidades tradicionais.",
+      "motivo_filtragem": "Trata de acordo institucional de agência reguladora voltado a comunidades tradicionais e energia na Amazônia Legal.",
       "palavras_chave_detectadas": [
         "ANEEL",
+        "energia",
         "Amazônia Legal",
-        "comunidades tradicionais",
-        "energia"
+        "comunidades tradicionais"
       ],
       "boletins_confirmados": [
         "regulatorio-oleo-gas",
@@ -611,7 +965,7 @@
       "boletins_rejeitados": [
         {
           "boletim": "imobiliario-infraestrutura",
-          "motivo": "O foco é a capacitação social e regulação do setor elétrico em comunidades, sem tratar de concessões de infraestrutura de energia ou obras."
+          "motivo": "O foco é a capacitação comunitária e regulação setorial/social, sem abranger obras de infraestrutura ou outorgas imobiliárias diretas."
         }
       ],
       "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-firma-acordo-para-formar-agentes-comunitarios-de-energia-na-amazonia-legal",
@@ -621,160 +975,17 @@
       ]
     },
     {
-      "fonte": "ANEEL | Últimas Notícias",
-      "categoria": "Energia e Recursos",
-      "titulo": "Consulta pública propõe metodologia para amortizações de investimentos em geração",
-      "data_publicacao": "2026-09-29",
-      "resumo": "A ANEEL propôs consulta pública para definir metodologia de amortizações de investimentos em geração de energia elétrica, recebendo contribuições de 1º a 30 de outubro.",
-      "motivo_filtragem": "Consulta pública da ANEEL sobre investimentos em geração de energia.",
-      "palavras_chave_detectadas": [
-        "ANEEL",
-        "Consulta pública",
-        "geração",
-        "investimentos"
-      ],
-      "boletins_confirmados": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "direito-tributario",
-          "motivo": "Trata de amortização regulatória de investimentos no setor elétrico, e não de apuração de tributos ou contencioso fiscal."
-        }
-      ],
-      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/consulta-publica-propoe-metodologia-para-amortizacoes-de-investimentos-em-geracao",
-      "boletins": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura"
-      ]
-    },
-    {
-      "fonte": "ANEEL | Últimas Notícias",
-      "categoria": "Energia e Recursos",
-      "titulo": "ANEEL nega recurso da Enel SP contra decisão que indeferiu perícia técnica relacionada aos eventos climáticos extremos",
-      "data_publicacao": "2026-09-29",
-      "resumo": "A ANEEL negou recurso da Enel SP contra decisão que havia indeferido pedido de perícia técnica associada a eventos climáticos, encerrando a fase instrutória do procedimento administrativo sobre eventual caducidade da concessão.",
-      "motivo_filtragem": "Decisão da ANEEL em processo de fiscalização e possível caducidade de concessão de distribuição de energia elétrica.",
-      "palavras_chave_detectadas": [
-        "ANEEL",
-        "Enel SP",
-        "perícia técnica",
-        "eventos climáticos",
-        "caducidade",
-        "concessão"
-      ],
-      "boletins_confirmados": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "contencioso-civel",
-          "motivo": "Trata-se de procedimento administrativo perante agência reguladora (ANEEL) e não de processo judicial ou arbitragem."
-        }
-      ],
-      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-nega-recurso-da-enel-sp-contra-decisao-que-indeferiu-pericia-tecnica-relacionada-aos-eventos-climaticos-extremos",
-      "boletins": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg"
-      ]
-    },
-    {
-      "fonte": "ANEEL | Últimas Notícias",
-      "categoria": "Energia e Recursos",
-      "titulo": "Eleições 2026: ANEEL determina planos especiais de atendimento para garantir energia durante o período",
-      "data_publicacao": "2026-09-29",
-      "resumo": "A ANEEL determinou que as distribuidoras de energia adotem planos especiais de atendimento para assegurar o suprimento elétrico durante as Eleições 2026, com atenção a locais de votação e tribunais eleitorais.",
-      "motivo_filtragem": "Determinação regulatória da ANEEL voltada à continuidade do serviço público de distribuição de energia elétrica.",
-      "palavras_chave_detectadas": [
-        "ANEEL",
-        "distribuidoras de energia",
-        "energia",
-        "concessão"
-      ],
-      "boletins_confirmados": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "contencioso-civel",
-          "motivo": "A publicação refere-se a determinação regulatória operacional para o período eleitoral, sem envolver litígios ou contencioso cível."
-        }
-      ],
-      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/eleicoes-2026-aneel-determina-planos-especiais-de-atendimento-para-garantir-energia-durante-o-periodo",
-      "boletins": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura"
-      ]
-    },
-    {
-      "fonte": "Ministério da Agricultura | Notícias",
-      "categoria": "Regulatório e Setorial",
-      "titulo": "CONTRATO Nº 66/2026 - SERVIÇOS CONTÍNUOS DE SUPERVISORES ...",
-      "data_publicacao": "",
-      "resumo": "Contratação de serviços contínuos de supervisores administrativos e engenheiros, a serem executados com regime de dedicação exclusiva de mão de obra.",
-      "motivo_filtragem": "A publicação trata de contratação de mão de obra com dedicação exclusiva, possuindo aderência ao Radar Trabalhista Empresarial. Rejeitado nos demais Radares por falta de aderência temática específica.",
-      "palavras_chave_detectadas": [
-        "mão de obra"
-      ],
-      "boletins_confirmados": [
-        "trabalhista-empresarial"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "direito-tributario",
-          "motivo": "O assunto é a contratação de pessoal e não envolve contencioso ou planejamento tributário."
-        },
-        {
-          "boletim": "societario-ma",
-          "motivo": "Não se trata de operação societária ou fusão."
-        },
-        {
-          "boletim": "mercado-capitais-fundos",
-          "motivo": "Ausência de valores mobiliários ou fundos de investimento."
-        },
-        {
-          "boletim": "regulatorio-oleo-gas",
-          "motivo": "Contrato administrativo geral sem relação com regulação setorial específica de energia ou óleo e gás."
-        },
-        {
-          "boletim": "imobiliario-infraestrutura",
-          "motivo": "Trata-se de contratação de pessoal administrativo e engenheiros, sem envolver concessões ou obras de infraestrutura."
-        },
-        {
-          "boletim": "ambiental-esg",
-          "motivo": "Sem relação com licenciamento ou conformidade ambiental."
-        },
-        {
-          "boletim": "propriedade-intelectual",
-          "motivo": "Nenhuma relação com tecnologia, dados ou propriedade industrial."
-        },
-        {
-          "boletim": "contencioso-civel",
-          "motivo": "Não se refere a litígios ou arbitragem."
-        },
-        {
-          "boletim": "trabalhista-empresarial",
-          "motivo": "Filtro 1: fonte 'Ministério da Agricultura | Notícias' não está mapeada para este Radar"
-        }
-      ],
-      "url": "https://www.gov.br/agricultura/pt-br/acesso-a-informacao/licitacoes-e-contratos/contratos/mapa-sede/2026/contrato-no-66-2026-servicos-continuos-de-supervisores-administrativos-e-engenheiros",
-      "boletins": []
-    },
-    {
       "fonte": "ANVISA | Notícias",
       "categoria": "Regulatório e Setorial",
       "titulo": "Anvisa aprova regularização de cosméticos artesanais",
       "data_publicacao": "2026-09-30",
-      "resumo": "A Anvisa aprovou a regularização de cosméticos artesanais e chancelou relatório sobre o funcionamento de sandbox regulatório para a Agência.",
-      "motivo_filtragem": "Aprovação de regularização sanitária de produtos cosméticos e menção a sandbox regulatório, com impacto regulatório setorial e tecnológico. Classificado em regulatório e propriedade intelectual/tecnologia.",
+      "resumo": "A Anvisa aprovou regras para a regularização de cosméticos artesanais e chancelou relatório sobre o funcionamento de sandbox regulatório para a Agência.",
+      "motivo_filtragem": "Trata de ato regulatório da Anvisa sobre produtos de vigilância sanitária e menção a sandbox regulatório tecnológico.",
       "palavras_chave_detectadas": [
+        "Anvisa",
+        "cosméticos",
         "sandbox regulatório",
-        "ANVISA"
+        "vigilância sanitária"
       ],
       "boletins_confirmados": [
         "regulatorio-oleo-gas",
@@ -782,32 +993,8 @@
       ],
       "boletins_rejeitados": [
         {
-          "boletim": "trabalhista-empresarial",
-          "motivo": "O foco é a regulação de produtos e não as relações de trabalho."
-        },
-        {
-          "boletim": "direito-tributario",
-          "motivo": "Não trata de tributos ou incentivos fiscais."
-        },
-        {
-          "boletim": "societario-ma",
-          "motivo": "Sem relação com operações societárias."
-        },
-        {
-          "boletim": "mercado-capitais-fundos",
-          "motivo": "Não envolve valores mobiliários ou mercado financeiro."
-        },
-        {
-          "boletim": "imobiliario-infraestrutura",
-          "motivo": "Não se refere a imóveis ou grandes obras de infraestrutura."
-        },
-        {
           "boletim": "ambiental-esg",
-          "motivo": "Trata de vigilância sanitária de produtos e não de meio ambiente."
-        },
-        {
-          "boletim": "contencioso-civel",
-          "motivo": "Não envolve litígios judiciais ou arbitragem."
+          "motivo": "A regulação de cosméticos artesanais foca em padrões sanitários e de mercado, sem conexão direta com passivos ambientais ou agendas ESG corporativas."
         },
         {
           "boletim": "propriedade-intelectual",
@@ -822,108 +1009,27 @@
     {
       "fonte": "ANVISA | Notícias",
       "categoria": "Regulatório e Setorial",
-      "titulo": "Vigilâncias Sanitárias: veja o que muda no acesso e no uso do SNCR",
-      "data_publicacao": "2026-09-29",
-      "resumo": "A Anvisa divulgou mudanças no acesso e no uso do Sistema Nacional de Controle de Receituários (SNCR), incluindo novo cadastro de usuários e atribuição de numerações para Notificações de Receita eletrônicas.",
-      "motivo_filtragem": "Ato regulatório da Anvisa sobre sistema eletrônico e vigilância sanitária, com interface tecnológica e regulatória setorial.",
+      "titulo": "Anvisa aprova medicamento para tratamento de esquistossomose em crianças",
+      "data_publicacao": "2026-09-30",
+      "resumo": "A Anvisa aprovou novo medicamento indicado para o tratamento de esquistossomose em pacientes de 3 meses a 6 anos.",
+      "motivo_filtragem": "Aprovação de produto farmacêutico por agência reguladora federal (Anvisa).",
       "palavras_chave_detectadas": [
-        "ANVISA",
+        "Anvisa",
+        "medicamento",
         "vigilância sanitária"
       ],
       "boletins_confirmados": [
-        "regulatorio-oleo-gas",
-        "propriedade-intelectual"
+        "regulatorio-oleo-gas"
       ],
       "boletins_rejeitados": [
-        {
-          "boletim": "trabalhista-empresarial",
-          "motivo": "Trata de controle de receituários e não de gestão de pessoal."
-        },
-        {
-          "boletim": "direito-tributario",
-          "motivo": "Ausência de matéria fiscal."
-        },
-        {
-          "boletim": "societario-ma",
-          "motivo": "Não envolve reestruturações ou governança societária."
-        },
-        {
-          "boletim": "mercado-capitais-fundos",
-          "motivo": "Sem relação com o mercado de capitais."
-        },
-        {
-          "boletim": "imobiliario-infraestrutura",
-          "motivo": "Não aborda imóveis ou infraestrutura."
-        },
-        {
-          "boletim": "ambiental-esg",
-          "motivo": "Foco exclusivo em controle sanitário."
-        },
-        {
-          "boletim": "contencioso-civel",
-          "motivo": "Não há contencioso envolvido."
-        },
         {
           "boletim": "propriedade-intelectual",
-          "motivo": "Filtro 1: fonte 'ANVISA | Notícias' não está mapeada para este Radar"
+          "motivo": "A notícia aborda a aprovação regulatória sanitária do medicamento, sem tratar de patentes, registros de marcas ou litígios de propriedade industrial específicos."
         }
       ],
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/vigilancias-sanitarias-veja-o-que-muda-no-acesso-e-no-uso-do-sncr",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-aprova-medicamento-para-tratamento-de-esquistossomose-em-criancas",
       "boletins": [
         "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "fonte": "INPI | Notícias",
-      "categoria": "Regulatório e Setorial",
-      "titulo": "INPI reconhece a Indicação Geográfica para a renda renascença de Poção (PE)",
-      "data_publicacao": "2026-09-29",
-      "resumo": "O INPI reconheceu a Indicação Geográfica para a renda renascença de Poção (PE).",
-      "motivo_filtragem": "Reconhecimento de Indicação Geográfica pelo INPI, tema central de propriedade industrial.",
-      "palavras_chave_detectadas": [
-        "INPI",
-        "indicação geográfica"
-      ],
-      "boletins_confirmados": [
-        "propriedade-intelectual"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "trabalhista-empresarial",
-          "motivo": "Não trata de relações trabalhistas."
-        },
-        {
-          "boletim": "direito-tributario",
-          "motivo": "Sem repercussão tributária direta informada."
-        },
-        {
-          "boletim": "societario-ma",
-          "motivo": "Não se refere a operações societárias."
-        },
-        {
-          "boletim": "mercado-capitais-fundos",
-          "motivo": "Sem ligação com valores mobiliários."
-        },
-        {
-          "boletim": "regulatorio-oleo-gas",
-          "motivo": "O INPI não integra o escopo setorial regulatório listado para este radar."
-        },
-        {
-          "boletim": "imobiliario-infraestrutura",
-          "motivo": "Não aborda bens imóveis ou infraestrutura."
-        },
-        {
-          "boletim": "ambiental-esg",
-          "motivo": "Foco exclusivo em propriedade intelectual."
-        },
-        {
-          "boletim": "contencioso-civel",
-          "motivo": "Ato administrativo concessivo sem litígio."
-        }
-      ],
-      "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/inpi-reconhece-a-indicacao-geografica-para-a-renda-renascenca-de-pocao-pe",
-      "boletins": [
-        "propriedade-intelectual"
       ]
     },
     {
@@ -931,12 +1037,14 @@
       "categoria": "Energia e Recursos",
       "titulo": "Nova súmula estabelece IPI como marco objetivo para cobrança da CFEM",
       "data_publicacao": "2026-09-30",
-      "resumo": "Nova súmula da ANM estabelece o IPI como marco objetivo para cobrança da CFEM, resolvendo controvérsia sobre o momento em que os royalties devem incidir sobre produtos industrializados.",
-      "motivo_filtragem": "A publicação aborda regra de incidência de royalties de mineração (CFEM) e tributo (IPI), impactando tanto o contencioso tributário/fiscal quanto a regulação de mineração e recursos minerais.",
+      "resumo": "A Diretoria Colegiada da ANM aprovou uma nova súmula que define a saída do estabelecimento industrializador, após a incidência do IPI, como o marco temporal e físico para a cobrança da CFEM sobre produtos minerais que passam por processo de industrialização. O entendimento resolve controvérsias históricas e é aplicável a casos com fatos geradores ocorridos até novembro de 2017.",
+      "motivo_filtragem": "Classificado em Direito Tributário devido à discussão sobre a incidência de royalties (CFEM) e a correlação com o marco do IPI. Classificado em Regulatório e Óleo e Gás por se tratar de súmula administrativa editada pela ANM que regula o setor de mineração.",
       "palavras_chave_detectadas": [
         "IPI",
+        "CFEM",
+        "royalties",
         "ANM",
-        "royalties"
+        "súmula"
       ],
       "boletins_confirmados": [
         "direito-tributario",
@@ -944,32 +1052,12 @@
       ],
       "boletins_rejeitados": [
         {
-          "boletim": "trabalhista-empresarial",
-          "motivo": "Não envolve relações de emprego."
-        },
-        {
-          "boletim": "societario-ma",
-          "motivo": "Sem relação com M&A ou reestruturação societária."
-        },
-        {
-          "boletim": "mercado-capitais-fundos",
-          "motivo": "Não trata de valores mobiliários ou fundos."
-        },
-        {
           "boletim": "imobiliario-infraestrutura",
-          "motivo": "Embora relacione-se com mineração, a súmula foca estritamente na regulação da CFEM e tributação."
-        },
-        {
-          "boletim": "ambiental-esg",
-          "motivo": "Trata de aspetos financeiros e regulatórios de royalties, não de licenciamento ambiental."
-        },
-        {
-          "boletim": "propriedade-intelectual",
-          "motivo": "Sem relação com tecnologia ou propriedade industrial."
+          "motivo": "Embora trate de atividade mineral, o foco central da publicação é a definição tributária e fiscal da base de cálculo da CFEM."
         },
         {
           "boletim": "contencioso-civel",
-          "motivo": "Edição de súmula regulatória administrativa, sem configurar litígio judicial direto."
+          "motivo": "Trata-se de uma súmula administrativa de agência reguladora, sem relação direta com disputas judiciais cíveis ou arbitragem."
         },
         {
           "boletim": "direito-tributario",
@@ -986,47 +1074,20 @@
       "categoria": "Energia e Recursos",
       "titulo": "Diretoria prorroga Agenda Regulatória para o exercício de 2027",
       "data_publicacao": "2026-09-30",
-      "resumo": "A diretoria da ANM prorrogou a Agenda Regulatória para o exercício de 2027, alinhando o ciclo regulatório com a vigência do Plano Estratégico.",
-      "motivo_filtragem": "Ato normativo de agência reguladora (ANM) sobre planejamento e agenda regulatória setorial.",
+      "resumo": "A Diretoria Colegiada da ANM decidiu prorrogar a vigência da Agenda Regulatória da agência para o exercício de 2027. A medida visa alinhar o ciclo regulatório com o Plano Estratégico vigente da autarquia (2024-2027).",
+      "motivo_filtragem": "Classificado em Regulatório e Óleo e Gás por tratar diretamente do planejamento normativo e da agenda regulatória da ANM.",
       "palavras_chave_detectadas": [
-        "agência reguladora",
-        "ANM"
+        "agenda regulatória",
+        "ANM",
+        "ciclo regulatório"
       ],
       "boletins_confirmados": [
         "regulatorio-oleo-gas"
       ],
       "boletins_rejeitados": [
         {
-          "boletim": "trabalhista-empresarial",
-          "motivo": "Não trata de questões trabalhistas."
-        },
-        {
-          "boletim": "direito-tributario",
-          "motivo": "Sem impacto fiscal direto."
-        },
-        {
-          "boletim": "societario-ma",
-          "motivo": "Sem relação com operações societárias."
-        },
-        {
-          "boletim": "mercado-capitais-fundos",
-          "motivo": "Sem ligação com mercado de capitais."
-        },
-        {
           "boletim": "imobiliario-infraestrutura",
-          "motivo": "Foco regulatório institucional da ANM."
-        },
-        {
-          "boletim": "ambiental-esg",
-          "motivo": "Não aborda licenciamento ou conformidade ambiental."
-        },
-        {
-          "boletim": "propriedade-intelectual",
-          "motivo": "Sem relação com tecnologia ou PI."
-        },
-        {
-          "boletim": "contencioso-civel",
-          "motivo": "Ato administrativo geral sem litígio."
+          "motivo": "A publicação aborda o planejamento administrativo interno da agência reguladora, sem impacto imediato em negócios imobiliários ou infraestrutura física."
         }
       ],
       "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/diretoria-prorroga-agenda-regulatoria-para-o-exercicio-de-2027",
@@ -1037,14 +1098,46 @@
     {
       "fonte": "EPE | Notícias",
       "categoria": "Energia e Recursos",
+      "titulo": "EPE, ONS E ANEEL divulgam nota tecnica que contempla os quantitativos da capacidade remanescente para conexao de sistemas de armazenamento de energia no ambito dos leiloes de reserva de capacidade 202",
+      "data_publicacao": "2026-09-30",
+      "resumo": "A EPE, em conjunto com o ONS e a ANEEL, publicou a Nota Técnica NT-ONS DPL 0095/2026, que detalha os quantitativos de capacidade remanescente do Sistema Interligado Nacional (SIN) para a conexão de sistemas de armazenamento de energia, visando subsidiar os leilões de reserva de capacidade de 2026.",
+      "motivo_filtragem": "Classificado em Negócios Imobiliários e Infraestrutura e em Regulatório e Óleo e Gás, pois trata de infraestrutura de transmissão de energia elétrica, leilões de capacidade e regulação setorial conjunta da ANEEL, ONS e EPE.",
+      "palavras_chave_detectadas": [
+        "ONS",
+        "ANEEL",
+        "leilões de reserva",
+        "armazenamento de energia",
+        "capacidade remanescente"
+      ],
+      "boletins_confirmados": [
+        "imobiliario-infraestrutura",
+        "regulatorio-oleo-gas"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "ambiental-esg",
+          "motivo": "Apesar de o armazenamento de energia apoiar a transição energética, o documento foca estritamente em aspectos técnicos de capacidade de conexão e leilões de reserva."
+        }
+      ],
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-ons-e-aneel-divulgam-nota-tecnica-que-contempla-os-quantitativos-da-capacidade-remanescente-para-conexao-de-sistemas-de-armazenamento-de-energia-no-ambito-dos-leiloes-de-reserva-de-capacidade-2026",
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "fonte": "EPE | Notícias",
+      "categoria": "Energia e Recursos",
       "titulo": "EPE lança Nota Técnica sobre a movimentação de hidrogênio de baixa emissão de carbono em infraestruturas de transporte de gás natural​",
       "data_publicacao": "2026-09-30",
-      "resumo": "A EPE lançou nota técnica sobre a movimentação de hidrogênio de baixa emissão de carbono em infraestruturas de transporte de gás natural.",
-      "motivo_filtragem": "Estudo técnico setorial envolvendo gás natural, hidrogênio e infraestrutura de transporte, com relevância regulatória e para projetos de energia e ESG/transição energética.",
+      "resumo": "A EPE lançou uma Nota Técnica que analisa a viabilidade e os aspectos técnicos do aproveitamento das infraestruturas existentes de transporte de gás natural para a movimentação de hidrogênio de baixa emissão de carbono no Brasil.",
+      "motivo_filtragem": "Classificado em Regulatório e Óleo e Gás devido ao foco em infraestrutura de transporte de gás natural. Classificado em Negócios Imobiliários e Infraestrutura pelo viés de ativos de infraestrutura energética. Classificado em Ambiental e ESG por tratar de hidrogênio de baixa emissão e descarbonização.",
       "palavras_chave_detectadas": [
-        "gás natural",
         "hidrogênio",
-        "infraestrutura"
+        "gás natural",
+        "transporte",
+        "infraestrutura",
+        "baixa emissão de carbono"
       ],
       "boletins_confirmados": [
         "regulatorio-oleo-gas",
@@ -1053,28 +1146,8 @@
       ],
       "boletins_rejeitados": [
         {
-          "boletim": "trabalhista-empresarial",
-          "motivo": "Não trata de relações de trabalho."
-        },
-        {
           "boletim": "direito-tributario",
-          "motivo": "Sem conteúdo fiscal ou tributário."
-        },
-        {
-          "boletim": "societario-ma",
-          "motivo": "Não envolve operações societárias."
-        },
-        {
-          "boletim": "mercado-capitais-fundos",
-          "motivo": "Não aborda emissão de valores mobiliários ou fundos."
-        },
-        {
-          "boletim": "propriedade-intelectual",
-          "motivo": "Sem relação com tecnologia proprietária ou PI."
-        },
-        {
-          "boletim": "contencioso-civel",
-          "motivo": "Estudo técnico sem litígios."
+          "motivo": "A nota técnica aborda aspectos logísticos, regulatórios e ambientais, sem tratar de incentivos fiscais ou tributação."
         }
       ],
       "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-lanca-nota-tecnica-sobre-a-movimentacao-de-hidrogenio-de-baixa-emissao-de-carbono-em-infraestruturas-de-transporte-de-gas-natural-",
@@ -1087,12 +1160,94 @@
     {
       "fonte": "EPE | Notícias",
       "categoria": "Energia e Recursos",
+      "titulo": "EPE participa do Fórum Sebrae Oportunidades no Óleo e Gás",
+      "data_publicacao": "2026-09-30",
+      "resumo": "A EPE participou do 2º Fórum Sebrae Oportunidades no Óleo e Gás, realizado no Rio de Janeiro, com o objetivo de aproximar micro e pequenas empresas das demandas e oportunidades da cadeia produtiva de petróleo e gás natural.",
+      "motivo_filtragem": "Classificado em Regulatório e Óleo e Gás por tratar diretamente de discussões sobre a cadeia de fornecedores e desenvolvimento do setor de petróleo e gás natural.",
+      "palavras_chave_detectadas": [
+        "óleo e gás",
+        "petróleo"
+      ],
+      "boletins_confirmados": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "societario-ma",
+          "motivo": "Trata-se de evento institucional de fomento à cadeia produtiva, sem relação com operações societárias, fusões ou aquisições."
+        }
+      ],
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-participa-do-forum-sebrae-oportunidades-no-oleo-e-gas",
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "fonte": "EPE | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "Resenha Mensal: consumo nacional de eletricidade cresce 4,3% em agosto de 2026",
+      "data_publicacao": "2026-09-30",
+      "resumo": "Divulgação da Resenha Mensal do Mercado de Energia Elétrica pela EPE, apontando que o consumo nacional de eletricidade atingiu 47.856 GWh em agosto de 2026, registrando um crescimento de 4,3% em comparação ao mesmo período do ano anterior.",
+      "motivo_filtragem": "A publicação foi mantida sem classificação nos Radares por se tratar de um relatório puramente estatístico e informativo sobre consumo de energia, sem alterações legislativas, regulatórias ou decisões jurídicas associadas.",
+      "palavras_chave_detectadas": [
+        "consumo nacional",
+        "energia elétrica"
+      ],
+      "boletins_confirmados": [],
+      "boletins_rejeitados": [
+        {
+          "boletim": "regulatorio-oleo-gas",
+          "motivo": "A publicação contém apenas dados estatísticos de consumo, sem apresentar novas resoluções ou atos normativos setoriais."
+        },
+        {
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Dados de consumo de eletricidade não configuram novos projetos, leilões ou negócios de infraestrutura."
+        }
+      ],
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/resenha-mensal-consumo-nacional-de-eletricidade-cresce-4-3-em-agosto-de-2026",
+      "boletins": []
+    },
+    {
+      "fonte": "EPE | Notícias",
+      "categoria": "Energia e Recursos",
+      "titulo": "EPE promove workshop para discutir agenda estratégica de CCS no Brasil",
+      "data_publicacao": "2026-09-30",
+      "resumo": "A Diretoria de Estudos do Petróleo, Gás e Biocombustíveis da EPE realizou um workshop técnico focado na estruturação da agenda estratégica de Captura e Armazenamento de Carbono (CCS) no Brasil, reunindo agentes públicos, reguladores e a indústria.",
+      "motivo_filtragem": "Classificado em Ambiental e ESG devido ao foco em descarbonização e mitigação de mudanças climáticas por meio de CCS. Classificado em Regulatório e Óleo e Gás e em Negócios Imobiliários e Infraestrutura por envolver infraestrutura de transição energética e regulação de biocombustíveis e carbono.",
+      "palavras_chave_detectadas": [
+        "CCS",
+        "descarbonização",
+        "agenda estratégica"
+      ],
+      "boletins_confirmados": [
+        "ambiental-esg",
+        "imobiliario-infraestrutura",
+        "regulatorio-oleo-gas"
+      ],
+      "boletins_rejeitados": [
+        {
+          "boletim": "direito-tributario",
+          "motivo": "O workshop debateu aspectos técnicos e regulatórios de CCS, sem foco em incentivos fiscais ou tributação de carbono."
+        }
+      ],
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-promove-workshop-para-discutir-agenda-estrategica-de-ccs-no-brasil",
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
+      ]
+    },
+    {
+      "fonte": "EPE | Notícias",
+      "categoria": "Energia e Recursos",
       "titulo": "Plano Nacional de Energia 2055 é aprovado e aponta caminhos para um sistema energético mais limpo, resiliente e competitivo",
       "data_publicacao": "2026-09-30",
-      "resumo": "O Ministério de Minas e Energia publicou a Portaria MME nº 938/2026, aprovando o Plano Nacional de Energia (PNE) 2055, elaborado em conjunto com a EPE.",
-      "motivo_filtragem": "Aprovação de planejamento energético nacional de longo prazo por portaria ministerial, abrangendo regulação setorial, infraestrutura de energia e transição energética/ESG.",
+      "resumo": "O Ministério de Minas e Energia publicou a Portaria MME nº 938/2026, aprovando o Plano Nacional de Energia (PNE) 2055. O documento, elaborado em parceria com a EPE, traça cenários de longo prazo para a expansão e transição do sistema energético brasileiro.",
+      "motivo_filtragem": "Classificado em Regulatório e Óleo e Gás por se tratar de política pública setorial aprovada por portaria ministerial. Classificado em Negócios Imobiliários e Infraestrutura e em Ambiental e ESG devido às diretrizes de expansão da infraestrutura de energia e metas de descarbonização e transição energética.",
       "palavras_chave_detectadas": [
-        "energia",
+        "Plano Nacional de Energia",
+        "MME",
+        "sistema energético",
         "transição energética"
       ],
       "boletins_confirmados": [
@@ -1102,28 +1257,8 @@
       ],
       "boletins_rejeitados": [
         {
-          "boletim": "trabalhista-empresarial",
-          "motivo": "Não trata de questões trabalhistas."
-        },
-        {
           "boletim": "direito-tributario",
-          "motivo": "Sem foco em tributação."
-        },
-        {
-          "boletim": "societario-ma",
-          "motivo": "Não envolve reestruturações corporativas."
-        },
-        {
-          "boletim": "mercado-capitais-fundos",
-          "motivo": "Sem relação com o mercado de capitais."
-        },
-        {
-          "boletim": "propriedade-intelectual",
-          "motivo": "Sem relação com PI ou tecnologia."
-        },
-        {
-          "boletim": "contencioso-civel",
-          "motivo": "Planejamento governamental sem litígios."
+          "motivo": "Trata-se de planejamento estratégico de matriz energética, sem disposições de natureza tributária direta."
         }
       ],
       "url": "https://www.epe.gov.br/pt/imprensa/noticias/plano-nacional-de-energia-2055-e-aprovado-e-aponta-caminhos-para-um-sistema-energetico-mais-limpo-resiliente-e-competitivo",
@@ -1134,315 +1269,58 @@
       ]
     },
     {
-      "fonte": "Kollemata | Decretos",
-      "categoria": "Registros e Cartórios",
-      "titulo": "Notários e registradores capixabas encerram Congresso Internacional da Emes com tema “prova extrajudicial”",
-      "data_publicacao": "2026-09-29",
-      "resumo": "A produção, a valoração e o uso da prova extrajudicial na atividade notarial e registral foram tema do último painel do Congresso Internacional da Emes.",
-      "motivo_filtragem": "Aborda aspectos de atividade notarial e registral sem enquadramento direto nos radares empresariais específicos, sendo relevante para revisão humana em solução de conflitos por envolver provas.",
-      "palavras_chave_detectadas": [
-        "prova extrajudicial",
-        "notários",
-        "registradores"
-      ],
-      "boletins_confirmados": [
-        "contencioso-civel"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "imobiliario-infraestrutura",
-          "motivo": "Trata de atividade notarial geral e de provas, sem foco específico em infraestrutura ou transações imobiliárias."
-        },
-        {
-          "boletim": "contencioso-civel",
-          "motivo": "Filtro 1: fonte 'Kollemata | Decretos' não está mapeada para este Radar"
-        }
-      ],
-      "url": "https://sinoreg-es.org.br/notarios-e-registradores-capixabas-encerram-congresso-internacional-da-emes-com-tema-prova-extrajudicial/",
-      "boletins": []
-    },
-    {
-      "fonte": "Kollemata | Decretos",
-      "categoria": "Registros e Cartórios",
-      "titulo": "CNJ apresenta proposta para registros de mortes em contexto de ação de órgãos de segurança",
-      "data_publicacao": "2026-09-29",
-      "resumo": "O Conselho Nacional de Justiça (CNJ) apresentou proposta de resolução que cria regras nacionais para registros de mortes em contexto de ação de órgãos de segurança.",
-      "motivo_filtragem": "Trata de proposta regulatória e de registros públicos pelo CNJ, com aderência potencial ao contencioso e controle administrativo.",
-      "palavras_chave_detectadas": [
-        "CNJ",
-        "resolução",
-        "registros"
-      ],
-      "boletins_confirmados": [
-        "contencioso-civel"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "regulatorio-oleo-gas",
-          "motivo": "O tema é de regulação do Poder Judiciário/registros públicos, sem relação com setores regulados de infraestrutura ou óleo e gás."
-        },
-        {
-          "boletim": "contencioso-civel",
-          "motivo": "Filtro 1: fonte 'Kollemata | Decretos' não está mapeada para este Radar"
-        }
-      ],
-      "url": "https://sinoreg-es.org.br/cnj-apresenta-proposta-para-registros-de-mortes-em-contexto-de-acao-de-orgaos-de-seguranca/",
-      "boletins": []
-    },
-    {
-      "fonte": "Kollemata | Decretos",
-      "categoria": "Registros e Cartórios",
-      "titulo": "CCJ pode votar mudança na contagem de prazos para agilizar inventários",
-      "data_publicacao": "2026-09-29",
-      "resumo": "A Comissão de Constituição e Justiça (CCJ) pode votar o projeto (PL 2260/2025) que busca acelerar os inventários judiciais.",
-      "motivo_filtragem": "Envolve projeto de lei sobre prazos processuais e inventários judiciais, com impacto direto na esfera do contencioso cível e sucessório.",
-      "palavras_chave_detectadas": [
-        "CCJ",
-        "inventários",
-        "PL 2260/2025"
-      ],
-      "boletins_confirmados": [
-        "contencioso-civel"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "societario-ma",
-          "motivo": "Trata de inventários e sucessão judicial, e não de operações societárias ou M&A corporativo."
-        },
-        {
-          "boletim": "contencioso-civel",
-          "motivo": "Filtro 1: fonte 'Kollemata | Decretos' não está mapeada para este Radar"
-        }
-      ],
-      "url": "https://sinoreg-es.org.br/ccj-pode-votar-mudanca-na-contagem-de-prazos-para-agilizar-inventarios/",
-      "boletins": []
-    },
-    {
-      "fonte": "Kollemata | Decretos",
-      "categoria": "Registros e Cartórios",
-      "titulo": "Artigo – Prescrição da pretensão punitiva disciplinar contra notários e registradores após a lei 15.509/26",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Artigo aborda a prescrição da pretensão punitiva disciplinar contra notários e registradores após a entrada em vigor da lei 15.509/26.",
-      "motivo_filtragem": "Análise jurídica sobre prescrição e disciplina de notários, com interface com contencioso administrativo e responsabilidade.",
-      "palavras_chave_detectadas": [
-        "prescrição",
-        "lei 15.509/26",
-        "notários",
-        "registradores"
-      ],
-      "boletins_confirmados": [
-        "contencioso-civel"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "direito-tributario",
-          "motivo": "O foco é a responsabilidade disciplinar administrativa de notários, sem relação com matéria tributária."
-        },
-        {
-          "boletim": "contencioso-civel",
-          "motivo": "Filtro 1: fonte 'Kollemata | Decretos' não está mapeada para este Radar"
-        }
-      ],
-      "url": "https://sinoreg-es.org.br/artigo-prescricao-da-pretensao-punitiva-disciplinar-contra-notarios-e-registradores-apos-a-lei-15-509-26/",
-      "boletins": []
-    },
-    {
-      "fonte": "Kollemata | Decretos",
-      "categoria": "Registros e Cartórios",
-      "titulo": "Inteligência Artificial pode tornar os serviços dos Cartórios de Registro Civil mais ágeis",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Ferramentas como a ARIA apoiam a consulta e a organização de informações nos cartórios de Registro Civil.",
-      "motivo_filtragem": "Aborda o uso de tecnologia e inteligência artificial em serviços de cartório.",
-      "palavras_chave_detectadas": [
-        "Inteligência Artificial",
-        "cartórios",
-        "tecnologia"
-      ],
-      "boletins_confirmados": [
-        "propriedade-intelectual"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "imobiliario-infraestrutura",
-          "motivo": "Trata de cartórios de Registro Civil e inteligência artificial, sem vínculo com transações imobiliárias de grande porte ou infraestrutura."
-        },
-        {
-          "boletim": "propriedade-intelectual",
-          "motivo": "Filtro 1: fonte 'Kollemata | Decretos' não está mapeada para este Radar"
-        }
-      ],
-      "url": "https://sinoreg-es.org.br/inteligencia-artificial-pode-tornar-os-servicos-dos-cartorios-de-registro-civil-mais-ageis/",
-      "boletins": []
-    },
-    {
       "fonte": "SUSEP | Notícias",
       "categoria": "Financeiro e Mercado de Capitais",
       "titulo": "Sancionada Lei que aperfeiçoa marco legal do seguro rural",
       "data_publicacao": "2026-09-30",
-      "resumo": "Lei nº 15.526/2026 amplia a disciplina do seguro rural, incorpora o novo marco dos contratos de seguro e promove mudanças no Programa de Subvenção ao Prêmio e no fundo de cobertura suplementar.",
-      "motivo_filtragem": "A sanção da lei afeta contratos de seguro, regulação financeira e instrumentos de cobertura de riscos, com forte aderência ao mercado de capitais e fundos/estruturas financeiras.",
+      "resumo": "Foi sancionada a Lei nº 15.526/2026, que aprimora a disciplina do seguro rural no Brasil, incorporando diretrizes do novo marco dos contratos de seguro e alterando regras do Programa de Subvenção ao Prêmio e do fundo de cobertura suplementar.",
+      "motivo_filtragem": "Classificado em Mercado de Capitais e Fundos de Investimento por envolver a regulação de seguros e a atuação da SUSEP. Classificado em Negócios Imobiliários e Infraestrutura devido ao impacto direto no financiamento e proteção de propriedades rurais e agronegócio.",
       "palavras_chave_detectadas": [
         "seguro rural",
-        "Lei nº 15.526/2026",
-        "contratos de seguro",
-        "SUSEP"
+        "SUSEP",
+        "marco legal",
+        "subvenção"
       ],
       "boletins_confirmados": [
-        "mercado-capitais-fundos"
+        "mercado-capitais-fundos",
+        "imobiliario-infraestrutura"
       ],
       "boletins_rejeitados": [
         {
           "boletim": "direito-tributario",
-          "motivo": "A alteração foca no marco legal dos seguros e subvenções, e não em normas de incidência tributária direta."
+          "motivo": "A lei trata de subvenção ao prêmio e fundos de cobertura de seguros, sem alterar a legislação tributária ou instituir novos tributos."
         }
       ],
       "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/setembro/sancionada-lei-que-aperfeicoa-marco-legal-do-seguro-rural",
       "boletins": [
-        "mercado-capitais-fundos"
+        "mercado-capitais-fundos",
+        "imobiliario-infraestrutura"
       ]
-    },
-    {
-      "fonte": "SUSEP | Notícias",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Susep abre nova consulta pública sobre resolução alternativa de conflitos em contratos de seguro",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Proposta regulamenta credenciamento de responsáveis pelos procedimentos e envio e divulgação de informações sobre conflitos resolvidos por meios alternativos.",
-      "motivo_filtragem": "Trata de regulação da SUSEP sobre resolução alternativa de conflitos, impactando disputas contratuais e contencioso/arbitragem no setor securitário.",
-      "palavras_chave_detectadas": [
-        "Susep",
-        "consulta pública",
-        "resolução alternativa de conflitos",
-        "contratos de seguro"
-      ],
-      "boletins_confirmados": [
-        "contencioso-civel",
-        "mercado-capitais-fundos"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "regulatorio-oleo-gas",
-          "motivo": "Trata especificamente do setor de seguros e regulação da SUSEP, sem conexão com óleo e gás."
-        },
-        {
-          "boletim": "contencioso-civel",
-          "motivo": "Filtro 1: fonte 'SUSEP | Notícias' não está mapeada para este Radar"
-        }
-      ],
-      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/setembro/susep-abre-nova-consulta-publica-sobre-resolucao-alternativa-de-conflitos-em-contratos-de-seguro",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "fonte": "SUSEP | Notícias",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Susep abre consultas públicas para revisão da regulamentação de títulos de capitalização",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Propostas integram o Plano de Regulação 2026 e incorporam resultados das Análises de Impacto Regulatório realizadas pela Autarquia para títulos de capitalização.",
-      "motivo_filtragem": "Regulação de títulos de capitalização pela SUSEP, inserida no mercado financeiro e de capitais.",
-      "palavras_chave_detectadas": [
-        "Susep",
-        "consulta pública",
-        "títulos de capitalização",
-        "Plano de Regulação 2026"
-      ],
-      "boletins_confirmados": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "direito-tributario",
-          "motivo": "A matéria refere-se à regulação de produtos de capitalização pela autarquia setorial, e não a legislação fiscal."
-        }
-      ],
-      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/setembro/susep-abre-consultas-publicas-para-revisao-da-regulamentacao-de-titulos-de-capitalizacao",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "fonte": "SUSEP | Notícias",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Susep coloca em consulta pública proposta de regulamentação dos procedimentos operacionais de resseguro",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Minuta atualiza regras atualmente previstas na Circular Susep nº 683/2022 e adequa procedimentos à nova regulamentação do setor de resseguros.",
-      "motivo_filtragem": "Regulação de procedimentos operacionais de resseguro pela SUSEP, relevante para o mercado financeiro e de seguros estruturados.",
-      "palavras_chave_detectadas": [
-        "Susep",
-        "consulta pública",
-        "resseguro",
-        "Circular Susep"
-      ],
-      "boletins_confirmados": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "regulatorio-oleo-gas",
-          "motivo": "Trata estritamente do mercado de seguros e resseguros, sem relação com o setor de óleo e gás."
-        }
-      ],
-      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/setembro/susep-coloca-em-consulta-publica-proposta-de-regulamentacao-dos-procedimentos-operacionais-de-resseguro",
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "fonte": "SUSEP | Notícias",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Presidente sanciona lei que altera regras tributárias para resseguradoras locais",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Lei nº 15.525/2026 reduz a alíquota da CSLL aplicável às resseguradoras locais e promove outras alterações tributárias.",
-      "motivo_filtragem": "Trata diretamente de alteração na alíquota da CSLL e regras tributárias aplicáveis a resseguradoras locais.",
-      "palavras_chave_detectadas": [
-        "Lei nº 15.525/2026",
-        "tributárias",
-        "resseguradoras locais",
-        "CSLL"
-      ],
-      "boletins_confirmados": [
-        "direito-tributario"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "mercado-capitais-fundos",
-          "motivo": "Embora envolva resseguradoras, o foco central e explícito da publicação é a alteração de regse tributárias (CSLL)."
-        },
-        {
-          "boletim": "direito-tributario",
-          "motivo": "Filtro 1: fonte 'SUSEP | Notícias' não está mapeada para este Radar"
-        }
-      ],
-      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/setembro/presidente-sanciona-lei-que-altera-regras-tributarias-para-resseguradoras-locais",
-      "boletins": []
     },
     {
       "fonte": "ANTT | Notícias - Defeso Eleitoral",
       "categoria": "Regulatório e Setorial",
       "titulo": "ANTT atualiza coeficientes do Piso Mínimo do Frete e divulga novo preço de referência do diesel",
       "data_publicacao": "2026-09-30",
-      "resumo": "Revisão acionada pela variação do diesel S10, fixando o preço de referência em R$ 7,33 por litro com novos coeficientes em vigor em 30 de setembro.",
-      "motivo_filtragem": "Ato normativo e regulatório da ANTT sobre piso mínimo de frete e transporte rodoviário.",
+      "resumo": "A ANTT atualizou os coeficientes do Piso Mínimo do Frete em razão da variação no preço do diesel S10, que passou a ter como referência o valor de R$ 7,33 por litro. Os novos coeficientes entraram em vigor em 30 de setembro.",
+      "motivo_filtragem": "Classificado em Regulatório e Óleo e Gás por se tratar de uma medida regulatória tarifária da ANTT que impacta o transporte rodoviário de cargas e o setor de combustíveis.",
       "palavras_chave_detectadas": [
         "ANTT",
         "Piso Mínimo do Frete",
-        "diesel S10",
-        "concessões rodoviárias"
+        "diesel"
       ],
       "boletins_confirmados": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura"
+        "regulatorio-oleo-gas"
       ],
       "boletins_rejeitados": [
         {
-          "boletim": "direito-tributario",
-          "motivo": "Trata de regulação de preços de transporte e frete, sem constituir norma tributária."
+          "boletim": "imobiliario-infraestrutura",
+          "motivo": "Trata-se de ajuste operacional de frete rodoviário, sem impacto direto em contratos de concessão de infraestrutura ou negócios imobiliários."
         }
       ],
       "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-atualiza-coeficientes-do-piso-minimo-do-frete-e-divulga-novo-preco-de-referencia-do-diesel",
       "boletins": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura"
+        "regulatorio-oleo-gas"
       ]
     },
     {
@@ -1450,23 +1328,22 @@
       "categoria": "Regulatório e Setorial",
       "titulo": "Assinatura do contrato da Rota dos Sertões marca novo ciclo de investimentos no Nordeste",
       "data_publicacao": "2026-09-30",
-      "resumo": "Concessão entre Bahia e Pernambuco prevê R$ 8,5 bilhões em investimentos em infraestrutura, segurança viária e desenvolvimento regional.",
-      "motivo_filtragem": "Contrato de concessão rodoviária de grande porte, investimentos em infraestrutura e participação social.",
+      "resumo": "Foi assinado o contrato de concessão da Rota dos Sertões, trecho rodoviário entre a Bahia e Pernambuco. O projeto prevê investimentos de R$ 8,5 bilhões em infraestrutura e segurança viária na região.",
+      "motivo_filtragem": "Classificado em Negócios Imobiliários e Infraestrutura e em Regulatório e Óleo e Gás, pois trata diretamente da assinatura de um contrato de concessão de infraestrutura rodoviária regulado pela ANTT.",
       "palavras_chave_detectadas": [
-        "ANTT",
-        "Rota dos Sertões",
-        "concessão rodoviária",
-        "infraestrutura",
-        "investimentos"
+        "concessão",
+        "contrato de concessão",
+        "investimentos",
+        "ANTT"
       ],
       "boletins_confirmados": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura"
+        "imobiliario-infraestrutura",
+        "regulatorio-oleo-gas"
       ],
       "boletins_rejeitados": [
         {
-          "boletim": "societario-ma",
-          "motivo": "Trata de assinatura de contrato de concessão pública de infraestrutura, e não de M&A corporativo privado."
+          "boletim": "direito-tributario",
+          "motivo": "A matéria aborda investimentos e concessão de rodovias, sem repercussão tributária direta."
         }
       ],
       "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/assinatura-do-contrato-da-rota-dos-sertoes-marca-novo-ciclo-de-investimentos-no-nordeste",
@@ -1480,8 +1357,8 @@
       "categoria": "Regulatório e Setorial",
       "titulo": "ANTT prorroga prazo para contribuições sobre alterações em soluções de engenharia",
       "data_publicacao": "2026-09-30",
-      "resumo": "Participações na Reunião Participativa nº 005/2026 poderão ser enviadas até as 18h de 9 de outubro pelo sistema ParticipaANTT.",
-      "motivo_filtragem": "Processo de consulta e participação social da ANTT sobre soluções de engenharia e regulação de infraestrutura.",
+      "resumo": "A ANTT prorrogou até o dia 9 de outubro o prazo para o envio de contribuições na Reunião Participativa nº 005/2026, que discute alterações em soluções de engenharia no âmbito das concessões rodoviárias.",
+      "motivo_filtragem": "Classificado em Regulatório e Óleo e Gás e em Negócios Imobiliários e Infraestrutura, pois trata de processo de participação social e consulta pública da ANTT sobre soluções de engenharia em concessões de infraestrutura.",
       "palavras_chave_detectadas": [
         "ANTT",
         "reunião participativa",
@@ -1493,8 +1370,8 @@
       ],
       "boletins_rejeitados": [
         {
-          "boletim": "ambiental-esg",
-          "motivo": "Trata de engenharia de infraestrutura de transportes sob ótica regulatória setorial, sem foco ambiental ou ESG específico."
+          "boletim": "contencioso-civel",
+          "motivo": "Trata-se de procedimento administrativo participativo de agência reguladora, sem relação com litígios judiciais ou arbitragem."
         }
       ],
       "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-prorroga-prazo-para-contribuicoes-sobre-alteracoes-em-solucoes-de-engenharia",
@@ -1502,900 +1379,11 @@
         "regulatorio-oleo-gas",
         "imobiliario-infraestrutura"
       ]
-    },
-    {
-      "fonte": "ANTT | Notícias - Defeso Eleitoral",
-      "categoria": "Regulatório e Setorial",
-      "titulo": "ANTT aprova projeto da Motiva RioSP para implantação de Corredor Logístico Sustentável Multimodal",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Projeto na Rodovia Presidente Dutra integra ações de eletromobilidade, conexão com o Porto de Itaguaí, segurança viária, sustentabilidade e desenvolvimento territorial.",
-      "motivo_filtragem": "Aprovação de projeto regulatório envolvendo infraestrutura rodoviária, multimodalidade, sustentabilidade e sandbox regulatório.",
-      "palavras_chave_detectadas": [
-        "ANTT",
-        "Motiva RioSP",
-        "Corredor Logístico Sustentável",
-        "Rodovia Presidente Dutra",
-        "Porto de Itaguaí"
-      ],
-      "boletins_confirmados": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg"
-      ],
-      "boletins_rejeitados": [
-        {
-          "boletim": "mercado-capitais-fundos",
-          "motivo": "Trata de projeto de infraestrutura e regulação de transporte, sem envolver emissão de valores mobiliários ou fundos de investimento."
-        }
-      ],
-      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-aprova-projeto-da-motiva-riosp-para-implantacao-de-corredor-logistico-sustentavel-multimodal",
-      "boletins": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg"
-      ]
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado N° 46.047",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46047",
-      "data_publicacao": "2026-09-30",
-      "resumo": "Divulga condições para a realização de operações compromissadas com instituições financeiras participantes do módulo Oferta Pública (Ofpub).",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Mercado de Capitais e Fundos de Investimento, por palavras-chave do prompt.md] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: termos do Radar Mercado de Capitais e Fundos de Investimento no prompt.md: \"oferta pública\". Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "mercado-capitais-fundos"
-        ],
-        "metodo": "palavras_chave",
-        "evidencia": "termos do Radar Mercado de Capitais e Fundos de Investimento no prompt.md: \"oferta pública\""
-      }
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Resolução BCB N° 594",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=594",
-      "data_publicacao": "2026-09-30",
-      "resumo": "Altera o Quadro I – Atos públicos de liberação com nível de risco III, constante do anexo à Resolução BCB nº 317, de 27 de abril de 2023, que fixa prazos máximos para a decisão administrativa dos pedidos de atos públicos de liberação da atividade econômica requeridos ao Banco Central do Brasil, e os",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Mercado de Capitais e Fundos de Investimento, por perfil da fonte] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026). Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "mercado-capitais-fundos"
-        ],
-        "metodo": "perfil_da_fonte",
-        "evidencia": "Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026)"
-      }
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Resolução BCB N° 593",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=593",
-      "data_publicacao": "2026-09-30",
-      "resumo": "Altera a Resolução BCB nº 478, de 30 de maio de 2025.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Mercado de Capitais e Fundos de Investimento, por perfil da fonte] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026). Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "mercado-capitais-fundos"
-        ],
-        "metodo": "perfil_da_fonte",
-        "evidencia": "Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026)"
-      }
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Resolução BCB N° 592",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=592",
-      "data_publicacao": "2026-09-30",
-      "resumo": "Altera a Resolução BCB nº 111, de 6 de julho de 2021, a Resolução BCB nº 313, de 26 de abril de 2023, a Resolução BCB nº 470, de 30 de abril de 2025, a Circular nº 3.876, de 31 de janeiro de 2018, e a Circular nº 3.641, de 4 de março de 2013.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Mercado de Capitais e Fundos de Investimento, por perfil da fonte] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026). Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "mercado-capitais-fundos"
-        ],
-        "metodo": "perfil_da_fonte",
-        "evidencia": "Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026)"
-      }
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado N° 46.046",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46046",
-      "data_publicacao": "2026-09-30",
-      "resumo": "Divulga pedido de cancelamento da autorização para funcionamento da Onnix Corretora de Câmbio Ltda.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Mercado de Capitais e Fundos de Investimento, por perfil da fonte] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026). Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "mercado-capitais-fundos"
-        ],
-        "metodo": "perfil_da_fonte",
-        "evidencia": "Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026)"
-      }
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado N° 46.045",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46045",
-      "data_publicacao": "2026-09-30",
-      "resumo": "Divulga pedido de cancelamento da autorização para funcionamento da Eagle Instituição de Pagamento Ltda.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Mercado de Capitais e Fundos de Investimento, por palavras-chave do prompt.md] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: termos do Radar Mercado de Capitais e Fundos de Investimento no prompt.md: \"instituição de pagamento\". Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "mercado-capitais-fundos"
-        ],
-        "metodo": "palavras_chave",
-        "evidencia": "termos do Radar Mercado de Capitais e Fundos de Investimento no prompt.md: \"instituição de pagamento\""
-      }
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado N° 46.044",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46044",
-      "data_publicacao": "2026-09-30",
-      "resumo": "Divulga as taxas de juros \"Pm\" e \"PMm\" vigentes em outubro de 2026.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Mercado de Capitais e Fundos de Investimento, por perfil da fonte] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026). Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "mercado-capitais-fundos"
-        ],
-        "metodo": "perfil_da_fonte",
-        "evidencia": "Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026)"
-      }
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado N° 46.043",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46043",
-      "data_publicacao": "2026-09-30",
-      "resumo": "Divulga a taxa de juros \"Jm\" e o fator de ajuste \"a5\" vigentes em outubro de 2026.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Mercado de Capitais e Fundos de Investimento, por perfil da fonte] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026). Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "mercado-capitais-fundos"
-        ],
-        "metodo": "perfil_da_fonte",
-        "evidencia": "Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026)"
-      }
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado N° 46.042",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46042",
-      "data_publicacao": "2026-09-30",
-      "resumo": "Divulga a Taxa de Juros de Longo Prazo (TJLP) para o quarto trimestre de 2026.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Mercado de Capitais e Fundos de Investimento, por perfil da fonte] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026). Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "mercado-capitais-fundos"
-        ],
-        "metodo": "perfil_da_fonte",
-        "evidencia": "Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026)"
-      }
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado N° 46.041",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46041",
-      "data_publicacao": "2026-09-30",
-      "resumo": "Divulga, para fins de recebimento de eventuais objeções, nomes de pessoas eleitas ou nomeadas para ocupar cargos de administração em instituições autorizadas a funcionar",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Mercado de Capitais e Fundos de Investimento, por perfil da fonte] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026). Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "mercado-capitais-fundos"
-        ],
-        "metodo": "perfil_da_fonte",
-        "evidencia": "Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026)"
-      }
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado N° 46.040",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46040",
-      "data_publicacao": "2026-09-30",
-      "resumo": "Divulga nome aprovado de pessoas eleitas/nomeadas para cargos de órgãos estatutários ou contratuais de sociedades autorizadas a funcionar pelo Banco Central do Brasil.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Mercado de Capitais e Fundos de Investimento, por perfil da fonte] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026). Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "mercado-capitais-fundos"
-        ],
-        "metodo": "perfil_da_fonte",
-        "evidencia": "Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026)"
-      }
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado N° 46.039",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46039",
-      "data_publicacao": "2026-09-30",
-      "resumo": "Divulga a Taxa Básica Financeira (TBF), o Redutor \"R\" e a Taxa Referencial (TR) relativos a 29 de setembro de 2026.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Mercado de Capitais e Fundos de Investimento, por perfil da fonte] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026). Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "mercado-capitais-fundos"
-        ],
-        "metodo": "perfil_da_fonte",
-        "evidencia": "Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026)"
-      }
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado N° 46.038",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46038",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Divulga condições para a realização de operações compromissadas com instituições financeiras participantes do módulo Oferta Pública (Ofpub).",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Mercado de Capitais e Fundos de Investimento, por palavras-chave do prompt.md] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: termos do Radar Mercado de Capitais e Fundos de Investimento no prompt.md: \"oferta pública\". Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "mercado-capitais-fundos"
-        ],
-        "metodo": "palavras_chave",
-        "evidencia": "termos do Radar Mercado de Capitais e Fundos de Investimento no prompt.md: \"oferta pública\""
-      }
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Ato de Diretor N° 705",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Ato%20de%20Diretor&numero=705",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Designa servidores para compor a Comissão que procederá a inquérito na Sefer.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Não classificada pela IA] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. Não recebe sugestão de Radar sem IA: ato interno do Banco Central (comissão de inquérito, pessoal ou organização interna). Escolha o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [],
-        "metodo": null,
-        "motivo_sem_radar": "ato interno do Banco Central (comissão de inquérito, pessoal ou organização interna)",
-        "excluida_da_sugestao": true
-      }
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado N° 46.037",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46037",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Divulga pedido de cancelamento da autorização para funcionamento da H. Administradora de Consórcios Ltda.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Mercado de Capitais e Fundos de Investimento, por perfil da fonte] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026). Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "mercado-capitais-fundos"
-        ],
-        "metodo": "perfil_da_fonte",
-        "evidencia": "Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026)"
-      }
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado N° 46.036",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46036",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Divulga, para fins de recebimento de eventuais objeções, nomes de pessoas eleitas ou nomeadas para ocupar cargos de administração em instituições autorizadas a funcionar",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Mercado de Capitais e Fundos de Investimento, por perfil da fonte] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026). Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "mercado-capitais-fundos"
-        ],
-        "metodo": "perfil_da_fonte",
-        "evidencia": "Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026)"
-      }
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado N° 46.035",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46035",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Divulga nome aprovado de pessoas eleitas/nomeadas para cargos de órgãos estatutários ou contratuais de sociedades autorizadas a funcionar pelo Banco Central do Brasil.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Mercado de Capitais e Fundos de Investimento, por perfil da fonte] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026). Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "mercado-capitais-fundos"
-        ],
-        "metodo": "perfil_da_fonte",
-        "evidencia": "Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026)"
-      }
-    },
-    {
-      "fonte": "Banco Central | Normas",
-      "categoria": "Financeiro e Mercado de Capitais",
-      "titulo": "Comunicado N° 46.034",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46034",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Divulga as Taxas Básicas Financeiras (TBF), os Redutores \"R\" e as Taxas Referenciais (TR) relativos a 26, 27 e 28 de setembro de 2026.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Mercado de Capitais e Fundos de Investimento, por perfil da fonte] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026). Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "mercado-capitais-fundos"
-        ],
-        "metodo": "perfil_da_fonte",
-        "evidencia": "Radar Mercado de Capitais e Fundos de Investimento é o Radar predominante de Banco Central | Normas (74 de 74 publicações classificadas de 13/07 a 29/09/2026)"
-      }
-    },
-    {
-      "fonte": "CCEE | Noticias",
-      "categoria": "Energia e Recursos",
-      "titulo": "Confira a apresentação e o vídeo do Encontro do PLD realizado em 26/09",
-      "url": "https://www.ccee.org.br/-/confira-a-apresentacao-e-o-video-do-encontro-do-pld-realizado-em-26-09",
-      "data_publicacao": "2026-09-30",
-      "resumo": "Evento apresentou analises de comportamento do preco e projecoes : NOTICIAS",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Não classificada pela IA] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. Nenhuma regra sem IA sugeriu Radar com segurança (nenhuma palavra-chave de Radar no título ou na descrição). Escolha o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [],
-        "metodo": null,
-        "motivo_sem_radar": "nenhuma palavra-chave de Radar no título ou na descrição"
-      }
-    },
-    {
-      "fonte": "CCEE | Noticias",
-      "categoria": "Energia e Recursos",
-      "titulo": "CCEE amplia módulo digital para processos de Monitoramento Intensivo",
-      "url": "https://www.ccee.org.br/-/ccee-amplia-modulo-digital-para-processos-de-monitoramento-intensivo",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Solucao passa a atender mais uma frente de monitoramento e avanca na digitalizacao e integracao dos processos da organizacao : NOTICIAS",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Não classificada pela IA] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. Nenhuma regra sem IA sugeriu Radar com segurança (nenhuma palavra-chave de Radar no título ou na descrição). Escolha o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [],
-        "metodo": null,
-        "motivo_sem_radar": "nenhuma palavra-chave de Radar no título ou na descrição"
-      }
-    },
-    {
-      "fonte": "CCEE | Noticias",
-      "categoria": "Energia e Recursos",
-      "titulo": "Últimos dias para inscrição no curso de Formação de Preços em parceria com a PSR",
-      "url": "https://www.ccee.org.br/-/ultimos-dias-para-inscricao-no-curso-de-formacao-de-precos-em-parceria-com-a-psr",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Primeira edicao on-line da capacitacao apresenta diferentes modelos e perspectivas sobre a formacao de precos no mercado de energia : 1 de 1 Loading... Menu de Navegacao a ccee comunicacao ajuda tecnologia dados e analises precos mercado CCEE Academy documentos Fechar Ao clicar em ‘Aceitar todos os",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Não classificada pela IA] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. Nenhuma regra sem IA sugeriu Radar com segurança (só um termo genérico: Radar Negócios Imobiliários e Infraestrutura: energia). Escolha o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [],
-        "metodo": null,
-        "motivo_sem_radar": "só um termo genérico: Radar Negócios Imobiliários e Infraestrutura: energia"
-      }
-    },
-    {
-      "fonte": "Receita Federal | Normas",
-      "categoria": "Tributário",
-      "titulo": "Ato Declaratório Executivo Corat nº 79",
-      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836",
-      "data_publicacao": "2026-09-30",
-      "resumo": "Altera os Anexos Únicos dos Atos Declaratórios Executivos Corat nº 63, de 26 de agosto de 2026, e nº 78, de 28 de setembro de 2026, que divulgam as Agendas Tributárias dos meses de setembro e outubro de 2026, respectivamente.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Tributário, por matriz do Filtro 1] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: o Filtro 1 liga Receita Federal | Normas só ao Radar Tributário. Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "direito-tributario"
-        ],
-        "metodo": "matriz",
-        "evidencia": "o Filtro 1 liga Receita Federal | Normas só ao Radar Tributário"
-      }
-    },
-    {
-      "fonte": "Receita Federal | Normas",
-      "categoria": "Tributário",
-      "titulo": "Ato Declaratório Executivo Sutri nº 9",
-      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153837",
-      "data_publicacao": "2026-09-30",
-      "resumo": "Vincula a Secretaria Especial da Receita Federal do Brasil e a pessoa jurídica que menciona a Termo de Consensualidade firmado no âmbito do Procedimento de Consensualidade Fiscal - Receita de Consenso.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Tributário, por matriz do Filtro 1] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: o Filtro 1 liga Receita Federal | Normas só ao Radar Tributário. Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "direito-tributario"
-        ],
-        "metodo": "matriz",
-        "evidencia": "o Filtro 1 liga Receita Federal | Normas só ao Radar Tributário"
-      }
-    },
-    {
-      "fonte": "Receita Federal | Normas",
-      "categoria": "Tributário",
-      "titulo": "Ato Declaratório Executivo Coana nº 136",
-      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153835",
-      "data_publicacao": "2026-09-30",
-      "resumo": "Certifica como Operador Econômico Autorizado a pessoa jurídica que especifica.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Tributário, por matriz do Filtro 1] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: o Filtro 1 liga Receita Federal | Normas só ao Radar Tributário. Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "direito-tributario"
-        ],
-        "metodo": "matriz",
-        "evidencia": "o Filtro 1 liga Receita Federal | Normas só ao Radar Tributário"
-      }
-    },
-    {
-      "fonte": "Receita Federal | Normas",
-      "categoria": "Tributário",
-      "titulo": "Ato Declaratório Executivo Corat nº 78",
-      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153803",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Divulga a Agenda Tributária do mês de outubro de 2026.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Tributário, por matriz do Filtro 1] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: o Filtro 1 liga Receita Federal | Normas só ao Radar Tributário. Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "direito-tributario"
-        ],
-        "metodo": "matriz",
-        "evidencia": "o Filtro 1 liga Receita Federal | Normas só ao Radar Tributário"
-      }
-    },
-    {
-      "fonte": "Receita Federal | Normas",
-      "categoria": "Tributário",
-      "titulo": "Solução de Consulta Cosit nº 189",
-      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153820",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Assunto: Contribuição para o PIS/Pasep SERVIÇOS DE SEGURANÇA PRIVADA. MONITORAMENTO DE SISTEMAS ELETRÔNICOS DE SEGURANÇA. REGIME DE APURAÇÃO. Sob a vigência da Lei nº 7.102, de 20 de junho de 1983, a atividade de monitoramento de sistemas eletrônicos de segurança não era uma atividade exclusiva das empresas especializadas de vigilância. Por consequência, as pessoas jurídicas que prestavam o respec",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Tributário, por matriz do Filtro 1] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: o Filtro 1 liga Receita Federal | Normas só ao Radar Tributário. Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "direito-tributario"
-        ],
-        "metodo": "matriz",
-        "evidencia": "o Filtro 1 liga Receita Federal | Normas só ao Radar Tributário"
-      }
-    },
-    {
-      "fonte": "Ministério da Fazenda | Notícias",
-      "categoria": "Tributário",
-      "titulo": "Saldo de operações de crédito garantidas pela União atinge R$ 353,64 bilhões no 2º quadrimestre de 2026",
-      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/saldo-de-operacoes-de-credito-garantidas-pela-uniao-atinge-r-353-64-bilhoes-no-2o-quadrimestre-de-2026",
-      "data_publicacao": "2026-09-30",
-      "resumo": "- Os dados foram publicados nesta quarta-feira (30/09) pelo Tesouro Nacional no Relatorio Quadrimestral de Operacoes de Credito Garantidas Tags: CONTAS PUBLICAS",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Não classificada pela IA] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. Nenhuma regra sem IA sugeriu Radar com segurança (fonte genérica sem palavra-chave de Radar). Escolha o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [],
-        "metodo": null,
-        "motivo_sem_radar": "fonte genérica sem palavra-chave de Radar"
-      }
-    },
-    {
-      "fonte": "Ministério da Fazenda | Notícias",
-      "categoria": "Tributário",
-      "titulo": "Governo Central registra em agosto déficit primário de R$ 13,6 bilhões, aponta o Resultado do Tesouro Nacional",
-      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/governo-central-registra-em-agosto-deficit-primario-de-r-13-6-bilhoes-aponta-o-resultado-do-tesouro-nacional",
-      "data_publicacao": "2026-09-29",
-      "resumo": "- Em agosto do ano passado, o deficit foi de R$ 15,5 bilhoes, em valores correntes Tags: FIQUE ATENTO",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Não classificada pela IA] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. Nenhuma regra sem IA sugeriu Radar com segurança (fonte genérica sem palavra-chave de Radar). Escolha o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [],
-        "metodo": null,
-        "motivo_sem_radar": "fonte genérica sem palavra-chave de Radar"
-      }
-    },
-    {
-      "fonte": "Ministério da Fazenda | Notícias",
-      "categoria": "Tributário",
-      "titulo": "Simples Nacional 2027 tem novos prazos para microempresas e empresas de pequeno porte",
-      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/simples-nacional-2027-tem-novos-prazos-para-microempresas-e-empresas-de-pequeno-porte",
-      "data_publicacao": "2026-09-29",
-      "resumo": "- Resolucao com as novas datas foi publicada na segunda-feira (28/09) Tags: RELATORIO",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Não classificada pela IA] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. Nenhuma regra sem IA sugeriu Radar com segurança (fonte genérica sem dois termos de um Radar só: Radar Tributário: Simples Nacional; Radar Regulatório e Óleo e Gás: Resolução). Escolha o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [],
-        "metodo": null,
-        "motivo_sem_radar": "fonte genérica sem dois termos de um Radar só: Radar Tributário: Simples Nacional; Radar Regulatório e Óleo e Gás: Resolução"
-      }
-    },
-    {
-      "fonte": "Ministério da Agricultura | Notícias",
-      "categoria": "Regulatório e Setorial",
-      "titulo": "Abertura de mercados para produtos brasileiros em Antígua e Barbuda, Chile, Argélia, China e Paraguai",
-      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/abertura-de-mercados-para-produtos-brasileiros-em-antigua-e-barbuda-chile-argelia-china-e-paraguai",
-      "data_publicacao": "2026-09-29",
-      "resumo": "",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Não classificada pela IA] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. Nenhuma regra sem IA sugeriu Radar com segurança (nenhuma palavra-chave de Radar no título ou na descrição). Escolha o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [],
-        "metodo": null,
-        "motivo_sem_radar": "nenhuma palavra-chave de Radar no título ou na descrição"
-      }
-    },
-    {
-      "fonte": "ANVISA | Notícias",
-      "categoria": "Regulatório e Setorial",
-      "titulo": "Anvisa aprova medicamento para tratamento de esquistossomose em crianças",
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-aprova-medicamento-para-tratamento-de-esquistossomose-em-criancas",
-      "data_publicacao": "2026-09-30",
-      "resumo": "O produto é indicado a pacientes de 3 meses a 6 anos",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Regulatório e Óleo e Gás, por matriz do Filtro 1] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: o Filtro 1 liga ANVISA | Notícias só ao Radar Regulatório e Óleo e Gás. Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "regulatorio-oleo-gas"
-        ],
-        "metodo": "matriz",
-        "evidencia": "o Filtro 1 liga ANVISA | Notícias só ao Radar Regulatório e Óleo e Gás"
-      }
-    },
-    {
-      "fonte": "ANVISA | Notícias",
-      "categoria": "Regulatório e Setorial",
-      "titulo": "Webinar apresentará avaliação nacional das práticas de segurança do paciente 2026",
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/webinar-apresentara-avaliacao-nacional-das-praticas-de-seguranca-do-paciente-2026",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Evento será realizado no dia 8/10, às 15h. Participe!",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Regulatório e Óleo e Gás, por matriz do Filtro 1] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: o Filtro 1 liga ANVISA | Notícias só ao Radar Regulatório e Óleo e Gás. Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "regulatorio-oleo-gas"
-        ],
-        "metodo": "matriz",
-        "evidencia": "o Filtro 1 liga ANVISA | Notícias só ao Radar Regulatório e Óleo e Gás"
-      }
-    },
-    {
-      "fonte": "ANVISA | Notícias",
-      "categoria": "Regulatório e Setorial",
-      "titulo": "Acompanhe a 18ª Reunião Ordinária Pública da Diretoria Colegiada da Anvisa",
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/acompanhe-a-18a-reuniao-ordinaria-publica-da-diretoria-colegiada-da-anvisa",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Encontro será transmitido ao vivo a partir das 9h30 desta quarta-feira (30/9)",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Regulatório e Óleo e Gás, por matriz do Filtro 1] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: o Filtro 1 liga ANVISA | Notícias só ao Radar Regulatório e Óleo e Gás. Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "regulatorio-oleo-gas"
-        ],
-        "metodo": "matriz",
-        "evidencia": "o Filtro 1 liga ANVISA | Notícias só ao Radar Regulatório e Óleo e Gás"
-      }
-    },
-    {
-      "fonte": "ANVISA | Notícias",
-      "categoria": "Regulatório e Setorial",
-      "titulo": "SNCR: perfis de acesso ao sistema estão disponíveis no cadastro Anvisa a partir desta terça (29/9)",
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/sncr-perfis-de-acesso-ao-sistema-estao-disponiveis-no-cadastro-anvisa-a-partir-desta-terca-29-9",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Responsáveis legais pelo cadastro de farmácias, drogarias e vigilâncias sanitárias devem estar habilitados no Sistema Nacional de Controle de Receituários até 30 de setembro de 2026",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Regulatório e Óleo e Gás, por matriz do Filtro 1] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: o Filtro 1 liga ANVISA | Notícias só ao Radar Regulatório e Óleo e Gás. Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "regulatorio-oleo-gas"
-        ],
-        "metodo": "matriz",
-        "evidencia": "o Filtro 1 liga ANVISA | Notícias só ao Radar Regulatório e Óleo e Gás"
-      }
-    },
-    {
-      "fonte": "INPI | Notícias",
-      "categoria": "Regulatório e Setorial",
-      "titulo": "Trâmite prioritário para marcas de mercado virtual está temporariamente indisponível",
-      "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/tramite-prioritario-para-marcas-de-mercado-virtual-esta-temporariamente-indisponivel",
-      "data_publicacao": "2026-09-29",
-      "resumo": "",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Propriedade Intelectual, Tecnologia e Privacidade, por matriz do Filtro 1] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: o Filtro 1 liga INPI | Notícias só ao Radar Propriedade Intelectual, Tecnologia e Privacidade. Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "propriedade-intelectual"
-        ],
-        "metodo": "matriz",
-        "evidencia": "o Filtro 1 liga INPI | Notícias só ao Radar Propriedade Intelectual, Tecnologia e Privacidade"
-      }
-    },
-    {
-      "fonte": "ANM | Notícias",
-      "categoria": "Energia e Recursos",
-      "titulo": "Segurança de barragens e pilhas ganha novas perspectivas na Damsweek 2026",
-      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/seguranca-de-barragens-e-pilhas-ganha-novas-perspectivas-na-damsweek-2026",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Evento realizado em Belem reuniu especialistas brasileiros e estrangeiros e trouxe discussoes sobre gestao de riscos, monitoramento, governanca e tecnologias aplicadas a fiscalizacao tags: publicado Noticia",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Não classificada pela IA] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. Nenhuma regra sem IA sugeriu Radar com segurança (só um termo genérico: Radar Regulatório e Óleo e Gás: fiscalização). Escolha o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [],
-        "metodo": null,
-        "motivo_sem_radar": "só um termo genérico: Radar Regulatório e Óleo e Gás: fiscalização"
-      }
-    },
-    {
-      "fonte": "ANM | Notícias",
-      "categoria": "Energia e Recursos",
-      "titulo": "Parceria prevê pesquisa e formação em minerais críticos",
-      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/parceria-preve-pesquisa-e-formacao-em-minerais-criticos",
-      "data_publicacao": "2026-09-29",
-      "resumo": "Grupo Ser Educacional e Associacao de Minerais Criticos assinaram protocolo de intencoes em Brasilia; diretor da ANM destacou a importancia de agregar valor aos recursos minerais no pais tags: publicado Noticia",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Não classificada pela IA] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. Nenhuma regra sem IA sugeriu Radar com segurança (nenhuma palavra-chave de Radar no título ou na descrição). Escolha o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [],
-        "metodo": null,
-        "motivo_sem_radar": "nenhuma palavra-chave de Radar no título ou na descrição"
-      }
-    },
-    {
-      "fonte": "EPE | Notícias",
-      "categoria": "Energia e Recursos",
-      "titulo": "EPE participa do Fórum Sebrae Oportunidades no Óleo e Gás",
-      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-participa-do-forum-sebrae-oportunidades-no-oleo-e-gas",
-      "data_publicacao": "2026-09-30",
-      "resumo": "- No dia 23 de setembro, a Empresa de Pesquisa Energetica (EPE) participou do 2º Forum Sebrae Oportunidades no Oleo e Gas, realizado por Sebrae Rio e Sebrae Bahia no Rio de Janeiro. O evento teve por objetivo aproximar micro e pequenas empresas das novas demandas e oportunidades da cadeia de petrole",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Regulatório e Óleo e Gás, por palavras-chave do prompt.md] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: termos do Radar Regulatório e Óleo e Gás no prompt.md: \"óleo e gás\". Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "regulatorio-oleo-gas"
-        ],
-        "metodo": "palavras_chave",
-        "evidencia": "termos do Radar Regulatório e Óleo e Gás no prompt.md: \"óleo e gás\""
-      }
-    },
-    {
-      "fonte": "EPE | Notícias",
-      "categoria": "Energia e Recursos",
-      "titulo": "Resenha Mensal: consumo nacional de eletricidade cresce 4,3% em agosto de 2026",
-      "url": "https://www.epe.gov.br/pt/imprensa/noticias/resenha-mensal-consumo-nacional-de-eletricidade-cresce-4-3-em-agosto-de-2026",
-      "data_publicacao": "2026-09-30",
-      "resumo": "- A mais recente edicao da Resenha Mensal do Mercado de Energia Eletrica mostra que o consumo nacional de energia eletrica foi de 47.856 gigawatts-hora (GWh) em agosto de 2026, aumento de 4,3% comparado a agosto de 2025. E o quinto aumento consecutivo no consumo nacional mensal.",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Não classificada pela IA] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. Nenhuma regra sem IA sugeriu Radar com segurança (só um termo genérico: Radar Negócios Imobiliários e Infraestrutura: energia). Escolha o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [],
-        "metodo": null,
-        "motivo_sem_radar": "só um termo genérico: Radar Negócios Imobiliários e Infraestrutura: energia"
-      }
-    },
-    {
-      "fonte": "EPE | Notícias",
-      "categoria": "Energia e Recursos",
-      "titulo": "EPE promove workshop para discutir agenda estratégica de CCS no Brasil",
-      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-promove-workshop-para-discutir-agenda-estrategica-de-ccs-no-brasil",
-      "data_publicacao": "2026-09-30",
-      "resumo": "- Nos dias 17 e 18 de setembro, a Diretoria de Estudos do Petroleo, Gas e Biocombustiveis (DPG) realizou o workshop tecnico “Agenda Estrategica de CCS no Brasil: do Diagnostico a Implementacao”, reunindo representantes de orgaos governamentais, reguladores, academia, industria, instituicoes financei",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Não classificada pela IA] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. Nenhuma regra sem IA sugeriu Radar com segurança (só um termo genérico: Radar Regulatório e Óleo e Gás: petróleo). Escolha o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [],
-        "metodo": null,
-        "motivo_sem_radar": "só um termo genérico: Radar Regulatório e Óleo e Gás: petróleo"
-      }
-    },
-    {
-      "fonte": "EPE | Notícias",
-      "categoria": "Energia e Recursos",
-      "titulo": "EPE publica caderno do estudo de estimativa volumétrica da Bacia de Pelotas",
-      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-caderno-do-estudo-de-estimativa-volumetrica-da-bacia-de-pelotas",
-      "data_publicacao": "2026-09-29",
-      "resumo": "- A Empresa de Pesquisa Energetica (EPE) lancou o Caderno de Estudos \"Estimativa Volumetrica da Bacia Pelotas\" durante a Rio Oil & Gas (ROG.e) 2026, evento realizado no Rio de Janeiro entre os dias 21 e 24 de setembro. O estudo integra um projeto de analises das Bacias Sedimentares brasileiras, inic",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Não classificada pela IA] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. Nenhuma regra sem IA sugeriu Radar com segurança (nenhuma palavra-chave de Radar no título ou na descrição). Escolha o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [],
-        "metodo": null,
-        "motivo_sem_radar": "nenhuma palavra-chave de Radar no título ou na descrição"
-      }
-    },
-    {
-      "fonte": "ANTAQ | Notícias",
-      "categoria": "Energia e Recursos",
-      "titulo": "Sobrestadia de contêiner: webinário tem nova data",
-      "url": "https://www.gov.br/antaq/pt-br/noticias/sobrestadia-de-conteiner-webinario-tem-nova-data",
-      "data_publicacao": "2026-09-29",
-      "resumo": "- Encontro sobre o Tema 2.6 da Agenda Regulatoria sera realizado em 08/10, as 15h; prazo para envio de contribuicoes permanece ate 20/10 Tags:",
-      "boletins_confirmados": [],
-      "boletins_rejeitados": [],
-      "palavras_chave_detectadas": [],
-      "motivo_filtragem": "[Sugestão sem IA: Radar Regulatório e Óleo e Gás, por palavras-chave do prompt.md] A IA (gemini-3.5-flash-lite) não devolveu esta publicação. O Radar foi sugerido por regra fixa, não pela IA: termos do Radar Regulatório e Óleo e Gás no prompt.md: \"agenda regulatória\". Confirme, troque o Radar ou rejeite.",
-      "nao_classificada_pela_ia": true,
-      "boletins": [],
-      "sugestao_sem_ia": {
-        "radares": [
-          "regulatorio-oleo-gas"
-        ],
-        "metodo": "palavras_chave",
-        "evidencia": "termos do Radar Regulatório e Óleo e Gás no prompt.md: \"agenda regulatória\""
-      }
     }
   ],
   "fontes_sem_publicacao_hoje": [
     {
-      "fonte": "CCEE | Noticias",
+      "fonte": "Planalto | Resenha Diaria",
       "motivo": "Nenhuma publicação foi identificada dentro da janela."
     },
     {
@@ -2403,11 +1391,15 @@
       "motivo": "Nenhuma publicação foi identificada dentro da janela."
     },
     {
-      "fonte": "ANTAQ | Notícias",
-      "motivo": "Nenhuma publicação foi identificada dentro da janela."
+      "fonte": "ANPD | Notícias",
+      "motivo": "A fonte listou 30 publicação(ões), nenhuma dentro da janela."
     },
     {
-      "fonte": "ANPD | Notícias",
+      "fonte": "B3 | Ofícios e Comunicados",
+      "motivo": "A fonte listou 10 publicação(ões), nenhuma dentro da janela."
+    },
+    {
+      "fonte": "ANP | Notícias",
       "motivo": "A fonte listou 30 publicação(ões), nenhuma dentro da janela."
     },
     {
@@ -2423,7 +1415,15 @@
       "motivo": "A fonte listou 30 publicação(ões), nenhuma dentro da janela."
     },
     {
+      "fonte": "INPI | Notícias",
+      "motivo": "A fonte listou 27 publicação(ões), nenhuma dentro da janela."
+    },
+    {
       "fonte": "SENACON | Notícias",
+      "motivo": "A fonte listou 30 publicação(ões), nenhuma dentro da janela."
+    },
+    {
+      "fonte": "ANTAQ | Notícias",
       "motivo": "A fonte listou 30 publicação(ões), nenhuma dentro da janela."
     },
     {
@@ -2431,38 +1431,37 @@
       "motivo": "A fonte listou 6 publicação(ões), nenhuma dentro da janela."
     },
     {
+      "fonte": "Kollemata | Decretos",
+      "motivo": "A fonte listou 10 publicação(ões), nenhuma dentro da janela."
+    },
+    {
       "fonte": "ANATEL | Notícias",
       "motivo": "A fonte listou 30 publicação(ões), nenhuma dentro da janela."
     }
   ],
-  "fontes_sem_resultado": [
-    {
-      "fonte": "INPI | Notícias",
-      "motivo": "A página foi coletada, mas nenhuma publicação individual utilizável foi extraída."
-    }
-  ],
+  "fontes_sem_resultado": [],
   "fontes_com_erro_tecnico": [],
-  "data_execucao": "2026-09-30",
+  "data_execucao": "2026-10-01",
   "janela_aplicada": {
-    "inicio": "2026-09-29T00:00",
-    "fim": "2026-09-30T19:04"
+    "inicio": "2026-09-30T00:00",
+    "fim": "2026-10-01T07:38"
   },
-  "modelo_gemini_utilizado": "gemini-3.5-flash-lite",
+  "modelo_gemini_utilizado": "gemini-3.5-flash, gemini-3.5-flash-lite",
   "validacao_fontes": [
     {
       "fonte": "Planalto | Resenha Diaria",
       "status_coleta": "ok",
       "publicacoes_localizadas": 0,
-      "publicacoes_aprovadas": 1,
-      "status_editorial": "itens_incluidos",
+      "publicacoes_aprovadas": 0,
+      "status_editorial": "sem_publicacao_na_janela",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
     },
     {
       "fonte": "Banco Central | Normas",
       "status_coleta": "ok",
-      "publicacoes_localizadas": 22,
-      "publicacoes_aprovadas": 22,
+      "publicacoes_localizadas": 17,
+      "publicacoes_aprovadas": 17,
       "status_editorial": "itens_incluidos",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -2470,8 +1469,8 @@
     {
       "fonte": "CCEE | Noticias",
       "status_coleta": "ok",
-      "publicacoes_localizadas": 3,
-      "publicacoes_aprovadas": 3,
+      "publicacoes_localizadas": 1,
+      "publicacoes_aprovadas": 1,
       "status_editorial": "itens_incluidos",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -2480,16 +1479,16 @@
       "fonte": "Destaques do D.O.U.",
       "status_coleta": "ok",
       "publicacoes_localizadas": 0,
-      "publicacoes_aprovadas": 0,
-      "status_editorial": "publicacoes_sem_aderencia_editorial",
+      "publicacoes_aprovadas": 10,
+      "status_editorial": "itens_incluidos",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
     },
     {
       "fonte": "Receita Federal | Normas",
       "status_coleta": "ok",
-      "publicacoes_localizadas": 13,
-      "publicacoes_aprovadas": 13,
+      "publicacoes_localizadas": 5,
+      "publicacoes_aprovadas": 5,
       "status_editorial": "itens_incluidos",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -2497,8 +1496,8 @@
     {
       "fonte": "Ministério da Fazenda | Notícias",
       "status_coleta": "ok",
-      "publicacoes_localizadas": 4,
-      "publicacoes_aprovadas": 4,
+      "publicacoes_localizadas": 2,
+      "publicacoes_aprovadas": 2,
       "status_editorial": "itens_incluidos",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -2515,8 +1514,8 @@
     {
       "fonte": "CVM | Notícias",
       "status_coleta": "ok",
-      "publicacoes_localizadas": 3,
-      "publicacoes_aprovadas": 2,
+      "publicacoes_localizadas": 2,
+      "publicacoes_aprovadas": 1,
       "status_editorial": "itens_incluidos",
       "busca_complementar_executada": true,
       "conteudo_truncado": false
@@ -2524,18 +1523,18 @@
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "status_coleta": "ok",
-      "publicacoes_localizadas": 3,
-      "publicacoes_aprovadas": 3,
-      "status_editorial": "itens_incluidos",
+      "publicacoes_localizadas": 0,
+      "publicacoes_aprovadas": 0,
+      "status_editorial": "sem_publicacao_na_janela",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
     },
     {
       "fonte": "ANP | Notícias",
       "status_coleta": "ok",
-      "publicacoes_localizadas": 3,
-      "publicacoes_aprovadas": 3,
-      "status_editorial": "itens_incluidos",
+      "publicacoes_localizadas": 0,
+      "publicacoes_aprovadas": 0,
+      "status_editorial": "sem_publicacao_na_janela",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
     },
@@ -2587,8 +1586,8 @@
     {
       "fonte": "ANEEL | Últimas Notícias",
       "status_coleta": "ok",
-      "publicacoes_localizadas": 4,
-      "publicacoes_aprovadas": 4,
+      "publicacoes_localizadas": 2,
+      "publicacoes_aprovadas": 2,
       "status_editorial": "itens_incluidos",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -2596,17 +1595,17 @@
     {
       "fonte": "Ministério da Agricultura | Notícias",
       "status_coleta": "ok",
-      "publicacoes_localizadas": 11,
-      "publicacoes_aprovadas": 2,
-      "status_editorial": "itens_incluidos",
+      "publicacoes_localizadas": 10,
+      "publicacoes_aprovadas": 0,
+      "status_editorial": "publicacoes_sem_aderencia_editorial",
       "busca_complementar_executada": true,
       "conteudo_truncado": false
     },
     {
       "fonte": "ANVISA | Notícias",
       "status_coleta": "ok",
-      "publicacoes_localizadas": 6,
-      "publicacoes_aprovadas": 6,
+      "publicacoes_localizadas": 2,
+      "publicacoes_aprovadas": 2,
       "status_editorial": "itens_incluidos",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -2614,9 +1613,9 @@
     {
       "fonte": "INPI | Notícias",
       "status_coleta": "ok",
-      "publicacoes_localizadas": 2,
-      "publicacoes_aprovadas": 2,
-      "status_editorial": "itens_incluidos",
+      "publicacoes_localizadas": 0,
+      "publicacoes_aprovadas": 0,
+      "status_editorial": "sem_publicacao_na_janela",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
     },
@@ -2632,8 +1631,8 @@
     {
       "fonte": "ANM | Notícias",
       "status_coleta": "ok",
-      "publicacoes_localizadas": 4,
-      "publicacoes_aprovadas": 4,
+      "publicacoes_localizadas": 2,
+      "publicacoes_aprovadas": 2,
       "status_editorial": "itens_incluidos",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -2650,9 +1649,9 @@
     {
       "fonte": "ANTAQ | Notícias",
       "status_coleta": "ok",
-      "publicacoes_localizadas": 1,
-      "publicacoes_aprovadas": 1,
-      "status_editorial": "itens_incluidos",
+      "publicacoes_localizadas": 0,
+      "publicacoes_aprovadas": 0,
+      "status_editorial": "sem_publicacao_na_janela",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
     },
@@ -2668,9 +1667,9 @@
     {
       "fonte": "Kollemata | Decretos",
       "status_coleta": "ok",
-      "publicacoes_localizadas": 5,
-      "publicacoes_aprovadas": 5,
-      "status_editorial": "itens_incluidos",
+      "publicacoes_localizadas": 0,
+      "publicacoes_aprovadas": 0,
+      "status_editorial": "sem_publicacao_na_janela",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
     },
@@ -2686,8 +1685,8 @@
     {
       "fonte": "SUSEP | Notícias",
       "status_coleta": "ok",
-      "publicacoes_localizadas": 5,
-      "publicacoes_aprovadas": 5,
+      "publicacoes_localizadas": 1,
+      "publicacoes_aprovadas": 1,
       "status_editorial": "itens_incluidos",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -2695,8 +1694,8 @@
     {
       "fonte": "ANTT | Notícias - Defeso Eleitoral",
       "status_coleta": "ok",
-      "publicacoes_localizadas": 4,
-      "publicacoes_aprovadas": 4,
+      "publicacoes_localizadas": 3,
+      "publicacoes_aprovadas": 3,
       "status_editorial": "itens_incluidos",
       "busca_complementar_executada": false,
       "conteudo_truncado": false
@@ -2709,7 +1708,7 @@
         "Amber",
         "Pink"
       ],
-      "total": 0
+      "total": 2
     },
     "direito-tributario": {
       "nome": "Radar Tributário",
@@ -2717,7 +1716,7 @@
         "Tributário Consultivo",
         "Tributário Contencioso"
       ],
-      "total": 9
+      "total": 6
     },
     "societario-ma": {
       "nome": "Radar Societário, Fusões e Aquisições",
@@ -2726,7 +1725,7 @@
         "Purple",
         "Due Diligence"
       ],
-      "total": 1
+      "total": 5
     },
     "mercado-capitais-fundos": {
       "nome": "Radar Mercado de Capitais e Fundos de Investimento",
@@ -2734,7 +1733,7 @@
         "Financeiro Green",
         "Fundos"
       ],
-      "total": 13
+      "total": 20
     },
     "regulatorio-oleo-gas": {
       "nome": "Radar Regulatório e Óleo e Gás",
@@ -2742,7 +1741,7 @@
         "Regulatório",
         "Óleo & Gás Blue"
       ],
-      "total": 17
+      "total": 14
     },
     "imobiliario-infraestrutura": {
       "nome": "Radar Negócios Imobiliários e Infraestrutura",
@@ -2750,7 +1749,7 @@
         "Imobiliário",
         "Infraestrutura"
       ],
-      "total": 10
+      "total": 9
     },
     "ambiental-esg": {
       "nome": "Radar Ambiental e ESG",
@@ -2764,7 +1763,7 @@
       "clusters": [
         "Propriedade Intelectual"
       ],
-      "total": 1
+      "total": 0
     },
     "contencioso-civel": {
       "nome": "Radar Solução de Conflitos",
@@ -2772,7 +1771,7 @@
         "Contencioso Carbon",
         "Contencioso Gold"
       ],
-      "total": 0
+      "total": 1
     }
   },
   "boletins_config": {
@@ -3054,26 +2053,50 @@
     ]
   },
   "auditoria": {
-    "total_itens": 90,
-    "itens_com_alguma_rejeicao": 47,
-    "itens_com_bloqueio_f1": 13,
+    "total_itens": 52,
+    "itens_com_alguma_rejeicao": 49,
+    "itens_com_bloqueio_f1": 5,
     "rejeicoes_por_boletim": {
-      "direito-tributario": 20,
-      "societario-ma": 14,
-      "imobiliario-infraestrutura": 12,
-      "propriedade-intelectual": 10,
-      "contencioso-civel": 19,
-      "trabalhista-empresarial": 11,
-      "mercado-capitais-fundos": 11,
-      "regulatorio-oleo-gas": 5,
-      "ambiental-esg": 7
+      "regulatorio-oleo-gas": 3,
+      "propriedade-intelectual": 5,
+      "direito-tributario": 13,
+      "societario-ma": 8,
+      "trabalhista-empresarial": 3,
+      "imobiliario-infraestrutura": 7,
+      "ambiental-esg": 11,
+      "contencioso-civel": 4,
+      "mercado-capitais-fundos": 1
     },
     "resgates_por_escassez": [
       {
+        "boletim": "trabalhista-empresarial",
+        "fonte": "Destaques do D.O.U.",
+        "titulo": "DECRETO Nº 13.131, DE 30 DE SETEMBRO DE 2026",
+        "motivo_da_recusa": "Refere-se a cargos públicos estatutários e funções de confiança, sem relação com o direito do trabalho empresarial."
+      },
+      {
+        "boletim": "trabalhista-empresarial",
+        "fonte": "Destaques do D.O.U.",
+        "titulo": "RESOLUÇÃO CRD Nº 41, DE 23 DE SETEMBRO DE 2026",
+        "motivo_da_recusa": "A verba de apoio familiar mencionada não possui natureza de remuneração ou verba trabalhista."
+      },
+      {
         "boletim": "societario-ma",
         "fonte": "Banco Central | Normas",
-        "titulo": "Resolução BCB N° 591",
-        "motivo_da_recusa": "Apesar de tratar de compliance, o foco normativo é regulatório financeiro do Banco Central."
+        "titulo": "Comunicado N° 46.047",
+        "motivo_da_recusa": "Não trata de fusões, aquisições ou reorganizações societárias corporativas."
+      },
+      {
+        "boletim": "societario-ma",
+        "fonte": "Banco Central | Normas",
+        "titulo": "Resolução BCB N° 594",
+        "motivo_da_recusa": "Não trata de reorganizações societárias ou fusões e aquisições."
+      },
+      {
+        "boletim": "ambiental-esg",
+        "fonte": "ANEEL | Últimas Notícias",
+        "titulo": "ANEEL, ONS e EPE divulgam nota técnica sobre capacidade para conexão de sistemas de armazenamento nos Leilões de Reserva de Capacidade 2026",
+        "motivo_da_recusa": "A matéria trata estritamente da capacidade técnica de conexão elétrica e leilões de capacidade, sem focar em licenciamento ambiental ou métricas ESG."
       }
     ],
     "cascata_gemini": {
@@ -3081,7 +2104,7 @@
       "lotes": [
         {
           "lote": 1,
-          "modelo": "gemini-3.5-flash-lite",
+          "modelo": "gemini-3.5-flash",
           "fontes": [
             "Planalto | Resenha Diaria",
             "Banco Central | Normas",
@@ -3090,126 +2113,90 @@
             "Receita Federal | Normas",
             "Ministério da Fazenda | Notícias"
           ],
-          "espera_por_sobrecarga_s": 90
+          "espera_por_sobrecarga_s": 210
         },
         {
           "lote": 2,
           "modelo": "gemini-3.5-flash-lite",
           "fontes": [
             "CVM | Notícias",
-            "B3 | Ofícios e Comunicados",
-            "ANP | Notícias",
             "ANP | Consultas e Audiências Públicas",
             "ONS | Notícias",
-            "ANEEL | Últimas Notícias"
+            "ANEEL | Últimas Notícias",
+            "Ministério da Agricultura | Notícias",
+            "ANVISA | Notícias"
           ],
-          "espera_por_sobrecarga_s": 0
+          "espera_por_sobrecarga_s": 210
         },
         {
           "lote": 3,
-          "modelo": "gemini-3.5-flash-lite",
+          "modelo": "gemini-3.5-flash",
           "fontes": [
-            "Ministério da Agricultura | Notícias",
-            "ANVISA | Notícias",
-            "INPI | Notícias",
             "ANM | Notícias",
             "EPE | Notícias",
-            "ANTAQ | Notícias"
-          ],
-          "espera_por_sobrecarga_s": 0
-        },
-        {
-          "lote": 4,
-          "modelo": "gemini-3.5-flash-lite",
-          "fontes": [
-            "Kollemata | Decretos",
             "SUSEP | Notícias",
             "ANTT | Notícias - Defeso Eleitoral"
           ],
-          "espera_por_sobrecarga_s": 0
+          "espera_por_sobrecarga_s": 210
         }
       ],
-      "lotes_fora_do_preferido": 4,
-      "espera_por_sobrecarga_s": 90,
-      "aviso": "4 de 4 lote(s) não usaram gemini-3.7-flash: lote 1 em gemini-3.5-flash-lite; lote 2 em gemini-3.5-flash-lite; lote 3 em gemini-3.5-flash-lite; lote 4 em gemini-3.5-flash-lite"
+      "lotes_fora_do_preferido": 3,
+      "espera_por_sobrecarga_s": 630,
+      "aviso": "3 de 3 lote(s) não usaram gemini-3.7-flash: lote 1 em gemini-3.5-flash; lote 2 em gemini-3.5-flash-lite; lote 3 em gemini-3.5-flash"
     },
-    "nao_classificadas_pela_ia": 42,
+    "nao_classificadas_pela_ia": 0,
     "sugestoes_sem_ia": {
-      "com_radar_sugerido": 29,
+      "com_radar_sugerido": 0,
       "por_metodo": {
-        "matriz": 10,
-        "palavras_chave": 5,
-        "perfil_da_fonte": 14
+        "matriz": 0,
+        "palavras_chave": 0,
+        "perfil_da_fonte": 0
       },
-      "sem_radar": 13
+      "sem_radar": 0
     },
     "top_palavras_chave_detectadas": [
       {
-        "palavra": "bcb",
-        "ocorrencias": 4
+        "palavra": "superintendente",
+        "ocorrencias": 7
       },
       {
-        "palavra": "simples nacional",
-        "ocorrencias": 4
+        "palavra": "transações",
+        "ocorrencias": 3
       },
       {
         "palavra": "aneel",
-        "ocorrencias": 4
-      },
-      {
-        "palavra": "consulta pública",
-        "ocorrencias": 4
-      },
-      {
-        "palavra": "susep",
-        "ocorrencias": 4
+        "ocorrencias": 3
       },
       {
         "palavra": "antt",
-        "ocorrencias": 4
-      },
-      {
-        "palavra": "cosit",
         "ocorrencias": 3
       },
       {
-        "palavra": "b3",
-        "ocorrencias": 3
+        "palavra": "resolução bcb",
+        "ocorrencias": 2
       },
       {
-        "palavra": "anp",
-        "ocorrencias": 3
+        "palavra": "cancelamento da autorização",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "eleitas",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "nomeadas",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "subvenção",
+        "ocorrencias": 2
+      },
+      {
+        "palavra": "ons",
+        "ocorrencias": 2
       },
       {
         "palavra": "energia",
-        "ocorrencias": 3
-      },
-      {
-        "palavra": "seguro rural",
-        "ocorrencias": 2
-      },
-      {
-        "palavra": "cvm",
-        "ocorrencias": 2
-      },
-      {
-        "palavra": "gas release",
-        "ocorrencias": 2
-      },
-      {
-        "palavra": "gás natural",
-        "ocorrencias": 2
-      },
-      {
-        "palavra": "royalties",
-        "ocorrencias": 2
-      },
-      {
-        "palavra": "investimentos",
-        "ocorrencias": 2
-      },
-      {
-        "palavra": "concessão",
         "ocorrencias": 2
       },
       {
@@ -3217,12 +2204,36 @@
         "ocorrencias": 2
       },
       {
+        "palavra": "vigilância sanitária",
+        "ocorrencias": 2
+      },
+      {
         "palavra": "anm",
         "ocorrencias": 2
       },
       {
-        "palavra": "infraestrutura",
-        "ocorrencias": 2
+        "palavra": "controlador",
+        "ocorrencias": 1
+      },
+      {
+        "palavra": "sociedade de crédito",
+        "ocorrencias": 1
+      },
+      {
+        "palavra": "alteração de controle",
+        "ocorrencias": 1
+      },
+      {
+        "palavra": "operações compromissadas",
+        "ocorrencias": 1
+      },
+      {
+        "palavra": "instituições financeiras",
+        "ocorrencias": 1
+      },
+      {
+        "palavra": "oferta pública",
+        "ocorrencias": 1
       }
     ]
   }
