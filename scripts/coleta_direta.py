@@ -69,7 +69,7 @@ DATA_BR = re.compile(r"(?<!\d)(\d{1,2})/(\d{1,2})/(\d{4})(?!\d)")
 DATA_PONTO = re.compile(r"(?<!\d)(\d{2})\.(\d{2})\.(\d{4})(?!\d)")
 DATA_ISO = re.compile(r"(?<!\d)(\d{4})-(\d{2})-(\d{2})(?!\d)")
 DATA_EXTENSO = re.compile(
-    r"(?<!\d)(\d{1,2})(?:º|o)?\s+de\s+(janeiro|fevereiro|marco|abril|maio|junho|"
+    r"(?<!\d)(\d{1,2})(?:º|o)?\s+de\s+(janeiro|fevereiro|mar[cç]o|abril|maio|junho|"
     r"julho|agosto|setembro|outubro|novembro|dezembro)\s+de\s+(\d{4})",
     re.I,
 )
@@ -363,13 +363,88 @@ def parece_publicacao(url, base):
     return True
 
 
+# Onde a pagina deixa de ser a noticia: carregamento de carrossel, menu,
+# aviso de cookies, rodape, lista de tags. Daqui em diante nada e resumo.
+CORTE_RESUMO = re.compile(
+    r"Loading\.\.\.|Carregando\.\.\.|Menu de Navega[cç][aã]o|Rolar para cima|"
+    r"Voltar ao topo|Entre em contato!|Os cookies|Este site (?:usa|utiliza) cookies|"
+    r"Utilizamos cookies|Ao clicar em ['\"‘“]?Aceitar|Aceitar todos os cookies|"
+    r"Pular para o conte[uú]do|Ir para o conte[uú]do|"
+    r"(?:«\s*)?Anterior(?=\s*(?:\[?\d|$))|Pr[oó]xim[ao]\s*»|"
+    r"\[[^\]]{0,80}\]\(|(?<!\w)[Tt]ags?(?::|\s*$)",
+)
+CONTADOR_FINAL = re.compile(r"\s*(?<!\d)\d{1,3}\s+de\s+\d{1,3}\s*$")
+CATEGORIA_FINAL = re.compile(r"\s+:\s+[A-ZÀ-Ý][A-ZÀ-Ý ]{2,40}$")
+SEPARADORES = " -–—·•|:"
+
+
+def limpar_resumo(texto):
+    """
+    Tira do resumo os restos da pagina de onde ele veio: "Loading...",
+    "Menu de Navegacao", avisos de cookies, "Tags: ...", o contador do
+    carrossel ("1 de 3"), a categoria colada no fim (" : NOTICIAS") e o
+    marcador "- " do comeco. Se nao sobrar texto de verdade, devolve vazio,
+    em vez de um resumo quebrado.
+    """
+    texto = " ".join(html.unescape(str(texto or "")).split())
+    corte = CORTE_RESUMO.search(texto)
+    if corte:
+        texto = texto[:corte.start()]
+    anterior = None
+    while anterior != texto:
+        anterior = texto
+        texto = CONTADOR_FINAL.sub("", texto)
+        texto = CATEGORIA_FINAL.sub("", texto)
+        texto = texto.strip(SEPARADORES)
+    return texto if re.search(r"[A-Za-zÀ-ÿ]{3}", texto) else ""
+
+
+# Linha que so traz metadado da listagem: data, hora, dia da semana,
+# "publicado em", "ultima modificacao". Sozinha, nao e resumo.
+METADADO_LINHA = re.compile(
+    r"publicad[oa] em|atualizad[oa] em|[uú]ltima modifica[cç][aã]o|publica[cç][aã]o em|"
+    r"(?:segunda|ter[cç]a|quarta|quinta|sexta)-feira|s[aá]bado|domingo|"
+    r"compartilhe|leia mais|saiba mais|copiar para|link para",
+    re.I,
+)
+CHAMADA_FINAL = re.compile(r"\s*\b(?:leia mais|saiba mais|compartilhe)\W*$", re.I)
+
+
 def _limpar_descricao(trecho):
-    sem_links = LINK_MD.sub(" ", trecho)
-    for padrao in (DATA_BR, DATA_PONTO, DATA_ISO, DATA_EXTENSO):
-        sem_links = padrao.sub(" ", sem_acento(sem_links) if padrao is DATA_EXTENSO else sem_links)
-    sem_lixo = LIXO_DESCRICAO.sub(" ", sem_links)
-    texto = " ".join(sem_lixo.split())
-    return texto if len(texto) >= 40 else ""
+    """
+    O resumo de uma publicacao da listagem, a partir do trecho entre o link
+    dela e o da proxima.
+
+    O trecho traz, alem do resumo, as linhas de data e de "ultima
+    modificacao", o "-" que precede o resumo, a lista de tags e o chapeu da
+    proxima noticia ("PLANEJAMENTO ENERGETICO", "RenovaBio"), que fica na
+    ultima linha, logo antes do link dela. Por isso o resumo e montado linha a
+    linha: a linha que so tem data, hora ou metadado sai; a que tem frase fica
+    inteira, com as datas que fazem parte dela ("realizada em 29/9/2026"); a
+    lista de tags encerra o resumo; e a ultima linha sai quando e chapeu
+    (caixa alta, ou curta e sem pontuacao final). O resto passa por
+    limpar_resumo, sem tirar o acento de nada.
+    """
+    linhas = []
+    for linha in trecho.split("\n"):
+        linha = " ".join(LINK_MD.sub(" ", linha).split())
+        resto = linha
+        for padrao in (DATA_BR, DATA_PONTO, DATA_ISO, DATA_EXTENSO, HORA):
+            resto = padrao.sub(" ", resto)
+        if len(re.findall(r"[A-Za-zÀ-ÿ]", METADADO_LINHA.sub(" ", resto))) < 3:
+            continue
+        if re.match(r"(?i)tags?\b", linha):
+            break  # daqui em diante e a lista de tags e a paginacao
+        linha = CHAMADA_FINAL.sub("", linha).strip(SEPARADORES)
+        if linha:
+            linhas.append(linha)
+    if len(linhas) >= 2:
+        ultima = linhas[-1]
+        chapeu = ultima.upper() == ultima or (len(ultima) < 40 and not ultima.endswith((".", "!", "?", ")")))
+        if chapeu:
+            linhas.pop()
+    texto = limpar_resumo(" ".join(linhas))
+    return texto if len(texto) >= 20 else ""
 
 
 def publicacoes_da_listagem(texto, base, inicio, fim, minimo_titulo=15):
@@ -967,6 +1042,7 @@ def _normalizar(publicacao):
     limpo = {k: " ".join(html.unescape(str(publicacao.get(k) or "")).split())
              for k in ("titulo", "url", "data", "hora", "descricao")}
     limpo["url"] = limpo["url"].replace(" ", "%20")
+    limpo["descricao"] = limpar_resumo(limpo["descricao"])
     if publicacao.get("orgao"):
         limpo["orgao"] = " ".join(str(publicacao["orgao"]).split())
     return limpo
