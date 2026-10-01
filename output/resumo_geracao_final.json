@@ -1,12 +1,70 @@
 {
   "status": "sucesso",
-  "data_execucao": "2026-09-23T20:54:57.492768+00:00",
-  "data_edicao": "2026-09-23",
-  "total_itens_boletim": 27,
-  "total_decisoes": 27,
-  "total_aprovados": 21,
+  "data_execucao": "2026-10-01T14:00:41.453632+00:00",
+  "data_edicao": "2026-10-01",
+  "total_itens_boletim": 52,
+  "total_decisoes": 52,
+  "total_aprovados": 44,
   "total_itens_manuais": 0,
-  "total_rejeitados": 6,
+  "total_rejeitados": 8,
+  "fora_do_email": [
+    {
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "PORTARIA SFA-BA/MAPA Nº 1.034, DE 29 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-ba/mapa-n-1.034-de-29-de-setembro-de-2026-735708572",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "PORTARIA SFA-SC/MAPA Nº 1.398, DE 29 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-sc/mapa-n-1.398-de-29-de-setembro-de-2026-735715217",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "PORTARIA SFA-SC/MAPA Nº 1.401, DE 30 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-sc/mapa-n-1.401-de-30-de-setembro-de-2026-735707979",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "Portaria SFA-SP/MAPA Nº 1.010, DE 29 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-sp/mapa-n-1.010-de-29-de-setembro-de-2026-735706126",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "Portaria SFA-ES Nº 569, DE 29 DE Setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-es-n-569-de-29-de-setembro-de-2026-735712377",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "PORTARIA SFA-PR/MAPA Nº 1.272, DE 29 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-pr/mapa-n-1.272-de-29-de-setembro-de-2026-735707322",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "Portaria SFA-PI/SE/MAPA nº 171, de 30 de setembro de 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-pi/se/mapa-n-171-de-30-de-setembro-de-2026-735710671",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "EPE | Notícias",
+      "titulo": "Resenha Mensal: consumo nacional de eletricidade cresce 4,3% em agosto de 2026",
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/resenha-mensal-consumo-nacional-de-eletricidade-cresce-4-3-em-agosto-de-2026",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    }
+  ],
   "decisoes_sem_item_correspondente": [],
   "ajustes_nos_templates": {
     "trabalhista-empresarial": {
@@ -18,6 +76,10 @@
         "nome": "Outras publicações",
         "copiada_de": "CGU",
         "linha_sumario": 4
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 12
       }
     },
     "direito-tributario": {
@@ -29,6 +91,10 @@
         "nome": "Outras publicações",
         "copiada_de": "COAF",
         "linha_sumario": 6
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 20
       }
     },
     "societario-ma": {
@@ -48,6 +114,10 @@
         "nome": "Outras publicações",
         "copiada_de": "BancoCentral",
         "linha_sumario": 5
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 14
       }
     },
     "mercado-capitais-fundos": {
@@ -67,6 +137,10 @@
         "nome": "Outras publicações",
         "copiada_de": "COAF",
         "linha_sumario": 6
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 20
       }
     },
     "regulatorio-oleo-gas": {
@@ -78,6 +152,10 @@
         "nome": "Outras publicações",
         "copiada_de": "ANEEL",
         "linha_sumario": 12
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 56
       }
     },
     "imobiliario-infraestrutura": {
@@ -118,6 +196,10 @@
         "nome": "Outras publicações",
         "copiada_de": "ANEEL",
         "linha_sumario": 10
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 44
       }
     },
     "ambiental-esg": {
@@ -144,6 +226,10 @@
         "nome": "Outras publicações",
         "copiada_de": "ANEEL",
         "linha_sumario": 8
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 32
       }
     },
     "propriedade-intelectual": {
@@ -155,6 +241,10 @@
         "nome": "Outras publicações",
         "copiada_de": "INPI",
         "linha_sumario": 5
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 14
       }
     },
     "contencioso-civel": {
@@ -166,19 +256,28 @@
         "nome": "Outras publicações",
         "copiada_de": "SENACON",
         "linha_sumario": 4
+      },
+      "espacamento_entre_noticias": {
+        "valor": "10.0pt",
+        "paragrafos": 12
       }
     }
   },
   "noticias_em_outras_publicacoes": [
     {
-      "radar": "regulatorio-oleo-gas",
-      "fonte": "Ministério da Agricultura | Notícias",
-      "titulo": "Fiscalização do Mapa identifica fábrica irregular de ração animal em Santa Catarina",
-      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/fiscalizacao-do-mapa-identifica-fabrica-irregular-de-racao-animal-em-santa-catarina",
+      "radar": "propriedade-intelectual",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado N° 46.048",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46048",
       "origem": "scraper",
       "publicada_em": "OutrasPublicacoes"
     }
   ],
+  "radares_sem_conteudo": {
+    "gerados_vazios": [],
+    "confirmados_no_portal": [],
+    "sem_registro_de_confirmacao": []
+  },
   "arquivos_gerados": [
     {
       "slug": "trabalhista-empresarial",
@@ -186,8 +285,10 @@
       "template": "Template_Radar Trabalhista.msg",
       "arquivo": "email_trabalhista-empresarial.eml",
       "previa": "email_trabalhista-empresarial.html",
-      "total_itens": 0,
-      "secoes_publicadas": []
+      "total_itens": 2,
+      "secoes_publicadas": [
+        "DestaquesDOU"
+      ]
     },
     {
       "slug": "direito-tributario",
@@ -195,9 +296,10 @@
       "template": "Template_Radar Tributário.msg",
       "arquivo": "email_direito-tributario.eml",
       "previa": "email_direito-tributario.html",
-      "total_itens": 1,
+      "total_itens": 6,
       "secoes_publicadas": [
-        "MinisterioFazenda"
+        "MinisterioFazenda",
+        "ReceitaFederal"
       ]
     },
     {
@@ -206,8 +308,10 @@
       "template": "Template_Radar Societário_ Fusões e Aquisições.msg",
       "arquivo": "email_societario-ma.eml",
       "previa": "email_societario-ma.html",
-      "total_itens": 0,
-      "secoes_publicadas": []
+      "total_itens": 5,
+      "secoes_publicadas": [
+        "BancoCentral"
+      ]
     },
     {
       "slug": "mercado-capitais-fundos",
@@ -215,8 +319,13 @@
       "template": "Template_Radar Mercado de Capitais e Fundos de Investimento.msg",
       "arquivo": "email_mercado-capitais-fundos.eml",
       "previa": "email_mercado-capitais-fundos.html",
-      "total_itens": 0,
-      "secoes_publicadas": []
+      "total_itens": 20,
+      "secoes_publicadas": [
+        "BancoCentral",
+        "CVM",
+        "MinisterioFazenda",
+        "SUSEP"
+      ]
     },
     {
       "slug": "regulatorio-oleo-gas",
@@ -224,17 +333,13 @@
       "template": "Template_Radar Regulatório e Óleo e Gás.msg",
       "arquivo": "email_regulatorio-oleo-gas.eml",
       "previa": "email_regulatorio-oleo-gas.html",
-      "total_itens": 16,
+      "total_itens": 14,
       "secoes_publicadas": [
         "ANEEL",
-        "ANP",
-        "ANTAQ",
+        "ANM",
         "ANTT",
-        "MME",
-        "MinisterioFazenda",
-        "OutrasPublicacoes",
-        "Planalto",
-        "SENACON"
+        "ANVISA",
+        "EPE"
       ]
     },
     {
@@ -243,14 +348,13 @@
       "template": "Template_Radar Negócios Imobiliários e Infraestrutura.msg",
       "arquivo": "email_imobiliario-infraestrutura.eml",
       "previa": "email_imobiliario-infraestrutura.html",
-      "total_itens": 10,
+      "total_itens": 9,
       "secoes_publicadas": [
         "ANEEL",
-        "ANTAQ",
         "ANTT",
         "CCEE",
-        "MME",
-        "MinisterioFazenda"
+        "EPE",
+        "SUSEP"
       ]
     },
     {
@@ -259,9 +363,10 @@
       "template": "Template_Radar Ambiental e ESG.msg",
       "arquivo": "email_ambiental-esg.eml",
       "previa": "email_ambiental-esg.html",
-      "total_itens": 1,
+      "total_itens": 5,
       "secoes_publicadas": [
-        "MinisterioFazenda"
+        "ANEEL",
+        "EPE"
       ]
     },
     {
@@ -270,11 +375,9 @@
       "template": "Template_Radar Propriedade Intelectual_ Tecnologia e Privacidade.msg",
       "arquivo": "email_propriedade-intelectual.eml",
       "previa": "email_propriedade-intelectual.html",
-      "total_itens": 3,
+      "total_itens": 1,
       "secoes_publicadas": [
-        "ANPD",
-        "INPI",
-        "SENACON"
+        "OutrasPublicacoes"
       ]
     },
     {
@@ -283,8 +386,10 @@
       "template": "Template_Radar Solução de Conflitos.msg",
       "arquivo": "email_contencioso-civel.eml",
       "previa": "email_contencioso-civel.html",
-      "total_itens": 0,
-      "secoes_publicadas": []
+      "total_itens": 1,
+      "secoes_publicadas": [
+        "DestaquesDOU"
+      ]
     }
   ]
 }
