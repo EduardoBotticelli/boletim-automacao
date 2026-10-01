@@ -13,6 +13,8 @@ paginas e sintetico. O que estes testes protegem:
   institucional, e identifica o item para a curadoria;
 - o 503 espera e repete no mesmo modelo, o 429 desce na hora e a mensagem
   dele fica inteira no log;
+- a chamada que trava desce para o proximo modelo no tempo-limite, e o que
+  nao cabe no prazo da etapa da IA segue pelas regras sem IA;
 - a busca complementar e paga uma vez por escopo e cada publicacao entra uma
   vez no dossier, na fonte certa;
 - o dossier guardado em disco refaz exatamente o mesmo dossier.
@@ -21,8 +23,11 @@ Uso: python scripts/testar_coleta.py
 """
 
 import json
+import os
 import sys
 import tempfile
+import threading
+import time
 import types
 from pathlib import Path
 
@@ -44,7 +49,7 @@ def _stub(nome, **atributos):
 _stub("firecrawl", Firecrawl=object)
 _stub("google")
 _stub("google.genai", Client=object)
-_stub("google.genai.types", GenerateContentConfig=lambda **opcoes: opcoes)
+_stub("google.genai.types", GenerateContentConfig=lambda **opcoes: opcoes, HttpOptions=lambda **opcoes: opcoes)
 sys.modules["google"].genai = sys.modules["google.genai"]
 sys.modules["google.genai"].types = sys.modules["google.genai.types"]
 
@@ -215,6 +220,7 @@ def teste_todos_os_lotes_falhando_devolve_nada():
 
     assert unido is None
     assert len(falharam) == 6
+    assert [r["situacao"] for r in registro] == ["falhou"]
 
 
 # ---------------------------------------------------------------------------
@@ -1173,6 +1179,176 @@ def teste_listagem_tira_data_tags_e_chapeu_e_mantem_os_acentos():
     assert publicacoes["acidentes"] == "A redução tarifária média foi de 14,67%", publicacoes
 
 
+# ---------------------------------------------------------------------------
+# Tempo-limite de cada chamada e prazo da etapa da IA
+# ---------------------------------------------------------------------------
+
+
+class Relogio:
+    """Substitui time.monotonic; o teste avanca o tempo quando quer."""
+
+    def __init__(self):
+        self.agora = 1000.0
+
+    def __call__(self):
+        return self.agora
+
+
+def com_relogio(funcao, relogio):
+    original, gb.time.monotonic = gb.time.monotonic, relogio
+    try:
+        return funcao()
+    finally:
+        gb.time.monotonic = original
+
+
+class ClienteQueTrava(ClienteFalso):
+    """O modelo em 'travados' nao responde ate o teste liberar."""
+
+    def __init__(self, roteiro, travados):
+        super().__init__(roteiro)
+        self.travados = set(travados)
+        self.liberar = threading.Event()
+
+    def generate_content(self, model, contents, config):
+        if model in self.travados:
+            self.chamadas.append(model)
+            self.liberar.wait(30)
+            raise RuntimeError("liberada pelo teste")
+        return super().generate_content(model, contents, config)
+
+
+def teste_chamada_que_trava_desce_para_o_proximo_modelo():
+    primeiro, segundo = gb.MODELOS[0], gb.MODELOS[1]
+    cliente = ClienteQueTrava({segundo: [{"itens": [{"titulo": "x"}]}]}, travados=[primeiro])
+    original = gb.TEMPO_CHAMADA, gb.MINIMO_CHAMADA
+    gb.TEMPO_CHAMADA, gb.MINIMO_CHAMADA = 0.3, 0.1
+    try:
+        comeco = time.monotonic()
+        (dados, modelo, logs), esperas = com_esperas_registradas(lambda: gb.gemini(cliente, "P", {"espera": 0}))
+        duracao = time.monotonic() - comeco
+    finally:
+        gb.TEMPO_CHAMADA, gb.MINIMO_CHAMADA = original
+        cliente.liberar.set()
+
+    assert modelo == segundo and dados["itens"] == [{"titulo": "x"}], modelo
+    assert duracao < 3, f"esperou {duracao:.1f} s pela chamada travada"
+    assert esperas == [], f"chamada travada nao se repete: {esperas}"
+    assert cliente.chamadas.count(primeiro) == 1
+    assert logs[0]["tipo_erro"] == "tempo" and "Sem resposta" in logs[0]["erro"], logs[0]
+    assert all("duracao_s" in t for t in logs)
+
+
+def teste_tempo_esgotado_e_reconhecido_em_toda_forma():
+    class ReadTimeout(Exception):
+        pass
+
+    assert gb.tipo_de_erro(gb.SemResposta("Sem resposta em 180 s")) == "tempo"
+    assert gb.tipo_de_erro(ReadTimeout("The read operation timed out")) == "tempo"
+    assert gb.tipo_de_erro(ErroFalso(504, "DEADLINE_EXCEEDED. Deadline expired before operation could complete.")) == "tempo"
+    assert gb.tipo_de_erro(ErroFalso(504, "Gateway Timeout")) == "tempo"
+    assert gb.tipo_de_erro(ErroFalso(503, "UNAVAILABLE")) == "sobrecarga"
+    assert gb.tipo_de_erro(ErroFalso(429, "RESOURCE_EXHAUSTED")) == "cota"
+
+
+def teste_cliente_do_gemini_sai_com_tempo_limite():
+    criados = []
+    original_cliente, gb.genai.Client = gb.genai.Client, lambda **opcoes: criados.append(opcoes)
+    original_chave = os.environ.get("GEMINI_API_KEY")
+    os.environ["GEMINI_API_KEY"] = "falsa"
+    try:
+        gb.cliente_gemini()
+    finally:
+        gb.genai.Client = original_cliente
+        if original_chave is None:
+            os.environ.pop("GEMINI_API_KEY")
+        else:
+            os.environ["GEMINI_API_KEY"] = original_chave
+    assert criados[0]["http_options"] == {"timeout": gb.TEMPO_CHAMADA * 1000}, criados
+
+
+def teste_prazo_curto_corta_a_espera_por_sobrecarga():
+    primeiro, segundo = gb.MODELOS[0], gb.MODELOS[1]
+    cliente = ClienteFalso({primeiro: [ErroFalso(503, "UNAVAILABLE")], segundo: [{"itens": []}]})
+    relogio = Relogio()
+    orcamento = {"espera": 0, "limite": relogio.agora + 50}
+
+    (dados, modelo, logs), esperas = com_esperas_registradas(lambda: com_relogio(lambda: gb.gemini(cliente, "P", orcamento), relogio))
+
+    assert modelo == segundo, modelo
+    assert esperas == [], f"esperar 30 s e repetir passaria do prazo: {esperas}"
+    assert orcamento["espera"] == 0 and not orcamento.get("esgotado")
+
+
+def teste_sem_tempo_para_uma_chamada_nem_chama():
+    cliente = ClienteFalso({})
+    relogio = Relogio()
+    orcamento = {"espera": 0, "limite": relogio.agora + gb.MINIMO_CHAMADA - 1}
+
+    (dados, modelo, logs), esperas = com_esperas_registradas(lambda: com_relogio(lambda: gb.gemini(cliente, "P", orcamento), relogio))
+
+    assert dados is None and modelo == "" and cliente.chamadas == []
+    assert orcamento["esgotado"] is True
+
+
+def teste_prazo_esgotado_manda_os_lotes_seguintes_para_as_regras():
+    dossier = dossier_falso(14)
+    relogio = Relogio()
+    chamadas = []
+
+    def falso_gemini(cliente, prompt, orcamento=None):
+        chamadas.append(prompt)
+        relogio.agora += 990  # o primeiro lote consome quase todo o prazo
+        itens = [{"fonte": d["fonte"], "titulo": "x", "boletins_confirmados": []} for d in dossier if f'"{d["fonte"]}"' in prompt]
+        return {"itens": itens}, gb.MODELOS[0], [{"status": "sucesso"}]
+
+    original = gb.gemini
+    gb.gemini = falso_gemini
+    try:
+        (unido, modelos, registro, falharam), esperas = com_esperas_registradas(
+            lambda: com_relogio(lambda: gb.classificar(None, "P", "\nC\n", dossier, limite=relogio.agora + 1000), relogio)
+        )
+    finally:
+        gb.gemini = original
+
+    assert len(chamadas) == 1, "lote fora do prazo nao vai a IA"
+    assert [r["situacao"] for r in registro] == ["classificado", "fora_do_prazo", "fora_do_prazo"], registro
+    assert falharam == [d["fonte"] for d in dossier[gb.LOTE_FONTES:]], falharam
+    assert len(unido["itens"]) == gb.LOTE_FONTES
+    assert esperas == [], f"sem prazo para o proximo lote, nao espera o intervalo: {esperas}"
+    cascata = gb.resumo_cascata(registro)
+    assert [l["modelo"] for l in cascata["lotes"]][1:] == ["fora do prazo", "fora do prazo"]
+    assert "lote 2 fora do prazo" in cascata["aviso"]
+
+
+def teste_etapa_da_ia_diz_o_que_seguiu_pelas_regras():
+    registro = [
+        {"lote": 1, "fontes": ["A", "B"], "modelo": gb.MODELOS[0], "situacao": "classificado", "tentativas": [{"status": "erro", "tipo_erro": "tempo"}, {"status": "sucesso"}]},
+        {"lote": 2, "fontes": ["Receita", "Pagina"], "modelo": "", "situacao": "falhou", "tentativas": []},
+        {"lote": 3, "fontes": ["BC"], "modelo": "", "situacao": "fora_do_prazo", "tentativas": []},
+    ]
+    material = [{"fonte": "Receita", "estruturado": True}, {"fonte": "BC", "estruturado": True}, {"fonte": "Pagina", "estruturado": False}]
+
+    etapa = gb.resumo_etapa_ia(registro, 1500, 1499.6, material)
+
+    assert etapa["situacao"] == "parcial"
+    assert (etapa["lotes_classificados"], etapa["lotes_que_falharam"], etapa["lotes_fora_do_prazo"]) == (1, 1, 1)
+    assert etapa["chamadas_sem_resposta"] == 1 and etapa["prazo_s"] == 1500
+    assert set(etapa["fontes_nao_classificadas"]) == {"Receita", "Pagina", "BC"}
+    bc = gb.motivo_fonte_nao_classificada(etapa["fontes_nao_classificadas"]["BC"])
+    assert bc.startswith("A etapa da IA passou do prazo") and bc.endswith("seguiram pelas regras sem IA."), bc
+    pagina = gb.motivo_fonte_nao_classificada(etapa["fontes_nao_classificadas"]["Pagina"])
+    assert "falhou em todos os modelos" in pagina and pagina.endswith("não foi lida."), pagina
+    assert gb.resumo_etapa_ia(registro[1:], 60, 60, material)["situacao"] == "sem_ia"
+    assert gb.resumo_etapa_ia(registro[:1], 60, 60, material)["situacao"] == "completa"
+    assert gb.resumo_etapa_ia([], 60, 0, material)["situacao"] == "completa", "sem dossier nao ha o que classificar"
+
+
+def teste_log_do_workflow_mostra_o_andamento():
+    texto = (BASE / ".github" / "workflows" / "boletim.yml").read_text(encoding="utf-8")
+    assert 'PYTHONUNBUFFERED: "1"' in texto, "sem isso o log do passo so aparece no fim"
+
+
 TESTES = [
     teste_busca_sobrevive_em_pagina_grande,
     teste_sem_busca_o_comportamento_nao_muda,
@@ -1195,6 +1371,14 @@ TESTES = [
     teste_teto_de_espera_faz_a_cascata_descer_sem_esperar,
     teste_resposta_invalida_repete_uma_vez_e_desce,
     teste_resumo_da_cascata_aponta_a_queda,
+    teste_chamada_que_trava_desce_para_o_proximo_modelo,
+    teste_tempo_esgotado_e_reconhecido_em_toda_forma,
+    teste_cliente_do_gemini_sai_com_tempo_limite,
+    teste_prazo_curto_corta_a_espera_por_sobrecarga,
+    teste_sem_tempo_para_uma_chamada_nem_chama,
+    teste_prazo_esgotado_manda_os_lotes_seguintes_para_as_regras,
+    teste_etapa_da_ia_diz_o_que_seguiu_pelas_regras,
+    teste_log_do_workflow_mostra_o_andamento,
     teste_busca_e_paga_uma_vez_por_escopo,
     teste_resultado_da_busca_vai_para_a_fonte_mais_especifica,
     teste_cada_publicacao_entra_uma_vez_no_dossier,

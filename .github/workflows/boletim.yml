@@ -45,6 +45,10 @@ jobs:
   gerar:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    env:
+      # Sem isso o Python guarda a saida e o log so aparece no fim do passo:
+      # em 01/10 o passo ficou 58 minutos sem uma linha ate ser cancelado.
+      PYTHONUNBUFFERED: "1"
     steps:
       - uses: actions/checkout@v4
         with: {fetch-depth: 0}
