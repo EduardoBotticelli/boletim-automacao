@@ -62,26 +62,126 @@ troca a edição. As edições extras (`dou1e` etc.) não são lidas.
 **Reprocessar.** Os atos ficam no dossier guardado (`indice.json` e um `.md`
 legível por seção); reprocessar não gasta crédito com o DOU.
 
-## Regras por Radar (`dou.json`)
+## Órgãos por Radar: o que é oficial e o que é reconstruído
 
-| Radar | Seção 1 | Seção 3 |
+O documento "Distribuição de Clusters e Fontes" não está nos repositórios. O
+que dele se recupera:
+
+- **Lista de fontes aprovadas e pendentes de integração** (versão revisada de
+  24/08, commit `57041b5`, `FONTES_PENDENTES_INTEGRACAO`): no Regulatório,
+  "CADE – DOU (Seções 1 e 3)", "MEC – DOU (Seções 1 e 3)" e "MDIC – DOU
+  (Seção 1)". É a única lista de órgãos do DOU que existe por escrito.
+- **Templates oficiais do Marketing**: os nove têm seção do DOU. Regulatório:
+  "Diário Oficial da União (Seções 1 e 3)". Tributário e Societário:
+  "Diário Oficial da União". Os outros seis, inclusive o **Trabalhista**:
+  "Diário Oficial da União (Seção 1)".
+- **Matriz do Filtro 1** (`MAPA`), que veio do documento: diz que órgãos cada
+  Radar acompanha pelas fontes próprias. Ela liga, por exemplo, a SENACON à
+  Solução de Conflitos, o MMA ao Ambiental e o INPI e a ANPD à Propriedade
+  Intelectual.
+
+Para os outros sete Radares não há lista de órgãos por escrito. A tabela
+abaixo reconstrói essas listas e diz de onde vem cada linha: **documento**
+(lista de 24/08), **descrição** (o órgão é citado na descrição oficial ou nas
+palavras-chave do Radar no `prompt.md`), **matriz** (o Filtro 1 já liga a
+fonte do órgão ao Radar) ou **proposta** (escolha minha, sem outra base). A
+medição usa as regras atuais em 8 dias úteis (22 a 25/09 e 29/09 a 02/10).
+
+| Radar | Seção | Órgão (regra) | Origem | Atos/dia |
+|---|---|---|---|---|
+| Regulatório | 1 | CADE | documento | 2,6 |
+| Regulatório | 3 | CADE | documento | 1,1 |
+| Regulatório | 1 | MEC, sem universidades, institutos e hospitais federais | documento (o recorte é proposta) | 11,1 |
+| Regulatório | 3 | MEC, só "Mais Médicos" | documento | 0 (ver decisão 2) |
+| Regulatório | 1 | MDIC (inclui SUFRAMA, INMETRO, INPI) | documento | 3,5 |
+| Tributário | 1 | CARF | descrição | 6,5 |
+| Tributário | 1 | CONFAZ | proposta (ICMS na descrição) | 1,6 |
+| Tributário | 1 | Fazenda / Gabinete do Ministro (portarias, INs, resoluções) | proposta | 0,2 |
+| Tributário | 1 | PGFN; Comitê Gestor do IBS | proposta | 0 (nome não apareceu) |
+| Societário | 1 | CADE | descrição | 2,6 |
+| Societário | 1 | CVM | descrição | 1,4 |
+| Societário | 1 | CRSFN | descrição | 0,1 |
+| Societário | 1 | DREI | proposta | 0 (nome não apareceu) |
+| Mercado de Capitais | 1 | CVM | descrição + matriz | 1,4 |
+| Mercado de Capitais | 1 | CRSFN | proposta | 0,1 |
+| Mercado de Capitais | 1 | SUSEP (só normas) | matriz | 0 |
+| Mercado de Capitais | 1 | PREVIC (só normas) | proposta | 0 |
+| Imobiliário | 1 | INCRA | proposta | 2,6 |
+| Imobiliário | 1 | Cidades, Transportes, Portos e Aeroportos (Gabinete do Ministro) | proposta | 1,5 |
+| Imobiliário | 1 | SPU | proposta | 0,8 |
+| Imobiliário | 1 | ANA (resoluções); PPI | proposta | 0 |
+| Ambiental | 1 | Ministério do Meio Ambiente (inclui IBAMA, ICMBio, CONAMA, SFB) | descrição + matriz | 0,5 |
+| Propriedade Intelectual | 1 | INPI; ANPD | descrição + matriz | 0,2 |
+| Propriedade Intelectual | 1 | Secretaria Nacional de Direitos Digitais | proposta | 0 |
+| Solução de Conflitos | 1 | SENACON | matriz | 4,1 |
+| Solução de Conflitos | 1 | STF; STJ (sem o CJF) | descrição (palavras-chave) | 1,1 |
+| Solução de Conflitos | 1 | CNJ (normas) | proposta | 0 |
+
+Receita Federal e Banco Central ficam de fora porque já chegam completos pelas
+fontes próprias. Atos de unidades regionais e administrativas ficam de fora
+de todas as regras, menos das que têm `termos` (Mais Médicos).
+
+## Estimativa por Radar (regras atuais, 8 dias úteis)
+
+Na Seção 1 saíram, em média, 346 atos por dia (de 293 a 435), e na Seção 3,
+2.321 (de 2.121 a 2.540). Um ato pode ir para mais de um Radar (CADE no
+Societário e no Regulatório, CVM no Societário e no Mercado).
+
+| Radar | Atos/dia: média (mín.–máx.) | Com o agrupamento proposto |
 |---|---|---|
-| Regulatório e Óleo e Gás | CADE; MEC (sem os atos internos de universidades, institutos e hospitais federais); MDIC | CADE; MEC só com "Mais Médicos" |
-| Tributário | Fazenda / Gabinete do Ministro (portarias, INs, resoluções); CONFAZ; CARF; PGFN; Comitê Gestor do IBS | — |
-| Societário | CADE; CVM; DREI; CRSFN | — |
-| Mercado de Capitais | CVM; CRSFN; SUSEP e PREVIC (só normas) | — |
-| Imobiliário e Infraestrutura | SPU; INCRA; Cidades, Transportes e Portos e Aeroportos (Gabinete do Ministro); ANA (resoluções); PPI | — |
-| Ambiental e ESG | Ministério do Meio Ambiente e Mudança do Clima (inclui IBAMA, ICMBio, CONAMA, SFB) | — |
-| Propriedade Intelectual | INPI; ANPD; Secretaria Nacional de Direitos Digitais (sem classificação indicativa) | — |
-| Solução de Conflitos | STF; STJ (sem o CJF); CNJ (normas); SENACON | — |
+| Regulatório e Óleo e Gás | 18,4 (8–53) | 10,2 (7–14) |
+| Tributário | 8,4 (1–33) | 2,4 (1–6) |
+| Solução de Conflitos | 5,2 (0–32) | 1,4 (0–3) |
+| Imobiliário e Infraestrutura | 4,9 (2–9) | 3,2 (2–6) |
+| Societário | 4,1 (2–6) | 4,1 (2–6) |
+| Mercado de Capitais | 1,5 (1–3) | 1,5 (1–3) |
+| Ambiental e ESG | 0,5 (0–2) | 0,5 (0–2) |
+| Propriedade Intelectual | 0,2 (0–1) | 0,2 (0–1) |
+| **Atos distintos no dia** | **39 (23–61)** | **19,4 notícias (13–27)** |
 
-O Regulatório segue o documento "Distribuição de Clusters e Fontes". Para os
-outros sete Radares, o documento indica a Seção 1, mas não traz os órgãos de
-cada um. As listas acima são **uma proposta** a partir da descrição de cada
-Radar no `prompt.md`, para validação. Receita Federal e Banco Central ficam de
-fora porque já chegam completos pelas fontes próprias. Atos de unidades
-regionais e administrativas ficam de fora de todas as regras, menos das que
-têm `termos` (Mais Médicos).
+Os picos vêm de lotes: 46 portarias conjuntas iguais do MEC (02/10), 32
+despachos sancionadores da SENACON contra postos de combustível (22/09) e 32
+pautas de julgamento do CARF (23/09). Sem agrupamento, o teto de 20 atos
+abertos é atingido quase todo dia (cerca de 22 créditos/dia); com o
+agrupamento, abrem-se cerca de 18 (cerca de 20 créditos/dia).
+
+## Proposta de agrupamento (não implementada)
+
+1. **Lote**: a partir de 4 atos do mesmo órgão e do mesmo tipo na mesma
+   edição e seção, uma notícia só. Pega as pautas do CARF, os despachos da
+   SENACON e as portarias do INCRA.
+2. **Série**: 2 ou 3 atos com o mesmo texto-base (mesmo órgão, tipo e começo
+   de texto), também uma notícia só.
+3. **Nunca agrupar** os órgãos em que cada ato é um caso próprio:
+   CADE (despachos, editais de atos de concentração) e STF (decisões). A
+   lista é configurável.
+
+A notícia do grupo:
+
+- **título**: "Secretaria Nacional do Consumidor: 32 despachos na mesma
+  edição", com a faixa de números quando houver ("nº 217 a 262");
+- **resumo e trecho**: os do ato aberto do grupo (um crédito por grupo);
+- **lista**: "Atos do grupo (32): nº 398/2026 (POSTO PLANETA SATURNO…);
+  nº 402/2026 (…)", com o link de cada ato e o que o distingue dos outros
+  (as palavras que não se repetem no grupo);
+- **no portal**: um cartão por grupo. Retirar o cartão retira o grupo, e o
+  log guarda todos os atos.
+
+## Decisões pendentes antes do merge
+
+1. **Órgãos dos sete Radares** sem lista por escrito: validar a tabela
+   reconstruída ou mandar a parte do documento com os órgãos.
+2. **Mais Médicos**: nos 8 dias, os 6 atos com "Mais Médicos" (4 na Seção 1
+   e 2 na Seção 3) eram do Ministério da Saúde (SGTES), nenhum do MEC. A
+   regra literal "MEC, Seção 3" não pega nada. Proposta: "Mais Médicos" na
+   Seção 3 venha do MEC ou do Ministério da Saúde.
+3. **Trabalhista**: o template oficial tem a seção "Diário Oficial da União
+   (Seção 1)", mas a lista do documento não inclui o Trabalhista.
+4. **MEC na Seção 1**: confirmar o recorte (sem atos internos de
+   universidades, institutos e hospitais federais) e se FNDE, INEP e CNE
+   entram.
+5. **Agrupamento**: aprovar a proposta acima (limiar de 4 e a lista de
+   "nunca agrupar").
 
 ## Ensaio com o Firecrawl (edição de 02/10/2026)
 
