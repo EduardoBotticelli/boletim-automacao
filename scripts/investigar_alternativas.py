@@ -780,7 +780,7 @@ def ensaiar_coleta(cliente, inicio, fim, destino):
     so = os.getenv("ENSAIO_FONTE", "")
     resultado = []
     for fonte in fontes:
-        if fonte["_estado"] != "ativa" or fonte.get("coleta", "firecrawl") == "firecrawl":
+        if fonte["_estado"] != "ativa" or fonte.get("coleta", "firecrawl") in ("firecrawl", "dou"):
             continue
         if so and so.lower() not in fonte["fonte"].lower():
             continue

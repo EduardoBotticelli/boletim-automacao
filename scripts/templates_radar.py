@@ -530,10 +530,29 @@ def _preencher_unidade(modelo, noticia):
         preenchido = preenchido.replace(_PLACEHOLDER_LINK, ancora, 1)
 
     preenchido = preenchido.replace(
-        _PLACEHOLDER_DESCRICAO, _escapar(noticia.get("resumo", "")), 1
+        _PLACEHOLDER_DESCRICAO, _escapar(noticia.get("resumo", "")) + _bloco_trecho(noticia), 1
     )
 
     return preenchido
+
+
+def _bloco_trecho(noticia):
+    """
+    O trecho do ato do DOU, em texto, logo abaixo do resumo (o modelo D da
+    demonstracao). Notícia sem trecho não muda.
+    """
+    trecho = noticia.get("trecho") or {}
+    texto = str(trecho.get("texto") or "").strip()
+    if not texto:
+        return ""
+    onde = f"DOU, Seção {trecho.get('secao')}" if trecho.get("secao") else "DOU"
+    if trecho.get("pagina"):
+        onde += f", p. {trecho['pagina']}"
+    quebra = "<br>" if str(noticia.get("resumo") or "").strip() else ""
+    return (
+        f"{quebra}<span style='font-size:8.0pt;font-family:\"Arial\",sans-serif;color:#404040'>"
+        f"<i>Trecho do ato ({_escapar(onde)}):</i> {_escapar(texto)}</span>"
+    )
 
 
 def _unidade_sem_noticias(modelo, mensagem):

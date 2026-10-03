@@ -905,7 +905,7 @@ def teste_fonte_reativada_com_erro_vai_para_o_log():
 def teste_coleta_do_fontes_json_e_valida():
     fontes = json.loads((BASE / "fontes.json").read_text(encoding="utf-8"))
     for fonte in fontes:
-        assert fonte.get("coleta", "firecrawl") in set(cd.METODOS) | {"firecrawl"}, fonte
+        assert fonte.get("coleta", "firecrawl") in set(cd.METODOS) | {"firecrawl", "dou"}, fonte
     com_busca = sorted(f["fonte"] for f in fontes if f.get("busca"))
     assert com_busca == ["CVM | Notícias", "Ministério da Agricultura | Notícias"], com_busca
     coaf = next(f for f in fontes if f["fonte"].startswith("COAF"))

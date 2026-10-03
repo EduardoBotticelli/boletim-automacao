@@ -925,13 +925,20 @@ def agrupar_por_secao(
                 }
             )
 
-        por_ancora[secao.ancora].append(
-            {
-                "titulo": titulo,
-                "url": url_segura(item.get("url")),
-                "resumo": texto_limpo(item.get("resumo")),
+        noticia = {
+            "titulo": titulo,
+            "url": url_segura(item.get("url")),
+            "resumo": texto_limpo(item.get("resumo")),
+        }
+        trecho = item.get("trecho_do_ato")
+        if isinstance(trecho, dict) and texto_limpo(trecho.get("texto")):
+            # Ato do DOU: o trecho do texto vai abaixo do resumo (modelo D).
+            noticia["trecho"] = {
+                "texto": texto_limpo(trecho.get("texto")),
+                "secao": texto_limpo(trecho.get("secao")),
+                "pagina": trecho.get("pagina") or "",
             }
-        )
+        por_ancora[secao.ancora].append(noticia)
 
     return por_ancora, sem_secao, encaminhadas
 

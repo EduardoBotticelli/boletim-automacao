@@ -125,7 +125,7 @@ def main():
     inicio = fim - datetime.timedelta(days=args.dias)
 
     fontes = json.loads(FONTES.read_text(encoding="utf-8"))
-    fontes = [f for f in fontes if f.get("ativo", True) and not f.get("suspenso")]
+    fontes = [f for f in fontes if f.get("ativo", True) and not f.get("suspenso") and f.get("coleta") != "dou"]
     if args.fonte:
         alvos = [a.lower() for a in args.fonte]
         fontes = [f for f in fontes if any(a in f["fonte"].lower() for a in alvos)]

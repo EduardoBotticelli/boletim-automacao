@@ -1,5 +1,7 @@
 [
  {"fonte":"Destaques do D.O.U.","categoria":"Legislação Federal","url":"https://www.in.gov.br/leiturajornal","ativo":true,"coleta":"firecrawl","generica":true},
+ {"fonte":"Diário Oficial da União | Seção 1","categoria":"Diário Oficial da União","url":"https://www.in.gov.br/leiturajornal?secao=dou1","ativo":true,"coleta":"dou","secao":"dou1"},
+ {"fonte":"Diário Oficial da União | Seção 3","categoria":"Diário Oficial da União","url":"https://www.in.gov.br/leiturajornal?secao=dou3","ativo":true,"coleta":"dou","secao":"dou3"},
  {"fonte":"Receita Federal | Normas","categoria":"Tributário","url":"http://normas.receita.fazenda.gov.br/sijut2consulta/consulta.action?ordemColuna=Publicacao&ordemDirecao=DESC&tipoData=2&p=1","ativo":true,"coleta":"receita","orgaos":["RFB","SRF","Sutri","Suara","Sufis","Suari","Cosit","Coana","Corat","Codac","Cofis","Cocad","Cocaj","Cetad"]},
  {"fonte":"Ministério da Fazenda | Notícias","categoria":"Tributário","url":"https://www.gov.br/fazenda/pt-br/assuntos/noticias","ativo":true,"coleta":"html","generica":true},
  {"fonte":"ANPD | Notícias","categoria":"Regulatório e Setorial","url":"https://www.gov.br/anpd/pt-br/assuntos/noticias","ativo":true,"coleta":"volto"},
