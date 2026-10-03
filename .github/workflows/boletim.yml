@@ -133,8 +133,12 @@ jobs:
         if: ${{ inputs.etapa == 'investigar_dou' }}
         env:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
-        # Opcoes extras (--sem-busca, --varios-atos) vem em urls_candidatas.
-        run: python scripts/investigar_dou.py --data "${{ inputs.dou_data }}" --secoes dou1 dou3 ${{ inputs.urls_candidatas }}
+        # Opcoes extras (--sem-busca, --varios-atos, --amostra DATAS) vem em urls_candidatas.
+        run: |
+          python scripts/investigar_dou.py --data "${{ inputs.dou_data }}" --secoes dou1 dou3 ${{ inputs.urls_candidatas }}
+          if [ -d output/investigacao_dou/amostra ]; then
+            bash scripts/publicar_saidas.sh "Registra a amostra do DOU" "${{ github.ref_name }}" output/investigacao_dou/amostra
+          fi
 
       - name: Ensaio da coleta do DOU
         # A coleta do DOU sozinha, para a edicao em dou_data: leitura das

@@ -225,9 +225,39 @@ def abrir_exemplo(coletor, atos, secao):
             "chamada": registro, "lido_da_pagina": lido, "caracteres_markdown": len(getattr(doc, "markdown", "") or "")}
 
 
+def amostrar(coletor, datas, secoes):
+    """
+    So a leitura do jornal de varios dias, sem abrir ato nenhum, para medir
+    quantos atos por dia passariam pelo filtro. Grava um .json.gz compacto
+    por dia e secao em output/investigacao_dou/amostra.
+    """
+    import gzip
+
+    pasta = SAIDA / "amostra"
+    pasta.mkdir(parents=True, exist_ok=True)
+    campos = ("urlTitle", "numberPage", "title", "pubDate", "content", "editionNumber", "artType", "hierarchyStr", "hierarchyList")
+    resumo = {}
+    for data in datas:
+        for secao in secoes:
+            try:
+                doc, registro = coletor.baixar(LEITURA.format(secao=secao, data=data))
+                dados = json_embutido(getattr(doc, "raw_html", "") or "")
+                atos = (dados or {}).get("jsonArray") or []
+            except Exception as erro:  # registra e segue
+                resumo[f"{data} {secao}"] = f"erro: {type(erro).__name__}: {erro}"[:200]
+                continue
+            compactos = [{k: (str(a.get(k))[:400] if k == "content" else a.get(k)) for k in campos} for a in atos]
+            with gzip.open(pasta / f"{data}_{secao}.json.gz", "wt", encoding="utf-8") as saida:
+                json.dump(compactos, saida, ensure_ascii=False)
+            resumo[f"{data} {secao}"] = len(atos)
+            print(f"  {data} {secao}: {len(atos)} atos")
+    return resumo
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--data", required=True, help="DD-MM-AAAA")
+    parser.add_argument("--amostra", nargs="+", default=[], help="datas DD-MM-AAAA: so a leitura de cada dia, sem abrir atos")
     parser.add_argument("--secoes", nargs="+", default=["dou1", "dou3"])
     parser.add_argument("--sem-atos", action="store_true", help="nao abre o ato de exemplo")
     parser.add_argument("--sem-busca", action="store_true", help="nao baixa a busca do in.gov.br (o total)")
@@ -238,6 +268,12 @@ def main():
         raise SystemExit("FIRECRAWL_API_KEY é obrigatória.")
     SAIDA.mkdir(parents=True, exist_ok=True)
     coletor = Coletor()
+    if args.amostra:
+        resumo = {"amostra": amostrar(coletor, args.amostra, args.secoes), "creditos_firecrawl": 0}
+        resumo["creditos_firecrawl"] = coletor.creditos
+        (SAIDA / "amostra" / "resumo.json").write_text(json.dumps(resumo, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"Créditos do Firecrawl: {coletor.creditos}")
+        return 0
     resumo = {"data": args.data, "secoes": {}, "atos_abertos": {}}
     atos_por_secao = {}
     for secao in args.secoes:

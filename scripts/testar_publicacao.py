@@ -161,7 +161,7 @@ def teste_nada_a_publicar_nao_cria_commit():
 def teste_o_workflow_so_publica_pelo_script():
     texto = WORKFLOW.read_text(encoding="utf-8")
     assert "git pull --rebase origin" not in texto and "git push" not in texto, "commit e push do workflow devem passar pelo publicar_saidas.sh"
-    assert texto.count("bash scripts/publicar_saidas.sh") == 4
+    assert texto.count("bash scripts/publicar_saidas.sh") == 5
     assert "python scripts/testar_publicacao.py" in texto
 
 
