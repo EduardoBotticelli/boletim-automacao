@@ -30,18 +30,15 @@ etapa `investigar_dou`).
 
 1. Uma leitura por seção, com `max_age=0` para não receber do cache uma
    edição incompleta: **1 crédito cada**.
-2. O filtro por órgão do `dou.json` dá os Radares de cada ato. Quem não casa
-   com nenhuma regra fica só na contagem do log.
-3. Só os atos que passaram no filtro abrem (**1 crédito cada**), para tirar a
-   ementa (vira o resumo) e o trecho do texto (vai para o e-mail). Para
-   controlar o gasto:
-   - atos da mesma série (mesmo órgão, mesmo tipo e o mesmo começo de texto)
-     abrem um só. Em 02/10, 46 portarias conjuntas iguais do MEC viraram 1
-     ato aberto;
-   - há um teto por execução (`limite_atos_abertos`, hoje 20), e as normas
-     abrem antes do expediente;
-   - o ato que não abre entra do mesmo jeito, com o começo do texto que a
-     leitura já traz e o motivo no log. Nenhum ato que passou no filtro some.
+2. O filtro do `dou.json` dá os Radares de cada ato (ver "Regra", abaixo).
+   Quem não entra em nenhum Radar fica só na contagem do log.
+3. Atos repetidos viram uma notícia só (ver "Agrupamento").
+4. Abre-se um ato por notícia (**1 crédito cada**), para tirar a ementa (vira
+   o resumo) e o trecho do texto (vai para o e-mail). Há um teto por execução
+   (`limite_atos_abertos`, hoje 20), e as normas abrem antes do expediente.
+   A notícia cujo ato não abre entra do mesmo jeito, com o começo do texto
+   que a leitura já traz, e o motivo fica no log. Nenhum ato que passou no
+   filtro some.
 
 Os atos do DOU não vão ao Gemini: entram no boletim com os Radares do filtro,
 passam pelo Filtro 1 (as duas seções estão na matriz, derivada do
@@ -49,6 +46,42 @@ passam pelo Filtro 1 (as duas seções estão na matriz, derivada do
 "Diário Oficial da União | Seção 1" ou "| Seção 3". Cada uma cai na seção do
 DOU do template do Radar, sem alias: no Regulatório, as duas vão para
 "Diário Oficial da União (Seções 1 e 3)".
+
+## Regra (documento "Distribuição de Clusters e Fontes")
+
+- **Seção 1**: fonte dos nove Radares, inclusive o Trabalhista, inteira,
+  sem recorte por órgão. É tratada como fonte genérica: o ato entra no Radar
+  se o **título ou a ementa** tiver palavras-chave daquele Radar no
+  `prompt.md`, com a regra das fontes genéricas: **dois termos ou um termo
+  composto**. Um ato pode entrar em mais de um Radar. O preâmbulo de
+  competência ("O DIRETOR-GERAL DA ANTT, no uso das atribuições…") não conta:
+  nele, toda resolução citada e toda sigla de agência viravam "dois termos".
+  A ementa é, no DOU, o que a descrição é nas outras fontes genéricas.
+- **Reforço**: a lista de órgãos de cada Radar (`reforco` no `dou.json`)
+  só baixa o mínimo para **um termo**; sem palavra-chave, o órgão não basta.
+- **Regulatório e Óleo e Gás**: além das palavras-chave, entram sempre
+  CADE (Seções 1 e 3), MEC (Seção 1, sem universidades, institutos e
+  hospitais federais; com FNDE, INEP e CNE) e MDIC (Seção 1).
+- **Seção 3**: só o Regulatório: CADE, e Mais Médicos do MEC ou do
+  Ministério da Saúde. Nos 8 dias medidos, os atos de Mais Médicos vieram
+  todos do Ministério da Saúde (SGTES).
+
+## Agrupamento
+
+1. **Lote**: a partir de 4 atos do mesmo órgão, do mesmo tipo e para os
+   mesmos Radares na mesma edição e seção, uma notícia só (pautas do CARF,
+   despachos sancionadores da SENACON, portarias do INCRA).
+2. **Série**: a partir de 2 atos com o mesmo texto-base (mesmo órgão, tipo e
+   começo de texto), também uma notícia só (as portarias conjuntas iguais
+   do MEC).
+3. **Nunca agrupar** CADE e STF: cada ato deles é um caso próprio.
+
+A notícia do grupo tem o título "Secretaria Nacional do Consumidor: 32
+despachos na mesma edição, nº 377/2026 a 443/2026"; o resumo e o trecho são
+os do ato aberto ("Exemplo (nº 398/2026): …"); e, abaixo, a lista "Atos do
+grupo (32): nº 398/2026 (POSTO PLANETA SATURNO…); …", com o link de cada
+ato e o que o distingue dos outros. No portal, um cartão por grupo; o log e
+o dossier guardam todos os atos.
 
 **E-mail (modelo D).** Abaixo do resumo, em texto:
 *"Trecho do ato (DOU, Seção 1, p. 34): …"*, com até 900 caracteres, cortado
@@ -62,126 +95,29 @@ troca a edição. As edições extras (`dou1e` etc.) não são lidas.
 **Reprocessar.** Os atos ficam no dossier guardado (`indice.json` e um `.md`
 legível por seção); reprocessar não gasta crédito com o DOU.
 
-## Órgãos por Radar: o que é oficial e o que é reconstruído
-
-O documento "Distribuição de Clusters e Fontes" não está nos repositórios. O
-que dele se recupera:
-
-- **Lista de fontes aprovadas e pendentes de integração** (versão revisada de
-  24/08, commit `57041b5`, `FONTES_PENDENTES_INTEGRACAO`): no Regulatório,
-  "CADE – DOU (Seções 1 e 3)", "MEC – DOU (Seções 1 e 3)" e "MDIC – DOU
-  (Seção 1)". É a única lista de órgãos do DOU que existe por escrito.
-- **Templates oficiais do Marketing**: os nove têm seção do DOU. Regulatório:
-  "Diário Oficial da União (Seções 1 e 3)". Tributário e Societário:
-  "Diário Oficial da União". Os outros seis, inclusive o **Trabalhista**:
-  "Diário Oficial da União (Seção 1)".
-- **Matriz do Filtro 1** (`MAPA`), que veio do documento: diz que órgãos cada
-  Radar acompanha pelas fontes próprias. Ela liga, por exemplo, a SENACON à
-  Solução de Conflitos, o MMA ao Ambiental e o INPI e a ANPD à Propriedade
-  Intelectual.
-
-Para os outros sete Radares não há lista de órgãos por escrito. A tabela
-abaixo reconstrói essas listas e diz de onde vem cada linha: **documento**
-(lista de 24/08), **descrição** (o órgão é citado na descrição oficial ou nas
-palavras-chave do Radar no `prompt.md`), **matriz** (o Filtro 1 já liga a
-fonte do órgão ao Radar) ou **proposta** (escolha minha, sem outra base). A
-medição usa as regras atuais em 8 dias úteis (22 a 25/09 e 29/09 a 02/10).
-
-| Radar | Seção | Órgão (regra) | Origem | Atos/dia |
-|---|---|---|---|---|
-| Regulatório | 1 | CADE | documento | 2,6 |
-| Regulatório | 3 | CADE | documento | 1,1 |
-| Regulatório | 1 | MEC, sem universidades, institutos e hospitais federais | documento (o recorte é proposta) | 11,1 |
-| Regulatório | 3 | MEC, só "Mais Médicos" | documento | 0 (ver decisão 2) |
-| Regulatório | 1 | MDIC (inclui SUFRAMA, INMETRO, INPI) | documento | 3,5 |
-| Tributário | 1 | CARF | descrição | 6,5 |
-| Tributário | 1 | CONFAZ | proposta (ICMS na descrição) | 1,6 |
-| Tributário | 1 | Fazenda / Gabinete do Ministro (portarias, INs, resoluções) | proposta | 0,2 |
-| Tributário | 1 | PGFN; Comitê Gestor do IBS | proposta | 0 (nome não apareceu) |
-| Societário | 1 | CADE | descrição | 2,6 |
-| Societário | 1 | CVM | descrição | 1,4 |
-| Societário | 1 | CRSFN | descrição | 0,1 |
-| Societário | 1 | DREI | proposta | 0 (nome não apareceu) |
-| Mercado de Capitais | 1 | CVM | descrição + matriz | 1,4 |
-| Mercado de Capitais | 1 | CRSFN | proposta | 0,1 |
-| Mercado de Capitais | 1 | SUSEP (só normas) | matriz | 0 |
-| Mercado de Capitais | 1 | PREVIC (só normas) | proposta | 0 |
-| Imobiliário | 1 | INCRA | proposta | 2,6 |
-| Imobiliário | 1 | Cidades, Transportes, Portos e Aeroportos (Gabinete do Ministro) | proposta | 1,5 |
-| Imobiliário | 1 | SPU | proposta | 0,8 |
-| Imobiliário | 1 | ANA (resoluções); PPI | proposta | 0 |
-| Ambiental | 1 | Ministério do Meio Ambiente (inclui IBAMA, ICMBio, CONAMA, SFB) | descrição + matriz | 0,5 |
-| Propriedade Intelectual | 1 | INPI; ANPD | descrição + matriz | 0,2 |
-| Propriedade Intelectual | 1 | Secretaria Nacional de Direitos Digitais | proposta | 0 |
-| Solução de Conflitos | 1 | SENACON | matriz | 4,1 |
-| Solução de Conflitos | 1 | STF; STJ (sem o CJF) | descrição (palavras-chave) | 1,1 |
-| Solução de Conflitos | 1 | CNJ (normas) | proposta | 0 |
-
-Receita Federal e Banco Central ficam de fora porque já chegam completos pelas
-fontes próprias. Atos de unidades regionais e administrativas ficam de fora
-de todas as regras, menos das que têm `termos` (Mais Médicos).
-
-## Estimativa por Radar (regras atuais, 8 dias úteis)
+## Estimativa por Radar (8 dias úteis: 22 a 25/09 e 29/09 a 02/10)
 
 Na Seção 1 saíram, em média, 346 atos por dia (de 293 a 435), e na Seção 3,
-2.321 (de 2.121 a 2.540). Um ato pode ir para mais de um Radar (CADE no
-Societário e no Regulatório, CVM no Societário e no Mercado).
+2.321. Com a regra acima e o agrupamento, medidos sem gastar crédito sobre a
+leitura guardada desses dias:
 
-| Radar | Atos/dia: média (mín.–máx.) | Com o agrupamento proposto |
-|---|---|---|
-| Regulatório e Óleo e Gás | 18,4 (8–53) | 10,2 (7–14) |
-| Tributário | 8,4 (1–33) | 2,4 (1–6) |
-| Solução de Conflitos | 5,2 (0–32) | 1,4 (0–3) |
-| Imobiliário e Infraestrutura | 4,9 (2–9) | 3,2 (2–6) |
-| Societário | 4,1 (2–6) | 4,1 (2–6) |
-| Mercado de Capitais | 1,5 (1–3) | 1,5 (1–3) |
-| Ambiental e ESG | 0,5 (0–2) | 0,5 (0–2) |
-| Propriedade Intelectual | 0,2 (0–1) | 0,2 (0–1) |
-| **Atos distintos no dia** | **39 (23–61)** | **19,4 notícias (13–27)** |
+| Radar | Atos/dia: média (mín.–máx.) | Notícias/dia | De onde vêm, principalmente |
+|---|---|---|---|
+| Regulatório e Óleo e Gás | 40,0 (25–68) | 18,5 (13–24) | 18,5 atos/dia de CADE, MEC e MDIC; o resto por palavras-chave (ANM, ANTT, ANTAQ, SENACON) |
+| Tributário | 8,9 (3–15) | 5,6 (3–8) | Receita Federal (2,9 notícias/dia, inclusive unidades locais), CONFAZ (1,2) |
+| Imobiliário e Infraestrutura | 9,4 (6–19) | 5,5 (3–7) | INCRA (1,5), ANEEL (1,0), ANM (0,6) |
+| Mercado de Capitais | 6,1 (1–13) | 3,1 (1–5) | CVM (1,4), SUSEP (0,9), Banco Central (0,5) |
+| Solução de Conflitos | 6,4 (1–32) | 2,5 (1–4) | STF (0,6), ANM (0,5), SENACON (lote) |
+| Societário | 2,0 (1–5) | 2,0 (1–5) | CADE (1,8) |
+| Trabalhista | 1,5 (0–3) | 1,4 (0–2) | Secretaria de Inspeção do Trabalho (1,1) |
+| Ambiental e ESG | 1,0 (0–2) | 1,0 (0–2) | dispersas |
+| Propriedade Intelectual | 0,5 (0–2) | 0,5 (0–2) | dispersas |
+| **Atos distintos no dia** | **67 (39–100)** | **35 notícias (27–41)** | |
 
-Os picos vêm de lotes: 46 portarias conjuntas iguais do MEC (02/10), 32
-despachos sancionadores da SENACON contra postos de combustível (22/09) e 32
-pautas de julgamento do CARF (23/09). Sem agrupamento, o teto de 20 atos
-abertos é atingido quase todo dia (cerca de 22 créditos/dia); com o
-agrupamento, abrem-se cerca de 18 (cerca de 20 créditos/dia).
-
-## Proposta de agrupamento (não implementada)
-
-1. **Lote**: a partir de 4 atos do mesmo órgão e do mesmo tipo na mesma
-   edição e seção, uma notícia só. Pega as pautas do CARF, os despachos da
-   SENACON e as portarias do INCRA.
-2. **Série**: 2 ou 3 atos com o mesmo texto-base (mesmo órgão, tipo e começo
-   de texto), também uma notícia só.
-3. **Nunca agrupar** os órgãos em que cada ato é um caso próprio:
-   CADE (despachos, editais de atos de concentração) e STF (decisões). A
-   lista é configurável.
-
-A notícia do grupo:
-
-- **título**: "Secretaria Nacional do Consumidor: 32 despachos na mesma
-  edição", com a faixa de números quando houver ("nº 217 a 262");
-- **resumo e trecho**: os do ato aberto do grupo (um crédito por grupo);
-- **lista**: "Atos do grupo (32): nº 398/2026 (POSTO PLANETA SATURNO…);
-  nº 402/2026 (…)", com o link de cada ato e o que o distingue dos outros
-  (as palavras que não se repetem no grupo);
-- **no portal**: um cartão por grupo. Retirar o cartão retira o grupo, e o
-  log guarda todos os atos.
-
-## Decisões pendentes antes do merge
-
-1. **Órgãos dos sete Radares** sem lista por escrito: validar a tabela
-   reconstruída ou mandar a parte do documento com os órgãos.
-2. **Mais Médicos**: nos 8 dias, os 6 atos com "Mais Médicos" (4 na Seção 1
-   e 2 na Seção 3) eram do Ministério da Saúde (SGTES), nenhum do MEC. A
-   regra literal "MEC, Seção 3" não pega nada. Proposta: "Mais Médicos" na
-   Seção 3 venha do MEC ou do Ministério da Saúde.
-3. **Trabalhista**: o template oficial tem a seção "Diário Oficial da União
-   (Seção 1)", mas a lista do documento não inclui o Trabalhista.
-4. **MEC na Seção 1**: confirmar o recorte (sem atos internos de
-   universidades, institutos e hospitais federais) e se FNDE, INEP e CNE
-   entram.
-5. **Agrupamento**: aprovar a proposta acima (limiar de 4 e a lista de
-   "nunca agrupar").
+Com as palavras-chave procuradas também no preâmbulo, seriam 137 atos e 53
+notícias por dia (Regulatório com 94 atos e 31 notícias). Com 35 notícias por
+dia e o teto de 20 atos abertos, cerca de 15 notícias por dia saem sem o
+trecho do texto, só com o começo que a leitura do jornal traz.
 
 ## Ensaio com o Firecrawl (edição de 02/10/2026)
 
@@ -190,20 +126,18 @@ Etapa `ensaio_dou` do workflow, sem o pipeline:
 | | Seção 1 | Seção 3 |
 |---|---|---|
 | Atos na edição | 415 | 2.334 |
-| No filtro por órgão | 65 | 1 |
+| No filtro (regra por órgão de então) | 65 | 1 |
 | Abertos | 19 | 1 |
 | Créditos | 20 | 2 |
 
-Total: 22 créditos. 45 atos não abriram por serem da mesma série; 1 não
-abriu pelo teto. Com o ajuste posterior das regras (atos internos de
-universidades fora do MEC, outorgas da ANA e portarias administrativas do
-INCRA fora), a mesma edição fica com 61 atos no filtro e 16 abertos:
-**18 créditos**.
+Total: 22 créditos, com a primeira regra (só por órgão). 45 atos não
+abriram por serem da mesma série; 1 não abriu pelo teto.
 
 ## Custo
 
-Cerca de 18 a 22 créditos por dia útil, ou 400 a 480 por mês, somados ao que
-a coleta já gasta. O plano gratuito do Firecrawl tem 1.000 por mês. O teto
+Com o teto de 20 atos abertos, 22 créditos por dia útil (2 leituras e 20
+atos), ou cerca de 480 por mês, somados ao que a coleta já gasta. Abrir todas
+as 35 notícias do dia custaria cerca de 37 créditos (perto de 800 por mês). O plano gratuito do Firecrawl tem 1.000 por mês. O teto
 (`limite_atos_abertos`) é o controle direto; o log de cada execução traz o
 gasto em `dou.creditos_firecrawl` e em `creditos_firecrawl_estimados.dou`.
 
@@ -211,7 +145,8 @@ gasto em `dou.creditos_firecrawl` e em `creditos_firecrawl_estimados.dou`.
 
 `edicao`, `creditos_firecrawl` (no reprocessamento, 0, e o gasto original em
 `creditos_firecrawl_na_coleta`), `limite_atos_abertos`, `atos_abertos`,
-`atos_nao_abertos`, `nao_abertos_por_motivo`, `por_radar` e, por seção,
-`atos_na_edicao`, `no_filtro_por_orgao`, `abertos`, `creditos_firecrawl`,
+`atos_nao_abertos`, `nao_abertos_por_motivo`, `por_radar` (atos),
+`noticias_por_radar`, `grupos` e, por seção, `atos_na_edicao`, `no_filtro`,
+`abertos`, `creditos_firecrawl`,
 `status` e `erro`. Seção que falha vira erro técnico da fonte; ato que não
 abre traz o motivo em `dou.nao_aberto` no item.

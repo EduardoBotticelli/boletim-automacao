@@ -1,54 +1,73 @@
 {
   "_leia_me": [
-    "Configuração do Diário Oficial da União (scripts/coleta_dou.py).",
+    "Configuração do Diário Oficial da União (scripts/coleta_dou.py), conforme o",
+    "documento 'Distribuição de Clusters e Fontes'.",
     "",
     "A leitura do jornal (in.gov.br/leiturajornal), baixada pelo Firecrawl em HTML",
     "bruto, traz embutida a lista completa de atos da edição, com título, tipo,",
-    "órgão e endereço. Em 02/10/2026: 415 atos na Seção 1 e 2.334 na Seção 3, os",
-    "mesmos totais da busca do in.gov.br. Cada leitura custa 1 crédito; cada ato",
-    "aberto para tirar o texto custa mais 1.",
+    "órgão e endereço. Cada leitura custa 1 crédito; cada ato aberto para tirar o",
+    "texto custa mais 1.",
     "",
-    "Regras de cada Radar, por seção. Um ato entra no Radar quando casa com uma",
-    "das regras dele:",
-    "  orgao     nome exato de um dos níveis do órgão no DOU (sem diferença de",
-    "            acento ou maiúscula). 'Ministério da Educação' pega tudo o que",
-    "            está abaixo do ministério;",
-    "  unidade   opcional: outro nível que também precisa aparecer;",
-    "  tipos     opcional: só estes tipos de ato (artType do DOU);",
-    "  termos    opcional: o título ou o começo do texto precisa ter um deles;",
-    "  excluir   opcional: trechos de nível que tiram o ato da regra.",
-    "Atos de unidades regionais e administrativas (unidades_excluidas) ficam de",
-    "fora de todas as regras, menos das que têm 'termos': nelas, o termo decide.",
+    "Seção 1: fonte de todos os nove Radares, inteira, sem recorte por órgão. É",
+    "tratada como fonte genérica: o ato entra no Radar se o título ou o começo do",
+    "texto tiver palavras-chave daquele Radar no prompt.md, com a regra das fontes",
+    "genéricas (dois termos ou um termo composto). Um ato pode entrar em mais de",
+    "um Radar. 'reforco' lista órgãos que só reforçam: ato de um deles entra com",
+    "um termo só. O órgão sozinho, sem palavra-chave, não basta.",
     "",
-    "Regulatório e Óleo e Gás: CADE (Seções 1 e 3), MEC (Seções 1 e 3, a Seção 3",
-    "só para Mais Médicos) e MDIC (Seção 1), como no documento 'Distribuição de",
-    "Clusters e Fontes'. No MEC da Seção 1 ficam de fora os atos internos das",
-    "universidades, institutos e hospitais federais. Os demais Radares da Seção 1 têm uma lista PROPOSTA a",
-    "partir da descrição de cada Radar no prompt.md, para validação. Receita",
-    "Federal e Banco Central ficam de fora: já chegam completos pelas fontes",
-    "'Receita Federal | Normas' e 'Banco Central | Normas'.",
+    "Regulatório e Óleo e Gás: além das palavras-chave, entram sempre ('orgaos')",
+    "CADE (Seções 1 e 3), MEC (Seção 1; na Seção 3 só Mais Médicos) e MDIC",
+    "(Seção 1). No MEC da Seção 1 ficam de fora universidades, institutos e",
+    "hospitais federais; FNDE, INEP e CNE entram. Mais Médicos na Seção 3 vale do",
+    "MEC ou do Ministério da Saúde, que é quem publica esses atos.",
     "",
-    "limite_atos_abertos: teto de atos abertos por execução, somadas as seções.",
-    "Atos da mesma série (mesmo órgão, mesmo tipo e o mesmo começo de texto, como",
-    "as dezenas de portarias conjuntas iguais do MEC) abrem um só. O ato que passa",
-    "no filtro e não é aberto entra do mesmo jeito, com o começo do texto que a",
-    "leitura do jornal já traz, e o log diz por quê."
+    "Regras de órgão: 'orgao' é o nome exato de um dos níveis do órgão no DOU (sem",
+    "diferença de acento ou maiúscula); 'termos' exige um dos termos no título ou",
+    "no começo do texto; 'excluir' tira o ato quando um nível contém o trecho.",
+    "",
+    "Agrupamento: a partir de 'lote_a_partir_de' atos do mesmo órgão, do mesmo",
+    "tipo e para os mesmos Radares na mesma edição, uma notícia só; depois, a",
+    "partir de 'serie_a_partir_de' atos com o mesmo texto-base, também. Os órgãos",
+    "de 'nunca_agrupar' saem ato por ato. A notícia do grupo lista todos os atos,",
+    "com link, e abre um só (1 crédito).",
+    "",
+    "limite_atos_abertos: teto de atos abertos por execução, somadas as seções. O",
+    "ato que passa no filtro e não abre entra do mesmo jeito, com o começo do",
+    "texto que a leitura do jornal já traz, e o log diz por quê."
   ],
   "limite_atos_abertos": 20,
   "tamanho_trecho": 900,
-  "unidades_excluidas": [
-    "Superintendência Regional", "Delegacia", "Alfândega", "Inspetoria", "Gerência Regional",
-    "Gerência Executiva", "Superintendência em ", "Superintendência no ", "Superintendência na ",
-    "Superintendência nos ", "Superintendência nas ", "Diretoria de Administração",
-    "Diretoria de Planejamento, Administração e Logística", "Gestão de Pessoas", "Gestão Administrativa"
-  ],
+  "palavras_chave": {
+    "minimo_termos": 2,
+    "minimo_termos_com_reforco": 1
+  },
+  "agrupamento": {
+    "lote_a_partir_de": 4,
+    "serie_a_partir_de": 2,
+    "nunca_agrupar": ["Conselho Administrativo de Defesa Econômica", "Supremo Tribunal Federal"]
+  },
   "secoes": {
     "dou1": {
       "nome": "Seção 1",
       "fonte": "Diário Oficial da União | Seção 1",
-      "radares": {
+      "palavras_chave_nos_radares": [
+        "trabalhista-empresarial", "direito-tributario", "societario-ma", "mercado-capitais-fundos",
+        "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg", "propriedade-intelectual",
+        "contencioso-civel"
+      ],
+      "orgaos": {
+        "regulatorio-oleo-gas": [
+          {"orgao": "Conselho Administrativo de Defesa Econômica"},
+          {"orgao": "Ministério da Educação", "excluir": ["Universidade", "Instituto Federal", "Centro Federal de Educação Tecnológica", "Colégio Pedro II", "Hospital", "Empresa Brasileira de Serviços Hospitalares"]},
+          {"orgao": "Ministério do Desenvolvimento, Indústria, Comércio e Serviços"}
+        ]
+      },
+      "reforco": {
+        "trabalhista-empresarial": [
+          {"orgao": "Ministério do Trabalho e Emprego"}
+        ],
         "direito-tributario": [
-          {"orgao": "Ministério da Fazenda", "unidade": "Gabinete do Ministro", "tipos": ["Portaria", "Portaria Normativa", "Instrução Normativa", "Resolução"]},
+          {"orgao": "Ministério da Fazenda", "unidade": "Gabinete do Ministro"},
           {"orgao": "Conselho Nacional de Política Fazendária"},
           {"orgao": "Conselho Administrativo de Recursos Fiscais"},
           {"orgao": "Procuradoria-Geral da Fazenda Nacional"},
@@ -63,13 +82,8 @@
         "mercado-capitais-fundos": [
           {"orgao": "Comissão de Valores Mobiliários"},
           {"orgao": "Conselho de Recursos do Sistema Financeiro Nacional"},
-          {"orgao": "Superintendência de Seguros Privados", "tipos": ["Resolução", "Circular", "Instrução Normativa", "Portaria Normativa"]},
-          {"orgao": "Superintendência Nacional de Previdência Complementar", "tipos": ["Resolução", "Instrução Normativa", "Portaria Normativa"]}
-        ],
-        "regulatorio-oleo-gas": [
-          {"orgao": "Conselho Administrativo de Defesa Econômica"},
-          {"orgao": "Ministério da Educação", "excluir": ["Universidade", "Instituto Federal", "Centro Federal de Educação Tecnológica", "Colégio Pedro II", "Hospital", "Empresa Brasileira de Serviços Hospitalares"]},
-          {"orgao": "Ministério do Desenvolvimento, Indústria, Comércio e Serviços"}
+          {"orgao": "Superintendência de Seguros Privados"},
+          {"orgao": "Superintendência Nacional de Previdência Complementar"}
         ],
         "imobiliario-infraestrutura": [
           {"orgao": "Secretaria do Patrimônio da União"},
@@ -77,7 +91,7 @@
           {"orgao": "Ministério das Cidades", "unidade": "Gabinete do Ministro"},
           {"orgao": "Ministério dos Transportes", "unidade": "Gabinete do Ministro"},
           {"orgao": "Ministério de Portos e Aeroportos", "unidade": "Gabinete do Ministro"},
-          {"orgao": "Agência Nacional de Águas e Saneamento Básico", "tipos": ["Resolução"]},
+          {"orgao": "Agência Nacional de Águas e Saneamento Básico"},
           {"orgao": "Secretaria Especial do Programa de Parcerias de Investimentos"}
         ],
         "ambiental-esg": [
@@ -86,12 +100,12 @@
         "propriedade-intelectual": [
           {"orgao": "Instituto Nacional da Propriedade Industrial"},
           {"orgao": "Agência Nacional de Proteção de Dados"},
-          {"orgao": "Secretaria Nacional de Direitos Digitais", "excluir": ["Classificação Indicativa"]}
+          {"orgao": "Secretaria Nacional de Direitos Digitais"}
         ],
         "contencioso-civel": [
           {"orgao": "Supremo Tribunal Federal"},
-          {"orgao": "Superior Tribunal de Justiça", "excluir": ["Conselho da Justiça Federal"]},
-          {"orgao": "Conselho Nacional de Justiça", "tipos": ["Resolução", "Provimento", "Recomendação", "Instrução Normativa"]},
+          {"orgao": "Superior Tribunal de Justiça"},
+          {"orgao": "Conselho Nacional de Justiça"},
           {"orgao": "Secretaria Nacional do Consumidor"}
         ]
       }
@@ -99,12 +113,15 @@
     "dou3": {
       "nome": "Seção 3",
       "fonte": "Diário Oficial da União | Seção 3",
-      "radares": {
+      "palavras_chave_nos_radares": [],
+      "orgaos": {
         "regulatorio-oleo-gas": [
           {"orgao": "Conselho Administrativo de Defesa Econômica"},
-          {"orgao": "Ministério da Educação", "termos": ["Mais Médicos"]}
+          {"orgao": "Ministério da Educação", "termos": ["Mais Médicos"]},
+          {"orgao": "Ministério da Saúde", "termos": ["Mais Médicos"]}
         ]
-      }
+      },
+      "reforco": {}
     }
   }
 }

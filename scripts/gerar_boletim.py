@@ -83,10 +83,10 @@ MAPA = {
     "SUSEP | Noticias": ["mercado-capitais-fundos", "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg"],
     "ANTT | Noticias - Defeso Eleitoral": ["regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg"],
 }
-# As secoes do DOU entram no Filtro 1 com os Radares que o filtro por orgao do
-# dou.json atende, para a matriz e o filtro nunca divergirem.
+# As secoes do DOU entram no Filtro 1 com os Radares que o filtro do dou.json
+# atende (palavras-chave e orgaos), para a matriz e o filtro nunca divergirem.
 MAPA.update({
-    secao["fonte"]: [s for s in SLUGS if s in secao.get("radares", {})]
+    secao["fonte"]: [s for s in SLUGS if s in set(secao.get("palavras_chave_nos_radares") or []) | set(secao.get("orgaos") or {})]
     for secao in coleta_dou.carregar_config()["secoes"].values()
 })
 MAX_CHARS = 30000
@@ -448,9 +448,12 @@ def texto_dos_atos(atos):
     linhas = []
     for ato in atos:
         aberto = "aberto" if ato.get("aberto") else f"não aberto ({ato.get('nao_aberto', '')})"
+        grupo = ato.get("grupo") or {}
+        no_grupo = f" | {grupo['tipo']} {grupo['id']} ({grupo['tamanho']} atos)" if grupo.get("tipo") in ("lote", "serie") else ""
         linhas.append(
-            f"- {ato['titulo']}\n  Órgão: {ato['orgao']}\n  Tipo: {ato['tipo']} | Página {ato['pagina']} | {aberto}\n"
-            f"  Radares: {', '.join(ato['radares'])}\n  URL: {ato['url']}\n  Resumo: {ato.get('resumo', '')}\n  Trecho: {ato.get('trecho', '')}"
+            f"- {ato['titulo']}\n  Órgão: {ato['orgao']}\n  Tipo: {ato['tipo']} | Página {ato['pagina']} | {aberto}{no_grupo}\n"
+            f"  Radares: {', '.join(ato['radares'])} ({'; '.join(ato.get('regras', {}).values())})\n  URL: {ato['url']}\n"
+            f"  Resumo: {ato.get('resumo', '')}\n  Trecho: {ato.get('trecho', '')}"
         )
     return "\n".join(linhas)
 
@@ -498,14 +501,14 @@ def coletar_dou(fc, fontes, edicao, esperar):
         elif parte.get("aviso"):
             registro["aviso_coleta"] = parte["aviso"]
             print(f"::warning title=DOU::{registro['fonte']}: {parte['aviso']}")
-        print(f"  {registro['fonte']}: {parte['listados']} ato(s) na edição, {parte['selecionados']} no filtro por órgão, "
+        print(f"  {registro['fonte']}: {parte['listados']} ato(s) na edição, {parte['selecionados']} no filtro, "
               f"{parte['abertos']} aberto(s), {parte['creditos']} crédito(s)")
     return list(registros.values())
 
 
 def itens_do_dou(material):
     """Os itens do boletim.json para os atos do DOU, com os Radares do filtro por orgao."""
-    return [coleta_dou.item_do_ato(ato, registro["fonte"]) for registro in material if registro.get("dou") for ato in registro.get("publicacoes") or []]
+    return [item for registro in material if registro.get("dou") for item in coleta_dou.itens(registro.get("publicacoes") or [], registro["fonte"])]
 
 
 def resumo_dou(material):
@@ -522,7 +525,7 @@ def resumo_dou(material):
         "atos_abertos": sum(1 for a in atos if a.get("aberto")),
         "atos_nao_abertos": sum(1 for a in atos if not a.get("aberto")),
         "por_secao": {m["fonte"]: {"status": m["status"], "erro": m.get("erro", ""), "aviso": m.get("aviso_coleta", ""),
-                                   "atos_na_edicao": m.get("publicacoes_listadas", 0), "no_filtro_por_orgao": len(m.get("publicacoes") or []),
+                                   "atos_na_edicao": m.get("publicacoes_listadas", 0), "no_filtro": len(m.get("publicacoes") or []),
                                    "abertos": m.get("dou_abertos", 0), "creditos_firecrawl": m.get("creditos_firecrawl", 0)} for m in secoes},
         **contagens,
     }
@@ -563,7 +566,7 @@ def montar_dossier(material):
             if not atos:
                 processada["sem_publicacao_na_janela"] = True
                 processada["motivo_sem_publicacao"] = registro.get("aviso_coleta") or (
-                    f"A edição do DOU trouxe {registro.get('publicacoes_listadas', 0)} ato(s); nenhum passou no filtro por órgão.")
+                    f"A edição do DOU trouxe {registro.get('publicacoes_listadas', 0)} ato(s); nenhum passou no filtro de palavras-chave e órgãos.")
             processadas.append(processada)
             continue
         if registro["status"] == "erro":
@@ -1250,7 +1253,7 @@ def main():
         log["dou"]["creditos_firecrawl_na_coleta"] = log["dou"]["creditos_firecrawl"]
         log["dou"]["creditos_firecrawl"] = 0
     if log["dou"]:
-        print(f"DOU: {sum(s['no_filtro_por_orgao'] for s in log['dou']['por_secao'].values())} ato(s) no filtro, "
+        print(f"DOU: {sum(s['no_filtro'] for s in log['dou']['por_secao'].values())} ato(s) no filtro, "
               f"{log['dou']['atos_abertos']} aberto(s), {log['dou']['creditos_firecrawl']} crédito(s) do Firecrawl.")
     log["publicacoes_nao_devolvidas_pela_ia"] = {
         "ao_portal": len(nao_devolvidas),

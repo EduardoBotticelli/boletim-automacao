@@ -938,6 +938,19 @@ def agrupar_por_secao(
                 "secao": texto_limpo(trecho.get("secao")),
                 "pagina": trecho.get("pagina") or "",
             }
+        atos_do_grupo = item.get("atos_do_grupo")
+        if isinstance(atos_do_grupo, list) and atos_do_grupo:
+            # Grupo do DOU (lote ou serie): a lista dos atos, com link, abaixo do trecho.
+            noticia["atos_do_grupo"] = [
+                {
+                    "numero": texto_limpo(ato.get("numero")),
+                    "titulo": texto_limpo(ato.get("titulo")),
+                    "url": url_segura(ato.get("url")),
+                    "distintivo": texto_limpo(ato.get("distintivo")),
+                }
+                for ato in atos_do_grupo
+                if isinstance(ato, dict)
+            ]
         por_ancora[secao.ancora].append(noticia)
 
     return por_ancora, sem_secao, encaminhadas
