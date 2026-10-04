@@ -209,6 +209,36 @@ def teste_ementa_da_leitura_para_no_preambulo():
     assert cd.ementa_da_leitura("Processo nº 08700.002479/2022-57 Representante: Cade") == "Processo nº 08700.002479/2022-57 Representante: Cade"
 
 
+def teste_receita_so_pelas_unidades_centrais():
+    f = filtro()
+    central = ato_sintetico("SOLUÇÃO DE CONSULTA COSIT Nº 1", "Assunto: Contribuição para o PIS e a COFINS.",
+                            ["Ministério da Fazenda", "Secretaria Especial da Receita Federal do Brasil", "Secretaria-Adjunta",
+                             "Subsecretaria de Tributação e Contencioso", "Coordenação-Geral de Tributação"], "Solução de Consulta")
+    assert not f.excluido(central) and "direito-tributario" in f.radares(central)
+    for local in ("Superintendência Regional da Receita Federal do Brasil 8ª Região Fiscal", "Alfândega da Receita Federal do Brasil no Porto de Santos",
+                  "Delegacia de Julgamento da Receita Federal do Brasil 04"):
+        ato = dict(central, niveis=["Ministério da Fazenda", "Secretaria Especial da Receita Federal do Brasil", "Secretaria-Adjunta", local])
+        assert f.excluido(ato).startswith("unidade local da Receita Federal"), local
+    atos = atos_de("dou1")
+    selecionados = cd.selecionar(atos, f)
+    assert not any("ALF/VCP" in a["titulo"] for a in selecionados), "a portaria da Alfândega de Viracopos fica de fora"
+    assert sum(f.excluidos.values()) == 1, f.excluidos
+
+
+def teste_exclusoes_por_orgao_e_tipo_comecam_vazias():
+    assert CONFIG["exclusoes"] == [], "a lista começa vazia: vai ser preenchida com o que a curadoria retirar"
+    config = json.loads(json.dumps(CONFIG))
+    config["exclusoes"] = [{"orgao": "Superintendência de Seguros Privados", "tipos": ["Portaria"], "motivo": "rotina da SUSEP"}]
+    f = cd.Filtro(config, "dou1", TERMOS)
+    susep = ["Ministério da Fazenda", "Superintendência de Seguros Privados", "Diretoria de Organização do Sistema de Seguros Privados"]
+    portaria = ato_sintetico("PORTARIA CGAUT/SUSEP Nº 203", "Autoriza a seguradora.", susep)
+    circular = ato_sintetico("CIRCULAR SUSEP Nº 700", "Dispõe sobre valores mobiliários e a SUSEP.", susep, "Circular")
+    assert f.excluido(portaria) == "rotina da SUSEP"
+    assert not f.excluido(circular), "outro tipo do mesmo órgão continua"
+    cd.selecionar([portaria, circular], f)
+    assert f.excluidos == {"rotina da SUSEP": 1}
+
+
 # ---------------------------------------------------------------------------
 # Agrupamento e quais atos abrir
 # ---------------------------------------------------------------------------
@@ -262,6 +292,25 @@ def teste_teto_vale_e_norma_abre_antes():
     teto = [a for a in atos if a.get("nao_aberto", "").startswith("teto")]
     assert teto and all(a not in abrir for a in teto)
     assert cd.prioridade(abrir[0]["tipo"]) <= cd.prioridade(teto[0]["tipo"]), "norma abre antes de expediente"
+
+
+def teste_teto_abre_cade_mec_mdic_depois_grupos_depois_o_resto():
+    resolucoes = []
+    for i in range(3):
+        assunto = ("o ICMS e o IPI", "o PIS e a COFINS", "o IRPJ e a CSLL")[i]
+        ato = ato_sintetico(f"RESOLUÇÃO Nº {i}", f"Dispõe sobre {assunto}.", [f"Ministério {i}", "Secretaria Executiva"], "Resolução", posicao=50 + i)
+        ato.update(radares=["direito-tributario"], regras={"direito-tributario": "teste"}, por_orgao=False)
+        resolucoes.append(ato)
+    cade = ato_sintetico("EDITAL Nº 746", "Ato de Concentração.", ["Ministério da Justiça e Segurança Pública", "Conselho Administrativo de Defesa Econômica"], "Edital", posicao=90)
+    cade.update(radares=["regulatorio-oleo-gas"], regras={"regulatorio-oleo-gas": "órgão Conselho Administrativo de Defesa Econômica"}, por_orgao=True)
+    lote = _lote(4, ["Ministério da Justiça e Segurança Pública", "Secretaria Nacional do Consumidor"], inicio=70)
+    for ato in lote:
+        ato["por_orgao"] = False
+    grupos = cd.agrupar(resolucoes + [cade] + lote, CONFIG)
+    abrir = cd.escolher_para_abrir(grupos, limite=2)
+    assert abrir[0] is cade, "CADE, MEC e MDIC abrem primeiro, mesmo sendo edital"
+    assert abrir[1]["titulo"].startswith("DESPACHO"), "depois os grupos"
+    assert all(a.get("nao_aberto", "").startswith("teto") for a in resolucoes), "o restante fica para depois do teto, mesmo sendo norma"
 
 
 def teste_noticia_do_grupo_lista_os_atos():
@@ -352,6 +401,23 @@ def teste_falha_ao_abrir_ou_ao_ler_a_secao_fica_registrada():
     assert resultado["creditos"] == len(fc.pedidos), "pedido que falhou também conta"
 
 
+def teste_saldo_do_firecrawl_e_creditos_separados():
+    class ComSaldo:
+        def get_credit_usage(self):
+            return types.SimpleNamespace(remaining_credits=412, plan_credits=1000, billing_period_start="2026-09-26", billing_period_end="2026-10-26")
+
+    class SemSaldo:
+        def get_credit_usage(self):
+            raise RuntimeError("404 Not Found")
+
+    saldo = cd.saldo_firecrawl(ComSaldo())
+    assert saldo == {"saldo_restante": 412, "creditos_do_plano": 1000, "periodo": {"inicio": "2026-09-26", "fim": "2026-10-26"}}
+    falha = cd.saldo_firecrawl(SemSaldo())
+    assert falha["saldo_restante"] is None and "404" in falha["saldo_nao_informado"], "sem saldo, a execução segue"
+    creditos = {"coletas": 3, "buscas": 1, "creditos_por_busca": 2, "dou": 22, "total": 27}
+    assert gb.creditos_da_execucao(creditos, saldo) == {"coleta": 5, "dou": 22, "total": 27, **saldo}
+
+
 # ---------------------------------------------------------------------------
 # No gerar_boletim
 # ---------------------------------------------------------------------------
@@ -389,6 +455,7 @@ def teste_dou_entra_no_boletim_sem_passar_pelo_gemini():
     log = gb.resumo_dou(material)
     assert log["creditos_firecrawl"] == len(fc.pedidos) and log["edicao"] == "2026-10-02"
     assert log["por_secao"]["Diário Oficial da União | Seção 1"]["atos_na_edicao"] == 11
+    assert sum(log["por_secao"]["Diário Oficial da União | Seção 1"]["excluidos_antes_do_filtro"].values()) == 1, "a Alfândega de Viracopos"
     assert log["por_radar"]["regulatorio-oleo-gas"] >= 5 and log["noticias_por_radar"]["regulatorio-oleo-gas"] == log["por_radar"]["regulatorio-oleo-gas"] - 2
     assert log["grupos"] == {"serie": 1} and "agrupado" in log["nao_abertos_por_motivo"]
 
@@ -474,15 +541,19 @@ TESTES = [
     teste_secao_1_e_fonte_dos_nove_radares,
     teste_palavras_chave_com_a_regra_das_fontes_genericas,
     teste_ementa_da_leitura_para_no_preambulo,
+    teste_receita_so_pelas_unidades_centrais,
+    teste_exclusoes_por_orgao_e_tipo_comecam_vazias,
     teste_serie_identica_vira_uma_noticia,
     teste_lote_a_partir_de_quatro_e_nunca_cade_nem_stf,
     teste_teto_vale_e_norma_abre_antes,
+    teste_teto_abre_cade_mec_mdic_depois_grupos_depois_o_resto,
     teste_noticia_do_grupo_lista_os_atos,
     teste_ler_ato_separa_identificacao_ementa_texto_e_assinatura,
     teste_sem_ementa_o_resumo_junta_os_primeiros_paragrafos,
     teste_pagina_sem_texto_do_ato_e_falha,
     teste_coleta_abre_so_o_que_passou_e_conta_os_creditos,
     teste_falha_ao_abrir_ou_ao_ler_a_secao_fica_registrada,
+    teste_saldo_do_firecrawl_e_creditos_separados,
     teste_fontes_json_tem_as_duas_secoes,
     teste_dou_entra_no_boletim_sem_passar_pelo_gemini,
     teste_fim_de_semana_nao_gasta_credito,

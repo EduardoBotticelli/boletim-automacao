@@ -31,9 +31,19 @@
     "de 'nunca_agrupar' saem ato por ato. A notícia do grupo lista todos os atos,",
     "com link, e abre um só (1 crédito).",
     "",
-    "limite_atos_abertos: teto de atos abertos por execução, somadas as seções. O",
-    "ato que passa no filtro e não abre entra do mesmo jeito, com o começo do",
-    "texto que a leitura do jornal já traz, e o log diz por quê."
+    "Antes de qualquer regra, ficam de fora: as unidades locais dos órgãos de",
+    "'somente_unidades_centrais' (a Receita Federal, como na fonte 'Receita",
+    "Federal | Normas': superintendências regionais, delegacias, alfândegas e",
+    "inspetorias) e o que casar com 'exclusoes'. 'exclusoes' é a lista de",
+    "exclusões por órgão e tipo de ato, no formato das regras de órgão ('orgao',",
+    "'unidade', 'tipos', 'termos'), com um 'motivo' para o log. Começa vazia: vai",
+    "ser preenchida com o que a curadoria retirar do DOU.",
+    "",
+    "limite_atos_abertos: teto de atos abertos por execução, somadas as seções.",
+    "Quando o teto aperta, abrem primeiro CADE, MEC e MDIC, depois os grupos,",
+    "depois o restante; em cada faixa, as normas antes do expediente. O ato que",
+    "passa no filtro e não abre entra do mesmo jeito, com o começo do texto que a",
+    "leitura do jornal já traz, e o log diz por quê."
   ],
   "limite_atos_abertos": 20,
   "tamanho_trecho": 900,
@@ -41,6 +51,14 @@
     "minimo_termos": 2,
     "minimo_termos_com_reforco": 1
   },
+  "somente_unidades_centrais": [
+    {
+      "orgao": "Secretaria Especial da Receita Federal do Brasil",
+      "unidades_locais": ["Região Fiscal", "Superintendência Regional", "Delegacia", "Alfândega", "Inspetoria", "Agência da Receita"],
+      "motivo": "unidade local da Receita Federal (só órgãos centrais, como na fonte Receita Federal | Normas)"
+    }
+  ],
+  "exclusoes": [],
   "agrupamento": {
     "lote_a_partir_de": 4,
     "serie_a_partir_de": 2,

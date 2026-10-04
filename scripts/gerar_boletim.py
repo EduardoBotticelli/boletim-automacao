@@ -491,7 +491,7 @@ def coletar_dou(fc, fontes, edicao, esperar):
         parte = resultado["secoes"][secao]
         registro.update(
             publicacoes=parte["atos"], publicacoes_listadas=parte["listados"], creditos_firecrawl=parte["creditos"],
-            dou_abertos=parte["abertos"], dou_limite_atos_abertos=resultado["limite_atos_abertos"],
+            dou_abertos=parte["abertos"], dou_limite_atos_abertos=resultado["limite_atos_abertos"], dou_excluidos=parte.get("excluidos") or {},
             pagina=texto_dos_atos(parte["atos"]),
         )
         registro["chars_pagina"] = len(registro["pagina"])
@@ -501,14 +501,21 @@ def coletar_dou(fc, fontes, edicao, esperar):
         elif parte.get("aviso"):
             registro["aviso_coleta"] = parte["aviso"]
             print(f"::warning title=DOU::{registro['fonte']}: {parte['aviso']}")
-        print(f"  {registro['fonte']}: {parte['listados']} ato(s) na edição, {parte['selecionados']} no filtro, "
-              f"{parte['abertos']} aberto(s), {parte['creditos']} crédito(s)")
+        excluidos = sum((parte.get("excluidos") or {}).values())
+        print(f"  {registro['fonte']}: {parte['listados']} ato(s) na edição, {excluidos} excluído(s) antes do filtro, "
+              f"{parte['selecionados']} no filtro, {parte['abertos']} aberto(s), {parte['creditos']} crédito(s)")
     return list(registros.values())
 
 
 def itens_do_dou(material):
     """Os itens do boletim.json para os atos do DOU, com os Radares do filtro por orgao."""
     return [item for registro in material if registro.get("dou") for item in coleta_dou.itens(registro.get("publicacoes") or [], registro["fonte"])]
+
+
+def creditos_da_execucao(creditos, saldo):
+    """Os creditos do Firecrawl desta execucao, coleta e DOU separados, e o saldo informado pela API."""
+    dou = creditos.get("dou", 0)
+    return {"coleta": creditos["total"] - dou, "dou": dou, "total": creditos["total"], **saldo}
 
 
 def resumo_dou(material):
@@ -525,7 +532,8 @@ def resumo_dou(material):
         "atos_abertos": sum(1 for a in atos if a.get("aberto")),
         "atos_nao_abertos": sum(1 for a in atos if not a.get("aberto")),
         "por_secao": {m["fonte"]: {"status": m["status"], "erro": m.get("erro", ""), "aviso": m.get("aviso_coleta", ""),
-                                   "atos_na_edicao": m.get("publicacoes_listadas", 0), "no_filtro": len(m.get("publicacoes") or []),
+                                   "atos_na_edicao": m.get("publicacoes_listadas", 0), "excluidos_antes_do_filtro": m.get("dou_excluidos") or {},
+                                   "no_filtro": len(m.get("publicacoes") or []),
                                    "abertos": m.get("dou_abertos", 0), "creditos_firecrawl": m.get("creditos_firecrawl", 0)} for m in secoes},
         **contagens,
     }
@@ -1155,7 +1163,8 @@ def main():
         hoje = datetime.date.fromisoformat(indice["data_execucao"])
         inicio = datetime.date.fromisoformat(indice["janela"]["inicio"][:10])
         buscas = indice.get("buscas_complementares") or []
-        creditos = {"coletas": 0, "buscas": 0, "creditos_por_busca": CREDITOS_POR_BUSCA, "total": 0}
+        creditos = {"coletas": 0, "buscas": 0, "creditos_por_busca": CREDITOS_POR_BUSCA, "dou": 0, "total": 0}
+        saldo = {"saldo_restante": None, "saldo_nao_informado": "reprocessamento, sem Firecrawl"}
         print(f"Reprocessando o dossier de {hoje.isoformat()}: {len(material)} fonte(s), sem Firecrawl.")
     else:
         agora = datetime.datetime.now(ZoneInfo("America/Sao_Paulo"))
@@ -1174,7 +1183,9 @@ def main():
         material, buscas = coletar(fc, ativas, inicio, hoje, historico=historico, edicao_dou=edicao_dou)
         creditos = creditos_estimados(material, buscas)
         salvar_dossier(material, {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": f"{inicio.isoformat()}T00:00", "fim": agora.strftime("%Y-%m-%dT%H:%M")}, "buscas_complementares": buscas, "creditos_firecrawl_estimados": creditos})
-        print(f"Firecrawl: {creditos['coletas']} coleta(s) e {creditos['buscas']} busca(s), cerca de {creditos['total']} créditos.")
+        saldo = coleta_dou.saldo_firecrawl(fc)
+        restante = f"; saldo restante: {saldo['saldo_restante']}" + (f" de {saldo['creditos_do_plano']}" if saldo.get("creditos_do_plano") else "") if saldo.get("saldo_restante") is not None else "; saldo não informado pela API"
+        print(f"Firecrawl: {creditos['total'] - creditos.get('dou', 0)} crédito(s) na coleta e {creditos.get('dou', 0)} no DOU{restante}.")
     dossier, processadas = montar_dossier(material)
     inicio_iso = f"{inicio.isoformat()}T00:00"
     fim_iso = agora.strftime("%Y-%m-%dT%H:%M")
@@ -1220,7 +1231,7 @@ def main():
     reativadas_com_erro = fontes_reativadas_com_erro(ativas, processadas, hoje)
     for aviso in reativadas_com_erro:
         print(f"::warning title=Fonte reativada com erro::{aviso['fonte']} voltou em {aviso['reativada_em']} e continua com erro: {aviso['erro']}")
-    log = {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": inicio_iso, "fim": fim_iso}, "creditos_firecrawl_estimados": creditos, "fontes_com_queda_para_firecrawl": quedas, "filtro_de_orgaos": filtro_de_orgaos, "fontes_reativadas_com_erro": reativadas_com_erro, "buscas_complementares": buscas, "cascata_gemini": cascata, "fontes_processadas": processadas, "fontes_suspensas": [{"fonte": f["fonte"], "motivo": f.get("motivo_suspensao", "Suspensão temporária"), "reativar_em": f.get("reativar_em", "")} for f in suspensas], "fontes_inativas": [{"fonte": f["fonte"]} for f in inativas], "tentativas_gemini": tentativas, "lotes_gemini": lotes_gemini}
+    log = {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": inicio_iso, "fim": fim_iso}, "creditos_firecrawl": creditos_da_execucao(creditos, saldo), "creditos_firecrawl_estimados": creditos, "fontes_com_queda_para_firecrawl": quedas, "filtro_de_orgaos": filtro_de_orgaos, "fontes_reativadas_com_erro": reativadas_com_erro, "buscas_complementares": buscas, "cascata_gemini": cascata, "fontes_processadas": processadas, "fontes_suspensas": [{"fonte": f["fonte"], "motivo": f.get("motivo_suspensao", "Suspensão temporária"), "reativar_em": f.get("reativar_em", "")} for f in suspensas], "fontes_inativas": [{"fonte": f["fonte"]} for f in inativas], "tentativas_gemini": tentativas, "lotes_gemini": lotes_gemini}
     if args.reprocessar:
         log["reprocessado_em"] = datetime.datetime.now(ZoneInfo("America/Sao_Paulo")).isoformat()
         log["origem_da_coleta"] = "dossier guardado em output/dossier"

@@ -151,7 +151,7 @@ def ler_leitura(html_bruto, secao):
 
 
 def casa(ato, regra):
-    """O ato casa com a regra de orgao do dou.json ('orgao', 'unidade', 'termos', 'excluir')."""
+    """O ato casa com a regra de orgao do dou.json ('orgao', 'unidade', 'tipos', 'termos', 'excluir')."""
     niveis = [normalizar(n) for n in ato["niveis"]]
     if normalizar(regra["orgao"]) not in niveis:
         return False
@@ -161,6 +161,8 @@ def casa(ato, regra):
         alvo = normalizar(trecho)
         if any(alvo in nivel for nivel in niveis):
             return False
+    if regra.get("tipos") and normalizar(ato["tipo"]) not in {normalizar(t) for t in regra["tipos"]}:
+        return False
     if regra.get("termos"):
         texto = normalizar(ato["titulo"] + " " + ato["inicio_do_texto"])
         if not any(normalizar(t) in texto for t in regra["termos"]):
@@ -191,12 +193,31 @@ class Filtro:
     def __init__(self, config, secao, termos):
         definicao = config["secoes"].get(secao) or {}
         regra = config.get("palavras_chave") or {}
+        self.centrais = config.get("somente_unidades_centrais") or []
+        self.exclusoes = config.get("exclusoes") or []
+        self.excluidos = {}
         self.orgaos = definicao.get("orgaos") or {}
         self.reforco = definicao.get("reforco") or {}
         self.radares_por_palavra = definicao.get("palavras_chave_nos_radares") or []
         self.minimo = regra.get("minimo_termos", 2)
         self.minimo_reforco = regra.get("minimo_termos_com_reforco", 1)
         self.termos = termos or {}
+
+    def excluido(self, ato):
+        """
+        O motivo, se o ato fica fora de todos os Radares antes de qualquer
+        regra: unidade local de um orgao que so vale pelas unidades centrais
+        (a Receita, como na fonte 'Receita Federal | Normas'), ou uma das
+        'exclusoes' por orgao e tipo de ato.
+        """
+        niveis = [normalizar(n) for n in ato["niveis"]]
+        for regra in self.centrais:
+            if normalizar(regra["orgao"]) in niveis and any(normalizar(u) in n for u in regra.get("unidades_locais") or [] for n in niveis):
+                return regra.get("motivo") or f"unidade local de {regra['orgao']}"
+        for regra in self.exclusoes:
+            if casa(ato, regra):
+                return regra.get("motivo") or "exclusão por órgão e tipo de ato (dou.json)"
+        return ""
 
     def radares(self, ato):
         """{slug: motivo}, na ordem dos Radares do dou.json."""
@@ -223,6 +244,7 @@ class Filtro:
                     texto_motivo += f" (reforço: {reforco['orgao']})"
                 motivos[slug] = f"{motivos[slug]}; {texto_motivo}" if slug in motivos else texto_motivo
         ato["palavras_chave"] = sorted({t for v in palavras.values() for t in v})
+        ato["por_orgao"] = any(m.startswith("órgão") for m in motivos.values())
         return motivos
 
 
@@ -296,13 +318,24 @@ def agrupar(atos, config):
     return grupos
 
 
+def faixa_de_abertura(grupo):
+    """
+    Quem abre primeiro quando o teto aperta: 0 para CADE, MEC e MDIC (as
+    regras de orgao do Regulatorio), 1 para os grupos, 2 para o restante.
+    """
+    if any(a.get("por_orgao") for a in grupo["atos"]):
+        return 0
+    return 1 if grupo["tipo"] in ("lote", "serie") else 2
+
+
 def escolher_para_abrir(grupos, limite):
     """
     Abre o representante de cada grupo (o ato de maior prioridade do tipo),
-    ate o teto. Marca o motivo em quem nao abre e devolve quem abre, na ordem.
+    ate o teto, na ordem de faixa_de_abertura e, dentro dela, das normas para
+    o expediente. Marca o motivo em quem nao abre e devolve quem abre.
     """
     abrir = []
-    for grupo in sorted(grupos, key=lambda g: _ordem(g["representante"])):
+    for grupo in sorted(grupos, key=lambda g: (faixa_de_abertura(g),) + _ordem(g["representante"])):
         representante = grupo["representante"]
         for ato in grupo["atos"]:
             if ato is not representante:
@@ -449,7 +482,7 @@ def coletar(fc, secoes, data, config=None, esperar=None, termos=None):
     todos = []
     for secao in secoes:
         filtro = Filtro(config, secao, termos)
-        registro = {"listados": 0, "selecionados": 0, "abertos": 0, "creditos": 0, "atos": [], "erro": "", "aviso": ""}
+        registro = {"listados": 0, "selecionados": 0, "excluidos": {}, "abertos": 0, "creditos": 0, "atos": [], "erro": "", "aviso": ""}
         resultado["secoes"][secao] = registro
         esperar()
         try:
@@ -466,6 +499,7 @@ def coletar(fc, secoes, data, config=None, esperar=None, termos=None):
                                  "ou a edição ainda não tinha saído na hora da coleta.")
         registro["atos"] = selecionar(atos, filtro)
         registro["selecionados"] = len(registro["atos"])
+        registro["excluidos"] = dict(filtro.excluidos)
         todos.extend(registro["atos"])
 
     resultado["grupos"] = agrupar(todos, config)
@@ -493,9 +527,16 @@ def coletar(fc, secoes, data, config=None, esperar=None, termos=None):
 
 
 def selecionar(atos, filtro):
-    """Os atos que entram em algum Radar, com os Radares e o motivo de cada um."""
+    """
+    Os atos que entram em algum Radar, com os Radares e o motivo de cada um.
+    Os excluidos antes do filtro ficam contados em 'filtro.excluidos'.
+    """
     selecionados = []
     for ato in atos:
+        motivo = filtro.excluido(ato)
+        if motivo:
+            filtro.excluidos[motivo] = filtro.excluidos.get(motivo, 0) + 1
+            continue
         motivos = filtro.radares(ato)
         if motivos:
             ato["radares"] = list(motivos)
@@ -632,6 +673,23 @@ def resumo_para_o_log(atos):
             motivo = (ato.get("nao_aberto") or "").split(":")[0]
             por_motivo[motivo] = por_motivo.get(motivo, 0) + 1
     return {"por_radar": por_radar, "noticias_por_radar": noticias, "grupos": grupos, "nao_abertos_por_motivo": por_motivo}
+
+
+def saldo_firecrawl(fc):
+    """
+    O saldo de creditos que a API do Firecrawl informa (get_credit_usage,
+    sem custo). Se ela nao informar, diz por que, e a coleta segue.
+    """
+    try:
+        uso = fc.get_credit_usage()
+    except Exception as erro:  # sem saldo no log, mas sem derrubar a execucao
+        return {"saldo_restante": None, "saldo_nao_informado": f"{type(erro).__name__}: {erro}"[:200]}
+    campo = (lambda k: uso.get(k)) if isinstance(uso, dict) else (lambda k: getattr(uso, k, None))
+    restante = campo("remaining_credits")
+    if not isinstance(restante, int):
+        return {"saldo_restante": None, "saldo_nao_informado": "a API não devolveu remaining_credits"}
+    return {"saldo_restante": restante, "creditos_do_plano": campo("plan_credits"),
+            "periodo": {"inicio": campo("billing_period_start"), "fim": campo("billing_period_end")}}
 
 
 def esperar_entre(pausa):
