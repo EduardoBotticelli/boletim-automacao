@@ -16,6 +16,8 @@ on:
           - reprocessar
           - sondar
           - demo_dou
+          - investigar_dou
+          - ensaio_dou
       fontes_cobertura:
         description: Fontes a conferir na cobertura (vazio = todas)
         required: false
@@ -60,10 +62,11 @@ jobs:
       - name: Validar arquivos
         run: |
           python -m json.tool fontes.json > /dev/null
-          python -m py_compile scripts/coleta_direta.py scripts/sugestao_sem_ia.py scripts/gerar_boletim.py scripts/gerar_html.py scripts/gerar_auditoria_html.py scripts/testar_dou_regulatorio.py scripts/gerar_boletim_final.py scripts/testar_decisoes_portal.py scripts/templates_radar.py scripts/inspecionar_templates.py scripts/conferir_cobertura.py scripts/diagnostico_funil.py scripts/testar_coleta.py scripts/investigar_alternativas.py
+          python -m py_compile scripts/coleta_direta.py scripts/sugestao_sem_ia.py scripts/gerar_boletim.py scripts/gerar_html.py scripts/gerar_auditoria_html.py scripts/testar_dou_regulatorio.py scripts/gerar_boletim_final.py scripts/testar_decisoes_portal.py scripts/templates_radar.py scripts/inspecionar_templates.py scripts/conferir_cobertura.py scripts/diagnostico_funil.py scripts/testar_coleta.py scripts/investigar_alternativas.py scripts/investigar_dou.py scripts/coleta_dou.py scripts/testar_dou.py
       - name: Testar a coleta
         run: |
           python scripts/testar_coleta.py
+          python scripts/testar_dou.py
           python scripts/testar_publicacao.py
       - name: Conferir cobertura das fontes
         if: ${{ inputs.etapa == 'cobertura' || inputs.etapa == 'ambas' }}
@@ -121,6 +124,40 @@ jobs:
           pip install pypdf
           python scripts/demo_dou.py --autoteste
           python scripts/demo_dou.py --origem inlabs --data "${{ inputs.dou_data }}"
+
+      - name: Investigar o DOU pela leitura do jornal
+        # Baixa as Secoes 1 e 3 do dia em dou_data pelo Firecrawl, em HTML
+        # bruto, e mede o que vem embutido. Gasta poucos creditos (uma
+        # pagina por secao, a busca do in.gov.br para o total e um ato de
+        # exemplo por secao). Nao recebe a chave do Gemini.
+        if: ${{ inputs.etapa == 'investigar_dou' }}
+        env:
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+        # Opcoes extras (--sem-busca, --varios-atos, --amostra DATAS) vem em urls_candidatas.
+        run: |
+          python scripts/investigar_dou.py --data "${{ inputs.dou_data }}" --secoes dou1 dou3 ${{ inputs.urls_candidatas }}
+          if [ -d output/investigacao_dou/amostra ]; then
+            bash scripts/publicar_saidas.sh "Registra a amostra do DOU" "${{ github.ref_name }}" output/investigacao_dou/amostra
+          fi
+
+      - name: Ensaio da coleta do DOU
+        # A coleta do DOU sozinha, para a edicao em dou_data: leitura das
+        # Secoes 1 e 3, filtro por orgao e abertura dos atos que passam.
+        # Gasta os creditos de um dia de coleta e grava o resultado no ramo.
+        if: ${{ inputs.etapa == 'ensaio_dou' }}
+        env:
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+        run: |
+          python scripts/coleta_dou.py --data "${{ inputs.dou_data }}" --saida output/ensaio_dou
+          bash scripts/publicar_saidas.sh "Registra o ensaio da coleta do DOU de ${{ inputs.dou_data }}" "${{ github.ref_name }}" output/ensaio_dou
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() && inputs.etapa == 'investigar_dou' }}
+        with:
+          name: investigacao-dou-${{ github.run_number }}
+          retention-days: 14
+          if-no-files-found: warn
+          path: output/investigacao_dou/
 
       - uses: actions/upload-artifact@v4
         if: ${{ always() && inputs.etapa == 'demo_dou' }}

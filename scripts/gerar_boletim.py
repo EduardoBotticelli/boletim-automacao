@@ -26,6 +26,7 @@ from google import genai
 from google.genai import types
 
 import coleta_direta
+import coleta_dou
 import sugestao_sem_ia
 
 BASE = Path(__file__).resolve().parent.parent
@@ -82,6 +83,12 @@ MAPA = {
     "SUSEP | Noticias": ["mercado-capitais-fundos", "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg"],
     "ANTT | Noticias - Defeso Eleitoral": ["regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg"],
 }
+# As secoes do DOU entram no Filtro 1 com os Radares que o filtro do dou.json
+# atende (palavras-chave e orgaos), para a matriz e o filtro nunca divergirem.
+MAPA.update({
+    secao["fonte"]: [s for s in SLUGS if s in set(secao.get("palavras_chave_nos_radares") or []) | set(secao.get("orgaos") or {})]
+    for secao in coleta_dou.carregar_config()["secoes"].values()
+})
 MAX_CHARS = 30000
 MIN_CHARS = 500
 # Resultados por busca complementar. O Firecrawl cobra 2 creditos a cada 10;
@@ -309,7 +316,7 @@ def repartir_busca(achados, fontes):
     return partes
 
 
-def coletar(fc, ativas, inicio, hoje, pausa=PAUSA_FIRECRAWL, cliente=None, historico=None, coletor=None):
+def coletar(fc, ativas, inicio, hoje, pausa=PAUSA_FIRECRAWL, cliente=None, historico=None, coletor=None, edicao_dou=None):
     """
     Coleta as fontes, cada uma pelo metodo que o fontes.json declara.
 
@@ -324,6 +331,9 @@ def coletar(fc, ativas, inicio, hoje, pausa=PAUSA_FIRECRAWL, cliente=None, histo
     escopo, repartida entre as fontes que o dividem. O que a busca acha nunca
     vai para fonte com pagina de erro; se nenhuma do escopo veio de pe, a
     busca nem e feita, e o motivo fica em 'buscas'.
+
+    As secoes do DOU ("coleta": "dou") vem depois das outras, todas de uma
+    vez: o teto de atos abertos vale para a soma delas (coletar_dou).
 
     Devolve (material, buscas). 'material' e uma entrada por fonte: e o que
     montar_dossier transforma no dossier do Gemini e o que salvar_dossier
@@ -346,6 +356,8 @@ def coletar(fc, ativas, inicio, hoje, pausa=PAUSA_FIRECRAWL, cliente=None, histo
         nome = fonte["fonte"]
         metodo = fonte.get("coleta", "firecrawl")
         print(f"[{indice}/{len(ativas)}] {nome} ({metodo})")
+        if metodo == "dou":
+            continue
         registro = {
             "fonte": nome, "categoria": fonte["categoria"], "url": fonte["url"],
             "tipo_coleta": fonte.get("tipo_coleta", "pagina"),
@@ -394,6 +406,10 @@ def coletar(fc, ativas, inicio, hoje, pausa=PAUSA_FIRECRAWL, cliente=None, histo
                 registro.update(status="erro", erro=erro_resumo(erro, 300))
         material.append(registro)
 
+    dou = [f for f in ativas if f.get("coleta") == "dou"]
+    if dou:
+        material.extend(coletar_dou(fc, dou, edicao_dou or hoje, esperar_firecrawl))
+
     grupos = {}
     for registro in material:
         if registro["busca_pedida"]:
@@ -427,6 +443,102 @@ def coletar(fc, ativas, inicio, hoje, pausa=PAUSA_FIRECRAWL, cliente=None, histo
     return material, buscas
 
 
+def texto_dos_atos(atos):
+    """Os atos do DOU que passaram no filtro, legiveis no dossier guardado."""
+    linhas = []
+    for ato in atos:
+        aberto = "aberto" if ato.get("aberto") else f"não aberto ({ato.get('nao_aberto', '')})"
+        grupo = ato.get("grupo") or {}
+        no_grupo = f" | {grupo['tipo']} {grupo['id']} ({grupo['tamanho']} atos)" if grupo.get("tipo") in ("lote", "serie") else ""
+        linhas.append(
+            f"- {ato['titulo']}\n  Órgão: {ato['orgao']}\n  Tipo: {ato['tipo']} | Página {ato['pagina']} | {aberto}{no_grupo}\n"
+            f"  Radares: {', '.join(ato['radares'])} ({'; '.join(ato.get('regras', {}).values())})\n  URL: {ato['url']}\n"
+            f"  Resumo: {ato.get('resumo', '')}\n  Trecho: {ato.get('trecho', '')}"
+        )
+    return "\n".join(linhas)
+
+
+def coletar_dou(fc, fontes, edicao, esperar):
+    """
+    As secoes do DOU da edicao de 'edicao', pela leitura do jornal
+    (coleta_dou.py). Uma entrada de 'material' por secao, como as outras
+    fontes, marcada com "dou": os atos ja chegam com os Radares do filtro por
+    orgao e nao vao ao Gemini. Secao que falha fica com erro registrado.
+    """
+    registros = {}
+    for fonte in fontes:
+        registros[fonte["secao"]] = {
+            "fonte": fonte["fonte"], "categoria": fonte["categoria"], "url": fonte["url"], "tipo_coleta": "dou",
+            "pagina_inteira": False, "metodo": "dou", "metodo_usado": "dou", "queda_firecrawl": False, "motivo_queda": "",
+            "creditos_firecrawl": 0, "requisicoes_diretas": 0, "estruturado": True, "dou": True, "dou_edicao": edicao.isoformat(),
+            "publicacoes": [], "publicacoes_listadas": 0, "status": "ok", "erro": "", "pagina": "", "chars_pagina": 0,
+            "busca_pedida": False, "busca_executada": False, "descobertas": [],
+        }
+    if edicao.weekday() >= 5:
+        for registro in registros.values():
+            registro["aviso_coleta"] = "Sem edição regular do DOU no fim de semana."
+        print(f"DOU: {edicao:%d/%m/%Y} é fim de semana, sem edição regular; nada coletado.")
+        return list(registros.values())
+    print(f"DOU de {edicao:%d/%m/%Y}: " + ", ".join(registros))
+    try:
+        resultado = coleta_dou.coletar(fc, list(registros), edicao, esperar=esperar)
+    except Exception as erro:  # dou.json ilegivel, por exemplo: as secoes ficam com erro
+        for registro in registros.values():
+            registro.update(status="erro", erro="Coleta do DOU falhou: " + erro_resumo(erro, 240))
+        print(f"::warning title=DOU::{erro_resumo(erro, 240)}")
+        return list(registros.values())
+    for secao, registro in registros.items():
+        parte = resultado["secoes"][secao]
+        registro.update(
+            publicacoes=parte["atos"], publicacoes_listadas=parte["listados"], creditos_firecrawl=parte["creditos"],
+            dou_abertos=parte["abertos"], dou_limite_atos_abertos=resultado["limite_atos_abertos"], dou_excluidos=parte.get("excluidos") or {},
+            pagina=texto_dos_atos(parte["atos"]),
+        )
+        registro["chars_pagina"] = len(registro["pagina"])
+        if parte["erro"]:
+            registro.update(status="erro", erro="Leitura do jornal do DOU falhou: " + parte["erro"])
+            print(f"::warning title=DOU::{registro['fonte']}: {parte['erro']}")
+        elif parte.get("aviso"):
+            registro["aviso_coleta"] = parte["aviso"]
+            print(f"::warning title=DOU::{registro['fonte']}: {parte['aviso']}")
+        excluidos = sum((parte.get("excluidos") or {}).values())
+        print(f"  {registro['fonte']}: {parte['listados']} ato(s) na edição, {excluidos} excluído(s) antes do filtro, "
+              f"{parte['selecionados']} no filtro, {parte['abertos']} aberto(s), {parte['creditos']} crédito(s)")
+    return list(registros.values())
+
+
+def itens_do_dou(material):
+    """Os itens do boletim.json para os atos do DOU, com os Radares do filtro por orgao."""
+    return [item for registro in material if registro.get("dou") for item in coleta_dou.itens(registro.get("publicacoes") or [], registro["fonte"])]
+
+
+def creditos_da_execucao(creditos, saldo):
+    """Os creditos do Firecrawl desta execucao, coleta e DOU separados, e o saldo informado pela API."""
+    dou = creditos.get("dou", 0)
+    return {"coleta": creditos["total"] - dou, "dou": dou, "total": creditos["total"], **saldo}
+
+
+def resumo_dou(material):
+    """O que o DOU custou e trouxe, para o log."""
+    secoes = [m for m in material if m.get("dou")]
+    if not secoes:
+        return {}
+    atos = [a for m in secoes for a in m.get("publicacoes") or []]
+    contagens = coleta_dou.resumo_para_o_log(atos)
+    return {
+        "edicao": secoes[0].get("dou_edicao", ""),
+        "creditos_firecrawl": sum(m.get("creditos_firecrawl", 0) for m in secoes),
+        "limite_atos_abertos": secoes[0].get("dou_limite_atos_abertos"),
+        "atos_abertos": sum(1 for a in atos if a.get("aberto")),
+        "atos_nao_abertos": sum(1 for a in atos if not a.get("aberto")),
+        "por_secao": {m["fonte"]: {"status": m["status"], "erro": m.get("erro", ""), "aviso": m.get("aviso_coleta", ""),
+                                   "atos_na_edicao": m.get("publicacoes_listadas", 0), "excluidos_antes_do_filtro": m.get("dou_excluidos") or {},
+                                   "no_filtro": len(m.get("publicacoes") or []),
+                                   "abertos": m.get("dou_abertos", 0), "creditos_firecrawl": m.get("creditos_firecrawl", 0)} for m in secoes},
+        **contagens,
+    }
+
+
 def texto_estruturado(publicacoes):
     """As publicacoes de uma fonte coletada sem Firecrawl, no formato do dossier."""
     linhas = ["## Publicações coletadas direto da fonte (título, data, link e descrição informados por ela)"]
@@ -451,6 +563,20 @@ def montar_dossier(material):
         base = {"fonte": nome, "categoria": registro["categoria"], "url": registro["url"]}
         descobertas = registro.get("descobertas") or []
         origem = {k: registro.get(k) for k in ("metodo", "metodo_usado", "queda_firecrawl", "motivo_queda", "creditos_firecrawl", "requisicoes_diretas") if k in registro}
+        if registro.get("dou"):
+            # O DOU chega com os Radares do filtro por orgao e nao vai ao Gemini.
+            if registro["status"] != "ok":
+                processadas.append(dict({"fonte": nome, "status": "erro", "erro": registro["erro"]}, **origem))
+                continue
+            atos = registro.get("publicacoes") or []
+            processada = dict({"fonte": nome, "status": "ok", "tamanho_chars": 0, "publicacoes_listadas": registro.get("publicacoes_listadas"),
+                               "publicacoes_localizadas": len(atos), "dou_atos_abertos": sum(1 for a in atos if a.get("aberto"))}, **origem)
+            if not atos:
+                processada["sem_publicacao_na_janela"] = True
+                processada["motivo_sem_publicacao"] = registro.get("aviso_coleta") or (
+                    f"A edição do DOU trouxe {registro.get('publicacoes_listadas', 0)} ato(s); nenhum passou no filtro de palavras-chave e órgãos.")
+            processadas.append(processada)
+            continue
         if registro["status"] == "erro":
             dossier.append(dict(base, conteudo="", erro_tecnico=registro["erro"]))
             processadas.append(dict({"fonte": nome, "status": "erro", "erro": registro["erro"]}, **origem))
@@ -500,12 +626,14 @@ def creditos_estimados(material, buscas):
     """Estimativa conservadora: toda coleta e toda busca tentadas contam."""
     tentadas = sum(1 for b in buscas if b["executada"] or b["erro"].startswith("Busca complementar falhou"))
     coletas = sum(1 for m in material if m.get("metodo_usado", "firecrawl") == "firecrawl")
+    dou = sum(m.get("creditos_firecrawl", 0) for m in material if m.get("dou"))
     return {
         "coletas": coletas,
         "coletas_sem_firecrawl": len(material) - coletas,
         "buscas": tentadas,
         "creditos_por_busca": CREDITOS_POR_BUSCA,
-        "total": coletas + tentadas * CREDITOS_POR_BUSCA,
+        "dou": dou,
+        "total": coletas + tentadas * CREDITOS_POR_BUSCA + dou,
         "quedas_para_firecrawl": sum(1 for m in material if m.get("queda_firecrawl")),
     }
 
@@ -892,7 +1020,7 @@ def publicacoes_nao_devolvidas(material, itens, modelo):
     titulos = {_chave_titulo(i.get("titulo")) for i in itens}
     novos, registro = [], {}
     for fonte in material:
-        if not fonte.get("estruturado"):
+        if not fonte.get("estruturado") or fonte.get("dou"):
             continue
         for publicacao in fonte.get("publicacoes") or []:
             if not publicacao.get("enviar"):
@@ -1035,7 +1163,8 @@ def main():
         hoje = datetime.date.fromisoformat(indice["data_execucao"])
         inicio = datetime.date.fromisoformat(indice["janela"]["inicio"][:10])
         buscas = indice.get("buscas_complementares") or []
-        creditos = {"coletas": 0, "buscas": 0, "creditos_por_busca": CREDITOS_POR_BUSCA, "total": 0}
+        creditos = {"coletas": 0, "buscas": 0, "creditos_por_busca": CREDITOS_POR_BUSCA, "dou": 0, "total": 0}
+        saldo = {"saldo_restante": None, "saldo_nao_informado": "reprocessamento, sem Firecrawl"}
         print(f"Reprocessando o dossier de {hoje.isoformat()}: {len(material)} fonte(s), sem Firecrawl.")
     else:
         agora = datetime.datetime.now(ZoneInfo("America/Sao_Paulo"))
@@ -1049,10 +1178,14 @@ def main():
         fc = Firecrawl(api_key=os.environ["FIRECRAWL_API_KEY"])
         # Lido antes de coletar: a coleta de hoje sobrescreve o dossier.
         historico = historico_de_listagem()
-        material, buscas = coletar(fc, ativas, inicio, hoje, historico=historico)
+        # DOU_EDICAO (DD-MM-AAAA) troca a edicao do DOU, para ensaio; sem ela, e a de hoje.
+        edicao_dou = datetime.datetime.strptime(os.environ["DOU_EDICAO"], "%d-%m-%Y").date() if os.getenv("DOU_EDICAO") else hoje
+        material, buscas = coletar(fc, ativas, inicio, hoje, historico=historico, edicao_dou=edicao_dou)
         creditos = creditos_estimados(material, buscas)
         salvar_dossier(material, {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": f"{inicio.isoformat()}T00:00", "fim": agora.strftime("%Y-%m-%dT%H:%M")}, "buscas_complementares": buscas, "creditos_firecrawl_estimados": creditos})
-        print(f"Firecrawl: {creditos['coletas']} coleta(s) e {creditos['buscas']} busca(s), cerca de {creditos['total']} créditos.")
+        saldo = coleta_dou.saldo_firecrawl(fc)
+        restante = f"; saldo restante: {saldo['saldo_restante']}" + (f" de {saldo['creditos_do_plano']}" if saldo.get("creditos_do_plano") else "") if saldo.get("saldo_restante") is not None else "; saldo não informado pela API"
+        print(f"Firecrawl: {creditos['total'] - creditos.get('dou', 0)} crédito(s) na coleta e {creditos.get('dou', 0)} no DOU{restante}.")
     dossier, processadas = montar_dossier(material)
     inicio_iso = f"{inicio.isoformat()}T00:00"
     fim_iso = agora.strftime("%Y-%m-%dT%H:%M")
@@ -1098,7 +1231,7 @@ def main():
     reativadas_com_erro = fontes_reativadas_com_erro(ativas, processadas, hoje)
     for aviso in reativadas_com_erro:
         print(f"::warning title=Fonte reativada com erro::{aviso['fonte']} voltou em {aviso['reativada_em']} e continua com erro: {aviso['erro']}")
-    log = {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": inicio_iso, "fim": fim_iso}, "creditos_firecrawl_estimados": creditos, "fontes_com_queda_para_firecrawl": quedas, "filtro_de_orgaos": filtro_de_orgaos, "fontes_reativadas_com_erro": reativadas_com_erro, "buscas_complementares": buscas, "cascata_gemini": cascata, "fontes_processadas": processadas, "fontes_suspensas": [{"fonte": f["fonte"], "motivo": f.get("motivo_suspensao", "Suspensão temporária"), "reativar_em": f.get("reativar_em", "")} for f in suspensas], "fontes_inativas": [{"fonte": f["fonte"]} for f in inativas], "tentativas_gemini": tentativas, "lotes_gemini": lotes_gemini}
+    log = {"data_execucao": hoje.isoformat(), "executado_em": agora.isoformat(), "janela": {"inicio": inicio_iso, "fim": fim_iso}, "creditos_firecrawl": creditos_da_execucao(creditos, saldo), "creditos_firecrawl_estimados": creditos, "fontes_com_queda_para_firecrawl": quedas, "filtro_de_orgaos": filtro_de_orgaos, "fontes_reativadas_com_erro": reativadas_com_erro, "buscas_complementares": buscas, "cascata_gemini": cascata, "fontes_processadas": processadas, "fontes_suspensas": [{"fonte": f["fonte"], "motivo": f.get("motivo_suspensao", "Suspensão temporária"), "reativar_em": f.get("reativar_em", "")} for f in suspensas], "fontes_inativas": [{"fonte": f["fonte"]} for f in inativas], "tentativas_gemini": tentativas, "lotes_gemini": lotes_gemini}
     if args.reprocessar:
         log["reprocessado_em"] = datetime.datetime.now(ZoneInfo("America/Sao_Paulo")).isoformat()
         log["origem_da_coleta"] = "dossier guardado em output/dossier"
@@ -1108,7 +1241,7 @@ def main():
     boletim.setdefault("fontes_sem_publicacao_hoje", [])
     for x in processadas:
         if x.get("sem_publicacao_na_janela"):
-            boletim["fontes_sem_publicacao_hoje"].append({"fonte": x["fonte"], "motivo": f"A fonte listou {x.get('publicacoes_listadas')} publicação(ões), nenhuma dentro da janela."})
+            boletim["fontes_sem_publicacao_hoje"].append({"fonte": x["fonte"], "motivo": x.get("motivo_sem_publicacao") or f"A fonte listou {x.get('publicacoes_listadas')} publicação(ões), nenhuma dentro da janela."})
     itens = []
     for item in boletim.get("itens", []):
         if not isinstance(item, dict):
@@ -1122,6 +1255,17 @@ def main():
         itens.append(item)
     nao_devolvidas, registro_nao_devolvidas = publicacoes_nao_devolvidas(material, itens, modelo)
     itens.extend(nao_devolvidas)
+    # Os atos do DOU entram depois da IA, com os Radares do filtro por orgao;
+    # o Filtro 1 e a limpeza do resumo, abaixo, valem para eles como para os outros.
+    itens.extend(itens_do_dou(material))
+    log["dou"] = resumo_dou(material)
+    if log["dou"] and args.reprocessar:
+        # Os atos vem do dossier guardado: o credito foi gasto na coleta, nao agora.
+        log["dou"]["creditos_firecrawl_na_coleta"] = log["dou"]["creditos_firecrawl"]
+        log["dou"]["creditos_firecrawl"] = 0
+    if log["dou"]:
+        print(f"DOU: {sum(s['no_filtro'] for s in log['dou']['por_secao'].values())} ato(s) no filtro, "
+              f"{log['dou']['atos_abertos']} aberto(s), {log['dou']['creditos_firecrawl']} crédito(s) do Firecrawl.")
     log["publicacoes_nao_devolvidas_pela_ia"] = {
         "ao_portal": len(nao_devolvidas),
         "so_registradas_data_futura": sum(r["so_registradas"] for r in registro_nao_devolvidas.values()),
@@ -1197,7 +1341,7 @@ def main():
         validacao.append({"fonte": fonte, "status_coleta": x.get("status"), "publicacoes_localizadas": x.get("publicacoes_localizadas", 0), "publicacoes_aprovadas": aprovadas, "status_editorial": situacao, "busca_complementar_executada": x.get("busca_complementar_executada", False), "conteudo_truncado": x.get("conteudo_truncado", False)})
     stats = {s: {"nome": NOMES[s], "clusters": CLUSTERS[s], "total": sum(s in i.get("boletins", []) for i in itens)} for s in SLUGS}
     boletim.update({"data_execucao": hoje.isoformat(), "janela_aplicada": {"inicio": inicio_iso, "fim": fim_iso}, "modelo_gemini_utilizado": modelo, "itens": itens, "fontes_sem_resultado": sem_resultado, "fontes_sem_publicacao_hoje": sem_publicacao, "fontes_com_erro_tecnico": erros, "validacao_fontes": validacao, "estatisticas_por_boletim": stats})
-    boletim["boletins_config"] = {"descricao": "Informativo com atualizações legislativas, regulamentações, consultas públicas e publicações de órgãos reguladores.", "boletins_disponiveis": SLUGS, "nomes_radares": NOMES, "clusters_por_boletim": CLUSTERS, "fontes_email_pendentes": EMAIL, "fontes_pendentes_integracao": {"regulatorio-oleo-gas": ["CADE - DOU", "MEC - DOU", "MDIC - DOU", "Câmara dos Deputados", "Senado Federal", "Agência Eixos"]}, "mapeamento_fonte_boletim": MAPA, "fontes_em_defeso": log["fontes_suspensas"]}
+    boletim["boletins_config"] = {"descricao": "Informativo com atualizações legislativas, regulamentações, consultas públicas e publicações de órgãos reguladores.", "boletins_disponiveis": SLUGS, "nomes_radares": NOMES, "clusters_por_boletim": CLUSTERS, "fontes_email_pendentes": EMAIL, "fontes_pendentes_integracao": {"regulatorio-oleo-gas": ["Câmara dos Deputados", "Senado Federal", "Agência Eixos"]}, "mapeamento_fonte_boletim": MAPA, "fontes_em_defeso": log["fontes_suspensas"]}
     boletim["auditoria"] = {"total_itens": len(itens), "itens_com_alguma_rejeicao": sum(bool(i.get("boletins_rejeitados")) for i in itens), "itens_com_bloqueio_f1": len(
         {
             titulo

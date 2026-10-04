@@ -1,0 +1,145 @@
+{
+  "_leia_me": [
+    "Configuração do Diário Oficial da União (scripts/coleta_dou.py), conforme o",
+    "documento 'Distribuição de Clusters e Fontes'.",
+    "",
+    "A leitura do jornal (in.gov.br/leiturajornal), baixada pelo Firecrawl em HTML",
+    "bruto, traz embutida a lista completa de atos da edição, com título, tipo,",
+    "órgão e endereço. Cada leitura custa 1 crédito; cada ato aberto para tirar o",
+    "texto custa mais 1.",
+    "",
+    "Seção 1: fonte de todos os nove Radares, inteira, sem recorte por órgão. É",
+    "tratada como fonte genérica: o ato entra no Radar se o título ou o começo do",
+    "texto tiver palavras-chave daquele Radar no prompt.md, com a regra das fontes",
+    "genéricas (dois termos ou um termo composto). Um ato pode entrar em mais de",
+    "um Radar. 'reforco' lista órgãos que só reforçam: ato de um deles entra com",
+    "um termo só. O órgão sozinho, sem palavra-chave, não basta.",
+    "",
+    "Regulatório e Óleo e Gás: além das palavras-chave, entram sempre ('orgaos')",
+    "CADE (Seções 1 e 3), MEC (Seção 1; na Seção 3 só Mais Médicos) e MDIC",
+    "(Seção 1). No MEC da Seção 1 ficam de fora universidades, institutos e",
+    "hospitais federais; FNDE, INEP e CNE entram. Mais Médicos na Seção 3 vale do",
+    "MEC ou do Ministério da Saúde, que é quem publica esses atos.",
+    "",
+    "Regras de órgão: 'orgao' é o nome exato de um dos níveis do órgão no DOU (sem",
+    "diferença de acento ou maiúscula); 'termos' exige um dos termos no título ou",
+    "no começo do texto; 'excluir' tira o ato quando um nível contém o trecho.",
+    "",
+    "Agrupamento: a partir de 'lote_a_partir_de' atos do mesmo órgão, do mesmo",
+    "tipo e para os mesmos Radares na mesma edição, uma notícia só; depois, a",
+    "partir de 'serie_a_partir_de' atos com o mesmo texto-base, também. Os órgãos",
+    "de 'nunca_agrupar' saem ato por ato. A notícia do grupo lista todos os atos,",
+    "com link, e abre um só (1 crédito).",
+    "",
+    "Antes de qualquer regra, ficam de fora: as unidades locais dos órgãos de",
+    "'somente_unidades_centrais' (a Receita Federal, como na fonte 'Receita",
+    "Federal | Normas': superintendências regionais, delegacias, alfândegas e",
+    "inspetorias) e o que casar com 'exclusoes'. 'exclusoes' é a lista de",
+    "exclusões por órgão e tipo de ato, no formato das regras de órgão ('orgao',",
+    "'unidade', 'tipos', 'termos'), com um 'motivo' para o log. Começa vazia: vai",
+    "ser preenchida com o que a curadoria retirar do DOU.",
+    "",
+    "limite_atos_abertos: teto de atos abertos por execução, somadas as seções.",
+    "Quando o teto aperta, abrem primeiro CADE, MEC e MDIC, depois os grupos,",
+    "depois o restante; em cada faixa, as normas antes do expediente. O ato que",
+    "passa no filtro e não abre entra do mesmo jeito, com o começo do texto que a",
+    "leitura do jornal já traz, e o log diz por quê."
+  ],
+  "limite_atos_abertos": 20,
+  "tamanho_trecho": 900,
+  "palavras_chave": {
+    "minimo_termos": 2,
+    "minimo_termos_com_reforco": 1
+  },
+  "somente_unidades_centrais": [
+    {
+      "orgao": "Secretaria Especial da Receita Federal do Brasil",
+      "unidades_locais": ["Região Fiscal", "Superintendência Regional", "Delegacia", "Alfândega", "Inspetoria", "Agência da Receita"],
+      "motivo": "unidade local da Receita Federal (só órgãos centrais, como na fonte Receita Federal | Normas)"
+    }
+  ],
+  "exclusoes": [],
+  "agrupamento": {
+    "lote_a_partir_de": 4,
+    "serie_a_partir_de": 2,
+    "nunca_agrupar": ["Conselho Administrativo de Defesa Econômica", "Supremo Tribunal Federal"]
+  },
+  "secoes": {
+    "dou1": {
+      "nome": "Seção 1",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "palavras_chave_nos_radares": [
+        "trabalhista-empresarial", "direito-tributario", "societario-ma", "mercado-capitais-fundos",
+        "regulatorio-oleo-gas", "imobiliario-infraestrutura", "ambiental-esg", "propriedade-intelectual",
+        "contencioso-civel"
+      ],
+      "orgaos": {
+        "regulatorio-oleo-gas": [
+          {"orgao": "Conselho Administrativo de Defesa Econômica"},
+          {"orgao": "Ministério da Educação", "excluir": ["Universidade", "Instituto Federal", "Centro Federal de Educação Tecnológica", "Colégio Pedro II", "Hospital", "Empresa Brasileira de Serviços Hospitalares"]},
+          {"orgao": "Ministério do Desenvolvimento, Indústria, Comércio e Serviços"}
+        ]
+      },
+      "reforco": {
+        "trabalhista-empresarial": [
+          {"orgao": "Ministério do Trabalho e Emprego"}
+        ],
+        "direito-tributario": [
+          {"orgao": "Ministério da Fazenda", "unidade": "Gabinete do Ministro"},
+          {"orgao": "Conselho Nacional de Política Fazendária"},
+          {"orgao": "Conselho Administrativo de Recursos Fiscais"},
+          {"orgao": "Procuradoria-Geral da Fazenda Nacional"},
+          {"orgao": "Comitê Gestor do Imposto sobre Bens e Serviços"}
+        ],
+        "societario-ma": [
+          {"orgao": "Conselho Administrativo de Defesa Econômica"},
+          {"orgao": "Comissão de Valores Mobiliários"},
+          {"orgao": "Departamento Nacional de Registro Empresarial e Integração"},
+          {"orgao": "Conselho de Recursos do Sistema Financeiro Nacional"}
+        ],
+        "mercado-capitais-fundos": [
+          {"orgao": "Comissão de Valores Mobiliários"},
+          {"orgao": "Conselho de Recursos do Sistema Financeiro Nacional"},
+          {"orgao": "Superintendência de Seguros Privados"},
+          {"orgao": "Superintendência Nacional de Previdência Complementar"}
+        ],
+        "imobiliario-infraestrutura": [
+          {"orgao": "Secretaria do Patrimônio da União"},
+          {"orgao": "Instituto Nacional de Colonização e Reforma Agrária"},
+          {"orgao": "Ministério das Cidades", "unidade": "Gabinete do Ministro"},
+          {"orgao": "Ministério dos Transportes", "unidade": "Gabinete do Ministro"},
+          {"orgao": "Ministério de Portos e Aeroportos", "unidade": "Gabinete do Ministro"},
+          {"orgao": "Agência Nacional de Águas e Saneamento Básico"},
+          {"orgao": "Secretaria Especial do Programa de Parcerias de Investimentos"}
+        ],
+        "ambiental-esg": [
+          {"orgao": "Ministério do Meio Ambiente e Mudança do Clima"}
+        ],
+        "propriedade-intelectual": [
+          {"orgao": "Instituto Nacional da Propriedade Industrial"},
+          {"orgao": "Agência Nacional de Proteção de Dados"},
+          {"orgao": "Secretaria Nacional de Direitos Digitais"}
+        ],
+        "contencioso-civel": [
+          {"orgao": "Supremo Tribunal Federal"},
+          {"orgao": "Superior Tribunal de Justiça"},
+          {"orgao": "Conselho Nacional de Justiça"},
+          {"orgao": "Secretaria Nacional do Consumidor"}
+        ]
+      }
+    },
+    "dou3": {
+      "nome": "Seção 3",
+      "fonte": "Diário Oficial da União | Seção 3",
+      "palavras_chave_nos_radares": [],
+      "orgaos": {
+        "regulatorio-oleo-gas": [
+          {"orgao": "Conselho Administrativo de Defesa Econômica"},
+          {"orgao": "Ministério da Educação", "termos": ["Mais Médicos"]},
+          {"orgao": "Ministério da Saúde", "termos": ["Mais Médicos"]}
+        ]
+      },
+      "reforco": {}
+    }
+  }
+}
