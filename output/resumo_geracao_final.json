@@ -1,66 +1,73 @@
 {
   "status": "sucesso",
-  "data_execucao": "2026-10-01T14:00:41.453632+00:00",
-  "data_edicao": "2026-10-01",
-  "total_itens_boletim": 52,
-  "total_decisoes": 52,
-  "total_aprovados": 44,
+  "data_execucao": "2026-10-05T11:51:05.819528+00:00",
+  "data_edicao": "2026-10-05",
+  "total_itens_boletim": 103,
+  "total_decisoes": 103,
+  "total_aprovados": 94,
   "total_itens_manuais": 0,
-  "total_rejeitados": 8,
+  "total_rejeitados": 9,
   "fora_do_email": [
     {
       "fonte": "Destaques do D.O.U.",
-      "titulo": "PORTARIA SFA-BA/MAPA Nº 1.034, DE 29 DE SETEMBRO DE 2026",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-ba/mapa-n-1.034-de-29-de-setembro-de-2026-735708572",
+      "titulo": "REPUBLICAÇÃO (*) DESPACHO DO PRESIDENTE DA REPÚBLICA ADVOCACIA-GERAL DA UNIÃO",
+      "url": "https://www.in.gov.br/web/dou/-/republicacao-*-736292321",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
       "fonte": "Destaques do D.O.U.",
-      "titulo": "PORTARIA SFA-SC/MAPA Nº 1.398, DE 29 DE SETEMBRO DE 2026",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-sc/mapa-n-1.398-de-29-de-setembro-de-2026-735715217",
+      "titulo": "RESOLUÇÃO COMITÊ GESTOR DO FUNDO - FIRECE/CC Nº 6, DE 2 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-comite-gestor-do-fundo-firece/cc-n-6-de-2-de-outubro-de-2026-736293629",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
       "fonte": "Destaques do D.O.U.",
-      "titulo": "PORTARIA SFA-SC/MAPA Nº 1.401, DE 30 DE SETEMBRO DE 2026",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-sc/mapa-n-1.401-de-30-de-setembro-de-2026-735707979",
+      "titulo": "PORTARIA AGU Nº 318, DE 2 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-agu-n-318-de-2-de-outubro-de-2026-736289333",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
-      "fonte": "Destaques do D.O.U.",
-      "titulo": "Portaria SFA-SP/MAPA Nº 1.010, DE 29 DE SETEMBRO DE 2026",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-sp/mapa-n-1.010-de-29-de-setembro-de-2026-735706126",
+      "fonte": "Ministério da Agricultura | Notícias",
+      "titulo": "Mapa disponibiliza 14,5 milhões de doses de vacinas contra clostridioses em setembro",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/mapa-disponibiliza-14-5-milhoes-de-doses-de-vacinas-contra-clostridioses-em-setembro",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
-      "fonte": "Destaques do D.O.U.",
-      "titulo": "Portaria SFA-ES Nº 569, DE 29 DE Setembro DE 2026",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-es-n-569-de-29-de-setembro-de-2026-735712377",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Sistema NDS Web ficará indisponível neste domingo (5/10) para atualização",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/sistema-nds-web-ficara-indisponivel-neste-domingo-5-10-para-atualizacao",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
-      "fonte": "Destaques do D.O.U.",
-      "titulo": "PORTARIA SFA-PR/MAPA Nº 1.272, DE 29 DE SETEMBRO DE 2026",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-pr/mapa-n-1.272-de-29-de-setembro-de-2026-735707322",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Anvisa participa de simulado de mesa no Aeroporto Internacional de Natal",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-participa-de-simulado-de-mesa-no-aeroporto-internacional-de-natal",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
-      "fonte": "Destaques do D.O.U.",
-      "titulo": "Portaria SFA-PI/SE/MAPA nº 171, de 30 de setembro de 2026",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-pi/se/mapa-n-171-de-30-de-setembro-de-2026-735710671",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Anvisa publica Caderno 8 da Série Segurança do Paciente e Qualidade em Serviços de Saúde",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-publica-caderno-8-da-serie-seguranca-do-paciente-e-qualidade-em-servicos-de-saude",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Anvisa lança campanha para estimular a prevenção e a notificação de erros de medicação",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-lanca-campanha-para-estimular-a-prevencao-e-a-notificacao-de-erros-de-medication",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
       "fonte": "EPE | Notícias",
-      "titulo": "Resenha Mensal: consumo nacional de eletricidade cresce 4,3% em agosto de 2026",
-      "url": "https://www.epe.gov.br/pt/imprensa/noticias/resenha-mensal-consumo-nacional-de-eletricidade-cresce-4-3-em-agosto-de-2026",
+      "titulo": "Estudo da EPE apresentado no terceiro dia da ROG.e 2026 é selecionado como um dos melhores do evento",
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/estudo-da-epe-apresentado-no-terceiro-dia-da-rog-e-2026-e-selecionado-como-um-dos-melhores-do-evento",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     }
@@ -263,16 +270,7 @@
       }
     }
   },
-  "noticias_em_outras_publicacoes": [
-    {
-      "radar": "propriedade-intelectual",
-      "fonte": "Banco Central | Normas",
-      "titulo": "Comunicado N° 46.048",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46048",
-      "origem": "scraper",
-      "publicada_em": "OutrasPublicacoes"
-    }
-  ],
+  "noticias_em_outras_publicacoes": [],
   "radares_sem_conteudo": {
     "gerados_vazios": [],
     "confirmados_no_portal": [],
@@ -287,7 +285,8 @@
       "previa": "email_trabalhista-empresarial.html",
       "total_itens": 2,
       "secoes_publicadas": [
-        "DestaquesDOU"
+        "DestaquesDOU",
+        "MinisterioDaFazenda"
       ]
     },
     {
@@ -296,8 +295,10 @@
       "template": "Template_Radar Tributário.msg",
       "arquivo": "email_direito-tributario.eml",
       "previa": "email_direito-tributario.html",
-      "total_itens": 6,
+      "total_itens": 29,
       "secoes_publicadas": [
+        "DestaquesDOU",
+        "DiarioOficialUniao",
         "MinisterioFazenda",
         "ReceitaFederal"
       ]
@@ -310,7 +311,8 @@
       "previa": "email_societario-ma.html",
       "total_itens": 5,
       "secoes_publicadas": [
-        "BancoCentral"
+        "BancoCentral",
+        "MinisterioFazenda"
       ]
     },
     {
@@ -319,11 +321,11 @@
       "template": "Template_Radar Mercado de Capitais e Fundos de Investimento.msg",
       "arquivo": "email_mercado-capitais-fundos.eml",
       "previa": "email_mercado-capitais-fundos.html",
-      "total_itens": 20,
+      "total_itens": 10,
       "secoes_publicadas": [
         "BancoCentral",
         "CVM",
-        "MinisterioFazenda",
+        "DiarioOficialUniao",
         "SUSEP"
       ]
     },
@@ -333,13 +335,16 @@
       "template": "Template_Radar Regulatório e Óleo e Gás.msg",
       "arquivo": "email_regulatorio-oleo-gas.eml",
       "previa": "email_regulatorio-oleo-gas.html",
-      "total_itens": 14,
+      "total_itens": 37,
       "secoes_publicadas": [
         "ANEEL",
-        "ANM",
+        "ANP",
         "ANTT",
         "ANVISA",
-        "EPE"
+        "DiarioOficialUniao",
+        "EPE",
+        "SENACON",
+        "SUSEP"
       ]
     },
     {
@@ -348,13 +353,13 @@
       "template": "Template_Radar Negócios Imobiliários e Infraestrutura.msg",
       "arquivo": "email_imobiliario-infraestrutura.eml",
       "previa": "email_imobiliario-infraestrutura.html",
-      "total_itens": 9,
+      "total_itens": 17,
       "secoes_publicadas": [
-        "ANEEL",
         "ANTT",
         "CCEE",
+        "DiarioOficialUniao",
         "EPE",
-        "SUSEP"
+        "Kollemata"
       ]
     },
     {
@@ -365,8 +370,11 @@
       "previa": "email_ambiental-esg.html",
       "total_itens": 5,
       "secoes_publicadas": [
-        "ANEEL",
-        "EPE"
+        "ANP",
+        "ANTT",
+        "CCEE",
+        "EPE",
+        "MAPA"
       ]
     },
     {
@@ -375,9 +383,9 @@
       "template": "Template_Radar Propriedade Intelectual_ Tecnologia e Privacidade.msg",
       "arquivo": "email_propriedade-intelectual.eml",
       "previa": "email_propriedade-intelectual.html",
-      "total_itens": 1,
+      "total_itens": 2,
       "secoes_publicadas": [
-        "OutrasPublicacoes"
+        "INPI"
       ]
     },
     {
@@ -386,9 +394,11 @@
       "template": "Template_Radar Solução de Conflitos.msg",
       "arquivo": "email_contencioso-civel.eml",
       "previa": "email_contencioso-civel.html",
-      "total_itens": 1,
+      "total_itens": 5,
       "secoes_publicadas": [
-        "DestaquesDOU"
+        "DestaquesDOU",
+        "DiarioOficialUniao",
+        "SENACON"
       ]
     }
   ]
