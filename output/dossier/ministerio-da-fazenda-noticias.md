@@ -51,6 +51,121 @@ Aplicar
 
 REFORMA TRIBUTÁRIA
 
+[Receita atualiza balanço de solicitações de opção pelo Simples Nacional e pelo regime regular do IBS e da CBS](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/receita-atualiza-balanco-de-solicitacoes-de-opcao-pelo-simples-nacional-e-pelo-regime-regular-do-ibs-e-da-cbs)
+
+02/10/2026
+
+-
+Dados trazem o número de pedidos até esta sexta-feira, 2/10, e serão atualizados à medida que novos pedidos forem realizados
+
+Tags:
+
+[BALANÇO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=BALAN%C3%87O)
+
+[SIMPLES NACIONAL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=SIMPLES%20NACIONAL)
+
+[IBS E CBS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=IBS%20E%20CBS)
+
+SERVIÇOS
+
+[PGFN lança dois novos editais e prorroga adesão a outros três de renegociação de dívidas](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/pgfn-lanca-dois-novos-editais-e-prorroga-adesao-a-outros-tres-de-renegociacao-de-dividas)
+
+02/10/2026
+
+-
+Um dos editais se destina a empregadores com débitos do FGTS; o segundo é relacionado a pequenos valores dos MEIs
+
+SERVIÇOS
+
+[PGFN lança dois novos editais e prorroga adesão a outros três de renegociação de dívidas](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/PGFN-lanca-dois-novos-editais-e-prorroga-adesao-a-outros-tres-de-renegociacao-de-dividas)
+
+02/10/2026
+
+-
+Um dos editais se destina a empregadores com débitos do FGTS; o segundo é relacionado a pequenos valores dos MEIs
+
+Tags:
+
+[PORTAL REGULARIZE](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=PORTAL%20REGULARIZE)
+
+[EDITAIS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=EDITAIS)
+
+[INSS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=INSS)
+
+[MEI](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=MEI)
+
+TRIBUTAÇÃO
+
+[Receita Federal publica a primeira edição do Perguntas e Respostas do Adicional da CSLL](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/receita-federal-publica-a-primeira-edicao-do-perguntas-e-respostas-do-adicional-da-csll)
+
+02/10/2026
+
+-
+Nova publicação reúne informações sobre a aplicação da Lei nº 15.079/2024 e da IN RFB nº 2.228/2024
+
+Tags:
+
+[TRIBUTAÇÃO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=TRIBUTA%C3%87%C3%83O)
+
+[IMPOSTOS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=IMPOSTOS)
+
+[ALIQUOTA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=ALIQUOTA)
+
+[CONTRIBUIÇÃO SOCIAL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=CONTRIBUI%C3%87%C3%83O%20SOCIAL)
+
+SERVIÇO
+
+[Saiba como denunciar irregularidades relacionadas a bets pelo Fala.BR](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/saiba-como-denunciar-irregularidades-relacionadas-a-bets-pelo-fala.br)
+
+01/10/2026
+
+-
+Canal oficial permite registrar denúncias e encaminhar informações para apuração
+
+Tags:
+
+[DENÚNCIA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=DEN%C3%9ANCIA)
+
+[FALA BR](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=FALA%20BR)
+
+[BETS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=BETS)
+
+RECEITAS E DESPESAS
+
+[Segundo trimestre de 2026 registra necessidade líquida de financiamento do Governo Geral de 9,2% do PIB](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/segundo-trimestre-de-2026-registra-necessidade-liquida-de-financiamento-do-governo-geral-de-9-2-do-pib)
+
+01/10/2026
+
+-
+Resultado é explicado pelo crescimento nominal de 12,41% da receita, parcialmente compensado pelo crescimento nominal de 12,33% da despesa em relação ao mesmo período de 2026
+
+Tags:
+
+[PIB](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=PIB)
+
+[RECEITAS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=RECEITAS)
+
+[DESPESAS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=DESPESAS)
+
+ARRECADAÇÃO E COBRANÇA
+
+[Receita Federal atualiza legislação do Adicional da CSLL e incorpora nova Regra Simplificadora](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/receita-federal-atualiza-legislacao-do-adicional-da-csll-e-incorpora-nova-regra-simplificadora)
+
+01/10/2026
+
+-
+Alteração da IN RFB nº 2228/2024 introduz a Regra Simplificadora Globe para Incentivo Fiscal baseado na Substância e amplia o período de aplicabilidade da Regra Simplificadora Globe de Transição
+
+Tags:
+
+[IMPOSTOS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=IMPOSTOS)
+
+[OBRIGAÇÕES](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=OBRIGA%C3%87%C3%95ES)
+
+[AREECADAÇÃO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=AREECADA%C3%87%C3%83O)
+
+REFORMA TRIBUTÁRIA
+
 [Receita publica novo balanço de solicitações de opção pelo Simples Nacional e pelo regime regular do IBS e da CBS](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/receita-publica-novo-balanco-de-solicitacoes-de-opcao-pelo-simples-nacional-e-pelo-regime-regular-do-ibs-e-da-cbs)
 
 30/09/2026
@@ -443,137 +558,6 @@ Tags:
 [DATA CENTERS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=DATA%20CENTERS)
 
 [BAIXO CARBONO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=BAIXO%20CARBONO)
-
-SERVIÇOS
-
-[Receita Federal indica oportunidade de regularização de créditos de PIS/Pasep e Cofins](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/receita-federal-indica-oportunidade-de-regularizacao-de-creditos-de-pis-pasep-e-cofins)
-
-15/09/2026
-
--
-Inconsistências de R$1,3 bilhão podem ser corrigidas até 10 de novembro
-
-Tags:
-
-[REGULARIZAÇÃO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=REGULARIZA%C3%87%C3%83O)
-
-[PIS/PASEP](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=PIS/PASEP)
-
-[CRÉDITO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=CR%C3%89DITO)
-
-[COFINS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=COFINS)
-
-[SERVIÇOS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=SERVI%C3%87OS)
-
-NOVAS FONTES DE ENERGIA
-
-[Encontro em Fortaleza debateu como viabilizar projetos de biometano no Nordeste](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/encontro-em-fortaleza-debateu-como-viabilizar-projetos-de-biometano-no-nordeste)
-
-15/09/2026
-
--
-Workshop foi promovido pelo Ministério da Fazenda e pelo Banco do Nordeste
-
-Tags:
-
-[BIOMETANO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=BIOMETANO)
-
-[RESÍDUOS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=RES%C3%8DDUOS)
-
-[WORKSHOP](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=WORKSHOP)
-
-[NORDESTE](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=NORDESTE)
-
-PRÊMIOS E APOSTAS
-
-[SPA publica portaria de enfrentamento ao mercado ilegal de apostas](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/spa-publica-portaria-de-enfrentamento-ao-mercado-ilegal-de-apostas)
-
-15/09/2026
-
--
-Norma amplia os procedimentos destinados à prevenção, à identificação e à repressão de transações de pagamento relacionadas à exploração irregular de apostas de quota fixa
-
-Tags:
-
-[PORTARIA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=PORTARIA)
-
-[LEGISLAÇÃO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=LEGISLA%C3%87%C3%83O)
-
-[APOSTAS DE QUOTA FIXA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=APOSTAS%20DE%20QUOTA%20FIXA)
-
-CONTAS PÚBLICAS
-
-[Mercado projeta déficit primário de R$ 52,271 bilhões para o Governo Central em 2026, mostra Prisma Fiscal](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/mercado-projeta-deficit-primario-de-r-52-271-bilhoes-para-o-governo-central-em-2026-mostra-prisma-fiscal)
-
-15/09/2026
-
--
-Mediana das projeções recuou de R$ 59,145 bilhões em agosto para R$ 52,271 bilhões em setembro
-
-Tags:
-
-[GOVERNO CENTRAL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=GOVERNO%20CENTRAL)
-
-[DÉFICIT PRIMÁRIO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=D%C3%89FICIT%20PRIM%C3%81RIO)
-
-[RECEITA E DESPESA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=RECEITA%20E%20DESPESA)
-
-[PRODUTO INTERNO BRUTO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=PRODUTO%20INTERNO%20BRUTO)
-
-DÍVIDA
-
-[Tesouro honra em agosto R$ 79,95 milhões em dívidas garantidas pela União](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/tesouro-honra-em-agosto-r-79-95-milhoes-em-dividas-garantidas-pela-uniao)
-
-15/09/2026
-
--
-Desde 2016, a União pagou R$ 89,66 bilhões para honrar garantias em operações de crédito de estados e municípios
-
-Tags:
-
-[DÍVIDA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=D%C3%8DVIDA)
-
-[TESOURO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=TESOURO)
-
-[GARANTIAS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=GARANTIAS)
-
-MERCADO DE CARBONO
-
-[Coalizão Aberta aprova plano de trabalho e define estrutura de Secretariado na China](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/coalizao-aberta-aprova-plano-de-trabalho-e-define-estrutura-de-secretariado-na-china)
-
-14/09/2026
-
--
-Em reunião em Wuhan, Brasil, China e União Europeia e mais 8 países fecham acordo para acelerar a convergência de mercados regulados de carbono nacionais
-
-Tags:
-
-[MERCADO DE CARBONO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=MERCADO%20DE%20CARBONO)
-
-[COALIZÃO ABERTA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=COALIZ%C3%83O%20ABERTA)
-
-[CHINA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=CHINA)
-
-SERVIÇOS
-
-[Receita Federal publica nova documentação técnica das APIs de apuração de CBS](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/receita-federal-publica-nova-documentacao-tecnica-das-apis-de-apuracao-de-cbs)
-
-14/09/2026
-
--
-Nova versão permitirá consultas incrementais, reduzindo o tempo de processamento e tamanho dos arquivos gerados
-
-Tags:
-
-[RTC](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=RTC)
-
-[BENS E SERVIÇOS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=BENS%20E%20SERVI%C3%87OS)
-
-[CONSULTA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=CONSULTA)
-
-[DÉBITOS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=D%C3%89BITOS)
-
-[RECEITA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=RECEITA)
 
 «
 Anterior

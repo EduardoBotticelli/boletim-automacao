@@ -82,7 +82,7 @@ Info
 |     |     |
 | --- | --- |
 | Data de Publicação no D.O.U. | Atos Publicados |
-| 1º de outubro de 2026 |  |
+| 1º de outubro de 2026 | [Decreto nº 13.131, de 30.9.2026](http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/d13131.htm) \- Altera o Decreto nº 11.348, de 1º de janeiro de 2023, que aprova a Estrutura Regimental e o Quadro Demonstrativo dos Cargos em Comissão e das Funções de Confiança do Ministério da Justiça e Segurança Pública, e remaneja e transforma cargos em comissão e funções de confiança. |
 
 [Voltar para o topo](https://www4.planalto.gov.br/legislacao/portal-legis/resenha-diaria/outubro-resenha-diaria#wrapper)
 

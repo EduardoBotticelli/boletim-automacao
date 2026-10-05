@@ -1,37 +1,315 @@
-2026-10-01 | Ato Declaratório Executivo SRRF02 nº 4 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153871 | Alfandegamento de instalação portuária administrada pela empresa NAVEMAZÔNIA NAVEGAÇÃO LTDA.
-2026-10-01 | Ato Declaratório Executivo SRRF07 nº 16 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153877 | Altera o alfandegamento do CLIA administrado por GDL TRANSPORTES E ARMAZENS GERAIS S/A.
-2026-10-01 | Ato Declaratório Executivo Decex/RJO nº 192 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153880 | Declara habilitada ao regime aduaneiro especial de utilização econômica destinado a bens a serem utilizados nas atividades de exploração, desenvolvimento e produção de petróleo e de gás natural (Repetro), na modalidade Repetro-Sped, a pessoa jurídica que menciona.
-2026-10-01 | Ato Declaratório Executivo Decex/RJO nº 191 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153876 | Libera restrição do tratamento de isenção de tributos de veículo importado para transferência, por decurso de prazo.
-2026-10-01 | Ato Declaratório Executivo ALF/STS nº 49 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153868 | Declara a concessão de habilitação para empresa exercer procedimento simplificado de embarque mediante transbordo e despacho aduaneiro de exportação de petróleo em área marítima situada em águas jurisdicionais brasileiras.
-2026-10-01 | Ato Declaratório Executivo DRF/SOR nº 1516 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153870 | Cancela, a pedido, habilitação definitiva ao Programa Mais Leite Saudável à pessoa jurídica que menciona.
-2026-10-01 | Ato Declaratório Executivo DRF/SOR nº 1515 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153869 | Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.
-2026-10-01 | Ato Declaratório Executivo DRF/SOR nº 1514 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153878 | Cancela a habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (Reidi) da pessoa jurídica que menciona.
-2026-10-01 | Ato Declaratório Executivo DRF/SOR nº 1513 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153875 | Concede Habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.
-2026-10-01 | Ato Declaratório Executivo DRF/SOR nº 1512 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153874 | Concede Habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.
-2026-10-01 | Ato Declaratório Executivo DRF/SOR nº 1510 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153873 | Concede Habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.
-2026-10-01 | Ato Declaratório Executivo DRF/SOR nº 1509 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153872 | Concede Coabilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.
-2026-10-01 | Ato Declaratório Executivo DRF/SOR nº 1508 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153879 | Concede Habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.
-2026-09-30 | Ato Declaratório Executivo Corat nº 79 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836 | Altera os Anexos Únicos dos Atos Declaratórios Executivos Corat nº 63, de 26 de agosto de 2026, e nº 78, de 28 de setembro de 2026, que divulgam as Agendas Tributárias dos meses de setembro e outubro de 2026, respectivamente.
-2026-09-30 | Ato Declaratório Executivo Sutri nº 9 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153837 | Vincula a Secretaria Especial da Receita Federal do Brasil e a pessoa jurídica que menciona a Termo de Consensualidade firmado no âmbito do Procedimento de Consensualidade Fiscal - Receita de Consenso.
-2026-09-30 | Solução de Consulta Cosit nº 195 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153838 | Assunto: Imposto sobre a Renda de Pessoa Jurídica - IRPJ INCIDÊNCIA. REPASSES DE RECURSOS. ORÇAMENTO GERAL DO ESTADO. EMPRESAS DEPENDENTES. SUBVENÇÃO. INCIDÊNCIA TRIBUTÁRIA. INAPLICABILIDADE DO CRÉDITO FISCAL PREVISTO NA LEI Nº 14.789/2023. As rendas e as receitas percebidas pelas empresas públicas dependentes, ressalvados eventuais benefícios fiscais específicos, estão sujeitas, regra geral, à in
-2026-09-30 | Solução de Consulta Cosit nº 190 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153839 | Assunto: Imposto sobre a Renda Retido na Fonte - IRRF SERVIÇOS DE MANUTENÇÃO E REPARAÇÃO ELÉTRICA E DE MANUTENÇÃO DE ELEVADORES. NÃO INCIDÊNCIA. As importâncias pagas ou creditadas por pessoas jurídicas a outras pessoas jurídicas pela prestação de serviços de manutenção e reparação elétrica e de manutenção de elevadores não estão sujeitas à retenção na fonte do Imposto sobre a Renda prevista nos a
-2026-09-30 | Ato Declaratório Executivo Coana nº 136 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153835 | Certifica como Operador Econômico Autorizado a pessoa jurídica que especifica.
-2026-09-30 | Ato Declaratório Executivo ALF/BSB nº 47 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153840 | "Dispõe sobre a liberação, para fins de transferência de propriedade, do veículo que menciona."
-2026-09-30 | Ato Declaratório Executivo ALF/MNS nº 56 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153841 | Habilita a empresa mencionada ao regime de suspensão da contribuição para o PIS/PASEP-Importação e da COFINS/Importação.
-2026-09-30 | Portaria IRF/SLS nº 6 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153843 | Atribui à Equipe de Vigilância e Repressão da Inspetoria da Receita Federal do Brasil do Porto de São Luís a execução das atividades de controle aduaneiro relativas aos voos internacionais no Aeroporto Internacional Marechal Cunha Machado e altera a Portaria IRF/SLS nº 05, de 26 de novembro de 2021, a qual estabelece os procedimentos de atendimento a voos internacionais no âmbito da jurisdição da 
-2026-09-30 | Ato Declaratório Executivo ALF/BHE nº 59 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153844 | Inclusão de interessados no Cadastro de Ajudante de Despachante Aduaneiro
-2026-09-30 | Ato Declaratório Executivo ALF/BHE nº 58 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153842 | Inclusão de interessados no Cadastro de Ajudante de Despachante Aduaneiro
-2026-09-30 | Ato Declaratório Executivo DRF/BHE nº 99 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153845 | Atualiza as marcas comerciais relativas ao Registro Especial de Bebidas Alcoólicas nº 06101/291.
-2026-09-30 | Portaria SRRF08 nº 1280 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153847 | Dispõe sobre o período diário para atendimento e o horário de funcionamento do atendimento no âmbito das unidades descentralizadas jurisdicionadas à Superintendência Regional da Receita Federal do Brasil na 8ª Região Fiscal.
-2026-09-30 | Portaria SRRF08 nº 1279 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153846 | Dispõe sobre as atividades das Equipes de Gestão do Crédito Tributário e do Direito Creditório (Eqrat) no âmbito da 8ª Região Fiscal.
-2026-09-30 | Ato Declaratório Executivo DRF/SOR nº 1507 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153854 | Concede Habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.
-2026-09-30 | Ato Declaratório Executivo DRF/SOR nº 1506 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153853 | Concede Habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.
-2026-09-30 | Ato Declaratório Executivo DRF/SOR nº 1505 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153852 | Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infra-Estrutura (Reidi) à pessoa jurídica que menciona.
-2026-09-30 | Ato Declaratório Executivo DRF/SOR nº 1504 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153851 | Concede Habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.
-2026-09-30 | Ato Declaratório Executivo DRF/SOR nº 1503 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153850 | Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infra-Estrutura (Reidi) à pessoa jurídica que menciona.
-2026-09-30 | Ato Declaratório Executivo DRF/SOR nº 1485 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153849 | Declara a nulidade do ATO DECLARATÓRIO EXECUTIVO EQBEN/DELEBEN/SRRF08ª/RFB Nº 1.418, DE 9 DE SETEMBRO DE 2026, publicado no DOU em 10.09.2026, que concedeu coabilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI).
-2026-09-30 | Ato Declaratório Executivo DRF/SOR nº 1483 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153848 | Concede coabilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (Reidi) à pessoa jurídica que menciona.
-2026-09-30 | Ato Declaratório Executivo DRF/SOR nº 521 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153855 | Retificação
-2026-09-30 | Portaria SRRF10 nº 990 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153856 | Dispõe sobre a suspensão das atividades da Agência da Receita Federal do Brasil em Lagoa Vermelha (RS) e sobre a transferência temporária de competências para outras unidades da Secretaria da Receita Federal do Brasil.
-2026-09-30 | Ato Declaratório Executivo DRF/NHO nº 34 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153858 | Inscreve no Registro Especial e autoriza engarrafamento dos produtos que menciona.
-2026-09-30 | Ato Declaratório Executivo DRF/NHO nº 33 | https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153857 | Inscreve no Registro Especial e autoriza engarrafamento dos produtos que menciona.
+Busca textual:
+
+Número do ato:
+
+Data da publicação
+
+Data do ato
+
+Data inicial:
+
+Data final:
+
+Ano do ato:
+
+Tipos de ato:
+
+Órgãos e unidades:
+
+Apenas atos vigentes
+
+Limpar  Buscar
+
+### Atos de hoje (05/10/2026)
+
+Localizados 16 itens
+
+Ordenar por:
+
+×Data da publicação decrescente
+
+Exibir:
+
+×100
+
+1 a 16 de 16 itens
+
+Tipo do ato
+
+Nº do ato
+
+Órgão / unidade
+
+Publicação
+
+Ementa
+
+Ato Declaratório Executivo
+
+142
+
+Coana
+
+05/10/2026
+
+Certifica como Operador Econômico Autorizado a pessoa jurídica que especifica.
+
+Ato Declaratório Executivo
+
+141
+
+Coana
+
+05/10/2026
+
+Certifica como Operador Econômico Autorizado a pessoa jurídica que especifica
+
+Ato Declaratório Executivo
+
+105
+
+DRF/VAR
+
+05/10/2026
+
+Aprova o fornecimento de selos de controle, para selagem no exterior, Whisky.
+
+Ato Declaratório Executivo
+
+104
+
+DRF/VAR
+
+05/10/2026
+
+Aprova o fornecimento de selos de controle, para selagem no exterior, de uísque.
+
+Ato Declaratório Executivo
+
+103
+
+DRF/VAR
+
+05/10/2026
+
+Aprova o fornecimento de selos de controle, para selagem no exterior, de uísque.
+
+Ato Declaratório Executivo
+
+102
+
+DRF/VAR
+
+05/10/2026
+
+Aprova o fornecimento de selos de controle, para selagem no exterior, de uísque.
+
+Ato Declaratório Executivo
+
+101
+
+DRF/VAR
+
+05/10/2026
+
+Aprova o fornecimento de selos de controle, para selagem no exterior, de uísque.
+
+Ato Declaratório Executivo
+
+100
+
+DRF/VAR
+
+05/10/2026
+
+Aprova o fornecimento de selos de controle, para selagem no exterior, de uísque.
+
+Ato Declaratório Executivo
+
+61
+
+SRRF08
+
+05/10/2026
+
+Reconhece, a título precário, a situação de fiscalização em caráter permanente do Recinto Especial para Despacho Aduaneiro de Exportação - REDEX do estabelecimento administrado por BCS TERMINAL DE CONTAINER LTDA.
+
+Ato Declaratório Executivo
+
+10
+
+DRF/GUA
+
+05/10/2026
+
+Declara inapta a inscrição da entidade que menciona perante o Cadastro Nacional de Pessoa Jurídica (CNPJ) e a inidoneidade dos documentos fiscais por ela emitidos.
+
+Ato Declaratório Executivo
+
+1523
+
+DRF/SOR
+
+05/10/2026
+
+Cancela o registro referente ao regime de suspensão do IPI para pessoa jurídica preponderantemente exportadora, de que trata o art. 29, § 1º, inciso II, da Lei nº 10.637, de 30 de dezembro de 2002.
+
+Ato Declaratório Executivo
+
+1522
+
+DRF/SOR
+
+05/10/2026
+
+Cancela o registro referente ao regime de suspensão do IPI para pessoa jurídica preponderantemente exportadora, de que trata o art. 29, § 1º, inciso II, da Lei nº 10.637, de 30 de dezembro de 2002.
+
+Ato Declaratório Executivo
+
+1521
+
+DRF/SOR
+
+05/10/2026
+
+Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.
+
+Ato Declaratório Executivo
+
+1520
+
+DRF/SOR
+
+05/10/2026
+
+Concede habilitação ao Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (REIDI) à pessoa jurídica que menciona.
+
+Solução de Consulta
+
+10011
+
+SRRF10
+
+05/10/2026
+
+Assunto: Imposto sobre a Renda de Pessoa Jurídica - IRPJ
+
+LUCRO PRESUMIDO. SERVIÇOS DE OBSTETRÍCIA. PERCENTUAL DE PRESUNÇÃO REDUZIDO. REQUISITOS.
+
+Para efeito de determinação da base de cálculo do Imposto sobre a Renda de Pessoa Jurídica - IRPJ devido pela pessoa jurídica tributada com base no lucro presumido, aplica-se o percentual de 8% (oito por cento) sobre a receita bruta decorrente da prestação de serviços hospitalares e da prestação dos serviços de auxílio diagnóstico e terapia listados na Atribuição 4: Prestação de Atendimento ao Apoio ao Diagnóstico e Terapia da Resolução RDC Anvisa nº 50, de 21 de fevereiro de 2002, desde que a prestadora dos serviços seja organizada sob a forma de sociedade empresária (de direito e de fato) e atenda às normas da Agência Nacional de Vigilância Sanitária (Anvisa). O não atendimento de qualquer desses requisitos importa a aplicação do percentual de 32% (trinta e dois por cento) sobre a receita bruta da prestação dos serviços.
+
+LUCRO PRESUMIDO. CONSULTAS MÉDICAS. PERCENTUAL DE PRESUNÇÃO.
+
+As receitas decorrentes de consultas médicas simples, ainda que realizadas no interior de hospitais, sujeitam-se ao percentual de 32% (trinta e dois por cento) na apuração do IRPJ no regime de tributação do lucro presumido.
+
+PERCENTUAIS DE PRESUNÇÃO A PARTIR DE 1º DE JANEIRO DE 2026.
+
+A partir de 1º de janeiro de 2026, para fins de apuração do IRPJ no lucro presumido, deverá ser observado o acréscimo em 10% (dez por cento) nos percentuais de presunção previstos na legislação, aplicável sobre a parcela da receita bruta total que exceder o valor de R$ 5.000.000,00 (cinco milhões de reais) no ano-calendário.
+
+SOLUÇÃO DE CONSULTA VINCULADA À SOLUÇÃO DE CONSULTA COSIT Nº 147, DE 20 DE JULHO DE 2023.
+
+Dispositivos Legais: Lei Complementar nº 224, de 26 de dezembro de 2025, art. 4º, § 1º, inciso III, § 2º, inciso II, alínea a, § 3º, inciso I, § 4º, inciso VII, e § 5º; Lei nº 9.249, de 26 de dezembro de 1995, art. 15, caput, §§ 1º, inciso III, alínea a, e 2º; Lei nº 9.430, de 27 de dezembro de 1996, art. 25, inciso I; Lei nº 10.406, de 10 de janeiro de 2002 - Código Civil, arts. 966 e 982; Lei nº 11.727, de 23 de junho de 2008, arts. 29 e 41, inciso VI; Instrução Normativa RFB nº 1.234, de 11 de janeiro de 2012, arts. 30, 31 e 38, inciso II; Instrução Normativa RFB nº 1.700, de 14 de março de 2017, art. 33, §§ 1º, inciso II, alínea a, 3º e 4º, e art. 215, caput; Instrução Normativa RFB nº 2.305, de 31 de dezembro de 2025, art. 2º, incisos V e VI, § 1º, inciso II, alínea a, art. 3º, inciso I, art. 4º, inciso I, e arts. 13 a 15; Resolução RDC Anvisa nº 50, de 21 de fevereiro de 2002.
+
+Assunto: Imposto sobre a Renda Retido na Fonte - IRRF
+
+PAGAMENTOS EFETUADOS POR ESTADOS E MUNICÍPIOS. INCIDÊNCIA NA FONTE. ART. 64 DA LEI Nº 9.430, DE 27 DE DEZEMBRO DE 1996.
+
+Os pagamentos pelo fornecimento de bens ou pela prestação de serviços efetuados a pessoas jurídicas pelos Estados, Distrito Federal e Municípios e suas autarquias e fundações estão sujeitos à incidência do Imposto sobre a Renda na fonte na forma do art. 64 da Lei nº 9.430, de 27 de dezembro de 1996.
+
+SERVIÇOS ENQUADRADOS EM MAIS DE UMA HIPÓTESE DE INCIDÊNCIA NA FONTE.
+
+Na hipótese de prestação de serviços a Estados, Distrito Federal e Municípios e suas autarquias e fundações, enquadrados concomitantemente na hipótese de incidência do Imposto sobre a Renda na fonte do art. 714 do Regulamento do Imposto sobre a Renda e Proventos de Qualquer Natureza - RIR/2018, aprovado pelo Decreto nº 9.580, de 22 de novembro de 2018, e na hipótese de incidência do art. 64 da Lei nº 9.430, de 27 de dezembro de 1996, prevalece a incidência do imposto na fonte prevista no art. 64 da Lei nº 9.430, de 27 de dezembro de 1996.
+
+PRESTAÇÃO DE SERVIÇOS EM GERAL. ALÍQUOTA APLICÁVEL PARA FINS DE RETENÇÃO DO IMPOSTO.
+
+A retenção na fonte do imposto será efetuada mediante a aplicação, sobre o valor a ser pago pela prestação de serviços em geral, da alíquota de 4,8% (quatro inteiros e oito décimos por cento).
+
+SOLUÇÃO DE CONSULTA VINCULADA À SOLUÇÃO DE CONSULTA COSIT Nº 118, DE 2 DE MAIO DE 2024.
+
+Dispositivos legais: Constituição Federal, arts. 157, inciso I, e 158, inciso I; Lei nº 9.430, de 27 de dezembro de 1996, art. 64; Decisão do Supremo Tribunal Federal no Recurso Extraordinário nº 1.293.453/RS (Tema de Repercussão Geral nº 1.130); Parecer SEI nº 5744/2022/ME (Procuradoria-Geral da Fazenda Nacional - PGFN); Lei nº 9.249, de 26 de dezembro de 1995, art. 15, § 1º, inciso III, alínea a; Regulamento do Imposto sobre a Renda e Proventos de Qualquer Natureza - RIR/2018, aprovado pelo Decreto nº 9.580, de 22 de novembro de 2018, art. 714; Instrução Normativa RFB nº 1.234, de 11 de janeiro de 2012, arts. 2º, § 1º, 2º-A, § 1º, e 3º-A, caput e § 1º.
+
+Solução de Consulta
+
+10009
+
+SRRF10
+
+05/10/2026
+
+Assunto: Imposto sobre a Importação - II
+
+BENEFÍCIO FISCAL. EX-TARIFÁRIO. ENQUADRAMENTO. DESCRIÇÃO DA MERCADORIA. INTERPRETAÇÃO LITERAL.
+
+O enquadramento de mercadoria em determinado destaque de Ex-tarifário que implique redução da alíquota do Imposto sobre a Importação fixada na Tarifa Externa Comum - TEC exige interpretação restritiva e literal do ato que concedeu o benefício, por força do art. 114 do Decreto nº 6.759, de 5 de fevereiro de 2009 - Regulamento Aduaneiro, e do art. 111, inciso II, da Lei nº 5.172, de 25 de outubro de 1966 - Código Tributário Nacional. Nesse passo, qualquer importador poderá aproveitar o benefício de Ex-tarifário, desde que todas as características da mercadoria objeto de importação se amoldem perfeitamente às especificações constantes do referido destaque de Ex-tarifário.
+
+SOLUÇÃO DE CONSULTA VINCULADA ÀS SOLUÇÕES DE CONSULTA COSIT Nº 150, DE 24 DE JULHO DE 2023, E Nº 174, DE 11 DE AGOSTO DE 2023.
+
+Dispositivos Legais: Lei nº 5.172, de 25 de outubro de 1966 - Código Tributário Nacional, art. 111, inciso II; Decreto nº 6.759, de 5 de fevereiro de 2009 - Regulamento Aduaneiro, art. 114; Decreto nº 11.428, de 2 de março de 2023, art. 6º, incisos IV e V; Resolução Gecex nº 272, de 19 de novembro de 2021, Anexo IV; Resolução Gecex nº 706, de 24 de fevereiro de 2025.
+
+Assunto: Imposto sobre a Renda de Pessoa Jurídica - IRPJ
+
+LUCRO PRESUMIDO. SERVIÇOS DE SAÚDE. PERCENTUAL DE PRESUNÇÃO REDUZIDO. REQUISITOS.
+
+Para efeito de determinação da base de cálculo do Imposto sobre a Renda de Pessoa Jurídica - IRPJ devido pela pessoa jurídica tributada com base no lucro presumido, aplica-se o percentual de 8% (oito por cento) sobre a receita bruta decorrente da prestação de serviços hospitalares e da prestação dos serviços de auxílio diagnóstico e terapia listados na Atribuição 4: Prestação de Atendimento ao Apoio ao Diagnóstico e Terapia da Resolução RDC Anvisa nº 50, de 21 de fevereiro de 2002, desde que a prestadora dos serviços seja organizada sob a forma de sociedade empresária (de direito e de fato) e atenda às normas da Agência Nacional de Vigilância Sanitária (Anvisa). O não atendimento de qualquer desses requisitos importa a aplicação do percentual de 32% (trinta e dois por cento) sobre a receita bruta da prestação dos serviços.
+
+LUCRO PRESUMIDO. CONSULTAS MÉDICAS. PERCENTUAL DE PRESUNÇÃO.
+
+As receitas decorrentes de consultas médicas simples, ainda que realizadas no interior de hospitais, sujeitam-se ao percentual de 32% (trinta e dois por cento) na apuração do IRPJ no regime de tributação do lucro presumido.
+
+PERCENTUAIS DE PRESUNÇÃO A PARTIR DE 1º DE JANEIRO DE 2026.
+
+A partir de 1º de janeiro de 2026, para fins de apuração do IRPJ no lucro presumido, deverá ser observado o acréscimo em 10% (dez por cento) nos percentuais de presunção previstos na legislação, aplicável sobre a parcela da receita bruta total que exceder o valor de R$ 5.000.000,00 (cinco milhões de reais) no ano-calendário.
+
+SOLUÇÃO DE CONSULTA VINCULADA À SOLUÇÃO DE CONSULTA COSIT Nº 147, DE 20 DE JULHO DE 2023.
+
+Dispositivos Legais: Lei Complementar nº 224, de 26 de dezembro de 2025, art. 4º, § 1º, inciso III, § 2º, inciso II, alínea a, § 3º, inciso I, § 4º, inciso VII, e § 5º; Lei nº 9.249, de 26 de dezembro de 1995, art. 15, caput, §§ 1º, inciso III, alínea a, e 2º; Lei nº 9.430, de 27 de dezembro de 1996, art. 25, inciso I; Lei nº 10.406, de 10 de janeiro de 2002 - Código Civil, arts. 966 e 982; Lei nº 11.727, de 23 de junho de 2008, arts. 29 e 41, inciso VI; Instrução Normativa RFB nº 1.234, de 11 de janeiro de 2012, arts. 30, 31 e 38, inciso II; Instrução Normativa RFB nº 1.700, de 14 de março de 2017, art. 33, §§ 1º, inciso II, alínea a, 3º e 4º, e art. 215, caput; Instrução Normativa RFB nº 2.305, de 31 de dezembro de 2005, art. 2º, incisos V e VI, § 1º, inciso II, alínea a, art. 3º, inciso I, art. 4º, inciso I, e arts. 13 a 15; Resolução RDC Anvisa nº 50, de 21 de fevereiro de 2002.
+
+Assunto: Contribuição Social sobre o Lucro Líquido - CSLL
+
+RESULTADO PRESUMIDO. SERVIÇOS DE SAÚDE. PERCENTUAL DE PRESUNÇÃO REDUZIDO. REQUISITOS.
+
+Para efeito de determinação da base de cálculo da Contribuição Social sobre o Lucro Líquido - CSLL devida pela pessoa jurídica tributada com base no lucro presumido, aplica-se o percentual de 12% (doze por cento) sobre a receita bruta decorrente da prestação de serviços hospitalares e da prestação dos serviços de auxílio diagnóstico e terapia listados na Atribuição 4: Prestação de Atendimento ao Apoio ao Diagnóstico e Terapia da Resolução RDC Anvisa nº 50, de 21 de fevereiro de 2002, desde que a prestadora dos serviços seja organizada sob a forma de sociedade empresária (de direito e de fato) e atenda às normas da Agência Nacional de Vigilância Sanitária (Anvisa). O não atendimento de qualquer desses requisitos importa a aplicação do percentual de 32% (trinta e dois por cento) sobre a receita bruta da prestação dos serviços.
+
+LUCRO PRESUMIDO. CONSULTAS MÉDICAS. PERCENTUAL DE PRESUNÇÃO.
+
+As receitas decorrentes de consultas médicas simples, ainda que realizadas no interior de hospitais, sujeitam-se ao percentual de 32% (trinta e dois por cento) na apuração da CSLL no regime de tributação do lucro presumido.
+
+PERCENTUAIS DE PRESUNÇÃO A PARTIR DE 1º DE ABRIL DE 2026.
+
+A partir de 1º de abril de 2026, para fins de apuração da CSLL devida pela pessoa jurídica tributada com base no lucro presumido, deverá ser observado o acréscimo em 10% (dez por cento) nos percentuais de presunção previstos na legislação, aplicável sobre a parcela da receita bruta total que exceder o valor de R$ 5.000.000,00 (cinco milhões de reais) no ano-calendário.
+
+SOLUÇÃO DE CONSULTA VINCULADA À SOLUÇÃO DE CONSULTA COSIT Nº 147, DE 20 DE JULHO DE 2023.
+
+Dispositivos Legais: Lei Complementar nº 224, de 26 de dezembro de 2025, art. 4º, § 1º, inciso III, § 2º, inciso II, alínea a, § 3º, inciso I, § 4º, inciso VII, e § 5º; Lei nº 9.249, de 25 de dezembro de 1995, art. 15, §§ 1º, inciso III, alínea a, 2º, e art. 20, incisos I e III; Lei nº 9.430, de 27 de dezembro de 1996, art. 29, inciso I; Lei nº 10.406, de 10 de janeiro de 2002 - Código Civil, art. 966 e 982; Lei nº 11.727, de 23 de junho de 2008, arts. 29 e 41, inciso VI; Instrução Normativa RFB nº 1.234, de 11 de janeiro de 2012, arts. 30, 31 e 38, inciso II; Instrução Normativa RFB nº 1.700, de 14 de março de 2017, art. 33, §§ 1º, inciso II, alínea a, 3º e 4º, art. 34, § 2º, e art. 215, § 1º; Instrução Normativa RFB nº 2.305, de 31 de dezembro de 2005, art. 2º, inciso VI, § 1º, inciso II, alínea a, art. 3º, inciso II, art. 4º, inciso I, arts. 13 a 15; Resolução RDC Anvisa nº 50, de 21 de fevereiro de 2002.
+
+Assunto: Processo Administrativo Fiscal
+
+CONSULTA SOBRE A INTERPRETAÇÃO DA LEGISLAÇÃO TRIBUTÁRIA. INEFICÁCIA PARCIAL.
+
+Não produz efeitos a consulta na parte que versa sobre matéria alheia à interpretação de dispositivos da legislação tributária aplicáveis a fato determinado.
+
+Dispositivos Legais: Decreto nº 70.235, de 6 de março de 1972, arts. 46, caput, e 52, inciso I; Decreto nº 7.574, de 29 de setembro de 2011, arts. 88, caput, e 94, inciso I; Instrução Normativa RFB nº 2.058, de 9 de dezembro de 2021, arts. 13, inciso II, e 27, incisos I e II.
+
+Exibir:
+
+×100
+
+1 a 16 de 16 itens
+
+JaneiroFevereiroMarçoAbrilMaioJunhoJulhoAgostoSetembroOutubroNovembroDezembro
+
+DomSegTerQuaQuiSexSáb
+
+
+27282930123456789101112131415161718192021222324252627282930311234567
+
+Hoje
+
+JaneiroFevereiroMarçoAbrilMaioJunhoJulhoAgostoSetembroOutubroNovembroDezembro
+
+DomSegTerQuaQuiSexSáb
+
+
+27282930123456789101112131415161718192021222324252627282930311234567
+
+Hoje

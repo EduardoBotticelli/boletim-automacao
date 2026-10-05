@@ -87,41 +87,25 @@ PESQUISAR
 
 ## Leitura Jornal
 
-- [SEÇÃO 1](https://www.in.gov.br/leiturajornal?data=01-10-2026&secao=do1)
+- [SEÇÃO 1](https://www.in.gov.br/leiturajornal?data=05-10-2026&secao=do1)
 SUPLEMENTO
 
 EDIÇÃO EXTRA
 
 EDIÇÃO ESPECIAL
 ATOS NORMATIVOS
-- [SEÇÃO 2](https://www.in.gov.br/leiturajornal?data=01-10-2026&secao=do2)
+- [SEÇÃO 2](https://www.in.gov.br/leiturajornal?data=05-10-2026&secao=do2)
 EDIÇÃO EXTRA
 
 EDIÇÃO ESPECIAL
 ATOS DE PESSOAL
-- [SEÇÃO 3](https://www.in.gov.br/leiturajornal?data=01-10-2026&secao=do3)
+- [SEÇÃO 3](https://www.in.gov.br/leiturajornal?data=05-10-2026&secao=do3)
 EDIÇÃO EXTRA
 CONTRATOS, EDITAIS E AVISOS
 
 Selecione o dia desejado
 
 ## Daypicker BuscaDOU
-
-- 28
-
-seg.
-
-- 29
-
-ter.
-
-- 30
-
-qua.
-
-- 1
-
-qui.
 
 - 2
 
@@ -135,129 +119,136 @@ sáb.
 
 dom.
 
+- 5
+
+seg.
+
+- 6
+
+ter.
+
+- 7
+
+qua.
+
+- 8
+
+qui.
+
 
 ## Leitura DOU
 
 VOCÊ ESTÁ VENDO:
 
-Seção 1, dia 1 de outubro de 2026
+Seção 1, dia 5 de outubro de 2026
 
 VISUALIZAR EM LISTA
 VISUALIZAR EM SUMÁRIO
 VERSÃO CERTIFICADA DIÁRIO COMPLETO
 
-Selecionar Organização PrincipalTodosAtos do Poder ExecutivoPresidência da RepúblicaMinistério da Agricultura e PecuáriaMinistério das CidadesMinistério da Ciência, Tecnologia e InovaçãoMinistério das ComunicaçõesMinistério da CulturaMinistério da DefesaMinistério do Desenvolvimento Agrário e Agricultura FamiliarMinistério do Desenvolvimento e Assistência Social, Família e Combate à FomeMinistério do Desenvolvimento, Indústria, Comércio e ServiçosMinistério dos Direitos Humanos e da CidadaniaMinistério da EducaçãoMinistério do EsporteMinistério da FazendaMinistério da Gestão e da Inovação em Serviços PúblicosMinistério da Igualdade RacialMinistério da Integração e do Desenvolvimento RegionalMinistério da Justiça e Segurança PúblicaMinistério do Meio Ambiente e Mudança do ClimaMinistério de Minas e EnergiaMinistério da Pesca e AquiculturaMinistério do Planejamento e OrçamentoMinistério de Portos e AeroportosMinistério da Previdência SocialMinistério da SaúdeMinistério do Trabalho e EmpregoMinistério dos Transportes
+Selecionar Organização PrincipalTodosAtos do Poder JudiciárioPresidência da RepúblicaMinistério da Agricultura e PecuáriaMinistério das ComunicaçõesMinistério da CulturaMinistério da DefesaMinistério do Desenvolvimento Agrário e Agricultura FamiliarMinistério do Desenvolvimento, Indústria, Comércio e ServiçosMinistério dos Direitos Humanos e da CidadaniaMinistério da EducaçãoMinistério da FazendaMinistério da Gestão e da Inovação em Serviços PúblicosMinistério da Igualdade RacialMinistério da Integração e do Desenvolvimento RegionalMinistério da Justiça e Segurança PúblicaMinistério de Minas e EnergiaMinistério do Planejamento e OrçamentoMinistério de Portos e AeroportosMinistério da Previdência SocialMinistério da SaúdeMinistério do Trabalho e EmpregoMinistério dos TransportesMinistério Público da UniãoPoder JudiciárioEntidades de Fiscalização do Exercício das Profissões Liberais
 
-Selecionar Organização SubordinadaTodosAgência Nacional de Aviação CivilAgência Nacional de Energia ElétricaAgência Nacional de MineraçãoAgência Nacional de Saúde SuplementarAgência Nacional de TelecomunicaçõesAgência Nacional de Transportes AquaviáriosAgência Nacional de Transportes TerrestresAgência Nacional de Vigilância SanitáriaAgência Nacional do Petróleo, Gás Natural e BiocombustíveisCasa CivilComando da MarinhaComissão Técnica Nacional de BiossegurançaComissão de Financiamentos ExternosComissão de Valores MobiliáriosConselho Administrativo de Defesa EconômicaConselho Nacional de Controle de Experimentação AnimalConselho Nacional de Política FazendáriaDepartamento Nacional de Infraestrutura de TransportesFundação Universidade Federal de SergipeFundação Universidade Federal de ViçosaGabinete da MinistraGabinete do MinistroInstituto Benjamin ConstantInstituto Chico Mendes de Conservação da BiodiversidadeInstituto Nacional de Colonização e Reforma AgráriaInstituto Nacional de Estudos e Pesquisas Educacionais Anísio TeixeiraInstituto Nacional de Metrologia, Qualidade e TecnologiaPolícia FederalPolícia Rodoviária FederalSecretaria Especial da Receita Federal do BrasilSecretaria ExecutivaSecretaria Extraordinária de Combate à Pobreza e à FomeSecretaria Nacional de Direitos DigitaisSecretaria Nacional de JustiçaSecretaria Nacional de Proteção e Defesa CivilSecretaria de Atenção Especializada à SaúdeSecretaria de Defesa AgropecuáriaSecretaria de Educação BásicaSecretaria de Fomento e Incentivo à CulturaSecretaria de Gestão do Trabalho e da Educação na SaúdeSecretaria de Inspeção do TrabalhoSecretaria de Orçamento FederalSecretaria de RadiodifusãoSecretaria de Regulação e Supervisão da Educação SuperiorSecretaria de Relações do TrabalhoSecretaria do Patrimônio da UniãoSecretaria-GeralSuperintendência Nacional de Previdência ComplementarSuperintendência de Seguros PrivadosUniversidade Federal de ItajubáUniversidade Federal de UberlândiaUniversidade Federal do Norte do TocantinsUniversidade Federal do Triângulo Mineiro
+Selecionar Organização SubordinadaTodosAdvocacia-Geral da UniãoAgência Nacional de Aviação CivilAgência Nacional de Energia ElétricaAgência Nacional de MineraçãoAgência Nacional de Saúde SuplementarAgência Nacional de TelecomunicaçõesAgência Nacional de Transportes AquaviáriosAgência Nacional de Transportes TerrestresAgência Nacional de Vigilância SanitáriaAgência Nacional de Águas e Saneamento BásicoAgência Nacional do Petróleo, Gás Natural e BiocombustíveisAssessoria Especial de Defesa da Democracia, Memória e VerdadeCONSELHO REGIONAL DE EDUCAÇÃO FÍSICA DA 20ª REGIÃOCONSELHO REGIONAL DE MEDICINA DO ESTADO DE SÃO PAULOCasa CivilComando da MarinhaComando do ExércitoComissão de Valores MobiliáriosConselho Administrativo de Defesa EconômicaConselho Federal de EconomiaConselho Federal de FarmáciaConselho Federal de Fisioterapia e Terapia OcupacionalConselho Regional de Contabilidade de Santa CatarinaConselho Regional de Educação Física da 2ª RegiãoConselho Regional de Enfermagem de SergipeConselho Regional de Fisioterapia e Terapia Ocupacional da 2ª RegiãoConselho Regional de Serviço Social da 12ª RegiãoCâmara de Comércio ExteriorFundação Biblioteca NacionalFundação Cultural PalmaresFundação Universidade Federal de ViçosaGabinete da MinistraGabinete do MinistroInstituto Federal de Educação, Ciência e Tecnologia de SergipeInstituto Federal de Educação, Ciência e Tecnologia do Espírito SantoInstituto Nacional de Colonização e Reforma AgráriaInstituto Nacional de Estudos e Pesquisas Educacionais Anísio TeixeiraInstituto Nacional do Seguro SocialMinistério Público do Distrito Federal e TerritóriosMinistério Público do TrabalhoPolícia FederalProcuradoria-Geral da Fazenda NacionalSecretaria Especial da Receita Federal do BrasilSecretaria ExecutivaSecretaria Nacional de Direitos DigitaisSecretaria Nacional de JustiçaSecretaria Nacional de Proteção e Defesa CivilSecretaria Nacional de Transição Energética e PlanejamentoSecretaria Nacional do ConsumidorSecretaria de Atenção Especializada à SaúdeSecretaria de Comunicação SocialSecretaria de Defesa AgropecuáriaSecretaria de Desenvolvimento Industrial, Inovação, Comércio e ServiçosSecretaria de Fomento e Incentivo à CulturaSecretaria de Orçamento FederalSecretaria de RadiodifusãoSecretaria de Regulação e Supervisão da Educação SuperiorSecretaria de Relações do TrabalhoSecretaria do Patrimônio da UniãoSupremo Tribunal FederalTribunal Regional Eleitoral da BahiaTribunal Regional Eleitoral de SergipeTribunal Superior EleitoralTribunal de Justiça do Distrito Federal e dos Territórios
 
-Selecionar Tipo do AtoTodosAcórdãoArestoAtoAto DeclaratórioAto NormativoDecisãoDecreto numeradoDeliberaçãoDespachoExtrato de Parecer TécnicoPautaPortariaResoluçãoRetificação
+Selecionar Tipo do AtoTodosAcórdãoAtaAtoAto DeclaratórioAção Direta de Inconstitucionalidade e Ação Declaratória de ConstitucionalidadeDecisãoDeliberaçãoDespachoInstrução NormativaPautaPortariaPortaria ConjuntaResoluçãoRetificaçãoSolução de Consulta
 
 LIMPAR TODOS OS FILTROSRETRAIR TUDO
 
 - 1. Seção 1
-2. Atos do Poder Executivo
-3. Edição Nº 186 de 01/10/2026 - Pág. 1
+2. Atos do Poder Judiciário
+3. Supremo Tribunal Federal
+4. Plenário
+5. Edição Nº 188 de 05/10/2026 - Pág. 1
 
-##### [DECRETO Nº 13.131, DE 30 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/decreto-n-13.131-de-30-de-setembro-de-2026-735702683)
+##### [DECISÕES](https://www.in.gov.br/web/dou/-/decisoes-736290717)
 
-DECRETO Nº 13.131, DE 30 DE SETEMBRO DE 2026 Altera o Decreto nº 11.348, de 1º de janeiro de 2023, que aprova a Estrutura Regimental e o Quadro Demonstrativo dos Cargos em Comissão e das Funções de Confiança do Ministério da Justiça e Segurança Pública, e remaneja e transforma cargos em comissão e funções de confiança. O PRESIDENTE DA REPÚBLICA, no uso da atribuição que lhe confere o art. 84,caput...
+DECISÕES Ação Direta de Inconstitucionalidade e Ação Declaratória de Constitucionalidade (Publicação determinada pela Lei nº 9.868, de 10.11.1999) ADI 7949 Mérito Relator(a)Min. Dias Toffoli Público Plenário Seção Especial - ADIN/ADC Divulgação 01/10/2026 19:00 REQUERENTE(S): Associacao Nacional dos Medicos Peritos da Previdencia Social ADVOGADO(A/S): Paulo Vitor Liporaci Giani Barbosa - OAB's (50...
+
+- 1. Seção 1
+2. Presidência da República
+3. Edição Nº 188 de 05/10/2026 - Pág. 1
+
+##### [REPUBLICAÇÃO (\*)](https://www.in.gov.br/web/dou/-/republicacao-*-736292321)
+
+REPUBLICAÇÃO (\*) DESPACHO DO PRESIDENTE DA REPÚBLICA ADVOCACIA-GERAL DA UNIÃO Processo nº 00688.002233/2026-11. PARECER Nº JM-12, de 1º de outubro de 2026, do Advogado-Geral da União, que adotou, nos termos estabelecidos no Despacho do Consultor-Geral da União nº 00684/2026/GAB-CGU/CGU/AGU, o PARECER Nº 00010/2026/CONSUNIAO/CGU/AGU. Aprovo. Publique-se, para os fins do disposto no art. 40, § 1º, d...
 
 - 1. Seção 1
 2. Presidência da República
 3. Casa Civil
-4. Comitê do Rio Doce
-5. Edição Nº 186 de 01/10/2026 - Pág. 6
+4. Edição Nº 188 de 05/10/2026 - Pág. 4
 
-##### [RESOLUÇÃO CRD Nº 42, DE 23 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-crd-n-42-de-23-de-setembro-de-2026-735707400)
+##### [RESOLUÇÃO COMITe GESTOR DO FUNDO - FIRECE/CC Nº 6, DE 2 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-comite-gestor-do-fundo-firece/cc-n-6-de-2-de-outubro-de-2026-736293629)
 
-RESOLUÇÃO CRD Nº 42, DE 23 DE SETEMBRO DE 2026 Dispõe sobre o procedimento de quitação das obrigações de fazer previstas no Anexo 19 - Transição e encerramento dos programas, medidas, responsabilidades e obrigações decorrentes do rompimento e seus desdobramentos ("Anexo 19"), sob fiscalização da Governança da UNIÃO no âmbito do Acordo Judicial para reparação integral e definitiva relativa ao rompi...
+COMITÊ GESTOR DO FUNDO DE APOIO À INFRAESTRUTURA PARA RECUPERAÇÃO E ADAPTAÇÃO A EVENTOS CLIMÁTICOS EXTREMOS - FIRECE RESOLUÇÃO COMITe GESTOR DO FUNDO - FIRECE/CC Nº 6, DE 2 DE OUTUBRO DE 2026 Aprova os critérios e atualiza o plano de aplicação de recursos do Fundo de Apoio à Infraestrutura para Recuperação e Adaptação a Eventos Climáticos Extremos - FIRECE, destinados ao atendimento das consequênc...
 
 - 1. Seção 1
 2. Presidência da República
-3. Casa Civil
-4. Comitê do Rio Doce
-5. Edição Nº 186 de 01/10/2026 - Pág. 6
+3. Advocacia-Geral da União
+4. Edição Nº 188 de 05/10/2026 - Pág. 5
 
-##### [RESOLUÇÃO CRD Nº 41, DE 23 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-crd-n-41-de-23-de-setembro-de-2026-735706361)
+##### [PORTARIA AGU Nº 318, DE 2 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-agu-n-318-de-2-de-outubro-de-2026-736289333)
 
-RESOLUÇÃO CRD Nº 41, DE 23 DE SETEMBRO DE 2026 Dispõe sobre a aprovação do Projeto de Intervenção "Execução da Verba de Apoio Familiar (VAF) da Comunidade Quilombola de Povoação", deliberado na 10ª Reunião Extraordinária de 2026 do Comitê do Rio Doce. APRESIDENTA DO COMITÊ DO RIO DOCE, substituta, no uso da atribuição que lhe confere o artigo 28, § 3º, do Decreto nº 12.412, de 18 de março de 2025,...
-
-- 1. Seção 1
-2. Ministério da Agricultura e Pecuária
-3. Secretaria Executiva
-4. Subsecretaria de Governança das Superintendências
-5. Superintendência de Agricultura e Pecuária do Estado da Bahia
-6. Edição Nº 186 de 01/10/2026 - Pág. 7
-
-##### [PORTARIA SFA-BA/MAPA Nº 1.034, DE 29 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-ba/mapa-n-1.034-de-29-de-setembro-de-2026-735708572)
-
-PORTARIA SFA-BA/MAPA Nº 1.034, DE 29 DE SETEMBRO DE 2026 O SUPERINTENDENTE FEDERAL DE AGRICULTURA E PECUÁRIA NO ESTADO DA BAHIA, no uso da competência conferida no art. 40 e no art. 49 do Anexo I ao Decreto nº 12.642, de 1º de outubro de 2025, e tendo em vista o disposto no art. nº 262 da Portaria nº 561, de 11 de abril de 2018, do Ministério da Agricultura e Pecuária, na Instrução Normativa nº 22...
+PORTARIA AGU Nº 318, DE 2 DE OUTUBRO DE 2026 O ADVOGADO-GERAL DA UNIÃO, no uso da competência de que trata o art. 14 da Lei nº 10.480, de 2 de julho de 2002, e considerando o contido no processo nº 00457.052809/2024-34, resolve: Art. 1º Fica extinta a Procuradoria Seccional Federal em Marabá/PA, com prazo de desmobilização de até seis meses. Art. 2º Fica alterado, nos termos do art. 1º, o Anexo II...
 
 - 1. Seção 1
-2. Ministério da Agricultura e Pecuária
-3. Secretaria Executiva
-4. Subsecretaria de Governança das Superintendências
-5. Superintendência de Agricultura e Pecuária do Estado de Santa Catarina
-6. Edição Nº 186 de 01/10/2026 - Pág. 7
+2. Presidência da República
+3. Câmara de Comércio Exterior
+4. Comitê-Executivo de Gestão
+5. Edição Nº 188 de 05/10/2026 - Pág. 5
 
-##### [PORTARIA SFA-SC/MAPA Nº 1.398, DE 29 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-sc/mapa-n-1.398-de-29-de-setembro-de-2026-735715217)
+##### [RESOLUÇÃO GECEX Nº 963, DE 2 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-gecex-n-963-de-2-de-outubro-de-2026-736298504)
 
-PORTARIA SFA-SC/MAPA Nº 1.398, DE 29 DE SETEMBRO DE 2026 O SUPERINTENDENTE DE AGRICULTURA E PECUÁRIA NO ESTADO DE SANTA CATARINA SUBSTITUTO, no uso das competências que lhe conferem o art. 40 e o art. 49 do Anexo I ao Decreto nº 12.642, de 1º de outubro de 2025, e o art. 262 do Anexo à Portaria nº 561, de 11 de abril de 2018, do Ministério da Agricultura e Pecuária, e tendo em vista o disposto no ...
-
-- 1. Seção 1
-2. Ministério da Agricultura e Pecuária
-3. Secretaria Executiva
-4. Subsecretaria de Governança das Superintendências
-5. Superintendência de Agricultura e Pecuária do Estado de Santa Catarina
-6. Edição Nº 186 de 01/10/2026 - Pág. 7
-
-##### [PORTARIA SFA-SC/MAPA Nº 1.401, DE 30 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-sc/mapa-n-1.401-de-30-de-setembro-de-2026-735707979)
-
-PORTARIA SFA-SC/MAPA Nº 1.401, DE 30 DE SETEMBRO DE 2026 O SUPERINTENDENTE DE AGRICULTURA E PECUÁRIA NO ESTADO DE SANTA CATARINA SUBSTITUTO, no uso das competências conferidas no art. 40 e no art. 49 do Anexo I ao Decreto nº 12.642, de 1º de outubro de 2025, no art. 262 do Anexo à Portaria nº 561, de 11 de abril de 2018, do Ministério da Agricultura e Pecuária, e tendo em vista o disposto no Decre...
+RESOLUÇÃO GECEX Nº 963, DE 2 DE OUTUBRO DE 2026 Altera o Anexo IX da Resolução Gecex nº 272, de 19 de novembro de 2021, para fins de inclusão de produtos na Lista de Elevações Tarifárias por Razões de Desequilíbrios Comerciais Derivados da Conjuntura Econômica Internacional. O COMITÊ-EXECUTIVO DE GESTÃO DA CÂMARA DE COMÉRCIO EXTERIOR, no uso da atribuição que lhe confere o art. 6º,caput, inciso IV...
 
 - 1. Seção 1
-2. Ministério da Agricultura e Pecuária
-3. Secretaria Executiva
-4. Subsecretaria de Governança das Superintendências
-5. Superintendência de Agricultura e Pecuária do Estado de São Paulo
-6. Edição Nº 186 de 01/10/2026 - Pág. 7
+2. Presidência da República
+3. Câmara de Comércio Exterior
+4. Comitê-Executivo de Gestão
+5. Edição Nº 188 de 05/10/2026 - Pág. 12
 
-##### [Portaria SFA-SP/MAPA Nº 1.010, DE 29 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-sp/mapa-n-1.010-de-29-de-setembro-de-2026-735706126)
+##### [RESOLUÇÃO GECEX Nº 966, DE 2 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-gecex-n-966-de-2-de-outubro-de-2026-736291968)
 
-Portaria SFA-SP/MAPA Nº 1.010, DE 29 DE SETEMBRO DE 2026 O SUPERINTENDENTE DE AGRICULTURA E PECUÁRIA NO ESTADO DE SÃO PAULO - SUBSTITUTO, no uso das atribuições que lhe confere o art. 40 e o art. 49 do Anexo I ao Decreto nº 12.642, de 1º de outubro de 2025, o art. 262 do Anexo à Portaria nº 561, de 11 de abril de 2018, do Ministério da Agricultura e Pecuária, e tendo em vista o disposto na Instruç...
-
-- 1. Seção 1
-2. Ministério da Agricultura e Pecuária
-3. Secretaria Executiva
-4. Subsecretaria de Governança das Superintendências
-5. Superintendência de Agricultura e Pecuária do Estado do Espírito Santo
-6. Edição Nº 186 de 01/10/2026 - Pág. 7
-
-##### [Portaria SFA-ES Nº 569, DE 29 DE Setembro DE 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-es-n-569-de-29-de-setembro-de-2026-735712377)
-
-Portaria SFA-ES Nº 569, DE 29 DE Setembro DE 2026 O SUPERINTENDENTE DE AGRICULTURA E PECUÁRIA NO ESTADO DO ESPÍRITO SANTO, no uso das atribuições que lhe confere o art. 40 e o art. 49 do Anexo I ao Decreto no 12.642, de 1º de outubro de 2025, o art. 262 do Anexo à Portaria nº 561, de 11 de abril de 2018, do Ministério da Agricultura e Pecuária, e tendo em vista o disposto na Instrução Normativa nº...
+RESOLUÇÃO GECEX Nº 966, DE 2 DE OUTUBRO DE 2026 Dispõe sobre a apreciação do pedido de reconsideração apresentado pela Associação Brasileira de Produtores de Fibras Artificiais e Sintéticas, em face da Resolução Gecex nº 910, de 3 de junho de 2026, que aplicou direito antidumping definitivo sobre as importações de fios de poliéster, originárias da China, e suspendeu, em razão de interesse público,...
 
 - 1. Seção 1
-2. Ministério da Agricultura e Pecuária
-3. Secretaria Executiva
-4. Subsecretaria de Governança das Superintendências
-5. Superintendência de Agricultura e Pecuária do Estado do Paraná
-6. Edição Nº 186 de 01/10/2026 - Pág. 8
+2. Presidência da República
+3. Câmara de Comércio Exterior
+4. Comitê-Executivo de Gestão
+5. Edição Nº 188 de 05/10/2026 - Pág. 8
 
-##### [PORTARIA SFA-PR/MAPA Nº 1.272, DE 29 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-pr/mapa-n-1.272-de-29-de-setembro-de-2026-735707322)
+##### [RESOLUÇÃO GECEX Nº 965, DE 2 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-gecex-n-965-de-2-de-outubro-de-2026-736310752)
 
-PORTARIA SFA-PR/MAPA Nº 1.272, DE 29 DE SETEMBRO DE 2026 O SUPERINTENDENTE DE AGRICULTURA E PECUÁRIA NO PARANÁ, no uso das atribuições que lhe confere os artigos 40 e 49 do Anexo I do Decreto nº 12642, de 1º de outubro de 2025; o Art. 262 do Regimento Interno da Secretaria Executiva do Ministério da Agricultura e Pecuária, aprovado pela Portaria nº 561, de 11 de abril de 2018; e tendo em vista o d...
+RESOLUÇÃO GECEX Nº 965, DE 2 DE OUTUBRO DE 2026 Dispõe sobre a apreciação do pedido de reconsideração apresentado pela Associação Brasileira de Produtores de Fibras Artificiais e Sintéticas, em face da Resolução Gecex nº 908, de 3 de junho de 2026, que aplicou direito antidumping definitivo às importações brasileiras de fios de náilon, originárias da produtora/exportadora chinesa Yiwu Huading Nylo...
 
 - 1. Seção 1
-2. Ministério da Agricultura e Pecuária
-3. Secretaria Executiva
-4. Subsecretaria de Governança das Superintendências
-5. Superintendência de Agricultura e Pecuária do Estado do Piauí
-6. Edição Nº 186 de 01/10/2026 - Pág. 8
+2. Presidência da República
+3. Câmara de Comércio Exterior
+4. Comitê-Executivo de Gestão
+5. Edição Nº 188 de 05/10/2026 - Pág. 20
 
-##### [Portaria SFA-PI/SE/MAPA nº 171, de 30 de setembro de 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-pi/se/mapa-n-171-de-30-de-setembro-de-2026-735710671)
+##### [RESOLUÇÃO GECEX Nº 968, DE 2 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-gecex-n-968-de-2-de-outubro-de-2026-736298098)
 
-Portaria SFA-PI/SE/MAPA nº 171, de 30 de setembro de 2026 O SUPERINTENDENTE FEDERAL DE AGRICULTURA E PECUÁRIA NO ESTADO DO PIAUÍ, no uso das atribuições que lhe confere o art. 292 do Regimento Interno da Secretaria Executiva do Ministério da Agricultura e Pecuária, aprovado pela Portaria nº 561, de 11 de abril de 2018, os arts. 40 e 49 do Anexo I ao Decreto nº 12.642, de 1º de outubro de 2025, o d...
+RESOLUÇÃO GECEX Nº 968, DE 2 DE OUTUBRO DE 2026 Dispõe sobre a apreciação do pedido de reconsideração apresentado pela Associação Nacional de Fabricantes de Produtos Eletroeletrônicos, em face da Resolução Gecex nº 856, de 13 de fevereiro de 2026, que aplicou direito antidumping definitivo, por um prazo de até cinco anos, às importações brasileiras de laminados planos revestidos, originárias da Ch...
+
+- 1. Seção 1
+2. Presidência da República
+3. Câmara de Comércio Exterior
+4. Comitê-Executivo de Gestão
+5. Edição Nº 188 de 05/10/2026 - Pág. 5
+
+##### [RESOLUÇÃO GECEX Nº 964, DE 2 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-gecex-n-964-de-2-de-outubro-de-2026-736307170)
+
+RESOLUÇÃO GECEX Nº 964, DE 2 DE OUTUBRO DE 2026 Dispõe sobre a apreciação do pedido de reconsideração apresentado pela Aperam Inox América do Sul, em face da Resolução Gecex nº 857, de 20 de fevereiro de 2026, que alterou, em razão de interesse público, o direito antidumping definitivo aplicado às importações brasileiras de aço GNO, originárias da Alemanha, da China, da Coreia do Sul e de Taipé Ch...
+
+- 1. Seção 1
+2. Presidência da República
+3. Câmara de Comércio Exterior
+4. Comitê-Executivo de Gestão
+5. Edição Nº 188 de 05/10/2026 - Pág. 14
+
+##### [RESOLUÇÃO GECEX Nº 967, DE 2 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-gecex-n-967-de-2-de-outubro-de-2026-736309034)
+
+RESOLUÇÃO GECEX Nº 967, DE 2 DE OUTUBRO DE 2026 Dispõe sobre a apreciação dos pedidos de reconsideração apresentados pela produtora/exportadora chinesa Baoshan Iron & Steel Co., Ltd. e pelas importadoras Nidec Global Appliance Brasil Ltda. e WEG Equipamentos Elétricos S.A., em face da Resolução Gecex nº 854, de 12 de fevereiro de 2026, que aplicou direito antidumping definitivo, por um prazo de at...
 
 12345 **Próximo »**
 

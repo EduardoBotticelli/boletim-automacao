@@ -258,6 +258,20 @@ Compartilhe:
 
 [Edital de Chamamento](https://www.gov.br/mme/pt-br/acesso-a-informacao/licitacoes-e-contratos/edital-de-chamamento)
 
+[Servidores (ou Empregados Públicos)](https://www.gov.br/mme/pt-br/acesso-a-informacao/servidores)
+
+[Servidores (ou Empregados)](https://www.gov.br/mme/pt-br/acesso-a-informacao/servidores/servidores-1)
+
+[Aposentados e Pensionistas](https://www.gov.br/mme/pt-br/acesso-a-informacao/servidores/aposentados-e-pensionistas)
+
+[Concursos Públicos](https://www.gov.br/mme/pt-br/acesso-a-informacao/servidores/concursos-publicos)
+
+[Relação Completa de Empregados Terceirizados](https://www.gov.br/mme/pt-br/acesso-a-informacao/servidores/terceirizados)
+
+[Força de Trabalho Durante a Pandemia](https://www.gov.br/mme/pt-br/acesso-a-informacao/servidores/forca-de-trabalho-durante-a-pandemia)
+
+[Programa de Gestão PGD-MME](https://www.gov.br/mme/pt-br/acesso-a-informacao/servidores/programa-de-gestao-pgd-mme)
+
 [Informações Classificadas](https://www.gov.br/mme/pt-br/acesso-a-informacao/informacoes-classificadas)
 
 [Formulários para Pedido de Desclassificação](https://www.gov.br/mme/pt-br/acesso-a-informacao/informacoes-classificadas/formularios-para-pedido-de-desclassificacao)

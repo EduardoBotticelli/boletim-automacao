@@ -1,5 +1,29 @@
 id="content-core">
 
+[Nova versão do SIGMINE Mapa Interativo amplia acesso a dados e análises espaciais da mineração](https://www.gov.br/anm/pt-br/assuntos/noticias/nova-versao-do-sigmine-mapa-interativo-amplia-acesso-a-dados-e-analises-espaciais-da-mineracao)
+
+O sistema passou por atualização e permite visualização, consulta e cruzamento de dados espaciais
+
+tags:
+
+[Noticias_](https://www.gov.br/anm/@@search?SearchableText=Noticias_)
+
+[Mineração](https://www.gov.br/anm/@@search?SearchableText=Mineração)
+
+[Agência Nacional de Mineração](https://www.gov.br/anm/@@search?SearchableText=Agência%20Nacional%20de%20Mineração)
+
+[ANM](https://www.gov.br/anm/@@search?SearchableText=ANM)
+
+[SIGMINE](https://www.gov.br/anm/@@search?SearchableText=SIGMINE)
+
+publicado
+
+01/10/2026
+
+16h32
+
+Notícia
+
 [Nova súmula estabelece IPI como marco objetivo para cobrança da CFEM](https://www.gov.br/anm/pt-br/assuntos/noticias/nova-sumula-estabelece-ipi-como-marco-objetivo-para-cobranca-da-cfem)
 
 Entendimento resolve controvérsia sobre momento em que royalties devem incidir sobre produtos industrializados e vale para ações com fato gerador até 11/2017
@@ -787,38 +811,6 @@ publicado
 03/09/2026
 
 15h50
-
-Notícia
-
-[Royalties da mineração: projeto de IA para controle de prazos avança](https://www.gov.br/anm/pt-br/assuntos/noticias/royalties-da-mineracao-projeto-de-ia-para-controle-de-prazos-avanca)
-
-Entre as cinco iniciativas selecionadas no país, solução desenvolvida em programa da Enap entra na fase de desenvolvimento em ciclos rápidos e criação de uma primeira versão funcional da ferramenta.
-
-tags:
-
-[Noticias_](https://www.gov.br/anm/@@search?SearchableText=Noticias_)
-
-[Mineração](https://www.gov.br/anm/@@search?SearchableText=Mineração)
-
-[Agência Nacional de Mineração](https://www.gov.br/anm/@@search?SearchableText=Agência%20Nacional%20de%20Mineração)
-
-[ANM](https://www.gov.br/anm/@@search?SearchableText=ANM)
-
-[CFEM](https://www.gov.br/anm/@@search?SearchableText=CFEM)
-
-[Royalties da Mineração](https://www.gov.br/anm/@@search?SearchableText=Royalties%20da%20Mineração)
-
-[Arrecadação](https://www.gov.br/anm/@@search?SearchableText=Arrecadação)
-
-[Fiscalização](https://www.gov.br/anm/@@search?SearchableText=Fiscalização)
-
-[Prêmio ENAP](https://www.gov.br/anm/@@search?SearchableText=Prêmio%20ENAP)
-
-publicado
-
-02/09/2026
-
-18h02
 
 Notícia
 

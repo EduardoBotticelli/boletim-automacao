@@ -18,7 +18,7 @@ Geração (1)
 
 Mercado (1)
 
-1 Documentos listados
+2 Documentos listados
 
 Ordenados por
 
@@ -36,17 +36,25 @@ Resultados por página
 
 NOTICIAS
 
-[Confira a apresentação e o vídeo do Encontro do PLD realizado em 26/09](https://www.ccee.org.br/-/confira-a-apresentacao-e-o-video-do-encontro-do-pld-realizado-em-26-09)
+[Padronização do cadastro das unidades consumidoras amplia segurança nos processos de migração para o mercado livre](https://www.ccee.org.br/-/padronizacao-do-cadastro-das-unidades-consumidoras-amplia-seguranca-nos-processos-de-migracao-para-o-mercado-livre)
 
-Evento apresentou análises de comportamento do preço e projeções
+Atuação conjunta da CCEE e das distribuidoras aprimora o cruzamento de informações e a prevenção de registros em duplicidade
 
-Publicado em: 30/09/2026
+Publicado em: 02/10/2026
+
+NOTICIAS
+
+[CCEE consolida avanço da abertura do mercado livre de energia com 811 novas adesões em agosto](https://www.ccee.org.br/-/ccee-consolida-avanco-da-abertura-do-mercado-livre-de-energia-com-811-novas-adesoes-em-agosto)
+
+São Paulo destacou-se com 218 migrações, seguido por Goiás (87), Bahia (84) e Rio Grande do Sul (55)
+
+Publicado em: 02/10/2026
 
 1 de 1
 
 Loading...
 
-[Mapa do site](https://www.ccee.org.br/busca-ccee?q=&dtIni=30%2F09%2F2026&dtFim=01%2F10%2F2026&structure=ccee-noticias&ordenacao=Mais%20recentes)
+[Mapa do site](https://www.ccee.org.br/busca-ccee?q=&dtIni=02%2F10%2F2026&dtFim=05%2F10%2F2026&structure=ccee-noticias&ordenacao=Mais%20recentes)
 
 Menu de Navegação
 

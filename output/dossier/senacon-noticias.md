@@ -1,5 +1,29 @@
 id="content-core">
 
+FISCALIZAÇÃO
+
+[Governo Federal amplia fiscalização contra bets ilegais](https://www.gov.br/mj/pt-br/assuntos/noticias-1/governo-federal-amplia-fiscalizacao-contra-bets-ilegais)
+
+Novo departamento na Senacon reforça atuação do MJSP; saldo nas plataformas cai 31%
+
+tags:
+
+[BETS](https://www.gov.br/mj/@@search?SearchableText=BETS)
+
+[SENACON](https://www.gov.br/mj/@@search?SearchableText=SENACON)
+
+[SEDIGI](https://www.gov.br/mj/@@search?SearchableText=SEDIGI)
+
+[SPA](https://www.gov.br/mj/@@search?SearchableText=SPA)
+
+publicado
+
+02/10/2026
+
+16h51
+
+Notícia
+
 CONSUMIDOR
 
 [Museu Nacional de Belas Artes reabre duas salas revitalizadas com recursos do FDD](https://www.gov.br/mj/pt-br/assuntos/noticias-1/museu-nacional-de-belas-artes-reabre-duas-salas-revitalizadas-com-recursos-do-fdd)
@@ -667,32 +691,6 @@ publicado
 23/07/2026
 
 09h32
-
-Notícia
-
-CONSUMIDOR
-
-[Ministério da Justiça e Segurança Pública firma acordo de cooperação com o Conar para atuação conjunta na publicidade digital](https://www.gov.br/mj/pt-br/assuntos/noticias-1/ministerio-da-justica-e-seguranca-publica-firma-acordo-de-cooperacao-com-o-conar-para-atuacao-conjunta-na-publicidade-digital)
-
-Instrumento prevê canal para análise de anúncios, monitoramento conjunto de publicidade dirigida a grupos vulneráveis e capacitação de Procons
-
-tags:
-
-[SEDIGI](https://www.gov.br/mj/@@search?SearchableText=SEDIGI)
-
-[SENACON](https://www.gov.br/mj/@@search?SearchableText=SENACON)
-
-[SNDC](https://www.gov.br/mj/@@search?SearchableText=SNDC)
-
-[CONAR](https://www.gov.br/mj/@@search?SearchableText=CONAR)
-
-[PUBLICIDADE DIGITAL](https://www.gov.br/mj/@@search?SearchableText=PUBLICIDADE%20DIGITAL)
-
-publicado
-
-21/07/2026
-
-19h33
 
 Notícia
 

@@ -49,6 +49,69 @@ Viagens e Turismo
 Limpar
 Aplicar
 
+FERROVIAS
+
+[Fiscalização ferroviária reforça ações de segurança durante o Setembro Amarelo](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/fiscalizacao-ferroviaria-reforca-acoes-de-seguranca-durante-o-setembro-amarelo)
+
+02/10/2026
+
+-
+Atuação da ANTT em setembro incluiu inspeções em passagens em nível, acompanhamento de obras, ações educativas e simulados de emergência em diferentes regiões do país
+
+CONCESSÕES
+
+[ANTT destaca ações de compensação ambiental e destinação de resíduos na BR-040](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-destaca-acoes-de-compensacao-ambiental-e-destinacao-de-residuos-na-br-040)
+
+02/10/2026
+
+-
+Iniciativas da EPR Via Mineira incluem recuperação da vegetação nativa, reciclagem de materiais e destinação ambientalmente adequada de resíduos
+
+CONCESSÕES
+
+[ANTT acompanha simulado de emergência realizado pela EPR Via Mineira na BR-040](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-acompanha-simulado-de-emergencia-realizado-pela-epr-via-mineira-na-br-040)
+
+02/10/2026
+
+-
+Exercício reproduziu cenário de sinistro com múltiplos veículos, vítimas e cargas perigosas, reforçando a integração entre as equipes de atendimento
+
+PARTICIPAÇÃO SOCIAL
+
+[ANTT realiza reunião participativa sobre concessão da Ecovias Rio Minas](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-realiza-reuniao-participativa-sobre-concessao-da-ecovias-rio-minas)
+
+01/10/2026
+
+-
+Encontros em Teresópolis e Nova Iguaçu reuniram 156 participantes para discutir necessidades e possíveis alterações contratuais da concessão
+
+SEGURANÇA VIÁRIA
+
+[Prevenção a incêndios ganha reforço durante período de estiagem em rodovia concedida](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/prevencao-a-incendios-ganha-reforco-durante-periodo-de-estiagem-em-rodovia-concedida)
+
+01/10/2026
+
+-
+EPR Via Mineira, fiscalizada e regulada pela a ANTT, intensifica monitoramento e conservação da faixa de domínio para reduzir riscos aos usuários
+
+ANTT EM FOCO
+
+[ANTT aprova novos projetos de concessão, atualiza o piso do frete e amplia fiscalização e segurança viária em setembro](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-aprova-novos-projetos-de-concessao-atualiza-o-piso-do-frete-e-amplia-fiscalizacao-e-seguranca-viaria-em-setembro)
+
+01/10/2026
+
+-
+Mês também teve contrato assinado para a Rota dos Sertões, nova norma para ferrovias, autorizações no transporte de passageiros e processos de participação social
+
+FISCALIZAÇÃO
+
+[Entre o asfalto, a tensão da fiscalização e o cumprimento da lei: o ponto final da Operação Marginal está no ar](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/entre-o-asfalto-a-tensao-da-fiscalizacao-e-o-cumprimento-da-lei-o-ponto-final-da-operacao-marginal-esta-no-ar)
+
+01/10/2026
+
+-
+Capítulo final da série documental da ANTT que mostra bastidores de operações de fiscalização na cidade de São Paulo alcança mais de 12 mil visualizações em menos de 24 horas
+
 TRANSPORTE DE CARGAS
 
 [ANTT atualiza coeficientes do Piso Mínimo do Frete e divulga novo preço de referência do diesel](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-atualiza-coeficientes-do-piso-minimo-do-frete-e-divulga-novo-preco-de-referencia-do-diesel)
@@ -255,69 +318,6 @@ SEMANA NACIONAL DO TRÂNSITO
 
 -
 Fiscalização, inspeções, padronização de procedimentos e tecnologia verificam se as obrigações dos contratos de concessão chegam à rodovia
-
-SEGURANÇA VIÁRIA
-
-[ANTT suspende testes de velocidade média para aprimoramento técnico; nenhum motorista foi multado](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-suspende-testes-de-velocidade-media-para-aprimoramento-tecnico-nenhum-motorista-foi-multado)
-
-18/09/2026
-
--
-Agência realizará ajustes técnicos, procedimentais e operacionais antes de definir os próximos passos do projeto
-
-ANTT NA MÍDIA
-
-[Diretor-Geral da ANTT aborda concessões, ferrovias e fiscalização em entrevista à CNN Brasil](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/diretor-geral-da-antt-aborda-concessoes-ferrovias-e-fiscalizacao-em-entrevista-a-cnn-brasil)
-
-18/09/2026
-
--
-Entrevista ao programa Conexão Infra tratou de projetos rodoviários e ferroviários, fiscalização do transporte de cargas, mecanismos contratuais e funcionamento das agências reguladoras
-
-FISCALIZAÇÃO
-
-[ANTT amplia acompanhamento das rodovias concedidas com Verificadores Independentes](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-amplia-acompanhamento-das-rodovias-concedidas-com-verificadores-independentes)
-
-18/09/2026
-
--
-Nova camada de apoio técnico fortalece a produção de dados e evidências para a fiscalização dos contratos
-
-SEGURANÇA VIÁRIA
-
-[ANTT reforça uso de dados e investigação para ampliar segurança nas rodovias](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-reforca-uso-de-dados-e-investigacao-para-ampliar-seguranca-nas-rodovias)
-
-18/09/2026
-
--
-Em seminário internacional, Agência destacou como informações sobre sinistros podem orientar fiscalização, investimentos e melhorias na infraestrutura
-
-SEMANA NACIONAL DO TRÂNSITO
-
-[Da regra ao contrato: como a ANTT coloca a segurança no centro das concessões](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/da-regra-ao-contrato-como-a-antt-coloca-a-seguranca-no-centro-das-concessoes)
-
-18/09/2026
-
--
-Programa Vias Seguras e Plano de 100 Dias mostram como a segurança viária entra nas obrigações contratuais das concessionárias de rodovias federais
-
-RODOVIAS
-
-[ANTT aprova reajuste nas tarifas de pedágio da EPR Litoral Pioneiro](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-aprova-reajuste-nas-tarifas-de-pedagio-da-epr-litoral-pioneiro)
-
-17/09/2026
-
--
-Novos valores consideram revisão contratual e variação de 4,64% do IPCA; cobrança atualizada começa em 20 de setembro
-
-OPERAÇÃO MARGINAL
-
-[Viagem parece comum, mas pode esconder riscos: novo episódio de Operação Marginal mostra fiscalização da ANTT em São Paulo](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/viagem-parece-comum-mas-pode-esconder-riscos-novo-episodio-de-operacao-marginal-mostra-fiscalizacao-da-antt-em-sao-paulo)
-
-17/09/2026
-
--
-Quarto episódio da série documental acompanha novas abordagens e revela como a fiscalização identifica irregularidades que podem passar despercebidas pelos passageiros
 
 «
 Anterior

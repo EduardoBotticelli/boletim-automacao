@@ -49,6 +49,57 @@ Viagens e Turismo
 Limpar
 Aplicar
 
+[Agendas em Sincronia integra áreas da ANTAQ na discussão sobre revisão da Agenda Regulatória](https://www.gov.br/antaq/pt-br/noticias/2026/agendas-em-sincronia-integra-areas-da-antaq-na-discussao-sobre-revisao-da-agenda-regulatoria)
+
+02/10/2026
+
+-
+Segundo encontro do ciclo discutiu contribuições recebidas pela Agência e possíveis conexões com outras frentes de atuação
+
+Tags:
+
+[Transportes](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Transportes)
+
+[Setor Aquaviário](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Setor%20Aquavi%C3%A1rio%20)
+
+[Regulação](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Regula%C3%A7%C3%A3o%20)
+
+[Workshop](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Workshop)
+
+[Pauta da 620ª Reunião Ordinária da Diretoria Colegiada é divulgada](https://www.gov.br/antaq/pt-br/noticias/2026/pauta-da-620a-reuniao-ordinaria-da-diretoria-colegiada-e-divulgada)
+
+01/10/2026
+
+-
+Sessão ocorrerá dos dias 5 a 7 de outubro virtualmente
+
+Tags:
+
+[Transportes](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Transportes)
+
+[Infraestrutura](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Infraestrutura)
+
+[Reunião Colegiada](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Reuni%C3%A3o%20Colegiada%20)
+
+[ROD](https://www.gov.br/antaq/pt-br/@@search?SearchableText=ROD)
+
+[Reunião Virtual](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Reuni%C3%A3o%20Virtual%20)
+
+[Enafis 2026 reúne fiscais para debates técnicos e atualização profissional](https://www.gov.br/antaq/pt-br/noticias/2026/enafis-2026-reune-fiscais-para-debates-tecnicos-e-atualizacao-profissional)
+
+01/10/2026
+
+-
+Encontro realizado no Paraná abordou temas relacionados à fiscalização do setor aquaviário e contou com visitas técnicas ao Complexo Portuário de Paranaguá
+
+Tags:
+
+[Infraestrutura](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Infraestrutura%20)
+
+[Setor Aquaviário](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Setor%20Aquavi%C3%A1rio%20)
+
+[Fiscalização](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Fiscaliza%C3%A7%C3%A3o%20)
+
 [Sobrestadia de contêiner: webinário tem nova data](https://www.gov.br/antaq/pt-br/noticias/sobrestadia-de-conteiner-webinario-tem-nova-data)
 
 29/09/2026
@@ -517,61 +568,6 @@ Tags:
 [Outorga](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Outorga)
 
 [Fiscalização](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Fiscaliza%C3%A7%C3%A3o)
-
-[Audiência pública reúne contribuições para concessão do SAIP Sul-Mirim](https://www.gov.br/antaq/pt-br/noticias/2026/audiencia-publica-reune-contribuicoes-para-concessao-do-saip-sul-mirim)
-
-12/08/2026
-
--
-Participantes apresentaram sugestões para aprimoramento do projeto, que segue em etapa de participação social
-
-Tags:
-
-[Transportes](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Transportes)
-
-[Infraestrutura](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Infraestrutura)
-
-[Audiência Pública](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Audi%C3%AAncia%20P%C3%BAblica)
-
-[SAIP Sul-Mirim](https://www.gov.br/antaq/pt-br/@@search?SearchableText=SAIP%20Sul-Mirim)
-
-[ANTAQ define audiência pública sobre concessão do canal de acesso ao Porto de Santos](https://www.gov.br/antaq/pt-br/noticias/2026/antaq-define-audiencia-publica-sobre-concessao-do-canal-de-acesso-ao-porto-de-santos)
-
-11/08/2026
-
--
-Sessão será realizada em 1º de setembro, às 14h, e o período de inscrições será das 9h às 15h do dia 31 de agosto
-
-Tags:
-
-[Transportes](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Transportes)
-
-[Infraestrutura](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Infraestrutura)
-
-[Política de Diversidade](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Pol%C3%ADtica%20de%20Diversidade)
-
-[Valorização de Pessoas](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Valoriza%C3%A7%C3%A3o%20de%20Pessoas)
-
-[Inovação](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Inova%C3%A7%C3%A3o)
-
-[Pauta da 616ª Reunião Ordinária da Diretoria Colegiada está disponível](https://www.gov.br/antaq/pt-br/noticias/2026/pauta-da-616a-reuniao-ordinaria-da-diretoria-colegiada-esta-disponivel)
-
-11/08/2026
-
--
-Sessão telepresencial acontece em 13/08. Interessados podem participar mediante solicitação
-
-Tags:
-
-[Transportes](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Transportes)
-
-[Infraestrutura](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Infraestrutura)
-
-[Reunião Colegiada](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Reuni%C3%A3o%20Colegiada)
-
-[ROD](https://www.gov.br/antaq/pt-br/@@search?SearchableText=ROD)
-
-[Reunião Telepresencial](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Reuni%C3%A3o%20Telepresencial)
 
 «
 Anterior

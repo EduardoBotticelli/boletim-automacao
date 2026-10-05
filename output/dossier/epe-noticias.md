@@ -64,6 +64,48 @@ Produtos/Publicações da EPE
 
 Filtrar
 
+[Plano de Outorgas do MME inclui empreendimentos com tecnologias inovadoras, resultado de estudos da EPE](https://www.epe.gov.br/pt/imprensa/noticias/plano-de-outorgas-do-mme-inclui-empreendimentos-com-tecnologias-inovadoras-resultado-de-estudos-da-epe)
+
+02/10/2026 -
+O Ministério de Minas e Energia (MME) publicou a edição de 2026 do Plano de Outorgas de Transmissão de Energia Elétrica (POTEE), que faz história ao incorporar, à lista de obras, soluções tecnológicas inovadoras desenvolvidas a partir de estudos desenvolvidos pela EPE. Entre os destaques estão o Bipolo Nordeste II e o sistema de armazenamento por baterias (BESS) da SE Cruzeiro do Sul, no Acre.
+
+[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
+[Energia Elétrica](https://www.epe.gov.br/pt/imprensa/noticias/area-3)
+[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
+
+[Planejamento da EPE inova com recomendação inédita de tecnologia DLR para transmissão de São Paulo](https://www.epe.gov.br/pt/imprensa/noticias/planejamento-da-epe-inova-com-recomendacao-inedita-de-tecnologia-dlr-para-transmissao-de-sao-paulo)
+
+02/10/2026 -
+A Empresa de Pesquisa Energética (EPE) publicou a Revisão 1 do Relatório EPE-DEE-RE-037-2025​, que apresenta uma evolução significativa para o planejamento da infraestrutura de transmissão no país. O documento consolida os estudos desenvolvidos pelas equipes técnicas da empresa e traz, de forma inédita para o planejamento setorial brasileiro, a recomendação de implantação do dispositivo Dynamic Line Rating (DLR) como uma solução estrutural. A tecnologia será aplicada na Linha de Transmissão (LT) 138 kV Mogi Guaçu - São João da Boa Vista II C1/C2, integrante da Rede DIT (Demais Instalações de Transmissão) do estado de São Paulo.
+
+[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
+[Energia Elétrica](https://www.epe.gov.br/pt/imprensa/noticias/area-3)
+[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
+
+[Estudo da EPE apresentado no terceiro dia da ROG.e 2026 é selecionado como um dos melhores do evento](https://www.epe.gov.br/pt/imprensa/noticias/estudo-da-epe-apresentado-no-terceiro-dia-da-rog-e-2026-e-selecionado-como-um-dos-melhores-do-evento)
+
+02/10/2026 -
+Em 23 de setembro, a Empresa de Pesquisa Energética (EPE) participou do terceiro dia da Rio Oil & Gas (ROG.e) 2026, com extensa programação no congresso e em nosso estande na feira. Organizado pelo Instituto Brasileiro de Petróleo, Gás e Biocombustíveis (IBP), o evento reuniu líderes do setor de energia para debater gás, biocombustíveis, biometano, transição energética, mercado livre, descarbonização, captura de carbono, inovação e novas oportunidades de negócios.
+
+[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
+[Petróleo, Gás Natural e Biocombustíveis](https://www.epe.gov.br/pt/imprensa/noticias/area-4)
+
+[EPE publica “Estudo de Atendimento à Região Sul do Rio Grande do Sul” com soluções para aumento da resiliência da infraestrutura local diante de eventos climáticos extremos](https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-estudo-de-atendimento-a-regiao-sul-do-rio-grande-do-sul-com-solucoes-para-aumento-da-resiliencia-da-infraestrutura-local-diante-de-eventos-climaticos-extremos)
+
+02/10/2026 -
+A Empresa de Pesquisa Energética (EPE) concluiu o Estudo de Atendimento à Região Sul do Rio Grande do Sul​, que identifica necessidades de expansão da infraestrutura elétrica da região e recomenda um conjunto de obras nos sistemas de transmissão e distribuição. O objetivo é preparar a rede para o crescimento da demanda, ampliar a confiabilidade do fornecimento de energia e criar alternativas de atendimento para os consumidores da região.
+
+[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
+[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
+[Energia Elétrica](https://www.epe.gov.br/pt/imprensa/noticias/area-3)
+
+[EPE lança Canal de notícias no Whatsapp](https://www.epe.gov.br/pt/imprensa/noticias/epe-lanca-canal-de-noticias-no-whatsapp)
+
+01/10/2026 -
+A EPE agora está no Whatsapp! Com o novo Canal de notícias da EPE no Whatsapp, é possível ter acesso rápido a lançamentos de estudos, ter informações sobre eventos e seminários, bastidores dos estudos, análises de conjuntura e conteúdos que ajudam a entender como o planejamento energético impacta o Brasil.
+
+[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
+
 [EPE, ONS E ANEEL divulgam nota tecnica que contempla os quantitativos da capacidade remanescente para conexao de sistemas de armazenamento de energia no ambito dos leiloes de reserva de capacidade 2026](https://www.epe.gov.br/pt/imprensa/noticias/epe-ons-e-aneel-divulgam-nota-tecnica-que-contempla-os-quantitativos-da-capacidade-remanescente-para-conexao-de-sistemas-de-armazenamento-de-energia-no-ambito-dos-leiloes-de-reserva-de-capacidade-2026)
 
 30/09/2026 -
@@ -108,50 +150,6 @@ Nos dias 17 e 18 de setembro, a Diretoria de Estudos do Petróleo, Gás e Biocom
 
 [Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
 [Petróleo, Gás Natural e Biocombustíveis](https://www.epe.gov.br/pt/imprensa/noticias/area-4)
-
-[Plano Nacional de Energia 2055 é aprovado e aponta caminhos para um sistema energético mais limpo, resiliente e competitivo](https://www.epe.gov.br/pt/imprensa/noticias/plano-nacional-de-energia-2055-e-aprovado-e-aponta-caminhos-para-um-sistema-energetico-mais-limpo-resiliente-e-competitivo)
-
-30/09/2026 -
-O Ministério de Minas e Energia (MME) publicou, em edição extra do Diário Oficial da União de terça-feira (29/09), a Portaria MME nº 938/2026, que aprova o Plano Nacional de Energia (PNE) 2055. Elaborado em conjunto com a Empresa de Pesquisa Energética (EPE), o documento traça cenários para o futuro energético do Brasil e aponta o potencial de forte expansão da oferta interna de energia nas próximas três décadas. Segundo as projeções, a oferta pode dobrar até 2055, enquanto a participação das fontes renováveis pode superar 80% da matriz energética nacional.
-
-[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
-[Planejamento Energético](https://www.epe.gov.br/pt/imprensa/noticias/area-6)
-[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
-
-[EPE publica caderno do estudo de estimativa volumétrica da Bacia de Pelotas](https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-caderno-do-estudo-de-estimativa-volumetrica-da-bacia-de-pelotas)
-
-29/09/2026 -
-A Empresa de Pesquisa Energética (EPE) lançou o Caderno de Estudos "Estimativa Volumétrica da Bacia Pelotas" durante a Rio Oil & Gas (ROG.e) 2026, evento realizado no Rio de Janeiro entre os dias 21 e 24 de setembro. O estudo integra um projeto de análises das Bacias Sedimentares brasileiras, iniciado pela Diretoria de Estudos do Petróleo, Gás Natural e Biocombustíveis da EPE em 2022, que busca ampliar o conhecimento técnico sobre os recursos de petróleo e gás no país.
-
-[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
-[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
-[Petróleo, Gás Natural e Biocombustíveis](https://www.epe.gov.br/pt/imprensa/noticias/area-4)
-
-[EPE participa do Smart Energy 2026](https://www.epe.gov.br/pt/imprensa/noticias/epe-participa-do-smart-energy-2026)
-
-28/09/2026 -
-Nos dias 22 e 23 de setembro, a Empresa de Pesquisa Energética (EPE) participou do Smart Energy 2026, realizado em Curitiba simultaneamente ao Fórum de Eficiência Energética. A proposta do evento é criar um espaço de articulação entre indústria, academia e setor público, com foco na transição energética e na inovação tecnológica.
-
-[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
-[Energia Elétrica](https://www.epe.gov.br/pt/imprensa/noticias/area-3)
-[Planejamento Energético](https://www.epe.gov.br/pt/imprensa/noticias/area-6)
-
-[EPE participa de Fórum China-Brasil de Inteligência Artificial para Sistemas de Potência do Futuro](https://www.epe.gov.br/pt/imprensa/noticias/epe-participa-de-forum-china-brasil-de-inteligencia-artificial-para-sistemas-de-potencia-do-futuro)
-
-28/09/2026 -
-No dia 21 de setembro, a Empresa de Pesquisa Energética (EPE) participou do Fórum China-Brasil de Inteligência Artificial para Sistemas de Potência do Futuro, realizado em conjunto com o 6º Seminário Técnico da EISA (Electric Innovation and Sharing Alliance) na Pontifícia Universidade Católica do Rio de Janeiro.
-
-[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
-[Planejamento Energético](https://www.epe.gov.br/pt/imprensa/noticias/area-6)
-
-[Soluções de baixo carbono são tema de debate no segundo dia de ROG.e](https://www.epe.gov.br/pt/imprensa/noticias/solucoes-de-baixo-carbono-sao-tema-de-debate-no-segundo-dia-de-rog-e)
-
-28/09/2026 -
-O segundo dia de ROG.e contou com a participação do presidente da EPE, Thiago Prado, na mesa “Implementação das políticas públicas e regulamentos para diversidade energética e soluções de baixo carbono no Brasil". Um dos maiores eventos sobre óleo e gás da América Latina, a ROG.e foi realizada de 21 a 24 de setembro, no Riocentro, na Barra da Tijuca. A EPE participou da feira com um estande, apresentação de mais de 20 trabalhos e debates sobre o setor.
-
-[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
-[Petróleo, Gás Natural e Biocombustíveis](https://www.epe.gov.br/pt/imprensa/noticias/area-4)
-[Planejamento Energético](https://www.epe.gov.br/pt/imprensa/noticias/area-6)
 
 «
 

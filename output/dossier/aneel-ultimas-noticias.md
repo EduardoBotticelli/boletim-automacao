@@ -49,6 +49,24 @@ Viagens e Turismo
 Limpar
 Aplicar
 
+DISTRIBUIÇÃO
+
+[ANEEL abre Tomadas de Subsídios sobre limites de DEC e FEC de 14 distribuidoras](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-abre-tomadas-de-subsidios-sobre-limites-de-dec-e-fec-de-14-distribuidoras)
+
+02/10/2026
+
+-
+Interessados tem prazo entre 1º e 30 de outubro para mandar sugestões por e-mail
+
+GERAÇÃO
+
+[Tomada de Subsídios aberta para aprimoramento da estrutura de dados da BDGD](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/tomada-de-subsidios-aberta-para-aprimoramento-da-estrutura-de-dados-da-bdgd)
+
+01/10/2026
+
+-
+Contribuições serão aceitas a partir desta quinta-feira (1º/10) até 30 de outubro
+
 ARMAZENAMENTO
 
 [ANEEL, ONS e EPE divulgam nota técnica sobre capacidade para conexão de sistemas de armazenamento nos Leilões de Reserva de Capacidade 2026](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-ons-e-epe-divulgam-nota-tecnica-sobre-capacidade-para-conexao-de-sistemas-de-armazenamento-nos-leiloes-de-reserva-de-capacidade-2026)
@@ -300,24 +318,6 @@ Participação Pública
 
 -
 O evento reuniu cerca de 70 pessoas, em Brasília. As contribuições podem ser enviadas por e-mail até o dia 14/9.
-
-GERAÇÃO
-
-[Termelétrica Manaus I inicia operação comercial parcial com 114,8 MW](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/termeletrica-manaus-i-inicia-operacao-comercial-parcial-com-114-8-mw)
-
-01/09/2026
-
--
-Duas unidades da usina começam a operar antecipadamente; terceira turbina está prevista para dezembro
-
-Bandeira tarifária
-
-[ANEEL mantém bandeira tarifária amarela em setembro](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-mantem-bandeira-tarifaria-amarela-em-setembro)
-
-28/08/2026
-
--
-Condições menos favoráveis de geração de energia mantém cobrança adicional de R$ 1,885 na conta de luz a cada 100 quilowatts-hora (kWh) consumidos
 
 «
 Anterior

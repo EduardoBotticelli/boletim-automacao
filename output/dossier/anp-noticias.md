@@ -49,6 +49,84 @@ Viagens e Turismo
 Limpar
 Aplicar
 
+Fiscalização
+
+[ANP fiscaliza agentes em 18 estados no período de 28/9 a 2/10](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-fiscaliza-agentes-em-18-estados-no-periodo-de-28-9-a-2-10)
+
+02/10/2026
+
+-
+Os fiscais verificaram o cumprimento das normas da Agência.
+
+Energia, Minerais e Combustíveis
+
+[ANP debate normas de controle de qualidade dos combustíveis em workshop](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-debate-normas-de-controle-de-qualidade-dos-combustiveis-em-workshop)
+
+02/10/2026
+
+Energia, Minerais e Combustíveis
+
+[Gás natural: ANP define a Base Regulatória de Ativos de abertura de cinco transportadoras](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/gas-natural-anp-define-a-base-regulatoria-de-ativos-de-abertura-de-cinco-transportadoras)
+
+02/10/2026
+
+-
+Trata-se da segunda das três fases do plano de ação definido pela Agência referente às tarifas de transporte em gasodutos
+
+Energia, Minerais e Combustíveis
+
+[ANP sedia um dos principais encontros de reguladores de segurança operacional do mundo](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-sedia-um-dos-principais-encontros-reguladores-de-seguranca-operacional-do-mundo)
+
+02/10/2026
+
+Energia, Minerais e Combustíveis
+
+[ANP aprova delimitação de 11 novos setores exploratórios nas bacias da Margem Equatorial](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-aprova-delimitacao-de-11-novos-setores-exploratorios-nas-bacias-da-margem-equatorial)
+
+02/10/2026
+
+-
+Áreas abrangem cerca de 380 mil km² da extensão da Plataforma Continental Brasileira e contam com 501 novos blocos exploratórios
+
+Energia, Minerais e Combustíveis
+
+[Revisão das regras de segurança operacional na exploração e produção será tema de consulta e audiência públicas](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/revisao-das-regras-de-seguranca-operacional-na-exploracao-e-producao-sera-tema-de-consulta-e-audiencia-publicas)
+
+02/10/2026
+
+-
+Proposta incorpora ajustes decorrentes de processo anterior de participação social
+
+Energia, Minerais e Combustíveis
+
+[ANP revisa resolução sobre aquisição de dados técnicos](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-revisa-resolucao-sobre-aquisicao-de-dados-tecnicos)
+
+02/10/2026
+
+-
+O objetivo é adequar o marco normativo às novas competências legais atribuídas à Agência
+
+Energia, Minerais e Combustíveis
+
+[Acesso de terceiros a gasodutos de escoamento e instalações de processamento de gás natural é debatido em audiência pública](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/acesso-de-terceiros-a-gasodutos-de-escoamento-e-instalacoes-de-processamento-de-gas-natural-e-debatido-em-audiencia-publica)
+
+02/10/2026
+
+-
+Minuta de resolução sobre o tema incorpora diretrizes previstas na regulamentação da Nova Lei do Gás
+
+Energia, Minerais e Combustíveis
+
+[ANP recebe contribuições sobre revisão da norma para registro de graxas e óleos lubrificantes comercializados no Brasil](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-recebe-contribuicoes-sobre-revisao-da-norma-para-registro-de-graxas-e-oleos-lubrificantes-comercializados-no-brasil)
+
+01/10/2026
+
+Energia, Minerais e Combustíveis
+
+[ANP divulga dados consolidados da produção de petróleo e gás em agosto de 2026](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-divulga-dados-consolidados-da-producao-de-petroleo-e-gas-em-agosto-de-2026)
+
+01/10/2026
+
 Energia, Minerais e Combustíveis
 
 [ANP realiza 2° Workshop para debater Gas Release](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-realiza-2deg-workshop-para-debater-gas-release)
@@ -204,84 +282,6 @@ Energia, Minerais e Combustíveis
 
 -
 Agência terá estande na feira e representantes no congresso
-
-Energia, Minerais e Combustíveis
-
-[ANP segue acompanhando a participação do diesel S500 em todas as regiões do país](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-segue-acompanhando-a-participacao-do-diesel-s500-em-todas-as-regioes-do-pais)
-
-17/09/2026
-
--
-Infográfico apresenta dados nacionais e regionais sobre as vendas de óleo diesel S500 no primeiro semestre de 2026
-
-Energia, Minerais e Combustíveis
-
-[ANP firma acordo com o Procon de Parauapebas (PA) para fiscalização do abastecimento no município](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-firma-acordo-com-o-procon-de-parauapebas-pa-para-fiscalizacao-do-abastecimento-no-municipio)
-
-17/09/2026
-
--
-Agência mantém parcerias com órgãos públicos de todo o Brasil.
-
-Energia, Minerais e Combustíveis
-
-[Oferta Permanente: divulgadas as sequências das ofertas do 6º Ciclo da OPC e do 4º Ciclo da OPP](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/oferta-permanente-divulgadas-as-sequencias-das-ofertas-do-6o-ciclo-da-opc-e-do-4o-ciclo-da-opp)
-
-17/09/2026
-
-Energia, Minerais e Combustíveis
-
-[ANP e FGV Energia realizam workshop hoje (17/9) sobre regulação experimental](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-e-fgv-energia-realizam-workshop-hoje-17-9-sobre-regulacao-experimental)
-
-17/09/2026
-
--
-Encontro apresentará proposta para regulação experimental no setor de petróleo e gás; transmissão será ao vivo pelo YouTube.
-
-RENOVABIO
-
-[RenovaBio: ANP prorroga prazo para recebimento de contribuições sobre as novas versões da RenovaCalc](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/renovabio-anp-prorroga-prazo-para-recebimento-de-contribuicoes-sobre-as-novas-versoes-da-renovacalc)
-
-11/09/2026
-
--
-Interessados poderão encaminhar manifestações até 16/10/2026
-
-Energia, Minerais e Combustíveis
-
-[Levantamento de Preços de Combustíveis (6 a 12/9) será publicado na segunda (14/9)](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/levantamento-de-precos-de-combustiveis-6-a-12-9-sera-publicado-na-segunda-14-9)
-
-11/09/2026
-
-Energia, Minerais e Combustíveis
-
-[Comunicado: ANP implementará o Gov.BR Nível Ouro para acesso aos sistemas SRD-GLP e SPA](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/comunicado-anp-implementara-o-gov-br-nivel-ouro-para-acesso-aos-sistemas-srd-glp-e-spa)
-
-09/09/2026
-
-Energia, Minerais e Combustíveis
-
-[ANP tomará medidas para coibir desvio do etanol hidratado para fabricação clandestina de bebidas](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-tomara-medidas-para-coibir-desvio-do-etanol-hidratado-para-fabricacao-clandestina-de-bebidas)
-
-08/09/2026
-
--
-Estudo sobre o tema foi aprovado pela Diretoria da Agência
-
-Energia, Minerais e Combustíveis
-
-[Prêmio ANP de Inovação Tecnológica: live amanhã (09/09) esclarecerá dúvidas para interessados em se candidatar](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/premio-anp-de-inovacao-tecnologica-live-amanha-09-09-esclarecera-duvidas-para-interessados-em-se-candidatar)
-
-08/09/2026
-
-Energia, Minerais e Combustíveis
-
-[Operação da ANP no Rio Grande do Sul, em parceria com a Polícia Civil, apreende 14.281 litros de combustíveis líquidos](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/operacao-da-anp-no-rio-grande-do-sul-em-parceria-com-a-policia-civil-apreende-14-281-litros-de-combustiveis-liquidos)
-
-04/09/2026
-
--
-Houve ações em 17 estados, realizadas entre 31/8 e 4/9, nas quais foi verificado o cumprimento das normas da Agência.
 
 «
 Anterior

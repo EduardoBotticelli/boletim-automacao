@@ -49,6 +49,56 @@ Viagens e Turismo
 Limpar
 Aplicar
 
+NOTA OFICIAL
+
+[Mapa disponibiliza 14,5 milhões de doses de vacinas contra clostridioses em setembro](https://www.gov.br/agricultura/pt-br/assuntos/noticias/mapa-disponibiliza-14-5-milhoes-de-doses-de-vacinas-contra-clostridioses-em-setembro)
+
+02/10/2026
+
+-
+Balanço mensal reúne produtos nacionais e importados destinados ao mercado brasileiro
+
+EL NIÑO
+
+[Mapa lança página com informações e orientações sobre os impactos do El Niño no agro](https://www.gov.br/agricultura/pt-br/assuntos/noticias/mapa-lanca-pagina-com-informacoes-e-orientacoes-sobre-os-impactos-do-el-nino-no-agro)
+
+02/10/2026
+
+-
+Iniciativa reúne informações sobre clima, crédito rural, seguro rural, Zarc, assistência técnica e ferramentas para prevenção e gestão de riscos no campo
+
+DEFESA AGROPECUÁRIA
+
+[Praga quarentenária é interceptada em Guarulhos em carga de caquis da Espanha](https://www.gov.br/agricultura/pt-br/assuntos/noticias/praga-quarentenaria-e-interceptada-em-guarulhos-em-carga-de-caquis-da-espanha)
+
+01/10/2026
+
+-
+Vigiagro identificou Liposcelis decolor durante inspeção no aeroporto; espécie está associada principalmente a embalagens e materiais utilizados no transporte e armazenamento de alimentos
+
+Tags:
+
+[São Paulo](https://www.gov.br/agricultura/pt-br/@@search?SearchableText=S%C3%A3o%20Paulo)
+
+NOTA CONJUNTA MAPA/MRE
+
+[Abertura de mercados para produtos brasileiros no Kuwait, Nicarágua, Síria e Bangladesh](https://www.gov.br/agricultura/pt-br/assuntos/noticias/abertura-de-mercados-para-produtos-brasileiros-no-kuwait-nicaragua-siria-e-bangladesh)
+
+01/10/2026
+
+DEFESA AGROPECUÁRIA
+
+[Mapa viabiliza exportação de genética bovina leiteira para Botsuana](https://www.gov.br/agricultura/pt-br/assuntos/noticias/mapa-viabiliza-exportacao-de-genetica-bovina-leiteira-para-botsuana)
+
+01/10/2026
+
+-
+Gado Girolando alia produtividade e rusticidade, características adequadas às regiões tropicais; país produz apenas 10% do leite que consome
+
+Tags:
+
+[São Paulo](https://www.gov.br/agricultura/pt-br/@@search?SearchableText=S%C3%A3o%20Paulo)
+
 Nota Conjunta MAPA/MRE
 
 [Abertura de mercados para produtos brasileiros em Antígua e Barbuda, Chile, Argélia, China e Paraguai](https://www.gov.br/agricultura/pt-br/assuntos/noticias/abertura-de-mercados-para-produtos-brasileiros-em-antigua-e-barbuda-chile-argelia-china-e-paraguai)
@@ -296,50 +346,6 @@ Ao todo, foram apreendidos 14.640 litros da bebida
 Tags:
 
 [Paraná](https://www.gov.br/agricultura/pt-br/@@search?SearchableText=Paran%C3%A1)
-
-AVISO DE PAUTA
-
-[Ministro André de Paula cumpre agenda em Mato Grosso na quinta-feira (27)](https://www.gov.br/agricultura/pt-br/assuntos/noticias/ministro-andre-de-paula-cumpre-agenda-em-mato-grosso-na-quinta-feira-27)
-
-25/08/2026
-
-AVISO DE PAUTA
-
-[Ministro André de Paula participa do lançamento da revista Folha Energia em Pernambuco](https://www.gov.br/agricultura/pt-br/assuntos/noticias/ministro-andre-de-paula-participa-do-lancamento-da-revista-folha-energia-em-pernambuco)
-
-21/08/2026
-
--
-Ministro André de Paula cumpre agenda em Recife na segunda-feira (24)
-
-Tags:
-
-[Pernambuco](https://www.gov.br/agricultura/pt-br/@@search?SearchableText=Pernambuco)
-
-BOLETIM
-
-[Títulos privados do agro movimentam R$ 580,78 bilhões em CPR no início da safra 2026/27](https://www.gov.br/agricultura/pt-br/assuntos/noticias/titulos-privados-do-agro-movimentam-r-580-78-bilhoes-em-cpr-no-inicio-da-safra-2026-27)
-
-19/08/2026
-
-FISCALIZAÇÃO
-
-[Operação Safra Paralela apreende 217 toneladas de fertilizantes adulterados em Mato Grosso](https://www.gov.br/agricultura/pt-br/assuntos/noticias/operacao-safra-paralela-apreende-217-toneladas-de-fertilizantes-adulterados-em-mato-grosso)
-
-18/08/2026
-
-Tags:
-
-[Mato Grosso](https://www.gov.br/agricultura/pt-br/@@search?SearchableText=Mato%20Grosso)
-
-VBP
-
-[Valor Bruto da Produção Agropecuária é estimado em R$ 1,39 trilhão em julho](https://www.gov.br/agricultura/pt-br/assuntos/noticias/valor-bruto-da-producao-agropecuaria-e-estimado-em-r-1-39-trilhao-em-julho)
-
-17/08/2026
-
--
-Mato Grosso e Minas Gerais apresentam os maiores valores entre os estados, enquanto soja, milho e bovinocultura concentram parte relevante do indicador
 
 «
 Anterior

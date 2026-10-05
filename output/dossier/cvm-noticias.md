@@ -51,6 +51,51 @@ Aplicar
 
 ATIVIDADE SANCIONADORA
 
+[CVM multa em R$ 3 milhões Neo In Construções e Incorporação Ltda. e seu administrador](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-multa-em-r-3-milhoes-neo-in-construcoes-e-incorporacao-ltda-e-seu-administrador)
+
+02/10/2026
+
+-
+Colegiado também multou administradores da Reag Capital Holdings S.A.
+
+Tags:
+
+[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
+
+[Julgamento](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Julgamento)
+
+PUBLICAÇÃO
+
+[CVM lança Edital de Tomada Pública de Subsídios sobre o Informe de Governança Corporativa](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-lanca-edital-de-tomada-publica-de-subsidios-sobre-o-informe-de-governanca-corporativa)
+
+02/10/2026
+
+-
+Iniciativa busca reunir dados, estudos e evidências sobre a aplicação do regime de divulgação de práticas de governança corporativa
+
+Tags:
+
+[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
+
+[Tomada Pública de Subsídios](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Tomada%20P%C3%BAblica%20de%20Subs%C3%ADdios)
+
+DIVULGAÇÃO
+
+[Confira o que aconteceu na CVM em... setembro!](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/destaques-da-cvm-em-setembro)
+
+01/10/2026
+
+-
+Apresentação ao mercado do Presidente Otto Lobo e do Diretor Igor Muniz, proposta de piloto para testar tokenização no mercado de capitais e mais assuntos
+
+Tags:
+
+[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
+
+[Destaques do mês](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Destaques%20do%20m%C3%AAs)
+
+ATIVIDADE SANCIONADORA
+
 [Colegiado da CVM aceita proposta de Termo de Compromisso de mais de R$ 2.3 milhões em caso envolvendo a atual TC S.A.](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/colegiado-da-cvm-aceita-proposta-de-termo-de-compromisso-de-mais-de-r-2-3-milhoes-em-caso-envolvendo-a-atual-tc-s-a)
 
 30/09/2026
@@ -453,51 +498,6 @@ Tags:
 [Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
 
 [Termo de Compromisso](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Termo%20de%20Compromisso)
-
-AGENDA
-
-[CVM participa de encontro sobre combate ao crime financeiro em São Paulo](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-participa-de-encontro-sobre-combate-ao-crime-financeiro-em-sao-paulo)
-
-02/09/2026
-
--
-Evento no Consulado dos EUA abordou novos instrumentos de cooperação internacional e impactos para o setor financeiro
-
-Tags:
-
-[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
-
-[Agenda](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Agenda)
-
-AVISO AO MERCADO
-
-[Área técnica da CVM informa mudança de layout no quadro 6.1/2 do Formulário de Referência](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/area-tecnica-da-cvm-informa-mudanca-de-layout-no-quadro-6-1-2-do-formulario-de-referencia)
-
-02/09/2026
-
--
-Novidades estarão disponíveis a partir do dia 3/10
-
-Tags:
-
-[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios%20)
-
-[Ofício Circular](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Of%C3%ADcio%20Circular)
-
-DIVULGAÇÃO
-
-[Confira o que aconteceu na CVM em... agosto!](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/destques-da-cvm-em-agosto-de-2026)
-
-01/09/2026
-
--
-Agenda institucional, Autarquia pronta para receber CNPJs alfanuméricos, 19º Prêmio Imprensa de Educação ao Investidor e mais assuntos em pauta no mês
-
-Tags:
-
-[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
-
-[Destaques de agosto](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Destaques%20de%20agosto)
 
 «
 Anterior

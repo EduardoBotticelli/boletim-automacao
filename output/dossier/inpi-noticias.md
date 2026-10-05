@@ -1,5 +1,53 @@
 id="content-core">
 
+[Relatório de Indisponibilidade Técnica dos dias 1 e 2/10](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/relatorio-de-indisponibilidade-tecnica-dos-dias-1-e-2-10)
+
+tags:
+
+[sistemas](https://www.gov.br/inpi/@@search?SearchableText=sistemas)
+
+[relatório de indisponibilidade](https://www.gov.br/inpi/@@search?SearchableText=relatório%20de%20indisponibilidade)
+
+publicado
+
+02/10/2026
+
+19h27
+
+Notícia
+
+[Normalização parcial dos sistemas eletrônicos do INPI](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/normalizacao-parcial-dos-sistemas-eletronicos-do-inpi)
+
+tags:
+
+[sistemas](https://www.gov.br/inpi/@@search?SearchableText=sistemas)
+
+[tecnologia da informação](https://www.gov.br/inpi/@@search?SearchableText=tecnologia%20da%20informação)
+
+publicado
+
+02/10/2026
+
+11h15
+
+Notícia
+
+[Serviços estão temporariamente indisponíveis hoje (1/10)](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/servicos-estao-temporariamente-indisponiveis-hoje-1-10)
+
+tags:
+
+[serviços eletrônicos](https://www.gov.br/inpi/@@search?SearchableText=serviços%20eletrônicos)
+
+[tecnologia da informação](https://www.gov.br/inpi/@@search?SearchableText=tecnologia%20da%20informação)
+
+publicado
+
+01/10/2026
+
+13h06
+
+Notícia
+
 [Trâmite prioritário para marcas de mercado virtual está temporariamente indisponível](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/tramite-prioritario-para-marcas-de-mercado-virtual-esta-temporariamente-indisponivel)
 
 tags:
@@ -421,48 +469,6 @@ publicado
 27/08/2026
 
 15h45
-
-Notícia
-
-[Publicada primeira lista de credenciados para buscas em patentes](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/publicada-primeira-lista-de-credenciados-para-buscas-em-patentes)
-
-tags:
-
-[busca em patentes](https://www.gov.br/inpi/@@search?SearchableText=busca%20em%20patentes)
-
-publicado
-
-27/08/2026
-
-14h41
-
-Notícia
-
-[INPI disponibiliza mais três Guias de PI para Negócios](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/inpi-disponibiliza-mais-tres-guias-de-pi-para-negocios)
-
-tags:
-
-[Guias de PI para Negócios](https://www.gov.br/inpi/@@search?SearchableText=Guias%20de%20PI%20para%20Negócios)
-
-publicado
-
-26/08/2026
-
-17h58
-
-Notícia
-
-[XVIII ENAPID debate competitividade, governança e propriedade intelectual](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/xviii-enapid-debate-competitividade-governanca-e-propriedade-intelectual)
-
-tags:
-
-[ENAPID](https://www.gov.br/inpi/@@search?SearchableText=ENAPID)
-
-publicado
-
-24/08/2026
-
-16h14
 
 Notícia
 
