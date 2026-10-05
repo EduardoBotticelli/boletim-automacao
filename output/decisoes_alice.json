@@ -2,45 +2,21 @@
   "versao_formato": 2,
   "revisao_concluida": true,
   "origem": "portal-curadoria",
-  "confirmado_em": "2026-10-01T13:55:15.757Z",
-  "data_execucao": "2026-10-01",
-  "total_itens": 52,
-  "total_aprovados": 44,
-  "total_rejeitados": 8,
+  "confirmado_em": "2026-10-05T11:45:37.669Z",
+  "data_execucao": "2026-10-05",
+  "total_itens": 103,
+  "total_aprovados": 94,
+  "total_rejeitados": 9,
   "decisoes": [
     {
-      "id": "it-7d547f1d",
-      "status": "aprovado",
-      "status_portal": "ajustado",
-      "acao_revisao": "radar_alterado",
-      "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46048",
-      "fonte": "Banco Central | Normas",
-      "titulo": "Comunicado N° 46.048",
-      "radares_originais": [
-        "societario-ma",
-        "mercado-capitais-fundos"
-      ],
-      "radares_finais": [
-        "societario-ma",
-        "mercado-capitais-fundos",
-        "propriedade-intelectual"
-      ],
-      "boletins": [
-        "societario-ma",
-        "mercado-capitais-fundos",
-        "propriedade-intelectual"
-      ]
-    },
-    {
-      "id": "it-6e546780",
+      "id": "it-0059ca84",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46047",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46061",
       "fonte": "Banco Central | Normas",
-      "titulo": "Comunicado N° 46.047",
+      "titulo": "Comunicado N° 46.061",
       "radares_originais": [
         "societario-ma",
         "mercado-capitais-fundos"
@@ -55,14 +31,14 @@
       ]
     },
     {
-      "id": "it-d8fb379d",
+      "id": "it-0159cc17",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=597",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46060",
       "fonte": "Banco Central | Normas",
-      "titulo": "Resolução BCB N° 597",
+      "titulo": "Comunicado N° 46.060",
       "radares_originais": [
         "mercado-capitais-fundos"
       ],
@@ -74,52 +50,14 @@
       ]
     },
     {
-      "id": "it-d7fb360a",
+      "id": "it-785238a7",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=596",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46059",
       "fonte": "Banco Central | Normas",
-      "titulo": "Resolução BCB N° 596",
-      "radares_originais": [
-        "mercado-capitais-fundos"
-      ],
-      "radares_finais": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "it-d6fb3477",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=595",
-      "fonte": "Banco Central | Normas",
-      "titulo": "Resolução BCB N° 595",
-      "radares_originais": [
-        "mercado-capitais-fundos"
-      ],
-      "radares_finais": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "it-d5fb32e4",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=594",
-      "fonte": "Banco Central | Normas",
-      "titulo": "Resolução BCB N° 594",
+      "titulo": "Comunicado N° 46.059",
       "radares_originais": [
         "societario-ma",
         "mercado-capitais-fundos"
@@ -134,166 +72,14 @@
       ]
     },
     {
-      "id": "it-d4fb3151",
+      "id": "it-77523714",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=593",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46058",
       "fonte": "Banco Central | Normas",
-      "titulo": "Resolução BCB N° 593",
-      "radares_originais": [
-        "mercado-capitais-fundos"
-      ],
-      "radares_finais": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "it-d3fb2fbe",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=592",
-      "fonte": "Banco Central | Normas",
-      "titulo": "Resolução BCB N° 592",
-      "radares_originais": [
-        "mercado-capitais-fundos"
-      ],
-      "radares_finais": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "it-d2fb2e2b",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolução%20BCB&numero=591",
-      "fonte": "Banco Central | Normas",
-      "titulo": "Resolução BCB N° 591",
-      "radares_originais": [
-        "mercado-capitais-fundos"
-      ],
-      "radares_finais": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "it-6f546913",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46046",
-      "fonte": "Banco Central | Normas",
-      "titulo": "Comunicado N° 46.046",
-      "radares_originais": [
-        "mercado-capitais-fundos"
-      ],
-      "radares_finais": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "it-70546aa6",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46045",
-      "fonte": "Banco Central | Normas",
-      "titulo": "Comunicado N° 46.045",
-      "radares_originais": [
-        "mercado-capitais-fundos"
-      ],
-      "radares_finais": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "it-71546c39",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46044",
-      "fonte": "Banco Central | Normas",
-      "titulo": "Comunicado N° 46.044",
-      "radares_originais": [
-        "mercado-capitais-fundos"
-      ],
-      "radares_finais": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "it-72546dcc",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46043",
-      "fonte": "Banco Central | Normas",
-      "titulo": "Comunicado N° 46.043",
-      "radares_originais": [
-        "mercado-capitais-fundos"
-      ],
-      "radares_finais": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "it-73546f5f",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46042",
-      "fonte": "Banco Central | Normas",
-      "titulo": "Comunicado N° 46.042",
-      "radares_originais": [
-        "mercado-capitais-fundos"
-      ],
-      "radares_finais": [
-        "mercado-capitais-fundos"
-      ],
-      "boletins": [
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "it-745470f2",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46041",
-      "fonte": "Banco Central | Normas",
-      "titulo": "Comunicado N° 46.041",
+      "titulo": "Comunicado N° 46.058",
       "radares_originais": [
         "societario-ma",
         "mercado-capitais-fundos"
@@ -308,36 +94,14 @@
       ]
     },
     {
-      "id": "it-75547285",
+      "id": "it-6e5228e9",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46040",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46057",
       "fonte": "Banco Central | Normas",
-      "titulo": "Comunicado N° 46.040",
-      "radares_originais": [
-        "societario-ma",
-        "mercado-capitais-fundos"
-      ],
-      "radares_finais": [
-        "societario-ma",
-        "mercado-capitais-fundos"
-      ],
-      "boletins": [
-        "societario-ma",
-        "mercado-capitais-fundos"
-      ]
-    },
-    {
-      "id": "it-fc4cf845",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46039",
-      "fonte": "Banco Central | Normas",
-      "titulo": "Comunicado N° 46.039",
+      "titulo": "Comunicado N° 46.057",
       "radares_originais": [
         "mercado-capitais-fundos"
       ],
@@ -349,14 +113,55 @@
       ]
     },
     {
-      "id": "it-9da4bd7e",
+      "id": "it-6d522756",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://www.ccee.org.br/-/confira-a-apresentacao-e-o-video-do-encontro-do-pld-realizado-em-26-09",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=46056",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Comunicado N° 46.056",
+      "radares_originais": [
+        "mercado-capitais-fundos"
+      ],
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-4d6459e1",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.ccee.org.br/-/padronizacao-do-cadastro-das-unidades-consumidoras-amplia-seguranca-nos-processos-de-migracao-para-o-mercado-livre",
       "fonte": "CCEE | Noticias",
-      "titulo": "Confira a apresentação e o vídeo do Encontro do PLD realizado em 26/09",
+      "titulo": "Padronização do cadastro das unidades consumidoras amplia segurança nos processos de migração para o mercado livre",
+      "radares_originais": [
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
+      ],
+      "radares_finais": [
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
+      ],
+      "boletins": [
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
+      ]
+    },
+    {
+      "id": "it-7adc5bb0",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.ccee.org.br/-/ccee-consolida-avanco-da-abertura-do-mercado-livre-de-energia-com-811-novas-adesoes-em-agosto",
+      "fonte": "CCEE | Noticias",
+      "titulo": "CCEE consolida avanço da abertura do mercado livre de energia com 811 novas adesões em agosto",
       "radares_originais": [
         "imobiliario-infraestrutura"
       ],
@@ -368,169 +173,192 @@
       ]
     },
     {
-      "id": "it-f47a785c",
+      "id": "it-23ab9308",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://www.in.gov.br/web/dou/-/decreto-n-13.131-de-30-de-setembro-de-2026-735702683",
+      "url": "https://www.in.gov.br/web/dou/-/decisoes-736290717",
       "fonte": "Destaques do D.O.U.",
-      "titulo": "DECRETO Nº 13.131, DE 30 DE SETEMBRO DE 2026",
+      "titulo": "DECISÕES ADI 7949",
       "radares_originais": [
-        "trabalhista-empresarial"
-      ],
-      "radares_finais": [
-        "trabalhista-empresarial"
-      ],
-      "boletins": [
-        "trabalhista-empresarial"
-      ]
-    },
-    {
-      "id": "it-357da678",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.in.gov.br/web/dou/-/resolucao-crd-n-42-de-23-de-setembro-de-2026-735707400",
-      "fonte": "Destaques do D.O.U.",
-      "titulo": "RESOLUÇÃO CRD Nº 42, DE 23 DE SETEMBRO DE 2026",
-      "radares_originais": [
+        "trabalhista-empresarial",
         "contencioso-civel"
       ],
       "radares_finais": [
+        "trabalhista-empresarial",
         "contencioso-civel"
       ],
       "boletins": [
+        "trabalhista-empresarial",
         "contencioso-civel"
       ]
     },
     {
-      "id": "it-ec4cce20",
+      "id": "it-13a6c3a1",
+      "status": "rejeitado",
+      "status_portal": "sem_radar",
+      "acao_revisao": "sem_radar",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/republicacao-*-736292321",
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "REPUBLICAÇÃO (*) DESPACHO DO PRESIDENTE DA REPÚBLICA ADVOCACIA-GERAL DA UNIÃO",
+      "radares_originais": [],
+      "radares_finais": [],
+      "boletins": [],
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão."
+    },
+    {
+      "id": "it-e2e35adc",
+      "status": "rejeitado",
+      "status_portal": "sem_radar",
+      "acao_revisao": "sem_radar",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-comite-gestor-do-fundo-firece/cc-n-6-de-2-de-outubro-de-2026-736293629",
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "RESOLUÇÃO COMITÊ GESTOR DO FUNDO - FIRECE/CC Nº 6, DE 2 DE OUTUBRO DE 2026",
+      "radares_originais": [],
+      "radares_finais": [],
+      "boletins": [],
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão."
+    },
+    {
+      "id": "it-6cac73e2",
+      "status": "rejeitado",
+      "status_portal": "sem_radar",
+      "acao_revisao": "sem_radar",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-agu-n-318-de-2-de-outubro-de-2026-736289333",
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "PORTARIA AGU Nº 318, DE 2 DE OUTUBRO DE 2026",
+      "radares_originais": [],
+      "radares_finais": [],
+      "boletins": [],
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão."
+    },
+    {
+      "id": "it-8e85d28c",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://www.in.gov.br/web/dou/-/resolucao-crd-n-41-de-23-de-setembro-de-2026-735706361",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-gecex-n-963-de-2-de-outubro-de-2026-736298504",
       "fonte": "Destaques do D.O.U.",
-      "titulo": "RESOLUÇÃO CRD Nº 41, DE 23 DE SETEMBRO DE 2026",
+      "titulo": "RESOLUÇÃO GECEX Nº 963, DE 2 DE OUTUBRO DE 2026",
       "radares_originais": [
-        "trabalhista-empresarial"
+        "direito-tributario"
       ],
       "radares_finais": [
-        "trabalhista-empresarial"
+        "direito-tributario"
       ],
       "boletins": [
-        "trabalhista-empresarial"
+        "direito-tributario"
       ]
     },
     {
-      "id": "it-2e8f1037",
-      "status": "rejeitado",
-      "status_portal": "sem_radar",
-      "acao_revisao": "sem_radar",
-      "origem": "scraper",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-ba/mapa-n-1.034-de-29-de-setembro-de-2026-735708572",
-      "fonte": "Destaques do D.O.U.",
-      "titulo": "PORTARIA SFA-BA/MAPA Nº 1.034, DE 29 DE SETEMBRO DE 2026",
-      "radares_originais": [],
-      "radares_finais": [],
-      "boletins": [],
-      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão."
-    },
-    {
-      "id": "it-711790f3",
-      "status": "rejeitado",
-      "status_portal": "sem_radar",
-      "acao_revisao": "sem_radar",
-      "origem": "scraper",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-sc/mapa-n-1.398-de-29-de-setembro-de-2026-735715217",
-      "fonte": "Destaques do D.O.U.",
-      "titulo": "PORTARIA SFA-SC/MAPA Nº 1.398, DE 29 DE SETEMBRO DE 2026",
-      "radares_originais": [],
-      "radares_finais": [],
-      "boletins": [],
-      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão."
-    },
-    {
-      "id": "it-51362b2e",
-      "status": "rejeitado",
-      "status_portal": "sem_radar",
-      "acao_revisao": "sem_radar",
-      "origem": "scraper",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-sc/mapa-n-1.401-de-30-de-setembro-de-2026-735707979",
-      "fonte": "Destaques do D.O.U.",
-      "titulo": "PORTARIA SFA-SC/MAPA Nº 1.401, DE 30 DE SETEMBRO DE 2026",
-      "radares_originais": [],
-      "radares_finais": [],
-      "boletins": [],
-      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão."
-    },
-    {
-      "id": "it-ddbeed90",
-      "status": "rejeitado",
-      "status_portal": "sem_radar",
-      "acao_revisao": "sem_radar",
-      "origem": "scraper",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-sp/mapa-n-1.010-de-29-de-setembro-de-2026-735706126",
-      "fonte": "Destaques do D.O.U.",
-      "titulo": "Portaria SFA-SP/MAPA Nº 1.010, DE 29 DE SETEMBRO DE 2026",
-      "radares_originais": [],
-      "radares_finais": [],
-      "boletins": [],
-      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão."
-    },
-    {
-      "id": "it-2f7746a8",
-      "status": "rejeitado",
-      "status_portal": "sem_radar",
-      "acao_revisao": "sem_radar",
-      "origem": "scraper",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-es-n-569-de-29-de-setembro-de-2026-735712377",
-      "fonte": "Destaques do D.O.U.",
-      "titulo": "Portaria SFA-ES Nº 569, DE 29 DE Setembro DE 2026",
-      "radares_originais": [],
-      "radares_finais": [],
-      "boletins": [],
-      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão."
-    },
-    {
-      "id": "it-e3b2ffca",
-      "status": "rejeitado",
-      "status_portal": "sem_radar",
-      "acao_revisao": "sem_radar",
-      "origem": "scraper",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-pr/mapa-n-1.272-de-29-de-setembro-de-2026-735707322",
-      "fonte": "Destaques do D.O.U.",
-      "titulo": "PORTARIA SFA-PR/MAPA Nº 1.272, DE 29 DE SETEMBRO DE 2026",
-      "radares_originais": [],
-      "radares_finais": [],
-      "boletins": [],
-      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão."
-    },
-    {
-      "id": "it-64257600",
-      "status": "rejeitado",
-      "status_portal": "sem_radar",
-      "acao_revisao": "sem_radar",
-      "origem": "scraper",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-pi/se/mapa-n-171-de-30-de-setembro-de-2026-735710671",
-      "fonte": "Destaques do D.O.U.",
-      "titulo": "Portaria SFA-PI/SE/MAPA nº 171, de 30 de setembro de 2026",
-      "radares_originais": [],
-      "radares_finais": [],
-      "boletins": [],
-      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão."
-    },
-    {
-      "id": "it-cc56c26b",
+      "id": "it-dc6d64cc",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-gecex-n-966-de-2-de-outubro-de-2026-736291968",
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "RESOLUÇÃO GECEX Nº 966, DE 2 DE OUTUBRO DE 2026",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-c23f1046",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-gecex-n-965-de-2-de-outubro-de-2026-736310752",
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "RESOLUÇÃO GECEX Nº 965, DE 2 DE OUTUBRO DE 2026",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-c1f0e853",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-gecex-n-968-de-2-de-outubro-de-2026-736298098",
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "RESOLUÇÃO GECEX Nº 968, DE 2 DE OUTUBRO DE 2026",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-9cbcca2b",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-gecex-n-964-de-2-de-outubro-de-2026-736307170",
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "RESOLUÇÃO GECEX Nº 964, DE 2 DE OUTUBRO DE 2026",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-21c9e7c7",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-gecex-n-967-de-2-de-outubro-de-2026-736309034",
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "RESOLUÇÃO GECEX Nº 967, DE 2 DE OUTUBRO DE 2026",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-f7792a11",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "",
       "fonte": "Receita Federal | Normas",
-      "titulo": "Ato Declaratório Executivo Corat nº 79",
+      "titulo": "Ato Declaratório Executivo Coana Nº 142",
       "radares_originais": [
         "direito-tributario"
       ],
@@ -542,14 +370,14 @@
       ]
     },
     {
-      "id": "it-cb56c0d8",
+      "id": "it-f4792558",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153837",
+      "url": "",
       "fonte": "Receita Federal | Normas",
-      "titulo": "Ato Declaratório Executivo Sutri nº 9",
+      "titulo": "Ato Declaratório Executivo Coana Nº 141",
       "radares_originais": [
         "direito-tributario"
       ],
@@ -561,14 +389,14 @@
       ]
     },
     {
-      "id": "it-ca56bf45",
+      "id": "it-b456c99a",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153838",
+      "url": "",
       "fonte": "Receita Federal | Normas",
-      "titulo": "Solução de Consulta Cosit nº 195",
+      "titulo": "Ato Declaratório Executivo DRF/VAR Nº 105",
       "radares_originais": [
         "direito-tributario"
       ],
@@ -580,14 +408,14 @@
       ]
     },
     {
-      "id": "it-c956bdb2",
+      "id": "it-b556cb2d",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153839",
+      "url": "",
       "fonte": "Receita Federal | Normas",
-      "titulo": "Solução de Consulta Cosit nº 190",
+      "titulo": "Ato Declaratório Executivo DRF/VAR Nº 104",
       "radares_originais": [
         "direito-tributario"
       ],
@@ -599,14 +427,14 @@
       ]
     },
     {
-      "id": "it-cd56c3fe",
+      "id": "it-ae56c028",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153835",
+      "url": "",
       "fonte": "Receita Federal | Normas",
-      "titulo": "Ato Declaratório Executivo Coana nº 136",
+      "titulo": "Ato Declaratório Executivo DRF/VAR Nº 103",
       "radares_originais": [
         "direito-tributario"
       ],
@@ -618,52 +446,289 @@
       ]
     },
     {
-      "id": "it-0bfa86ef",
+      "id": "it-af56c1bb",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/receita-publica-novo-balanco-de-solicitacoes-de-opcao-pelo-simples-nacional-e-pelo-regime-regular-do-ibs-e-da-cbs",
+      "url": "",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Ato Declaratório Executivo DRF/VAR Nº 102",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-b056c34e",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Ato Declaratório Executivo DRF/VAR Nº 101",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-b156c4e1",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Ato Declaratório Executivo DRF/VAR Nº 100",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-b2440b0c",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Ato Declaratório Executivo SRRF08 Nº 61",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-5b0b6ea5",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Ato Declaratório Executivo DRF/GUA Nº 10",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-ce43abf2",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Ato Declaratório Executivo DRF/SOR Nº 1523",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-cf43ad85",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Ato Declaratório Executivo DRF/SOR Nº 1522",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-cc43a8cc",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Ato Declaratório Executivo DRF/SOR Nº 1521",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-cd43aa5f",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Ato Declaratório Executivo DRF/SOR Nº 1520",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-e5b2c45a",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Solução de Consulta SRRF10 Nº 10011",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-59afa95f",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "",
+      "fonte": "Receita Federal | Normas",
+      "titulo": "Solução de Consulta SRRF10 Nº 10009",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-76bb96ce",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/receita-atualiza-balanco-de-solicitacoes-de-opcao-pelo-simples-nacional-e-pelo-regime-regular-do-ibs-e-da-cbs",
       "fonte": "Ministério da Fazenda | Notícias",
-      "titulo": "Receita publica novo balanço de solicitações de opção pelo Simples Nacional e pelo regime regular do IBS e da CBS",
+      "titulo": "Receita atualiza balanço de solicitações de opção pelo Simples Nacional e pelo regime regular do IBS e da CBS",
       "radares_originais": [
-        "direito-tributario"
+        "direito-tributario",
+        "societario-ma"
       ],
       "radares_finais": [
-        "direito-tributario"
+        "direito-tributario",
+        "societario-ma"
       ],
       "boletins": [
-        "direito-tributario"
+        "direito-tributario",
+        "societario-ma"
       ]
     },
     {
-      "id": "it-9f350cc1",
+      "id": "it-cf6e9565",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/saldo-de-operacoes-de-credito-garantidas-pela-uniao-atinge-r-353-64-bilhoes-no-2o-quadrimestre-de-2026",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/PGFN-lanca-dois-novos-editais-e-prorroga-adesao-a-outros-tres-de-renegociacao-de-dividas",
       "fonte": "Ministério da Fazenda | Notícias",
-      "titulo": "Saldo de operações de crédito garantidas pela União atinge R$ 353,64 bilhões no 2º quadrimestre de 2026",
+      "titulo": "PGFN lança dois novos editais e prorroga adesão a outros três de renegociação de dívidas",
       "radares_originais": [
-        "mercado-capitais-fundos"
+        "trabalhista-empresarial",
+        "direito-tributario"
       ],
       "radares_finais": [
-        "mercado-capitais-fundos"
+        "trabalhista-empresarial",
+        "direito-tributario"
       ],
       "boletins": [
-        "mercado-capitais-fundos"
+        "trabalhista-empresarial",
+        "direito-tributario"
       ]
     },
     {
-      "id": "it-d12f8e36",
+      "id": "it-b15682da",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/colegiado-da-cvm-aceita-proposta-de-termo-de-compromisso-de-mais-de-r-2-3-milhoes-em-caso-envolvendo-a-atual-tc-s-a",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/receita-federal-publica-a-primeira-edicao-do-perguntas-e-respostas-do-adicional-da-csll",
+      "fonte": "Ministério da Fazenda | Notícias",
+      "titulo": "Receita Federal publica a primeira edição do Perguntas e Respostas do Adicional da CSLL",
+      "radares_originais": [
+        "direito-tributario",
+        "societario-ma"
+      ],
+      "radares_finais": [
+        "direito-tributario",
+        "societario-ma"
+      ],
+      "boletins": [
+        "direito-tributario",
+        "societario-ma"
+      ]
+    },
+    {
+      "id": "it-bb339e44",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-multa-em-r-3-milhoes-neo-in-construcoes-e-incorporacao-ltda-e-seu-administrador",
       "fonte": "CVM | Notícias",
-      "titulo": "Colegiado da CVM aceita proposta de Termo de Compromisso de mais de R$ 2.3 milhões em caso envolvendo a atual TC S.A.",
+      "titulo": "CVM multa em R$ 3 milhões Neo In Construções e Incorporação Ltda. e seu administrador",
       "radares_originais": [
         "mercado-capitais-fundos"
       ],
@@ -675,61 +740,188 @@
       ]
     },
     {
-      "id": "it-81faa2aa",
+      "id": "it-00ba1f02",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-ons-e-epe-divulgam-nota-tecnica-sobre-capacidade-para-conexao-de-sistemas-de-armazenamento-nos-leiloes-de-reserva-de-capacidade-2026",
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-lanca-edital-de-subsidios-sobre-o-informe-de-governanca-corporativa",
+      "fonte": "CVM | Notícias",
+      "titulo": "CVM lança Edital de Tomada Pública de Subsídios sobre o Informe de Governança Corporativa",
+      "radares_originais": [
+        "mercado-capitais-fundos"
+      ],
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-821db99f",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-fiscaliza-agentes-em-18-estados-no-periodo-de-28-9-a-2-10",
+      "fonte": "ANP | Notícias",
+      "titulo": "ANP fiscaliza agentes em 18 estados no período de 28/9 a 2/10",
+      "radares_originais": [
+        "regulatorio-oleo-gas",
+        "ambiental-esg"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "ambiental-esg"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "ambiental-esg"
+      ]
+    },
+    {
+      "id": "it-3964d671",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-debate-normas-de-controle-de-qualidade-dos-combustiveis-em-workshop",
+      "fonte": "ANP | Notícias",
+      "titulo": "ANP debate normas de controle de qualidade dos combustíveis em workshop",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-3fabe6bb",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/gas-natural-anp-define-a-base-regulatoria-de-ativos-de-abertura-de-cinco-transportadoras",
+      "fonte": "ANP | Notícias",
+      "titulo": "Gás natural: ANP define a Base Regulatória de Ativos de abertura de cinco transportadoras",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-08b631f6",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-sedia-um-dos-principais-encontros-reguladores-de-seguranca-operacional-do-mundo",
+      "fonte": "ANP | Notícias",
+      "titulo": "ANP sedia um dos principais encontros de reguladores de segurança operacional do mundo",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-97683901",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-aprova-delimitacao-de-11-novos-setores-exploratorios-nas-bacias-da-margem-equatorial",
+      "fonte": "ANP | Notícias",
+      "titulo": "ANP aprova delimitação de 11 novos setores exploratórios nas bacias da Margem Equatorial",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-21fb1ca7",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/revisao-das-regras-de-seguranca-operacional-na-exploracao-e-producao-sera-tema-de-consulta-e-audiencia-publicas",
+      "fonte": "ANP | Notícias",
+      "titulo": "Revisão das regras de segurança operacional na exploração e produção será tema de consulta e audiência públicas",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-be0206de",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-revisa-resolucao-sobre-aquisicao-de-dados-tecnicos",
+      "fonte": "ANP | Notícias",
+      "titulo": "ANP revisa resolução sobre aquisição de dados técnicos",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-1f532a61",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/acesso-de-terceiros-a-gasodutos-de-escoamento-e-instalacoes-de-processamento-de-gas-natural-e-debatido-em-audiencia-publica",
+      "fonte": "ANP | Notícias",
+      "titulo": "Acesso de terceiros a gasodutos de escoamento e instalações de processamento de gás natural é debatido em audiência pública",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-7db294c0",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-abre-tomadas-de-subsidios-sobre-limites-de-dec-e-fec-de-14-distribuidoras",
       "fonte": "ANEEL | Últimas Notícias",
-      "titulo": "ANEEL, ONS e EPE divulgam nota técnica sobre capacidade para conexão de sistemas de armazenamento nos Leilões de Reserva de Capacidade 2026",
-      "radares_originais": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg"
-      ],
-      "radares_finais": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg"
-      ],
-      "boletins": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg"
-      ]
-    },
-    {
-      "id": "it-c55394a9",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-firma-acordo-para-formar-agentes-comunitarios-de-energia-na-amazonia-legal",
-      "fonte": "ANEEL | Últimas Notícias",
-      "titulo": "ANEEL firma acordo para formar Agentes Comunitários de Energia na Amazônia Legal",
-      "radares_originais": [
-        "regulatorio-oleo-gas",
-        "ambiental-esg"
-      ],
-      "radares_finais": [
-        "regulatorio-oleo-gas",
-        "ambiental-esg"
-      ],
-      "boletins": [
-        "regulatorio-oleo-gas",
-        "ambiental-esg"
-      ]
-    },
-    {
-      "id": "it-871dc4bd",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/anvisa-aprova-regularizacao-de-cosmeticos-artesanais",
-      "fonte": "ANVISA | Notícias",
-      "titulo": "Anvisa aprova regularização de cosméticos artesanais",
+      "titulo": "ANEEL abre Tomadas de Subsídios sobre limites de DEC e FEC de 14 distribuidoras",
       "radares_originais": [
         "regulatorio-oleo-gas"
       ],
@@ -741,242 +933,417 @@
       ]
     },
     {
-      "id": "it-872df48d",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-aprova-medicamento-para-tratamento-de-esquistossomose-em-criancas",
-      "fonte": "ANVISA | Notícias",
-      "titulo": "Anvisa aprova medicamento para tratamento de esquistossomose em crianças",
-      "radares_originais": [
-        "regulatorio-oleo-gas"
-      ],
-      "radares_finais": [
-        "regulatorio-oleo-gas"
-      ],
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "id": "it-7b0e9ba5",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/nova-sumula-estabelece-ipi-como-marco-objetivo-para-cobranca-da-cfem",
-      "fonte": "ANM | Notícias",
-      "titulo": "Nova súmula estabelece IPI como marco objetivo para cobrança da CFEM",
-      "radares_originais": [
-        "regulatorio-oleo-gas"
-      ],
-      "radares_finais": [
-        "regulatorio-oleo-gas"
-      ],
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "id": "it-662efb6a",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/diretoria-prorroga-agenda-regulatoria-para-o-exercicio-de-2027",
-      "fonte": "ANM | Notícias",
-      "titulo": "Diretoria prorroga Agenda Regulatória para o exercício de 2027",
-      "radares_originais": [
-        "regulatorio-oleo-gas"
-      ],
-      "radares_finais": [
-        "regulatorio-oleo-gas"
-      ],
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "id": "it-722c3284",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-ons-e-aneel-divulgam-nota-tecnica-que-contempla-os-quantitativos-da-capacidade-remanescente-para-conexao-de-sistemas-de-armazenamento-de-energia-no-ambito-dos-leiloes-de-reserva-de-capacidade-2026",
-      "fonte": "EPE | Notícias",
-      "titulo": "EPE, ONS E ANEEL divulgam nota tecnica que contempla os quantitativos da capacidade remanescente para conexao de sistemas de armazenamento de energia no ambito dos leiloes de reserva de capacidade 202",
-      "radares_originais": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura"
-      ],
-      "radares_finais": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura"
-      ],
-      "boletins": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura"
-      ]
-    },
-    {
-      "id": "it-44956064",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-lanca-nota-tecnica-sobre-a-movimentacao-de-hidrogenio-de-baixa-emissao-de-carbono-em-infraestruturas-de-transporte-de-gas-natural-",
-      "fonte": "EPE | Notícias",
-      "titulo": "EPE lança Nota Técnica sobre a movimentação de hidrogênio de baixa emissão de carbono em infraestruturas de transporte de gás natural​",
-      "radares_originais": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg"
-      ],
-      "radares_finais": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg"
-      ],
-      "boletins": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg"
-      ]
-    },
-    {
-      "id": "it-26ebc606",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-participa-do-forum-sebrae-oportunidades-no-oleo-e-gas",
-      "fonte": "EPE | Notícias",
-      "titulo": "EPE participa do Fórum Sebrae Oportunidades no Óleo e Gás",
-      "radares_originais": [
-        "regulatorio-oleo-gas"
-      ],
-      "radares_finais": [
-        "regulatorio-oleo-gas"
-      ],
-      "boletins": [
-        "regulatorio-oleo-gas"
-      ]
-    },
-    {
-      "id": "it-596cf7fe",
+      "id": "it-7bdb04d6",
       "status": "rejeitado",
       "status_portal": "sem_radar",
       "acao_revisao": "sem_radar",
       "origem": "scraper",
-      "url": "https://www.epe.gov.br/pt/imprensa/noticias/resenha-mensal-consumo-nacional-de-eletricidade-cresce-4-3-em-agosto-de-2026",
-      "fonte": "EPE | Notícias",
-      "titulo": "Resenha Mensal: consumo nacional de eletricidade cresce 4,3% em agosto de 2026",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/mapa-disponibiliza-14-5-milhoes-de-doses-de-vacinas-contra-clostridioses-em-setembro",
+      "fonte": "Ministério da Agricultura | Notícias",
+      "titulo": "Mapa disponibiliza 14,5 milhões de doses de vacinas contra clostridioses em setembro",
       "radares_originais": [],
       "radares_finais": [],
       "boletins": [],
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão."
     },
     {
-      "id": "it-d3f4f80f",
+      "id": "it-f90a4364",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-promove-workshop-para-discutir-agenda-estrategica-de-ccs-no-brasil",
-      "fonte": "EPE | Notícias",
-      "titulo": "EPE promove workshop para discutir agenda estratégica de CCS no Brasil",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/mapa-lanca-pagina-com-informacoes-e-orientacoes-sobre-os-impactos-do-el-nino-no-agro",
+      "fonte": "Ministério da Agricultura | Notícias",
+      "titulo": "Mapa lança página com informações e orientações sobre os impactos do El Niño no agro",
+      "radares_originais": [
+        "ambiental-esg"
+      ],
+      "radares_finais": [
+        "ambiental-esg"
+      ],
+      "boletins": [
+        "ambiental-esg"
+      ]
+    },
+    {
+      "id": "it-4f5cb450",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-disponibiliza-novos-modelos-de-parecer-para-registro-de-produtos-biologicos",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Anvisa disponibiliza novos modelos de parecer para registro de produtos biológicos",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-06072935",
+      "status": "rejeitado",
+      "status_portal": "sem_radar",
+      "acao_revisao": "sem_radar",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/sistema-nds-web-ficara-indisponivel-neste-domingo-5-10-para-atualizacao",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Sistema NDS Web ficará indisponível neste domingo (5/10) para atualização",
+      "radares_originais": [],
+      "radares_finais": [],
+      "boletins": [],
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão."
+    },
+    {
+      "id": "it-ec8e6990",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-publica-o-plano-de-implementacao-dos-guias-ich-e8-r1-e-e6-r3",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Anvisa publica o plano de implementação dos guias ICH E8 (R1) e E6 (R3)",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-cf9f8e85",
+      "status": "rejeitado",
+      "status_portal": "sem_radar",
+      "acao_revisao": "sem_radar",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-participa-de-simulado-de-mesa-no-aeroporto-internacional-de-natal",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Anvisa participa de simulado de mesa no Aeroporto Internacional de Natal",
+      "radares_originais": [],
+      "radares_finais": [],
+      "boletins": [],
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão."
+    },
+    {
+      "id": "it-3167b48c",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-reune-informacoes-sobre-fiscalizacao-de-produtos-em-nova-pagina-do-portal",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Anvisa reúne informações sobre fiscalização de produtos em nova página do Portal",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-46f317c6",
+      "status": "rejeitado",
+      "status_portal": "sem_radar",
+      "acao_revisao": "sem_radar",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-publica-caderno-8-da-serie-seguranca-do-paciente-e-qualidade-em-servicos-de-saude",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Anvisa publica Caderno 8 da Série Segurança do Paciente e Qualidade em Serviços de Saúde",
+      "radares_originais": [],
+      "radares_finais": [],
+      "boletins": [],
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão."
+    },
+    {
+      "id": "it-27fc7187",
+      "status": "rejeitado",
+      "status_portal": "sem_radar",
+      "acao_revisao": "sem_radar",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-lanca-campanha-para-estimular-a-prevencao-e-a-notificacao-de-erros-de-medication",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Anvisa lança campanha para estimular a prevenção e a notificação de erros de medicação",
+      "radares_originais": [],
+      "radares_finais": [],
+      "boletins": [],
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão."
+    },
+    {
+      "id": "it-5e896d04",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/saneantes-irregulares-sao-suspensos-pela-anvisa",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Saneantes irregulares são suspensos pela Anvisa",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-e0341d90",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-determina-apreensao-de-cosmeticos-e-produto-de-limpeza-irregulares",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Anvisa determina apreensão de cosméticos e produto de limpeza irregulares",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-6fc48f17",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-determina-recolhimento-de-gel-hidratante-intimo-falsificado",
+      "fonte": "ANVISA | Notícias",
+      "titulo": "Anvisa determina recolhimento de gel hidratante íntimo falsificado",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-81239008",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/relatorio-de-indisponibilidade-tecnica-dos-dias-1-e-2-10",
+      "fonte": "INPI | Notícias",
+      "titulo": "Relatório de Indisponibilidade Técnica dos dias 1 e 2/10",
+      "radares_originais": [
+        "propriedade-intelectual"
+      ],
+      "radares_finais": [
+        "propriedade-intelectual"
+      ],
+      "boletins": [
+        "propriedade-intelectual"
+      ]
+    },
+    {
+      "id": "it-ca68f806",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/normalizacao-parcial-dos-sistemas-eletronicos-do-inpi",
+      "fonte": "INPI | Notícias",
+      "titulo": "Normalização parcial dos sistemas eletrônicos do INPI",
+      "radares_originais": [
+        "propriedade-intelectual"
+      ],
+      "radares_finais": [
+        "propriedade-intelectual"
+      ],
+      "boletins": [
+        "propriedade-intelectual"
+      ]
+    },
+    {
+      "id": "it-7de649d4",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/mj/pt-br/assuntos/noticias-1/governo-federal-amplia-fiscalizacao-contra-bets-ilegais",
+      "fonte": "SENACON | Notícias",
+      "titulo": "Governo Federal amplia fiscalização contra bets ilegais",
       "radares_originais": [
         "regulatorio-oleo-gas",
+        "contencioso-civel"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "contencioso-civel"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "contencioso-civel"
+      ]
+    },
+    {
+      "id": "it-c9bbecda",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/plano-de-outorgas-do-mme-inclui-empreendimentos-com-tecnologias-inovadoras-resultado-de-estudos-da-epe",
+      "fonte": "EPE | Notícias",
+      "titulo": "Plano de Outorgas do MME inclui empreendimentos com tecnologias inovadoras, resultado de estudos da EPE",
+      "radares_originais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-70c646ee",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/planejamento-da-epe-inova-com-recomenda%C3%A7%C3%A3o-inedita-de-tecnologia-dlr-para-transmissao-de-sao-paulo",
+      "fonte": "EPE | Notícias",
+      "titulo": "Planejamento da EPE inova com recomendação inédita de tecnologia DLR para transmissão de São Paulo",
+      "radares_originais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-e0bbb1a4",
+      "status": "rejeitado",
+      "status_portal": "sem_radar",
+      "acao_revisao": "sem_radar",
+      "origem": "scraper",
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/estudo-da-epe-apresentado-no-terceiro-dia-da-rog-e-2026-e-selecionado-como-um-dos-melhores-do-evento",
+      "fonte": "EPE | Notícias",
+      "titulo": "Estudo da EPE apresentado no terceiro dia da ROG.e 2026 é selecionado como um dos melhores do evento",
+      "radares_originais": [],
+      "radares_finais": [],
+      "boletins": [],
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão."
+    },
+    {
+      "id": "it-41f340d1",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-estudo-de-atendimento-a-regiao-sul-do-rio-grande-do-sul-com-solucoes-para-aumento-da-resiliencia-da-infraestrutura-local-diante-de-eventos-climaticos-extremos",
+      "fonte": "EPE | Notícias",
+      "titulo": "EPE publica “Estudo de Atendimento à Região Sul do Rio Grande do Sul” com soluções para aumento da resiliência da infraestrutura local diante de eventos climáticos extremos",
+      "radares_originais": [
         "imobiliario-infraestrutura",
         "ambiental-esg"
       ],
       "radares_finais": [
-        "regulatorio-oleo-gas",
         "imobiliario-infraestrutura",
         "ambiental-esg"
       ],
       "boletins": [
-        "regulatorio-oleo-gas",
         "imobiliario-infraestrutura",
         "ambiental-esg"
       ]
     },
     {
-      "id": "it-aa6ef17d",
+      "id": "it-202875d2",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://www.epe.gov.br/pt/imprensa/noticias/plano-nacional-de-energia-2055-e-aprovado-e-aponta-caminhos-para-um-sistema-energetico-mais-limpo-resiliente-e-competitivo",
-      "fonte": "EPE | Notícias",
-      "titulo": "Plano Nacional de Energia 2055 é aprovado e aponta caminhos para um sistema energético mais limpo, resiliente e competitivo",
+      "url": "https://sinoreg-es.org.br/stj-morar-por-29-anos-em-imovel-da-familia-nao-garante-usucapiao/",
+      "fonte": "Kollemata | Decretos",
+      "titulo": "STJ: Morar por 29 anos em imóvel da família não garante usucapião",
       "radares_originais": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg"
+        "imobiliario-infraestrutura"
       ],
       "radares_finais": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg"
+        "imobiliario-infraestrutura"
       ],
       "boletins": [
-        "regulatorio-oleo-gas",
-        "imobiliario-infraestrutura",
-        "ambiental-esg"
+        "imobiliario-infraestrutura"
       ]
     },
     {
-      "id": "it-8984d827",
+      "id": "it-74ed8b9d",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/setembro/sancionada-lei-que-aperfeicoa-marco-legal-do-seguro-rural",
+      "url": "https://sinoreg-es.org.br/ocupacao-de-imovel-de-pais-por-herdeiro-nao-gera-usucapiao-extraordinaria/",
+      "fonte": "Kollemata | Decretos",
+      "titulo": "Ocupação de imóvel de pais por herdeiro não gera usucapião extraordinária",
+      "radares_originais": [
+        "imobiliario-infraestrutura"
+      ],
+      "radares_finais": [
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-6eadf488",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/setembro/susep-atualiza-regras-de-prevencao-a-lavagem-de-dinheiro-e-reforca-procedimentos-internos-de-comunicacao-ao-coaf",
       "fonte": "SUSEP | Notícias",
-      "titulo": "Sancionada Lei que aperfeiçoa marco legal do seguro rural",
+      "titulo": "Susep atualiza regras de prevenção à lavagem de dinheiro e reforça procedimentos internos de comunicação ao COAF",
       "radares_originais": [
         "mercado-capitais-fundos",
-        "imobiliario-infraestrutura"
-      ],
-      "radares_finais": [
-        "mercado-capitais-fundos",
-        "imobiliario-infraestrutura"
-      ],
-      "boletins": [
-        "mercado-capitais-fundos",
-        "imobiliario-infraestrutura"
-      ]
-    },
-    {
-      "id": "it-634918bc",
-      "status": "aprovado",
-      "status_portal": "aprovado",
-      "acao_revisao": "mantida",
-      "origem": "scraper",
-      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-atualiza-coeficientes-do-piso-minimo-do-frete-e-divulga-novo-preco-de-referencia-do-diesel",
-      "fonte": "ANTT | Notícias - Defeso Eleitoral",
-      "titulo": "ANTT atualiza coeficientes do Piso Mínimo do Frete e divulga novo preço de referência do diesel",
-      "radares_originais": [
         "regulatorio-oleo-gas"
       ],
       "radares_finais": [
+        "mercado-capitais-fundos",
         "regulatorio-oleo-gas"
       ],
       "boletins": [
+        "mercado-capitais-fundos",
         "regulatorio-oleo-gas"
       ]
     },
     {
-      "id": "it-699968ff",
+      "id": "it-7e54465f",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/assinatura-do-contrato-da-rota-dos-sertoes-marca-novo-ciclo-de-investimentos-no-nordeste",
+      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/fiscalizacao-ferroviaria-reforca-acoes-de-seguranca-durante-o-setembro-amarelo",
       "fonte": "ANTT | Notícias - Defeso Eleitoral",
-      "titulo": "Assinatura do contrato da Rota dos Sertões marca novo ciclo de investimentos no Nordeste",
+      "titulo": "Fiscalização ferroviária reforça ações de segurança durante o Setembro Amarelo",
       "radares_originais": [
         "regulatorio-oleo-gas",
         "imobiliario-infraestrutura"
@@ -991,14 +1358,39 @@
       ]
     },
     {
-      "id": "it-a1612e42",
+      "id": "it-6c0a6c5e",
       "status": "aprovado",
       "status_portal": "aprovado",
       "acao_revisao": "mantida",
       "origem": "scraper",
-      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-prorroga-prazo-para-contribuicoes-sobre-alteracoes-em-solucoes-de-engenharia",
+      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-destaca-acoes-de-compensacao-ambiental-e-destinacao-de-residuos-na-br-040",
       "fonte": "ANTT | Notícias - Defeso Eleitoral",
-      "titulo": "ANTT prorroga prazo para contribuições sobre alterações em soluções de engenharia",
+      "titulo": "ANTT destaca ações de compensação ambiental e destinação de resíduos na BR-040",
+      "radares_originais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "imobiliario-infraestrutura",
+        "ambiental-esg"
+      ]
+    },
+    {
+      "id": "it-f7ff1082",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-acompanha-simulado-de-emergencia-realizado-pela-epr-via-mineira-na-br-040",
+      "fonte": "ANTT | Notícias - Defeso Eleitoral",
+      "titulo": "ANTT acompanha simulado de emergência realizado pela EPR Via Mineira na BR-040",
       "radares_originais": [
         "regulatorio-oleo-gas",
         "imobiliario-infraestrutura"
@@ -1010,6 +1402,579 @@
       "boletins": [
         "regulatorio-oleo-gas",
         "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-826d389c",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-514-de-2-de-outubro-de-2026-736289918",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "Secretaria de Regulação e Supervisão da Educação Superior: 15 portarias na mesma edição, nº 509 a 524",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-2e73d0ac",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/despacho-736290476",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "Secretaria de Desenvolvimento Industrial, Inovação, Comércio e Serviços: 5 despachos na mesma edição",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-90df2edc",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-da-diretoria-colegiada-anvisa-n-1.045-de-2-de-outubro-de-2026-736303961",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "Agência Nacional de Vigilância Sanitária: 4 resoluções na mesma edição",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-94f013a0",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-operacional-ans-n-3.175-de-1-de-outubro-de-2026-736304040",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "RESOLUÇÃO OPERACIONAL ANS Nº 3.175, DE 1º DE OUTUBRO DE 2026 (Agência Nacional de Saúde Suplementar)",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-0f51a428",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/decisao-suroc-n-608-de-30-de-setembro-de-2026-736303692",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "Agência Nacional de Transportes Terrestres: 5 decisões na mesma edição, nº 596 a 608",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-ab54144f",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/instrucao-normativa-anvisa-n-473-de-2-de-outubro-de-2026-736302171",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "INSTRUÇÃO NORMATIVA ANVISA N° 473, DE 2 DE OUTUBRO DE 2026 (Agência Nacional de Vigilância Sanitária)",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-61e395a7",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-cd-n-73-de-1-de-outubro-de-2026-736305364",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "Instituto Nacional de Colonização e Reforma Agrária: 6 resoluções na mesma edição, nº 72 a 78",
+      "radares_originais": [
+        "imobiliario-infraestrutura"
+      ],
+      "radares_finais": [
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-f07d4940",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-ana-n-305-de-2-de-outubro-de-2026-736296797",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "RESOLUÇÃO ANA Nº 305, DE 2 DE OUTUBRO DE 2026 (Agência Nacional de Águas e Saneamento Básico)",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-762ba344",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-n-2.241-de-1-de-outubro-de-2026-736289999",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "Instituto Nacional de Colonização e Reforma Agrária: 6 portarias na mesma edição, nº 2.239 a 2.245",
+      "radares_originais": [
+        "imobiliario-infraestrutura"
+      ],
+      "radares_finais": [
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-838b3d53",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/despacho-736285682",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "Despacho (Agência Nacional de Mineração)",
+      "radares_originais": [
+        "imobiliario-infraestrutura"
+      ],
+      "radares_finais": [
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-0184f8bd",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/despacho-736316306",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "Despacho (Agência Nacional de Mineração)",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-f92f6146",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/despacho-736285159",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "Despacho (Agência Nacional de Mineração)",
+      "radares_originais": [
+        "imobiliario-infraestrutura"
+      ],
+      "radares_finais": [
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-022e9707",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-n-532-de-2-de-outubro-de-2026-736285998",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "PORTARIA Nº 532, DE 2 DE OUTUBRO DE 2026 (Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira)",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-bbce21e3",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-conjunta-mf/cgibs-n-14-de-2-de-outubro-de-2026-736295196",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "PORTARIA CONJUNTA MF/CGIBS Nº 14, DE 2 DE OUTUBRO DE 2026 (Ministério da Fazenda)",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-7867f2f3",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/despacho-736308189",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "Despacho (Agência Nacional de Mineração)",
+      "radares_originais": [
+        "contencioso-civel"
+      ],
+      "radares_finais": [
+        "contencioso-civel"
+      ],
+      "boletins": [
+        "contencioso-civel"
+      ]
+    },
+    {
+      "id": "it-f110cad2",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-736302125",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "RETIFICAÇÃO (Agência Nacional de Vigilância Sanitária)",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-7749b50e",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/instrucao-normativa-anvisa-n-474-de-2-de-outubro-de-2026-736288471",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "INSTRUÇÃO NORMATIVA ANVISA N° 474, DE 2 DE OUTUBRO DE 2026 (Agência Nacional de Vigilância Sanitária)",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-235883e3",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/despacho-n-3.849-de-1-de-outubro-de-2026-736294712",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "DESPACHO Nº 3.849, DE 1° DE OUTUBRO DE 2026 (Agência Nacional de Energia Elétrica)",
+      "radares_originais": [
+        "imobiliario-infraestrutura"
+      ],
+      "radares_finais": [
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-9cc8e894",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/despacho-736299592",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "Agência Nacional de Mineração: 2 despachos de mesmo teor",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-269f5cd4",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/despacho-736304913",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "Despacho (Agência Nacional de Mineração)",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-f409d5da",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-736312748",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "RETIFICAÇÃO (Agência Nacional de Transportes Terrestres)",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-438f9cc5",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/atos-declaratorios-cvm-de-2-de-outubro-de-2026-736311553",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "ATOS DECLARATÓRIOS CVM DE 2 DE OUTUBRO DE 2026 (Comissão de Valores Mobiliários)",
+      "radares_originais": [
+        "mercado-capitais-fundos"
+      ],
+      "radares_finais": [
+        "mercado-capitais-fundos"
+      ],
+      "boletins": [
+        "mercado-capitais-fundos"
+      ]
+    },
+    {
+      "id": "it-1b5f9f08",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/despacho-sg-de-2-de-outubro-de-2026-736316329",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "DESPACHO SG de 2 de outubro de 2026 (Conselho Administrativo de Defesa Econômica)",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
+      ]
+    },
+    {
+      "id": "it-5e89a4fb",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/despacho-736306420",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "Despacho (Agência Nacional de Mineração)",
+      "radares_originais": [
+        "imobiliario-infraestrutura"
+      ],
+      "radares_finais": [
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-23ab9308-2",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/decisoes-736290717",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "DECISÕES (Supremo Tribunal Federal)",
+      "radares_originais": [
+        "contencioso-civel"
+      ],
+      "radares_finais": [
+        "contencioso-civel"
+      ],
+      "boletins": [
+        "contencioso-civel"
+      ]
+    },
+    {
+      "id": "it-a39e76c6",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/despacho-736301152",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "Despacho (Agência Nacional de Mineração)",
+      "radares_originais": [
+        "direito-tributario"
+      ],
+      "radares_finais": [
+        "direito-tributario"
+      ],
+      "boletins": [
+        "direito-tributario"
+      ]
+    },
+    {
+      "id": "it-57fc84ef",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/despacho-n-539/2026-736296662",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "Despacho Nº 539/2026 (Secretaria Nacional do Consumidor)",
+      "radares_originais": [
+        "regulatorio-oleo-gas",
+        "contencioso-civel"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas",
+        "contencioso-civel"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas",
+        "contencioso-civel"
+      ]
+    },
+    {
+      "id": "it-c34be025",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/despacho-n-3.850-de-1-de-outubro-de-2026-736295812",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "DESPACHO Nº 3.850, DE 1° DE OUTUBRO DE 2026 (Agência Nacional de Energia Elétrica)",
+      "radares_originais": [
+        "imobiliario-infraestrutura"
+      ],
+      "radares_finais": [
+        "imobiliario-infraestrutura"
+      ],
+      "boletins": [
+        "imobiliario-infraestrutura"
+      ]
+    },
+    {
+      "id": "it-5b0e227a",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/acordao-n-457-de-29-de-setembro-de-2026-736313943",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "ACÓRDÃO Nº 457, DE 29 DE SETEMBRO DE 2026 (Conselho Regional de Fisioterapia e Terapia Ocupacional da 2ª Região)",
+      "radares_originais": [
+        "contencioso-civel"
+      ],
+      "radares_finais": [
+        "contencioso-civel"
+      ],
+      "boletins": [
+        "contencioso-civel"
+      ]
+    },
+    {
+      "id": "it-ef5a7d88",
+      "status": "aprovado",
+      "status_portal": "aprovado",
+      "acao_revisao": "mantida",
+      "origem": "scraper",
+      "url": "https://www.in.gov.br/web/dou/-/edital-da-superintendencia-de-2-de-outubro-de-2026-736438406",
+      "fonte": "Diário Oficial da União | Seção 3",
+      "titulo": "EDITAL DA SUPERINTENDÊNCIA, DE 2 DE OUTUBRO DE 2026 (Conselho Administrativo de Defesa Econômica)",
+      "radares_originais": [
+        "regulatorio-oleo-gas"
+      ],
+      "radares_finais": [
+        "regulatorio-oleo-gas"
+      ],
+      "boletins": [
+        "regulatorio-oleo-gas"
       ]
     }
   ],
