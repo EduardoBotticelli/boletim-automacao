@@ -22,6 +22,8 @@ paginas e sintetico. O que estes testes protegem:
 Uso: python scripts/testar_coleta.py
 """
 
+import contextlib
+import io
 import json
 import os
 import sys
@@ -433,15 +435,16 @@ def com_esperas_registradas(funcao):
 
 def teste_503_espera_e_repete_no_mesmo_modelo():
     primeiro = gb.MODELOS[0]
-    cliente = ClienteFalso({primeiro: [ErroFalso(503, "UNAVAILABLE"), ErroFalso(503, "UNAVAILABLE"), {"itens": []}]})
+    cliente = ClienteFalso({primeiro: [ErroFalso(503, "UNAVAILABLE"), {"itens": []}]})
     orcamento = {"espera": 0}
 
     (dados, modelo, logs), esperas = com_esperas_registradas(lambda: gb.gemini(cliente, "P", orcamento))
 
     assert modelo == primeiro, f"desceu para {modelo}"
-    assert esperas == [30, 60], esperas
-    assert orcamento["espera"] == 90, orcamento
-    assert [t.get("tipo_erro") for t in logs if t["status"] == "erro"] == ["sobrecarga", "sobrecarga"]
+    assert esperas == [30], esperas
+    assert orcamento["espera"] == 30, orcamento
+    assert "modelo_que_respondeu" not in orcamento, orcamento
+    assert [t.get("tipo_erro") for t in logs if t["status"] == "erro"] == ["sobrecarga"]
 
 
 def teste_503_persistente_desce_so_depois_das_esperas():
@@ -484,8 +487,70 @@ def teste_teto_de_espera_faz_a_cascata_descer_sem_esperar():
     (dados, modelo, logs), esperas = com_esperas_registradas(lambda: gb.gemini(cliente, "P", orcamento))
 
     assert modelo == segundo
-    assert esperas == [10], esperas
-    assert orcamento["espera"] == gb.TETO_ESPERA_SOBRECARGA - 10, "espera dos modelos seguintes nao conta no teto"
+    assert esperas == [10], "os 30 s do primeiro passariam do teto; os 10 s do segundo cabem"
+    assert orcamento["espera"] == gb.TETO_ESPERA_SOBRECARGA, "a espera dos outros modelos tambem conta no teto"
+
+
+def teste_teto_esgotado_nao_espera_em_modelo_nenhum():
+    primeiro, segundo, terceiro = gb.MODELOS[:3]
+    cliente = ClienteFalso({
+        primeiro: [ErroFalso(503, "UNAVAILABLE")],
+        segundo: [ErroFalso(503, "UNAVAILABLE")],
+        terceiro: [{"itens": []}],
+    })
+    orcamento = {"espera": gb.TETO_ESPERA_SOBRECARGA}
+
+    (dados, modelo, logs), esperas = com_esperas_registradas(lambda: gb.gemini(cliente, "P", orcamento))
+
+    assert modelo == terceiro, modelo
+    assert esperas == [], esperas
+    assert cliente.chamadas == [primeiro, segundo, terceiro], cliente.chamadas
+
+
+def teste_lotes_seguintes_vao_direto_ao_modelo_que_respondeu():
+    # A execucao #82: o 3.7-flash e o 3.6-flash deram 503 em todas as
+    # tentativas, e quem respondeu foi o 3.5-flash.
+    primeiro, segundo, terceiro = gb.MODELOS[:3]
+    cliente = ClienteFalso({primeiro: [ErroFalso(503, "UNAVAILABLE")], segundo: [ErroFalso(503, "UNAVAILABLE")], terceiro: [{"itens": []}]})
+    dossier = dossier_falso(14)
+    saida = io.StringIO()
+
+    with contextlib.redirect_stdout(saida):
+        (unido, modelos, registro, falharam), esperas = com_esperas_registradas(lambda: gb.classificar(cliente, "P", "\nC\n", dossier))
+
+    assert modelos == [terceiro] * 3 and falharam == [], (modelos, falharam)
+    assert cliente.chamadas == [primeiro, primeiro, segundo, segundo, terceiro, primeiro, terceiro, primeiro, terceiro], cliente.chamadas
+    assert esperas == [30, 10, gb.INTERVALO_LOTES, gb.INTERVALO_LOTES], esperas
+    assert [r["espera_por_sobrecarga_s"] for r in registro] == [40, 0, 0], registro
+    sondagens = [t for r in registro[1:] for t in r["tentativas"] if t.get("sondagem")]
+    assert [t["modelo"] for t in sondagens] == [primeiro, primeiro], "o primeiro modelo ainda e tentado uma vez por lote"
+    assert f"passa a {terceiro}, que já respondeu nesta execução" in saida.getvalue(), saida.getvalue()
+
+
+def teste_primeiro_modelo_que_volta_desfaz_a_fixacao():
+    primeiro = gb.MODELOS[0]
+    cliente = ClienteFalso({primeiro: [{"itens": []}]})
+    orcamento = {"espera": 0, "modelo_que_respondeu": gb.MODELOS[2]}
+
+    (dados, modelo, logs), esperas = com_esperas_registradas(lambda: gb.gemini(cliente, "P", orcamento))
+
+    assert modelo == primeiro and cliente.chamadas == [primeiro], cliente.chamadas
+    assert logs == [{"modelo": primeiro, "tentativa": 1, "status": "sucesso", "duracao_s": 0, "sondagem": True}], logs
+    assert "modelo_que_respondeu" not in orcamento, "o lote seguinte volta a cascata inteira"
+    assert gb.ordem_da_cascata(orcamento) == (gb.MODELOS, None)
+
+
+def teste_modelo_fixado_que_falha_desce_e_tenta_por_ultimo_os_que_pulou():
+    m = gb.MODELOS
+    cota = ErroFalso(429, "RESOURCE_EXHAUSTED")
+    cliente = ClienteFalso({m[0]: [ErroFalso(503, "UNAVAILABLE")], m[2]: [cota], m[3]: [cota], m[4]: [cota], m[1]: [{"itens": []}]})
+    orcamento = {"espera": 0, "modelo_que_respondeu": m[2]}
+
+    (dados, modelo, logs), esperas = com_esperas_registradas(lambda: gb.gemini(cliente, "P", orcamento))
+
+    assert cliente.chamadas == [m[0], m[2], m[3], m[4], m[1]], cliente.chamadas
+    assert esperas == [], f"o primeiro modelo, com outro fixado, nao espera: {esperas}"
+    assert modelo == m[1] and orcamento["modelo_que_respondeu"] == m[1], orcamento
 
 
 def teste_resposta_invalida_repete_uma_vez_e_desce():
@@ -1369,6 +1434,10 @@ TESTES = [
     teste_503_persistente_desce_so_depois_das_esperas,
     teste_429_desce_na_hora_e_guarda_a_mensagem_inteira,
     teste_teto_de_espera_faz_a_cascata_descer_sem_esperar,
+    teste_teto_esgotado_nao_espera_em_modelo_nenhum,
+    teste_lotes_seguintes_vao_direto_ao_modelo_que_respondeu,
+    teste_primeiro_modelo_que_volta_desfaz_a_fixacao,
+    teste_modelo_fixado_que_falha_desce_e_tenta_por_ultimo_os_que_pulou,
     teste_resposta_invalida_repete_uma_vez_e_desce,
     teste_resumo_da_cascata_aponta_a_queda,
     teste_chamada_que_trava_desce_para_o_proximo_modelo,
