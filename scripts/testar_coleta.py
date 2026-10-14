@@ -779,6 +779,53 @@ def teste_receita_le_as_linhas_da_tabela():
     assert publicacoes[0]["descricao"] == "Divulga a taxa de juros aplicável."
 
 
+def teste_receita_reconhece_linhas_sem_a_classe_antiga_e_linka_o_ato():
+    html_texto = """<table><tbody>
+    <tr class="resultado linha-grid">
+      <td><a href="/sijut2consulta/link.action?idAto=153836">Solução de Consulta</a></td>
+      <td>197</td><td>Cosit</td><td>14/10/2026</td>
+      <td>Assunto: Imposto sobre a Renda.</td>
+    </tr>
+    <tr data-row="153801">
+      <td><a href="https://normasinternet2.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=153801">Solução de Consulta</a></td>
+      <td>196</td><td>Cosit</td><td>14/10/2026</td>
+      <td>Assunto: Contribuição Social sobre o Lucro Líquido.</td>
+    </tr>
+    </tbody></table>"""
+    publicacoes = cd.ler_linhas_receita(html_texto)
+    assert len(publicacoes) == 2, publicacoes
+    assert [p["url"] for p in publicacoes] == [
+        "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153836",
+        "https://normasinternet2.receita.fazenda.gov.br/#/consulta/externa/153801",
+    ]
+    assert all("consulta.action" not in p["url"] for p in publicacoes)
+
+
+def teste_agricultura_registra_licitacoes_e_titulos_repetidos():
+    itens = [
+        {"fonte": "Ministério da Agricultura | Notícias", "titulo": "Pregão Eletrônico nº 29/2026", "url": "https://agricultura.gov.br/pregao-29"},
+        {"fonte": "Ministério da Agricultura | Notícias", "titulo": "AVISO DE LICITAÇÃO para contratação", "url": "https://agricultura.gov.br/licitacao"},
+        {"fonte": "Ministério da Agricultura | Notícias", "titulo": "Pesquisa de defesa agropecuária", "url": "https://agricultura.gov.br/pesquisa-1"},
+        {"fonte": "Ministério da Agricultura | Notícias", "titulo": "Pesquisa de defesa agropecuária", "url": "https://agricultura.gov.br/pesquisa-2"},
+        {"fonte": "Outra fonte", "titulo": "Pesquisa de defesa agropecuária", "url": "https://exemplo.gov.br/pesquisa"},
+    ]
+
+    auditoria = gb.excluir_avisos_agricultura(itens)
+
+    assert len(itens) == 5, "os registros originais devem continuar disponíveis para auditoria"
+    assert len(auditoria) == 3, auditoria
+    assert "pregão" in itens[0]["exclusao_editorial_automatica"].lower()
+    assert "licitação" in itens[1]["exclusao_editorial_automatica"].lower()
+    assert "repetido" in itens[3]["exclusao_editorial_automatica"].lower()
+    assert "exclusao_editorial_automatica" not in itens[2]
+    assert "exclusao_editorial_automatica" not in itens[4]
+    assert {registro["url"] for registro in auditoria} == {
+        "https://agricultura.gov.br/pregao-29",
+        "https://agricultura.gov.br/licitacao",
+        "https://agricultura.gov.br/pesquisa-2",
+    }
+
+
 def teste_receita_segue_a_paginacao_ate_sair_da_janela():
     url = "http://normas.exemplo/consulta.action?ordem=DESC&p=1"
     pagina1 = LINHA_RECEITA.format(data="30/09/2026") * 3
@@ -1456,6 +1503,7 @@ TESTES = [
     teste_pagina_pequena_com_resultado_de_busca_nao_e_descartada,
     teste_dossier_guardado_refaz_o_mesmo_dossier,
     teste_receita_le_as_linhas_da_tabela,
+    teste_receita_reconhece_linhas_sem_a_classe_antiga_e_linka_o_ato,
     teste_receita_segue_a_paginacao_ate_sair_da_janela,
     teste_b3_le_a_data_de_dois_digitos_e_o_pdf,
     teste_volto_usa_a_api_e_devolve_o_endereco_publico,
@@ -1484,6 +1532,7 @@ TESTES = [
     teste_ato_interno_do_bc_vai_sem_radar_com_o_motivo,
     teste_resumo_perde_os_restos_da_pagina,
     teste_listagem_tira_data_tags_e_chapeu_e_mantem_os_acentos,
+    teste_agricultura_registra_licitacoes_e_titulos_repetidos,
 ]
 
 

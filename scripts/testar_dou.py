@@ -432,6 +432,25 @@ def teste_fontes_json_tem_as_duas_secoes():
     assert all(CONFIG["secoes"][f["secao"]]["fonte"] == f["fonte"] for f in FONTES_DOU)
 
 
+def teste_atos_dou_guardam_origem_e_definem_secao_de_cade_mec_mdic():
+    casos = [
+        (["Ministério da Justiça e Segurança Pública", "Conselho Administrativo de Defesa Econômica", "Superintendência-Geral"], "CADE"),
+        (["Ministério da Educação", "Secretaria de Educação Superior"], "MEC"),
+        (["Ministério do Desenvolvimento, Indústria, Comércio e Serviços", "Superintendência da Zona Franca de Manaus"], "MDIC"),
+    ]
+    fonte = "Diário Oficial da União | Seção 1"
+
+    for indice, (niveis, secao_esperada) in enumerate(casos):
+        ato = ato_sintetico(f"Portaria de teste {indice}", "Dispõe sobre teste.", niveis, posicao=indice)
+        ato["radares"] = ["regulatorio-oleo-gas"]
+        ato["regras"] = {"regulatorio-oleo-gas": "órgão regulador"}
+
+        item = cd.item_do_ato(ato, fonte)
+
+        assert item["secao_email"] == secao_esperada, item
+        assert item["fonte"] == fonte, "a seção de destino não pode substituir a procedência"
+
+
 def teste_dou_entra_no_boletim_sem_passar_pelo_gemini():
     fc = FirecrawlFalso(PAGINAS)
     material = gb.coletar_dou(fc, FONTES_DOU, EDICAO, lambda: None)
@@ -517,8 +536,8 @@ def teste_trecho_sai_abaixo_do_resumo_na_secao_do_dou():
     regulatorio = [i for i in itens if slug in i["boletins"]]
     por_ancora, sem_secao, encaminhadas = gf.agrupar_por_secao(regulatorio, slug, estrutura.secoes, mapeamento["aliases_fonte"])
     assert not sem_secao and not encaminhadas
-    assert list(por_ancora) == ["DiarioOficialUniao"], "Seções 1 e 3 vão para a seção do DOU do Regulatório"
-    suframa = next(n for n in por_ancora["DiarioOficialUniao"] if "SUFRAMA" in n["titulo"])
+    assert set(por_ancora) == {"CADE", "MEC", "MDIC"}, "CADE, MEC e MDIC vão para suas seções próprias"
+    suframa = next(n for n in por_ancora["MDIC"] if "SUFRAMA" in n["titulo"])
     assert suframa["trecho"]["texto"].startswith("O SUPERINTENDENTE") and suframa["trecho"]["secao"] == "1"
     html = templates_radar.preencher(template.html, estrutura, "02.10.2026", por_ancora)
     resumo = "Aprova o projeto técnico-econômico industrial pleno"
@@ -526,7 +545,7 @@ def teste_trecho_sai_abaixo_do_resumo_na_secao_do_dou():
     assert html.index("Trecho do ato (DOU, Seção 1, p. 34):", posicao) > posicao
     sem_trecho = templates_radar._preencher_unidade("Título | Acesse a matéria Descrição", {"titulo": "T", "url": "", "resumo": "R"})
     assert "Trecho do ato" not in sem_trecho and "Atos do grupo" not in sem_trecho, "notícia de outra fonte não muda"
-    grupo = next(n for n in por_ancora["DiarioOficialUniao"] if n.get("atos_do_grupo"))
+    grupo = next(n for n in por_ancora["MEC"] if n.get("atos_do_grupo"))
     assert len(grupo["atos_do_grupo"]) == 3 and all(a["url"].startswith("https://www.in.gov.br/web/dou/-/") for a in grupo["atos_do_grupo"])
     inicio = html.index("3 portarias conjuntas de mesmo teor")
     lista = html.index("Atos do grupo (3):", inicio)
@@ -555,6 +574,7 @@ TESTES = [
     teste_falha_ao_abrir_ou_ao_ler_a_secao_fica_registrada,
     teste_saldo_do_firecrawl_e_creditos_separados,
     teste_fontes_json_tem_as_duas_secoes,
+    teste_atos_dou_guardam_origem_e_definem_secao_de_cade_mec_mdic,
     teste_dou_entra_no_boletim_sem_passar_pelo_gemini,
     teste_fim_de_semana_nao_gasta_credito,
     teste_secao_com_erro_vira_erro_tecnico,

@@ -60,6 +60,14 @@ PREAMBULO = re.compile(
     r"CORREGEDOR|OUVIDOR|PREFEIT[OA]|GOVERNADOR)\b|no uso d[ae]s? (?:suas )?(?:atribui|compet)"
 )
 
+# O DOU segue como procedência no boletim e na auditoria; este destino só
+# escolhe uma seção que já existe no template regulatório.
+SECOES_EMAIL_POR_ORGAO = {
+    "conselho administrativo de defesa economica": "CADE",
+    "ministerio da educacao": "MEC",
+    "ministerio do desenvolvimento, industria, comercio e servicos": "MDIC",
+}
+
 
 class FalhaDou(Exception):
     """A leitura do jornal ou a pagina do ato nao veio como esperado."""
@@ -585,7 +593,7 @@ def distintivos(atos):
 
 def _base_do_item(ato, fonte):
     secao = re.sub(r"\D", "", ato["secao"]) or ato["secao"]
-    return {
+    item = {
         "fonte": fonte,
         "categoria": "Diário Oficial da União",
         "url": ato["url"],
@@ -596,6 +604,14 @@ def _base_do_item(ato, fonte):
         "palavras_chave_detectadas": list(ato.get("palavras_chave") or []),
         "motivo_filtragem": "DOU: " + "; ".join(f"{slug}: {motivo}" for slug, motivo in ato["regras"].items()),
     }
+    niveis = {normalizar(nivel) for nivel in ato.get("niveis", [])}
+    destino = next(
+        (secao_email for orgao, secao_email in SECOES_EMAIL_POR_ORGAO.items() if orgao in niveis),
+        "",
+    )
+    if destino:
+        item["secao_email"] = destino
+    return item
 
 
 def item_do_ato(ato, fonte):
