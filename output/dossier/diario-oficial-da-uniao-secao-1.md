@@ -1,455 +1,364 @@
-- PORTARIA SERES/MEC Nº 514, DE 2 de outubro de 2026
-  Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
-  Tipo: Portaria | Página 44 | aberto | lote dou1-1 (15 atos)
-  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
-  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-514-de-2-de-outubro-de-2026-736289918
-  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso da atribuição que lhe confere o Decreto nº 12.769, de 5 de dezembro de 2025, e tendo em vista os Decretos n° 9.235, de 15 de dezembro de 2017, e nº 12.456, de 19 de maio de 2025; as Portarias Normativas n° 20 e nº 23, de 21 de dezembro de 2017, do [...]
-  Trecho: Art. 1º Fica renovado o reconhecimento do(s) curso(s) superior(es) de graduação constante(s) da tabela do anexo desta Portaria, ministrado(s) pela(s) Instituição(ões) de Educação Superior citada(s), nos termos do disposto no art. 10, do Decreto nº 9.235/2017. Art. 2º A renovação de reconhecimento a que se refere esta Portaria é válida exclusivamente para o curso ministrado no endereço citado na tabela constante do anexo. Art. 3º A renovação de reconhecimento a que se refere esta Portaria é válida até o ciclo avaliativo seguinte. Art. 4º Esta Portaria entra em vigor na data de sua publicação. [...]
 - DESPACHO
   Órgão: Ministério do Desenvolvimento, Indústria, Comércio e Serviços/Secretaria de Desenvolvimento Industrial, Inovação, Comércio e Serviços
-  Tipo: Despacho | Página 39 | aberto | lote dou1-2 (5 atos)
+  Tipo: Despacho | Página 15 | aberto | lote dou1-1 (7 atos)
   Radares: regulatorio-oleo-gas (órgão Ministério do Desenvolvimento, Indústria, Comércio e Serviços)
-  URL: https://www.in.gov.br/web/dou/-/despacho-736290476
-  Resumo: O SECRETÁRIO DE DESENVOLVIMENTO INDUSTRIAL, INOVAÇÃO, COMÉRCIO E SERVIÇOS, DO MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS, no uso da atribuição de que trata o art. [...]
-  Trecho: HABILITA, nos termos do art. 5º da Resolução CGEFROTA nº 2, de 12 de junho de 2026, a empresa OX DA AMAZONIA INDUSTRIA DE BICICLETAS S.A., CNPJ nº 09.365.007/0001-81, na condição de fabricante de veículos financiáveis, conforme processo nº 14021.063521/2026-81. A habilitação sujeita a fabricante às contrapartidas obrigatórias estabelecidas no art. 6º da Resolução CGEFROTA nº 3, de 19 de junho de 2026, formalizadas no Termo de Compromisso firmado no ato da habilitação. A relação de marca e modelo dos veículos habilitados será publicada conforme disposto no art. 8º da Portaria MDIC nº 176, de 24 de junho de 2026. A fabricante poderá, a qualquer tempo, requerer a inclusão ou a exclusão de produtos da relação de bens elegíveis, nos termos do art. 9º, §§ 1º e 2º, da Portaria MDIC nº 176, de 2026.
-- RESOLUÇÃO DA DIRETORIA COLEGIADA ANVISA Nº 1.045, DE 2 DE OUTUBRO DE 2026
-  Órgão: Ministério da Saúde/Agência Nacional de Vigilância Sanitária/Diretoria Colegiada
-  Tipo: Resolução | Página 98 | aberto | lote dou1-3 (4 atos)
-  Radares: regulatorio-oleo-gas (palavras-chave 'ANVISA', 'Resolução')
-  URL: https://www.in.gov.br/web/dou/-/resolucao-da-diretoria-colegiada-anvisa-n-1.045-de-2-de-outubro-de-2026-736303961
-  Resumo: Dispõe sobre a regulamentação do art. 27, §2º, da Lei nº 6.360, de 23 de setembro de 1976 acrescido pela Lei nº 15.154, de 30 de junho de 2025, e estabelece requisitos técnicos e procedimentos simplificados para os produtos de higiene pessoal, cosméticos e perfumes produzidos de maneira artesanal.
-  Trecho: A DIRETORIA COLEGIADA DA AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA, no uso das competências que lhe conferem o art. 7º, inciso III cumulado com o art.15, incisos III e IV, da Lei n º 9.782, de 26 de janeiro de 1999, e considerando o disposto no art. 187, inciso VI e §§ 1º e 3º, do Regimento Interno, aprovado pela Resolução da Diretoria Colegiada - RDC n ° 585, de 10 de dezembro de 2021, resolve adotar a seguinte Resolução da Diretoria Colegiada - RDC, conforme deliberado em reunião realizada em 30 de setembro de 2026, e eu, Diretor-Presidente, determino a sua publicação: CAPÍTULO I DISPOSIÇÕES INICIAIS Seção I Objetivo e Abrangência Art. 1º Esta Resolução regulamenta o art. [...]
-- RESOLUÇÃO DA DIRETORIA COLEGIADA ANVISA Nº 1.043, DE 1º DE OUTUBRO DE 2026
-  Órgão: Ministério da Saúde/Agência Nacional de Vigilância Sanitária/Diretoria Colegiada
-  Tipo: Resolução | Página 98 | não aberto (agrupado: o grupo abre um ato só (RESOLUÇÃO DA DIRETORIA COLEGIADA ANVISA Nº 1.045, DE 2 DE OUTUBRO DE 2026)) | lote dou1-3 (4 atos)
-  Radares: regulatorio-oleo-gas (palavras-chave 'ANVISA', 'Resolução')
-  URL: https://www.in.gov.br/web/dou/-/resolucao-da-diretoria-colegiada-anvisa-n-1.043-de-1-de-outubro-de-2026-736304354
-  Resumo: Altera a Resolução da Diretoria Colegiada - RDC nº 978, de 6 de junho de 2025, que dispõe sobre o funcionamento de Serviços que executam as atividades relacionadas aos Exames de Análises Clínicas (EAC). A DIRETORIA COLEGIADA DA AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA, no uso das competências que lhe conferem o art. [...]
+  URL: https://www.in.gov.br/web/dou/-/despacho-738051947
+  Resumo: O SECRETÁRIO DE DESENVOLVIMENTO INDUSTRIAL, INOVAÇÃO, COMÉRCIO E SERVIÇOS SUBSTITUTO, DO MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS, no uso da atribuição de que trata o art. 8º, § 3º, da Portaria Interministerial MDIC/MF nº 199, de 14 de setembro de 2026,
+  Trecho: DEFERE o pedido de adesão da empresa OPS MOVE TECNOLOGIA E SERVIÇOS LTDA, CNPJ nº 60.638.737/0001-66, na condição de plataforma digital intermediadora de serviço de transporte remunerado privado individual de passageiros, para os fins do disposto no art. 10 da Lei nº 15.503, de 14 de setembro de 2026. A adesão sujeita a plataforma às seguintes obrigações, nos termos do art. 9º da Portaria Interministerial MDIC/MF nº 199, de 14 de setembro de 2026: I - transmitir ao Ministério do Desenvolvimento, Indústria, Comércio e Serviços, como gestor da plataforma responsável pela coleta de consentimento e adesão ao programa, no prazo de 5 (cinco) dias úteis, e no formato técnico definido nos termos do parágrafo único do art. [...]
+- DECISÃO SUPAS Nº 1.424, DE 7 DE OUTUBRO DE 2026
+  Órgão: Ministério dos Transportes/Agência Nacional de Transportes Terrestres/Superintendência de Serviços de Transporte Rodoviário de Passageiros
+  Tipo: Decisão | Página 79 | aberto | lote dou1-2 (7 atos)
+  Radares: regulatorio-oleo-gas (palavras-chave 'ANTT', 'transporte rodoviário')
+  URL: https://www.in.gov.br/web/dou/-/decisao-supas-n-1.424-de-7-de-outubro-de-2026-738049962
+  Resumo: O Superintendente de Serviços de Transporte Rodoviário de Passageiros da Agência Nacional de Transportes Terrestres - ANTT, no uso de suas atribuições, em em conformidade com o art. 3º e o inciso X do art. 8º, ambos do Anexo da Resolução nº 5.818, de 3 de maio de 2018; com o inciso IV do art. 29, e inciso VIII do art. [...]
+  Trecho: Art. 1º Indeferir o pedido de emissão do Termo de Autorização - TAR à EXPRESSO CENTRAL TRANSPORTE LTDA., CNPJ nº 25.299.930/0001-19, para prestação do serviço regular de transporte rodoviário coletivo interestadual de passageiros, sob o regime de autorização, uma vez que a empresa não está habilitada, em inobservância ao disposto na Resolução nº 6.033, de 21 de dezembro de 2023. Art. 2º Esta Decisão entra em vigor na data de sua publicação.
+- DESPACHO
+  Órgão: Ministério do Desenvolvimento, Indústria, Comércio e Serviços/Secretaria de Desenvolvimento Industrial, Inovação, Comércio e Serviços
+  Tipo: Despacho | Página 15 | não aberto (agrupado: o grupo abre um ato só (DESPACHO)) | lote dou1-1 (7 atos)
+  Radares: regulatorio-oleo-gas (órgão Ministério do Desenvolvimento, Indústria, Comércio e Serviços)
+  URL: https://www.in.gov.br/web/dou/-/despacho-738057953
+  Resumo: O SECRETÁRIO DE DESENVOLVIMENTO INDUSTRIAL, INOVAÇÃO, COMÉRCIO E SERVIÇOS SUBSTITUTO, DO MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS, no uso da atribuição de que trata o art. 4º, caput, da Portaria GM/MDIC nº 176, de 24 de junho de 2026, HABILITA a empresa SINDIMOTOBAG - SIND. [...]
   Trecho: 
-- RESOLUÇÃO OPERACIONAL ANS Nº 3.175, DE 1º DE OUTUBRO DE 2026
+- DESPACHO Nº 3.933, DE 8 DE OUTUBRO DE 2026
+  Órgão: Ministério de Minas e Energia/Agência Nacional de Energia Elétrica/Superintendência de Gestão Tarifária e Regulação Econômica
+  Tipo: Despacho | Página 56 | aberto
+  Radares: imobiliario-infraestrutura (palavras-chave 'CCEE', 'distribuição', 'energia')
+  URL: https://www.in.gov.br/web/dou/-/despacho-n-3.933-de-8-de-outubro-de-2026-738060014
+  Resumo: Processo nº: 48500.029681/2026-21. Interessados: Concessionárias de Distribuição, Câmara de Comercialização de Energia Elétrica - CCEE. Decisão: Fixar o valor do custo médio da energia e potência comercializadas pelos agentes de distribuição no Ambiente de Contratação Regulada - ACRmed em R$ 421,15,71/MWh para o ano [...]
+  Trecho: 
+- Portaria SAES/MS Nº 5.112, DE 8 DE outubro DE 2026
+  Órgão: Ministério da Saúde/Secretaria de Atenção Especializada à Saúde
+  Tipo: Portaria | Página 68 | aberto
+  Radares: contencioso-civel (palavras-chave 'prestação de serviços')
+  URL: https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.112-de-8-de-outubro-de-2026-738058649
+  Resumo: Habilita estabelecimento para prestação de serviços especializados em saúde no âmbito do componente créditos financeiros do Programa Agora Tem Especialistas.
+  Trecho: O SECRETÁRIO DE ATENÇÃO ESPECIALIZADA À SAÚDE, no uso das atribuições que lhe confere o Decreto nº 11.798, de 28 de novembro de 2023, resolve: Art. 1º Fica habilitado, para prestação de serviços especializados em saúde no âmbito do componente créditos financeiros do Programa Agora Tem Especialistas, o estabelecimento a seguir descrito: UF MUNICÍPIO ESTABELECIMENTO CNES CNPJ DESCRIÇÃO E CÓDIGO DE HABILITAÇÃO SC ARMAZÉM INSTITUTO MARIA SCHMITT DE DESENVOLVIMENTO DE ENSINO, ASSISTÊNCIA SOCIAL E SAÚDE DO CIDADÃO - ARMAZÉM HOSPITAL SANTO ANTÔNIO 2550938 28.700.530/0024-58 38.05 - AGORA TEM ESPECIALISTAS- COMPONENTE DE CRÉDITOS FINANCEIROS Art. [...]
+- PORTARIA CGAUT/SUSEP nº 228, de 13 De OUTUBRO de 2026
+  Órgão: Ministério da Fazenda/Superintendência de Seguros Privados/Diretoria de Organização de Mercado e Regulação de Conduta/Coordenação-Geral de Autorizações
+  Tipo: Portaria | Página 44 | aberto | lote dou1-5 (9 atos)
+  Radares: mercado-capitais-fundos (palavras-chave 'SUSEP' (reforço: Superintendência de Seguros Privados))
+  URL: https://www.in.gov.br/web/dou/-/portaria-cgaut/susep-n-228-de-13-de-outubro-de-2026-738061335
+  Resumo: O COORDENADOR-GERAL DA COORDENAÇÃO-GERAL DE AUTORIZAÇÕES DA SUPERINTENDÊNCIA DE SEGUROS PRIVADOS - CGAUT, no uso da competência subdelegada pelo Superintendente da Susep, por meio da Portaria nº 8.186, de 21 de julho de 2023, tendo em vista o disposto no artigo I do artigo 36 do Decreto-Lei nº 73, de 21 de novembro de [...]
+  Trecho: Art.1º Ficam homologadas as seguintes deliberações tomadas pelo acionista único de KOVR CAPITALIZAÇÃO S.A., CNPJ nº 93.202.448/0001-79, com sede na cidade de São Paulo - SP, na assembleia geral extraordinária realizada em 5 de agosto de 2026: I - mudança da denominação social para KEV CAPITALIZAÇÃO S.A.; e II - reforma e consolidação do estatuto social. Art. 2º Esta portaria entra em vigor na data de sua publicação.
+- DECISÃO SUPAS Nº 1.425, DE 7 DE OUTUBRO DE 2026
+  Órgão: Ministério dos Transportes/Agência Nacional de Transportes Terrestres/Superintendência de Serviços de Transporte Rodoviário de Passageiros
+  Tipo: Decisão | Página 79 | não aberto (agrupado: o grupo abre um ato só (DECISÃO SUPAS Nº 1.424, DE 7 DE OUTUBRO DE 2026)) | lote dou1-2 (7 atos)
+  Radares: regulatorio-oleo-gas (palavras-chave 'ANTT', 'transporte rodoviário')
+  URL: https://www.in.gov.br/web/dou/-/decisao-supas-n-1.425-de-7-de-outubro-de-2026-738061845
+  Resumo: O Superintendente de Serviços de Transporte Rodoviário de Passageiros da Agência Nacional de Transportes Terrestres - ANTT, no uso de suas atribuições, em conformidade com o art. 3º e o inciso X do art. 8º, ambos do Anexo da Resolução nº 5.818, de 3 de maio de 2018; com o inciso IV do art. 29, e inciso VIII do art. [...]
+  Trecho: 
+- RESOLUÇÃO ANM Nº 249, DE 13 DE OUTUBRO DE 2026
+  Órgão: Ministério de Minas e Energia/Agência Nacional de Mineração/Diretoria Colegiada
+  Tipo: Resolução | Página 50 | aberto
+  Radares: regulatorio-oleo-gas (palavras-chave 'ANM', 'Resolução')
+  URL: https://www.in.gov.br/web/dou/-/resolucao-anm-n-249-de-13-de-outubro-de-2026-738054583
+  Resumo: Institui a Política de Gestão de Processos da Agência Nacional de Mineração.
+  Trecho: A DIRETORIA COLEGIADA DA AGÊNCIA NACIONAL DE MINERAÇÃO - ANM, no uso da competência que lhe é conferida pelo art. 85, inciso II, do Regimento Interno da ANM, aprovado pela Resolução ANM nº 211, de 9 de julho de 2025, com base no § 1º do art. 11 da Lei nº 13.575, de 26 de dezembro de 2017, considerando o que consta do Processo nº 48051.010782/2026-63, e o que foi deliberado por ocasião da Decisão em Circuito Deliberativo nº 155/2026, resolve: CAPÍTULO I DAS DISPOSIÇÕES GERAIS Art. 1º Fica instituída a Política de Gestão de Processos da Agência Nacional de Mineração - ANM, observados os conceitos, os objetivos, os princípios, as diretrizes, os instrumentos, as competências e as demais disposições desta Instrução Normativa. Art. [...]
+- DECISÃO SUPAS Nº 1.422, DE 7 DE OUTUBRO DE 2026
+  Órgão: Ministério dos Transportes/Agência Nacional de Transportes Terrestres/Superintendência de Serviços de Transporte Rodoviário de Passageiros
+  Tipo: Decisão | Página 79 | não aberto (agrupado: o grupo abre um ato só (DECISÃO SUPAS Nº 1.424, DE 7 DE OUTUBRO DE 2026)) | lote dou1-2 (7 atos)
+  Radares: regulatorio-oleo-gas (palavras-chave 'ANTT', 'transporte rodoviário')
+  URL: https://www.in.gov.br/web/dou/-/decisao-supas-n-1.422-de-7-de-outubro-de-2026-738043292
+  Resumo: O Superintendente de Serviços de Transporte Rodoviário de Passageiros da Agência Nacional de Transportes Terrestres - ANTT, no uso de suas atribuições, em conformidade com o art. 3º e o inciso X do art. 8º, ambos do Anexo da Resolução nº 5.818, de 3 de maio de 2018, e com o inciso IV do art. 29, e inciso VIII do art. [...]
+  Trecho: 
+- RESOLUÇÃO OPERACIONAL ANS Nº 3.178, DE 9 DE OUTUBRO DE 2026
   Órgão: Ministério da Saúde/Agência Nacional de Saúde Suplementar
-  Tipo: Resolução | Página 95 | aberto
+  Tipo: Resolução | Página 72 | aberto
   Radares: regulatorio-oleo-gas (palavras-chave 'ANS', 'Resolução')
-  URL: https://www.in.gov.br/web/dou/-/resolucao-operacional-ans-n-3.175-de-1-de-outubro-de-2026-736304040
-  Resumo: Dispõe sobre a suspensão da alienação da carteira de beneficiários da BRASIL ODONTO OPERADORA DE PLANOS ODONTOLÓGICOS LTDA.
-  Trecho: A Diretoria Colegiada da Agência Nacional de Saúde Suplementar (ANS), no uso das atribuições que lhe conferem o art. 70 do Regimento Interno, instituído pela Resolução Regimental (RR) nº 21, de 2022, na forma do disposto no art. 24 da Lei nº 9.656, de 1998, alterada pela Medida Provisória nº 2.177-44, de 2001, adotou a seguinte Resolução Operacional (RO) e eu, Diretor-Presidente, determino a sua publicação: Art. 1º Tendo em vista decisão proferida pelo Juízo da Segunda Vara Federal - Seção Judiciária do Tocantins nos autos do processo nº 1010428-49.2026.4.01.4300, movido pela operadora BRASIL ODONTO OPERADORA DE PLANOS ODONTOLÓGICOS LTDA, Registro ANS nº 42.156-1, suspendem-se os efeitos da Resolução Operacional (RO) nº 3.117, de 06 de abril de 2026, publicada em 07 de abril de 2026 no Diário Oficial da União, que determinou a alienação da carteira de beneficiários e a suspensão da [...]
-- DECISÃO SUROC Nº 608, DE 30 DE SETEMBRO DE 2026
-  Órgão: Ministério dos Transportes/Agência Nacional de Transportes Terrestres/Superintendência de Serviços de Transporte Rodoviário e Multimodal de Cargas
-  Tipo: Decisão | Página 144 | aberto | lote dou1-5 (5 atos)
-  Radares: regulatorio-oleo-gas (palavras-chave 'ANTT', 'transporte rodoviário')
-  URL: https://www.in.gov.br/web/dou/-/decisao-suroc-n-608-de-30-de-setembro-de-2026-736303692
-  Resumo: A Superintendente de Serviços de Transporte Rodoviário e Multimodal de Cargas Substituta da Agência Nacional de Transportes Terrestres - ANTT, no uso de suas atribuições, em conformidade com a Resolução nº 5.818, de 03 de maio de 2018, e nos termos do que consta no processo nº 50505.147985/2026-71, decide:
-  Trecho: Art. 1º Outorgar Licença Complementar à empresa COOPERATIVA DE TRANSPORTE PESADO NACIONAL E INTERNACIONAL SANTA CRUZ DE LA SIERRA R.L., NIT nº 1014459020, até 28 de Julho de 2031, para a prestação do serviço de transporte rodoviário internacional de cargas, no tráfego bilateral entre a Bolívia e o Brasil, pelas fronteiras habilitadas e emitir o Certificado de Licença Complementar. Art. 2º Esta Decisão entra em vigor na data da sua publicação.
-- DECISÃO SUROC Nº 606, DE 1º DE OUTUBRO DE 2026
-  Órgão: Ministério dos Transportes/Agência Nacional de Transportes Terrestres/Superintendência de Serviços de Transporte Rodoviário e Multimodal de Cargas
-  Tipo: Decisão | Página 144 | não aberto (agrupado: o grupo abre um ato só (DECISÃO SUROC Nº 608, DE 30 DE SETEMBRO DE 2026)) | lote dou1-5 (5 atos)
-  Radares: regulatorio-oleo-gas (palavras-chave 'ANTT', 'transporte rodoviário')
-  URL: https://www.in.gov.br/web/dou/-/decisao-suroc-n-606-de-1-de-outubro-de-2026-736312167
-  Resumo: A Superintendente de Serviços de Transporte Rodoviário e Multimodal de Cargas substituta, da Agência Nacional de Transportes Terrestres - ANTT, no uso de suas atribuições, em conformidade com a Resolução nº 5.818, de 3 de maio de 2018, e nos termos do que consta no processo nº 50505.142418/2026-28, decide: Art. [...]
-  Trecho: 
-- INSTRUÇÃO NORMATIVA ANVISA N° 473, DE 2 DE OUTUBRO DE 2026
-  Órgão: Ministério da Saúde/Agência Nacional de Vigilância Sanitária/Diretoria Colegiada
-  Tipo: Instrução Normativa | Página 96 | aberto
-  Radares: regulatorio-oleo-gas (palavras-chave 'ANVISA', 'instrução normativa')
-  URL: https://www.in.gov.br/web/dou/-/instrucao-normativa-anvisa-n-473-de-2-de-outubro-de-2026-736302171
-  Resumo: Dispõe sobre a atualização da lista de Denominações Comuns Brasileiras (DCB)
-  Trecho: A DIRETORIA COLEGIADA DA AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA, no uso da atribuição que lhe confere o art. 15, III e IV, aliado ao art. 7º, III da Lei n° 9.782, de 26 de janeiro de 1999, e ao art. 187, VII, § 1º do Regimento Interno aprovado pela Resolução da Diretoria Colegiada - RDC n° 585, de 10 de dezembro de 2021, resolve adotar a seguinte Instrução Normativa, conforme deliberado em reunião realizada em 30 de setembro de 2026, e eu, Diretor-Presidente, determino a sua publicação. Art. 1º A lista de DCB aprovada pela Instrução Normativa - IN nº 342, de 20 de dezembro de 2024, passa a vigorar com as inclusões constantes no Anexo I desta Instrução Normativa. Art. 2º Esta Instrução Normativa entra em vigor na data da sua publicação. [...]
-- DESPACHO
-  Órgão: Ministério do Desenvolvimento, Indústria, Comércio e Serviços/Secretaria de Desenvolvimento Industrial, Inovação, Comércio e Serviços
-  Tipo: Despacho | Página 39 | não aberto (agrupado: o grupo abre um ato só (DESPACHO)) | lote dou1-2 (5 atos)
+  URL: https://www.in.gov.br/web/dou/-/resolucao-operacional-ans-n-3.178-de-9-de-outubro-de-2026-738069659
+  Resumo: Dispõe sobre a determinação da alienação da carteira da operadora NOVA SAÚDE OPERADORA INTEGRADA DE SAÚDE LTDA.
+  Trecho: A Diretoria Colegiada da Agência Nacional de Saúde Suplementar - ANS, no uso das atribuições que lhe conferem o art. 70 do Regimento Interno, instituído pela Resolução Regimental - RR nº 21, de 26 de janeiro de 2022, na forma do disposto no art. 24 da Lei nº 9.656, de 3 de junho de 1998, alterada pela Medida Provisória nº 2.177-44, de 24 de agosto de 2001, em reunião ordinária de 9 de outubro de 2026, considerando as anormalidades administrativas graves de natureza assistencial que colocam em risco a continuidade do atendimento à saúde, de acordo com os elementos constantes do processo administrativo nº 33910.054890/2025-22, adotou a seguinte Resolução Operacional e eu, Diretor-Presidente, determino a sua publicação: Art. [...]
+- PORTARIA SUFRAMA Nº 2.707, DE 25 DE AGOSTO DE 2026
+  Órgão: Ministério do Desenvolvimento, Indústria, Comércio e Serviços/Superintendência da Zona Franca de Manaus
+  Tipo: Portaria | Página 15 | aberto
   Radares: regulatorio-oleo-gas (órgão Ministério do Desenvolvimento, Indústria, Comércio e Serviços)
-  URL: https://www.in.gov.br/web/dou/-/despacho-736299857
-  Resumo: O SECRETÁRIO DE DESENVOLVIMENTO INDUSTRIAL, INOVAÇÃO, COMÉRCIO E SERVIÇOS, DO MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS, no uso da atribuição de que trata o art. [...]
-  Trecho: 
-- Resolução - CD Nº 73, DE 1º DE outubro DE 2026
-  Órgão: Ministério do Desenvolvimento Agrário e Agricultura Familiar/Instituto Nacional de Colonização e Reforma Agrária/Conselho Diretor
-  Tipo: Resolução | Página 37 | aberto | lote dou1-7 (6 atos)
-  Radares: imobiliario-infraestrutura (palavras-chave 'imóvel rural')
-  URL: https://www.in.gov.br/web/dou/-/resolucao-cd-n-73-de-1-de-outubro-de-2026-736305364
-  Resumo: Autorização para aquisição de imóvel rural localizado fora da faixa de fronteira, por estrangeiro - pessoa jurídica.
-  Trecho: O CONSELHO DIRETOR DO INSTITUTO NACIONAL DE COLONIZAÇÃO E REFORMA AGRÁRIA - INCRA, autarquia federal criada pelo Decreto-Lei nº 1.110, de 9 de julho de 1970, no uso das atribuições conferidas pelo artigo 22 da Estrutura Regimental, aprovada pelo Decreto nº 11.232, de 10 de outubro de 2022, tendo em vista a decisão adotada em sua 785ª Reunião, realizada em 30 de setembro de 2026, bem como a deliberação constante do VOTO/INCRA/CD/Nº 94/2026 - DF, e Considerando que a instrução e a análise do processo nº 54240.001235/2014-29 estão conforme os requisitos exigidos pela Lei nº 5.709, de 7 de outubro de 1971, regulamentada pelo Decreto 74.965, de 26 de novembro de 1974, para obtenção de autorização do INCRA para aquisição ou arrendamento de imóvel rural; Considerando as manifestações da Divisão de Governança da Terra - SR(13)/MT-F, da Procuradoria Federal Especializada - PFE, e da Divisão de [...]
-- RESOLUÇÃO DA DIRETORIA COLEGIADA ANVISA Nº 1.044, DE 2 DE OUTUBRO DE 2026
-  Órgão: Ministério da Saúde/Agência Nacional de Vigilância Sanitária/Diretoria Colegiada
-  Tipo: Resolução | Página 98 | não aberto (agrupado: o grupo abre um ato só (RESOLUÇÃO DA DIRETORIA COLEGIADA ANVISA Nº 1.045, DE 2 DE OUTUBRO DE 2026)) | lote dou1-3 (4 atos)
-  Radares: regulatorio-oleo-gas (palavras-chave 'ANVISA', 'Resolução')
-  URL: https://www.in.gov.br/web/dou/-/resolucao-da-diretoria-colegiada-anvisa-n-1.044-de-2-de-outubro-de-2026-736305784
-  Resumo: Altera a Resolução da Diretoria Colegiada - RDC nº 742 de 10 de agosto de 2022, que dispõe sobre os critérios para a condução de estudos de biodisponibilidade relativa/bioequivalência (BD/BE) e estudos farmacocinéticos, e altera a Resolução da Diretoria Colegiada - RDC nº 749 de 5 de setembro de 2022, que dispõe sobre [...]
-  Trecho: 
-- Resolução - CD Nº 74, DE 1º DE outubro DE 2026
-  Órgão: Ministério do Desenvolvimento Agrário e Agricultura Familiar/Instituto Nacional de Colonização e Reforma Agrária/Conselho Diretor
-  Tipo: Resolução | Página 37 | não aberto (agrupado: o grupo abre um ato só (Resolução - CD Nº 73, DE 1º DE outubro DE 2026)) | lote dou1-7 (6 atos)
-  Radares: imobiliario-infraestrutura (palavras-chave 'imóvel rural')
-  URL: https://www.in.gov.br/web/dou/-/resolucao-cd-n-74-de-1-de-outubro-de-2026-736296899
-  Resumo: Autorização para segunda aquisição de imóvel rural localizado fora da faixa de fronteira, por estrangeiro - pessoa física. O CONSELHO DIRETOR DO INSTITUTO NACIONAL DE COLONIZAÇÃO E REFORMA AGRÁRIA - INCRA, autarquia federal criada pelo Decreto-Lei nº 1.110, de 9 de julho de 1970, no uso das atribuições conferidas pelo [...]
-  Trecho: 
-- RESOLUÇÃO ANA Nº 305, DE 2 DE OUTUBRO DE 2026
-  Órgão: Ministério da Integração e do Desenvolvimento Regional/Agência Nacional de Águas e Saneamento Básico
-  Tipo: Resolução | Página 63 | aberto
-  Radares: regulatorio-oleo-gas (palavras-chave 'ANA', 'Resolução')
-  URL: https://www.in.gov.br/web/dou/-/resolucao-ana-n-305-de-2-de-outubro-de-2026-736296797
-  Resumo: Altera o prazo para comprovação do requisito previsto no inciso II do art. 41 da Norma de Referência ANA nº 4/2024 e estabelece o momento a partir do qual sua comprovação será exigida.
-  Trecho: O DIRETOR-PRESIDENTE INTERINO DA AGÊNCIA NACIONAL DE ÁGUAS E SANEAMENTO BÁSICO - ANA, no uso da atribuição que lhe confere o art. 140, inciso XVII, do Anexo I da Resolução ANA nº 242, de 24 de fevereiro de 2025, que aprovou o Regimento Interno da ANA, torna público que a DIRETORIA COLEGIADA, em sua 960ª Reunião Deliberativa Ordinária, realizada em 29 de setembro de 2026, tendo em vista o disposto no art. 4º-A, caput e § 1º, inciso VIII, da Lei nº 9.984, de 17 de julho de 2000, alterada pela Lei nº 14.026, de 15 de julho de 2020, e com base nos elementos constantes do Processo nº 02501.001481/2022-79, resolve: Art. 1º O parágrafo único do art. [...]
-- Portaria Nº 2.241, DE 1º DE outubro DE 2026
-  Órgão: Ministério do Desenvolvimento Agrário e Agricultura Familiar/Instituto Nacional de Colonização e Reforma Agrária
-  Tipo: Portaria | Página 35 | aberto | lote dou1-9 (6 atos)
-  Radares: imobiliario-infraestrutura (palavras-chave 'INCRA', 'imóvel rural')
-  URL: https://www.in.gov.br/web/dou/-/portaria-n-2.241-de-1-de-outubro-de-2026-736289999
-  Resumo: Autorização do INCRA para segunda aquisição de imóvel rural localizado fora da faixa de fronteira, por estrangeiro - pessoa física.
-  Trecho: A PRESIDENTE SUBSTITUTA DO INSTITUTO NACIONAL DE COLONIZAÇÃO E REFORMA AGRÁRIA - INCRA, designada pela Portaria de Pessoal nº 374, de 13 de junho de 2023, publicada no Diário Oficial da União de 14 de junho de 2023, no uso das atribuições que lhe conferem o Decreto nº 11.232, de 10 de outubro de 2022, c/c o inciso VII do art. 143 do Regimento Interno do INCRA, aprovado pela Portaria nº 925, de 30 de dezembro de 2024, publicada no Diário Oficial da União do dia 31 de dezembro de 2024, Ed. 251, Seção 1, Pág. [...]
-- Portaria Nº 2.242, DE 1º DE outubro DE 2026
-  Órgão: Ministério do Desenvolvimento Agrário e Agricultura Familiar/Instituto Nacional de Colonização e Reforma Agrária
-  Tipo: Portaria | Página 36 | não aberto (agrupado: o grupo abre um ato só (Portaria Nº 2.241, DE 1º DE outubro DE 2026)) | lote dou1-9 (6 atos)
-  Radares: imobiliario-infraestrutura (palavras-chave 'imóvel rural')
-  URL: https://www.in.gov.br/web/dou/-/portaria-n-2.242-de-1-de-outubro-de-2026-736301475
-  Resumo: Autorização para aquisição de imóvel rural localizado fora da faixa de fronteira, por estrangeiro - pessoa jurídica. A PRESIDENTE SUBSTITUTA DO INSTITUTO NACIONAL DE COLONIZAÇÃO E REFORMA AGRÁRIA - INCRA, designada pela Portaria de Pessoal nº 374, de 13 de junho de 2023, publicada no Diário Oficial da União de 14 de [...]
-  Trecho: 
-- Despacho
-  Órgão: Ministério de Minas e Energia/Agência Nacional de Mineração/Gerência Regional da ANM no Estado de Sergipe
-  Tipo: Despacho | Página 70 | aberto
-  Radares: imobiliario-infraestrutura (palavras-chave 'concessão', 'mineração')
-  URL: https://www.in.gov.br/web/dou/-/despacho-736285682
-  Resumo: Relação nº 66/2026 Fase de Autorização de Pesquisa Nega a anuência prévia aos atos de cessão total de direitos(193) 878.043/2025-CM MINERACAO LTDA 878.103/2025-MINERACAO MINAS MAR LTDA
-  Trecho: Indefere requerimento de transformação do regime de Autorização de Pesquisa para Licenciamento(186) 878.027/2022-MINERAÇÃO SÃO JORGE Fase de Concessão de Lavra Intima para apresentar documentos desmembramento de área-Prazo 90 dias(1102) 605.626/1976-PETRÓLEO BRASILEIRO S/A PETROBRAS-OF. N°49381/2026/COROUT-RN/PB/SE/AL/ANM 605.626/1976-PETRÓLEO BRASILEIRO S/A PETROBRAS-OF. N°49393/2026/COROUT-RN/PB/SE/AL/ANM 605.626/1976-PETRÓLEO BRASILEIRO S/A PETROBRAS-OF. N°49608/2026/COROUT-RN/PB/SE/AL/ANM 605.626/1976-PETRÓLEO BRASILEIRO S/A PETROBRAS-OF. N°49874/2026/COROUT-RN/PB/SE/AL/ANM 605.626/1976-PETRÓLEO BRASILEIRO S/A PETROBRAS-OF. [...]
-- Resolução - CD Nº 72, DE 1º DE outubro DE 2026
-  Órgão: Ministério do Desenvolvimento Agrário e Agricultura Familiar/Instituto Nacional de Colonização e Reforma Agrária/Conselho Diretor
-  Tipo: Resolução | Página 37 | não aberto (agrupado: o grupo abre um ato só (Resolução - CD Nº 73, DE 1º DE outubro DE 2026)) | lote dou1-7 (6 atos)
-  Radares: imobiliario-infraestrutura (palavras-chave 'imóvel rural')
-  URL: https://www.in.gov.br/web/dou/-/resolucao-cd-n-72-de-1-de-outubro-de-2026-736305387
-  Resumo: Autorização para arrendamento de imóvel rural localizado fora da faixa de fronteira, por estrangeiro - pessoa jurídica. O CONSELHO DIRETOR DO INSTITUTO NACIONAL DE COLONIZAÇÃO E REFORMA AGRÁRIA - INCRA, autarquia federal criada pelo Decreto-Lei nº 1.110, de 9 de julho de 1970, no uso das atribuições conferidas pelo [...]
-  Trecho: 
-- PORTARIA SERES/MEC Nº 518, DE 2 de outubro de 2026
-  Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
-  Tipo: Portaria | Página 47 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 514, DE 2 de outubro de 2026)) | lote dou1-1 (15 atos)
-  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
-  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-518-de-2-de-outubro-de-2026-736306838
-  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso da atribuição que lhe confere o Decreto nº 12.769, de 5 de dezembro de 2025, e tendo em vista os Decretos n° 9.235, de 15 de dezembro de 2017, e nº 12.456, de 19 de maio de 2025; as Portarias Normativas n° 20 e nº 23, de 21 de dezembro de 2017, do [...]
-  Trecho: 
-- DECISÃO SUROC Nº 596, DE 28 DE SETEMBRO DE 2026
-  Órgão: Ministério dos Transportes/Agência Nacional de Transportes Terrestres/Superintendência de Serviços de Transporte Rodoviário e Multimodal de Cargas
-  Tipo: Decisão | Página 144 | não aberto (agrupado: o grupo abre um ato só (DECISÃO SUROC Nº 608, DE 30 DE SETEMBRO DE 2026)) | lote dou1-5 (5 atos)
+  URL: https://www.in.gov.br/web/dou/-/portaria-suframa-n-2.707-de-25-de-agosto-de-2026-738050333
+  Resumo: Aprova o projeto técnico-econômico industrial pleno, do tipo implantação, da empresa FLOWMOVE INDÚSTRIA DE CONFECÇÕES LTDA.
+  Trecho: O SUPERINTENDENTE DA SUPERINTENDÊNCIA DA ZONA FRANCA DE MANAUS, no uso das atribuições que lhe confere o art. 11 da Resolução CAS-SUFRAMA nº 205, de 25 de fevereiro de 2021, considerando os Pareceres de Engenharia nº 152/2026/CAPI/CGPRI/SPR e de Economia nº 153/2026/CAPI/CGPRI/SPR, da Superintendência Adjunta de Projetos, e o que consta do processo administrativo nº 52710.118589/2026-36, resolve: Art. 1º Fica aprovado, com base nos Pareceres de Engenharia nº 152/2026/CAPI/CGPRI/SPR e de Economia nº 153/2026/CAPI/CGPRI/SPR, o projeto técnico-econômico industrial pleno, do tipo implantação, da empresa FLOWMOVE INDÚSTRIA DE CONFECÇÕES LTDA., inscrita no CNPJ sob o nº 66.756.623/0001-05 e na SUFRAMA sob o nº 22.0177.35-0, destinado à produção, na Zona Franca de Manaus, de Confecções em Tecidos, código SUFRAMA 1512, com os incentivos fiscais previstos nos arts. [...]
+- DECISÃO SUPAS Nº 1423, DE 07 DE OUTUBRO DE 2026
+  Órgão: Ministério dos Transportes/Agência Nacional de Transportes Terrestres/Superintendência de Serviços de Transporte Rodoviário de Passageiros
+  Tipo: Decisão | Página 79 | não aberto (agrupado: o grupo abre um ato só (DECISÃO SUPAS Nº 1.424, DE 7 DE OUTUBRO DE 2026)) | lote dou1-2 (7 atos)
   Radares: regulatorio-oleo-gas (palavras-chave 'ANTT', 'transporte rodoviário')
-  URL: https://www.in.gov.br/web/dou/-/decisao-suroc-n-596-de-28-de-setembro-de-2026-736305545
-  Resumo: A Superintendente de Serviços de Transporte Rodoviário e Multimodal de Cargas substituta, da Agência Nacional de Transportes Terrestres - ANTT, no uso de suas atribuições, em conformidade com a Resolução nº 5.818, de 3 de maio de 2018, e nos termos do que consta no processo nº 50505.138175/2026-23, decide: Art. [...]
+  URL: https://www.in.gov.br/web/dou/-/decisao-supas-n-1423-de-07-de-outubro-de-2026-738050493
+  Resumo: O Superintendente de Serviços de Transporte Rodoviário de Passageiros da Agência Nacional de Transportes Terrestres - ANTT, no uso de suas atribuições, em conformidade com o art. 3º e o inciso XV do art. 8º, ambos do Anexo da Resolução nº 5.818, de 3 de maio de 2018, e com o inciso IV do art. 29, e inciso VIII do art. [...]
   Trecho: 
-- Portaria Nº 2.243, DE 1º DE outubro DE 2026
-  Órgão: Ministério do Desenvolvimento Agrário e Agricultura Familiar/Instituto Nacional de Colonização e Reforma Agrária
-  Tipo: Portaria | Página 36 | não aberto (agrupado: o grupo abre um ato só (Portaria Nº 2.241, DE 1º DE outubro DE 2026)) | lote dou1-9 (6 atos)
-  Radares: imobiliario-infraestrutura (palavras-chave 'imóvel rural')
-  URL: https://www.in.gov.br/web/dou/-/portaria-n-2.243-de-1-de-outubro-de-2026-736316566
-  Resumo: Autorização para aquisição de imóvel rural localizado fora da faixa de fronteira, por estrangeiro - pessoa física. A PRESIDENTE SUBSTITUTA DO INSTITUTO NACIONAL DE COLONIZAÇÃO E REFORMA AGRÁRIA - INCRA, designada pela Portaria de Pessoal nº 374, de 13 de junho de 2023, publicada no Diário Oficial da União de 14 de [...]
+- PORTARIA CGAUT/SUSEP nº 230, de 13 De OUTUBRO de 2026
+  Órgão: Ministério da Fazenda/Superintendência de Seguros Privados/Diretoria de Organização de Mercado e Regulação de Conduta/Coordenação-Geral de Autorizações
+  Tipo: Portaria | Página 45 | não aberto (agrupado: o grupo abre um ato só (PORTARIA CGAUT/SUSEP nº 228, de 13 De OUTUBRO de 2026)) | lote dou1-5 (9 atos)
+  Radares: mercado-capitais-fundos (palavras-chave 'SUSEP' (reforço: Superintendência de Seguros Privados))
+  URL: https://www.in.gov.br/web/dou/-/portaria-cgaut/susep-n-230-de-13-de-outubro-de-2026-738051868
+  Resumo: O COORDENADOR-GERAL DA COORDENAÇÃO-GERAL DE AUTORIZAÇÕES DA SUPERINTENDÊNCIA DE SEGUROS PRIVADOS - CGAUT, no uso da competência delegada pelo Superintendente da Susep, por meio da Portaria nº 8.186, de 21 de julho de 2023, tendo em vista o disposto no artigo I do artigo 36 do Decreto-Lei nº 73, de 21 de novembro de [...]
   Trecho: 
-- Despacho
-  Órgão: Ministério de Minas e Energia/Agência Nacional de Mineração/Gerência Regional da ANM no Estado de Minas Gerais
-  Tipo: Despacho | Página 69 | aberto
-  Radares: regulatorio-oleo-gas (palavras-chave 'ANM', 'auto de infração')
-  URL: https://www.in.gov.br/web/dou/-/despacho-736316306
-  Resumo: Relação nº 553/2026 Fase de Autorização de Pesquisa Auto de infração lavrado/Relatório de Pesquisa- prazo p/ defesa ou pagamento 30 dias(638) 831.511/2017-JOSUE OTONI DE SOUZA 87154226668-AI N°1797/2026/DIVFIS-MG/ANM - (PROCESSO ADM.: 48054.931977/2026-19)
-  Trecho: 832.185/2016-NSPS ATIVIDADES AGROPECUARIAS LTDA-AI N°1791/2026/DIVFIS-MG/ANM - (PROCESSO ADM.: 48054.931928/2026-86) 831.952/2016-INDUSTRIAS BRASILEIRAS DE ARTIGOS REFRATARIOS - IBAR - LTDA-AI N°1689/2026/DIVFIS-MG/ANM - (PROCESSO ADM.: 48054.931789/2026-91) Nega provimento a defesa apresentada(242) 831.473/2020-AGUAS MINERAIS LV LTDA Prorroga por 03 (três) anos o prazo de validade da autorização de pesquisa(326) 831.769/2017-H7 MINERACAO, TRANSPORTE E LOCACAO LTDA-ALVARÁ N°623/2018 Fase de Concessão de Lavra Determina cumprimento de exigência - Prazo 60 dias(470) 003.138/1935-VALE S.A.-OF. [...]
-- PORTARIA SERES/MEC Nº 509, DE 2 de outubro de 2026
-  Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
-  Tipo: Portaria | Página 41 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 514, DE 2 de outubro de 2026)) | lote dou1-1 (15 atos)
-  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
-  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-509-de-2-de-outubro-de-2026-736303370
-  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso da atribuição que lhe confere o Decreto nº 12.769, de 5 de dezembro de 2025, e tendo em vista o Decreto n° 9.235, de 15 de dezembro de 2017, e as Portarias Normativas MEC n° 20 e nº 23, de 21 de dezembro de 2017, republicadas em 3 de setembro de 2018 [...]
-  Trecho: 
-- PORTARIA SERES/MEC Nº 515, DE 2 de outubro de 2026
-  Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
-  Tipo: Portaria | Página 45 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 514, DE 2 de outubro de 2026)) | lote dou1-1 (15 atos)
-  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
-  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-515-de-2-de-outubro-de-2026-736293326
-  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso da atribuição que lhe confere o Decreto nº 12.769, de 5 de dezembro de 2025, e tendo em vista os Decretos n° 9.235, de 15 de dezembro de 2017, e nº 12.456, de 19 de maio de 2025; as Portarias Normativas n° 20 e nº 23, de 21 de dezembro de 2017, do [...]
-  Trecho: 
-- Despacho
-  Órgão: Ministério de Minas e Energia/Agência Nacional de Mineração/Superintendência de Outorga de Títulos Minerários
-  Tipo: Retificação | Página 75 | não aberto (teto de 20 atos abertos por execução)
-  Radares: imobiliario-infraestrutura (palavras-chave 'concessão', 'mineração')
-  URL: https://www.in.gov.br/web/dou/-/despacho-736285159
-  Resumo: Relação nº 325/2026 Fase de Concessão de Lavra Retificação de despacho(1389) 830.653/2001-JMX MINERACAO E COMERCIO LTDA - Publicado DOU de 14/09/2026, Relação n° 305/2026, Seção 1, pág. 49- Onde se lê: "ROCHA REAL LTDA - CNPJ: 60.088.161.0001-10"; Leia-se: ROCHA REAL LTDA - CNPJ: 60.088.161.0001-00". [...]
-  Trecho: 
-- PORTARIA SERES/MEC Nº 511, DE 2 de outubro de 2026
-  Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
-  Tipo: Portaria | Página 42 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 514, DE 2 de outubro de 2026)) | lote dou1-1 (15 atos)
-  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
-  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-511-de-2-de-outubro-de-2026-736318075
-  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso das atribuições que lhe confere o Decreto nº 12.769, de 5 de dezembro de 2025, e tendo em vista os Decretos nº 9.235, de 15 de dezembro de 2017, e nº 12.456, de 19 de maio de 2025; as Portarias Normativas MEC nºs 20 e 23, de 21 de dezembro de 2017; a [...]
-  Trecho: 
-- PORTARIA SERES/MEC Nº 519, DE 2 DE OUTUBRO DE 2026
-  Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
-  Tipo: Portaria | Página 48 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 514, DE 2 de outubro de 2026)) | lote dou1-1 (15 atos)
-  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
-  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-519-de-2-de-outubro-de-2026-736317996
-  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso da atribuição que lhe confere o Decreto nº 12.769, de 5 de dezembro de 2025, tendo em vista o disposto nos Decretos nº 9.235, de 15 de dezembro de 2017, e nº 12.456, de 19 de maio de 2025, nas Portarias Normativas MEC nºs 20 e 23, de 21 de dezembro de [...]
-  Trecho: 
-- PORTARIA Nº 532, DE 2 DE OUTUBRO DE 2026
-  Órgão: Ministério da Educação/Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira
-  Tipo: Portaria | Página 49 | aberto
-  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
-  URL: https://www.in.gov.br/web/dou/-/portaria-n-532-de-2-de-outubro-de-2026-736285998
-  Resumo: Publicação de 2ª via do Certificado de Proficiência em Língua Portuguesa para Estrangeiros - Celpe-Bras.
-  Trecho: O PRESIDENTE DO INSTITUTO NACIONAL DE ESTUDOS E PESQUISAS EDUCACIONAIS ANÍSIO TEIXEIRA - INEP, no exercício de suas atribuições, conforme estabelece o inciso V do art. 22 do Anexo I do Decreto nº 11.204, de 21 de setembro de 2022, e tendo em vista o disposto nas Portarias do Ministério de Estado da Educação nº 1.350, de 25 de novembro de 2010, Portaria nº 379, de 8 de junho de 2021, e considerando o constante dos autos do processo nº 23036.000308/2024-29, resolve: Art. 1º Tornar pública a concessão da 2ª Via do Certificado de Proficiência em Língua Portuguesa para Estrangeiros - Celpe-Bras, a Richard Victor Morhaime em nível INTERMEDIÁRIO, tendo em vista o resultado no publicado no Edital nº 5, de 19 de junho de 2002, a época outorgado pelo Ministério da Educação - MEC. Art. 2º Esta Portaria entra em vigor na data de sua publicação.
-- PORTARIA CONJUNTA MF/CGIBS Nº 14, DE 2 DE OUTUBRO DE 2026
-  Órgão: Ministério da Fazenda/Gabinete do Ministro
-  Tipo: Portaria Conjunta | Página 50 | aberto
-  Radares: direito-tributario (palavras-chave 'CBS', 'IBS')
-  URL: https://www.in.gov.br/web/dou/-/portaria-conjunta-mf/cgibs-n-14-de-2-de-outubro-de-2026-736295196
-  Resumo: Aprova a metodologia de cálculo da carga tributária para a fixação das alíquotas do Imposto sobre Bens e Serviços - IBS e da Contribuição sobre Bens e Serviços - CBS incidentes sobre os combustíveis sujeitos ao regime específico de que trata o art.172 da Lei Complementar nº 214, de 16 de janeiro de 2025.
-  Trecho: O MINISTRO DE ESTADO DA FAZENDA e o PRESIDENTE DO COMITÊ GESTOR DO IMPOSTO SOBRE BENS E SERVIÇOS, no uso das atribuições que lhes conferem, respectivamente, o inciso II do art. 87 da Constituição Federal e os incisos XI e XXII do § 1º do art. 2º da Lei Complementar nº 227, de 13 de janeiro de 2026, bem como o art. 15 do Regimento Interno Procedimental do Comitê Gestor do Imposto sobre Bens e Serviços, aprovado pela Resolução CGIBS nº 4, de 8 de abril de 2026, tendo em vista o disposto no § 7º do art. 174 da Lei Complementar nº 214, de 16 de janeiro de 2025, no § 1º do art. 471 do Decreto nº 12.955, de 29 de abril de 2026 e no § 2º do art. 473 da Resolução CGIBS nº 6, de 30 de abril de 2026, RESOLVEM: CAPÍTULO I DAS DISPOSIÇÕES PRELIMINARES Art. [...]
-- Despacho
-  Órgão: Ministério de Minas e Energia/Agência Nacional de Mineração/Gerência Regional da ANM no Estado do Rio Grande do Sul
-  Tipo: Despacho | Página 72 | aberto
-  Radares: contencioso-civel (palavras-chave 'recuperação judicial')
-  URL: https://www.in.gov.br/web/dou/-/despacho-736308189
-  Resumo: Relação nº 277/2026 Fase de Autorização de Pesquisa Determina cumprimento de exigência - Prazo 60 dias(250) 810.934/2024-A.GUERRA & CIA LTDA-OF. N°52103/2026 Fase de Direito de Requerer a Lavra
-  Trecho: Determina cumprimento de exigência - Prazo 60 dias(2224) 810.511/2014-BRITAMIL - MINERACAO E BRITAGEM SA - EM RECUPERACAO JUDICIAL-OF. N°52122/2026 Fase de Licenciamento Concede anuência e autoriza averbação da cessão total de direitos(749) 810.259/2014-MARCUS VINICIUS FERRO FEIJO- Cessionário:DIOGO ANTONIO FEIJO NETO ME- CNPJ 24.906.408/0001-95- Registro de Licença N° 67/2014- Vencimento da Licença: 09/05/2027
-- Resolução - CD Nº 75, DE 1º DE outubro DE 2026
-  Órgão: Ministério do Desenvolvimento Agrário e Agricultura Familiar/Instituto Nacional de Colonização e Reforma Agrária/Conselho Diretor
-  Tipo: Resolução | Página 38 | não aberto (agrupado: o grupo abre um ato só (Resolução - CD Nº 73, DE 1º DE outubro DE 2026)) | lote dou1-7 (6 atos)
-  Radares: imobiliario-infraestrutura (palavras-chave 'INCRA', 'imóvel rural')
-  URL: https://www.in.gov.br/web/dou/-/resolucao-cd-n-75-de-1-de-outubro-de-2026-736313847
-  Resumo: Autorização do INCRA para aquisição de imóvel rural localizado fora da faixa de fronteira, por estrangeiro - pessoa jurídica. O CONSELHO DIRETOR DO INSTITUTO NACIONAL DE COLONIZAÇÃO E REFORMA AGRÁRIA - INCRA, autarquia federal criada pelo Decreto-Lei nº 1.110, de 9 de julho de 1970, no uso das atribuições conferidas [...]
-  Trecho: 
-- RETIFICAÇÃO
-  Órgão: Ministério da Saúde/Agência Nacional de Vigilância Sanitária/3ª Diretoria/Gerência-Geral de Registro e Fiscalização de Produtos Fumígenos Derivados ou Não do Tabaco
-  Tipo: Retificação | Página 110 | não aberto (teto de 20 atos abertos por execução)
-  Radares: direito-tributario (palavras-chave 'exportação', 'importação')
-  URL: https://www.in.gov.br/web/dou/-/retificacao-736302125
-  Resumo: Na Resolução-RE n° 3.691, de 18 de setembro de 2026, publicada no Diário Oficial da União n° 178, de 21 de setembro de 2026, seção 1, pág. 159, Onde se lê: ELITE TRADE IMPORTACAO E EXPORTACAO LTDA CNPJ: 27.839.998/0001-79 Marca: NAY MELANCIA (fumo para narguile) - embalagens primárias caixa com 50g e caixa com 50g [...]
-  Trecho: 
-- DECISÃO SUROC Nº 598, DE 28 DE SETEMBRO DE 2026
-  Órgão: Ministério dos Transportes/Agência Nacional de Transportes Terrestres/Superintendência de Serviços de Transporte Rodoviário e Multimodal de Cargas
-  Tipo: Decisão | Página 144 | não aberto (agrupado: o grupo abre um ato só (DECISÃO SUROC Nº 608, DE 30 DE SETEMBRO DE 2026)) | lote dou1-5 (5 atos)
-  Radares: regulatorio-oleo-gas (palavras-chave 'ANTT', 'transporte rodoviário')
-  URL: https://www.in.gov.br/web/dou/-/decisao-suroc-n-598-de-28-de-setembro-de-2026-736284783
-  Resumo: A Superintendente de Serviços de Transporte Rodoviário e Multimodal de Cargas substituta, da Agência Nacional de Transportes Terrestres - ANTT, no uso de suas atribuições, em conformidade com a Resolução nº 5.818, de 3 de maio de 2018, e nos termos do que consta no processo nº 50505.103302/2026-73, decide: Art. [...]
-  Trecho: 
-- INSTRUÇÃO NORMATIVA ANVISA N° 474, DE 2 DE OUTUBRO DE 2026
-  Órgão: Ministério da Saúde/Agência Nacional de Vigilância Sanitária/Diretoria Colegiada
-  Tipo: Instrução Normativa | Página 96 | aberto
-  Radares: regulatorio-oleo-gas (palavras-chave 'ANVISA', 'instrução normativa')
-  URL: https://www.in.gov.br/web/dou/-/instrucao-normativa-anvisa-n-474-de-2-de-outubro-de-2026-736288471
-  Resumo: Estabelece a lista de grupos produtos de higiene pessoal, cosméticos e perfumes que podem ser produzidos de maneira artesanal.
-  Trecho: A DIRETORIA COLEGIADA DA AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA, no uso das competências que lhe conferem o art. 7º, inciso III, cumulado com o art.15, incisos III e IV, da Lei n º 9.782, de 26 de janeiro de 1999, e considerando o disposto no art. 187, inciso VII e §§ 1º e 3º, do Regimento Interno, aprovado pela Resolução da Diretoria Colegiada - RDC n ° 585, de 10 de dezembro de 2021, resolve adotar a seguinte Instrução Normativa - IN, conforme deliberado em reunião realizada em 30 de setembro de 2026, e eu, Diretor-Presidente, determino a sua publicação: Art. 1º Esta Instrução Normativa estabelece a lista de grupos de produtos de higiene pessoal, cosméticos e perfumes que podem ser produzidos de maneira artesanal, nos termos da Resolução da Diretoria Colegiada - RDC nº 1.045, de 2 de outubro de 2026. Art. [...]
-- Portaria Nº 2.239, DE 1º DE outubro DE 2026
-  Órgão: Ministério do Desenvolvimento Agrário e Agricultura Familiar/Instituto Nacional de Colonização e Reforma Agrária
-  Tipo: Portaria | Página 35 | não aberto (agrupado: o grupo abre um ato só (Portaria Nº 2.241, DE 1º DE outubro DE 2026)) | lote dou1-9 (6 atos)
-  Radares: imobiliario-infraestrutura (palavras-chave 'imóvel rural')
-  URL: https://www.in.gov.br/web/dou/-/portaria-n-2.239-de-1-de-outubro-de-2026-736290216
-  Resumo: Autorização para arrendamento de imóvel rural localizado fora da faixa de fronteira, por estrangeiro - pessoa jurídica. A PRESIDENTE SUBSTITUTA DO INSTITUTO NACIONAL DE COLONIZAÇÃO E REFORMA AGRÁRIA - INCRA, designada pela Portaria de Pessoal nº 374, de 13 de junho de 2023, publicada no Diário Oficial da União de 14 [...]
-  Trecho: 
-- PORTARIA SERES/MEC Nº 520, DE 2 DE OUTUBRO DE 2026
-  Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
-  Tipo: Portaria | Página 48 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 514, DE 2 de outubro de 2026)) | lote dou1-1 (15 atos)
-  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
-  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-520-de-2-de-outubro-de-2026-736290397
-  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso da atribuição que lhe confere o Decreto nº 12.769, de 5 de dezembro de 2025, tendo em vista o disposto nos Decretos nº 9.235, de 15 de dezembro de 2017, e nº 12.456, de 19 de maio de 2025, nas Portarias Normativas MEC nºs 20 e 23, de 21 de dezembro de [...]
-  Trecho: 
-- Resolução - CD Nº 76, DE 1º DE outubro DE 2026
-  Órgão: Ministério do Desenvolvimento Agrário e Agricultura Familiar/Instituto Nacional de Colonização e Reforma Agrária/Conselho Diretor
-  Tipo: Resolução | Página 38 | não aberto (agrupado: o grupo abre um ato só (Resolução - CD Nº 73, DE 1º DE outubro DE 2026)) | lote dou1-7 (6 atos)
-  Radares: imobiliario-infraestrutura (palavras-chave 'imóvel rural')
-  URL: https://www.in.gov.br/web/dou/-/resolucao-cd-n-76-de-1-de-outubro-de-2026-736293354
-  Resumo: Autorização para aquisição de imóvel rural localizado fora da faixa de fronteira, por estrangeiro - pessoa física. O CONSELHO DIRETOR DO INSTITUTO NACIONAL DE COLONIZAÇÃO E REFORMA AGRÁRIA - INCRA, autarquia federal criada pelo Decreto-Lei nº 1.110, de 9 de julho de 1970, no uso das atribuições conferidas pelo artigo [...]
-  Trecho: 
-- DESPACHO Nº 3.849, DE 1° DE OUTUBRO DE 2026
-  Órgão: Ministério de Minas e Energia/Agência Nacional de Energia Elétrica/Superintendência de Concessões, Permissões e Autorizações dos Serviços de Energia Elétrica
-  Tipo: Despacho | Página 78 | não aberto (teto de 20 atos abertos por execução)
-  Radares: imobiliario-infraestrutura (palavras-chave 'concessão', 'contrato de concessão', 'energia', 'transmissão')
-  URL: https://www.in.gov.br/web/dou/-/despacho-n-3.849-de-1-de-outubro-de-2026-736294712
-  Resumo: Processo nº: 48500.903780/2023-30. Interessado: Pampa Transmissão de Energia S.A., CNPJ nº 32.184.487/0001-04. Decisão: negar provimento ao pedido de excludente de responsabilidade pelo atraso na operação comercial das instalações de transmissão do Contrato de Concessão nº 13/2019-ANEEL. [...]
-  Trecho: 
-- PORTARIA SERES/MEC Nº 516, DE 2 de outubro de 2026
-  Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
-  Tipo: Portaria | Página 46 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 514, DE 2 de outubro de 2026)) | lote dou1-1 (15 atos)
-  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
-  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-516-de-2-de-outubro-de-2026-736313781
-  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso da atribuição que lhe confere o Decreto nº 12.769, de 5 de dezembro de 2025, e tendo em vista os Decretos n° 9.235, de 15 de dezembro de 2017, e nº 12.456, de 19 de maio de 2025; as Portarias Normativas n° 20 e nº 23, de 21 de dezembro de 2017, do [...]
-  Trecho: 
-- Resolução - CD Nº 78, DE 1º DE outubro DE 2026
-  Órgão: Ministério do Desenvolvimento Agrário e Agricultura Familiar/Instituto Nacional de Colonização e Reforma Agrária/Conselho Diretor
-  Tipo: Resolução | Página 38 | não aberto (agrupado: o grupo abre um ato só (Resolução - CD Nº 73, DE 1º DE outubro DE 2026)) | lote dou1-7 (6 atos)
-  Radares: imobiliario-infraestrutura (palavras-chave 'imóvel rural')
-  URL: https://www.in.gov.br/web/dou/-/resolucao-cd-n-78-de-1-de-outubro-de-2026-736314895
-  Resumo: Aprova Projeto de Exploração Agrícola e autoriza a aquisição de imóvel rural localizado fora da faixa de fronteira por pessoa jurídica brasileira equiparada à estrangeira. [...]
-  Trecho: 
-- Portaria Nº 2.245, DE 1º DE outubro DE 2026
-  Órgão: Ministério do Desenvolvimento Agrário e Agricultura Familiar/Instituto Nacional de Colonização e Reforma Agrária
-  Tipo: Portaria | Página 37 | não aberto (agrupado: o grupo abre um ato só (Portaria Nº 2.241, DE 1º DE outubro DE 2026)) | lote dou1-9 (6 atos)
-  Radares: imobiliario-infraestrutura (palavras-chave 'imóvel rural')
-  URL: https://www.in.gov.br/web/dou/-/portaria-n-2.245-de-1-de-outubro-de-2026-736310402
-  Resumo: Aprova o Projeto de Exploração Agrícola e autoriza a regularização de aquisição de imóvel rural localizado fora da faixa de fronteira por pessoa jurídica brasileira equiparada à estrangeira. [...]
-  Trecho: 
-- despacho
-  Órgão: Ministério de Minas e Energia/Agência Nacional de Mineração/Superintendência de Arrecadação e Fiscalização de Receitas
-  Tipo: Despacho | Página 74 | aberto | serie dou1-19 (2 atos)
-  Radares: regulatorio-oleo-gas (palavras-chave 'ANM', 'instrução normativa')
-  URL: https://www.in.gov.br/web/dou/-/despacho-736299592
-  Resumo: Relação nº 521/2026 Fica(m) o(s) abaixo relacionado(s), nos termos do artigo 8º da Instrução Normativa ANM nº 25, de 04 de Março de 206, notificado(s) de que julgou-se parcialmente procedentes(s) a(s) defesa(s) administrativa(s) interposta(s); restando-lhe(s) pagar, parcelar ou apresentar recurso relativo ao(s) [...]
-  Trecho: Processo de Cobrança nº 48054.930685/2021-54 Notificado MINERACAO RIACHO DOS MACHADOS LTDA. CNPJ/CPF 08.832.667/0001-62 NFLDP nº NFLDP nº 255/2021- ANM/mg Valor: R$210.660,63 (duzentos e dez mil seiscentos e sessenta reais e sessenta e três centavos).
-- DESPACHO
-  Órgão: Ministério do Desenvolvimento, Indústria, Comércio e Serviços/Secretaria de Desenvolvimento Industrial, Inovação, Comércio e Serviços
-  Tipo: Despacho | Página 39 | não aberto (agrupado: o grupo abre um ato só (DESPACHO)) | lote dou1-2 (5 atos)
-  Radares: regulatorio-oleo-gas (órgão Ministério do Desenvolvimento, Indústria, Comércio e Serviços)
-  URL: https://www.in.gov.br/web/dou/-/despacho-736301396
-  Resumo: O Secretário de Desenvolvimento Industrial, Inovação, Comércio e Serviços, tendo em vista o art. 11 da Lei nº 14.902, de 27 de junho de 2024, que institui o Programa Mobilidade Verde e Inovação (Programa Mover), e usando das atribuições que lhe confere o art. [...]
-  Trecho: 
-- Despacho
-  Órgão: Ministério de Minas e Energia/Agência Nacional de Mineração/Gerência Regional da ANM no Estado do Pará
-  Tipo: Despacho | Página 71 | não aberto (teto de 20 atos abertos por execução)
-  Radares: direito-tributario (palavras-chave 'exportação', 'importação')
-  URL: https://www.in.gov.br/web/dou/-/despacho-736304913
-  Resumo: Relação nº 224/2026 Fase de Autorização de Pesquisa Despacho publicado(256) 850.394/2012-HAVYLAH COMPANHIA DE MINERACAO E EXTRACAO IMPORTACAO E EXPORTACAO LTDA-Despacho nº 162327/COROUT-PA/AP/ANM/2026. [...]
-  Trecho: 
-- RETIFICAÇÃO
-  Órgão: Ministério dos Transportes/Agência Nacional de Transportes Terrestres/Superintendência de Serviços de Transporte Rodoviário e Multimodal de Cargas
-  Tipo: Retificação | Página 144 | não aberto (teto de 20 atos abertos por execução)
-  Radares: regulatorio-oleo-gas (palavras-chave 'transporte rodoviário')
-  URL: https://www.in.gov.br/web/dou/-/retificacao-736312748
-  Resumo: Na Decisão Suroc nº 584, de 22 de setembro de 2026, publicada no Diário Oficial da União nº 185, de 30 de setembro de 2026, seção 1, pág. 264, Onde se lê: "O Superintendente de Serviços de Transporte Rodoviário e Multimodal de Cargas..." Leia - se: "A Superintendente de Serviços de Transporte Rodoviário e Multimodal [...]
-  Trecho: 
-- despacho
-  Órgão: Ministério de Minas e Energia/Agência Nacional de Mineração/Superintendência de Arrecadação e Fiscalização de Receitas
-  Tipo: Despacho | Página 74 | não aberto (agrupado: o grupo abre um ato só (despacho)) | serie dou1-19 (2 atos)
-  Radares: regulatorio-oleo-gas (palavras-chave 'ANM', 'instrução normativa')
-  URL: https://www.in.gov.br/web/dou/-/despacho-736288698
-  Resumo: Relação nº 520/2026 Fica(m) o(s) abaixo relacionado(s), nos termos do artigo 8º da Instrução Normativa ANM nº 25, de 04 de Março de 206, notificado(s) de que julgou-se parcialmente procedentes(s) a(s) defesa(s) administrativa(s) interposta(s); restando-lhe(s) pagar, parcelar ou apresentar recurso relativo ao(s) [...]
-  Trecho: 
-- Portaria SERES/MEC Nº 523, DE 2 DE OUTUBRO DE 2026
-  Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
-  Tipo: Portaria | Página 48 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 514, DE 2 de outubro de 2026)) | lote dou1-1 (15 atos)
-  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
-  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-523-de-2-de-outubro-de-2026-736299778
-  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso da atribuição que lhe confere o Decreto nº 12.769, de 5 de dezembro de 2025, alterado pelo Decreto nº. [...]
-  Trecho: 
-- ATOS DECLARATÓRIOS CVM DE 2 DE OUTUBRO DE 2026
-  Órgão: Ministério da Fazenda/Comissão de Valores Mobiliários/Superintendência-Geral/Superintendência de Supervisão de Investidores Institucionais/Gerência de Acompanhamento de Investidores Institucionais
-  Tipo: Ato Declaratório | Página 56 | aberto
+- RESOLUÇÃO OPERACIONAL ANS Nº 3.179, DE 9 DE OUTUBRO DE 2026
+  Órgão: Ministério da Saúde/Agência Nacional de Saúde Suplementar
+  Tipo: Resolução | Página 72 | aberto
+  Radares: regulatorio-oleo-gas (palavras-chave 'ANS', 'Resolução')
+  URL: https://www.in.gov.br/web/dou/-/resolucao-operacional-ans-n-3.179-de-9-de-outubro-de-2026-738050094
+  Resumo: Dispõe sobre a instauração do regime especial de Direção Técnica na operadora SAÚDE BRASIL ASSISTÊNCIA MÉDICA LTDA.
+  Trecho: A Diretoria Colegiada da Agência Nacional de Saúde Suplementar - ANS, no uso das atribuições que lhe confere o art. 70 do Regimento Interno, instituído pela Resolução Regimental (RR) nº 21, de 26 de janeiro de 2022, na forma do disposto no art. 24 da Lei nº. 9.656, de 3 de junho de 1998, alterada pela Medida Provisória nº 2.177-44, de 24 de agosto de 2001, na reunião ordinária de 9 de outubro de 2026, considerando as anormalidades administrativas e assistenciais graves que colocam em risco a continuidade do atendimento à saúde dos beneficiários, de acordo com os elementos constantes do processo administrativo nº 33910.034841/2025-73, adotou a seguinte Resolução Operacional e eu, Diretor-Presidente, determino a sua publicação: Art. [...]
+- ATO DECLARATÓRIO CVM Nº 25.937, DE 13 DE OUTUBRO DE 2026
+  Órgão: Ministério da Fazenda/Superintendência-Geral/Superintendência de Supervisão de Investidores Institucionais/Gerência de Acompanhamento de Investidores Institucionais
+  Tipo: Ato Declaratório | Página 44 | aberto
   Radares: mercado-capitais-fundos (palavras-chave 'CVM', 'valores mobiliários')
-  URL: https://www.in.gov.br/web/dou/-/atos-declaratorios-cvm-de-2-de-outubro-de-2026-736311553
-  Resumo: Nº 25.891 - O Gerente de Acompanhamento de Investidores Institucionais da Comissão de Valores Mobiliários, no uso da competência dada pela Resolução CVM nº 24, de 5 de março de 2021, autoriza FERNANDO RUDOLF KASPER, CPF nº ***.506.831-**, a prestar os serviços de Consultor de Valores Mobiliários, previstos na [...]
-  Trecho: Nº 25.892 - O Gerente de Acompanhamento de Investidores Institucionais da Comissão de Valores Mobiliários, no uso da competência dada pela Resolução CVM nº 24, de 5 de março de 2021, autoriza LUCAS RODRIGUES DE SOUZA ZANELLA, CPF nº ***.083.638-**, a prestar os serviços de Consultor de Valores Mobiliários, previstos na Resolução CVM nº 19, de 25 de fevereiro de 2021. Nº 25.893 - O Gerente de Acompanhamento de Investidores Institucionais da Comissão de Valores Mobiliários, no uso da competência dada pela Resolução CVM nº 24, de 5 de março de 2021, autoriza DIEGO DE CARVALHO CAVALHEIRO, CPF nº ***.945.580-**, a prestar os serviços de Consultor de Valores Mobiliários, previstos na Resolução CVM nº 19, de 25 de fevereiro de 2021. [...]
-- DESPACHO SG de 2 de outubro de 2026
-  Órgão: Ministério da Justiça e Segurança Pública/Conselho Administrativo de Defesa Econômica/Superintendência-Geral
-  Tipo: Despacho | Página 67 | aberto
-  Radares: regulatorio-oleo-gas (órgão Conselho Administrativo de Defesa Econômica)
-  URL: https://www.in.gov.br/web/dou/-/despacho-sg-de-2-de-outubro-de-2026-736316329
-  Resumo: Nº 1.287 - Processo Administrativo nº 08700.011013/2025-95 (Apartado de Acesso Restrito nº 08700.004395/2021-77) Representante: Cade ex officio. Representados: Acmed Distribuidora e Serviços Ltda, Act Med Comércio Importação de Material Médico Ltda, BID - Business Intelligence Device Comércio de Materiais Médicos Ltda [...]
-  Trecho: Advogados: Adriana Moraes de Crasto, Ana Paula Neves Siqueira do Nascimento, Ângela Maria de Souza Monteiro, Anna Carolina Pereira Cesarino Faraco Lamy, Arnaldo Sobrinho de Morais Neto, Bruna Paula Madeira da Silva, Bruno Bastos Becker, Cristiano Henrique Silva Souto, Daniel Lima Araújo, Diego Matos Alves, Eduardo de Avelar Lamy, Eduardo Henrique Santos de Moura, Erikson de Brito Melo, Franco de Velasco e Silva, Giovani Agostini Saavedra, Hallrison Souza Dantas, José Carlos Berardo, Juliana Maia Daniel Pinheiro, Leandro Pianca Regis, Luciano Guimarães Mata, Magda Torres Ballout, Marciano Moreira Teixeira Lopes, Mariana de Aguiar Buerger, Matheus Fernandes de Jesus, Maurício Bezerra Alves Filho, Nathalia Beduhn Schneider, Paula Isabel Bezerra Rocha Wanderley, Paulo Cesar Maia Porto, Paulo Celso Eichhorn, Paulo Henrique Soares Pimentel de Melo, Pedro Gustavo Johnsson, Plinio da Rosa [...]
-- ReTIFICAÇÃO
-  Órgão: Ministério da Saúde/Agência Nacional de Vigilância Sanitária/4ª Diretoria/Gerência-Geral de Inspeção e Fiscalização Sanitária
-  Tipo: Resolução | Página 131 | não aberto (agrupado: o grupo abre um ato só (RESOLUÇÃO DA DIRETORIA COLEGIADA ANVISA Nº 1.045, DE 2 DE OUTUBRO DE 2026)) | lote dou1-3 (4 atos)
-  Radares: regulatorio-oleo-gas (palavras-chave 'Resolução', 'certificação')
-  URL: https://www.in.gov.br/web/dou/-/retificacao-736294439
-  Resumo: Na Resolução RE nº1.388, de 10 de abril de 2025, publicada no Diário Oficial da União nº. 71, de 14 de abril de 2025, Seção I, pág. 313 referente a certificação da empresa Jabil, Inc., solicitada pela empresa Johnson & Johnson do Brasil Indústria e Comércio de Produtos para Saúde Ltda, CNPJ n.º 54.516.661/0001-01 [...]
+  URL: https://www.in.gov.br/web/dou/-/ato-declaratorio-cvm-n-25.937-de-13-de-outubro-de-2026-738059357
+  Resumo: O Gerente de Acompanhamento de Investidores Institucionais da Comissão de Valores Mobiliários, no uso da competência dada pela Resolução CVM nº 24, de 5 de março de 2021, autoriza KÁTIA SILVÉRIO AFONSO DA SILVA, CPF nº ***.780.988-**, a prestar os serviços de Administrador de Carteira de Valores Mobiliários previstos [...]
   Trecho: 
-- Portaria SERES/MEC Nº 524, DE 2 DE OUTUBRO DE 2026
+- PORTARIA SERES/MEC Nº 527, DE 13 de outubro de 2026
   Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
-  Tipo: Portaria | Página 48 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 514, DE 2 de outubro de 2026)) | lote dou1-1 (15 atos)
+  Tipo: Portaria | Página 21 | aberto | lote dou1-11 (7 atos)
   Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
-  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-524-de-2-de-outubro-de-2026-736303231
-  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso da atribuição que lhe confere o o Decreto nº 12.769, de 5 de dezembro de 2025, alterado pelo Decreto nº. [...]
+  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-527-de-13-de-outubro-de-2026-738057195
+  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso das atribuições que lhe confere o Decreto nº 12.769, de 5 de dezembro de 2025, e tendo em vista os Decretos nº 9.235, de 15 de dezembro de 2017, e nº 12.456, de 19 de maio de 2025; as Portarias Normativas MEC nºs 20 e 23, de 21 de dezembro de 2017; a [...]
+  Trecho: Art. 1º Fica(m) reconhecido(s) o(s) curso(s) superior(es) de graduação, no formato a distância, constante(s) da tabela do anexo desta Portaria, ministrado(s) pela(s) Instituição(ões) de Educação Superior citada(s), nos termos do disposto no art. 10, do Decreto nº 9.235, de 2017. Art. 2º Os endereços utilizados para as atividades presenciais dos cursos de graduação, ofertados no formato a distância e neste ato reconhecidos, são, exclusivamente, aqueles constantes do Cadastro e-MEC, em conformidade com o art. 30 do Decreto nº 12.456, de 2025. Art. 3º Nos termos do art. 10 § 3º do Decreto nº 9.235, de 2017, e dos artigos 37 a 42 da Portaria MEC nº 23, de 2017, o presente ato autorizativo é válido até o final do ciclo avaliativo ao qual cada curso pertence. Art. [...]
+- DESPACHO Nº 3.901, DE 7 DE OUTUBRO DE 2026
+  Órgão: Ministério de Minas e Energia/Agência Nacional de Energia Elétrica/Superintendência de Gestão Tarifária e Regulação Econômica
+  Tipo: Despacho | Página 56 | aberto
+  Radares: imobiliario-infraestrutura (palavras-chave 'distribuição', 'energia')
+  URL: https://www.in.gov.br/web/dou/-/despacho-n-3.901-de-7-de-outubro-de-2026-738060866
+  Resumo: Processo nº: 48500.906456/2020-21. Interessado: Concessionárias e Permissionárias de Distribuição e Consumidores. Decisão: Estabelecer, mediante revisão de ofício, a previsão anual de custos do Encargo de Serviço de Sistema - ESS, do Encargo de Energia de Reserva - EER e do Encargo de Potência para Reserva de [...]
   Trecho: 
-- DESPACHO
-  Órgão: Ministério do Desenvolvimento, Indústria, Comércio e Serviços/Secretaria de Desenvolvimento Industrial, Inovação, Comércio e Serviços
-  Tipo: Despacho | Página 39 | não aberto (agrupado: o grupo abre um ato só (DESPACHO)) | lote dou1-2 (5 atos)
-  Radares: regulatorio-oleo-gas (órgão Ministério do Desenvolvimento, Indústria, Comércio e Serviços)
-  URL: https://www.in.gov.br/web/dou/-/despacho-736296820
-  Resumo: O SECRETÁRIO DE DESENVOLVIMENTO INDUSTRIAL, INOVAÇÃO, COMÉRCIO E SERVIÇOS, DO MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS, no uso da atribuição de que trata o art. [...]
+- despacho
+  Órgão: Ministério de Minas e Energia/Agência Nacional de Mineração/Superintendência de Arrecadação e Fiscalização de Receitas/Gerência de Cobrança das Demais Receitas/Coordenação de Autuação e Fiscalização da TAH
+  Tipo: Despacho | Página 52 | não aberto (teto de 20 atos abertos por execução)
+  Radares: direito-tributario (palavras-chave 'dívida ativa')
+  URL: https://www.in.gov.br/web/dou/-/despacho-738063867
+  Resumo: Relação nº 532/2026 A Agência Nacional de Mineração (ANM) comunica ao(s) interessado(s) listados, em razão da frustação da notificação por via postal, que lhe(s) resta pagar ou parcelar o(s) débito(s) apurado(s) da Taxa Anual por Hectare (TAH) em 10 (dez) dias a contar desta data de publicação, sob pena de inscrição [...]
   Trecho: 
-- Despacho
-  Órgão: Ministério de Minas e Energia/Agência Nacional de Mineração/Gerência Regional da ANM no Estado de Minas Gerais
-  Tipo: Despacho | Página 69 | não aberto (teto de 20 atos abertos por execução)
-  Radares: imobiliario-infraestrutura (palavras-chave 'SPE', 'mineração')
-  URL: https://www.in.gov.br/web/dou/-/despacho-736306420
-  Resumo: Relação nº 556/2026 Aprovo o Plano de Fechamento de Mina(3057) 830.218/2020 - POLIMAR PEREIRA DUARTE Fase de Autorização de Pesquisa Aprova o relatório de Pesquisa(317) 830.218/2020-POLIMAR PEREIRA DUARTE-Diamante (gema), Cascalho (construção civil)-Coromandel/MG 830.495/2021-P-TEC AGRO MINERACAO SPE LTDA.-Rocha [...]
+- PORTARIA CGAUT/SUSEP nº 232, de 13 De OUTUBRO de 2026
+  Órgão: Ministério da Fazenda/Superintendência de Seguros Privados/Diretoria de Organização de Mercado e Regulação de Conduta/Coordenação-Geral de Autorizações
+  Tipo: Portaria | Página 45 | não aberto (agrupado: o grupo abre um ato só (PORTARIA CGAUT/SUSEP nº 228, de 13 De OUTUBRO de 2026)) | lote dou1-5 (9 atos)
+  Radares: mercado-capitais-fundos (palavras-chave 'SUSEP' (reforço: Superintendência de Seguros Privados))
+  URL: https://www.in.gov.br/web/dou/-/portaria-cgaut/susep-n-232-de-13-de-outubro-de-2026-738064953
+  Resumo: O COORDENADOR-GERAL DA COORDENAÇÃO-GERAL DE AUTORIZAÇÕES DA SUPERINTENDÊNCIA DE SEGUROS PRIVADOS - CGAUT, no uso da competência delegada pelo Superintendente da Susep, por meio da Portaria nº 8.186, de 21 de julho de 2023, tendo em vista o disposto no artigo I do artigo 36 do Decreto-Lei nº 73, de 21 de novembro de [...]
   Trecho: 
-- PORTARIA SERES/MEC Nº 512, DE 2 de outubro de 2026
+- PORTARIA SERES/MEC Nº 525, de 13 de OUTUBRO de 2026
   Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
-  Tipo: Portaria | Página 43 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 514, DE 2 de outubro de 2026)) | lote dou1-1 (15 atos)
+  Tipo: Portaria | Página 20 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 527, DE 13 de outubro de 2026)) | lote dou1-11 (7 atos)
   Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
-  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-512-de-2-de-outubro-de-2026-736306975
-  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso da atribuição que lhe confere o Decreto n° 12.769, de 5 de dezembro de 2025, e tendo em vista os Decretos nº 9.235, de 15 de dezembro de 2017, e nº 12.456, de 19 de maio de 2025, as Portarias MEC n° 20 e nº 23, de 21 de dezembro de 2017, a Portaria [...]
+  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-525-de-13-de-outubro-de-2026-738070427
+  Resumo: Renova a qualificação como Instituição Comunitária de Educação Superior a IES Universidade do Extremo Sul Catarinense - UNESC A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso de suas atribuições, e considerando as disposições da Lei nº 12.881/2013. Decreto nº 12.817/2026. [...]
+  Trecho: 
+- PORTARIA IBC Nº 457, DE 8 DE OUTUBRO DE 2026
+  Órgão: Ministério da Educação/Instituto Benjamin Constant
+  Tipo: Portaria | Página 20 | aberto
+  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
+  URL: https://www.in.gov.br/web/dou/-/portaria-ibc-n-457-de-8-de-outubro-de-2026-738048231
+  Resumo: O DIRETOR-GERAL DO INSTITUTO BENJAMIN CONSTANT, no uso das atribuições que lhe são conferidas pelo art. 25, inciso VII, do Regimento Interno aprovado pela Portaria MEC nº 325, de 17 de abril de 1998, e alterado pela Portaria MEC nº 310, de 03 de abril de 2018, resolve:
+  Trecho: ALTERAR A PORTARIA NORMATIVA IBC Nº 165, DE 29 DE SETEMBRO DE 2026 "Art. 1º Esta Portaria regulamenta o processo eleitoral destinado à escolha do Diretor-Geral do Instituto Benjamin Constant para o mandato de quatro anos correspondente ao período de 2027 a 2030, observado, quanto ao início do exercício, o ato de nomeação expedido pelo Ministro de Estado da Educação." (NR) "Parágrafo único. O processo eleitoral dar-se-á de forma presencial quanto à votação e à apuração e de forma híbrida quanto à campanha eleitoral, com utilização do Sistema Unificado de Administração Pública - SUAP para a tramitação dos processos e documentos previstos nesta Portaria." (NR) Art. 4º [...] "II - possuir, no mínimo, cinco anos de efetivo exercício no Instituto Benjamin Constant;" (NR) Art. [...]
+- DECISÃO SUROC Nº 634, DE 8 DE OUTUBRO DE 2026
+  Órgão: Ministério dos Transportes/Agência Nacional de Transportes Terrestres/Superintendência de Serviços de Transporte Rodoviário e Multimodal de Cargas
+  Tipo: Decisão | Página 79 | não aberto (agrupado: o grupo abre um ato só (DECISÃO SUPAS Nº 1.424, DE 7 DE OUTUBRO DE 2026)) | lote dou1-2 (7 atos)
+  Radares: regulatorio-oleo-gas (palavras-chave 'ANTT', 'transporte rodoviário')
+  URL: https://www.in.gov.br/web/dou/-/decisao-suroc-n-634-de-8-de-outubro-de-2026-738050361
+  Resumo: O Superintendente de Serviços de Transporte Rodoviário e Multimodal de Cargas da Agência Nacional de Transportes Terrestres - ANTT, no uso de suas atribuições, em conformidade com a Resolução nº 5.818, de 3 de maio de 2018, e nos termos do que consta no processo nº 50505.155537/2026-41, decide: Art. [...]
   Trecho: 
 - DECISÕES
   Órgão: Atos do Poder Judiciário/Supremo Tribunal Federal/Plenário
   Tipo: Ação Direta de Inconstitucionalidade e Ação Declaratória de Constitucionalidade | Página 1 | não aberto (teto de 20 atos abertos por execução)
   Radares: contencioso-civel (palavras-chave 'ADI' (reforço: Supremo Tribunal Federal))
-  URL: https://www.in.gov.br/web/dou/-/decisoes-736290717
-  Resumo: Ação Direta de Inconstitucionalidade e Ação Declaratória de Constitucionalidade (Publicação determinada pela Lei nº 9.868, de 10.11.1999) ADI 7949 Mérito Relator(a)Min. [...]
-  Trecho: 
-- DECISÃO SUROC Nº 607, DE 30 DE SETEMBRO DE 2026
-  Órgão: Ministério dos Transportes/Agência Nacional de Transportes Terrestres/Superintendência de Serviços de Transporte Rodoviário e Multimodal de Cargas
-  Tipo: Decisão | Página 144 | não aberto (agrupado: o grupo abre um ato só (DECISÃO SUROC Nº 608, DE 30 DE SETEMBRO DE 2026)) | lote dou1-5 (5 atos)
-  Radares: regulatorio-oleo-gas (palavras-chave 'ANTT', 'transporte rodoviário')
-  URL: https://www.in.gov.br/web/dou/-/decisao-suroc-n-607-de-30-de-setembro-de-2026-736292479
-  Resumo: A Superintendente de Serviços de Transporte Rodoviário e Multimodal de Cargas substituta da Agência Nacional de Transportes Terrestres - ANTT, no uso de suas atribuições, em conformidade com a Resolução nº 5.818, de 3 de maio de 2018, e nos termos do que consta no processo nº 50505.146559/2026-10, decide: Art. [...]
-  Trecho: 
-- Despacho
-  Órgão: Ministério de Minas e Energia/Agência Nacional de Mineração/Gerência Regional da ANM no Estado do Mato Grosso
-  Tipo: Despacho | Página 69 | não aberto (teto de 20 atos abertos por execução)
-  Radares: direito-tributario (palavras-chave 'exportação', 'importação')
-  URL: https://www.in.gov.br/web/dou/-/despacho-736301152
-  Resumo: Relação nº 328/2026 Fase de Autorização de Pesquisa Concede anuência e autoriza averbação da cessão total de direitos(281) 866.284/2019-VULCANO EXPORT MINERACAO EXPORTACAO E IMPORTACAO LTDA- Cessionário:M Moulão Marmores e Granitos Ltda- CPF ou CNPJ 46.432.330/0001-57- Alvará n°7336/2022 866.272/2019-VULCANO EXPORT [...]
-  Trecho: 
-- PORTARIA SERES/EC Nº 522, DE 2 DE OUTUBRO DE 2026
-  Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
-  Tipo: Portaria | Página 48 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 514, DE 2 de outubro de 2026)) | lote dou1-1 (15 atos)
-  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
-  URL: https://www.in.gov.br/web/dou/-/portaria-seres/ec-n-522-de-2-de-outubro-de-2026-736305150
-  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso da atribuição que lhe confere o Decreto nº 12.769, de 5 de dezembro de 2025, alterado pelo Decreto nº. [...]
-  Trecho: 
-- PORTARIA SERES/MEC Nº 513, DE 2 de outubro de 2026
-  Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
-  Tipo: Portaria | Página 43 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 514, DE 2 de outubro de 2026)) | lote dou1-1 (15 atos)
-  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
-  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-513-de-2-de-outubro-de-2026-736305229
-  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso da atribuição que lhe confere o Decreto nº 12.769, de 5 de dezembro de 2025, e tendo em vista os Decretos n° 9.235, de 15 de dezembro de 2017, e nº 12.456, de 19 de maio de 2025; as Portarias Normativas n° 20 e nº 23, de 21 de dezembro de 2017, do [...]
-  Trecho: 
-- PORTARIA SERES/MEC Nº 517, DE 2 de outubro de 2026
-  Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
-  Tipo: Portaria | Página 46 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 514, DE 2 de outubro de 2026)) | lote dou1-1 (15 atos)
-  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
-  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-517-de-2-de-outubro-de-2026-736311845
-  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso da atribuição que lhe confere o Decreto nº 12.769, de 5 de dezembro de 2025, e tendo em vista os Decretos n° 9.235, de 15 de dezembro de 2017, e nº 12.456, de 19 de maio de 2025; as Portarias Normativas n° 20 e nº 23, de 21 de dezembro de 2017, do [...]
-  Trecho: 
-- Despacho Nº 539/2026
-  Órgão: Ministério da Justiça e Segurança Pública/Secretaria Nacional do Consumidor/Departamento de Proteção e Defesa do Consumidor
-  Tipo: Despacho | Página 64 | não aberto (teto de 20 atos abertos por execução)
-  Radares: regulatorio-oleo-gas, contencioso-civel (palavras-chave 'processo administrativo sancionador'; palavras-chave 'SENACON' (reforço: Secretaria Nacional do Consumidor))
-  URL: https://www.in.gov.br/web/dou/-/despacho-n-539/2026-736296662
-  Resumo: Destino: CGCTSA/DPDC/SENACON Assunto: Defesa do Consumidor: Processo Administrativo Sancionador Interessado(a): Posto de Combustíveis 310 Sul Ltda. O DIRETOR DO DEPARTAMENTO DE PROTEÇÃO E DEFESA DO CONSUMIDOR, no uso de suas atribuições legais e regulamentares, em especial as previstas no art. [...]
+  URL: https://www.in.gov.br/web/dou/-/decisoes-738066664
+  Resumo: Ação Direta de Inconstitucionalidade e Ação Declaratória de Constitucionalidade (PUBLICAÇÃO DETERMINADA PELA LEI Nº 9.868, DE 10.11.1999) ADI 7797 ADI-ED Relator(a):Min. [...]
   Trecho: 
 - DESPACHO
   Órgão: Ministério do Desenvolvimento, Indústria, Comércio e Serviços/Secretaria de Desenvolvimento Industrial, Inovação, Comércio e Serviços
-  Tipo: Despacho | Página 39 | não aberto (agrupado: o grupo abre um ato só (DESPACHO)) | lote dou1-2 (5 atos)
+  Tipo: Despacho | Página 15 | não aberto (agrupado: o grupo abre um ato só (DESPACHO)) | lote dou1-1 (7 atos)
   Radares: regulatorio-oleo-gas (órgão Ministério do Desenvolvimento, Indústria, Comércio e Serviços)
-  URL: https://www.in.gov.br/web/dou/-/despacho-736298400
-  Resumo: O SECRETÁRIO DE DESENVOLVIMENTO INDUSTRIAL, INOVAÇÃO, COMÉRCIO E SERVIÇOS, DO MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS, no uso das atribuições que lhe confere o art. 26 do Decreto nº 11.427, de 2 de março de 2023, bem como, por analogia, o disposto no art. [...]
+  URL: https://www.in.gov.br/web/dou/-/despacho-738051473
+  Resumo: O SECRETÁRIO DE DESENVOLVIMENTO INDUSTRIAL, INOVAÇÃO, COMÉRCIO E SERVIÇOS SUBSTITUTO, DO MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS, no uso da atribuição de que trata o art. [...]
   Trecho: 
-- DESPACHO Nº 3.850, DE 1° DE OUTUBRO DE 2026
-  Órgão: Ministério de Minas e Energia/Agência Nacional de Energia Elétrica/Superintendência de Concessões, Permissões e Autorizações dos Serviços de Energia Elétrica
-  Tipo: Despacho | Página 78 | não aberto (teto de 20 atos abertos por execução)
-  Radares: imobiliario-infraestrutura (palavras-chave 'energia', 'transmissão')
-  URL: https://www.in.gov.br/web/dou/-/despacho-n-3.850-de-1-de-outubro-de-2026-736295812
-  Resumo: Processo nº: 48500.903780/2023-30. Interessado: Pampa Transmissão de Energia S.A., CNPJ nº 32.184.487/0001-04. Decisão: negar provimento ao pedido (i) de isenção do desconto na receita pela aplicação da Parcela Variável por Atraso na entrada em operação, e (ii) de devolução dos valores descontados. [...]
+- DESPACHO de 13 de outubro de 2026
+  Órgão: Ministério do Trabalho e Emprego/Secretaria de Inspeção do Trabalho/Coordenação-Geral de Recursos
+  Tipo: Despacho | Página 76 | não aberto (teto de 20 atos abertos por execução)
+  Radares: trabalhista-empresarial (palavras-chave 'MTE' (reforço: Ministério do Trabalho e Emprego))
+  URL: https://www.in.gov.br/web/dou/-/despacho-de-13-de-outubro-de-2026-738051287
+  Resumo: A Coordenadora-Geral de Recursos da Secretaria de Inspeção do Trabalho/MTE, no uso de sua competência, prevista no art. 13, II, inciso "c" e "d", Anexo IX, da Portaria nº 1153, com amparo no art. 50, §1º, da Lei 9.784/99, acolho os fundamentos supracitasos para decidir. [...]
   Trecho: 
-- PORTARIA SERES/MEC Nº 510, DE 2 de outubro de 2026
+- PORTARIA SERES/MEC Nº 528, DE 13 de outubro de 2026
   Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
-  Tipo: Portaria | Página 42 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 514, DE 2 de outubro de 2026)) | lote dou1-1 (15 atos)
+  Tipo: Portaria | Página 21 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 527, DE 13 de outubro de 2026)) | lote dou1-11 (7 atos)
   Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
-  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-510-de-2-de-outubro-de-2026-736310245
+  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-528-de-13-de-outubro-de-2026-738058412
+  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso da atribuição que lhe confere o Decreto nº 12.769, de 5 de dezembro de 2025, e tendo em vista os Decretos n° 9.235, de 15 de dezembro de 2017, e nº 12.456, de 19 de maio de 2025; as Portarias Normativas n° 20 e nº 23, de 21 de dezembro de 2017, do [...]
+  Trecho: 
+- PORTARIA CGAUT/SUSEP nº 225, de 13 De OUTUBRO de 2026
+  Órgão: Ministério da Fazenda/Superintendência de Seguros Privados/Diretoria de Organização de Mercado e Regulação de Conduta/Coordenação-Geral de Autorizações
+  Tipo: Portaria | Página 44 | não aberto (agrupado: o grupo abre um ato só (PORTARIA CGAUT/SUSEP nº 228, de 13 De OUTUBRO de 2026)) | lote dou1-5 (9 atos)
+  Radares: mercado-capitais-fundos (palavras-chave 'SUSEP' (reforço: Superintendência de Seguros Privados))
+  URL: https://www.in.gov.br/web/dou/-/portaria-cgaut/susep-n-225-de-13-de-outubro-de-2026-738058186
+  Resumo: O COORDENADOR-GERAL DA COORDENAÇÃO-GERAL DE AUTORIZAÇÕES DA SUPERINTENDÊNCIA DE SEGUROS PRIVADOS - CGAUT, no uso da competência delegada pelo Superintendente da Susep, por meio da Portaria nº 8.186, de 21 de julho de 2023, tendo em vista o disposto no inciso I do artigo 36 do Decreto-Lei nº 73, de 21 de novembro de [...]
+  Trecho: 
+- PORTARIA SERES/MEC Nº 526, de 13 de OUTUBRO de 2026
+  Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
+  Tipo: Portaria | Página 20 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 527, DE 13 de outubro de 2026)) | lote dou1-11 (7 atos)
+  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
+  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-526-de-13-de-outubro-de-2026-738065328
+  Resumo: Renova a qualificação como Instituição Comunitária de Educação Superior a IES Universidade Católica de Santos - UNISANTOS A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso de suas atribuições, e considerando as disposições da Lei nº 12.881/2013. Decreto nº 12.817/2026. [...]
+  Trecho: 
+- DECISÃO SUPAS Nº 1.420, DE 7 DE OUTUBRO DE 2026
+  Órgão: Ministério dos Transportes/Agência Nacional de Transportes Terrestres/Superintendência de Serviços de Transporte Rodoviário de Passageiros
+  Tipo: Decisão | Página 78 | não aberto (agrupado: o grupo abre um ato só (DECISÃO SUPAS Nº 1.424, DE 7 DE OUTUBRO DE 2026)) | lote dou1-2 (7 atos)
+  Radares: regulatorio-oleo-gas (palavras-chave 'ANTT', 'transporte rodoviário')
+  URL: https://www.in.gov.br/web/dou/-/decisao-supas-n-1.420-de-7-de-outubro-de-2026-738055378
+  Resumo: O Superintendente de Serviços de Transporte Rodoviário de Passageiros da Agência Nacional de Transportes Terrestres - ANTT, no uso de suas atribuições, em conformidade com o art. 3º e o inciso XV do art. 8º, ambos do Anexo da Resolução nº 5.818, de 3 de maio de 2018; com o inciso III do art. 29, e inciso VIII do art. [...]
+  Trecho: 
+- RESOLUÇÃO Nº 817, DE 7 DE OUTUBRO DE 2026
+  Órgão: Ministério de Portos e Aeroportos/Agência Nacional de Aviação Civil
+  Tipo: Resolução | Página 58 | aberto
+  Radares: regulatorio-oleo-gas (palavras-chave 'Resolução', 'aeroportos')
+  URL: https://www.in.gov.br/web/dou/-/resolucao-n-817-de-7-de-outubro-de-2026-738054265
+  Resumo: Estabelece procedimentos, recursos materiais e prazos para modernização dos equipamentos utilizados nos canais de inspeção de pessoas e pertences de mão nos aeroportos brasileiros.
+  Trecho: A DIRETORIA COLEGIADA DA AGÊNCIA NACIONAL DE AVIAÇÃO CIVIL - ANAC, no exercício da competência que lhe foi outorgada pelo art. 11, inciso V, da Lei nº 11.182, de 27 de setembro de 2005, tendo em vista o disposto nos arts. 8º, incisos X e XLVI, da mencionada Lei e 52 do Decreto nº 11.195, de 8 de setembro de 2022, e considerando o que consta do processo nº 00058.024978/2025-68, deliberado e aprovado na 7ª Reunião Deliberativa, realizada em 6 de outubro de 2026, resolve: Art. 1º Aprovar procedimentos, recursos materiais e prazos para modernização dos equipamentos utilizados nos canais de inspeção de pessoas e pertences de mão nos aeroportos brasileiros. Art. 2º Os operadores de aeródromos deverão adotar os recursos materiais e os procedimentos de segurança definidos no Anexo, respeitando os prazos nele estabelecidos. Parágrafo único. [...]
+- SOLUÇÃO DE CONSULTA Nº 196, DE 8 DE OUTUBRO DE 2026
+  Órgão: Ministério da Fazenda/Secretaria Especial da Receita Federal do Brasil/Secretaria-Adjunta/Subsecretaria de Tributação e Contencioso/Coordenação-Geral de Tributação
+  Tipo: Solução de Consulta | Página 37 | não aberto (teto de 20 atos abertos por execução)
+  Radares: direito-tributario (palavras-chave 'IRPJ', 'solução de consulta')
+  URL: https://www.in.gov.br/web/dou/-/solucao-de-consulta-n-196-de-8-de-outubro-de-2026-738056900
+  Resumo: Assunto: Imposto sobre a Renda de Pessoa Jurídica - IRPJ SUBVENÇÕES GOVERNAMENTAIS. ESTÍMULO À INOVAÇÃO E PESQUISA CIENTÍFICA E TECNOLÓGICA. DESONERAÇÃO. As subvenções governamentais recebidas nos moldes do art. 19 da Lei nº 10.973, de 2 de dezembro de 2004, e do art. [...]
+  Trecho: 
+- DESPACHO
+  Órgão: Ministério do Desenvolvimento, Indústria, Comércio e Serviços/Secretaria de Desenvolvimento Industrial, Inovação, Comércio e Serviços
+  Tipo: Despacho | Página 15 | não aberto (agrupado: o grupo abre um ato só (DESPACHO)) | lote dou1-1 (7 atos)
+  Radares: regulatorio-oleo-gas (órgão Ministério do Desenvolvimento, Indústria, Comércio e Serviços)
+  URL: https://www.in.gov.br/web/dou/-/despacho-738057274
+  Resumo: O SECRETÁRIO DE DESENVOLVIMENTO INDUSTRIAL, INOVAÇÃO, COMÉRCIO E SERVIÇOS SUBSTITUTO, DO MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS, no uso da atribuição de que trata o art. [...]
+  Trecho: 
+- DECISÃO SUPAS Nº 1.426, DE 7 DE OUTUBRO DE 2026
+  Órgão: Ministério dos Transportes/Agência Nacional de Transportes Terrestres/Superintendência de Serviços de Transporte Rodoviário de Passageiros
+  Tipo: Decisão | Página 79 | não aberto (agrupado: o grupo abre um ato só (DECISÃO SUPAS Nº 1.424, DE 7 DE OUTUBRO DE 2026)) | lote dou1-2 (7 atos)
+  Radares: regulatorio-oleo-gas (palavras-chave 'ANTT', 'transporte rodoviário')
+  URL: https://www.in.gov.br/web/dou/-/decisao-supas-n-1.426-de-7-de-outubro-de-2026-738065514
+  Resumo: O Superintendente de Serviços de Transporte Rodoviário de Passageiros da Agência Nacional de Transportes Terrestres - ANTT, no uso de suas atribuições, em conformidade com o art. 3º e o inciso X do art. 8º, ambos do Anexo da Resolução nº 5.818, de 3 de maio de 2018; com o inciso IV do art. 29, e inciso VIII do art. [...]
+  Trecho: 
+- ATOS DE 10 DE OUTUBRO DE 2026
+  Órgão: Ministério das Comunicações/Superintendência de Outorga e Recursos à Prestação/Gerência de Outorga e Licenciamento de Estações
+  Tipo: Ato | Página 6 | não aberto (teto de 20 atos abertos por execução)
+  Radares: regulatorio-oleo-gas (palavras-chave 'campo', 'telecomunicações')
+  URL: https://www.in.gov.br/web/dou/-/atos-de-10-de-outubro-de-2026-738049642
+  Resumo: Nº 12.937 - Processo nº 53500.145015/2026-79. Autoriza Kofre Representacao e Comercio de Telecomunicacoes Ltda, CNPJ nº 34.303.693/0001-03, a realizar operação temporária de equipamentos de radiocomunicação, nas cidades de Altamira/PA, Campo Grande/MS, Corumbá/MS, Marabá/PA, Montes Claros/MG, Parauapebas/PA, Ponta [...]
+  Trecho: 
+- ATOS DE 6 DE OUTUBRO DE 2026
+  Órgão: Ministério das Comunicações/Superintendência de Outorga e Recursos à Prestação/Gerência de Outorga e Licenciamento de Estações
+  Tipo: Ato | Página 6 | não aberto (teto de 20 atos abertos por execução)
+  Radares: propriedade-intelectual (palavras-chave 'data center', 'tecnologia')
+  URL: https://www.in.gov.br/web/dou/-/atos-de-6-de-outubro-de-2026-738049723
+  Resumo: Nº 12.773 - Processo nº 53500.142981/2026-34. Expede autorização à NWI DATA CENTER E TECNOLOGIA DA INFORMACAO LTDA, CNPJ/MF nº 48.059.527/0001-18, para explorar Serviços de Telecomunicações de Interesse Coletivo e de Interesse Restrito, por prazo indeterminado, em todo o território nacional. [...]
+  Trecho: 
+- RESOLUÇÃO OPERACIONAL ANS Nº 3.177, DE 9 DE OUTUBRO DE 2026
+  Órgão: Ministério da Saúde/Agência Nacional de Saúde Suplementar
+  Tipo: Resolução | Página 72 | aberto
+  Radares: regulatorio-oleo-gas (palavras-chave 'ANS', 'Resolução')
+  URL: https://www.in.gov.br/web/dou/-/resolucao-operacional-ans-n-3.177-de-9-de-outubro-de-2026-738060492
+  Resumo: Dispõe sobre a instauração do regime especial de Direção Técnica na operadora AMPLITUDE PLANOS DE SAUDE LTDA.
+  Trecho: A Diretoria Colegiada da Agência Nacional de Saúde Suplementar - ANS, no uso das atribuições que lhe confere o art. 70 do Regimento Interno, instituído pela Resolução Regimental (RR) nº 21, de 26 de janeiro de 2022, na forma do disposto no art. 24 da Lei nº. 9.656, de 3 de junho de 1998, alterada pela Medida Provisória nº 2.177-44, de 24 de agosto de 2001, na reunião ordinária de 9 de outubro de 2026, considerando as anormalidades administrativas e assistenciais graves que colocam em risco a continuidade do atendimento à saúde dos beneficiários, de acordo com os elementos constantes do processo administrativo nº 33910.024035/2026-78, adotou a seguinte Resolução Operacional e eu, Diretor-Presidente, determino a sua publicação: Art. [...]
+- RESOLUÇÃO NORMATIVA ANEEL Nº 1.169, DE 6 DE OUTUBRO DE 2026
+  Órgão: Ministério de Minas e Energia/Agência Nacional de Energia Elétrica/Diretoria Colegiada
+  Tipo: Resolução | Página 55 | aberto
+  Radares: regulatorio-oleo-gas (palavras-chave 'ANEEL', 'Resolução')
+  URL: https://www.in.gov.br/web/dou/-/resolucao-normativa-aneel-n-1.169-de-6-de-outubro-de-2026-738055751
+  Resumo: Aprova os novos Submódulos 1.4 - Cadastro de Agentes e Representantes (Responsabilidades e Operacional) e altera a Resolução Normativa nº 903, de 8 de dezembro de 2020.
+  Trecho: O DIRETOR-GERAL DA AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA - ANEEL, no uso de suas atribuições regimentais, de acordo com a deliberação da Diretoria, tendo em vista o disposto nas Leis nº 9.427, de 26 de dezembro de 1996, e nº 9.648, de 27 de maio de 1998, e o que consta do Processo n° 48500.026110/2025-53, resolve: Art. 1° Aprovar o Submódulo 1.4 - Cadastro de Agentes e Representantes (Responsabilidades) e o Submódulo 1.4 - Cadastro de Agentes e Representantes (Operacional) dos Procedimentos de Rede. Art. 2° Incluir, conforme a redação seguinte, o Submódulo 1.4 - Cadastro de Agentes e Representantes (Responsabilidades) e o Submódulo 1.4 - Cadastro de Agentes e Representantes (Operacional) dos Procedimentos de Rede ao Anexo I da Resolução Normativa nº 903, de 8 de dezembro de 2020. Módulo Submódulo Nome Submódulo Tipo do Documento do Submódulo Aprovação do documento 1. [...]
+- PORTARIA CGAUT/SUSEP nº 229, de 13 De OUTUBRO de 2026
+  Órgão: Ministério da Fazenda/Superintendência de Seguros Privados/Diretoria de Organização de Mercado e Regulação de Conduta/Coordenação-Geral de Autorizações
+  Tipo: Portaria | Página 45 | não aberto (agrupado: o grupo abre um ato só (PORTARIA CGAUT/SUSEP nº 228, de 13 De OUTUBRO de 2026)) | lote dou1-5 (9 atos)
+  Radares: mercado-capitais-fundos (palavras-chave 'SUSEP' (reforço: Superintendência de Seguros Privados))
+  URL: https://www.in.gov.br/web/dou/-/portaria-cgaut/susep-n-229-de-13-de-outubro-de-2026-738054025
+  Resumo: O COORDENADOR-GERAL DA COORDENAÇÃO-GERAL DE AUTORIZAÇÕES DA SUPERINTENDÊNCIA DE SEGUROS PRIVADOS - CGAUT, no uso da competência delegada pelo Superintendente da Susep, por meio da Portaria nº 8.186, de 21 de julho de 2023, tendo em vista o disposto no artigo I do artigo 36 do Decreto-Lei nº 73, de 21 de novembro de [...]
+  Trecho: 
+- PORTARIA SERES/MEC Nº 529, DE 13 de outubro de 2026
+  Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
+  Tipo: Portaria | Página 22 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 527, DE 13 de outubro de 2026)) | lote dou1-11 (7 atos)
+  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
+  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-529-de-13-de-outubro-de-2026-738048152
+  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso da atribuição que lhe confere o Decreto nº 12.769, de 5 de dezembro de 2025, e tendo em vista os Decretos n° 9.235, de 15 de dezembro de 2017, e nº 12.456, de 19 de maio de 2025; as Portarias Normativas n° 20 e nº 23, de 21 de dezembro de 2017, do [...]
+  Trecho: 
+- PORTARIA SERES/MEC Nº 531, DE 13 de outubro de 2026
+  Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
+  Tipo: Portaria | Página 23 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 527, DE 13 de outubro de 2026)) | lote dou1-11 (7 atos)
+  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
+  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-531-de-13-de-outubro-de-2026-738049480
   Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso da atribuição que lhe confere o Decreto nº 12.769, de 5 de dezembro de 2025, e tendo em vista o Decreto n° 9.235, de 15 de dezembro de 2017, e as Portarias Normativas MEC n° 20 e nº 23, de 21 de dezembro de 2017, republicadas em 3 de setembro de 2018 [...]
   Trecho: 
-- ACÓRDÃO Nº 457, DE 29 DE SETEMBRO DE 2026
-  Órgão: Entidades de Fiscalização do Exercício das Profissões Liberais/Conselho Regional de Fisioterapia e Terapia Ocupacional da 2ª Região
-  Tipo: Acórdão | Página 158 | aberto
-  Radares: contencioso-civel (palavras-chave 'prestação de serviços')
-  URL: https://www.in.gov.br/web/dou/-/acordao-n-457-de-29-de-setembro-de-2026-736313943
-  Resumo: PROCESSO ÉTICO DISCIPLINAR Nº 12/2026 EMENTA: NEGAR OU DEIXAR DE FORNECER RECIBO POR PRESTAÇÃO DE SERVIÇOS, VIOLANDO DEVER DE TRANSPARÊNCIA, RESPONSABILIDADE PROFISSIONAL E RESPEITO AO PACIENTE. ADVERTÊNCIA
-  Trecho: Vistos, relatados e discutidos os autos do processo ético disciplinar acima epigrafado, em que é representado o profissional fisioterapeuta M.A.A. adotado o voto da Conselheira Relatora e a motivação constante da ata de julgamento, que passa a fazer parte do presente: "ACORDAM os Conselheiros do CREFITO-2, por unanimidade, pela procedência da representação com aplicação de advertência". Fica designado para elaboração do acórdão a Conselheira-Relatora Dra. Karla Sany Zózimo Lobo. A sessão de julgamento teve a presença: Dr. Wilen Heil e Silva; Dra. Denise Flávio de Carvalho Botelho Lima; Dr. João Carlos Magalhães; Dr. Raphael Correia Caetano; Dr. Clailson Henriques de Almeida Farias; Dra. Karla Sany Zózimo Lobo; Dr. Leonardo Brito de Oliveira; Dr. Rafael Santiago Floriano; Dra. Simone Ferreira do Nascimento.
-- Portaria Nº 2.244, DE 1º DE outubro DE 2026
-  Órgão: Ministério do Desenvolvimento Agrário e Agricultura Familiar/Instituto Nacional de Colonização e Reforma Agrária
-  Tipo: Portaria | Página 36 | não aberto (agrupado: o grupo abre um ato só (Portaria Nº 2.241, DE 1º DE outubro DE 2026)) | lote dou1-9 (6 atos)
-  Radares: imobiliario-infraestrutura (palavras-chave 'imóvel rural')
-  URL: https://www.in.gov.br/web/dou/-/portaria-n-2.244-de-1-de-outubro-de-2026-736317019
-  Resumo: Autorização para aquisição de imóvel rural localizado fora da faixa de fronteira, por estrangeiro - pessoa física. A PRESIDENTE SUBSTITUTA DO INSTITUTO NACIONAL DE COLONIZAÇÃO E REFORMA AGRÁRIA - INCRA, designada pela Portaria de Pessoal nº 374, de 13 de junho de 2023, publicada no Diário Oficial da União de 14 de [...]
+- PORTARIA SERES/MEC Nº 530, DE 13 de outubro de 2026
+  Órgão: Ministério da Educação/Secretaria de Regulação e Supervisão da Educação Superior
+  Tipo: Portaria | Página 23 | não aberto (agrupado: o grupo abre um ato só (PORTARIA SERES/MEC Nº 527, DE 13 de outubro de 2026)) | lote dou1-11 (7 atos)
+  Radares: regulatorio-oleo-gas (órgão Ministério da Educação)
+  URL: https://www.in.gov.br/web/dou/-/portaria-seres/mec-n-530-de-13-de-outubro-de-2026-738059651
+  Resumo: A SECRETÁRIA DE REGULAÇÃO E SUPERVISÃO DA EDUCAÇÃO SUPERIOR, no uso da atribuição que lhe confere o Decreto nº 12.769, de 5 de dezembro de 2025, e tendo em vista os Decretos n° 9.235, de 15 de dezembro de 2017, e nº 12.456, de 19 de maio de 2025; as Portarias Normativas MEC nºs 20 e 23, de 21 de dezembro de 2017; a [...]
   Trecho: 
+- PORTARIA CGCCR/SUSEP nº 52, de 13 de OUTUBRO de 2026
+  Órgão: Ministério da Fazenda/Superintendência de Seguros Privados/Diretoria de Organização de Mercado e Regulação de Conduta/Coordenação-Geral de Credenciamentos, Cadastros e Regimes Especiais
+  Tipo: Portaria | Página 45 | não aberto (agrupado: o grupo abre um ato só (PORTARIA CGAUT/SUSEP nº 228, de 13 De OUTUBRO de 2026)) | lote dou1-5 (9 atos)
+  Radares: mercado-capitais-fundos (palavras-chave 'SUSEP' (reforço: Superintendência de Seguros Privados))
+  URL: https://www.in.gov.br/web/dou/-/portaria-cgccr/susep-n-52-de-13-de-outubro-de-2026-738053944
+  Resumo: O COORDENADOR-GERAL DA COORDENAÇÃO-GERAL DE CREDENCIAMENTOS, CADASTROS E REGIMES ESPECIAIS DA SUPERINTENDÊNCIA DE SEGUROS PRIVADOS - SUSEP, no uso da competência delegada pelo Superintendente da Susep, por meio da Portaria Susep nº 8.186, de 21 de julho de 2023, c/c a RESOLUÇÃO CNSP N° 490, de 12 de março de 2026 [...]
+  Trecho: 
+- DESPACHO de 13 de outubro de 2026
+  Órgão: Ministério da Justiça e Segurança Pública/Conselho Administrativo de Defesa Econômica/Gabinete
+  Tipo: Despacho | Página 50 | aberto
+  Radares: regulatorio-oleo-gas (órgão Conselho Administrativo de Defesa Econômica)
+  URL: https://www.in.gov.br/web/dou/-/despacho-de-13-de-outubro-de-2026-738056578
+  Resumo: DESPACHO SG ENCERRAMENTO PROCESSO ADMINISTRATIVO (ARQUIVAMENTO) Nº 5/2026 Processo Administrativo nº 08700.005708/2020-23 (Apartado de Acesso Restrito nº 08700.006514/2020-45)
+  Trecho: Representante: Ministério Público do Estado do Maranhão Representada: Sociedade de Médicos Cardiovasculares do Maranhão S/S Ltda. Advogados: Ana Luísa Rosa Veras e André Felipe Alonço Cardoso Martins. Acolho a Nota Técnica nº 60/2026/CGAA6/SGA2/SG/CADE (SEI 1830871) e, com fulcro no §1º do art. 50 da Lei nº 9.784/99, integro as suas razões à presente decisão, inclusive como sua motivação. Pelos fundamentos apontados na Nota Técnica, recomendo o arquivamento deste Processo Administrativo em relação a Representada Sociedade de Médicos Cardiovasculares do Maranhão S/S Ltda. por insuficiências de provas acerca da prática anticompetitiva investigada. Assim, nos termos do art. 74 da Lei nº 12.529/2011 e art. 156, §1º, do Regimento Interno do Cade, remetam-se os autos ao Tribunal Administrativo do Cade para julgamento. Ao setor Processual.
+- PORTARIA CGAUT/SUSEP nº 231, de 13 De OUTUBRO de 2026
+  Órgão: Ministério da Fazenda/Superintendência de Seguros Privados/Diretoria de Organização de Mercado e Regulação de Conduta/Coordenação-Geral de Autorizações
+  Tipo: Portaria | Página 45 | não aberto (agrupado: o grupo abre um ato só (PORTARIA CGAUT/SUSEP nº 228, de 13 De OUTUBRO de 2026)) | lote dou1-5 (9 atos)
+  Radares: mercado-capitais-fundos (palavras-chave 'SUSEP' (reforço: Superintendência de Seguros Privados))
+  URL: https://www.in.gov.br/web/dou/-/portaria-cgaut/susep-n-231-de-13-de-outubro-de-2026-738056090
+  Resumo: O COORDENADOR-GERAL DA COORDENAÇÃO-GERAL DE AUTORIZAÇÕES DA SUPERINTENDÊNCIA DE SEGUROS PRIVADOS - CGAUT, no uso da competência subdelegada pelo Superintendente da Susep, por meio da Portaria nº 8.186, de 21 de julho de 2023, tendo em vista o disposto no inciso I do artigo 36 do Decreto-Lei nº 73, de 21 de novembro de [...]
+  Trecho: 
+- DESPACHO
+  Órgão: Ministério do Desenvolvimento, Indústria, Comércio e Serviços/Secretaria de Desenvolvimento Industrial, Inovação, Comércio e Serviços
+  Tipo: Despacho | Página 14 | não aberto (agrupado: o grupo abre um ato só (DESPACHO)) | lote dou1-1 (7 atos)
+  Radares: regulatorio-oleo-gas (órgão Ministério do Desenvolvimento, Indústria, Comércio e Serviços)
+  URL: https://www.in.gov.br/web/dou/-/despacho-738057353
+  Resumo: O SECRETÁRIO DE DESENVOLVIMENTO INDUSTRIAL, INOVAÇÃO, COMÉRCIO E SERVIÇOS SUBSTITUTO, DO MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS, no uso da atribuição de que trata o art. [...]
+  Trecho: 
+- DESPACHO
+  Órgão: Ministério do Desenvolvimento, Indústria, Comércio e Serviços/Secretaria de Desenvolvimento Industrial, Inovação, Comércio e Serviços
+  Tipo: Despacho | Página 14 | não aberto (agrupado: o grupo abre um ato só (DESPACHO)) | lote dou1-1 (7 atos)
+  Radares: regulatorio-oleo-gas (órgão Ministério do Desenvolvimento, Indústria, Comércio e Serviços)
+  URL: https://www.in.gov.br/web/dou/-/despacho-738055229
+  Resumo: O SECRETÁRIO DE DESENVOLVIMENTO INDUSTRIAL, INOVAÇÃO, COMÉRCIO E SERVIÇOS SUBSTITUTO, DO MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS, no uso da atribuição de que trata o art. [...]
+  Trecho: 
+- despacho
+  Órgão: Ministério de Minas e Energia/Agência Nacional de Mineração/Superintendência de Arrecadação e Fiscalização de Receitas/Gerência de Cobrança das Demais Receitas/Coordenação de Autuação e Fiscalização da TAH
+  Tipo: Despacho | Página 52 | não aberto (teto de 20 atos abertos por execução)
+  Radares: regulatorio-oleo-gas (palavras-chave 'auto de infração')
+  URL: https://www.in.gov.br/web/dou/-/despacho-738063788
+  Resumo: Relação nº 533/2026 FASE DE AUTORIZAÇÃO DE PESQUISA. Auto de Infração lavrado por infração do disposto no inciso II, do art. 20, do Código de Mineração, Decreto-lei nº 227/1967, com redação dada pela Lei nº 9.314, de 14/11/1996(TAH). [...]
+  Trecho: 
+- PORTARIA CGAUT/SUSEP nº 227, de 13 De OUTUBRO de 2026
+  Órgão: Ministério da Fazenda/Superintendência de Seguros Privados/Diretoria de Organização de Mercado e Regulação de Conduta/Coordenação-Geral de Autorizações
+  Tipo: Portaria | Página 44 | não aberto (agrupado: o grupo abre um ato só (PORTARIA CGAUT/SUSEP nº 228, de 13 De OUTUBRO de 2026)) | lote dou1-5 (9 atos)
+  Radares: mercado-capitais-fundos (palavras-chave 'SUSEP' (reforço: Superintendência de Seguros Privados))
+  URL: https://www.in.gov.br/web/dou/-/portaria-cgaut/susep-n-227-de-13-de-outubro-de-2026-738064161
+  Resumo: O COORDENADOR-GERAL DA COORDENAÇÃO-GERAL DE AUTORIZAÇÕES DA SUPERINTENDÊNCIA DE SEGUROS PRIVADOS - CGAUT, no uso da competência subdelegada pelo Superintendente da Susep, por meio da Portaria nº 8.186, de 21 de julho de 2023, tendo em vista o disposto no artigo I do artigo 36 do Decreto-Lei nº 73, de 21 de novembro de [...]
+  Trecho: 
+- ATO DECLARATÓRIO Nº 24, DE 13 DE OUTUBRO DE 2026
+  Órgão: Ministério da Fazenda/Conselho Nacional de Política Fazendária
+  Tipo: Ato Normativo | Página 34 | aberto
+  Radares: direito-tributario (palavras-chave 'ICMS' (reforço: Conselho Nacional de Política Fazendária))
+  URL: https://www.in.gov.br/web/dou/-/ato-declaratorio-n-24-de-13-de-outubro-de-2026-738070771
+  Resumo: Ratifica Convênios ICMS aprovados na 431ª Reunião Extraordinária do CONFAZ, realizada nos dias 21 e 23.09.2026 e publicados no DOU de 24.09.2026.
+  Trecho: Secretaria Executiva O Secretário Executivo da Secretaria Executiva do Conselho Nacional de Política Fazendária - CONFAZ, com fulcro no art. 5º da Lei Complementar nº 24, de 7 de janeiro de 1975, no uso das atribuições que lhe são conferidas pelo inciso X do art. 5º e pelo parágrafo único do art. 37 do Regimento desse Conselho, declara ratificados os convênios ICMS a seguir identificados, celebrados na 431ª Reunião Extraordinária do CONFAZ, realizada nos dias 21 e 23 de setembro de 2026: - Convênio ICMS nº 112/26 - Altera o Convênio ICMS nº 7, de 13 de março de 2019, que autoriza os Estados que menciona a conceder crédito presumido de ICMS nas operações realizadas pelos estabelecimentos que exerçam atividade econômica de fabricação de produtos do refino de petróleo e de gás natural, bem como a redução de juros e multas e a remissão parcial do imposto, na forma que especifica; - Convênio [...]
+- PORTARIA CGAUT/SUSEP nº 226, de 13 De OUTUBRO de 2026
+  Órgão: Ministério da Fazenda/Superintendência de Seguros Privados/Diretoria de Organização de Mercado e Regulação de Conduta/Coordenação-Geral de Autorizações
+  Tipo: Portaria | Página 44 | não aberto (agrupado: o grupo abre um ato só (PORTARIA CGAUT/SUSEP nº 228, de 13 De OUTUBRO de 2026)) | lote dou1-5 (9 atos)
+  Radares: mercado-capitais-fundos (palavras-chave 'SUSEP' (reforço: Superintendência de Seguros Privados))
+  URL: https://www.in.gov.br/web/dou/-/portaria-cgaut/susep-n-226-de-13-de-outubro-de-2026-738070694
+  Resumo: O COORDENADOR-GERAL DA COORDENAÇÃO-GERAL DE AUTORIZAÇÕES DA SUPERINTENDÊNCIA DE SEGUROS PRIVADOS - CGAUT, no uso da competência subdelegada pelo Superintendente da Susep, por meio da Portaria nº 8.186, de 21 de julho de 2023, tendo em vista o disposto no artigo I do artigo 36 do Decreto-Lei nº 73, de 21 de novembro de [...]
+  Trecho: 
+- DESPACHO
+  Órgão: Ministério do Desenvolvimento, Indústria, Comércio e Serviços/Secretaria de Desenvolvimento Industrial, Inovação, Comércio e Serviços
+  Tipo: Despacho | Página 15 | não aberto (agrupado: o grupo abre um ato só (DESPACHO)) | lote dou1-1 (7 atos)
+  Radares: regulatorio-oleo-gas (órgão Ministério do Desenvolvimento, Indústria, Comércio e Serviços)
+  URL: https://www.in.gov.br/web/dou/-/despacho-738060253
+  Resumo: O SECRETÁRIO DE DESENVOLVIMENTO INDUSTRIAL, INOVAÇÃO, COMÉRCIO E SERVIÇOS SUBSTITUTO, DO MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS, no uso da atribuição de que trata o art. [...]
+  Trecho: 
+- DESPACHO Nº 48, DE 13 DE OUTUBRO DE 2026
+  Órgão: Ministério da Fazenda/Conselho Nacional de Política Fazendária
+  Tipo: Ato Normativo | Página 35 | aberto
+  Radares: direito-tributario (palavras-chave 'ICMS' (reforço: Conselho Nacional de Política Fazendária))
+  URL: https://www.in.gov.br/web/dou/-/despacho-n-48-de-13-de-outubro-de-2026-738066350
+  Resumo: Publica Convênios ICMS aprovados na 434ª Reunião Extraordinária do CONFAZ, realizada no dia 13.10.2026.
+  Trecho: O Secretário Executivo da Secretaria Executiva do Conselho Nacional de Política Fazendária - CONFAZ, no uso das atribuições que lhe são conferidas pelo inciso IX, do art. 5º do Regimento desse Conselho, e em cumprimento ao disposto nos artigos 35, 39 e 40 desse mesmo diploma, torna público que na 434ª Reunião Extraordinária do CONFAZ, realizada no dia 13 de outubro de 2026, foram celebrados os seguintes atos: CONVÊNIO ICMS Nº 115, DE 13 DE OUTUBRO DE 2026 Altera o Convênio ICMS nº 217, de 21 de dezembro de 2023, que autoriza a remissão de crédito tributário de pequeno valor inscrito em dívida ativa, reduzir juros e multas previstos na legislação tributária, bem como a conceder parcelamento de crédito tributário, relacionados com o ICMS. [...]

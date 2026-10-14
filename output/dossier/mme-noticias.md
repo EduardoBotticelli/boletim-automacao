@@ -51,6 +51,60 @@ Aplicar
 
 Energia, Minerais e Combustíveis
 
+[MME: Recursos minerais são estratégicos para ampliar a produção nacional de fertilizantes e segurança alimentar no país](https://www.gov.br/mme/pt-br/assuntos/noticias/mme-recursos-minerais-sao-estrategicos-para-ampliar-a-producao-nacional-de-fertilizantes-e-seguranca-alimentar-no-pais)
+
+13/10/2026
+
+-
+Neste Dia Mundial do Fertilizante, reforçamos que o potássio, fosfato e outros recursos minerais são fundamentais para a fabricação de fertilizantes e reforçam a conexão entre mineração e agronegócio.
+
+ENERGIA ELÉTRICA
+
+[MME abre consulta pública para aprimorar a governança dos modelos computacionais do setor elétrico](https://www.gov.br/mme/pt-br/assuntos/noticias/mme-abre-consulta-publica-para-aprimorar-a-governanca-dos-modelos-computacionais-do-setor-eletrico)
+
+13/10/2026
+
+-
+Propostas buscam ampliar a previsibilidade, a coordenação e a transparência no desenvolvimento das ferramentas utilizadas no planejamento, na operação e na formação de preços da energia
+
+PDE 2036
+
+[MME abre consulta pública do Plano Decenal de Expansão de Energia 2036](https://www.gov.br/mme/pt-br/assuntos/noticias/mme-abre-consulta-publica-do-plano-decenal-de-expansao-de-energia-2036)
+
+08/10/2026
+
+-
+Interessados têm até o dia 6 de novembro para enviar as contribuições sobre o Relatório Síntese
+
+SISTEMA ELÉTRICO
+
+[Ações do CMSE garantem encerramento do período seco com reservatórios em níveis superiores aos do ano passado, mesmo com o El Niño](https://www.gov.br/mme/pt-br/assuntos/noticias/acoes-do-cmse-garantem-encerramento-do-periodo-seco-com-reservatorios-em-niveis-superiores-aos-do-ano-passado-mesmo-com-o-el-nino)
+
+07/10/2026
+
+-
+Com reservatórios em níveis satisfatórios e previsão das condições hidroenergéticas favoráveis no SIN, o colegiado assegura o pleno atendimento da demanda e a manutenção da bandeira tarifária verde para os consumidores.
+
+CONSULTA PÚBLICA
+
+[MME abre consulta pública sobre meta de redução de emissões no mercado de gás natural para 2027](https://www.gov.br/mme/pt-br/assuntos/noticias/mme-abre-consulta-publica-sobre-meta-de-reducao-de-emissoes-no-mercado-de-gas-natural-para-2027)
+
+06/10/2026
+
+-
+Contribuições poderão ser apresentadas durante 30 dias; proposta estabelece meta de 1% para 2027 e apresenta percentuais indicativos para os anos seguintes
+
+ENERGIA ELÉTRICA
+
+[MME avança na compensação por cortes de geração com divulgação de lista de elegibilidade](https://www.gov.br/mme/pt-br/assuntos/noticias/mme-avanca-na-compensacao-por-cortes-de-geracao-com-divulgacao-de-lista-de-elegibilidade)
+
+05/10/2026
+
+-
+Publicação da CCEE atende a solicitação do Ministério e integra a implementação do mecanismo destinado a empreendimentos eólicos e solares
+
+Energia, Minerais e Combustíveis
+
 [MME abre consulta pública sobre concessões de hidrelétricas vencidas e vincendas](https://www.gov.br/mme/pt-br/assuntos/noticias/mme-abre-consulta-publica-sobre-concessoes-de-hidreletricas-vencidas-e-vincendas)
 
 23/09/2026
@@ -264,60 +318,6 @@ PLANEJAMENTO ENERGÉTICO
 
 -
 Por meio de estudos e pesquisas, setor de planejamento avalia cenários e estratégias para garantir expansão da oferta, diversificar a produção para uso racional da matriz energética nacional
-
-BIOCOMBUSTÍVEIS
-
-[Saiba o que é o SAF e como esse combustível pode contribuir para a redução das emissões no transporte aéreo](https://www.gov.br/mme/pt-br/assuntos/noticias/saiba-o-que-e-o-saf-e-como-esse-combustivel-pode-contribuir-para-a-reducao-das-emissoes-no-transporte-aereo)
-
-17/07/2026
-
--
-Produzido a partir de diferentes matérias-primas, o combustível sustentável de aviação integra iniciativas voltadas à descarbonização do setor
-
-Integração
-
-[MME realiza programação de ambientação para novos servidores](https://www.gov.br/mme/pt-br/assuntos/noticias/mme-realiza-programacao-de-ambientacao-para-novos-servidores)
-
-17/07/2026
-
--
-Iniciativa apresentou a estrutura institucional da pasta, orientou sobre gestão de pessoas e reforçou os princípios de ética, integridade e compromisso com o serviço público
-
-RENOVÁVEIS
-
-[Conheça os biocombustíveis presentes na matriz energética brasileira](https://www.gov.br/mme/pt-br/assuntos/noticias/conheca-os-biocombustiveis-presentes-na-matriz-energetica-brasileira)
-
-16/07/2026
-
--
-Etanol, biodiesel e outros combustíveis renováveis fazem parte da história energética do país e estão presentes em diferentes aplicações
-
-MINERAÇÃO
-
-[Terras raras: o que são e para o que servem?](https://www.gov.br/mme/pt-br/assuntos/noticias/terras-raras-o-que-sao-e-para-o-que-servem)
-
-15/07/2026
-
--
-Conheça as principais aplicações e características do conjunto de elementos químicos considerados essenciais para diversas tecnologias utilizadas no dia a dia
-
-POTEE
-
-[Consulta pública do POTEE 2026 está aberta para contribuições da sociedade](https://www.gov.br/mme/pt-br/assuntos/noticias/consulta-publica-do-potee-2026-esta-aberta-para-contribuicoes-da-sociedade)
-
-14/07/2026
-
--
-Documento reúne recomendações técnicas de reforço e expansão das instalações de transmissão do Sistema Interligado Nacional
-
-Energia, Minerais e Combustíveis
-
-[Segurança alimentar: entenda o papel da mineração neste processo](https://www.gov.br/mme/pt-br/assuntos/noticias/seguranca-alimentar-entenda-o-papel-da-mineracao-neste-processo)
-
-13/07/2026
-
--
-Do solo à produção de alimentos, a atividade fornece recursos fundamentais para o desenvolvimento da agricultura do país
 
 «
 Anterior

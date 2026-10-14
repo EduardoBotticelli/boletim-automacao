@@ -1,7 +1,7 @@
-- EDITAL DA SUPERINTENDÊNCIA, DE 2 DE OUTUBRO DE 2026
-  Órgão: Ministério da Justiça e Segurança Pública/Conselho Administrativo de Defesa Econômica/Superintendência-Geral
-  Tipo: Edital | Página 142 | aberto
+- EDITAIS DA SUPERINTENDÊNCIA, DE 13 DE OUTUBRO DE 2026
+  Órgão: Ministério da Justiça e Segurança Pública/Conselho Administrativo de Defesa Econômica
+  Tipo: Edital | Página 114 | aberto
   Radares: regulatorio-oleo-gas (órgão Conselho Administrativo de Defesa Econômica)
-  URL: https://www.in.gov.br/web/dou/-/edital-da-superintendencia-de-2-de-outubro-de-2026-736438406
-  Resumo: EDITAL Nº 750, DE 2 DE OUTUBRO DE 2026. Nos termos do art. 53, § 2º, da Lei nº 12.529/2011, dá-se publicidade ao Ato de Concentração nº 08700.009488/2026-01. Partes: SPX Portfólio Alfa Fundo de Investimento Imobiliário, HBR 1 - Investimentos Imobiliários Ltda., HBR 27 - Investimentos Imobiliários Ltda., HBR 42 - [...]
-  Trecho: 
+  URL: https://www.in.gov.br/web/dou/-/editais-da-superintendencia-de-13-de-outubro-de-2026-738276324
+  Resumo: Edital nº 759, de 08 de outubro de 2026. Nos termos do art. 53, § 2º, da Lei nº 12.529/2011, dá-se publicidade ao seguinte ato de concentração: Ato de Concentração nº 08700.009575/2026-50. Requerentes: Rede Educacional do Brasil S.A. [...]
+  Trecho: Edital nº 769, de 13 de outubro de 2026. Nos termos do art. 53, § 2º, da Lei nº 12.529/2011, dá-se publicidade ao Ato de Concentração nº 08700.009787/2026-37. Partes: Duratex Florestal Ltda. e Ricardo Dias Mottin. Advogados: Ricardo Botelho, Bruno Pedrinelli e Andrielly Gonsalves. Natureza da operação: aquisição de ativos. Setores econômicos envolvidos: extração de madeira em florestas plantadas (CNAE 02.10-1-07) e originação de grãos de milho e soja (CNAEs 01.11-3/02 e 01.15-6/00). Edital nº 770, de 13 de outubro de 2026. Nos termos do art. 53, § 2º, da Lei nº 12.529/2011, dá-se publicidade ao Ato de Concentração nº 08700.009792/2026-40. Partes: L Catterton Latin America IV, L.P., Fundo de Investimento em Participações Multiestratégia Multisetorial Plus e Scanntech Holdings, LLC. Advogados: Renata Fonseca Zuccolo Giannella, Renata Caied Roney e Olimpio Barbosa Junior. [...]

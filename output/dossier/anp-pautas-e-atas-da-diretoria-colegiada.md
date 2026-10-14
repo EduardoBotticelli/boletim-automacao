@@ -1,10 +1,6 @@
 id="content-core">
 
-AVISO
-
-Desde 12/6/2025, as reuniões da Diretoria Colegiada da ANP podem ser acompanhadas ao vivo somente por meio da plataforma Teams. A transmissão das reuniões pelo canal da Agência no YouTube está suspensa por tempo indeterminado.
-
-O link para assistir, em tempo real, aos encontros do Colegiado da ANP via Teams (sem possibilidade de manifestação) será divulgado, na véspera das reuniões, nesta página. As reuniões também serão gravadas e estarão disponíveis, na íntegra, no [canal da ANP no YouTube](https://www.youtube.com/user/ANPgovbr).
+Calendário, pautas e atas
 
 Dezembro
 
@@ -30,8 +26,12 @@ Fechamento de pauta: 23 de outubro, sexta-feira, 9h.
 - Reunião de Diretoria nº 1.192 : 9 de outubro, sexta-feira, 9h.
 Fechamento de pauta: 6 de outubro, terça-feira, 9h.
 
+[Pauta](https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada/2026/arquivos-rd-2026/pauta-1192.pdf)(publicação em 06/10/2026)
+
 - Reunião de Diretoria nº 1.191 : 2 de outubro, sexta-feira, 9h.
 Fechamento de pauta: 22 de setembro, terça-feira, 9h.
+
+[Gravação da Reunião de Diretoria nº 1.191 no YouTube](https://youtu.be/XsalpKlgYFA)
 
 [Pauta](https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada/pautas-atas-e-calendario-de-reunioes-da-diretoria-colegiada/2026/arquivos-rd-2026/pauta-1191.pdf)(publicação em 22/09/2026)
 

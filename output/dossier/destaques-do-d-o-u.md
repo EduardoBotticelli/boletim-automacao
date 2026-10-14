@@ -87,19 +87,19 @@ PESQUISAR
 
 ## Leitura Jornal
 
-- [SEÇÃO 1](https://www.in.gov.br/leiturajornal?data=05-10-2026&secao=do1)
+- [SEÇÃO 1](https://www.in.gov.br/leiturajornal?data=14-10-2026&secao=do1)
 SUPLEMENTO
 
 EDIÇÃO EXTRA
 
 EDIÇÃO ESPECIAL
 ATOS NORMATIVOS
-- [SEÇÃO 2](https://www.in.gov.br/leiturajornal?data=05-10-2026&secao=do2)
+- [SEÇÃO 2](https://www.in.gov.br/leiturajornal?data=14-10-2026&secao=do2)
 EDIÇÃO EXTRA
 
 EDIÇÃO ESPECIAL
 ATOS DE PESSOAL
-- [SEÇÃO 3](https://www.in.gov.br/leiturajornal?data=05-10-2026&secao=do3)
+- [SEÇÃO 3](https://www.in.gov.br/leiturajornal?data=14-10-2026&secao=do3)
 EDIÇÃO EXTRA
 CONTRATOS, EDITAIS E AVISOS
 
@@ -107,50 +107,50 @@ Selecione o dia desejado
 
 ## Daypicker BuscaDOU
 
-- 2
-
-sex.
-
-- 3
-
-sáb.
-
-- 4
+- 11
 
 dom.
 
-- 5
+- 12
 
 seg.
 
-- 6
+- 13
 
 ter.
 
-- 7
+- 14
 
 qua.
 
-- 8
+- 15
 
 qui.
+
+- 16
+
+sex.
+
+- 17
+
+sáb.
 
 
 ## Leitura DOU
 
 VOCÊ ESTÁ VENDO:
 
-Seção 1, dia 5 de outubro de 2026
+Seção 1, dia 14 de outubro de 2026
 
 VISUALIZAR EM LISTA
 VISUALIZAR EM SUMÁRIO
 VERSÃO CERTIFICADA DIÁRIO COMPLETO
 
-Selecionar Organização PrincipalTodosAtos do Poder JudiciárioPresidência da RepúblicaMinistério da Agricultura e PecuáriaMinistério das ComunicaçõesMinistério da CulturaMinistério da DefesaMinistério do Desenvolvimento Agrário e Agricultura FamiliarMinistério do Desenvolvimento, Indústria, Comércio e ServiçosMinistério dos Direitos Humanos e da CidadaniaMinistério da EducaçãoMinistério da FazendaMinistério da Gestão e da Inovação em Serviços PúblicosMinistério da Igualdade RacialMinistério da Integração e do Desenvolvimento RegionalMinistério da Justiça e Segurança PúblicaMinistério de Minas e EnergiaMinistério do Planejamento e OrçamentoMinistério de Portos e AeroportosMinistério da Previdência SocialMinistério da SaúdeMinistério do Trabalho e EmpregoMinistério dos TransportesMinistério Público da UniãoPoder JudiciárioEntidades de Fiscalização do Exercício das Profissões Liberais
+Selecionar Organização PrincipalTodosAtos do Poder JudiciárioMinistério da Agricultura e PecuáriaMinistério das ComunicaçõesMinistério da CulturaMinistério da DefesaMinistério do Desenvolvimento Agrário e Agricultura FamiliarMinistério do Desenvolvimento, Indústria, Comércio e ServiçosMinistério dos Direitos Humanos e da CidadaniaMinistério da EducaçãoMinistério do EsporteMinistério da FazendaMinistério da Gestão e da Inovação em Serviços PúblicosMinistério da Integração e do Desenvolvimento RegionalMinistério da Justiça e Segurança PúblicaMinistério de Minas e EnergiaMinistério da Pesca e AquiculturaMinistério de Portos e AeroportosMinistério da Previdência SocialMinistério das Relações ExterioresMinistério da SaúdeMinistério do Trabalho e EmpregoMinistério dos TransportesMinistério Público da UniãoTribunal de Contas da UniãoEntidades de Fiscalização do Exercício das Profissões Liberais
 
-Selecionar Organização SubordinadaTodosAdvocacia-Geral da UniãoAgência Nacional de Aviação CivilAgência Nacional de Energia ElétricaAgência Nacional de MineraçãoAgência Nacional de Saúde SuplementarAgência Nacional de TelecomunicaçõesAgência Nacional de Transportes AquaviáriosAgência Nacional de Transportes TerrestresAgência Nacional de Vigilância SanitáriaAgência Nacional de Águas e Saneamento BásicoAgência Nacional do Petróleo, Gás Natural e BiocombustíveisAssessoria Especial de Defesa da Democracia, Memória e VerdadeCONSELHO REGIONAL DE EDUCAÇÃO FÍSICA DA 20ª REGIÃOCONSELHO REGIONAL DE MEDICINA DO ESTADO DE SÃO PAULOCasa CivilComando da MarinhaComando do ExércitoComissão de Valores MobiliáriosConselho Administrativo de Defesa EconômicaConselho Federal de EconomiaConselho Federal de FarmáciaConselho Federal de Fisioterapia e Terapia OcupacionalConselho Regional de Contabilidade de Santa CatarinaConselho Regional de Educação Física da 2ª RegiãoConselho Regional de Enfermagem de SergipeConselho Regional de Fisioterapia e Terapia Ocupacional da 2ª RegiãoConselho Regional de Serviço Social da 12ª RegiãoCâmara de Comércio ExteriorFundação Biblioteca NacionalFundação Cultural PalmaresFundação Universidade Federal de ViçosaGabinete da MinistraGabinete do MinistroInstituto Federal de Educação, Ciência e Tecnologia de SergipeInstituto Federal de Educação, Ciência e Tecnologia do Espírito SantoInstituto Nacional de Colonização e Reforma AgráriaInstituto Nacional de Estudos e Pesquisas Educacionais Anísio TeixeiraInstituto Nacional do Seguro SocialMinistério Público do Distrito Federal e TerritóriosMinistério Público do TrabalhoPolícia FederalProcuradoria-Geral da Fazenda NacionalSecretaria Especial da Receita Federal do BrasilSecretaria ExecutivaSecretaria Nacional de Direitos DigitaisSecretaria Nacional de JustiçaSecretaria Nacional de Proteção e Defesa CivilSecretaria Nacional de Transição Energética e PlanejamentoSecretaria Nacional do ConsumidorSecretaria de Atenção Especializada à SaúdeSecretaria de Comunicação SocialSecretaria de Defesa AgropecuáriaSecretaria de Desenvolvimento Industrial, Inovação, Comércio e ServiçosSecretaria de Fomento e Incentivo à CulturaSecretaria de Orçamento FederalSecretaria de RadiodifusãoSecretaria de Regulação e Supervisão da Educação SuperiorSecretaria de Relações do TrabalhoSecretaria do Patrimônio da UniãoSupremo Tribunal FederalTribunal Regional Eleitoral da BahiaTribunal Regional Eleitoral de SergipeTribunal Superior EleitoralTribunal de Justiça do Distrito Federal e dos Territórios
+Selecionar Organização SubordinadaTodos2ª CâmaraAgência Nacional de Aviação CivilAgência Nacional de Energia ElétricaAgência Nacional de MineraçãoAgência Nacional de Saúde SuplementarAgência Nacional de Transportes AquaviáriosAgência Nacional de Transportes TerrestresAgência Nacional de Vigilância SanitáriaAgência Nacional do Petróleo, Gás Natural e BiocombustíveisAtos do Vice-Procurador-Geral da RepúblicaComando da MarinhaComissão Nacional de Segurança Pública nos Portos, Terminais e Vias NavegáveisConselho Administrativo de Defesa EconômicaConselho Administrativo de Recursos FiscaisConselho Federal de EnfermagemConselho Federal de Medicina VeterináriaConselho Monetário NacionalConselho Nacional de Política FazendáriaGabinete da MinistraGabinete do MinistroInstituto Benjamin ConstantInstituto Federal de Educação, Ciência e Tecnologia do AmazonasInstituto Federal de Educação, Ciência e Tecnologia do Rio Grande do NorteInstituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas GeraisInstituto Nacional de Colonização e Reforma AgráriaInstituto Nacional de Tecnologia da InformaçãoInstituto do Patrimônio Histórico e Artístico NacionalProcuradoria-Geral da Fazenda NacionalSecretaria Especial da Receita Federal do BrasilSecretaria ExecutivaSecretaria Nacional de JustiçaSecretaria Nacional de Proteção e Defesa CivilSecretaria Nacional de Registro, Monitoramento e Pesquisa da Pesca e AquiculturaSecretaria de Atenção Especializada à SaúdeSecretaria de Defesa AgropecuáriaSecretaria de Desenvolvimento Industrial, Inovação, Comércio e ServiçosSecretaria de Fomento e Incentivo à CulturaSecretaria de Inspeção do TrabalhoSecretaria de Proteção ao TrabalhadorSecretaria de RadiodifusãoSecretaria de Regime Geral de Previdência SocialSecretaria de Regulação e Supervisão da Educação SuperiorSecretaria de Relações do TrabalhoSecretaria do Patrimônio da UniãoSecretaria-Geral das Relações ExterioresSuperintendência Nacional de Previdência ComplementarSuperintendência da Zona Franca de ManausSuperintendência de FiscalizaçãoSuperintendência de Outorga e Recursos à PrestaçãoSuperintendência de Seguros PrivadosSuperintendência do Desenvolvimento da AmazôniaSuperintendência-GeralSupremo Tribunal FederalUniversidade Federal de ItajubáUniversidade Federal de Pernambuco
 
-Selecionar Tipo do AtoTodosAcórdãoAtaAtoAto DeclaratórioAção Direta de Inconstitucionalidade e Ação Declaratória de ConstitucionalidadeDecisãoDeliberaçãoDespachoInstrução NormativaPautaPortariaPortaria ConjuntaResoluçãoRetificaçãoSolução de Consulta
+Selecionar Tipo do AtoTodosAtaAtoAto DeclaratórioAto NormativoAção Direta de Inconstitucionalidade e Ação Declaratória de ConstitucionalidadeDecisãoDeliberaçãoDespachoExtrato da AtaPautaPortariaResoluçãoRetificaçãoSolução de Consulta
 
 LIMPAR TODOS OS FILTROSRETRAIR TUDO
 
@@ -158,97 +158,107 @@ LIMPAR TODOS OS FILTROSRETRAIR TUDO
 2. Atos do Poder Judiciário
 3. Supremo Tribunal Federal
 4. Plenário
-5. Edição Nº 188 de 05/10/2026 - Pág. 1
+5. Edição Nº 194 de 14/10/2026 - Pág. 1
 
-##### [DECISÕES](https://www.in.gov.br/web/dou/-/decisoes-736290717)
+##### [DECISÕES](https://www.in.gov.br/web/dou/-/decisoes-738066664)
 
-DECISÕES Ação Direta de Inconstitucionalidade e Ação Declaratória de Constitucionalidade (Publicação determinada pela Lei nº 9.868, de 10.11.1999) ADI 7949 Mérito Relator(a)Min. Dias Toffoli Público Plenário Seção Especial - ADIN/ADC Divulgação 01/10/2026 19:00 REQUERENTE(S): Associacao Nacional dos Medicos Peritos da Previdencia Social ADVOGADO(A/S): Paulo Vitor Liporaci Giani Barbosa - OAB's (50...
-
-- 1. Seção 1
-2. Presidência da República
-3. Edição Nº 188 de 05/10/2026 - Pág. 1
-
-##### [REPUBLICAÇÃO (\*)](https://www.in.gov.br/web/dou/-/republicacao-*-736292321)
-
-REPUBLICAÇÃO (\*) DESPACHO DO PRESIDENTE DA REPÚBLICA ADVOCACIA-GERAL DA UNIÃO Processo nº 00688.002233/2026-11. PARECER Nº JM-12, de 1º de outubro de 2026, do Advogado-Geral da União, que adotou, nos termos estabelecidos no Despacho do Consultor-Geral da União nº 00684/2026/GAB-CGU/CGU/AGU, o PARECER Nº 00010/2026/CONSUNIAO/CGU/AGU. Aprovo. Publique-se, para os fins do disposto no art. 40, § 1º, d...
+DECISÕES Ação Direta de Inconstitucionalidade e Ação Declaratória de Constitucionalidade (PUBLICAÇÃO DETERMINADA PELA LEI Nº 9.868, DE 10.11.1999) ADI 7797 ADI-ED Relator(a):Min. Nunes Marques Público Plenário Seção Especial - ADIN/ADC Divulgação 09/10/2026 19:00 EMBARGANTE(S): Associacao dos Notarios e Registradores do Brasil ADVOGADO(A/S): Giordano Joele Alves de Moraes e Outro(a/s) \| OAB's (460...
 
 - 1. Seção 1
-2. Presidência da República
-3. Casa Civil
-4. Edição Nº 188 de 05/10/2026 - Pág. 4
+2. Ministério da Agricultura e Pecuária
+3. Gabinete do Ministro
+4. Edição Nº 194 de 14/10/2026 - Pág. 3
 
-##### [RESOLUÇÃO COMITe GESTOR DO FUNDO - FIRECE/CC Nº 6, DE 2 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-comite-gestor-do-fundo-firece/cc-n-6-de-2-de-outubro-de-2026-736293629)
+##### [PORTARIA MAPA Nº 960, DE 13 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-mapa-n-960-de-13-de-outubro-de-2026-738053163)
 
-COMITÊ GESTOR DO FUNDO DE APOIO À INFRAESTRUTURA PARA RECUPERAÇÃO E ADAPTAÇÃO A EVENTOS CLIMÁTICOS EXTREMOS - FIRECE RESOLUÇÃO COMITe GESTOR DO FUNDO - FIRECE/CC Nº 6, DE 2 DE OUTUBRO DE 2026 Aprova os critérios e atualiza o plano de aplicação de recursos do Fundo de Apoio à Infraestrutura para Recuperação e Adaptação a Eventos Climáticos Extremos - FIRECE, destinados ao atendimento das consequênc...
-
-- 1. Seção 1
-2. Presidência da República
-3. Advocacia-Geral da União
-4. Edição Nº 188 de 05/10/2026 - Pág. 5
-
-##### [PORTARIA AGU Nº 318, DE 2 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-agu-n-318-de-2-de-outubro-de-2026-736289333)
-
-PORTARIA AGU Nº 318, DE 2 DE OUTUBRO DE 2026 O ADVOGADO-GERAL DA UNIÃO, no uso da competência de que trata o art. 14 da Lei nº 10.480, de 2 de julho de 2002, e considerando o contido no processo nº 00457.052809/2024-34, resolve: Art. 1º Fica extinta a Procuradoria Seccional Federal em Marabá/PA, com prazo de desmobilização de até seis meses. Art. 2º Fica alterado, nos termos do art. 1º, o Anexo II...
+PORTARIA MAPA Nº 960, DE 13 DE OUTUBRO DE 2026 Delega competência ao Embaixador da República Federativa do Brasil em Daca para assinar o Memorando de Entendimento para Cooperação entre o Ministério da Agricultura e Pecuária da República Federativa do Brasil e o Ministério da Agricultura da República Popular de Bangladesh. O MINISTRO DE ESTADO DA AGRICULTURA E PECUÁRIA, no uso da atribuição que lhe...
 
 - 1. Seção 1
-2. Presidência da República
-3. Câmara de Comércio Exterior
-4. Comitê-Executivo de Gestão
-5. Edição Nº 188 de 05/10/2026 - Pág. 5
+2. Ministério da Agricultura e Pecuária
+3. Secretaria Executiva
+4. Subsecretaria de Governança das Superintendências
+5. Superintendência de Agricultura e Pecuária do Estado do Paraná
+6. Edição Nº 194 de 14/10/2026 - Pág. 3
 
-##### [RESOLUÇÃO GECEX Nº 963, DE 2 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-gecex-n-963-de-2-de-outubro-de-2026-736298504)
+##### [PORTARIAS SFA-PR/MAPA DE 8 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/portarias-sfa-pr/mapa-de-8-de-outubro-de-2026-738049938)
 
-RESOLUÇÃO GECEX Nº 963, DE 2 DE OUTUBRO DE 2026 Altera o Anexo IX da Resolução Gecex nº 272, de 19 de novembro de 2021, para fins de inclusão de produtos na Lista de Elevações Tarifárias por Razões de Desequilíbrios Comerciais Derivados da Conjuntura Econômica Internacional. O COMITÊ-EXECUTIVO DE GESTÃO DA CÂMARA DE COMÉRCIO EXTERIOR, no uso da atribuição que lhe confere o art. 6º,caput, inciso IV...
-
-- 1. Seção 1
-2. Presidência da República
-3. Câmara de Comércio Exterior
-4. Comitê-Executivo de Gestão
-5. Edição Nº 188 de 05/10/2026 - Pág. 12
-
-##### [RESOLUÇÃO GECEX Nº 966, DE 2 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-gecex-n-966-de-2-de-outubro-de-2026-736291968)
-
-RESOLUÇÃO GECEX Nº 966, DE 2 DE OUTUBRO DE 2026 Dispõe sobre a apreciação do pedido de reconsideração apresentado pela Associação Brasileira de Produtores de Fibras Artificiais e Sintéticas, em face da Resolução Gecex nº 910, de 3 de junho de 2026, que aplicou direito antidumping definitivo sobre as importações de fios de poliéster, originárias da China, e suspendeu, em razão de interesse público,...
+PORTARIAS SFA-PR/MAPA DE 8 DE OUTUBRO DE 2026 O SUPERINTENDENTE DE AGRICULTURA E PECUÁRIA NO PARANÁ, no uso das atribuições que lhe confere os artigos 40 e 49 do Anexo I do Decreto nº 12642, de 1º de outubro de 2025; o Art. 262 do Regimento Interno da Secretaria Executiva do Ministério da Agricultura e Pecuária, aprovado pela Portaria nº 561, de 11 de abril de 2018; e tendo em vista o disposto no ...
 
 - 1. Seção 1
-2. Presidência da República
-3. Câmara de Comércio Exterior
-4. Comitê-Executivo de Gestão
-5. Edição Nº 188 de 05/10/2026 - Pág. 8
+2. Ministério da Agricultura e Pecuária
+3. Secretaria Executiva
+4. Subsecretaria de Governança das Superintendências
+5. Superintendência de Agricultura e Pecuária do Estado do Paraná
+6. Edição Nº 194 de 14/10/2026 - Pág. 3
 
-##### [RESOLUÇÃO GECEX Nº 965, DE 2 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-gecex-n-965-de-2-de-outubro-de-2026-736310752)
+##### [PORTARIA SFA-PR/MAPA Nº 1.271, DE 29 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-pr/mapa-n-1.271-de-29-de-setembro-de-2026-738059696)
 
-RESOLUÇÃO GECEX Nº 965, DE 2 DE OUTUBRO DE 2026 Dispõe sobre a apreciação do pedido de reconsideração apresentado pela Associação Brasileira de Produtores de Fibras Artificiais e Sintéticas, em face da Resolução Gecex nº 908, de 3 de junho de 2026, que aplicou direito antidumping definitivo às importações brasileiras de fios de náilon, originárias da produtora/exportadora chinesa Yiwu Huading Nylo...
-
-- 1. Seção 1
-2. Presidência da República
-3. Câmara de Comércio Exterior
-4. Comitê-Executivo de Gestão
-5. Edição Nº 188 de 05/10/2026 - Pág. 20
-
-##### [RESOLUÇÃO GECEX Nº 968, DE 2 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-gecex-n-968-de-2-de-outubro-de-2026-736298098)
-
-RESOLUÇÃO GECEX Nº 968, DE 2 DE OUTUBRO DE 2026 Dispõe sobre a apreciação do pedido de reconsideração apresentado pela Associação Nacional de Fabricantes de Produtos Eletroeletrônicos, em face da Resolução Gecex nº 856, de 13 de fevereiro de 2026, que aplicou direito antidumping definitivo, por um prazo de até cinco anos, às importações brasileiras de laminados planos revestidos, originárias da Ch...
+PORTARIA SFA-PR/MAPA Nº 1.271, DE 29 DE SETEMBRO DE 2026 O SUPERINTENDENTE DE AGRICULTURA E PECUÁRIA NO PARANÁ, no uso das atribuições que lhe confere os artigos 40 e 49 do Anexo I do Decreto nº 12642, de 1º de outubro de 2025; o Art. 262 do Regimento Interno da Secretaria Executiva do Ministério da Agricultura e Pecuária, aprovado pela Portaria nº 561, de 11 de abril de 2018; e tendo em vista o d...
 
 - 1. Seção 1
-2. Presidência da República
-3. Câmara de Comércio Exterior
-4. Comitê-Executivo de Gestão
-5. Edição Nº 188 de 05/10/2026 - Pág. 5
+2. Ministério da Agricultura e Pecuária
+3. Secretaria Executiva
+4. Subsecretaria de Governança das Superintendências
+5. Superintendência de Agricultura e Pecuária do Estado do Paraná
+6. Edição Nº 194 de 14/10/2026 - Pág. 3
 
-##### [RESOLUÇÃO GECEX Nº 964, DE 2 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-gecex-n-964-de-2-de-outubro-de-2026-736307170)
+##### [PORTARIAS SFA-PR/MAPA DE 9 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/portarias-sfa-pr/mapa-de-9-de-outubro-de-2026-738052026)
 
-RESOLUÇÃO GECEX Nº 964, DE 2 DE OUTUBRO DE 2026 Dispõe sobre a apreciação do pedido de reconsideração apresentado pela Aperam Inox América do Sul, em face da Resolução Gecex nº 857, de 20 de fevereiro de 2026, que alterou, em razão de interesse público, o direito antidumping definitivo aplicado às importações brasileiras de aço GNO, originárias da Alemanha, da China, da Coreia do Sul e de Taipé Ch...
+PORTARIAS SFA-PR/MAPA DE 9 DE OUTUBRO DE 2026 O SUPERINTENDENTE DE AGRICULTURA E PECUÁRIA NO PARANÁ, no uso das atribuições que lhe confere os artigos 40 e 49 do Anexo I do Decreto nº 12642, de 1º de outubro de 2025; o Art. 262 do Regimento Interno da Secretaria Executiva do Ministério da Agricultura e Pecuária, aprovado pela Portaria nº 561, de 11 de abril de 2018; e tendo em vista o disposto no ...
 
 - 1. Seção 1
-2. Presidência da República
-3. Câmara de Comércio Exterior
-4. Comitê-Executivo de Gestão
-5. Edição Nº 188 de 05/10/2026 - Pág. 14
+2. Ministério da Agricultura e Pecuária
+3. Secretaria Executiva
+4. Subsecretaria de Governança das Superintendências
+5. Superintendência de Agricultura e Pecuária do Estado do Pernambuco
+6. Edição Nº 194 de 14/10/2026 - Pág. 3
 
-##### [RESOLUÇÃO GECEX Nº 967, DE 2 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-gecex-n-967-de-2-de-outubro-de-2026-736309034)
+##### [Portaria nº 176, dE 8 de outubro de 2026](https://www.in.gov.br/web/dou/-/portaria-n-176-de-8-de-outubro-de-2026-738068703)
 
-RESOLUÇÃO GECEX Nº 967, DE 2 DE OUTUBRO DE 2026 Dispõe sobre a apreciação dos pedidos de reconsideração apresentados pela produtora/exportadora chinesa Baoshan Iron & Steel Co., Ltd. e pelas importadoras Nidec Global Appliance Brasil Ltda. e WEG Equipamentos Elétricos S.A., em face da Resolução Gecex nº 854, de 12 de fevereiro de 2026, que aplicou direito antidumping definitivo, por um prazo de at...
+Portaria nº 176, dE 8 de outubro de 2026 O SUPERINTENDENTE FEDERAL DE AGRICULTURA E PECUÁRIA NO ESTADO DE PERNAMBUCO, no uso das atribuições que lhe confere o art. 262 do Regimento Interno da Secretaria Executiva do Ministério da Agricultura e Pecuária, aprovado pela Portaria Ministerial nº 561, de 11 de abril de 2018, os arts. 40 e 49, do Anexo I, do Decreto n° 12.642, de 1° de outubro de 2025, e...
+
+- 1. Seção 1
+2. Ministério da Agricultura e Pecuária
+3. Secretaria Executiva
+4. Subsecretaria de Governança das Superintendências
+5. Superintendência de Agricultura e Pecuária do Estado do Piauí
+6. Edição Nº 194 de 14/10/2026 - Pág. 3
+
+##### [RETIFICAÇÃO](https://www.in.gov.br/web/dou/-/retificacao-738064479)
+
+RETIFICAÇÃO Na PORTARIA SFA-PI/SE/MAPA de Nº 171, DE 30/09/2026, publicada na Seção 1 do Diário Oficial da União, edição 186, página 8, de 01 de outubro de 2026, onde se lê: "...ELO AUGUSTO SANTIAGO ROCHA DE ARUJO NOGUEIRA...", leia-se "...ELO AUGUSTO SANTIAGO ROCHA DE ARAUJO NOGUEIRA...".
+
+- 1. Seção 1
+2. Ministério da Agricultura e Pecuária
+3. Secretaria de Defesa Agropecuária
+4. Departamento de Sanidade Vegetal e Insumos Agrícolas
+5. Coordenação do Serviço Nacional de Proteção de Cultivares
+6. Edição Nº 194 de 14/10/2026 - Pág. 3
+
+##### [DECISÃO Nº 68, DE 13 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/decisao-n-68-de-13-de-outubro-de-2026-738051080)
+
+DECISÃO Nº 68, DE 13 DE OUTUBRO DE 2026 O Serviço Nacional de Proteção de Cultivares, em cumprimento ao art. 46, da Lei nº 9456, de 25 de abril de 1997, resolve tornar público(a) o DEFERIMENTO dos pedidos de proteção de cultivar das espécies relacionadas: ESPÉCIE DENOMINAÇÃO PROTOCOLO Nº Glycine max (L.) Merr. NK8770IPRO 21806.000086/2022 Glycine max (L.) Merr. NS8440IPRO 21806.000331/2022 Glycine...
+
+- 1. Seção 1
+2. Ministério das Comunicações
+3. Secretaria de Radiodifusão
+4. Departamento de Inovação, Regulamentação e Fiscalização
+5. Coordenação-Geral de Fiscalização, Monitoramento e Apuração de Infrações
+6. Edição Nº 194 de 14/10/2026 - Pág. 4
+
+##### [RETIFICAÇÃO](https://www.in.gov.br/web/dou/-/retificacao-738048897)
+
+RETIFICAÇÃO Nas Portarias de 1º de outubro de 2026, da Coordenação-Geral De Fiscalização, Monitoramento e Apuração De Infrações, publicadas no D.O.U de 06 de outubro de 2026, seção 1, página 07, onde se lê: PORTARIA Nº 24.405, em razão da prática da infração capitulada no art. 6º, caput, do Decreto nº 10.405/2020, com redação dada pelo Decreto nº 10.775/2021., Leia-se: PORTARIA Nº 24.405, em razão...
+
+- 1. Seção 1
+2. Ministério das Comunicações
+3. Secretaria de Radiodifusão
+4. Departamento de Radiodifusão Pública, Comunitária e Estatal
+5. Edição Nº 194 de 14/10/2026 - Pág. 4
+
+##### [PORTARIA MCOM Nº 18.024, de 27 de julho de 2026](https://www.in.gov.br/web/dou/-/portaria-mcom-n-18.024-de-27-de-julho-de-2026-738055351)
+
+PORTARIA MCOM Nº 18.024, de 27 de julho de 2026 A DIRETORA DO DEPARTAMENTO DE RADIODIFUSÃO PÚBLICA, COMUNITÁRIA E ESTATAL, no uso das atribuições que lhe são conferidas pelo § 2º do artigo 502 da Portaria de Consolidação GM/MCOM nº 1, de 2 de junho de 2023, publicada no Diário Oficial da União de 5 de junho de 2023, que consolidou a Portaria nº 141, de 22 de julho de 2020, e tendo em vista o que c...
 
 12345 **Próximo »**
 

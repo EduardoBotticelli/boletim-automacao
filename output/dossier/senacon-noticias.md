@@ -1,5 +1,99 @@
 id="content-core">
 
+CONSUMIDOR
+
+[Novo decreto do SAC amplia proteção ao consumidor e estabelece regras de atendimento](https://www.gov.br/mj/pt-br/assuntos/noticias-1/novo-decreto-do-sac-amplia-protecao-ao-consumidor-e-estabelece-regras-de-atendimento)
+
+Norma garante opção de atendimento por pessoa, define prazos para resposta e cancelamento e determina que plataformas digitais, serviços de transporte por aplicativo e empresas de entrega apresentem dados à Senacon
+
+tags:
+
+[SENACON](https://www.gov.br/mj/@@search?SearchableText=SENACON)
+
+[CONSUMIDOR](https://www.gov.br/mj/@@search?SearchableText=CONSUMIDOR)
+
+[SAC](https://www.gov.br/mj/@@search?SearchableText=SAC)
+
+[DECRETO](https://www.gov.br/mj/@@search?SearchableText=DECRETO)
+
+publicado
+
+13/10/2026
+
+20h47
+
+Notícia
+
+CONSUMIDOR
+
+[Senacon articula criação de núcleo regional de combate ao endividamento e ao superendividamento na Região Sul](https://www.gov.br/mj/pt-br/assuntos/noticias-1/senacon-articula-criacao-de-nucleo-regional-de-combate-ao-endividamento-e-ao-superendividamento-na-regiao-sul-1)
+
+Iniciativa reúne órgãos de defesa do consumidor de Santa Catarina, Paraná e Rio Grande do Sul para compartilhar experiências e definir ações conjuntas de prevenção, orientação e atendimento
+
+tags:
+
+[SENACON](https://www.gov.br/mj/@@search?SearchableText=SENACON)
+
+[ENDIVIDAMENTO](https://www.gov.br/mj/@@search?SearchableText=ENDIVIDAMENTO)
+
+[PROCONS](https://www.gov.br/mj/@@search?SearchableText=PROCONS)
+
+[SNDC](https://www.gov.br/mj/@@search?SearchableText=SNDC)
+
+publicado
+
+09/10/2026
+
+20h10
+
+Notícia
+
+CONSUMIDOR
+
+[Governo Federal zera tributos sobre a gasolina e reforça subvenção a importadores de diesel](https://www.gov.br/mj/pt-br/assuntos/noticias-1/governo-federal-zera-tributos-sobre-a-gasolina-e-reforca-subvencao-a-importadores-de-diesel)
+
+Medidas visam estabilizar os preços no mercado interno e assegurar o pleno abastecimento de combustíveis no País e dão sequência à estratégia adotada desde o início da guerra no Oriente Médio
+
+tags:
+
+[MJSP](https://www.gov.br/mj/@@search?SearchableText=MJSP)
+
+[SENACON](https://www.gov.br/mj/@@search?SearchableText=SENACON)
+
+[COMBUSTÍVEIS](https://www.gov.br/mj/@@search?SearchableText=COMBUSTÍVEIS)
+
+publicado
+
+09/10/2026
+
+16h56
+
+Notícia
+
+CONSUMIDOR
+
+[Senacon realiza oficina de fiscalização de bets durante Encontro Técnico de Defesa do Consumidor em Minas Gerais](https://www.gov.br/mj/pt-br/assuntos/noticias-1/senacon-realiza-oficina-de-fiscalizacao-de-bets-durante-encontro-tecnico-de-defesa-do-consumidor-em-minas-gerais)
+
+Evento abordou ludopatia, publicidade, responsabilidades e proteção do consumidor após mudanças no cenário jurídico das apostas
+
+tags:
+
+[SENACON](https://www.gov.br/mj/@@search?SearchableText=SENACON)
+
+[PROCON](https://www.gov.br/mj/@@search?SearchableText=PROCON)
+
+[BETS](https://www.gov.br/mj/@@search?SearchableText=BETS)
+
+[SNDC](https://www.gov.br/mj/@@search?SearchableText=SNDC)
+
+publicado
+
+07/10/2026
+
+20h53
+
+Notícia
+
 FISCALIZAÇÃO
 
 [Governo Federal amplia fiscalização contra bets ilegais](https://www.gov.br/mj/pt-br/assuntos/noticias-1/governo-federal-amplia-fiscalizacao-contra-bets-ilegais)
@@ -595,102 +689,6 @@ publicado
 17/08/2026
 
 16h35
-
-Notícia
-
-CAPACITAÇÃO
-
-[Oficina debate crédito ao consumidor e combate ao endividamento](https://www.gov.br/mj/pt-br/assuntos/noticias-1/oficina-debate-credito-ao-consumidor-e-combate-ao-endividamento)
-
-Encontro reúne Procons de todo o País e apresenta estratégia nacional com criação e fortalecimento de Núcleo de Prevenção ao Endividamento
-
-tags:
-
-[MJSP](https://www.gov.br/mj/@@search?SearchableText=MJSP)
-
-[SENACON](https://www.gov.br/mj/@@search?SearchableText=SENACON)
-
-[PROCON](https://www.gov.br/mj/@@search?SearchableText=PROCON)
-
-[ENDIVIDAMENTO](https://www.gov.br/mj/@@search?SearchableText=ENDIVIDAMENTO)
-
-publicado
-
-13/08/2026
-
-11h24
-
-Notícia
-
-CONSUMIDOR
-
-[Fiscalização de bets é tema de oficina com órgãos de defesa do consumidor](https://www.gov.br/mj/pt-br/assuntos/noticias-1/fiscalizacao-de-bets-e-tema-de-oficina-com-orgaos-de-defesa-do-consumidor-1)
-
-Atividade em Brasília reuniu órgãos e entidades para alinhamentos estratégicos de combate a ilegalidades
-
-tags:
-
-[SENACON](https://www.gov.br/mj/@@search?SearchableText=SENACON)
-
-[SNDC](https://www.gov.br/mj/@@search?SearchableText=SNDC)
-
-[DEFESA DO CONSUMIDOR](https://www.gov.br/mj/@@search?SearchableText=DEFESA%20DO%20CONSUMIDOR)
-
-[BETS](https://www.gov.br/mj/@@search?SearchableText=BETS)
-
-publicado
-
-10/08/2026
-
-19h11
-
-Notícia
-
-CONSUMIDOR
-
-[Dia dos Pais: conheça os direitos do consumidor na compra de presentes](https://www.gov.br/mj/pt-br/assuntos/noticias-1/dia-dos-pais-conheca-os-direitos-do-consumidor-na-compra-de-presentes)
-
-Orientações da Senacon destacam cuidados com preços, ofertas, prazos de entrega e políticas de troca
-
-tags:
-
-[Senacon](https://www.gov.br/mj/@@search?SearchableText=Senacon)
-
-[Dia dos Pais](https://www.gov.br/mj/@@search?SearchableText=Dia%20dos%20Pais)
-
-[Consumidor](https://www.gov.br/mj/@@search?SearchableText=Consumidor)
-
-[Comércio Eletrônico](https://www.gov.br/mj/@@search?SearchableText=Comércio%20Eletrônico)
-
-[Procon](https://www.gov.br/mj/@@search?SearchableText=Procon)
-
-publicado
-
-05/08/2026
-
-21h07
-
-Notícia
-
-CONSUMIDOR
-
-[Senacon instaura processos para apurar possível descumprimento de regras de concessão de crédito pela Crefisa, Ágil e Valor](https://www.gov.br/mj/pt-br/assuntos/noticias-1/senacon-instaura-processos-para-apurar-possivel-descumprimento-de-regras-de-concessao-de-credito-pela-crefisa-agil-e-valor)
-
-As decisões publicadas no DOU apontam indícios de descumprimento das normas de concessão responsável de crédito e de prevenção ao superendividamento previstas no Código de Defesa do Consumidor
-
-tags:
-
-[SENACON](https://www.gov.br/mj/@@search?SearchableText=SENACON)
-
-[CONSUMIDOR](https://www.gov.br/mj/@@search?SearchableText=CONSUMIDOR)
-
-[SUPERENDIVIDAMENTO](https://www.gov.br/mj/@@search?SearchableText=SUPERENDIVIDAMENTO)
-
-publicado
-
-23/07/2026
-
-09h32
 
 Notícia
 

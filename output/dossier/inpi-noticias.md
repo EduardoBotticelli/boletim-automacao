@@ -1,5 +1,71 @@
 id="content-core">
 
+[Inscrições abertas para a quarta edição do Curso Geral de PI à distância](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/inscricoes-abertas-para-a-quarta-edicao-do-curso-geral-de-pi-a-distancia)
+
+tags:
+
+[Capacitação](https://www.gov.br/inpi/@@search?SearchableText=Capacitação)
+
+[Curso de PI](https://www.gov.br/inpi/@@search?SearchableText=Curso%20de%20PI)
+
+publicado
+
+13/10/2026
+
+09h44
+
+Notícia
+
+[INPI publica 2ª edição do relatório Cenário Econômico da PI no Brasil](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/inpi-publica-2a-edicao-do-relatorio-cenario-economico-da-pi-no-brasil)
+
+tags:
+
+[PI](https://www.gov.br/inpi/@@search?SearchableText=PI)
+
+[Cenário Econômico](https://www.gov.br/inpi/@@search?SearchableText=Cenário%20Econômico)
+
+publicado
+
+08/10/2026
+
+16h40
+
+Notícia
+
+[Superintendência do INPI é atingida por incêndio na UFPE](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/superintendencia-do-inpi-e-atingida-por-incendio-na-ufpe)
+
+Escritório é responsável por ações de articulação e disseminação na Região Nordeste
+
+tags:
+
+[unidades regionais](https://www.gov.br/inpi/@@search?SearchableText=unidades%20regionais)
+
+[pernambuco](https://www.gov.br/inpi/@@search?SearchableText=pernambuco)
+
+publicado
+
+08/10/2026
+
+12h09
+
+Notícia
+
+[Atualização sobre o tratamento de pedidos de marcas relacionados a apostas de quota fixa](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/atualizacao-sobre-o-tratamento-de-pedidos-de-marcas-relacionados-a-apostas-de-quota-fixa)
+
+tags:
+
+[marcas](https://www.gov.br/inpi/@@search?SearchableText=marcas)
+
+[Manual de Marcas](https://www.gov.br/inpi/@@search?SearchableText=Manual%20de%20Marcas)
+
+publicado
+
+06/10/2026
+
+15h39
+
+Notícia
+
 [Relatório de Indisponibilidade Técnica dos dias 1 e 2/10](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/relatorio-de-indisponibilidade-tecnica-dos-dias-1-e-2-10)
 
 tags:
@@ -13,6 +79,20 @@ publicado
 02/10/2026
 
 19h27
+
+Notícia
+
+[INPI conclui a série de 15 Guias de PI para Negócios](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/inpi-conclui-a-serie-de-15-guias-de-pi-para-negocios)
+
+tags:
+
+[Guias de PI para Negócios](https://www.gov.br/inpi/@@search?SearchableText=Guias%20de%20PI%20para%20Negócios)
+
+publicado
+
+08/10/2026
+
+10h33
 
 Notícia
 
@@ -77,6 +157,36 @@ publicado
 29/09/2026
 
 08h14
+
+Notícia
+
+[INPI e OMPI promovem curso sobre Propriedade Intelectual, inovação e desenvolvimento econômico](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/inpi-e-ompi-promovem-curso-sobre-propriedade-intelectual-inovacao-e-desenvolvimento-economico)
+
+tags:
+
+[capacitação](https://www.gov.br/inpi/@@search?SearchableText=capacitação)
+
+[curso para comunicadores](https://www.gov.br/inpi/@@search?SearchableText=curso%20para%20comunicadores)
+
+publicado
+
+13/10/2026
+
+08h25
+
+Notícia
+
+[INPI divulga resultado preliminar da seleção de Casos de Sucesso em Propriedade Intelectual](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/inpi-divulga-resultado-preliminar-da-selecao-de-casos-de-sucesso-em-propriedade-intelectual)
+
+tags:
+
+[casos de sucesso em PI](https://www.gov.br/inpi/@@search?SearchableText=casos%20de%20sucesso%20em%20PI)
+
+publicado
+
+06/10/2026
+
+10h15
 
 Notícia
 
@@ -355,120 +465,6 @@ publicado
 08/09/2026
 
 10h58
-
-Notícia
-
-[Serviços do INPI ficaram indisponíveis nos dias 1 e 3/9](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/servicos-do-inpi-ficaram-indisponiveis-nos-dias-1-e-3-9)
-
-tags:
-
-[Serviços](https://www.gov.br/inpi/@@search?SearchableText=Serviços)
-
-publicado
-
-04/09/2026
-
-11h58
-
-Notícia
-
-[INPI atinge limite de cotas para trâmite prioritário de marcas no comércio eletrônico](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/inpi-atinge-limite-de-cotas-para-tramite-prioritario-de-marcas-no-comercio-eletronico)
-
-tags:
-
-[Marcas](https://www.gov.br/inpi/@@search?SearchableText=Marcas)
-
-[Comércio Eletrônico](https://www.gov.br/inpi/@@search?SearchableText=Comércio%20Eletrônico)
-
-publicado
-
-04/09/2026
-
-09h34
-
-Notícia
-
-[INPI suspende edital de seleção de bolsistas da CGREC](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/inpi-suspende-edital-de-selecao-de-bolsistas-da-cgrec)
-
-tags:
-
-[Seleção](https://www.gov.br/inpi/@@search?SearchableText=Seleção)
-
-[Bolsistas](https://www.gov.br/inpi/@@search?SearchableText=Bolsistas)
-
-publicado
-
-02/09/2026
-
-15h12
-
-Notícia
-
-[INPI reconhece IG para cerâmica de Rosário (MA)](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/inpi-registra-ig-para-ceramica-do-municipio-de-rosario-ma)
-
-tags:
-
-[Indicação Geográfica](https://www.gov.br/inpi/@@search?SearchableText=Indicação%20Geográfica)
-
-[Cerâmica](https://www.gov.br/inpi/@@search?SearchableText=Cerâmica)
-
-publicado
-
-01/09/2026
-
-13h34
-
-Notícia
-
-[Encontro promove diálogo e apresenta novidades no exame de marcas](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/encontro-promove-dialogo-e-apresenta-novidades-no-exame-de-marcas)
-
-tags:
-
-[Diálogo](https://www.gov.br/inpi/@@search?SearchableText=Diálogo)
-
-[Marcas](https://www.gov.br/inpi/@@search?SearchableText=Marcas)
-
-publicado
-
-28/08/2026
-
-14h48
-
-Notícia
-
-[Nova versão do Módulo de Serviços de Patentes entra em operação no dia 16/9](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/nova-versao-do-modulo-de-servicos-de-patentes-entra-em-operacao-no-dia-16-9)
-
-tags:
-
-[Módulo de Serviços](https://www.gov.br/inpi/@@search?SearchableText=Módulo%20de%20Serviços)
-
-[Patentes](https://www.gov.br/inpi/@@search?SearchableText=Patentes)
-
-publicado
-
-28/08/2026
-
-12h45
-
-Notícia
-
-[Radar Tecnológico do INPI mapeia pedidos de patente em agricultura sustentável](https://www.gov.br/inpi/pt-br/central-de-conteudo/noticias/radar-tecnologico-do-inpi-mapeia-pedidos-de-patente-em-agricultura-sustentavel)
-
-tags:
-
-[radar tecnológico](https://www.gov.br/inpi/@@search?SearchableText=radar%20tecnológico)
-
-[patente](https://www.gov.br/inpi/@@search?SearchableText=patente)
-
-[tecnologias verdes](https://www.gov.br/inpi/@@search?SearchableText=tecnologias%20verdes)
-
-[agricultura sustentável](https://www.gov.br/inpi/@@search?SearchableText=agricultura%20sustentável)
-
-publicado
-
-27/08/2026
-
-15h45
 
 Notícia
 

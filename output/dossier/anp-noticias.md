@@ -49,6 +49,126 @@ Viagens e Turismo
 Limpar
 Aplicar
 
+Energia, Minerais e Combustíveis
+
+[ANP credencia B3 S.A. como entidade registradora de Certificado de Garantia de Origem de Biometano (CGOB)](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-credencia-b3-s-a-como-entidade-registradora-de-certificado-de-garantia-de-origem-de-biometano-cgob)
+
+13/10/2026
+
+-
+Agência passa a contar com três entidades registradoras
+
+Oferta Permanente
+
+[ANP aprova estudos geológicos e econômicos do bloco Oeste de Jubarte](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-aprova-estudos-geologicos-e-economicos-do-bloco-oeste-de-jubarte)
+
+09/10/2026
+
+-
+Área está localizada na Bacia de Campos, no Polígono do Pré-Sal, e será submetida à apreciação do Ministério de Minas e Energia.
+
+Energia, Minerais e Combustíveis
+
+[Mais de 54 mil litros de combustíveis são apreendidos no Rio Grande do Sul](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/mais-de-54-mil-litros-de-combustiveis-sao-apreendidos-no-rio-grande-do-sul)
+
+09/10/2026
+
+-
+Apreensão aconteceu em ações realizadas em conjunto com o Procon Municipal e a Polícia Civil
+
+Energia, Minerais e Combustíveis
+
+[ANP assina acordo com 23 Secretarias de Fazenda para ampliar acesso a dados do mercado de combustíveis](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-assina-acordo-com-23-secretarias-de-fazenda-para-ampliar-acesso-a-dados-do-mercado-de-combustiveis)
+
+09/10/2026
+
+-
+Acordo integra a iniciativa PISTA, que visa aprimorar o monitoramento do abastecimento, a transparência de preços e a fiscalização do setor
+
+Energia, Minerais e Combustíveis
+
+[ANP fará consulta e audiência públicas sobre credenciamento de instituições para projetos de PD&I](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-fara-consulta-e-audiencia-publicas-sobre-credenciamento-de-instituicoes-para-projetos-de-pd-i)
+
+09/10/2026
+
+-
+Proposta busca reduzir a burocracia, a duplicidade de informações e o tempo dedicado ao processo de credenciamento.
+
+Energia, Minerais e Combustíveis
+
+[ANP firma acordo com o Procon de Guarulhos (SP) para fiscalização do abastecimento no município](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-firma-acordo-com-o-procon-de-guarulhos-sp-para-fiscalizacao-do-abastecimento-no-municipio)
+
+09/10/2026
+
+-
+Agência mantém parcerias com órgãos públicos de todo o Brasil.
+
+Energia, Minerais e Combustíveis
+
+[ANP retoma restrição à venda de biodiesel entre distribuidores](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-retoma-restricao-a-venda-de-biodiesel-entre-distribuidores)
+
+09/10/2026
+
+-
+Medida terá duração de 24 meses e busca ampliar a rastreabilidade do biodiesel utilizado na mistura obrigatória ao óleo diesel
+
+Energia, Minerais e Combustíveis
+
+[Reunião da Diretoria da ANP de amanhã (9/10) será transmitida pelo YouTube](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/reuniao-da-diretoria-da-anp-de-amanha-9-10-sera-transmitida-pelo-youtube)
+
+08/10/2026
+
+Energia, Minerais e Combustíveis
+
+[ANP publica alterações em seu Regimento Interno](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-publica-alteracoes-em-seu-regimento-interno)
+
+08/10/2026
+
+-
+Portarias trazem mudanças na estrutura organizacional da ANP, com o objetivo de otimizar processos
+
+Energia, Minerais e Combustíveis
+
+[Substituto assumirá em 13/10 Diretoria da ANP](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/substituto-assumira-em-13-10-diretoria-da-anp)
+
+08/10/2026
+
+-
+Júlio Nishida é servidor e o atual superintendente de Fiscalização da Agência
+
+Oferta Permanente
+
+[Oferta Permanente de Concessão (OPC): 6º Ciclo tem maior arrecadação desde o início desse modelo de licitação](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/oferta-permanente-de-concessao-opc-6o-ciclo-tem-maior-arrecadacao-desde-o-inicio-desse-modelo-de-licitacao)
+
+07/10/2026
+
+-
+Hoje mais cedo também foi realizado o 4 Ciclo de Partilha, com sete blocos arrematados.
+
+Energia, Minerais e Combustíveis
+
+[4º Ciclo da Oferta Permanente de Partilha da ANP tem sete blocos no Pré-Sal arrematados](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/4o-ciclo-da-oferta-permanente-de-partilha-da-anp-tem-sete-blocos-no-pre-sal-arrematados)
+
+07/10/2026
+
+-
+Trata-se do ciclo de Partilha com o maior número de blocos arrematados desde o início da Oferta Permanente até o momento
+
+OFERTA PERMANENTE
+
+[Oferta Permanente: ANP realiza em 07/10 4º Ciclo de Partilha e 6º Ciclo de Concessão](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/oferta-permanente-anp-realiza-em-07-10-4o-ciclo-de-partilha-e-6o-ciclo-de-concessao)
+
+05/10/2026
+
+Energia, Minerais e Combustíveis
+
+[ANP divulga relatório da consulta pública sobre Programa de Gas Release](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-divulga-relatorio-da-consulta-publica-sobre-programa-de-gas-release)
+
+05/10/2026
+
+-
+Consulta recebeu 655 contribuições; manifestações indicam amplo apoio à implementação do Programa, acompanhado de propostas para o seu aperfeiçoamento
+
 Fiscalização
 
 [ANP fiscaliza agentes em 18 estados no período de 28/9 a 2/10](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-fiscaliza-agentes-em-18-estados-no-periodo-de-28-9-a-2-10)
@@ -174,114 +294,6 @@ Energia, Minerais e Combustíveis
 
 -
 Ação foi desenvolvida pela Agência e Procons de todo o país
-
-Energia, Minerais e Combustíveis
-
-[Total de multas aplicadas pela ANP a distribuidoras de combustíveis por aumento abusivo de preços ultrapassa R$ 700 milhões](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/total-de-multas-aplicadas-pela-anp-a-distribuidoras-de-combustiveis-por-aumento-abusivo-de-precos-ultrapassa-r-700-milhoes)
-
-25/09/2026
-
--
-Foram julgados ao todo dez processos referentes a nove distribuidoras
-
-Energia, Minerais e Combustíveis
-
-[ROG.e: ANP participou de mais de 40 palestras em evento que reúne o setor de energia](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/rog-e-anp-participou-de-mais-de-40-palestras-em-evento-que-reune-o-setor-de-energia)
-
-25/09/2026
-
--
-Total inclui apresentações no estande da Agência, congresso e eventos paralelos
-
-Energia, Minerais e Combustíveis
-
-[Atualização: adiamento da atualização do SEI](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/atualizacao-adiamento-da-atualizacao-do-sei)
-
-25/09/2026
-
-Energia, Minerais e Combustíveis
-
-[Audiência pública debate revisão das especificações dos combustíveis de uso aquaviário](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/audiencia-publica-debate-revisao-das-especificacoes-dos-combustiveis-de-uso-aquaviario)
-
-24/09/2026
-
-Energia, Minerais e Combustíveis
-
-[2º Workshop da ANP sobre Gas Release será em 29/9](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/2o-workshop-da-anp-sobre-gas-release-sera-em-29-9)
-
-24/09/2026
-
-Energia, Minerais e Combustíveis
-
-[ANP contrata B3 para assessoria técnica às licitações de E&P](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-contrata-b3-para-assessoria-tecnica-as-licitacoes-de-e-p)
-
-24/09/2026
-
--
-Atribuições como definição das áreas ofertadas, elaboração dos editais e julgamento das propostas permanecem sob a responsabilidade da Agência
-
-Energia, Minerais e Combustíveis
-
-[Atualização: SEI ficará indisponível a partir das 17h de 25/09 para implantação da nova versão do sistema.](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/atualizacao-sei-ficara-indisponivel-a-partir-das-17h-de-25-09-para-implantacao-da-nova-versao-do-sistema)
-
-23/09/2026
-
-Energia, Minerais e Combustíveis
-
-[ANP, Senacon e Procons fazem operação conjunta de fiscalização de combustíveis em 13 estados e no DF](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-senacon-e-procons-fazem-operacao-conjunta-de-fiscalizacao-de-combustiveis-em-13-estados-e-no-df)
-
-23/09/2026
-
--
-Ações acontecem entre 23 e 25/9 com foco nas condições de comercialização de combustíveis e na proteção dos consumidores em especial quanto a preços abusivos
-
-Energia, Minerais e Combustíveis
-
-[ANP aplica mais de R$ 200 milhões em multas a distribuidoras de combustíveis por aumento abusivo de preços](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-aplica-mais-de-r-200-milhoes-em-multas-a-distribuidoras-de-combustiveis-por-aumento-abusivo-de-precos)
-
-23/09/2026
-
--
-Decisões de primeira instância constataram elevação abusiva de preços, com casos em que as margens brutas das distribuidoras aumentaram mais de 1.350%.
-
-Energia, Minerais e Combustíveis
-
-[SEI ficará indisponível a partir de 25/09 para atualização para a versão 5.0.4](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/sei-ficara-indisponivel-a-partir-de-25-09-para-atualizacao-para-a-versao-5-0.4)
-
-22/09/2026
-
-Energia, Minerais e Combustíveis
-
-[2ª edição do NAVE – Programa ANP de Empreendedorismo é lançada na ROG.e](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/2a-edicao-do-nave-2013-programa-anp-de-empreendedorismo-e-lancada-na-rog.e)
-
-22/09/2026
-
-Fiscalização
-
-[Ações de fiscalização em São Paulo verificam o cumprimento de normas em 93 agentes](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/acoes-de-fiscalizacao-em-sao-paulo-verificam-o-cumprimento-de-normas-em-93-agentes)
-
-21/09/2026
-
--
-Entre 7 e 18/9, os fiscais da ANP estiveram em 17 estados.
-
-Energia, Minerais e Combustíveis
-
-[Regulação experimental foi tema de workshop realizado pela ANP e FGV Energia](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/regulacao-experimental-foi-tema-de-workshop-realizado-pela-anp-e-fgv-energia)
-
-18/09/2026
-
--
-Encontro debateu proposta para ambientes regulatórios experimentais na Agência
-
-Energia, Minerais e Combustíveis
-
-[ROG.e: ANP participará de evento que reúne o setor de energia](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/rog-e-anp-participara-de-evento-que-reune-o-setor-de-energia)
-
-17/09/2026
-
--
-Agência terá estande na feira e representantes no congresso
 
 «
 Anterior

@@ -18,7 +18,7 @@ Geração (1)
 
 Mercado (1)
 
-2 Documentos listados
+1 Documentos listados
 
 Ordenados por
 
@@ -36,25 +36,17 @@ Resultados por página
 
 NOTICIAS
 
-[Padronização do cadastro das unidades consumidoras amplia segurança nos processos de migração para o mercado livre](https://www.ccee.org.br/-/padronizacao-do-cadastro-das-unidades-consumidoras-amplia-seguranca-nos-processos-de-migracao-para-o-mercado-livre)
+[Confira a programação do 2º Fórum Análise Setorial CCEE e faça sua inscrição](https://www.ccee.org.br/-/confira-a-programacao-do-2-forum-analise-setorial-ccee-e-faca-sua-inscricao)
 
-Atuação conjunta da CCEE e das distribuidoras aprimora o cruzamento de informações e a prevenção de registros em duplicidade
+Evento acontece no dia 17 de novembro, em São Paulo, e aborda os temais mais relevantes para o mercado
 
-Publicado em: 02/10/2026
-
-NOTICIAS
-
-[CCEE consolida avanço da abertura do mercado livre de energia com 811 novas adesões em agosto](https://www.ccee.org.br/-/ccee-consolida-avanco-da-abertura-do-mercado-livre-de-energia-com-811-novas-adesoes-em-agosto)
-
-São Paulo destacou-se com 218 migrações, seguido por Goiás (87), Bahia (84) e Rio Grande do Sul (55)
-
-Publicado em: 02/10/2026
+Publicado em: 13/10/2026
 
 1 de 1
 
 Loading...
 
-[Mapa do site](https://www.ccee.org.br/busca-ccee?q=&dtIni=02%2F10%2F2026&dtFim=05%2F10%2F2026&structure=ccee-noticias&ordenacao=Mais%20recentes)
+[Mapa do site](https://www.ccee.org.br/busca-ccee?q=&dtIni=13%2F10%2F2026&dtFim=14%2F10%2F2026&structure=ccee-noticias&ordenacao=Mais%20recentes)
 
 Menu de Navegação
 

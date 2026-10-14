@@ -34,65 +34,65 @@ Pesquisar por vínculo com normativo:
 
 Pesquisar
 
-[01/10/26 048-2026-VNC-Ofício Circular Atualização tarifária dos Serviços de Conectividade, Risk Services-Margin Simulator e Co-Location](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel0a)
+[13/10/26 057-2026-VNC-Comunicado Externo 218º Leilão Especial do Fundo de Investimentos da Amazônia (Finam)](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel0a)
+
+O leilão de valores mobiliários integrantes da carteira de ações do Finam será realizado no dia 22/10/2026, das 10h às 15h, por meio do sistema eletrônico de negociação.
+
+[Download do Documento](https://www.b3.com.br/data/files/85/33/25/01/E0631A103BBB511AAC094EA8/CE%20057-2026-VNC%20218º%20LEILAO%20ESPECIAL%20DO%20FUNDO%20DE%20INVESTIMENTOS%20DA%20AMAZONIA%20FINAM_PT.pdf)
+
+[13/10/26 050-2026-VNC-Ofício Circular Novos horários de negociação](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel1a)
+
+Os horários de negociação dos mercados de bolsa e de balcão organizado administrados pela B3 serão alterados, conforme grades horárias distintas.
+
+[Download do Documento](https://www.b3.com.br/data/files/99/B7/82/67/8A631A103BBB511AAC094EA8/OC%20050-2026-VNC%20NOVOS%20HORARIOS%20DE%20NEGOCIACAO_PT.pdf)
+
+[13/10/26 043-2026-PRE-Ofício Circular Isenção de Tarifas de Opção de Copom](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel2a)
+
+A isenção será concedida aos participantes de negociação plenos (PNPs) ou participantes de negociação (PNs), abrangendo todas as tarifas incidentes.
+
+[Download do Documento](https://www.b3.com.br/data/files/11/B7/F5/0B/59631A103BBB511AAC094EA8/OC%20043-2026%20PRE%20ISENCAO%20DAS%20TARIFAS%20DE%20OPCAO%20DE%20COPOM_PT.pdf)
+
+[09/10/26 013-2026-VPE-Comunicado Externo Esclarecimentos sobre os procedimentos para divulgação de proventos por fundos listados](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel3a)
+
+Orientações sobre as obrigações regulatórias relativas à divulgação de proventos por fundos listados e esclarecimentos acerca dos impactos decorrentes do descumprimento dos prazos e horários previstos na regulamentação.
+
+[Download do Documento](https://www.b3.com.br/data/files/09/C6/BD/FD/D0221A103BBB511AAC094EA8/CE%20013-2026-VPE%20ESCLARECIMENTOS%20SOBRE%20OS%20PROCEDIMENTOS%20PARA%20DIVULGACAO%20DE%20PROVENTOS%20POR%20FUNDOS%20LISTADOS_PT.pdf)
+
+[08/10/26 063-2026-VPC-Ofício Circular Encerramento do Programa de Incentivo da Expansão da Base de Investidores do Tesouro Direto – 2026](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel4a)
+
+A remuneração em dinheiro será paga até o dia 26/02/2027 e a remuneração mediante créditos será disponibilizada a partir do primeiro dia útil de fevereiro de 2027.
+
+[Download do Documento](https://www.b3.com.br/data/files/EA/47/17/C8/FEC11A103BBB511AAC094EA8/OC%20063-2026-VPC%20ENCERRAMENTO%20PROGRAMA%20DE%20INCENTIVO%20EXPANSAO%20BASE%20DE%20INVESTIDORES%20TESOURO%20DIRETO%202026_PT.pdf)
+
+[08/10/26 042-2026-PRE-Ofício Circular Modelo de apreçamento dos novos contratos futuros de US Treasury Notes e US Treasury Bond](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel5a)
+
+Os novos contratos serão lançados em 13/10/2026. Conheça a metodologia de precificação dos novos produtos
+
+[Download do Documento](https://www.b3.com.br/data/files/DA/E7/FF/1C/48D11A103BBB511AAC094EA8/OC%20042-2026%20PRE%20MODELO%20DE%20APRECAMENTO%20DOS%20NOVOS%20CONTRATOS%20FUTUROS%20DE%20US%20TREASURY%20NOTES%20E%20US%20TREASURY%20BOND%20(PT%29.pdf)
+
+[08/10/26 012-2026-VPE-Comunicado Externo Desativação de arquivos legados da Central Depositária de Renda Variável B3 – Escrituradores](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel6a)
+
+A desativação dos arquivos foi postergada para 29/03/2027.
+
+[Download do Documento](https://www.b3.com.br/data/files/C6/42/05/D1/E8D11A103BBB511AAC094EA8/CE%20012-2026-VPE%20DESATIVACAO%20DE%20ARQUIVOS%20LEGADOS%20DA%20CENTRAL%20DEPOSITARIA%20DE%20RENDA%20VARIAVEL%20B3%20ESCRITURADORES_PT.pdf)
+
+[06/10/26 049-2026-VNC-Ofício Circular Realocação de limites entre mercados – SOJA3](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel7a)
+
+Em 07/10/2026, passam a vigorar os novos limites de concentração de posição em aberto nos mercados de Opções Listadas, Futuros, Contratos a Termo, Empréstimos de Ativos e Opções Flexíveis referenciados em SOJA3 (Boa Safra Sementes S.A.).
+
+[Download do Documento](https://www.b3.com.br/data/files/C9/92/59/AE/10311A10C90F7F0AAC094EA8/OC%20049-2026-VNC%20REALOCACAO%20DE%20LIMITES%20ENTRE%20MERCADOS%20SOJA3_PT.pdf)
+
+[01/10/26 048-2026-VNC-Ofício Circular Atualização tarifária dos Serviços de Conectividade, Risk Services-Margin Simulator e Co-Location](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel8a)
 
 As respectivas políticas comerciais estarão disponíveis a partir de outubro de 2026 no site da B3. As tarifas serão atualizadas a partir de janeiro de 2027, em razão da adequação à Reforma Tributária Brasileira e do reajuste anual pelo IPCA.
 
 [Download do Documento](https://www.b3.com.br/data/files/EF/A3/76/5B/849F0A10C90F7F0AAC094EA8/OC%20048-2026-VNC%20ATUALIZACAO%20TARIFARIA%20DOS%20SERVICOS%20DE%20CONECTIVIDADE%20MARGIN%20SIMULATOR%20E%20COLOCATION_PT.pdf)
 
-[29/09/26 062-2026-VPC-Ofício Circular Deslistagem do Futuro de S&P Merval e republicação dos Contratos de Derivativos de Equities](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel1a)
+[29/09/26 062-2026-VPC-Ofício Circular Deslistagem do Futuro de S&P Merval e republicação dos Contratos de Derivativos de Equities](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel9a)
 
 A negociação do contrato Futuro de S&P Merval será descontinuada a partir de 01/10/2026.
 
 [Download do Documento](https://www.b3.com.br/data/files/91/13/BC/F1/1DEE0A105BF9020AAC094EA8/OC%20062-2026-VPC%20DESLISTAGEM%20DO%20FUTURO%20DE%20SP%20MERVAL%20E%20REPUBLICACAO%20DOS%20CONTRATOS%20DE%20DERIVATIVOS%20DE%20EQUITIES_PT.pdf)
-
-[29/09/26 056-2026-VNC-Comunicado Externo ePUMA | Preservação de Foco em Boletas durante o Recebimento de Notícias](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel2a)
-
-A nova configuração permite manter a interação contínua com a boleta em preenchimento na plataforma.
-
-[Download do Documento](https://www.b3.com.br/data/files/CB/54/E6/F9/EBDE0A105BF9020AAC094EA8/CE%20056-2026-VNC%20EPUMA%20PRESERVACAO%20DE%20FOCO%20EM%20BOLETAS%20DURANTE%20O%20RECEBIMENTO%20DE%20NOTICIAS_PT.pdf)
-
-[29/09/26 041-2026-PRE-Ofício Circular Alteração no Programa de Formador de Mercado para Produtos Indexados à Inflação (IPCA)](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel3a)
-
-A partir de 03/11/2026, as Operações Casadas de DAP com NTN-B via plataforma Trademate deixarão de integrar o programa.
-
-[Download do Documento](https://www.b3.com.br/data/files/35/27/0D/AF/CADE0A105BF9020AAC094EA8/OC%20041-2026%20PRE_PROGRAMA%20DE%20FORMADOR%20DE%20MERCADO%20PARA%20PRODUTOS%20INDEXADOS%20A%20INFLACAO%20IPCA%20ALTERACAO%20NO%20BENEFICIO%20ADICIONAL_PT.pdf)
-
-[25/09/26 047-2026-VNC-Ofício Circular Prorrogação da alteração no término dos calls de fechamento dos ETFs de Renda Variável e Renda fixa](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel4a)
-
-Devido ao período eleitoral, a alteração no horário de encerramento dos calls de fechamento dos ETFs foi adiada para 03/11/2026, com o objetivo de aprimorar a eficiência operacional e a formação de preços dos ativos.
-
-[Download do Documento](https://www.b3.com.br/data/files/2B/B6/29/1C/75AD0A105BF9020AAC094EA8/OC%20047-2026-VNC%20PRORROGACAO%20DA%20ALTERACAO%20NO%20TERMINO%20DOS%20CALLS%20DE%20FECHAMENTO%20DOS%20ETFS%20DE%20RENDA%20VARIAVEL%20E%20RENDA%20FIXA_PT.pdf)
-
-[24/09/26 061-2026-VPC-Ofício Circular Lançamento dos novos Contratos Futuros de US Treasuries](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel5a)
-
-No dia 13/10/26 serão lançados os novos Contratos Futuros de US Treasuries de 2 anos, 5 anos, 10 anos Ultra e Bond.
-
-[Download do Documento](https://www.b3.com.br/data/files/F1/11/61/7B/2F3D0A105BF9020AAC094EA8/OC%20061-2026-VPC%20LANCAMENTO%20DOS%20NOVOS%20CONTRATOS%20FUTUROS%20DE%20US%20TREASURIES_PT.pdf)
-
-[24/09/26 055-2026-VNC-Comunicado Externo Revisão temporária dos parâmetros dos túneis de negociação e regras aplicáveis ao período eleitoral](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel6a)
-
-Os novos parâmetros irão vigorar de 28/09/2026 a 30/11/2026.
-
-[Download do Documento](https://www.b3.com.br/data/files/6B/06/21/AB/8D4D0A105BF9020AAC094EA8/CE%20055-2026-VNC%20REVISAO%20TEMPORARIA%20DOS%20PARAMETROS%20DOS%20TUNEIS%20DE%20NEGOCIACAO%20E%20REGRAS%20APLICAVEIS%20AO%20PERIODO%20ELEITORAL_PT.pdf)
-
-[24/09/26 040-2026-PRE-Ofício Circular Programa de Incentivo para Estratégias Quantitativas no Brasil](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel7a)
-
-A partir de 24/09/2026, entrará em vigor o Programa de Incentivo para gestoras de recursos brasileiras que atuem com Estratégias Quantitativas.
-
-[Download do Documento](https://www.b3.com.br/data/files/B2/94/F1/A9/324D0A105BF9020AAC094EA8/OC%20040-2026%20PRE%20%20PROGRAMA%20DE%20INCENTIVO%20PARA%20ESTRATEGIAS%20QUANTITATIVAS%20NO%20BRASIL%20(PT%29.pdf)
-
-[24/09/26 031-2026-VPC-Comunicado Externo Admissão à Negociação de Certificados de Depósito de ETFs (Units de ETF).](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel8a)
-
-Os novos Certificados de Depósito de ETFs estarão disponíveis para negociação a partir de 24 de setembro de 2026.
-
-[Download do Documento](https://www.b3.com.br/data/files/45/60/36/DC/A55D0A105BF9020AAC094EA8/CE%20031-2026-VPC%20ADMISSAO%20A%20NEGOCIACAO%20DE%20CERTIFICADOS%20DE%20DEPOSITO%20DE%20ETFS%20UNITS%20DE%20ETF_PT.pdf)
-
-[22/09/26 054-2026-VNC-Comunicado Externo 303º Leilão Especial do Fundo de Investimentos do Nordeste (Finor)](https://www.b3.com.br/pt_br/regulacao/oficios-e-comunicados/#panel9a)
-
-O leilão será realizado no dia 24/09/2026, das 10h às 15h, por meio do sistema eletrônico de negociação.
-
-[Download do Documento](https://www.b3.com.br/data/files/1F/53/8D/C0/BC9C0A105BF9020AAC094EA8/CE%20054-2026-VNC%20303º%20LEILAO%20ESPECIAL%20DO%20FUNDO%20DE%20INVESTIMENTOS%20DO%20NORDESTE%20FINOR_PT.pdf)
 
 «
 
@@ -114,11 +114,11 @@ Ofícios revogados
 
 Todos os Ofícios Circulares revogados pela B3 recebem a indicação de revogação tanto em sua descrição do site B3 quanto em seu texto original.
 
-Para obter cópias dos Ofícios Circulares publicados antes de 2003 que não estejam publicados no site B3, envie um e-mail para [(email protected)](https://www.b3.com.br/cdn-cgi/l/email-protection#0861666e67486a3b266b6765266a7a) indicando o número do ofício desejado.
+Para obter cópias dos Ofícios Circulares publicados antes de 2003 que não estejam publicados no site B3, envie um e-mail para [(email protected)](https://www.b3.com.br/cdn-cgi/l/email-protection#761f1810193614455815191b581404) indicando o número do ofício desejado.
 
 Cadastre-se
 
-Envie um e-mail para [(email protected)](https://www.b3.com.br/cdn-cgi/l/email-protection#dab5bcb3b9b3b5a9bfb9b5b7afb4b3b9bbbeb5a99ab8e9f4b9b5b7f4b8a8) e receba as comunicações de Ofícios Circulares e Comunicados Externos.
+Envie um e-mail para [(email protected)](https://www.b3.com.br/cdn-cgi/l/email-protection#d7b8b1beb4beb8a4b2b4b8baa2b9beb4b6b3b8a497b5e4f9b4b8baf9b5a5) e receba as comunicações de Ofícios Circulares e Comunicados Externos.
 
 Documentos históricos
 

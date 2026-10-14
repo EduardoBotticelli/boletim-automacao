@@ -49,6 +49,263 @@ Viagens e Turismo
 Limpar
 Aplicar
 
+RENEGOCIAÇÃO DE DÍVIDAS
+
+[Governo encaminha ao Congresso Nacional proposta para trabalhadores por conta própria](https://www.gov.br/fazenda/pt-br/assuntos/noticias/governo-encaminha-ao-congresso-nacional-proposta-para-trabalhadores-por-conta-propria)
+
+13/10/2026
+
+-
+Medidas anunciadas para os microempreendedores individuais abrangem propostas relacionadas à regularização tributária, ao investimento produtivo e às obrigações fiscais, entre outras
+
+Tags:
+
+[MEI](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=MEI)
+
+[RENEGOCIAÇÃO DE DÍVIDAS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=RENEGOCIA%C3%87%C3%83O%20DE%20D%C3%8DVIDAS)
+
+[GOVERNO FEDERAL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=GOVERNO%20FEDERAL)
+
+SERVIÇOS
+
+[Contagem regressiva para opção pelo Simples Nacional: prazo termina nesta quinta-feira, 15/10](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/contagem-regressiva-para-opcao-pelo-simples-nacional-prazo-termina-nesta-quinta-feira-15-10)
+
+13/10/2026
+
+-
+Empresas devem ficar atentas ao último dia para regularizar pendências e formalizar a opção pelo regime, conforme as regras aplicáveis
+
+Tags:
+
+[SIMPLES NACIONAL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=SIMPLES%20NACIONAL)
+
+[PENDÊNCIAS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=PEND%C3%8ANCIAS)
+
+[REGULARIZAÇÃO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=REGULARIZA%C3%87%C3%83O)
+
+DECRETO
+
+[Governo Federal prorroga desoneração da gasolina e do etanol](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/governo-federal-prorroga-desoneracao-da-gasolina-e-do-etanol)
+
+09/10/2026
+
+-
+Por meio de decreto, o governo também ampliou a subvenção do etanol; portaria concederá subvenção adicional para o óleo diesel
+
+Tags:
+
+[COMBUSTÍVEIS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=COMBUST%C3%8DVEIS)
+
+[DECRETO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=DECRETO)
+
+[DESONERAÇÃO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=DESONERA%C3%87%C3%83O)
+
+DEBATES
+
+[IV Congresso de Direito Tributário e Aduaneiro da Receita Federal discutirá tributação, inteligência e justiça fiscal](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/iv-congresso-de-direito-tributario-e-aduaneiro-da-receita-federal-discutira-tributacao-inteligencia-e-justica-fiscal)
+
+09/10/2026
+
+-
+Evento sobre desafios contemporâneos da política tributária e da administração aduaneira será realizado de 14 a 16 próximos, no CICB
+
+Tags:
+
+[POLÍTICA TRIBUTÁRIA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=POL%C3%8DTICA%20TRIBUT%C3%81RIA%20)
+
+[ADMINISTRAÇÃO ADUANEIRA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=ADMINISTRA%C3%87%C3%83O%20ADUANEIRA)
+
+[JUSTIÇA FISCAL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=JUSTI%C3%87A%20FISCAL)
+
+TRIBUTOS
+
+[Reforma tributária: 86% dos documentos fiscais de empresas obrigadas já trazem destaque da CBS](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/reforma-tributaria-86-dos-documentos-fiscais-de-empresas-obrigadas-ja-trazem-destaque-da-cbs)
+
+09/10/2026
+
+-
+Dados públicos da Receita mostram que dois em cada três CNPJs obrigados já destacam a Contribuição sobre Bens e Serviços nas notas fiscais
+
+Tags:
+
+[DOCUMENTOS FISCAIS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=DOCUMENTOS%20FISCAIS)
+
+[EMPRESAS OBRIGADAS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=EMPRESAS%20OBRIGADAS)
+
+[CGIBS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=CGIBS)
+
+SERVIÇOS
+
+[Receita Federal migra serviço de orientação sobre assuntos aduaneiros para o Receita Atende](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/receita-federal-migra-servico-de-orientacao-sobre-assuntos-aduaneiros-para-o-receita-atende)
+
+09/10/2026
+
+-
+Usuários passam a registrar e acompanhar solicitações sobre assuntos aduaneiros diretamente pelo sistema
+
+Tags:
+
+[SERVIÇOS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=SERVI%C3%87OS)
+
+[COMÉRCIO EXTERIOR](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=COM%C3%89RCIO%20EXTERIOR)
+
+[RECEITA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=RECEITA)
+
+[ADUANEIROS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=ADUANEIROS)
+
+[RECEITA ATENDE](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=RECEITA%20ATENDE)
+
+REFORMA TRIBUTÁRIA
+
+[Receita atualiza balanço de solicitações de opção pelo Simples Nacional e pelo regime regular do IBS e da CBS](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/receita-atualiza-balanco-de-solicitacoes-de-opcao-pelo-simples-nacional-e-pelo-regime-regular-do-ibs-e-da-cbs-1)
+
+07/10/2026
+
+-
+Dados mostram o número de pedidos até esta quarta-feira, 7/10, e serão atualizados à medida que novos pedidos forem realizados
+
+Tags:
+
+[BALANÇO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=BALAN%C3%87O)
+
+[SIMPLES NACIONAL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=SIMPLES%20NACIONAL)
+
+[IBS E CBS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=IBS%20E%20CBS)
+
+INVESTIMENTOS
+
+[5º Leilão do Eco Invest Brasil recebe demanda de R$ 181 bilhões e tem resultado homologado](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/5o-leilao-do-eco-invest-brasil-recebe-demanda-de-r-181-bilhoes-e-tem-resultado-homologado)
+
+07/10/2026
+
+-
+Propostas vencedoras somam R$ 49,95 bilhões em potencial de investimento em seis cadeias produtivas
+
+Tags:
+
+[ECO INVEST BRASIL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=ECO%20INVEST%20BRASIL)
+
+[LEILÃO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=LEIL%C3%83O)
+
+[TESOURO NACIONAL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=TESOURO%20NACIONAL)
+
+SERVIÇOS
+
+[Receita Federal publica versão.1.3.0 da documentação técnica da DeRE](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/receita-federal-publica-versao-1-3-0-da-documentacao-tecnica-da-dere)
+
+07/10/2026
+
+-
+Nova versão traz atualizações no Manual de Orientação e reforça a adaptação dos contribuintes aos regimes específicos da CBS e do IBS.
+
+Tags:
+
+[SERVIÇOS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=SERVI%C3%87OS)
+
+[CBS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=CBS)
+
+[IBS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=IBS)
+
+[MANUAL TÉCNICO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=MANUAL%20T%C3%89CNICO)
+
+DÍVIDA ATIVA DA UNIÃO
+
+[Edital publicado pela PGFN oferece condições de pagamento facilitadas para regularização de débitos](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/edital-publicado-pela-pgfn-oferece-condicoes-de-pagamento-facilitadas-para-regularizacao-de-debitos)
+
+06/10/2026
+
+-
+Regras valem durante a 3ª edição da Semana Nacional de Regularização Tributária, que vai até sexta-feira, dia 9/10
+
+Tags:
+
+[DÉBITOS FISCAIS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=D%C3%89BITOS%20FISCAIS)
+
+[REGULARIZAÇÃO TRIBUTÁRIA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=REGULARIZA%C3%87%C3%83O%20TRIBUT%C3%81RIA)
+
+[MODALIDADES DE TRANSAÇÃO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=MODALIDADES%20DE%20TRANSA%C3%87%C3%83O)
+
+IMPOSTO DE RENDA
+
+[Projeto Cartas 2026 incentiva autorregularização de declarações retidas em malha fiscal](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/projeto-cartas-2026-incentiva-autorregularizacao-de-declaracoes-retidas-em-malha-fiscal)
+
+06/10/2026
+
+-
+Receita Federal já enviou cerca de 5 mil cartas a contribuintes retidos na malha; lotes semanais continuarão a ser postados até o próximo dia 20
+
+Tags:
+
+[CONFORMIDADE TRIBUTÁRIA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=CONFORMIDADE%20TRIBUT%C3%81RIA)
+
+[MALHA FISCAL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=MALHA%20FISCAL)
+
+[RESTITUIÇÕES](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=RESTITUI%C3%87%C3%95ES)
+
+PRÊMIOS E APOSTAS
+
+[Bets: prazo para retirada voluntária de recursos termina nesta segunda-feira (5/10)](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/bets-prazo-para-retirada-voluntaria-de-recursos-termina-nesta-segunda-feira-5-10)
+
+05/10/2026
+
+-
+Medida Provisória 1.394/2026 proibiu as apostas e a publicidade de casas de apostas em todo o Brasil
+
+Tags:
+
+[CRONOGRAMA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=CRONOGRAMA)
+
+[FIM DAS BETS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=FIM%20DAS%20BETS)
+
+[EMPRESAS DE APOSTAS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=EMPRESAS%20DE%20APOSTAS)
+
+PRÊMIOS E APOSTAS
+
+[Secretaria de Prêmios e Apostas regulamenta obrigações das empresas após proibição das bets](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/secretaria-de-premios-e-apostas-regulamenta-obrigacoes-das-empresas-apos-proibicao-das-bets)
+
+05/10/2026
+
+-
+Portaria normatiza a devolução de valores aos apostadores, a regularização de obrigações financeiras e a atualização dos dados cadastrais das empresas
+
+SERVIÇOS
+
+[Receita Federal atualiza o balanço de solicitações de opção pelo Simples Nacional e pelo regime regular do IBS e da CBS](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/receita-federal-atualiza-o-balanco-de-solicitacoes-de-opcao-pelo-simples-nacional-e-pelo-regime-regular-do-ibs-e-da-cbs)
+
+05/10/2026
+
+-
+Balanço reúne 452.598 solicitações pelo Simples Nacional e 846.339 pelo regime regular do IBS e da CBS
+
+Tags:
+
+[SIMPLES NACIONAL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=SIMPLES%20NACIONAL)
+
+[CONTRIBUIÇÃO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=CONTRIBUI%C3%87%C3%83O)
+
+[IBS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=IBS)
+
+[CBS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=CBS)
+
+ARRECADAÇÃO E COBRANÇA
+
+[Receita Federal e PGFN abrem transação para débitos relacionados à multa substitutiva da pena de perdimento](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/receita-federal-e-pgfn-abrem-transacao-para-debitos-relacionados-a-multa-substitutiva-da-pena-de-perdimento)
+
+05/10/2026
+
+-
+Contribuintes podem obter descontos de até 65% e utilizar prejuízo fiscal
+
+Tags:
+
+[ARRECADAÇÃO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=ARRECADA%C3%87%C3%83O)
+
+[COBRANÇA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=COBRAN%C3%87A)
+
+[DESCONTOS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=DESCONTOS)
+
+[REGULARIZAÇÃO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=REGULARIZA%C3%87%C3%83O)
+
 REFORMA TRIBUTÁRIA
 
 [Receita atualiza balanço de solicitações de opção pelo Simples Nacional e pelo regime regular do IBS e da CBS](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/receita-atualiza-balanco-de-solicitacoes-de-opcao-pelo-simples-nacional-e-pelo-regime-regular-do-ibs-e-da-cbs)
@@ -68,7 +325,7 @@ Tags:
 
 SERVIÇOS
 
-[PGFN lança dois novos editais e prorroga adesão a outros três de renegociação de dívidas](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/pgfn-lanca-dois-novos-editais-e-prorroga-adesao-a-outros-tres-de-renegociacao-de-dividas)
+[PGFN lança dois novos editais e prorroga adesão a outros três de renegociação de dívidas](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/pgfn-lanca-dois-novos-editais-e-prorroga-adesao-a-outros-tres-de-renegociacao-de-dividas)
 
 02/10/2026
 
@@ -300,265 +557,6 @@ Tags:
 
 [SIMEI](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=SIMEI)
 
-INVESTIMENTOS
-
-[Investimentos no Tesouro Direto somam R$ 15 bilhões em agosto](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/investimentos-no-tesouro-direto-somam-r-S-15-bilhoes-em-agosto)
-
-25/09/2026
-
--
-Foram realizadas 1.320.001 operações de investimento em títulos do Tesouro Direto, totalizando 15 bilhões, o maior valor da série histórica
-
-Tags:
-
-[TESOURO DIRETO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=TESOURO%20DIRETO)
-
-[INVESTIMENTO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=INVESTIMENTO)
-
-[RENDIMENTOS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=RENDIMENTOS)
-
-ORÇAMENTO
-
-[Governo reduz contenção total das despesas em 2026 para R$ 16,1 bilhões](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/governo-reduz-contencao-total-das-despesas-em-2026-para-r-16-1-bilhoes)
-
-24/09/2026
-
--
-Bloqueio diminuiu para R$ 2,4 bilhões e se soma a contingenciamento de R$ 13,6 bilhões; valores incorporam reajuste do Bolsa Família, ganhos de eficiência na Previdência e subsídios ao diesel
-
-Tags:
-
-[DESPESAS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=DESPESAS)
-
-[ORÇAMENTO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=OR%C3%87AMENTO)
-
-[RELATÓRIO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=RELAT%C3%93RIO)
-
-DESENVOLVIMENTO SUSTENTÁVEL
-
-[Webinário gratuito ajuda empresas a acessar financiamento para economia circular](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/webinario-gratuito-ajuda-empresas-a-acessar-financiamento-para-economia-circular)
-
-24/09/2026
-
--
-Capacitação promovida pelo projeto PromEC ensina empresas a identificar linhas de crédito, editais e chamadas públicas e a estruturar propostas competitivas para financiar projetos de economia circular
-
-Tags:
-
-[ECONOMIA CIRCULAR](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=ECONOMIA%20CIRCULAR)
-
-[DESENVOLVIMENTO SUTENTÁVEL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=DESENVOLVIMENTO%20SUTENT%C3%81VEL)
-
-[SERVIÇOS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=SERVI%C3%87OS)
-
-[LINHA DE CRÉDITO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=LINHA%20DE%20CR%C3%89DITO)
-
-CONTAS PÚBLICAS
-
-[Secretaria de Política Econômica projeta crescimento de 2% para o PIB em 2026 e 2,3% em 2027](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/secretaria-de-politica-economica-projeta-crescimento-de-2-para-o-pib-em-2026-e-2-3-em-2027)
-
-22/09/2026
-
--
-Estimativas constam do Boletim Macrofiscal de Setembro, divulgado nesta terça-feira (22/9)
-
-Tags:
-
-[PROJEÇÕES](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=PROJE%C3%87%C3%95ES)
-
-[PRODUTO INTERNO BRUTO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=PRODUTO%20INTERNO%20BRUTO)
-
-[TAXA SELIC](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=TAXA%20SELIC)
-
-[BOLETIM MACROFISCAL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=BOLETIM%20MACROFISCAL)
-
-TRIBUTOS
-
-[Arrecadação federal em agosto totaliza R$ 235,566 bilhões, apontam dados divulgados pela Receita Federal](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/arrecadacao-federal-em-agosto-totaliza-r-235-566-bilhoes-apontam-dados-divulgados-pela-receita-federal)
-
-22/09/2026
-
--
-Valor representa crescimento real de 8,25% em relação a agosto de 2025, segundo a Receita Federal
-
-Tags:
-
-[ARRECADAÇÃO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=ARRECADA%C3%87%C3%83O)
-
-[INDICADORES](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=INDICADORES)
-
-[CRESCIMENTO NOMINAL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=CRESCIMENTO%20NOMINAL)
-
-SERVIÇOS
-
-[Receita Federal divulga balanço de solicitações de opção pelo Simples Nacional e pelo regime regular do IBS e da CBS](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/receita-federal-divulga-balanco-de-solicitacoes-de-opcao-pelo-simples-nacional-e-pelo-regime-regular-do-ibs-e-da-cbs)
-
-22/09/2026
-
--
-Balanço reúne dados sobre as solicitações de opção pelos regimes tributários e orienta contribuintes sobre prazos para regularização de pendências
-
-Tags:
-
-[SIMPLES NACIONAL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=SIMPLES%20NACIONAL)
-
-[SERVIÇOS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=SERVI%C3%87OS)
-
-[RECEITAFEDERAL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=RECEITAFEDERAL)
-
-MERCADO DE HIDROGÊNIO
-
-[Decreto do hidrogênio é publicado e marca nova etapa em regulamentação](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/decreto-do-hidrogenio-e-publicado-e-marca-nova-etapa-em-regulamentacao)
-
-22/09/2026
-
--
-Regulamentação estabelece condicionantes para acesso a benefícios e prepara caminho para o procedimento concorrencial do PHBC, que será conduzido pelo Ministério da Fazenda
-
-Tags:
-
-[PHBC](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=PHBC)
-
-[REGULAMENTAÇÃO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=REGULAMENTA%C3%87%C3%83O)
-
-[MARCO LEGAL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=MARCO%20LEGAL)
-
-[REHIDRO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=REHIDRO)
-
-REFORMA TRIBUTÁRIA
-
-[Ação concentra orientações sobre a Reforma Tributária](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/acao-concentra-orientacoes-sobre-a-reforma-tributaria)
-
-21/09/2026
-
--
-Iniciativa é da Receita Federal, Conselho Federal de Contabilidade, Sebrae e Fenacon
-
-Tags:
-
-[ORIENTAÇÃO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=ORIENTA%C3%87%C3%83O)
-
-[MICRO E PEQUENAS EMPRESAS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=MICRO%20E%20PEQUENAS%20EMPRESAS)
-
-[IBS/CBS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=IBS/CBS)
-
-[REFORMA DE FATO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=REFORMA%20DE%20FATO)
-
-SERVIÇOS
-
-[Receita Federal abre consulta ao lote residual de restituição do IRPF 2026 nesta quarta-feira (23/9)](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/receita-federal-abre-consulta-ao-lote-residual-de-restituicao-do-irpf-2026-nesta-quarta-feira-23-9)
-
-21/09/2026
-
--
-Lote contempla restituições de declarações 2026 transmitidas fora do prazo e com pendências solucionadas pelos contribuintes, além de restituições residuais de exercícios anteriores
-
-Tags:
-
-[SERVIÇOS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=SERVI%C3%87OS)
-
-[RESTITUIÇÃO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=RESTITUI%C3%87%C3%83O)
-
-[IMPOSTO DE RENDA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=IMPOSTO%20DE%20RENDA)
-
-[RECEITA FEDERAL](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=RECEITA%20FEDERAL)
-
-REFORMA TRIBUTÁRIA
-
-[Receita Federal e Comitê Gestor do Imposto sobre Bens e Serviços divulgam Orientação Conjunta](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/receita-federal-e-comite-gestor-do-imposto-sobre-bens-e-servicos-divulgam-orientacao-conjunta)
-
-18/09/2026
-
--
-Manual explica procedimento para realização da opção pelo regime específico do IBS e da CBS destinado às cooperativas.
-
-Tags:
-
-[COOPERATIVAS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=COOPERATIVAS)
-
-[CGIBS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=CGIBS)
-
-[ORIENTAÇÃO CONJUNTA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=ORIENTA%C3%87%C3%83O%20CONJUNTA)
-
-DÍVIDA PÚBLICA
-
-[Tesouro publica cronograma de emissões da Dívida Pública para o 4º trimestre de 2026](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/tesouro-publica-cronograma-de-emissoes-da-divida-publica-para-o-4o-trimestre-de-2026)
-
-18/09/2026
-
--
-Troca da NTN-B 15/08/2040 pela NTN-B 15/05/2045; e rolagem da LFT de 6 anos, para vencimento 01/12/2032 são as principais mudanças
-
-Tags:
-
-[DPMFI](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=DPMFI)
-
-[CRONOGRAMA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=CRONOGRAMA)
-
-[COMUNICADO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=COMUNICADO)
-
-TRANSFORMAÇÃO ECOLÓGICA
-
-[Governo sanciona marco legal dos minerais críticos e estratégicos alinhado à Transformação Ecológica](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/governo-sanciona-marco-legal-dos-minerais-criticos-e-estrategicos-alinhado-a-transformacao-ecologica)
-
-18/09/2026
-
--
-Nova política cria governança e instrumentos para estimular pesquisa, beneficiamento e produção de maior valor agregado no Brasil
-
-Tags:
-
-[MINERAIS CRÍTICOS E ESTRATÉGICOS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=MINERAIS%20CR%C3%8DTICOS%20E%20ESTRAT%C3%89GICOS)
-
-[CONSELHO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=CONSELHO)
-
-[TRANSIÇÃO ENERGÉTICA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=TRANSI%C3%87%C3%83O%20ENERG%C3%89TICA)
-
-SERVIÇO PÚBLICO
-
-[PGFN divulga nova forma de acesso ao Regularize para representantes de empresas](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/pgfn-divulga-nova-forma-de-acesso-ao-regularize-para-representantes-de-empresas)
-
-18/09/2026
-
--
-Responsáveis por PJ já podem acessar serviços diretamente do portal por meio da conta gov.br
-
-MERCADO DE CARBONO
-
-[Na China, Brasil avança em parceria estratégica em mercados de carbono e realiza agendas bilaterais com parceiros](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/na-china-brasil-avanca-em-parceria-estrategica-em-mercados-de-carbono-e-realiza-agendas-bilaterais-com-parceiros)
-
-16/09/2026
-
--
-Na abertura de conferência chinesa de mercados de carbono para lideranças globais em Wuhan, Ministério da Fazenda defende alinhamento entre regulação, financiamento e combate às desigualdades
-
-Tags:
-
-[COOPERAÇÃO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=COOPERA%C3%87%C3%83O%20)
-
-[DESCARBONIZAÇÃO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=DESCARBONIZA%C3%87%C3%83O)
-
-[SBCE](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=SBCE)
-
-[REUNIÕES BILATERAIS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=REUNI%C3%95ES%20BILATERAIS)
-
-LEGISLAÇÃO
-
-[Regime Especial de Tributação para Serviços de Datacenter é sancionado](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/setembro/regime-especial-de-tributacao-para-servicos-de-datacenter-e-sancionado)
-
-16/09/2026
-
--
-Novo regime prevê incentivos fiscais para a instalação de data centers no Brasil e faz parte de um conjunto de ações da economia de baixo carbono
-
-Tags:
-
-[REDATA](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=REDATA)
-
-[DATA CENTERS](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=DATA%20CENTERS)
-
-[BAIXO CARBONO](https://www.gov.br/fazenda/pt-br/@@search?SearchableText=BAIXO%20CARBONO)
-
 «
 Anterior
 
@@ -571,6 +569,8 @@ Anterior
 [4](https://www.gov.br/fazenda/pt-br/assuntos/noticias?b_start:int=90)
 
 [5](https://www.gov.br/fazenda/pt-br/assuntos/noticias?b_start:int=120)
+
+[6](https://www.gov.br/fazenda/pt-br/assuntos/noticias?b_start:int=150)
 
 [Próximo »](https://www.gov.br/fazenda/pt-br/assuntos/noticias?b_start:int=30)
 

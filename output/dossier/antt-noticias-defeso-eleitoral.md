@@ -49,6 +49,204 @@ Viagens e Turismo
 Limpar
 Aplicar
 
+SEGUROS OBRIGATÓRIOS
+
+[ANTT aprova acordo com a CNseg para modernizar verificação de seguros no transporte de cargas](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-aprova-acordo-com-a-cnseg-para-modernizar-verificacao-de-seguros-no-transporte-de-cargas)
+
+13/10/2026
+
+-
+Cooperação permitirá o intercâmbio eletrônico de informações, simplificando procedimentos e facilitando a comprovação dos seguros obrigatórios pelos transportadores.
+
+CONCESSÕES RODOVIÁRIAS
+
+[ANTT reconhece R$ 104,9 milhões em reequilíbrio parcial para a concessão da Ecovias Araguaia](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-reconhece-r-104-9-milhoes-em-reequilibrio-parcial-para-a-concessao-da-ecovias-araguaia)
+
+13/10/2026
+
+-
+Medida mitigadora cobre o aumento extraordinário dos custos de insumos de obras; valor definitivo será apurado em processo em andamento
+
+SUSTENTABILIDADE E RESPONSABILIDADE SOCIAL
+
+[ANTT debate soluções para desenvolvimento sustentável de territórios impactados pelos transportes](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-debate-solucoes-para-desenvolvimento-sustentavel-de-territorios-impactados-pelos-transportes)
+
+13/10/2026
+
+-
+Evento em 20 de outubro abordará diversidade, economia circular, inclusão social e responsabilidade socioambiental na infraestrutura de transportes terrestres.
+
+SEGURANÇA VIÁRIA
+
+[Operação Romaria Segura bate recorde de 53,6 mil peregrinos e termina sem mortes pelo segundo ano seguido na Via Dutra](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/operacao-romaria-segura-bate-recorde-de-53-6-mil-peregrinos-e-termina-sem-mortes-pelo-segundo-ano-seguido-na-via-dutra)
+
+13/10/2026
+
+-
+Com crescimento de 34,2% no número de romeiros, a operação acompanhada pela ANTT registra o maior movimento dos últimos cinco anos. Atuação conjunta com a concessionária Motiva RioSP reforçou a prevenção e a assistência aos fiéis rumo a Aparecida
+
+PARTICIPAÇÃO SOCIAL
+
+[ANTT realiza Reunião Participativa n° 06/2026 sobre normas de outorgas ferroviárias](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-realiza-reuniao-participativa-ndeg-06-2026-sobre-normas-de-outorgas-ferroviarias)
+
+13/10/2026
+
+-
+Reunião debate regulamento sobre bens, projetos e obras ferroviárias no âmbito das Condições Gerais do Transporte Ferroviário (CGTF)
+
+PARTICIPAÇÃO SOCIAL
+
+[ANTT abre reunião participativa sobre metodologia de recomposição de impactos da Reforma Tributária em contratos de rodovias](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-abre-reuniao-participativa-sobre-metodologia-de-recomposicao-de-impactos-da-reforma-tributaria-em-contratos-de-rodovias)
+
+13/10/2026
+
+-
+Sessão pública híbrida será realizada em 22 de outubro, no auditório da Agência, em Brasília; contribuições podem ser enviadas até 23 de outubro
+
+SEGURANÇA VIÁRIA
+
+[ANTT e a concessionária RioSP (Grupo Motiva) atuam em parceria para apoiar romeiros na rodovia Dutra com 153 mil itens de segurança](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-e-a-concessionaria-riosp-grupo-motiva-atuam-em-parceria-para-apoiar-romeiros-na-rodovia-dutra-com-153-mil-itens-de-seguranca-1)
+
+12/10/2026
+
+-
+Coletes, fitas refletivas e lanternas foram entregues aos peregrinos; estrutura inclui 29 pontos de apoio. Romeiros destacam a assistência e a presença das equipes durante a caminhada até Aparecida
+
+SEGURANÇA VIÁRIA
+
+[ANTT acompanha de perto Operação Romaria Segura e reforça segurança dos peregrinos na Via Dutra](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-acompanha-de-perto-operacao-romaria-segura-e-reforca-seguranca-dos-peregrinos-na-via-dutra)
+
+10/10/2026
+
+-
+Com mais de 1.000 profissionais mobilizados e 29 pontos de apoio, ação reúne Agência, concessionária Motiva RioSP e instituições parceiras para proteger milhares de fiéis que seguem rumo ao Santuário Nacional de Aparecida
+
+INSTITUCIONAL
+
+[ANTT participa do 8º Congresso Itinerante do Transporte Rodoviário Internacional em Foz do Iguaçu](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-participa-do-8o-congresso-itinerante-do-transporte-rodoviario-internacional-em-foz-do-iguacu)
+
+09/10/2026
+
+-
+Evento promovido pela ABTI reuniu representantes do setor, autoridades e especialistas para discutir segurança, inovação, inteligência artificial e desafios do transporte internacional de cargas
+
+INFRAESTRUTURA RODOVIÁRIA
+
+[ANTT destaca liberação antecipada de terceira faixa na BR-277 antes do feriado de Nossa Senhora Aparecida](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-destaca-liberacao-antecipada-de-terceira-faixa-na-br-277-antes-do-feriado-de-nossa-senhora-aparecida-1)
+
+09/10/2026
+
+-
+Trecho de quatro quilômetros foi liberado pela EPR Litoral Pioneiro, em São José dos Pinhais (PR); concessionária prevê circulação de 137 mil veículos na rodovia durante o feriado
+
+SERVIÇO DE ATENDIMENTO AO CONSUMIDOR
+
+[ANTT atualiza regras de atendimento ao usuário no transporte de passageiros e nas rodovias concedidas](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-atualiza-regras-de-atendimento-ao-usuario-no-transporte-de-passageiros-e-nas-rodovias-concedidas)
+
+09/10/2026
+
+-
+Nova resolução visa à modernização do registro de manifestações e traz mais segurança jurídica para os usuários e mercado
+
+SISTEMA RODOVIÁRIO
+
+[ANTT analisa proposta da Elovias para reduzir impacto ambiental e tempo de viagem na Serra de Petrópolis](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-analisa-proposta-da-elovias-para-reduzir-impacto-ambiental-e-tempo-de-viagem-na-serra-de-petropolis)
+
+09/10/2026
+
+-
+Alternativa a ser estudada prevê usar túnel de serviço como pista de descida na BR-040/RJ; finalização do estudo e análise da Agência deve ser concluída em abril de 2027
+
+INSTITUCIONAL
+
+[ANTT destaca previsibilidade e participação social para fortalecer segurança regulatória](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-destaca-previsibilidade-e-participacao-social-para-fortalecer-seguranca-regulatoria)
+
+09/10/2026
+
+-
+Diretor Marcelo Fonseca participou de painel sobre estabilidade regulatória e previsibilidade para investimentos no setor de infraestrutura durante Fórum do Brasil Export
+
+PARTICIPAÇÃO SOCIAL
+
+[ANTT realiza audiência pública sobre Sandbox Regulatório para interoperabilidade do Sistema Livre de Passagem](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-realiza-audiencia-publica-sobre-sandbox-regulatorio-para-interoperabilidade-do-sistema-livre-de-passagem)
+
+08/10/2026
+
+-
+Audiência Pública nº 14/2026 apresentou proposta de edital para desenvolvimento de solução tecnológica voltada à interoperabilidade do sistema
+
+DIA DAS CRIANÇAS
+
+[ANTT Kids: portal transforma transporte terrestre em brincadeira e aprendizado para crianças](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-kids-portal-transforma-transporte-terrestre-em-brincadeira-e-aprendizado-para-criancas)
+
+08/10/2026
+
+-
+Com jogos, atividades de colorir e papertoys, espaço apresenta de forma interativa o trabalho da Agência e incentiva o conhecimento sobre segurança nos transportes terrestres
+
+INTEGRAÇÃO REGIONAL
+
+[ANTT representa Brasil em reunião sobre modernização do transporte terrestre na América do Sul](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-representa-brasil-em-reuniao-sobre-modernizacao-do-transporte-terrestre-na-america-do-sul)
+
+07/10/2026
+
+-
+Encontro reuniu sete países signatários do Acordo sobre Transporte Internacional Terrestre (ATIT) e resultou em seis resoluções para atualizar as regras do transporte rodoviário e ferroviário internacional
+
+INSTITUCIONAL
+
+[ANTT participa de painel sobre governança e responsabilidade social no primeiro dia do Fórum Brasil Export 2026](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-participa-de-painel-sobre-governanca-e-responsabilidade-social-no-primeiro-dia-do-forum-brasil-export-2026)
+
+06/10/2026
+
+-
+Diretor Felipe Queiroz moderou debate sobre os impactos da governança integrada e das ações de responsabilidade social no setor de infraestrutura
+
+DESENVOLVIMENTO TECNOLÓGICO
+
+[ANTT realiza XVI Workshop RDT e destaca avanço da pesquisa e da inovação nas concessões rodoviárias](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-realiza-xvi-workshop-rdt-e-destaca-avanco-da-pesquisa-e-da-inovacao-nas-concessoes-rodoviarias)
+
+06/10/2026
+
+-
+Evento reuniu Agência, concessionárias e instituições de ensino e pesquisa para apresentar projetos desenvolvidos com recursos do RDT
+
+PEDÁGIO ELETRÔNICO
+
+[Free-Flow: o que fazer depois de passar pelo pórtico?](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/free-flow-o-que-fazer-depois-de-passar-pelo-portico)
+
+06/10/2026
+
+-
+Sem cancela, cabine ou parada para pagamento, o pedágio eletrônico muda a experiência na rodovia. Entenda como consultar a passagem, acompanhar a cobrança e encontrar o canal correto para pagar
+
+RECONHECIMENTO INTERNACIONAL
+
+[ANTT conquista duas menções honrosas no P3 Awards 2026](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-conquista-duas-mencoes-honrosas-no-p3-awards-2026)
+
+05/10/2026
+
+-
+Agência foi a única instituição brasileira entre os finalistas da premiação internacional
+
+TRANSPORTE SEMIURBANO
+
+[ANTT reforça publicação de chamamento público por empresa para operar ligação entre Rio Negro (PR) e Mafra (SC)](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-reforca-publicacao-de-chamamento-publico-por-empresa-para-operar-ligacao-entre-rio-negro-pr-e-mafra-sc)
+
+05/10/2026
+
+-
+Empresas interessadas podem apresentar documentação até 15 de outubro; sessão pública está marcada para o dia 19, em Mafra (SC)
+
+CONCESSÕES RODOVIÁRIAS
+
+[ANTT acompanha implantação de novas unidades da PRF nas BRs 163 e 277, no Paraná](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-acompanha-implantacao-de-novas-unidades-da-prf-nas-brs-163-e-277-no-parana)
+
+05/10/2026
+
+-
+Estruturas em Lindoeste e Foz do Iguaçu integram obrigações da concessão da EPR Iguaçu e vão ampliar o suporte às ações de fiscalização e atendimento aos usuários
+
 FERROVIAS
 
 [Fiscalização ferroviária reforça ações de segurança durante o Setembro Amarelo](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/fiscalizacao-ferroviaria-reforca-acoes-de-seguranca-durante-o-setembro-amarelo)
@@ -121,204 +319,6 @@ TRANSPORTE DE CARGAS
 -
 Revisão foi acionada pela variação do diesel S10, que passa a ter como referência R$ 7,33 por litro. Novos coeficientes entram em vigor em 30 de setembro.
 
-CONCESSÕES RODOVIÁRIAS
-
-[Assinatura do contrato da Rota dos Sertões marca novo ciclo de investimentos no Nordeste](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/assinatura-do-contrato-da-rota-dos-sertoes-marca-novo-ciclo-de-investimentos-no-nordeste)
-
-30/09/2026
-
--
-Concessão entre Bahia e Pernambuco prevê R$ 8,5 bilhões em investimentos e reforça compromisso com infraestrutura, segurança viária e desenvolvimento regional
-
-PARTICIPAÇÃO SOCIAL
-
-[ANTT prorroga prazo para contribuições sobre alterações em soluções de engenharia](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-prorroga-prazo-para-contribuicoes-sobre-alteracoes-em-solucoes-de-engenharia)
-
-30/09/2026
-
--
-Participações na Reunião Participativa nº 005/2026 poderão ser enviadas até às 18h de 9 de outubro pelo sistema ParticipaANTT
-
-SANDBOX REGULATÓRIO | CORREDOR LOGÍSTICO SUSTENTÁVEL
-
-[ANTT aprova projeto da Motiva RioSP para implantação de Corredor Logístico Sustentável Multimodal](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-aprova-projeto-da-motiva-riosp-para-implantacao-de-corredor-logistico-sustentavel-multimodal)
-
-29/09/2026
-
--
-Projeto na Rodovia Presidente Dutra integra ações de eletromobilidade, conexão com o Porto de Itaguaí, segurança viária, sustentabilidade e desenvolvimento territorial
-
-ROTA DOS SERTÕES | CONCESSÃO RODOVIÁRIA
-
-[ANTT aprova emissão do Ato de Outorga da Rota dos Sertões e autoriza assinatura do contrato](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-aprova-emissao-do-ato-de-outorga-da-rota-dos-sertoes-e-autoriza-assinatura-do-contrato)
-
-28/09/2026
-
--
-Decisão permite avançar para a formalização da concessão de 502 quilômetros das BR-116/BA/PE e BR-324/BA
-
-TRANSPORTE FERROVIÁRIO | REUNIÃO PARTICIPATIVA
-
-[ANTT altera data da Reunião Participativa nº 6/2026 sobre outorgas ferroviárias](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-altera-data-da-reuniao-participativa-no-6-2026-sobre-outorgas-ferroviarias)
-
-28/09/2026
-
--
-Sessão será realizada em 9 de outubro, no Auditório da Agência, em Brasília, com participação presencial e virtual; prazo para envio de contribuições foi prorrogado até 28 de outubro
-
-WORKSHOP RDT
-
-[ANTT realiza XVI Workshop RDT em 6 de outubro para divulgar pesquisas desenvolvidas com recursos do RDT](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-realiza-xvi-workshop-rdt-em-6-de-outubro-para-divulgar-pesquisas-desenvolvidas-com-recursos-do-rdt)
-
-28/09/2026
-
--
-Programação reúne quatro palestras, mesa de debate sobre segurança viária e visitação aos estandes
-
-CONCESSÕES
-
-[BR-163/MT, rodovia concedida pela ANTT, conquista 1º lugar no Prêmio IRI 2026](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/br-163-mt-rodovia-concedida-pela-antt-conquista-1o-lugar-no-premio-iri-2026)
-
-25/09/2026
-
--
-Trecho sob concessão da Nova Rota do Oeste foi reconhecido na categoria Implantação e Duplicação pela regularidade do pavimento
-
-SEMANA NACIONAL DE TRÂNSITO
-
-[Movimento Nacional de Segurança Ferroviária reforça cuidados em passagens em nível](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/movimento-nacional-de-seguranca-ferroviaria-reforca-cuidados-em-passagens-em-nivel)
-
-25/09/2026
-
--
-Campanha reúne ANTT, ANTF e empresas ferroviárias durante a Semana Nacional de Trânsito para conscientizar motoristas e pedestres sobre os riscos próximos às ferrovias.
-
-SEMANA NACIONAL DO TRÂNSITO
-
-[Da regra à prevenção: como a ANTT organiza sua atuação permanente em segurança viária](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/da-regra-a-prevencao-como-a-antt-organiza-sua-atuacao-permanente-em-seguranca-viaria)
-
-25/09/2026
-
--
-Programa Vias Seguras reúne regulação, fiscalização, dados, tecnologia e educação em uma mesma agenda, que a ANTT mantém ao longo de todo o ano
-
-SEMANA NACIONAL DE TRÂNSITO
-
-[ANTT promove 3ª edição do EDUCAVias durante a Semana Nacional de Trânsito](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-promove-3a-edicao-do-educavias-durante-a-semana-nacional-de-transito)
-
-24/09/2026
-
--
-Evento reuniu representantes do setor de transportes, concessionárias e órgãos públicos para compartilhar experiências e estratégias de educação e comunicação voltadas à segurança viária
-
-TRANSPORTE FERROVIÁRIO
-
-[ANTT apresenta avanços do setor ferroviário brasileiro na InnoTrans 2026, em Berlim](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-apresenta-avancos-do-setor-ferroviario-brasileiro-na-innotrans-2026-em-berlim)
-
-24/09/2026
-
--
-Diretor-Geral Guilherme Theo Sampaio representa a Agência na maior feira mundial do setor ferroviário e destaca ambiente regulatório, expansão da malha e carteira de novos projetos
-
-ROTA DO PEQUI
-
-[ANTT realiza sessão pública sobre a Rota do Pequi em Brasília](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-realiza-sessao-publica-sobre-a-rota-do-pequi-em-brasilia)
-
-24/09/2026
-
--
-Sessão híbrida encerrou a série de debates presenciais da Audiência Pública nº 15/2026, que discute a readaptação e otimização da concessão entre Brasília e Hidrolândia
-
-PASSAGEIROS
-
-[ANTT detalha modernização do transporte internacional de passageiros em workshop](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-detalha-modernizacao-do-transporte-internacional-de-passageiros-em-workshop)
-
-23/09/2026
-
--
-Encontro apresentou as mudanças trazidas pela Resolução nº 6.087/2026, com foco em flexibilização, digitalização, autonomia e acompanhamento da qualidade dos serviços
-
-INFRAESTRUTURA RODOVIÁRIA
-
-[ANTT acompanha apresentação de projeto de duplicação da BR-277 apresentado pela EPR Iguaçu em Matelândia](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-acompanha-apresentacao-de-projeto-de-duplicacao-da-br-277-apresentado-pela-epr-iguacu-em-matelandia)
-
-23/09/2026
-
--
-Concessionária apresentou à administração municipal representação em 3D de trecho de aproximadamente cinco quilômetros da rodovia, com entrega prevista para maio de 2028
-
-TRANSPORTE CLANDESTINO
-
-[O que acontece com o passageiro quando um veículo clandestino é apreendido?](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/o-que-acontece-com-o-passageiro-quando-um-veiculo-clandestino-e-apreendido)
-
-23/09/2026
-
--
-A regulamentação prevê a transferência dos passageiros para transporte autorizado, sem custo para quem viaja
-
-SEMANA NACIONAL DO TRÂNSITO
-
-[Dos números à prevenção: como os dados ajudam a orientar a segurança nas rodovias](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/dos-numeros-a-prevencao-como-os-dados-ajudam-a-orientar-a-seguranca-nas-rodovias)
-
-23/09/2026
-
--
-Indicadores de sinistros, mortes e feridos ajudam a identificar tendências, orientar prioridades e aperfeiçoar a atuação regulatória nas rodovias federais concedidas
-
-SEGURANÇA VIÁRIA
-
-[ANTT acompanha testes de sinalização cromática na Serra do Mar, na BR-277](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-acompanha-testes-de-sinalizacao-cromatica-na-serra-do-mar-na-br-277)
-
-22/09/2026
-
--
-Tecnologia utiliza cores para alertar motoristas, em tempo real, sobre retenções, bloqueios, acidentes e condições de baixa visibilidade
-
-INSTITUCIONAL
-
-[ANTT reforça diálogo com a imprensa em jornada sobre concessões e infraestrutura](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-reforca-dialogo-com-a-imprensa-em-jornada-sobre-concessoes-e-infraestrutura)
-
-22/09/2026
-
--
-Em iniciativa do Valor Econômico, com patrocínio da Motiva, diretor Marcelo Fonseca destacou a importância da imprensa para ampliar a transparência e levar informação qualificada à sociedade
-
-SEGURANÇA VIÁRIA
-
-[Semana Nacional de Trânsito reforça alerta sobre os perigos do uso do celular ao volante](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/semana-nacional-de-transito-reforca-alerta-sobre-os-perigos-do-uso-do-celular-ao-volante)
-
-22/09/2026
-
--
-ANTT destaca ações educativas promovidas pela Motiva em sete estados
-
-EDUCAÇÃO VIÁRIA
-
-[ANTT promove 3º EDUCAVias ANTT durante a Semana Nacional de Trânsito de 2026](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-promove-3o-educavias-antt-durante-a-semana-nacional-de-transito-de-2026)
-
-21/09/2026
-
--
-Encontro integra o Programa Vias Seguras e apresenta ações de educação e comunicação voltadas a quem circula pelas rodovias federais concedidas
-
-SEMANA NACIONAL DO TRÂNSITO
-
-[ANTT acompanha ações de segurança viária da EPR durante a Semana Nacional do Trânsito](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/antt-acompanha-acoes-de-seguranca-viaria-da-epr-durante-a-semana-nacional-do-transito)
-
-21/09/2026
-
--
-Iniciativas reforçam orientações sobre velocidade, uso do cinto e atitudes responsáveis nas rodovias concedidas
-
-SEMANA NACIONAL DO TRÂNSITO
-
-[Da obrigação à fiscalização: como a ANTT acompanha a segurança nas rodovias](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/da-obrigacao-a-fiscalizacao-como-a-antt-acompanha-a-seguranca-nas-rodovias)
-
-21/09/2026
-
--
-Fiscalização, inspeções, padronização de procedimentos e tecnologia verificam se as obrigações dos contratos de concessão chegam à rodovia
-
 «
 Anterior
 
@@ -336,7 +336,9 @@ Anterior
 
 [7](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral?b_start:int=180)
 
-[8](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral?b_start:int=210)
+...
+
+[9](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral?b_start:int=240)
 
 [Próximo »](https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral?b_start:int=30)
 

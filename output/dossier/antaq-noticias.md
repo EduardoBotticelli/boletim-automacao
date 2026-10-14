@@ -49,6 +49,95 @@ Viagens e Turismo
 Limpar
 Aplicar
 
+[Sistema de Desempenho Portuário está de volta em nova plataforma](https://www.gov.br/antaq/pt-br/noticias/2026/sistema-de-desempenho-portuario-esta-de-volta-em-nova-plataforma)
+
+08/10/2026
+
+-
+SDP retorna com interface modernizada e passa a incorporar o gerenciamento de usuários das instalações portuárias
+
+Tags:
+
+[Infraestrutura](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Infraestrutura%20)
+
+[Setor Aquaviário](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Setor%20Aquavi%C3%A1rio%20)
+
+[Desempenho Portuário](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Desempenho%20Portu%C3%A1rio)
+
+[Movimentação](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Movimenta%C3%A7%C3%A3o)
+
+[SDP](https://www.gov.br/antaq/pt-br/@@search?SearchableText=SDP%20)
+
+[SAIP Sul-Mirim: Rio Grande (RS) recebe segunda sessão de audiência pública sobre concessão](https://www.gov.br/antaq/pt-br/noticias/2026/saip-sul-mirim-rio-grande-rs-recebe-segunda-sessao-de-audiencia-publica-sobre-concessao)
+
+08/10/2026
+
+-
+Debate presencial contou com contribuições da comunidade local e de representantes do setor para o aprimoramento da proposta
+
+Tags:
+
+[Transporte](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Transporte)
+
+[Infraestrutura](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Infraestrutura%20)
+
+[Audiência Pública](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Audi%C3%AAncia%20P%C3%BAblica)
+
+[SAIP Sul-Mirim](https://www.gov.br/antaq/pt-br/@@search?SearchableText=SAIP%20Sul-Mirim%20)
+
+[Transporte aquaviário registra crescimento de 9,81% e alcança 374,6 bilhões de TKU em 2025](https://www.gov.br/antaq/pt-br/noticias/2026/transporte-aquaviario-registra-crescimento-de-9-81-e-alcanca-374-6-bilhoes-de-tku-em-2025)
+
+07/10/2026
+
+-
+Estudo aprovado pela ANTAQ aponta maior produção de transporte aquaviário dos últimos cinco anos e destaca avanço da navegação interior e dos principais corredores hidroviários do país
+
+Tags:
+
+[Infraestrutura](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Infraestrutura%20)
+
+[Setor Aquaviário](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Setor%20Aquavi%C3%A1rio%20)
+
+[Estudo](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Estudo%20)
+
+[TKU](https://www.gov.br/antaq/pt-br/@@search?SearchableText=TKU%20)
+
+[Prêmio ANTAQ 2026 abre inscrições em edição especial dos 25 anos da Agência](https://www.gov.br/antaq/pt-br/noticias/2026/premio-antaq-2026-abre-inscricoes-em-edicao-especial-dos-25-anos-da-agencia)
+
+06/10/2026
+
+-
+Edital traz novidades na categoria Iniciativas Inovadoras. Inscrições seguem até 6 de novembro
+
+Tags:
+
+[Infraestrutura](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Infraestrutura)
+
+[Transportes Aquaviário](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Transportes%20Aquavi%C3%A1rio%20)
+
+[Prêmio ANTAQ](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Pr%C3%AAmio%20ANTAQ)
+
+[Inteligência Artificial](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Intelig%C3%AAncia%20Artificial%20)
+
+[Sustentabilidade](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Sustentabilidade)
+
+[ANTAQ apresenta novo Sistema de Desempenho Portuário durante 33º Encontro do SDP](https://www.gov.br/antaq/pt-br/noticias/2026/antaq-apresenta-novo-sistema-de-desempenho-portuario-durante-33o-encontro-do-sdp)
+
+05/10/2026
+
+-
+Evento realizado em Santa Catarina contou com cerca de 130 participantes de 60 instalações portuárias
+
+Tags:
+
+[Infraestrutura](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Infraestrutura)
+
+[Transporte Aquaviário](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Transporte%20Aquavi%C3%A1rio)
+
+[SDP](https://www.gov.br/antaq/pt-br/@@search?SearchableText=SDP)
+
+[Portos](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Portos%20)
+
 [Agendas em Sincronia integra áreas da ANTAQ na discussão sobre revisão da Agenda Regulatória](https://www.gov.br/antaq/pt-br/noticias/2026/agendas-em-sincronia-integra-areas-da-antaq-na-discussao-sobre-revisao-da-agenda-regulatoria)
 
 02/10/2026
@@ -478,103 +567,14 @@ Tags:
 
 [Travessia](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Travessia)
 
-[Consulta Pública sobre concessão do SAIP Sul-Mirim é prorrogada até 14 de outubro](https://www.gov.br/antaq/pt-br/noticias/2026/transportes-infraestrutura-saip-sul-mirim-concessao-consulta-publica)
-
-19/08/2026
-
--
-Diretoria Colegiada da ANTAQ também aprovou sessão adicional da Audiência Pública, em formato presencial, em Porto Alegre - com data a ser definida oportunamente
-
-Tags:
-
-[Transportes](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Transportes)
-
-[Infraestrutura](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Infraestrutura)
-
-[SAIP Sul-Mirim](https://www.gov.br/antaq/pt-br/@@search?SearchableText=SAIP%20Sul-Mirim)
-
-[Concessão](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Concess%C3%A3o)
-
-[Consulta Pública](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Consulta%20P%C3%BAblica)
-
-[Alexandre Florambel assume interinamente o cargo de diretor da ANTAQ](https://www.gov.br/antaq/pt-br/noticias/2026/alexandre-florambel-assume-interinamente-o-cargo-de-diretor-da-antaq)
-
-18/08/2026
-
--
-Servidor de carreira da Agência é o segundo nome da lista de substituição da Diretoria
-
-Tags:
-
-[Transportes](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Transportes)
-
-[Infraestrutura](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Infraestrutura)
-
-[Diretor Substituto](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Diretor%20Substituto)
-
-[ANTAQ inicia ciclo de reuniões participativas para discutir concessão da Hidrovia Verde](https://www.gov.br/antaq/pt-br/noticias/2026/antaq-inicia-ciclo-de-reunioes-participativas-para-discutir-concessao-da-hidrovia-verde)
-
-18/08/2026
-
--
-Primeiro encontro, realizado em Brasília, uniu representantes do setor e órgãos públicos para apresentação do diagnóstico preliminar e coleta de contribuições
-
-Tags:
-
-[Transportes](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Transportes)
-
-[Infraestrutura](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Infraestrutura)
-
-[Reunião Participativa](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Reuni%C3%A3o%20Participativa)
-
-[Hidrovias](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Hidrovias)
-
-[ANTAQ aprova Manual de Sandbox Regulatório](https://www.gov.br/antaq/pt-br/noticias/2026/antaq-aprova-manual-de-sandbox-regulatorio)
-
-14/08/2026
-
--
-Diretrizes estabelecem procedimentos para experimentação de soluções inovadoras no setor aquaviário
-
-Tags:
-
-[Transportes](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Transportes)
-
-[Infraestrutura](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Infraestrutura)
-
-[Sandbox Regulatório](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Sandbox%20Regulat%C3%B3rio)
-
-[ANTAQ reforça ações preventivas diante dos impactos da estiagem na Região Amazônica](https://www.gov.br/antaq/pt-br/noticias/2026/antaq-reforca-acoes-preventivas-diante-dos-impactos-da-estiagem-na-regiao-amazonica)
-
-13/08/2026
-
--
-Medidas envolvem planejamento, fiscalização, alternativas operacionais e acompanhamento de eventual cobrança da Taxa de Seca
-
-Tags:
-
-[Transportes](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Transportes)
-
-[Infraestrutura](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Infraestrutura)
-
-[Planejamento Estratégico](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Planejamento%20Estrat%C3%A9gico)
-
-[Estiagem](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Estiagem)
-
-[Região Amazônica](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Regi%C3%A3o%20Amaz%C3%B4nica)
-
-[Regulação](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Regula%C3%A7%C3%A3o)
-
-[Outorga](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Outorga)
-
-[Fiscalização](https://www.gov.br/antaq/pt-br/@@search?SearchableText=Fiscaliza%C3%A7%C3%A3o)
-
 «
 Anterior
 
 1
 
 [2](https://www.gov.br/antaq/pt-br/noticias?b_start:int=30)
+
+[3](https://www.gov.br/antaq/pt-br/noticias?b_start:int=60)
 
 [Próximo »](https://www.gov.br/antaq/pt-br/noticias?b_start:int=30)
 

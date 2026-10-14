@@ -49,6 +49,24 @@ Viagens e Turismo
 Limpar
 Aplicar
 
+AVISO DE PAUTA
+
+[Vice-presidente Geraldo Alckmin e ministro André de Paula anunciam marca de 700 novos mercados abertos para o agro brasileiro](https://www.gov.br/agricultura/pt-br/assuntos/noticias/vice-presidente-geraldo-alckmin-e-ministro-andre-de-paula-anunciam-marca-de-700-novos-mercados-abertos-para-o-agro-brasileiro)
+
+12/10/2026
+
+-
+Coletiva de imprensa será realizada nesta terça-feira (13), às 15h, na sede do Ministério da Agricultura e Pecuária
+
+DESEMPENHO
+
+[Crédito rural para a agricultura empresarial soma R$ 107,1 bilhões nos três primeiros meses da safra 2026/2027](https://www.gov.br/agricultura/pt-br/assuntos/noticias/credito-rural-para-a-agricultura-empresarial-soma-r-107-1-bilhoes-nos-tres-primeiros-meses-da-safra-2026-2027)
+
+09/10/2026
+
+-
+CPR responde por 46,9% do total contratado no período; Custeio convencional soma R$ 36,4 bilhões
+
 NOTA OFICIAL
 
 [Mapa disponibiliza 14,5 milhões de doses de vacinas contra clostridioses em setembro](https://www.gov.br/agricultura/pt-br/assuntos/noticias/mapa-disponibiliza-14-5-milhoes-de-doses-de-vacinas-contra-clostridioses-em-setembro)
@@ -323,29 +341,6 @@ Ação conjunta cumpriu mandados de busca e apreensão em quatro endereços e re
 Tags:
 
 [São Paulo](https://www.gov.br/agricultura/pt-br/@@search?SearchableText=S%C3%A3o%20Paulo)
-
-NOTA CONJUNTA MAPA/MRE
-
-[Abertura de mercados para produtos brasileiros na Costa Rica, na Malásia e na Nigéria](https://www.gov.br/agricultura/pt-br/assuntos/noticias/abertura-de-mercados-para-produtos-brasileiros-na-costa-rica-na-malasia-e-na-nigeria)
-
-26/08/2026
-
-Tags:
-
-[Abertura de mercados](https://www.gov.br/agricultura/pt-br/@@search?SearchableText=Abertura%20de%20mercados)
-
-DEFESA AGROPECUÁRIA
-
-[Fiscalização conjunta apreende mais de 1,2 mil caixas de bebidas sem registro e com indícios de irregularidades no Paraná](https://www.gov.br/agricultura/pt-br/assuntos/noticias/fiscalizacao-conjunta-apreende-mais-de-1-2-mil-caixas-de-bebidas-sem-registro-e-com-indicios-de-irregularidades-no-parana)
-
-26/08/2026
-
--
-Ao todo, foram apreendidos 14.640 litros da bebida
-
-Tags:
-
-[Paraná](https://www.gov.br/agricultura/pt-br/@@search?SearchableText=Paran%C3%A1)
 
 «
 Anterior

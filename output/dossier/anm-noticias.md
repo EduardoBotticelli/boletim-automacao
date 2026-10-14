@@ -1,5 +1,225 @@
 id="content-core">
 
+[Termina amanhã prazo para envio de contribuições à Audiência Pública sobre segurança de pilhas de mineração](https://www.gov.br/anm/pt-br/assuntos/noticias/termina-amanha-prazo-para-envio-de-contribuicoes-a-audiencia-publica-sobre-seguranca-de-pilhas-de-mineracao)
+
+Interessados têm até 14 de outubro para encaminhar contribuições à proposta de regulamentação. Prazo não será prorrogado em razão da urgência da matéria e da necessidade de cumprimento do cronograma regulatório.
+
+tags:
+
+[Noticias_](https://www.gov.br/anm/@@search?SearchableText=Noticias_)
+
+[Mineração](https://www.gov.br/anm/@@search?SearchableText=Mineração)
+
+[Agência Nacional de Mineração](https://www.gov.br/anm/@@search?SearchableText=Agência%20Nacional%20de%20Mineração)
+
+[ANM](https://www.gov.br/anm/@@search?SearchableText=ANM)
+
+[Audiência Pública](https://www.gov.br/anm/@@search?SearchableText=Audiência%20Pública)
+
+[Participação Social](https://www.gov.br/anm/@@search?SearchableText=Participação%20Social)
+
+[PPCS](https://www.gov.br/anm/@@search?SearchableText=PPCS)
+
+publicado
+
+13/10/2026
+
+11h48
+
+Notícia
+
+[Estabilidade regulatória é apontada como fundamental para investimentos em infraestrutura](https://www.gov.br/anm/pt-br/assuntos/noticias/estabilidade-regulatoria-e-apontada-como-fundamental-para-investimentos-em-infraestrutura)
+
+Diretores de agências reguladoras discutem autonomia, segurança jurídica e previsibilidade para investimentos de longo prazo
+
+tags:
+
+[Noticias_](https://www.gov.br/anm/@@search?SearchableText=Noticias_)
+
+[Mineração](https://www.gov.br/anm/@@search?SearchableText=Mineração)
+
+[Agência Nacional de Mineração](https://www.gov.br/anm/@@search?SearchableText=Agência%20Nacional%20de%20Mineração)
+
+[ANM](https://www.gov.br/anm/@@search?SearchableText=ANM)
+
+publicado
+
+09/10/2026
+
+09h06
+
+Notícia
+
+[Entre túneis, cavas e pilhas: servidores da ANM vivenciam a mineração além dos processos](https://www.gov.br/anm/pt-br/entre-tuneis-cavas-e-pilhas-servidores-da-anm-vivenciam-a-mineracao-alem-dos-processos)
+
+Em dois dias, servidores de diferentes áreas da ANM deixaram os escritórios para conhecer, de perto, a dimensão da atividade minerária que está no centro da missão da Agência.
+
+tags:
+
+[Noticias_](https://www.gov.br/anm/@@search?SearchableText=Noticias_)
+
+[Mineração](https://www.gov.br/anm/@@search?SearchableText=Mineração)
+
+[Agência Nacional de Mineração](https://www.gov.br/anm/@@search?SearchableText=Agência%20Nacional%20de%20Mineração)
+
+[ANM](https://www.gov.br/anm/@@search?SearchableText=ANM)
+
+[Pilhas de Mineração](https://www.gov.br/anm/@@search?SearchableText=Pilhas%20de%20Mineração)
+
+[Minas Gerais](https://www.gov.br/anm/@@search?SearchableText=Minas%20Gerais)
+
+publicado
+
+08/10/2026
+
+16h54
+
+Notícia
+
+[Giro Brasil passa a incluir ações de superintendências e órgãos de assistência direta](https://www.gov.br/anm/pt-br/assuntos/noticias/giro-brasil-passa-a-incluir-acoes-de-superintendencias-e-orgaos-de-assistencia-direta)
+
+Podcast estreia novo formato e amplia diálogo entre áreas internas da agência, superintendências regionais e unidades avançadas
+
+tags:
+
+[Noticias_](https://www.gov.br/anm/@@search?SearchableText=Noticias_)
+
+[Mineração](https://www.gov.br/anm/@@search?SearchableText=Mineração)
+
+[Agência Nacional de Mineração](https://www.gov.br/anm/@@search?SearchableText=Agência%20Nacional%20de%20Mineração)
+
+[ANM](https://www.gov.br/anm/@@search?SearchableText=ANM)
+
+[Memória](https://www.gov.br/anm/@@search?SearchableText=Memória)
+
+[Gerência Regional](https://www.gov.br/anm/@@search?SearchableText=Gerência%20Regional)
+
+[Rio Grande do Sul](https://www.gov.br/anm/@@search?SearchableText=Rio%20Grande%20do%20Sul)
+
+[Espírito Santo](https://www.gov.br/anm/@@search?SearchableText=Espírito%20Santo)
+
+[Goiás](https://www.gov.br/anm/@@search?SearchableText=Goiás)
+
+[Mato Grosso do Sul](https://www.gov.br/anm/@@search?SearchableText=Mato%20Grosso%20do%20Sul)
+
+[Piauí](https://www.gov.br/anm/@@search?SearchableText=Piauí)
+
+[Paraíba](https://www.gov.br/anm/@@search?SearchableText=Paraíba)
+
+[Alagoas](https://www.gov.br/anm/@@search?SearchableText=Alagoas)
+
+[Sergipe](https://www.gov.br/anm/@@search?SearchableText=Sergipe)
+
+[Ceará](https://www.gov.br/anm/@@search?SearchableText=Ceará)
+
+[Pará](https://www.gov.br/anm/@@search?SearchableText=Pará)
+
+[Roraima](https://www.gov.br/anm/@@search?SearchableText=Roraima)
+
+[Rondônia](https://www.gov.br/anm/@@search?SearchableText=Rondônia)
+
+[Acre](https://www.gov.br/anm/@@search?SearchableText=Acre)
+
+[Tocantins](https://www.gov.br/anm/@@search?SearchableText=Tocantins)
+
+[Amazonas](https://www.gov.br/anm/@@search?SearchableText=Amazonas)
+
+[Santa Catarina](https://www.gov.br/anm/@@search?SearchableText=Santa%20Catarina)
+
+[Podcast](https://www.gov.br/anm/@@search?SearchableText=Podcast)
+
+[Spotify](https://www.gov.br/anm/@@search?SearchableText=Spotify)
+
+[Economia Mineral](https://www.gov.br/anm/@@search?SearchableText=Economia%20Mineral)
+
+[Arrecadação](https://www.gov.br/anm/@@search?SearchableText=Arrecadação)
+
+publicado
+
+08/10/2026
+
+09h44
+
+Notícia
+
+[Barragem B1A, em Brumadinho, tem nível de emergência reduzido de 2 para 1](https://www.gov.br/anm/pt-br/assuntos/noticias/anm-reduz-nivel-de-emergencia-da-barragem-b1a-em-brumadinho-de-ne2-para-ne1)
+
+A decisão foi tomada após a realização de novas investigações geotécnicas e de estudo de estabilidade elaborado por consultoria independente. O Retorno da população à Zona de Autossalvamento dependerá de avaliação e acompanhamento da Defesa Civil de Brumadinho.
+
+tags:
+
+[Noticias_](https://www.gov.br/anm/@@search?SearchableText=Noticias_)
+
+[Mineração](https://www.gov.br/anm/@@search?SearchableText=Mineração)
+
+[Agência Nacional de Mineração](https://www.gov.br/anm/@@search?SearchableText=Agência%20Nacional%20de%20Mineração)
+
+[ANM](https://www.gov.br/anm/@@search?SearchableText=ANM)
+
+[Barragens de Mineração](https://www.gov.br/anm/@@search?SearchableText=Barragens%20de%20Mineração)
+
+[Minas Gerais](https://www.gov.br/anm/@@search?SearchableText=Minas%20Gerais)
+
+publicado
+
+08/10/2026
+
+09h15
+
+Notícia
+
+[Acordo prevê novos recursos para fiscalização de barragens e pilhas de mineração](https://www.gov.br/anm/pt-br/assuntos/noticias/acordo-preve-novos-recursos-para-fiscalizacao-de-barragens-e-pilhas-de-mineracao)
+
+Recursos serão usados pela ANM na compra de equipamentos e sistemas para modernizar a fiscalização
+
+tags:
+
+[Noticias_](https://www.gov.br/anm/@@search?SearchableText=Noticias_)
+
+[Mineração](https://www.gov.br/anm/@@search?SearchableText=Mineração)
+
+[Agência Nacional de Mineração](https://www.gov.br/anm/@@search?SearchableText=Agência%20Nacional%20de%20Mineração)
+
+[ANM](https://www.gov.br/anm/@@search?SearchableText=ANM)
+
+[Pilhas de Mineração](https://www.gov.br/anm/@@search?SearchableText=Pilhas%20de%20Mineração)
+
+publicado
+
+07/10/2026
+
+15h15
+
+Notícia
+
+[Proposta vai definir regras para cooperação com estados e municípios na mineração](https://www.gov.br/anm/pt-br/assuntos/noticias/tomada-de-subsidios-recebe-contribuicoes-sobre-acordos-com-estados-e-municipios)
+
+Tomada de subsídios recebe contribuições até 4 de novembro; acordos preveem compartilhamento de informações e apoio à fiscalização mineral e da arrecadação dos royalties da mineração
+
+tags:
+
+[Noticias_](https://www.gov.br/anm/@@search?SearchableText=Noticias_)
+
+[Mineração](https://www.gov.br/anm/@@search?SearchableText=Mineração)
+
+[Agência Nacional de Mineração](https://www.gov.br/anm/@@search?SearchableText=Agência%20Nacional%20de%20Mineração)
+
+[ANM](https://www.gov.br/anm/@@search?SearchableText=ANM)
+
+[Tomada de Subsídios](https://www.gov.br/anm/@@search?SearchableText=Tomada%20de%20Subsídios)
+
+[Participação Social](https://www.gov.br/anm/@@search?SearchableText=Participação%20Social)
+
+[PPCS](https://www.gov.br/anm/@@search?SearchableText=PPCS)
+
+publicado
+
+06/10/2026
+
+15h16
+
+Notícia
+
 [Nova versão do SIGMINE Mapa Interativo amplia acesso a dados e análises espaciais da mineração](https://www.gov.br/anm/pt-br/assuntos/noticias/nova-versao-do-sigmine-mapa-interativo-amplia-acesso-a-dados-e-analises-espaciais-da-mineracao)
 
 O sistema passou por atualização e permite visualização, consulta e cruzamento de dados espaciais
@@ -631,186 +851,6 @@ publicado
 10/09/2026
 
 16h52
-
-Notícia
-
-[Horizonte Mineral aborda papel da agência em gerar conhecimento sobre o setor](https://www.gov.br/anm/pt-br/assuntos/noticias/horizonte-mineral-aborda-papel-da-agencia-em-gerar-conhecimento-sobre-o-setor)
-
-Nova edição do jornal traz como destaque o lançamento do Mapa da Mina, um guia que apresenta os principais painéis e sistemas de dados da autarquia
-
-tags:
-
-[Noticias_](https://www.gov.br/anm/@@search?SearchableText=Noticias_)
-
-[Mineração](https://www.gov.br/anm/@@search?SearchableText=Mineração)
-
-[Agência Nacional de Mineração](https://www.gov.br/anm/@@search?SearchableText=Agência%20Nacional%20de%20Mineração)
-
-[ANM](https://www.gov.br/anm/@@search?SearchableText=ANM)
-
-[Jornal Horizonte Mineral](https://www.gov.br/anm/@@search?SearchableText=Jornal%20Horizonte%20Mineral)
-
-[Gestão de Dados](https://www.gov.br/anm/@@search?SearchableText=Gestão%20de%20Dados)
-
-publicado
-
-10/09/2026
-
-15h09
-
-Notícia
-
-[Brasil e Canadá ampliam diálogo institucional na área de mineração](https://www.gov.br/anm/pt-br/assuntos/noticias/brasil-e-canada-ampliam-dialogo-institucional-na-area-de-mineracao)
-
-Reunião entre ANM, NRCan e Embaixada do Canadá debateu inovação, governança e ações de cooperação em temas essenciais para a transição energética
-
-tags:
-
-[Noticias_](https://www.gov.br/anm/@@search?SearchableText=Noticias_)
-
-[Mineração](https://www.gov.br/anm/@@search?SearchableText=Mineração)
-
-[Agência Nacional de Mineração](https://www.gov.br/anm/@@search?SearchableText=Agência%20Nacional%20de%20Mineração)
-
-[ANM](https://www.gov.br/anm/@@search?SearchableText=ANM)
-
-[Minerais Críticos e Estratégicos](https://www.gov.br/anm/@@search?SearchableText=Minerais%20Críticos%20e%20Estratégicos)
-
-publicado
-
-09/09/2026
-
-16h26
-
-Notícia
-
-[Participação de fornecedores locais na cadeia mineral do Pará entra em debate](https://www.gov.br/anm/pt-br/assuntos/noticias/participacao-de-fornecedores-locais-na-cadeia-mineral-do-para-entra-em-debate)
-
-Diretor José Fernando destacou que desenvolvimento regional deve estar associado à conformidade regulatória e à responsabilidade socioambiental
-
-tags:
-
-[Noticias_](https://www.gov.br/anm/@@search?SearchableText=Noticias_)
-
-[Mineração](https://www.gov.br/anm/@@search?SearchableText=Mineração)
-
-[Agência Nacional de Mineração](https://www.gov.br/anm/@@search?SearchableText=Agência%20Nacional%20de%20Mineração)
-
-[ANM](https://www.gov.br/anm/@@search?SearchableText=ANM)
-
-[Fiscalização](https://www.gov.br/anm/@@search?SearchableText=Fiscalização)
-
-[Lavra Ilegal](https://www.gov.br/anm/@@search?SearchableText=Lavra%20Ilegal)
-
-publicado
-
-09/09/2026
-
-15h50
-
-Notícia
-
-[Combate à lavra ilegal ganha força com nova estrutura, tecnologia e cooperação](https://www.gov.br/anm/pt-br/assuntos/noticias/combate-a-lavra-ilegal-ganha-forca-com-nova-estrutura-tecnologia-e-cooperacao-1)
-
-Série de ações institucionais adotadas nos últimos anos reforçam papel da agência em fortalecer a repressão às atividades extrativas não autorizadas
-
-tags:
-
-[Noticias_](https://www.gov.br/anm/@@search?SearchableText=Noticias_)
-
-[Mineração](https://www.gov.br/anm/@@search?SearchableText=Mineração)
-
-[Agência Nacional de Mineração](https://www.gov.br/anm/@@search?SearchableText=Agência%20Nacional%20de%20Mineração)
-
-[ANM](https://www.gov.br/anm/@@search?SearchableText=ANM)
-
-[Lavra Ilegal](https://www.gov.br/anm/@@search?SearchableText=Lavra%20Ilegal)
-
-[Fiscalização](https://www.gov.br/anm/@@search?SearchableText=Fiscalização)
-
-publicado
-
-09/09/2026
-
-15h41
-
-Notícia
-
-[Sistemas ficarão indisponíveis entre 11 e 14 de setembro para manutenção programada](https://www.gov.br/anm/pt-br/assuntos/noticias/sistemas-ficarao-indisponiveis-entre-11-e-14-de-setembro-para-manutencao-programada)
-
-Parada temporária afetará serviços como SEI, Protocolo Digital, Cadastro Mineiro e Dívida Ativa, REPEM e SINARC; ação visa reforçar desempenho e segurança do ambiente tecnológico da Agência
-
-tags:
-
-[Notícias_Sistemas](https://www.gov.br/anm/@@search?SearchableText=Notícias_Sistemas)
-
-[Noticias_](https://www.gov.br/anm/@@search?SearchableText=Noticias_)
-
-[Mineração](https://www.gov.br/anm/@@search?SearchableText=Mineração)
-
-[Agência Nacional de Mineração](https://www.gov.br/anm/@@search?SearchableText=Agência%20Nacional%20de%20Mineração)
-
-[ANM](https://www.gov.br/anm/@@search?SearchableText=ANM)
-
-publicado
-
-09/09/2026
-
-14h10
-
-Notícia
-
-[Ajude a modernizar a forma como se organizam as áreas de interesse mineral](https://www.gov.br/anm/pt-br/assuntos/noticias/ajude-a-modernizar-a-forma-como-se-organizam-as-areas-de-interesse-mineral)
-
-Consulta pública recebe contribuições sobre a adoção da quadrícula como referência para requerimentos e outorga de títulos minerários
-
-tags:
-
-[Noticias_](https://www.gov.br/anm/@@search?SearchableText=Noticias_)
-
-[Mineração](https://www.gov.br/anm/@@search?SearchableText=Mineração)
-
-[Agência Nacional de Mineração](https://www.gov.br/anm/@@search?SearchableText=Agência%20Nacional%20de%20Mineração)
-
-[ANM](https://www.gov.br/anm/@@search?SearchableText=ANM)
-
-[PPCS](https://www.gov.br/anm/@@search?SearchableText=PPCS)
-
-[Participação Social](https://www.gov.br/anm/@@search?SearchableText=Participação%20Social)
-
-[Consulta Pública](https://www.gov.br/anm/@@search?SearchableText=Consulta%20Pública)
-
-publicado
-
-08/09/2026
-
-11h07
-
-Notícia
-
-[Especialistas apontam desafios para desenvolver cadeias de minerais críticos](https://www.gov.br/anm/pt-br/assuntos/noticias/especialistas-apontam-desafios-para-desenvolver-cadeias-de-minerais-criticos)
-
-Gargalos do país incluem desde formação de pessoal até necessidade de regular mercado de capitais para empresas de pesquisa mineral captarem recursos
-
-tags:
-
-[Noticias_](https://www.gov.br/anm/@@search?SearchableText=Noticias_)
-
-[Mineração](https://www.gov.br/anm/@@search?SearchableText=Mineração)
-
-[Agência Nacional de Mineração](https://www.gov.br/anm/@@search?SearchableText=Agência%20Nacional%20de%20Mineração)
-
-[ANM](https://www.gov.br/anm/@@search?SearchableText=ANM)
-
-[Minerais Críticos e Estratégicos](https://www.gov.br/anm/@@search?SearchableText=Minerais%20Críticos%20e%20Estratégicos)
-
-[Terras Raras](https://www.gov.br/anm/@@search?SearchableText=Terras%20Raras)
-
-publicado
-
-03/09/2026
-
-15h50
 
 Notícia
 

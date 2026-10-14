@@ -49,6 +49,96 @@ Viagens e Turismo
 Limpar
 Aplicar
 
+TARIFAS
+
+[Reajuste Tarifário da EDP São Paulo é aprovado pela ANEEL](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/reajuste-tarifario-da-edp-sao-paulo-e-aprovado-pela-aneel)
+
+13/10/2026
+
+-
+Novos valores para as tarifas vigoram a partir 23 de outubro de 2026
+
+TARIFAS
+
+[Aprovadas novas tarifas para consumidores atendidos pela CPFL Piratininga](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aprovadas-novas-tarifas-para-consumidores-atendidos-pela-cpfl-piratininga)
+
+13/10/2026
+
+-
+Os novos índices passam a vigorar a partir de 23 de outubro
+
+TARIFAS
+
+[ANEEL realiza audiência pública para debater revisão tarifária da CEEE-D em Porto Alegre (RS)](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-realiza-audiencia-publica-para-debater-revisao-tarifaria-da-ceee-d-em-porto-alegre-rs)
+
+08/10/2026
+
+-
+Contribuições ao processo serão recebidas até dia 9 de outubro
+
+TARIFAS
+
+[Audiência Pública discutirá revisão das tarifas da CEEE-D em Porto Alegre (RS)](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/audiencia-publica-discutira-revisao-das-tarifas-da-ceee-d-em-porto-alegre-rs)
+
+07/10/2026
+
+-
+A sessão presencial será realizada dia 8/10, em Porto Alegre/RS, no Auditório do Palácio do Ministério Público do Rio Grande do Sul
+
+RESOLUÇÃO
+
+[Custeio de sistemas de armazenamento de energia em baterias entra em consulta](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/custeio-de-sistemas-de-armazenamento-de-energia-em-baterias-entra-em-consulta)
+
+07/10/2026
+
+-
+Proposta de norma não abrange o Encargo de Reserva de Capacidade Geral
+
+REGULAÇÃO
+
+[ANEEL aprova regras para cadastro de agentes e representantes nos Procedimentos de Rede](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-aprova-regras-para-cadastro-de-agentes-e-representantes-nos-procedimentos-de-rede)
+
+07/10/2026
+
+-
+O objetivo é tornar mais claros e padronizados os processos de cadastro e atualização dessas informações, trazendo mais transparência e previsibilidade
+
+Leilão
+
+[Agência aprova edital dos Leilões de Energia Existente A-1, A-2 e A-3](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/agencia-aprova-edital-dos-leiloes-de-energia-existente-a-1-a-2-e-a-3)
+
+06/10/2026
+
+-
+O documento prevê a realização da sessão pública dos leilões em 13 de novembro
+
+GERAÇÃO
+
+[Agência reduz quotas de custeio do Proinfa para o ano de 2026](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/agencia-reduz-quotas-de-custeio-do-proinfa-para-o-ano-de-2026)
+
+06/10/2026
+
+-
+Distribuidoras serão dispensadas do recolhimento das quotas mensais de novembro e dezembro de 2026
+
+REGULAÇÃO
+
+[ANEEL aprova regra para organizar cortes de geração](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-aprova-regra-para-organizar-cortes-de-geracao)
+
+06/10/2026
+
+-
+Nova norma estabelece ordem para o curtailment num cenário de sobreoferta crescente de energia renovável e traz mais transparência e previsibilidade à operação do sistema elétrico brasileiro.
+
+TRANSMISSÃO
+
+[ANEEL abre Consulta Pública para aprimorar regras em função da implantação de Política Nacional de Acesso ao Sistema de Transmissão](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-abre-consulta-publica-para-aprimorar-regras-em-funcao-da-implantacao-de-politica-nacional-de-acesso-ao-sistema-de-transmissao)
+
+06/10/2026
+
+-
+As contribuições serão recebidas de 8 de outubro a 22 de novembro de 2026
+
 DISTRIBUIÇÃO
 
 [ANEEL abre Tomadas de Subsídios sobre limites de DEC e FEC de 14 distribuidoras](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-abre-tomadas-de-subsidios-sobre-limites-de-dec-e-fec-de-14-distribuidoras)
@@ -166,15 +256,6 @@ Tarifas
 -
 O efeito médio atualizado é de elevação de 9,4% para as tarifas em 2026, já considerando os recursos relativos à repactuação de Uso de Bem Público (UBP) que atenuaram os reajustes dos consumidores das regiões Norte e Nordeste
 
-TARIFAS
-
-[Audiência Pública discutirá revisão das tarifas da CEEE-D em Porto Alegre (RS)](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/audiencia-publica-discutira-revisao-das-tarifas-da-ceee-d-em-porto-alegre-rs)
-
-16/09/2026
-
--
-A sessão presencial será realizada dia 8/10, em Porto Alegre/RS, no Auditório do Palácio do Ministério Público do Rio Grande do Sul
-
 GERAÇÃO
 
 [ANEEL abre consulta pública para aprimorar classificação operacional de usinas do SIN](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-abre-consulta-publica-para-aprimorar-classificacao-operacional-de-usinas-do-sin)
@@ -237,87 +318,6 @@ LEILÃO
 
 -
 Evento formaliza contratos decorrentes de Leilão de Reserva de Capacidade na forma de Potência e da segunda etapa do Leilão de Transmissão nº 1/2026
-
-AGENDA REGULATÓRIA
-
-[ANEEL aprova primeira revisão da Agenda Regulatória para o biênio 2026-2027](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-aprova-primeira-revisao-da-agenda-regulatoria-para-o-bienio-2026-2027)
-
-09/09/2026
-
--
-Com a inclusão de cinco novas atividades, remanejamento de nove atividades para 2028 e a exclusão de duas, a Agenda ficou com 54 atividades
-
-GERAÇÃO
-
-[ANEEL propõe novas regras para preparar a rede elétrica para geração solar, baterias e veículos elétricos](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-propoe-novas-regras-para-preparar-a-rede-eletrica-para-geracao-solar-baterias-e-veiculos-eletricos)
-
-08/09/2026
-
--
-Consulta Pública quer ampliar a segurança e a eficiência do sistema elétrico, favorecer a inovação e permitir uma integração mais inteligente dos novos recursos de energia
-
-TRANSMISSÃO
-
-[Leilão marcado para abril de 2027, o primeiro com contratação de baterias na transmissão, entra em consulta pública](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/leilao-marcado-para-abril-de-2027-o-primeiro-com-contratacao-de-baterias-na-transmissao-entra-em-consulta-publica)
-
-08/09/2026
-
--
-ANEEL espera investimento de R$ 12,9 bilhões e criação de 29,5 mil empregos diretos e indiretos
-
-SETOR ELÉTRICO
-
-[Conheça o Portal de Estudos Técnicos da ANEEL](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/conheca-o-portal-de-estudos-tecnicos-da-aneel)
-
-08/09/2026
-
--
-Plataforma reúne estudos de inventário hidrelétrico e de viabilidade aprovados pela Agência
-
-INSTITUCIONAL
-
-[Novas Portarias alteram a estrutura organizacional da ANEEL](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/novas-portarias-alteram-a-estrutura-da-aneel)
-
-03/09/2026
-
--
-Entenda as principais alterações.
-
-TARIFAS
-
-[ANEEL aprova redução nas tarifas da Roraima Energia](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-aprova-reducao-nas-tarifas-da-roraima-energia)
-
-02/09/2026
-
--
-A redução tarifária média foi de 14,67%
-
-Distribuição
-
-[ANEEL propõe novo indicador para incentivar o cumprimento dos prazos de execução de obras relacionadas ao serviço de distribuição](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/aneel-propoe-novo-indicador-para-incentivar-o-cumprimento-dos-prazos-de-execucao-de-obras-relacionadas-ao-servico-de-distribuicao)
-
-01/09/2026
-
--
-Os interessados podem enviar contribuições para o e-mail: cp031_2026@aneel.gov.br entre 3/9 e 19/10/26.
-
-COMERCIALIZAÇÃO
-
-[Consulta Pública propõe aprimoramento das Regras de Comercialização 2027](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/consulta-publica-propoe-aprimoramento-das-regras-de-comercializacao-2027)
-
-01/09/2026
-
--
-ANEEL receberá contribuições entre 3 de setembro e 2 de outubro
-
-Participação Pública
-
-[Audiência Pública debate editais dos primeiros leilões de baterias de grande porte no Brasil](https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/audiencia-publica-debate-editais-dos-primeiros-leiloes-de-baterias-de-grande-porte-no-brasil)
-
-01/09/2026
-
--
-O evento reuniu cerca de 70 pessoas, em Brasília. As contribuições podem ser enviadas por e-mail até o dia 14/9.
 
 «
 Anterior

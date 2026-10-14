@@ -1,5 +1,11 @@
 id="content-core">
 
+[Consulta e Audiência Públicas nº 21/2026](https://www.gov.br/anp/pt-br/acesso-a-informacao/agenda-eventos/consulta-e-audiencia-publicas-no-21-2026)
+
+Objetivo: obter contribuições adicionais sobre a minuta de resolução que dispõe sobre o regime de segurança operacional para as instalações de exploração e produção de petróleo e gás natural e aprova o regulamento técnico do sistema de gestão da segurança operacional (SGSO)..
+Consulta Pública: 07/10/2026 a 05/01/2027
+Audiência Pública: 18/02/2027
+
 [Consulta e Audiência Públicas nº 20/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-e-audiencia-publicas-no-20-2026)
 
 Objetivo: obtenção de subsídios sobre a minuta de Resolução que altera as Resoluções ANP nº 852/2021, 935/2023, 936/2023, 948/2023, 950/2023 e 987/2025, para fins de adequação aos preceitos da Lei Complementar nº 225/2026 (Código de Defesa do Contribuinte), que alterou a Lei nº 9.478/1997 (Lei do Petróleo), relativamente à atualização do capital social mínimo integralizado, à exigência de comprovação da origem e licitude dos recursos financeiros utilizados para a integralização do capital social e à identificação do titular efetivo da pessoa jurídica interessada.

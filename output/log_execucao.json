@@ -1,15 +1,15 @@
 {
-  "data_execucao": "2026-10-05",
-  "executado_em": "2026-10-05T07:51:47.528428-03:00",
+  "data_execucao": "2026-10-14",
+  "executado_em": "2026-10-14T08:18:25.433869-03:00",
   "janela": {
-    "inicio": "2026-10-02T00:00",
-    "fim": "2026-10-05T07:51"
+    "inicio": "2026-10-13T00:00",
+    "fim": "2026-10-14T08:18"
   },
   "creditos_firecrawl": {
     "coleta": 8,
     "dou": 22,
     "total": 30,
-    "saldo_restante": 338,
+    "saldo_restante": 310,
     "creditos_do_plano": 1000,
     "periodo": {
       "inicio": "2026-09-26T22:02:22.279Z",
@@ -29,7 +29,7 @@
     {
       "fonte": "Receita Federal | Normas",
       "metodo": "receita",
-      "motivo": "zero publicações listadas (na execução anterior: 37)"
+      "motivo": "zero publicações listadas e sem histórico da fonte"
     }
   ],
   "filtro_de_orgaos": {},
@@ -41,7 +41,7 @@
         "CVM | Notícias"
       ],
       "executada": true,
-      "resultados": 3,
+      "resultados": 2,
       "erro": ""
     },
     {
@@ -59,7 +59,7 @@
     "lotes": [
       {
         "lote": 1,
-        "modelo": "gemini-3.5-flash",
+        "modelo": "gemini-3.5-flash-lite",
         "fontes": [
           "Planalto | Resenha Diaria",
           "Banco Central | Normas",
@@ -68,46 +68,50 @@
           "Receita Federal | Normas",
           "Ministério da Fazenda | Notícias"
         ],
-        "espera_por_sobrecarga_s": 210
+        "espera_por_sobrecarga_s": 0
       },
       {
         "lote": 2,
         "modelo": "gemini-3.5-flash-lite",
         "fontes": [
           "CVM | Notícias",
+          "B3 | Ofícios e Comunicados",
           "ANP | Notícias",
           "ANP | Consultas e Audiências Públicas",
-          "ONS | Notícias",
-          "ANEEL | Últimas Notícias",
-          "Ministério da Agricultura | Notícias"
+          "MME | Notícias",
+          "ONS | Notícias"
         ],
-        "espera_por_sobrecarga_s": 210
+        "espera_por_sobrecarga_s": 30
       },
       {
         "lote": 3,
-        "modelo": "gemini-3.5-flash",
+        "modelo": "gemini-3.5-flash-lite",
         "fontes": [
+          "ANEEL | Últimas Notícias",
+          "Ministério da Agricultura | Notícias",
           "ANVISA | Notícias",
           "INPI | Notícias",
           "SENACON | Notícias",
-          "EPE | Notícias",
-          "Kollemata | Decretos",
-          "SUSEP | Notícias"
+          "ANM | Notícias"
         ],
-        "espera_por_sobrecarga_s": 210
+        "espera_por_sobrecarga_s": 0
       },
       {
         "lote": 4,
-        "modelo": "gemini-3.5-flash",
+        "modelo": "gemini-3.7-flash",
         "fontes": [
+          "EPE | Notícias",
+          "Kollemata | Decretos",
+          "ANATEL | Notícias",
+          "SUSEP | Notícias",
           "ANTT | Notícias - Defeso Eleitoral"
         ],
-        "espera_por_sobrecarga_s": 30
+        "espera_por_sobrecarga_s": 210
       }
     ],
-    "lotes_fora_do_preferido": 4,
-    "espera_por_sobrecarga_s": 660,
-    "aviso": "4 de 4 lote(s) não usaram gemini-3.7-flash: lote 1 em gemini-3.5-flash; lote 2 em gemini-3.5-flash-lite; lote 3 em gemini-3.5-flash; lote 4 em gemini-3.5-flash"
+    "lotes_fora_do_preferido": 3,
+    "espera_por_sobrecarga_s": 240,
+    "aviso": "3 de 4 lote(s) não usaram gemini-3.7-flash: lote 1 em gemini-3.5-flash-lite; lote 2 em gemini-3.5-flash-lite; lote 3 em gemini-3.5-flash-lite"
   },
   "fontes_processadas": [
     {
@@ -119,7 +123,7 @@
       "requisicoes_diretas": 0,
       "fonte": "Planalto | Resenha Diaria",
       "status": "ok",
-      "tamanho_chars": 5619,
+      "tamanho_chars": 8621,
       "publicacoes_localizadas": 0,
       "busca_complementar_executada": false,
       "chars_busca_complementar": 0,
@@ -129,8 +133,8 @@
     {
       "fonte": "Banco Central | Normas",
       "status": "ok",
-      "tamanho_chars": 1971,
-      "publicacoes_localizadas": 6,
+      "tamanho_chars": 3068,
+      "publicacoes_localizadas": 11,
       "busca_complementar_executada": false,
       "chars_busca_complementar": 0,
       "conteudo_truncado": false,
@@ -140,15 +144,15 @@
       "motivo_queda": "",
       "creditos_firecrawl": 0,
       "requisicoes_diretas": 2,
-      "publicacoes_listadas": 6,
-      "publicacoes_na_janela": 6,
-      "publicacoes_enviadas": 6
+      "publicacoes_listadas": 11,
+      "publicacoes_na_janela": 11,
+      "publicacoes_enviadas": 11
     },
     {
       "fonte": "CCEE | Noticias",
       "status": "ok",
-      "tamanho_chars": 886,
-      "publicacoes_localizadas": 2,
+      "tamanho_chars": 423,
+      "publicacoes_localizadas": 1,
       "busca_complementar_executada": false,
       "chars_busca_complementar": 0,
       "conteudo_truncado": false,
@@ -158,9 +162,9 @@
       "motivo_queda": "",
       "creditos_firecrawl": 0,
       "requisicoes_diretas": 2,
-      "publicacoes_listadas": 2,
-      "publicacoes_na_janela": 2,
-      "publicacoes_enviadas": 2
+      "publicacoes_listadas": 1,
+      "publicacoes_na_janela": 1,
+      "publicacoes_enviadas": 1
     },
     {
       "metodo": "firecrawl",
@@ -171,7 +175,7 @@
       "requisicoes_diretas": 0,
       "fonte": "Destaques do D.O.U.",
       "status": "ok",
-      "tamanho_chars": 14913,
+      "tamanho_chars": 15221,
       "publicacoes_localizadas": 0,
       "busca_complementar_executada": false,
       "chars_busca_complementar": 0,
@@ -182,12 +186,12 @@
       "metodo": "receita",
       "metodo_usado": "firecrawl",
       "queda_firecrawl": true,
-      "motivo_queda": "zero publicações listadas (na execução anterior: 37)",
+      "motivo_queda": "zero publicações listadas e sem histórico da fonte",
       "creditos_firecrawl": 1,
       "requisicoes_diretas": 2,
       "fonte": "Receita Federal | Normas",
       "status": "ok",
-      "tamanho_chars": 15314,
+      "tamanho_chars": 9509,
       "publicacoes_localizadas": 0,
       "busca_complementar_executada": false,
       "chars_busca_complementar": 0,
@@ -197,8 +201,8 @@
     {
       "fonte": "Ministério da Fazenda | Notícias",
       "status": "ok",
-      "tamanho_chars": 1741,
-      "publicacoes_localizadas": 4,
+      "tamanho_chars": 981,
+      "publicacoes_localizadas": 2,
       "busca_complementar_executada": false,
       "chars_busca_complementar": 0,
       "conteudo_truncado": false,
@@ -208,9 +212,9 @@
       "motivo_queda": "",
       "creditos_firecrawl": 0,
       "requisicoes_diretas": 2,
-      "publicacoes_listadas": 30,
-      "publicacoes_na_janela": 4,
-      "publicacoes_enviadas": 4
+      "publicacoes_listadas": 29,
+      "publicacoes_na_janela": 2,
+      "publicacoes_enviadas": 2
     },
     {
       "fonte": "ANPD | Notícias",
@@ -232,10 +236,10 @@
     {
       "fonte": "CVM | Notícias",
       "status": "ok",
-      "tamanho_chars": 2072,
-      "publicacoes_localizadas": 5,
+      "tamanho_chars": 1357,
+      "publicacoes_localizadas": 3,
       "busca_complementar_executada": true,
-      "chars_busca_complementar": 1224,
+      "chars_busca_complementar": 867,
       "conteudo_truncado": false,
       "metodo": "html",
       "metodo_usado": "html",
@@ -244,17 +248,18 @@
       "creditos_firecrawl": 2,
       "requisicoes_diretas": 1,
       "publicacoes_listadas": 30,
-      "publicacoes_na_janela": 2,
-      "publicacoes_enviadas": 2,
+      "publicacoes_na_janela": 1,
+      "publicacoes_enviadas": 1,
       "escopo_busca": "www.gov.br/cvm/pt-br"
     },
     {
       "fonte": "B3 | Ofícios e Comunicados",
       "status": "ok",
-      "sem_publicacao_na_janela": true,
-      "tamanho_chars": 0,
-      "publicacoes_localizadas": 0,
+      "tamanho_chars": 1388,
+      "publicacoes_localizadas": 3,
       "busca_complementar_executada": false,
+      "chars_busca_complementar": 0,
+      "conteudo_truncado": false,
       "metodo": "b3",
       "metodo_usado": "b3",
       "queda_firecrawl": false,
@@ -262,14 +267,14 @@
       "creditos_firecrawl": 0,
       "requisicoes_diretas": 2,
       "publicacoes_listadas": 10,
-      "publicacoes_na_janela": 0,
-      "publicacoes_enviadas": 0
+      "publicacoes_na_janela": 3,
+      "publicacoes_enviadas": 3
     },
     {
       "fonte": "ANP | Notícias",
       "status": "ok",
-      "tamanho_chars": 3136,
-      "publicacoes_localizadas": 8,
+      "tamanho_chars": 484,
+      "publicacoes_localizadas": 1,
       "busca_complementar_executada": false,
       "chars_busca_complementar": 0,
       "conteudo_truncado": false,
@@ -280,13 +285,13 @@
       "creditos_firecrawl": 0,
       "requisicoes_diretas": 1,
       "publicacoes_listadas": 30,
-      "publicacoes_na_janela": 8,
-      "publicacoes_enviadas": 8
+      "publicacoes_na_janela": 1,
+      "publicacoes_enviadas": 1
     },
     {
       "fonte": "ANP | Consultas e Audiências Públicas",
       "status": "ok",
-      "tamanho_chars": 623,
+      "tamanho_chars": 625,
       "publicacoes_localizadas": 1,
       "busca_complementar_executada": false,
       "chars_busca_complementar": 0,
@@ -298,7 +303,7 @@
       "creditos_firecrawl": 0,
       "requisicoes_diretas": 1,
       "publicacoes_listadas": 21,
-      "publicacoes_na_janela": 0,
+      "publicacoes_na_janela": 1,
       "publicacoes_enviadas": 1
     },
     {
@@ -338,95 +343,7 @@
     {
       "fonte": "MME | Notícias",
       "status": "ok",
-      "sem_publicacao_na_janela": true,
-      "tamanho_chars": 0,
-      "publicacoes_localizadas": 0,
-      "busca_complementar_executada": false,
-      "metodo": "html",
-      "metodo_usado": "html",
-      "queda_firecrawl": false,
-      "motivo_queda": "",
-      "creditos_firecrawl": 0,
-      "requisicoes_diretas": 1,
-      "publicacoes_listadas": 30,
-      "publicacoes_na_janela": 0,
-      "publicacoes_enviadas": 0
-    },
-    {
-      "metodo": "firecrawl",
-      "metodo_usado": "firecrawl",
-      "queda_firecrawl": false,
-      "motivo_queda": "",
-      "creditos_firecrawl": 1,
-      "requisicoes_diretas": 0,
-      "fonte": "ONS | Notícias",
-      "status": "ok",
-      "tamanho_chars": 2415,
-      "publicacoes_localizadas": 0,
-      "busca_complementar_executada": false,
-      "chars_busca_complementar": 0,
-      "conteudo_truncado": false,
-      "pagina_inteira": false
-    },
-    {
-      "fonte": "ANEEL | Últimas Notícias",
-      "status": "ok",
-      "tamanho_chars": 453,
-      "publicacoes_localizadas": 1,
-      "busca_complementar_executada": false,
-      "chars_busca_complementar": 0,
-      "conteudo_truncado": false,
-      "metodo": "html",
-      "metodo_usado": "html",
-      "queda_firecrawl": false,
-      "motivo_queda": "",
-      "creditos_firecrawl": 0,
-      "requisicoes_diretas": 1,
-      "publicacoes_listadas": 30,
-      "publicacoes_na_janela": 1,
-      "publicacoes_enviadas": 1
-    },
-    {
-      "fonte": "Ministério da Agricultura | Notícias",
-      "status": "ok",
-      "tamanho_chars": 4634,
-      "publicacoes_localizadas": 12,
-      "busca_complementar_executada": true,
-      "chars_busca_complementar": 3752,
-      "conteudo_truncado": false,
-      "metodo": "html",
-      "metodo_usado": "html",
-      "queda_firecrawl": false,
-      "motivo_queda": "",
-      "creditos_firecrawl": 2,
-      "requisicoes_diretas": 1,
-      "publicacoes_listadas": 30,
-      "publicacoes_na_janela": 2,
-      "publicacoes_enviadas": 2,
-      "escopo_busca": "www.gov.br/agricultura/pt-br"
-    },
-    {
-      "fonte": "ANVISA | Notícias",
-      "status": "ok",
-      "tamanho_chars": 3802,
-      "publicacoes_localizadas": 10,
-      "busca_complementar_executada": false,
-      "chars_busca_complementar": 0,
-      "conteudo_truncado": false,
-      "metodo": "volto",
-      "metodo_usado": "volto",
-      "queda_firecrawl": false,
-      "motivo_queda": "",
-      "creditos_firecrawl": 0,
-      "requisicoes_diretas": 1,
-      "publicacoes_listadas": 30,
-      "publicacoes_na_janela": 10,
-      "publicacoes_enviadas": 10
-    },
-    {
-      "fonte": "INPI | Notícias",
-      "status": "ok",
-      "tamanho_chars": 544,
+      "tamanho_chars": 1108,
       "publicacoes_localizadas": 2,
       "busca_complementar_executada": false,
       "chars_busca_complementar": 0,
@@ -437,14 +354,103 @@
       "motivo_queda": "",
       "creditos_firecrawl": 0,
       "requisicoes_diretas": 1,
-      "publicacoes_listadas": 26,
+      "publicacoes_listadas": 30,
+      "publicacoes_na_janela": 2,
+      "publicacoes_enviadas": 2
+    },
+    {
+      "metodo": "firecrawl",
+      "metodo_usado": "firecrawl",
+      "queda_firecrawl": false,
+      "motivo_queda": "",
+      "creditos_firecrawl": 1,
+      "requisicoes_diretas": 0,
+      "fonte": "ONS | Notícias",
+      "status": "ok",
+      "tamanho_chars": 5391,
+      "publicacoes_localizadas": 0,
+      "busca_complementar_executada": false,
+      "chars_busca_complementar": 0,
+      "conteudo_truncado": false,
+      "pagina_inteira": false
+    },
+    {
+      "fonte": "ANEEL | Últimas Notícias",
+      "status": "ok",
+      "tamanho_chars": 725,
+      "publicacoes_localizadas": 2,
+      "busca_complementar_executada": false,
+      "chars_busca_complementar": 0,
+      "conteudo_truncado": false,
+      "metodo": "html",
+      "metodo_usado": "html",
+      "queda_firecrawl": false,
+      "motivo_queda": "",
+      "creditos_firecrawl": 0,
+      "requisicoes_diretas": 1,
+      "publicacoes_listadas": 30,
+      "publicacoes_na_janela": 2,
+      "publicacoes_enviadas": 2
+    },
+    {
+      "fonte": "Ministério da Agricultura | Notícias",
+      "status": "ok",
+      "tamanho_chars": 4031,
+      "publicacoes_localizadas": 10,
+      "busca_complementar_executada": true,
+      "chars_busca_complementar": 3937,
+      "conteudo_truncado": false,
+      "metodo": "html",
+      "metodo_usado": "html",
+      "queda_firecrawl": false,
+      "motivo_queda": "",
+      "creditos_firecrawl": 2,
+      "requisicoes_diretas": 1,
+      "publicacoes_listadas": 30,
+      "publicacoes_na_janela": 0,
+      "publicacoes_enviadas": 0,
+      "escopo_busca": "www.gov.br/agricultura/pt-br"
+    },
+    {
+      "fonte": "ANVISA | Notícias",
+      "status": "ok",
+      "tamanho_chars": 2731,
+      "publicacoes_localizadas": 8,
+      "busca_complementar_executada": false,
+      "chars_busca_complementar": 0,
+      "conteudo_truncado": false,
+      "metodo": "volto",
+      "metodo_usado": "volto",
+      "queda_firecrawl": false,
+      "motivo_queda": "",
+      "creditos_firecrawl": 0,
+      "requisicoes_diretas": 1,
+      "publicacoes_listadas": 30,
+      "publicacoes_na_janela": 8,
+      "publicacoes_enviadas": 8
+    },
+    {
+      "fonte": "INPI | Notícias",
+      "status": "ok",
+      "tamanho_chars": 657,
+      "publicacoes_localizadas": 2,
+      "busca_complementar_executada": false,
+      "chars_busca_complementar": 0,
+      "conteudo_truncado": false,
+      "metodo": "html",
+      "metodo_usado": "html",
+      "queda_firecrawl": false,
+      "motivo_queda": "",
+      "creditos_firecrawl": 0,
+      "requisicoes_diretas": 1,
+      "publicacoes_listadas": 27,
       "publicacoes_na_janela": 2,
       "publicacoes_enviadas": 2
     },
     {
       "fonte": "SENACON | Notícias",
       "status": "ok",
-      "tamanho_chars": 391,
+      "tamanho_chars": 580,
       "publicacoes_localizadas": 1,
       "busca_complementar_executada": false,
       "chars_busca_complementar": 0,
@@ -462,10 +468,11 @@
     {
       "fonte": "ANM | Notícias",
       "status": "ok",
-      "sem_publicacao_na_janela": true,
-      "tamanho_chars": 0,
-      "publicacoes_localizadas": 0,
+      "tamanho_chars": 622,
+      "publicacoes_localizadas": 1,
       "busca_complementar_executada": false,
+      "chars_busca_complementar": 0,
+      "conteudo_truncado": false,
       "metodo": "html",
       "metodo_usado": "html",
       "queda_firecrawl": false,
@@ -473,14 +480,14 @@
       "creditos_firecrawl": 0,
       "requisicoes_diretas": 1,
       "publicacoes_listadas": 29,
-      "publicacoes_na_janela": 0,
-      "publicacoes_enviadas": 0
+      "publicacoes_na_janela": 1,
+      "publicacoes_enviadas": 1
     },
     {
       "fonte": "EPE | Notícias",
       "status": "ok",
-      "tamanho_chars": 2619,
-      "publicacoes_localizadas": 4,
+      "tamanho_chars": 1388,
+      "publicacoes_localizadas": 2,
       "busca_complementar_executada": false,
       "chars_busca_complementar": 0,
       "conteudo_truncado": false,
@@ -491,8 +498,8 @@
       "creditos_firecrawl": 0,
       "requisicoes_diretas": 2,
       "publicacoes_listadas": 10,
-      "publicacoes_na_janela": 4,
-      "publicacoes_enviadas": 4
+      "publicacoes_na_janela": 2,
+      "publicacoes_enviadas": 2
     },
     {
       "fonte": "ANTAQ | Notícias",
@@ -531,8 +538,8 @@
     {
       "fonte": "Kollemata | Decretos",
       "status": "ok",
-      "tamanho_chars": 758,
-      "publicacoes_localizadas": 2,
+      "tamanho_chars": 421,
+      "publicacoes_localizadas": 1,
       "busca_complementar_executada": false,
       "chars_busca_complementar": 0,
       "conteudo_truncado": false,
@@ -542,17 +549,18 @@
       "motivo_queda": "",
       "creditos_firecrawl": 0,
       "requisicoes_diretas": 3,
-      "publicacoes_listadas": 12,
-      "publicacoes_na_janela": 2,
-      "publicacoes_enviadas": 2
+      "publicacoes_listadas": 11,
+      "publicacoes_na_janela": 1,
+      "publicacoes_enviadas": 1
     },
     {
       "fonte": "ANATEL | Notícias",
       "status": "ok",
-      "sem_publicacao_na_janela": true,
-      "tamanho_chars": 0,
-      "publicacoes_localizadas": 0,
+      "tamanho_chars": 448,
+      "publicacoes_localizadas": 1,
       "busca_complementar_executada": false,
+      "chars_busca_complementar": 0,
+      "conteudo_truncado": false,
       "metodo": "volto",
       "metodo_usado": "volto",
       "queda_firecrawl": false,
@@ -560,13 +568,13 @@
       "creditos_firecrawl": 0,
       "requisicoes_diretas": 1,
       "publicacoes_listadas": 30,
-      "publicacoes_na_janela": 0,
-      "publicacoes_enviadas": 0
+      "publicacoes_na_janela": 1,
+      "publicacoes_enviadas": 1
     },
     {
       "fonte": "SUSEP | Notícias",
       "status": "ok",
-      "tamanho_chars": 627,
+      "tamanho_chars": 555,
       "publicacoes_localizadas": 1,
       "busca_complementar_executada": false,
       "chars_busca_complementar": 0,
@@ -584,8 +592,8 @@
     {
       "fonte": "ANTT | Notícias - Defeso Eleitoral",
       "status": "ok",
-      "tamanho_chars": 1369,
-      "publicacoes_localizadas": 3,
+      "tamanho_chars": 2990,
+      "publicacoes_localizadas": 6,
       "busca_complementar_executada": false,
       "chars_busca_complementar": 0,
       "conteudo_truncado": false,
@@ -596,15 +604,15 @@
       "creditos_firecrawl": 0,
       "requisicoes_diretas": 1,
       "publicacoes_listadas": 30,
-      "publicacoes_na_janela": 3,
-      "publicacoes_enviadas": 3
+      "publicacoes_na_janela": 6,
+      "publicacoes_enviadas": 6
     },
     {
       "fonte": "Diário Oficial da União | Seção 1",
       "status": "ok",
       "tamanho_chars": 0,
-      "publicacoes_listadas": 381,
-      "publicacoes_localizadas": 65,
+      "publicacoes_listadas": 298,
+      "publicacoes_localizadas": 52,
       "dou_atos_abertos": 19,
       "metodo": "dou",
       "metodo_usado": "dou",
@@ -617,7 +625,7 @@
       "fonte": "Diário Oficial da União | Seção 3",
       "status": "ok",
       "tamanho_chars": 0,
-      "publicacoes_listadas": 2178,
+      "publicacoes_listadas": 2265,
       "publicacoes_localizadas": 1,
       "dou_atos_abertos": 1,
       "metodo": "dou",
@@ -661,39 +669,9 @@
       "modelo": "gemini-3.7-flash",
       "tentativa": 1,
       "status": "erro",
-      "tipo_erro": "sobrecarga",
-      "duracao_s": 5,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-      "espera_antes_da_proxima_s": 30,
-      "lote": 1
-    },
-    {
-      "modelo": "gemini-3.7-flash",
-      "tentativa": 2,
-      "status": "erro",
-      "tipo_erro": "sobrecarga",
-      "duracao_s": 128,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-      "espera_antes_da_proxima_s": 60,
-      "lote": 1
-    },
-    {
-      "modelo": "gemini-3.7-flash",
-      "tentativa": 3,
-      "status": "erro",
-      "tipo_erro": "sobrecarga",
-      "duracao_s": 22,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-      "espera_antes_da_proxima_s": 120,
-      "lote": 1
-    },
-    {
-      "modelo": "gemini-3.7-flash",
-      "tentativa": 4,
-      "status": "erro",
-      "tipo_erro": "sobrecarga",
-      "duracao_s": 5,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "tipo_erro": "tempo",
+      "duracao_s": 179,
+      "erro": "504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}",
       "lote": 1
     },
     {
@@ -701,7 +679,7 @@
       "tentativa": 1,
       "status": "erro",
       "tipo_erro": "sobrecarga",
-      "duracao_s": 18,
+      "duracao_s": 0,
       "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
       "espera_antes_da_proxima_s": 10,
       "lote": 1
@@ -711,15 +689,44 @@
       "tentativa": 2,
       "status": "erro",
       "tipo_erro": "sobrecarga",
-      "duracao_s": 31,
+      "duracao_s": 4,
       "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
       "lote": 1
     },
     {
       "modelo": "gemini-3.5-flash",
       "tentativa": 1,
+      "status": "erro",
+      "tipo_erro": "sobrecarga",
+      "duracao_s": 30,
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "espera_antes_da_proxima_s": 10,
+      "lote": 1
+    },
+    {
+      "modelo": "gemini-3.5-flash",
+      "tentativa": 2,
+      "status": "erro",
+      "tipo_erro": "sobrecarga",
+      "duracao_s": 2,
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "lote": 1
+    },
+    {
+      "modelo": "gemini-3.5-flash-lite",
+      "tentativa": 1,
+      "status": "erro",
+      "tipo_erro": "sobrecarga",
+      "duracao_s": 2,
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "espera_antes_da_proxima_s": 10,
+      "lote": 1
+    },
+    {
+      "modelo": "gemini-3.5-flash-lite",
+      "tentativa": 2,
       "status": "sucesso",
-      "duracao_s": 151,
+      "duracao_s": 19,
       "lote": 1
     },
     {
@@ -727,7 +734,7 @@
       "tentativa": 1,
       "status": "erro",
       "tipo_erro": "sobrecarga",
-      "duracao_s": 48,
+      "duracao_s": 7,
       "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
       "espera_antes_da_proxima_s": 30,
       "lote": 2
@@ -736,29 +743,9 @@
       "modelo": "gemini-3.7-flash",
       "tentativa": 2,
       "status": "erro",
-      "tipo_erro": "sobrecarga",
-      "duracao_s": 0,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-      "espera_antes_da_proxima_s": 60,
-      "lote": 2
-    },
-    {
-      "modelo": "gemini-3.7-flash",
-      "tentativa": 3,
-      "status": "erro",
-      "tipo_erro": "sobrecarga",
-      "duracao_s": 10,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-      "espera_antes_da_proxima_s": 120,
-      "lote": 2
-    },
-    {
-      "modelo": "gemini-3.7-flash",
-      "tentativa": 4,
-      "status": "erro",
-      "tipo_erro": "sobrecarga",
-      "duracao_s": 0,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "tipo_erro": "tempo",
+      "duracao_s": 180,
+      "erro": "504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}",
       "lote": 2
     },
     {
@@ -766,7 +753,7 @@
       "tentativa": 1,
       "status": "erro",
       "tipo_erro": "sobrecarga",
-      "duracao_s": 3,
+      "duracao_s": 0,
       "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
       "espera_antes_da_proxima_s": 10,
       "lote": 2
@@ -776,7 +763,7 @@
       "tentativa": 2,
       "status": "erro",
       "tipo_erro": "sobrecarga",
-      "duracao_s": 3,
+      "duracao_s": 43,
       "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
       "lote": 2
     },
@@ -785,7 +772,7 @@
       "tentativa": 1,
       "status": "erro",
       "tipo_erro": "sobrecarga",
-      "duracao_s": 1,
+      "duracao_s": 2,
       "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
       "espera_antes_da_proxima_s": 10,
       "lote": 2
@@ -803,46 +790,16 @@
       "modelo": "gemini-3.5-flash-lite",
       "tentativa": 1,
       "status": "sucesso",
-      "duracao_s": 13,
+      "duracao_s": 8,
       "lote": 2
     },
     {
       "modelo": "gemini-3.7-flash",
       "tentativa": 1,
       "status": "erro",
-      "tipo_erro": "sobrecarga",
-      "duracao_s": 0,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-      "espera_antes_da_proxima_s": 30,
-      "lote": 3
-    },
-    {
-      "modelo": "gemini-3.7-flash",
-      "tentativa": 2,
-      "status": "erro",
-      "tipo_erro": "sobrecarga",
-      "duracao_s": 0,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-      "espera_antes_da_proxima_s": 60,
-      "lote": 3
-    },
-    {
-      "modelo": "gemini-3.7-flash",
-      "tentativa": 3,
-      "status": "erro",
-      "tipo_erro": "sobrecarga",
-      "duracao_s": 11,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-      "espera_antes_da_proxima_s": 120,
-      "lote": 3
-    },
-    {
-      "modelo": "gemini-3.7-flash",
-      "tentativa": 4,
-      "status": "erro",
-      "tipo_erro": "sobrecarga",
-      "duracao_s": 11,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "tipo_erro": "tempo",
+      "duracao_s": 179,
+      "erro": "504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}",
       "lote": 3
     },
     {
@@ -850,65 +807,10 @@
       "tentativa": 1,
       "status": "erro",
       "tipo_erro": "sobrecarga",
-      "duracao_s": 12,
+      "duracao_s": 3,
       "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
       "espera_antes_da_proxima_s": 10,
       "lote": 3
-    },
-    {
-      "modelo": "gemini-3.6-flash",
-      "tentativa": 2,
-      "status": "erro",
-      "tipo_erro": "sobrecarga",
-      "duracao_s": 0,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-      "lote": 3
-    },
-    {
-      "modelo": "gemini-3.5-flash",
-      "tentativa": 1,
-      "status": "erro",
-      "tipo_erro": "sobrecarga",
-      "duracao_s": 43,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-      "espera_antes_da_proxima_s": 10,
-      "lote": 3
-    },
-    {
-      "modelo": "gemini-3.5-flash",
-      "tentativa": 2,
-      "status": "sucesso",
-      "duracao_s": 59,
-      "lote": 3
-    },
-    {
-      "modelo": "gemini-3.7-flash",
-      "tentativa": 1,
-      "status": "erro",
-      "tipo_erro": "sobrecarga",
-      "duracao_s": 2,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-      "espera_antes_da_proxima_s": 30,
-      "lote": 4
-    },
-    {
-      "modelo": "gemini-3.7-flash",
-      "tentativa": 2,
-      "status": "erro",
-      "tipo_erro": "sobrecarga",
-      "duracao_s": 75,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-      "lote": 4
-    },
-    {
-      "modelo": "gemini-3.6-flash",
-      "tentativa": 1,
-      "status": "erro",
-      "tipo_erro": "sobrecarga",
-      "duracao_s": 9,
-      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-      "espera_antes_da_proxima_s": 10,
-      "lote": 4
     },
     {
       "modelo": "gemini-3.6-flash",
@@ -917,13 +819,69 @@
       "tipo_erro": "sobrecarga",
       "duracao_s": 6,
       "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-      "lote": 4
+      "lote": 3
     },
     {
       "modelo": "gemini-3.5-flash",
       "tentativa": 1,
+      "status": "erro",
+      "tipo_erro": "sobrecarga",
+      "duracao_s": 0,
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "espera_antes_da_proxima_s": 10,
+      "lote": 3
+    },
+    {
+      "modelo": "gemini-3.5-flash",
+      "tentativa": 2,
+      "status": "erro",
+      "tipo_erro": "sobrecarga",
+      "duracao_s": 1,
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "lote": 3
+    },
+    {
+      "modelo": "gemini-3.5-flash-lite",
+      "tentativa": 1,
       "status": "sucesso",
-      "duracao_s": 31,
+      "duracao_s": 16,
+      "lote": 3
+    },
+    {
+      "modelo": "gemini-3.7-flash",
+      "tentativa": 1,
+      "status": "erro",
+      "tipo_erro": "sobrecarga",
+      "duracao_s": 1,
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "espera_antes_da_proxima_s": 30,
+      "lote": 4
+    },
+    {
+      "modelo": "gemini-3.7-flash",
+      "tentativa": 2,
+      "status": "erro",
+      "tipo_erro": "sobrecarga",
+      "duracao_s": 4,
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "espera_antes_da_proxima_s": 60,
+      "lote": 4
+    },
+    {
+      "modelo": "gemini-3.7-flash",
+      "tentativa": 3,
+      "status": "erro",
+      "tipo_erro": "sobrecarga",
+      "duracao_s": 2,
+      "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "espera_antes_da_proxima_s": 120,
+      "lote": 4
+    },
+    {
+      "modelo": "gemini-3.7-flash",
+      "tentativa": 4,
+      "status": "sucesso",
+      "duracao_s": 117,
       "lote": 4
     }
   ],
@@ -938,50 +896,23 @@
         "Receita Federal | Normas",
         "Ministério da Fazenda | Notícias"
       ],
-      "modelo": "gemini-3.5-flash",
+      "modelo": "gemini-3.5-flash-lite",
       "situacao": "classificado",
       "tentativas": [
         {
           "modelo": "gemini-3.7-flash",
           "tentativa": 1,
           "status": "erro",
-          "tipo_erro": "sobrecarga",
-          "duracao_s": 5,
-          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-          "espera_antes_da_proxima_s": 30
-        },
-        {
-          "modelo": "gemini-3.7-flash",
-          "tentativa": 2,
-          "status": "erro",
-          "tipo_erro": "sobrecarga",
-          "duracao_s": 128,
-          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-          "espera_antes_da_proxima_s": 60
-        },
-        {
-          "modelo": "gemini-3.7-flash",
-          "tentativa": 3,
-          "status": "erro",
-          "tipo_erro": "sobrecarga",
-          "duracao_s": 22,
-          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-          "espera_antes_da_proxima_s": 120
-        },
-        {
-          "modelo": "gemini-3.7-flash",
-          "tentativa": 4,
-          "status": "erro",
-          "tipo_erro": "sobrecarga",
-          "duracao_s": 5,
-          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+          "tipo_erro": "tempo",
+          "duracao_s": 179,
+          "erro": "504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}"
         },
         {
           "modelo": "gemini-3.6-flash",
           "tentativa": 1,
           "status": "erro",
           "tipo_erro": "sobrecarga",
-          "duracao_s": 18,
+          "duracao_s": 0,
           "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
           "espera_antes_da_proxima_s": 10
         },
@@ -990,28 +921,54 @@
           "tentativa": 2,
           "status": "erro",
           "tipo_erro": "sobrecarga",
-          "duracao_s": 31,
+          "duracao_s": 4,
           "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
         },
         {
           "modelo": "gemini-3.5-flash",
           "tentativa": 1,
+          "status": "erro",
+          "tipo_erro": "sobrecarga",
+          "duracao_s": 30,
+          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+          "espera_antes_da_proxima_s": 10
+        },
+        {
+          "modelo": "gemini-3.5-flash",
+          "tentativa": 2,
+          "status": "erro",
+          "tipo_erro": "sobrecarga",
+          "duracao_s": 2,
+          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+        },
+        {
+          "modelo": "gemini-3.5-flash-lite",
+          "tentativa": 1,
+          "status": "erro",
+          "tipo_erro": "sobrecarga",
+          "duracao_s": 2,
+          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+          "espera_antes_da_proxima_s": 10
+        },
+        {
+          "modelo": "gemini-3.5-flash-lite",
+          "tentativa": 2,
           "status": "sucesso",
-          "duracao_s": 151
+          "duracao_s": 19
         }
       ],
-      "espera_por_sobrecarga_s": 210,
-      "duracao_s": 579
+      "espera_por_sobrecarga_s": 0,
+      "duracao_s": 267
     },
     {
       "lote": 2,
       "fontes": [
         "CVM | Notícias",
+        "B3 | Ofícios e Comunicados",
         "ANP | Notícias",
         "ANP | Consultas e Audiências Públicas",
-        "ONS | Notícias",
-        "ANEEL | Últimas Notícias",
-        "Ministério da Agricultura | Notícias"
+        "MME | Notícias",
+        "ONS | Notícias"
       ],
       "modelo": "gemini-3.5-flash-lite",
       "situacao": "classificado",
@@ -1021,7 +978,7 @@
           "tentativa": 1,
           "status": "erro",
           "tipo_erro": "sobrecarga",
-          "duracao_s": 48,
+          "duracao_s": 7,
           "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
           "espera_antes_da_proxima_s": 30
         },
@@ -1029,34 +986,16 @@
           "modelo": "gemini-3.7-flash",
           "tentativa": 2,
           "status": "erro",
-          "tipo_erro": "sobrecarga",
-          "duracao_s": 0,
-          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-          "espera_antes_da_proxima_s": 60
-        },
-        {
-          "modelo": "gemini-3.7-flash",
-          "tentativa": 3,
-          "status": "erro",
-          "tipo_erro": "sobrecarga",
-          "duracao_s": 10,
-          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-          "espera_antes_da_proxima_s": 120
-        },
-        {
-          "modelo": "gemini-3.7-flash",
-          "tentativa": 4,
-          "status": "erro",
-          "tipo_erro": "sobrecarga",
-          "duracao_s": 0,
-          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+          "tipo_erro": "tempo",
+          "duracao_s": 180,
+          "erro": "504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}"
         },
         {
           "modelo": "gemini-3.6-flash",
           "tentativa": 1,
           "status": "erro",
           "tipo_erro": "sobrecarga",
-          "duracao_s": 3,
+          "duracao_s": 0,
           "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
           "espera_antes_da_proxima_s": 10
         },
@@ -1065,7 +1004,7 @@
           "tentativa": 2,
           "status": "erro",
           "tipo_erro": "sobrecarga",
-          "duracao_s": 3,
+          "duracao_s": 43,
           "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
         },
         {
@@ -1073,7 +1012,7 @@
           "tentativa": 1,
           "status": "erro",
           "tipo_erro": "sobrecarga",
-          "duracao_s": 1,
+          "duracao_s": 2,
           "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
           "espera_antes_da_proxima_s": 10
         },
@@ -1089,127 +1028,39 @@
           "modelo": "gemini-3.5-flash-lite",
           "tentativa": 1,
           "status": "sucesso",
-          "duracao_s": 13
+          "duracao_s": 8
         }
       ],
-      "espera_por_sobrecarga_s": 210,
-      "duracao_s": 308
+      "espera_por_sobrecarga_s": 30,
+      "duracao_s": 290
     },
     {
       "lote": 3,
       "fontes": [
+        "ANEEL | Últimas Notícias",
+        "Ministério da Agricultura | Notícias",
         "ANVISA | Notícias",
         "INPI | Notícias",
         "SENACON | Notícias",
-        "EPE | Notícias",
-        "Kollemata | Decretos",
-        "SUSEP | Notícias"
+        "ANM | Notícias"
       ],
-      "modelo": "gemini-3.5-flash",
+      "modelo": "gemini-3.5-flash-lite",
       "situacao": "classificado",
       "tentativas": [
         {
           "modelo": "gemini-3.7-flash",
           "tentativa": 1,
           "status": "erro",
-          "tipo_erro": "sobrecarga",
-          "duracao_s": 0,
-          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-          "espera_antes_da_proxima_s": 30
-        },
-        {
-          "modelo": "gemini-3.7-flash",
-          "tentativa": 2,
-          "status": "erro",
-          "tipo_erro": "sobrecarga",
-          "duracao_s": 0,
-          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-          "espera_antes_da_proxima_s": 60
-        },
-        {
-          "modelo": "gemini-3.7-flash",
-          "tentativa": 3,
-          "status": "erro",
-          "tipo_erro": "sobrecarga",
-          "duracao_s": 11,
-          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-          "espera_antes_da_proxima_s": 120
-        },
-        {
-          "modelo": "gemini-3.7-flash",
-          "tentativa": 4,
-          "status": "erro",
-          "tipo_erro": "sobrecarga",
-          "duracao_s": 11,
-          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+          "tipo_erro": "tempo",
+          "duracao_s": 179,
+          "erro": "504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}"
         },
         {
           "modelo": "gemini-3.6-flash",
           "tentativa": 1,
           "status": "erro",
           "tipo_erro": "sobrecarga",
-          "duracao_s": 12,
-          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-          "espera_antes_da_proxima_s": 10
-        },
-        {
-          "modelo": "gemini-3.6-flash",
-          "tentativa": 2,
-          "status": "erro",
-          "tipo_erro": "sobrecarga",
-          "duracao_s": 0,
-          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
-        },
-        {
-          "modelo": "gemini-3.5-flash",
-          "tentativa": 1,
-          "status": "erro",
-          "tipo_erro": "sobrecarga",
-          "duracao_s": 43,
-          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-          "espera_antes_da_proxima_s": 10
-        },
-        {
-          "modelo": "gemini-3.5-flash",
-          "tentativa": 2,
-          "status": "sucesso",
-          "duracao_s": 59
-        }
-      ],
-      "espera_por_sobrecarga_s": 210,
-      "duracao_s": 366
-    },
-    {
-      "lote": 4,
-      "fontes": [
-        "ANTT | Notícias - Defeso Eleitoral"
-      ],
-      "modelo": "gemini-3.5-flash",
-      "situacao": "classificado",
-      "tentativas": [
-        {
-          "modelo": "gemini-3.7-flash",
-          "tentativa": 1,
-          "status": "erro",
-          "tipo_erro": "sobrecarga",
-          "duracao_s": 2,
-          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-          "espera_antes_da_proxima_s": 30
-        },
-        {
-          "modelo": "gemini-3.7-flash",
-          "tentativa": 2,
-          "status": "erro",
-          "tipo_erro": "sobrecarga",
-          "duracao_s": 75,
-          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
-        },
-        {
-          "modelo": "gemini-3.6-flash",
-          "tentativa": 1,
-          "status": "erro",
-          "tipo_erro": "sobrecarga",
-          "duracao_s": 9,
+          "duracao_s": 3,
           "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
           "espera_antes_da_proxima_s": 10
         },
@@ -1224,42 +1075,108 @@
         {
           "modelo": "gemini-3.5-flash",
           "tentativa": 1,
+          "status": "erro",
+          "tipo_erro": "sobrecarga",
+          "duracao_s": 0,
+          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+          "espera_antes_da_proxima_s": 10
+        },
+        {
+          "modelo": "gemini-3.5-flash",
+          "tentativa": 2,
+          "status": "erro",
+          "tipo_erro": "sobrecarga",
+          "duracao_s": 1,
+          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+        },
+        {
+          "modelo": "gemini-3.5-flash-lite",
+          "tentativa": 1,
           "status": "sucesso",
-          "duracao_s": 31
+          "duracao_s": 16
         }
       ],
-      "espera_por_sobrecarga_s": 30,
-      "duracao_s": 165
+      "espera_por_sobrecarga_s": 0,
+      "duracao_s": 226
+    },
+    {
+      "lote": 4,
+      "fontes": [
+        "EPE | Notícias",
+        "Kollemata | Decretos",
+        "ANATEL | Notícias",
+        "SUSEP | Notícias",
+        "ANTT | Notícias - Defeso Eleitoral"
+      ],
+      "modelo": "gemini-3.7-flash",
+      "situacao": "classificado",
+      "tentativas": [
+        {
+          "modelo": "gemini-3.7-flash",
+          "tentativa": 1,
+          "status": "erro",
+          "tipo_erro": "sobrecarga",
+          "duracao_s": 1,
+          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+          "espera_antes_da_proxima_s": 30
+        },
+        {
+          "modelo": "gemini-3.7-flash",
+          "tentativa": 2,
+          "status": "erro",
+          "tipo_erro": "sobrecarga",
+          "duracao_s": 4,
+          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+          "espera_antes_da_proxima_s": 60
+        },
+        {
+          "modelo": "gemini-3.7-flash",
+          "tentativa": 3,
+          "status": "erro",
+          "tipo_erro": "sobrecarga",
+          "duracao_s": 2,
+          "erro": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+          "espera_antes_da_proxima_s": 120
+        },
+        {
+          "modelo": "gemini-3.7-flash",
+          "tentativa": 4,
+          "status": "sucesso",
+          "duracao_s": 117
+        }
+      ],
+      "espera_por_sobrecarga_s": 210,
+      "duracao_s": 334
     }
   ],
   "etapa_ia": {
     "situacao": "completa",
     "prazo_s": 1500,
-    "duracao_s": 1479,
+    "duracao_s": 1178,
     "tempo_limite_por_chamada_s": 180,
     "lotes": 4,
     "lotes_classificados": 4,
     "lotes_fora_do_prazo": 0,
     "lotes_que_falharam": 0,
-    "chamadas_sem_resposta": 0,
+    "chamadas_sem_resposta": 3,
     "fontes_nao_classificadas": {}
   },
   "dou": {
-    "edicao": "2026-10-05",
+    "edicao": "2026-10-14",
     "creditos_firecrawl": 22,
     "limite_atos_abertos": 20,
     "atos_abertos": 20,
-    "atos_nao_abertos": 46,
+    "atos_nao_abertos": 33,
     "por_secao": {
       "Diário Oficial da União | Seção 1": {
         "status": "ok",
         "erro": "",
         "aviso": "",
-        "atos_na_edicao": 381,
+        "atos_na_edicao": 298,
         "excluidos_antes_do_filtro": {
-          "unidade local da Receita Federal (só órgãos centrais, como na fonte Receita Federal | Normas)": 21
+          "unidade local da Receita Federal (só órgãos centrais, como na fonte Receita Federal | Normas)": 29
         },
-        "no_filtro": 65,
+        "no_filtro": 52,
         "abertos": 19,
         "creditos_firecrawl": 20
       },
@@ -1267,9 +1184,9 @@
         "status": "ok",
         "erro": "",
         "aviso": "",
-        "atos_na_edicao": 2178,
+        "atos_na_edicao": 2265,
         "excluidos_antes_do_filtro": {
-          "unidade local da Receita Federal (só órgãos centrais, como na fonte Receita Federal | Normas)": 16
+          "unidade local da Receita Federal (só órgãos centrais, como na fonte Receita Federal | Normas)": 17
         },
         "no_filtro": 1,
         "abertos": 1,
@@ -1277,37 +1194,46 @@
       }
     },
     "por_radar": {
-      "regulatorio-oleo-gas": 41,
-      "imobiliario-infraestrutura": 17,
+      "regulatorio-oleo-gas": 33,
+      "imobiliario-infraestrutura": 2,
+      "contencioso-civel": 2,
+      "mercado-capitais-fundos": 10,
       "direito-tributario": 4,
-      "contencioso-civel": 4,
-      "mercado-capitais-fundos": 1
+      "trabalhista-empresarial": 1,
+      "propriedade-intelectual": 1
     },
     "noticias_por_radar": {
       "regulatorio-oleo-gas": 15,
-      "imobiliario-infraestrutura": 7,
+      "imobiliario-infraestrutura": 2,
+      "contencioso-civel": 2,
+      "mercado-capitais-fundos": 2,
       "direito-tributario": 4,
-      "contencioso-civel": 4,
-      "mercado-capitais-fundos": 1
+      "trabalhista-empresarial": 1,
+      "propriedade-intelectual": 1
     },
     "grupos": {
-      "lote": 6,
-      "serie": 1
+      "lote": 4
     },
     "nao_abertos_por_motivo": {
-      "agrupado": 36,
-      "teto de 20 atos abertos por execução": 10
+      "agrupado": 26,
+      "teto de 20 atos abertos por execução": 7
     }
   },
   "publicacoes_nao_devolvidas_pela_ia": {
-    "ao_portal": 0,
-    "so_registradas_data_futura": 1,
+    "ao_portal": 7,
+    "so_registradas_data_futura": 0,
     "por_fonte": {
-      "ANP | Consultas e Audiências Públicas": {
-        "ao_portal": 0,
-        "so_registradas": 1,
+      "Banco Central | Normas": {
+        "ao_portal": 7,
+        "so_registradas": 0,
         "titulos": [
-          "Consulta e Audiência Públicas nº 17/2026"
+          "Comunicado N° 46.112",
+          "Comunicado N° 46.111",
+          "Comunicado N° 46.109",
+          "Instrução Normativa BCB N° 780",
+          "Comunicado N° 46.108",
+          "Comunicado N° 46.107",
+          "Comunicado N° 46.106"
         ]
       }
     }
@@ -1317,28 +1243,38 @@
     "esvaziados": 0
   },
   "distribuicao_sem_ia": {
-    "itens": 0,
-    "com_radar_sugerido": 0,
+    "itens": 7,
+    "com_radar_sugerido": 7,
     "por_metodo": {
       "matriz": 0,
       "palavras_chave": 0,
-      "perfil_da_fonte": 0
+      "perfil_da_fonte": 7
     },
     "sem_radar": 0,
-    "por_radar": {},
+    "por_radar": {
+      "mercado-capitais-fundos": 7
+    },
     "motivos_sem_radar": {},
-    "por_fonte": {}
+    "por_fonte": {
+      "Banco Central | Normas": {
+        "itens": 7,
+        "sem_radar": 0,
+        "matriz": 0,
+        "palavras_chave": 0,
+        "perfil_da_fonte": 7
+      }
+    }
   },
   "resultado": {
     "status": "sucesso",
     "etapa_ia": "completa",
-    "modelo_gemini_utilizado": "gemini-3.5-flash, gemini-3.5-flash-lite",
-    "itens_aceitos": 103,
+    "modelo_gemini_utilizado": "gemini-3.5-flash-lite, gemini-3.7-flash",
+    "itens_aceitos": 91,
     "fontes_ativas": 30,
     "fontes_suspensas": 5,
     "fontes_inativas": 0,
     "fontes_sem_resultado": 0,
-    "fontes_sem_publicacao_hoje": 11,
+    "fontes_sem_publicacao_hoje": 6,
     "fontes_com_erro_tecnico": 0,
     "itens_por_boletim": {
       "trabalhista-empresarial": {
@@ -1347,7 +1283,7 @@
           "Amber",
           "Pink"
         ],
-        "total": 2
+        "total": 3
       },
       "direito-tributario": {
         "nome": "Radar Tributário",
@@ -1355,7 +1291,7 @@
           "Tributário Consultivo",
           "Tributário Contencioso"
         ],
-        "total": 29
+        "total": 10
       },
       "societario-ma": {
         "nome": "Radar Societário, Fusões e Aquisições",
@@ -1364,7 +1300,7 @@
           "Purple",
           "Due Diligence"
         ],
-        "total": 5
+        "total": 2
       },
       "mercado-capitais-fundos": {
         "nome": "Radar Mercado de Capitais e Fundos de Investimento",
@@ -1372,7 +1308,7 @@
           "Financeiro Green",
           "Fundos"
         ],
-        "total": 10
+        "total": 17
       },
       "regulatorio-oleo-gas": {
         "nome": "Radar Regulatório e Óleo e Gás",
@@ -1380,7 +1316,7 @@
           "Regulatório",
           "Óleo & Gás Blue"
         ],
-        "total": 37
+        "total": 39
       },
       "imobiliario-infraestrutura": {
         "nome": "Radar Negócios Imobiliários e Infraestrutura",
@@ -1388,7 +1324,7 @@
           "Imobiliário",
           "Infraestrutura"
         ],
-        "total": 17
+        "total": 15
       },
       "ambiental-esg": {
         "nome": "Radar Ambiental e ESG",
@@ -1402,7 +1338,7 @@
         "clusters": [
           "Propriedade Intelectual"
         ],
-        "total": 2
+        "total": 5
       },
       "contencioso-civel": {
         "nome": "Radar Solução de Conflitos",
@@ -1410,91 +1346,79 @@
           "Contencioso Carbon",
           "Contencioso Gold"
         ],
-        "total": 6
+        "total": 5
       }
     },
     "filtro1_bloqueios": {
-      "regulatorio-oleo-gas": 2,
-      "ambiental-esg": 1,
-      "imobiliario-infraestrutura": 3,
-      "societario-ma": 1,
-      "contencioso-civel": 2
+      "propriedade-intelectual": 2,
+      "regulatorio-oleo-gas": 3,
+      "imobiliario-infraestrutura": 1,
+      "trabalhista-empresarial": 3,
+      "direito-tributario": 1
     },
     "auditoria": {
-      "total_itens": 103,
-      "itens_com_alguma_rejeicao": 64,
-      "itens_com_bloqueio_f1": 8,
+      "total_itens": 91,
+      "itens_com_alguma_rejeicao": 49,
+      "itens_com_bloqueio_f1": 9,
       "rejeicoes_por_boletim": {
         "direito-tributario": 8,
-        "propriedade-intelectual": 9,
-        "regulatorio-oleo-gas": 26,
-        "societario-ma": 12,
-        "contencioso-civel": 11,
-        "ambiental-esg": 10,
-        "imobiliario-infraestrutura": 7,
         "mercado-capitais-fundos": 4,
-        "trabalhista-empresarial": 4
+        "propriedade-intelectual": 6,
+        "regulatorio-oleo-gas": 14,
+        "trabalhista-empresarial": 5,
+        "societario-ma": 6,
+        "imobiliario-infraestrutura": 8,
+        "ambiental-esg": 3,
+        "contencioso-civel": 6
       },
       "resgates_por_escassez": [
         {
           "boletim": "trabalhista-empresarial",
-          "fonte": "Destaques do D.O.U.",
-          "titulo": "DECISÕES ADI 7949",
-          "motivo_da_recusa": "Embora envolva associação de médicos peritos da previdência, a publicação foca no aspecto processual constitucional da ADI."
+          "fonte": "Planalto | Resenha Diaria",
+          "titulo": "Decreto nº 13.135, de 9.10.2026",
+          "motivo_da_recusa": "A regulação é voltada ao direito do consumidor, e não às relações trabalhistas."
+        },
+        {
+          "boletim": "trabalhista-empresarial",
+          "fonte": "Ministério da Fazenda | Notícias",
+          "titulo": "Governo encaminha ao Congresso Nacional proposta para trabalhadores por conta própria",
+          "motivo_da_recusa": "O foco principal da notícia anunciada é a regularização tributária e fiscal de trabalhadores por conta própria."
         },
         {
           "boletim": "societario-ma",
           "fonte": "Banco Central | Normas",
-          "titulo": "Comunicado N° 46.061",
-          "motivo_da_recusa": "Não envolve reorganização societária ou fusões e aquisições."
-        },
-        {
-          "boletim": "societario-ma",
-          "fonte": "Banco Central | Normas",
-          "titulo": "Comunicado N° 46.059",
-          "motivo_da_recusa": "Trata de governança de instituições financeiras sob regulação do BCB, sendo mais aderente ao mercado de capitais do que ao societário geral."
-        },
-        {
-          "boletim": "societario-ma",
-          "fonte": "Banco Central | Normas",
-          "titulo": "Comunicado N° 46.058",
-          "motivo_da_recusa": "Apesar de envolver órgãos estatutários, refere-se especificamente a sociedades autorizadas pelo Banco Central."
+          "titulo": "Comunicado N° 46.113",
+          "motivo_da_recusa": "Trata de operações financeiras institucionais e não de reorganizações societárias ou M&A."
         },
         {
           "boletim": "societario-ma",
           "fonte": "Ministério da Fazenda | Notícias",
-          "titulo": "Receita atualiza balanço de solicitações de opção pelo Simples Nacional e pelo regime regular do IBS e da CBS",
-          "motivo_da_recusa": "Trata de regimes fiscais de empresas, sem impacto societário direto."
+          "titulo": "Contagem regressiva para opção pelo Simples Nacional: prazo termina nesta quinta-feira, 15/10",
+          "motivo_da_recusa": "Trata de opção por regime tributário, sem envolver operações societárias."
         },
         {
-          "boletim": "societario-ma",
-          "fonte": "Ministério da Fazenda | Notícias",
-          "titulo": "Receita Federal publica a primeira edição do Perguntas e Respostas do Adicional da CSLL",
-          "motivo_da_recusa": "Trata de tributação corporativa (CSLL), sem impacto societário direto."
+          "boletim": "ambiental-esg",
+          "fonte": "Planalto | Resenha Diaria",
+          "titulo": "Decreto nº 13.137, de 9.10.2026",
+          "motivo_da_recusa": "O foco é a qualificação de entidade de saúde e tecnologia, sem temas ambientais centrais."
         },
         {
           "boletim": "ambiental-esg",
           "fonte": "CCEE | Noticias",
-          "titulo": "Padronização do cadastro das unidades consumidoras amplia segurança nos processos de migração para o mercado livre",
-          "motivo_da_recusa": "Apesar de envolver energia, o foco é estritamente cadastral e operacional, sem apelo direto a sustentabilidade ou ESG."
+          "titulo": "Confira a programação do 2º Fórum Análise Setorial CCEE e faça sua inscrição",
+          "motivo_da_recusa": "O foco é a análise setorial de mercado de energia elétrica e infraestrutura, sem pauta ambiental dedicada."
         },
         {
           "boletim": "ambiental-esg",
           "fonte": "ANP | Notícias",
-          "titulo": "ANP fiscaliza agentes em 18 estados no período de 28/9 a 2/10",
-          "motivo_da_recusa": "A notícia aborda fiscalização normativa geral da ANP, sem focar em licenciamento ambiental ou passivos ecológicos específicos."
+          "titulo": "ANP credencia B3 S.A. como entidade registradora de Certificado de Garantia de Origem de Biometano (CGOB)",
+          "motivo_da_recusa": "O foco principal é o credenciamento regulatório setorial junto à ANP, embora envolva biocombustíveis."
         },
         {
-          "boletim": "propriedade-intelectual",
-          "fonte": "INPI | Notícias",
-          "titulo": "Relatório de Indisponibilidade Técnica dos dias 1 e 2/10",
-          "motivo_da_recusa": "Trata-se de um relatório de indisponibilidade de sistemas de TI, sem alterações nas regras de propriedade industrial ou marcas e patentes."
-        },
-        {
-          "boletim": "propriedade-intelectual",
-          "fonte": "INPI | Notícias",
-          "titulo": "Normalização parcial dos sistemas eletrônicos do INPI",
-          "motivo_da_recusa": "Informativo técnico sobre o funcionamento de sistemas eletrônicos, sem impacto nas normas de propriedade intelectual."
+          "boletim": "contencioso-civel",
+          "fonte": "Planalto | Resenha Diaria",
+          "titulo": "Medida Provisória nº 1.396, de 9.10.2026",
+          "motivo_da_recusa": "O ato é regulatório e normativo, sem constituir contencioso judicial ou arbitragem."
         }
       ],
       "cascata_gemini": {
@@ -1502,7 +1426,7 @@
         "lotes": [
           {
             "lote": 1,
-            "modelo": "gemini-3.5-flash",
+            "modelo": "gemini-3.5-flash-lite",
             "fontes": [
               "Planalto | Resenha Diaria",
               "Banco Central | Normas",
@@ -1511,160 +1435,165 @@
               "Receita Federal | Normas",
               "Ministério da Fazenda | Notícias"
             ],
-            "espera_por_sobrecarga_s": 210
+            "espera_por_sobrecarga_s": 0
           },
           {
             "lote": 2,
             "modelo": "gemini-3.5-flash-lite",
             "fontes": [
               "CVM | Notícias",
+              "B3 | Ofícios e Comunicados",
               "ANP | Notícias",
               "ANP | Consultas e Audiências Públicas",
-              "ONS | Notícias",
-              "ANEEL | Últimas Notícias",
-              "Ministério da Agricultura | Notícias"
+              "MME | Notícias",
+              "ONS | Notícias"
             ],
-            "espera_por_sobrecarga_s": 210
+            "espera_por_sobrecarga_s": 30
           },
           {
             "lote": 3,
-            "modelo": "gemini-3.5-flash",
+            "modelo": "gemini-3.5-flash-lite",
             "fontes": [
+              "ANEEL | Últimas Notícias",
+              "Ministério da Agricultura | Notícias",
               "ANVISA | Notícias",
               "INPI | Notícias",
               "SENACON | Notícias",
-              "EPE | Notícias",
-              "Kollemata | Decretos",
-              "SUSEP | Notícias"
+              "ANM | Notícias"
             ],
-            "espera_por_sobrecarga_s": 210
+            "espera_por_sobrecarga_s": 0
           },
           {
             "lote": 4,
-            "modelo": "gemini-3.5-flash",
+            "modelo": "gemini-3.7-flash",
             "fontes": [
+              "EPE | Notícias",
+              "Kollemata | Decretos",
+              "ANATEL | Notícias",
+              "SUSEP | Notícias",
               "ANTT | Notícias - Defeso Eleitoral"
             ],
-            "espera_por_sobrecarga_s": 30
+            "espera_por_sobrecarga_s": 210
           }
         ],
-        "lotes_fora_do_preferido": 4,
-        "espera_por_sobrecarga_s": 660,
-        "aviso": "4 de 4 lote(s) não usaram gemini-3.7-flash: lote 1 em gemini-3.5-flash; lote 2 em gemini-3.5-flash-lite; lote 3 em gemini-3.5-flash; lote 4 em gemini-3.5-flash"
+        "lotes_fora_do_preferido": 3,
+        "espera_por_sobrecarga_s": 240,
+        "aviso": "3 de 4 lote(s) não usaram gemini-3.7-flash: lote 1 em gemini-3.5-flash-lite; lote 2 em gemini-3.5-flash-lite; lote 3 em gemini-3.5-flash-lite"
       },
-      "nao_classificadas_pela_ia": 0,
+      "nao_classificadas_pela_ia": 7,
       "sugestoes_sem_ia": {
-        "com_radar_sugerido": 0,
+        "com_radar_sugerido": 7,
         "por_metodo": {
           "matriz": 0,
           "palavras_chave": 0,
-          "perfil_da_fonte": 0
+          "perfil_da_fonte": 7
         },
         "sem_radar": 0
       },
       "top_palavras_chave_detectadas": [
         {
           "palavra": "anvisa",
-          "ocorrencias": 13
-        },
-        {
-          "palavra": "anp",
           "ocorrencias": 8
         },
         {
-          "palavra": "infraestrutura",
-          "ocorrencias": 6
+          "palavra": "vigilância sanitária",
+          "ocorrencias": 7
         },
         {
-          "palavra": "selos de controle",
-          "ocorrencias": 6
-        },
-        {
-          "palavra": "antidumping",
-          "ocorrencias": 5
-        },
-        {
-          "palavra": "importações",
-          "ocorrencias": 5
-        },
-        {
-          "palavra": "uísque",
-          "ocorrencias": 5
-        },
-        {
-          "palavra": "fiscalização",
-          "ocorrencias": 5
-        },
-        {
-          "palavra": "exportação",
-          "ocorrencias": 5
+          "palavra": "antt",
+          "ocorrencias": 7
         },
         {
           "palavra": "resolução",
-          "ocorrencias": 5
+          "ocorrencias": 6
         },
         {
-          "palavra": "concessão",
-          "ocorrencias": 5
+          "palavra": "b3",
+          "ocorrencias": 4
         },
         {
           "palavra": "energia",
           "ocorrencias": 4
         },
         {
-          "palavra": "epe",
-          "ocorrencias": 4
-        },
-        {
-          "palavra": "transmissão",
-          "ocorrencias": 4
-        },
-        {
-          "palavra": "instrução normativa",
-          "ocorrencias": 4
-        },
-        {
-          "palavra": "antt",
-          "ocorrencias": 4
-        },
-        {
-          "palavra": "cvm",
-          "ocorrencias": 3
-        },
-        {
-          "palavra": "mineração",
-          "ocorrencias": 3
-        },
-        {
-          "palavra": "importação",
+          "palavra": "telecomunicações",
           "ocorrencias": 3
         },
         {
           "palavra": "oferta pública",
+          "ocorrencias": 3
+        },
+        {
+          "palavra": "valores mobiliários",
+          "ocorrencias": 3
+        },
+        {
+          "palavra": "consulta pública",
+          "ocorrencias": 3
+        },
+        {
+          "palavra": "aneel",
+          "ocorrencias": 3
+        },
+        {
+          "palavra": "ans",
+          "ocorrencias": 3
+        },
+        {
+          "palavra": "leilão",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "ccee",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "irpj",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "gás natural",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "cvm",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "anp",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "agência reguladora",
+          "ocorrencias": 2
+        },
+        {
+          "palavra": "mineração",
           "ocorrencias": 2
         }
       ]
     }
   },
   "filtro1_bloqueios_detalhe": {
-    "regulatorio-oleo-gas": [
-      "Padronização do cadastro das unidades consumidoras amplia segurança nos processos de migração para o mercado livre",
-      "CCEE consolida avanço da abertura do mercado livre de energia com 811 novas adesões em agosto"
+    "propriedade-intelectual": [
+      "Instrução Normativa BCB N° 781",
+      "Anvisa abre Consulta Pública sobre proposta de regulamentação do Sandbox Regulatório"
     ],
-    "ambiental-esg": [
-      "RESOLUÇÃO COMITÊ GESTOR DO FUNDO - FIRECE/CC Nº 6, DE 2 DE OUTUBRO DE 2026"
+    "regulatorio-oleo-gas": [
+      "Confira a programação do 2º Fórum Análise Setorial CCEE e faça sua inscrição",
+      "Ato Declaratório Executivo Decex/RJO nº 205",
+      "Notificação de suspeitas de doenças em animais"
     ],
     "imobiliario-infraestrutura": [
-      "RESOLUÇÃO COMITÊ GESTOR DO FUNDO - FIRECE/CC Nº 6, DE 2 DE OUTUBRO DE 2026",
-      "Ato Declaratório Executivo DRF/SOR Nº 1521",
-      "Ato Declaratório Executivo DRF/SOR Nº 1520"
+      "Ato Declaratório Executivo DRF/SOR nº 1567"
     ],
-    "societario-ma": [
-      "CVM lança Edital de Tomada Pública de Subsídios sobre o Informe de Governança Corporativa"
+    "trabalhista-empresarial": [
+      "Pregão Eletrônico nº 29/2026 (UASG 130062) - Portal Gov.br",
+      "Pregão Eletrônico nº 29/2026 (UASG 130062) - Portal Gov.br",
+      "AVISO DE LICITAÇÃO - Pregão nº 100/2026 LFDA-PE - Portal Gov.br"
     ],
-    "contencioso-civel": [
-      "STJ: Morar por 29 anos em imóvel da família não garante usucapião",
-      "Ocupação de imóvel de pais por herdeiro não gera usucapião extraordinária"
+    "direito-tributario": [
+      "ANTT abre reunião participativa sobre metodologia de recomposição de impactos da Reforma Tributária em contratos de rodovias"
     ]
   }
 }

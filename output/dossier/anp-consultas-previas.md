@@ -668,7 +668,11 @@ Compartilhe:
 
 [Galeria de Fotos](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos)
 
+[Rio Innovation Week 2026](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/rio-innovation-week-2026)
+
 [ROG.e 2026](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/rog-e-2026)
+
+[6º Ciclo da Oferta Permanente de Concessão](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/6o-ciclo-da-oferta-permanente-de-concessao)
 
 [Notas e Estudos Técnicos](https://www.gov.br/anp/pt-br/centrais-de-conteudo/notas-e-estudos-tecnicos)
 
@@ -851,10 +855,6 @@ Compartilhe:
 [Acesso aos Dados Técnicos](https://www.gov.br/anp/pt-br/rodadas-anp/acesso-dados-tecnicos)
 
 [English](https://www.gov.br/anp/en/access-information/what-is-anp/what-is-anp)
-
-[IRF General Meeting](https://www.gov.br/anp/pt-br/irf-general-meeting)
-
-[Directions to the ANP Office](https://www.gov.br/anp/pt-br/irf-general-meeting/directions-to-the-anp-office)
 
 [Redefinir Cookies](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa/2026)
 

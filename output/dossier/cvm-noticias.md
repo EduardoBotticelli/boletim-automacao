@@ -49,6 +49,188 @@ Viagens e Turismo
 Limpar
 Aplicar
 
+AVISO AO MERCADO
+
+[Revertida suspensão da oferta de Certificados de Recebíveis Imobiliários (CRI) da OPEA Securitizadora S.A.](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/revertida-suspensao-da-oferta-de-certificados-de-recebiveis-imobiliarios-cri-da-opea-securitizadora-s-a)
+
+13/10/2026
+
+-
+Irregularidades identificadas pela área técnica da CVM foram essencialmente sanadas
+
+Tags:
+
+[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
+
+[Suspensão revertida](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Suspens%C3%A3o%20revertida)
+
+AGENDA
+
+[Sessão de Julgamento em 13/10](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/sessao-de-julgamento-em-13-10)
+
+09/10/2026
+
+-
+Processo será julgado a partir das 15h
+
+Tags:
+
+[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
+
+[Sessão de julgamento](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Sess%C3%A3o%20de%20julgamento)
+
+EVENTO
+
+[CVM promove "Encontro com o Mercado" para apresentar resultados do Grupo de Trabalho de Tokenização (GTT)](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-promove-encontro-com-o-mercado-para-apresentar-resultados-do-grupo-de-trabalho-de-tokenizacao-gtt)
+
+08/10/2026
+
+-
+Evento, em parceria com ABcripto, ABToken, Anbima e ANCORD, e com apoio da B3 e da FGV, reuniu reguladores, agentes do mercado de capitais e especialistas do ecossistema digital em São Paulo
+
+Tags:
+
+[Comição de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comi%C3%A7%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
+
+[Grupo de Trabalho de Tokenização](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Grupo%20de%20Trabalho%20de%20Tokeniza%C3%A7%C3%A3o)
+
+ATIVIDADE SANCIONADORA
+
+[CVM aceita proposta de Termo de Compromisso com executivo da Moura Dubeux Engenharia S.A.](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-aceita-proposta-de-termo-de-compromisso-com-executivo-da-moura-dubeux-engenharia-s-a)
+
+07/10/2026
+
+-
+Reunião foi realizada em 6/10/2026
+
+Tags:
+
+[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
+
+[Termo de Compromisso](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Termo%20de%20Compromisso)
+
+AGENDA INTERNACIONAL
+
+[Presidente da CVM participa de Simpósio de Regulação de Blockchain em Nova York](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/presidente-da-cvm-participa-de-simposio-de-regulacao-de-blockchain-em-nova-york)
+
+06/10/2026
+
+-
+Otto Lobo falou sobre as iniciativas da implementação de tokenização e inteligência artificial nos trabalhos da Autarquia diante do mercado de capitais brasileiro
+
+Tags:
+
+[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
+
+[Agenda internacional](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Agenda%20internacional)
+
+AGENDA INTERNACIONAL
+
+[CVM participa de evento da IOSCO em Milão, na Itália](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-participa-de-evento-da-iosco-em-milao-na-italia)
+
+06/10/2026
+
+-
+Presidente Otto Lobo falou sobre supervisão de mercado no Brasil com o uso de inteligência artificial e tokenização do mercado brasileiro
+
+Tags:
+
+[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
+
+[Agenda internacional](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Agenda%20internacional)
+
+AGENDA
+
+[Sessão de Julgamento em 6/10](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/sessao-de-julgamento-em-6-10)
+
+06/10/2026
+
+-
+Processos serão julgados a partir das 15h
+
+Tags:
+
+[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
+
+[Sessão de julgamento](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Sess%C3%A3o%20de%20julgamento)
+
+CALENDÁRIO
+
+[Expediente na CVM no dia 12/10](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/expediente-na-cvm-no-dia-12-10)
+
+06/10/2026
+
+-
+Autarquia seguirá o disposto em Portaria do Ministério da Gestão e Inovação em Serviços Públicos (MGI)
+
+Tags:
+
+[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
+
+[Expediente](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Expediente)
+
+NORMATIZAÇÃO
+
+[CVM aprimora regras sobre envio e acesso a informações do Sistema de Informações de Crédito](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-aprimora-regras-sobre-envio-e-acesso-a-informacoes-do-sistema-de-informacoes-de-credito)
+
+05/10/2026
+
+-
+Alterações alcançam companhias securitizadoras e FIDC e ampliam o compartilhamento de informações sobre operações de crédito.
+
+Tags:
+
+[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
+
+[Normatização](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Normatiza%C3%A7%C3%A3o)
+
+EDUCAÇÃO FINANCEIRA
+
+[CVM participa do Toque de Campainha, que marca a abertura oficial da Semana Mundial do Investidor 2026](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-participa-do-toque-de-campainha-que-marca-a-abertura-oficial-da-semana-mundial-do-investidor-2026)
+
+05/10/2026
+
+-
+Maria Lucia Macieira, Superintendente de Orientação aos Investidores e Finanças Sustentáveis (SOI), esteve no lançamento da campanha promovida pela IOSCO e coordenada, no Brasil, pela Autarquia
+
+Tags:
+
+[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
+
+[Semana Mundial do Investidor](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Semana%20Mundial%20do%20Investidor)
+
+[Educação Financeira](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Educa%C3%A7%C3%A3o%20Financeira)
+
+NORMATIZAÇÃO
+
+[CVM inicia consulta pública sobre atualização de normas contábeis aplicáveis aos fundos de investimento para adequação aos padrões internacionais](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-inicia-consulta-publica-sobre-atualizacao-de-normas-contabeis-aplicaveis-aos-fundos-de-investimento-para-adequacao-aos-padroes-internacionais)
+
+05/10/2026
+
+-
+Sugestões e comentários podem ser enviados até 4/12/2026
+
+Tags:
+
+[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
+
+[Consulta Pública](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Consulta%20P%C3%BAblica)
+
+NORMATIZAÇÃO
+
+[CVM inicia consulta pública sobre alterações nos Pronunciamentos Técnicos CPC 18 (R3) e CPC 36 (R3)](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-inicia-consulta-publica-sobre-alteracoes-nos-pronunciamentos-tecnicos-cpc-18-r3-e-cpc-36-r3)
+
+05/10/2026
+
+-
+Sugestões e comentários podem ser enviados até 3/11/2026
+
+Tags:
+
+[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
+
+[Consulta Pública](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Consulta%20P%C3%BAblica)
+
 ATIVIDADE SANCIONADORA
 
 [CVM multa em R$ 3 milhões Neo In Construções e Incorporação Ltda. e seu administrador](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-multa-em-r-3-milhoes-neo-in-construcoes-e-incorporacao-ltda-e-seu-administrador)
@@ -63,21 +245,6 @@ Tags:
 [Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
 
 [Julgamento](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Julgamento)
-
-PUBLICAÇÃO
-
-[CVM lança Edital de Tomada Pública de Subsídios sobre o Informe de Governança Corporativa](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-lanca-edital-de-tomada-publica-de-subsidios-sobre-o-informe-de-governanca-corporativa)
-
-02/10/2026
-
--
-Iniciativa busca reunir dados, estudos e evidências sobre a aplicação do regime de divulgação de práticas de governança corporativa
-
-Tags:
-
-[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
-
-[Tomada Pública de Subsídios](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Tomada%20P%C3%BAblica%20de%20Subs%C3%ADdios)
 
 DIVULGAÇÃO
 
@@ -325,173 +492,6 @@ ATIVIDADE SANCIONADORA
 
 -
 Reunião, realizada em 8/9/2026, também rejeitou acordo com QI Corretora de Títulos e Valores Mobiliários S.A.
-
-Tags:
-
-[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
-
-[Termo de Compromisso](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Termo%20de%20Compromisso)
-
-ATIVIDADE SANCIONADORA
-
-[CVM publica Relatório da Atividade Sancionadora do 2º trimestre de 2026](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-publica-relatorio-da-atividade-sancionadora-do-2o-trimestre-de-2026)
-
-09/09/2026
-
--
-Dados mostram números do trabalho da Autarquia de abril a junho deste ano
-
-Tags:
-
-[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
-
-[RAS](https://www.gov.br/cvm/pt-br/@@search?SearchableText=RAS)
-
-AGENDA
-
-[Sessão de Julgamento em 8/9](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/sessao-de-julgamento-em-8-9)
-
-08/09/2026
-
--
-Processos serão julgados a partir das 15h
-
-Tags:
-
-[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
-
-[Sessão de julgamento](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Sess%C3%A3o%20de%20julgamento)
-
-OFÍCIO CIRCULAR
-
-[Área técnica da CVM esclarece orientações para coordenadores de ofertas públicas](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/area-tecnica-da-cvm-esclarece-orientacoes-para-coordenadores-de-ofertas-publicas)
-
-04/09/2026
-
--
-Documento informa condições para atuação de instituições não financeiras em ofertas sujeitas ao rito de registro automático
-
-Tags:
-
-[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
-
-[Ofício Circular](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Of%C3%ADcio%20Circular)
-
-AGENDA
-
-[CVM debate tokenização de ativos no Brasil](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-debate-tokenizacao-de-ativos-no-brasil)
-
-04/09/2026
-
--
-Representantes da Autarquia participaram do evento Token Summit Brasil, em São Paulo
-
-Tags:
-
-[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
-
-[Agenda](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Agenda)
-
-AGENDA
-
-[CVM participa do 9º Encontro Nacional da ANFIDC](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/cvm-participa-do-9o-encontro-nacional-da-anfidc)
-
-03/09/2026
-
--
-Presidente Otto Lobo abordou investimentos na modernização do trabalho da Autarquia
-
-Tags:
-
-[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
-
-[Agenda](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Agenda)
-
-AVISO AO MERCADO
-
-[Revertida suspensão de oferta pública de distribuição de cotas do NTZ Empreendimentos FIDC Multicarteira Resp Limitada](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/revertida-suspensao-de-oferta-publica-de-distribuicao-de-cotas-do-ntz-empreendimentos-fidc-multicarteira-resp-limitada)
-
-03/09/2026
-
--
-Irregularidades identificadas pela área técnica da CVM foram essencialmente sanadas
-
-Tags:
-
-[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
-
-[Revogação](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Revoga%C3%A7%C3%A3o)
-
-[Oferta Pública](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Oferta%20P%C3%BAblica)
-
-AVISO AO MERCADO
-
-[Suspensa oferta de Certificados de Recebíveis Imobiliários (CRI) da OPEA Securitizadora S.A.](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/suspensa-oferta-de-certificados-de-recebiveis-imobiliarios-cri-da-opea-securitizadora-s-a)
-
-03/09/2026
-
--
-Área técnica da CVM identificou irregularidades na documentação da oferta no rito automático
-
-Tags:
-
-[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
-
-[Suspensão de oferta](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Suspens%C3%A3o%20de%20oferta)
-
-ORIENTAÇÃO AO MERCADO
-
-[Área técnica da CVM divulga Ofício Circular Anual sobre atuação do auditor independente](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/area-tecnica-da-cvm-divulga-oficio-circular-anual-sobre-atuacao-do-auditor-independente)
-
-03/09/2026
-
--
-Documento reúne orientações sobre registro, execução dos trabalhos de auditoria, fundos de investimento e asseguração de informações de sustentabilidade
-
-Tags:
-
-[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
-
-[Ofício Circular](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Of%C3%ADcio%20Circular)
-
-AVISO AO MERCADO
-
-[Indisponibilidade temporária de acesso ao Sistema Fundos.NET](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/indisponibilidade-temporaria-de-acesso-ao-sistema-fundos.net)
-
-03/09/2026
-
--
-Sistema estará fora do ar das 21h do dia 11/9 à 1h do dia 12/9
-
-Tags:
-
-[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
-
-[Sistema Fundos.NET](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Sistema%20Fundos.NET)
-
-CONVÊNIO
-
-[Colegiado da CVM aprova novo aditivo em acordo de cooperação com a Anbima referente à supervisão de fundos de investimento](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/colegiado-da-cvm-aprova-novo-aditivo-em-acordo-de-cooperacao-com-a-anbima-referente-a-supervisao-de-fundos-de-investimento)
-
-03/09/2026
-
--
-Parceria tem como objetivo reestruturação e consolidação do ACT, tendo em vista a otimização das atividades desenvolvidas pelas instituições
-
-Tags:
-
-[Comissão de Valores Mobiliários](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Comiss%C3%A3o%20de%20Valores%20Mobili%C3%A1rios)
-
-[Acordo de cooperação técnica](https://www.gov.br/cvm/pt-br/@@search?SearchableText=Acordo%20de%20coopera%C3%A7%C3%A3o%20t%C3%A9cnica)
-
-ATIVIDADE SANCIONADORA
-
-[Colegiado da CVM rejeita proposta de Termo de Compromisso com diretores da Ambipar Participações e Empreendimentos S.A.](https://www.gov.br/cvm/pt-br/assuntos/noticias/2026/colegiado-da-cvm-rejeita-proposta-de-termo-de-compromisso-com-diretores-da-ambipar-participacoes-e-empreendimentos-s-a)
-
-03/09/2026
-
--
-Reunião, realizada em 1º/9/2026, também deliberou sobre caso envolvendo membro do conselho de administração da Iguatemi S.A.
 
 Tags:
 
