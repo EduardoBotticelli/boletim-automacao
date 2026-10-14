@@ -1,73 +1,80 @@
 {
   "status": "sucesso",
-  "data_execucao": "2026-10-05T11:51:05.819528+00:00",
-  "data_edicao": "2026-10-05",
-  "total_itens_boletim": 103,
-  "total_decisoes": 103,
-  "total_aprovados": 94,
+  "data_execucao": "2026-10-14T11:59:07.734993+00:00",
+  "data_edicao": "2026-10-14",
+  "total_itens_boletim": 91,
+  "total_decisoes": 91,
+  "total_aprovados": 81,
   "total_itens_manuais": 0,
-  "total_rejeitados": 9,
+  "total_rejeitados": 10,
   "fora_do_email": [
     {
-      "fonte": "Destaques do D.O.U.",
-      "titulo": "REPUBLICAÇÃO (*) DESPACHO DO PRESIDENTE DA REPÚBLICA ADVOCACIA-GERAL DA UNIÃO",
-      "url": "https://www.in.gov.br/web/dou/-/republicacao-*-736292321",
-      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
-      "acao_revisao": "sem_radar"
-    },
-    {
-      "fonte": "Destaques do D.O.U.",
-      "titulo": "RESOLUÇÃO COMITÊ GESTOR DO FUNDO - FIRECE/CC Nº 6, DE 2 DE OUTUBRO DE 2026",
-      "url": "https://www.in.gov.br/web/dou/-/resolucao-comite-gestor-do-fundo-firece/cc-n-6-de-2-de-outubro-de-2026-736293629",
-      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
-      "acao_revisao": "sem_radar"
-    },
-    {
-      "fonte": "Destaques do D.O.U.",
-      "titulo": "PORTARIA AGU Nº 318, DE 2 DE OUTUBRO DE 2026",
-      "url": "https://www.in.gov.br/web/dou/-/portaria-agu-n-318-de-2-de-outubro-de-2026-736289333",
+      "fonte": "Banco Central | Normas",
+      "titulo": "Instrução Normativa BCB N° 781",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Instrução%20Normativa%20BCB&numero=781",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
       "fonte": "Ministério da Agricultura | Notícias",
-      "titulo": "Mapa disponibiliza 14,5 milhões de doses de vacinas contra clostridioses em setembro",
-      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/mapa-disponibiliza-14-5-milhoes-de-doses-de-vacinas-contra-clostridioses-em-setembro",
+      "titulo": "Notificação de suspeitas de doenças em animais",
+      "url": "https://www.gov.br/agricultura/pt-br/sisbravet/",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
-      "fonte": "ANVISA | Notícias",
-      "titulo": "Sistema NDS Web ficará indisponível neste domingo (5/10) para atualização",
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/sistema-nds-web-ficara-indisponivel-neste-domingo-5-10-para-atualizacao",
+      "fonte": "Ministério da Agricultura | Notícias",
+      "titulo": "agroinsight animal 01/2025 — Ministério da Agricultura e Pecuária",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/angola/ANGOLAQUEIJOMUSSARELA_POTENCIALPARAOMERCADOANGOLANO.pdf/view",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
-      "fonte": "ANVISA | Notícias",
-      "titulo": "Anvisa participa de simulado de mesa no Aeroporto Internacional de Natal",
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-participa-de-simulado-de-mesa-no-aeroporto-internacional-de-natal",
+      "fonte": "Ministério da Agricultura | Notícias",
+      "titulo": "agroinsight animal 01/2025 — Ministério da Agricultura e Pecuária",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/nigeria/NIGRIAPANORAMADOSETORDECARNESNANIGRIA.pdf/view",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
-      "fonte": "ANVISA | Notícias",
-      "titulo": "Anvisa publica Caderno 8 da Série Segurança do Paciente e Qualidade em Serviços de Saúde",
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-publica-caderno-8-da-serie-seguranca-do-paciente-e-qualidade-em-servicos-de-saude",
+      "fonte": "Ministério da Agricultura | Notícias",
+      "titulo": "agroinsight 01/2025 — Ministério da Agricultura e Pecuária - Portal Gov.br",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/ira/IRIMPACTODAINFLAOEDESVALORIZAOMONETRIANOIR.pdf/view",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
-      "fonte": "ANVISA | Notícias",
-      "titulo": "Anvisa lança campanha para estimular a prevenção e a notificação de erros de medicação",
-      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-lanca-campanha-para-estimular-a-prevencao-e-a-notificacao-de-erros-de-medication",
+      "fonte": "Ministério da Agricultura | Notícias",
+      "titulo": "agroinsight vegetal 01/2025 — Ministério da Agricultura e Pecuária",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/nigeria/NIGRIAPANORAMADAPRODUODEARROZNANIGRIA.pdf/view",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
-      "fonte": "EPE | Notícias",
-      "titulo": "Estudo da EPE apresentado no terceiro dia da ROG.e 2026 é selecionado como um dos melhores do evento",
-      "url": "https://www.epe.gov.br/pt/imprensa/noticias/estudo-da-epe-apresentado-no-terceiro-dia-da-rog-e-2026-e-selecionado-como-um-dos-melhores-do-evento",
+      "fonte": "Ministério da Agricultura | Notícias",
+      "titulo": "agroinsight animal 01/2025 — Ministério da Agricultura e Pecuária",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/india/NDIAPESCADOBRASILEIRONAINDIAMULTIPLICANDOPOSSIBILIDADES.pdf/view",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "Ministério da Agricultura | Notícias",
+      "titulo": "agroinsight animal 01/2025 — Ministério da Agricultura e Pecuária",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/alemanha/ALEMANHAFEBREAFTOSAAMEAAAPECURIAALEM.pdf/view",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "Kollemata | Decretos",
+      "titulo": "Os Cartórios do ES foram destaque na imprensa em setembro",
+      "url": "https://sinoreg-es.org.br/os-cartorios-do-es-foram-destaque-na-imprensa-em-setembro/",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "ANTT | Notícias - Defeso Eleitoral",
+      "titulo": "Operação Romaria Segura bate recorde de 53,6 mil peregrinos e termina sem mortes pelo segundo ano seguido na Via Dutra",
+      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/operacao-romaria-segura-bate-recorde-de-53-6-mil-peregrinos-e-termina-sem-mortes-pelo-segundo-ano-seguido-na-via-dutra",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     }
@@ -283,10 +290,11 @@
       "template": "Template_Radar Trabalhista.msg",
       "arquivo": "email_trabalhista-empresarial.eml",
       "previa": "email_trabalhista-empresarial.html",
-      "total_itens": 2,
+      "total_itens": 3,
       "secoes_publicadas": [
-        "DestaquesDOU",
-        "MinisterioDaFazenda"
+        "DiarioOficialDaUniao",
+        "MinisterioDaFazenda",
+        "Planalto"
       ]
     },
     {
@@ -295,9 +303,8 @@
       "template": "Template_Radar Tributário.msg",
       "arquivo": "email_direito-tributario.eml",
       "previa": "email_direito-tributario.html",
-      "total_itens": 29,
+      "total_itens": 7,
       "secoes_publicadas": [
-        "DestaquesDOU",
         "DiarioOficialUniao",
         "MinisterioFazenda",
         "ReceitaFederal"
@@ -309,7 +316,7 @@
       "template": "Template_Radar Societário_ Fusões e Aquisições.msg",
       "arquivo": "email_societario-ma.eml",
       "previa": "email_societario-ma.html",
-      "total_itens": 5,
+      "total_itens": 2,
       "secoes_publicadas": [
         "BancoCentral",
         "MinisterioFazenda"
@@ -321,8 +328,9 @@
       "template": "Template_Radar Mercado de Capitais e Fundos de Investimento.msg",
       "arquivo": "email_mercado-capitais-fundos.eml",
       "previa": "email_mercado-capitais-fundos.html",
-      "total_itens": 10,
+      "total_itens": 17,
       "secoes_publicadas": [
+        "B3",
         "BancoCentral",
         "CVM",
         "DiarioOficialUniao",
@@ -335,16 +343,18 @@
       "template": "Template_Radar Regulatório e Óleo e Gás.msg",
       "arquivo": "email_regulatorio-oleo-gas.eml",
       "previa": "email_regulatorio-oleo-gas.html",
-      "total_itens": 37,
+      "total_itens": 39,
       "secoes_publicadas": [
+        "ANATEL",
         "ANEEL",
+        "ANM",
         "ANP",
         "ANTT",
         "ANVISA",
         "DiarioOficialUniao",
         "EPE",
-        "SENACON",
-        "SUSEP"
+        "MME",
+        "Planalto"
       ]
     },
     {
@@ -353,13 +363,17 @@
       "template": "Template_Radar Negócios Imobiliários e Infraestrutura.msg",
       "arquivo": "email_imobiliario-infraestrutura.eml",
       "previa": "email_imobiliario-infraestrutura.html",
-      "total_itens": 17,
+      "total_itens": 15,
       "secoes_publicadas": [
+        "ANEEL",
+        "ANM",
+        "ANP",
         "ANTT",
         "CCEE",
+        "CVM",
         "DiarioOficialUniao",
-        "EPE",
-        "Kollemata"
+        "MAPA",
+        "MME"
       ]
     },
     {
@@ -370,11 +384,11 @@
       "previa": "email_ambiental-esg.html",
       "total_itens": 5,
       "secoes_publicadas": [
+        "ANM",
         "ANP",
         "ANTT",
         "CCEE",
-        "EPE",
-        "MAPA"
+        "Planalto"
       ]
     },
     {
@@ -383,9 +397,12 @@
       "template": "Template_Radar Propriedade Intelectual_ Tecnologia e Privacidade.msg",
       "arquivo": "email_propriedade-intelectual.eml",
       "previa": "email_propriedade-intelectual.html",
-      "total_itens": 2,
+      "total_itens": 5,
       "secoes_publicadas": [
-        "INPI"
+        "DiarioOficialUniao",
+        "INPI",
+        "Planalto",
+        "SENACON"
       ]
     },
     {
@@ -396,8 +413,8 @@
       "previa": "email_contencioso-civel.html",
       "total_itens": 5,
       "secoes_publicadas": [
-        "DestaquesDOU",
         "DiarioOficialUniao",
+        "Planalto",
         "SENACON"
       ]
     }
