@@ -111,15 +111,15 @@ PISO_RESGATE = 5
 PAUSA_FIRECRAWL = 6.5
 # O Firecrawl cobra 2 creditos a cada 10 resultados de busca pedidos.
 CREDITOS_POR_BUSCA = 2 * math.ceil(BUSCA_LIMITE / 10)
-# O 503 UNAVAILABLE e sobrecarga do lado do Google, temporaria por definicao.
-# Na execucao de 29/09 foram 27 erros 503 e nenhum 429, e a cascata antiga
-# (duas tentativas por modelo, 10 s entre elas) se esgotava em uns 100
-# segundos e entregava quatro dos cinco lotes ao modelo mais fraco. Agora o
-# primeiro modelo espera e repete nestes intervalos antes de ceder a vez.
-ESPERAS_SOBRECARGA = (30, 60, 120)
-# Teto da espera por sobrecarga, somada em todos os lotes da execucao. Passado
-# o teto, a cascata volta a descer sem esperar, para caber no workflow.
-TETO_ESPERA_SOBRECARGA = 15 * 60
+# O 503 UNAVAILABLE e sobrecarga do lado do Google, temporaria por definicao:
+# o primeiro modelo espera e repete antes de ceder a vez. Ate 05/10 eram tres
+# esperas (30, 60 e 120 s) em cada lote; na execucao #82 o gemini-3.7-flash
+# deu 503 nas 14 tentativas dos quatro lotes e consumiu 16 dos 25 minutos da
+# etapa sem responder nenhum. Agora e uma espera so.
+ESPERAS_SOBRECARGA = (30,)
+# Teto da espera por sobrecarga, somada em todos os modelos e lotes da
+# execucao. Passado o teto, a cascata desce sem esperar.
+TETO_ESPERA_SOBRECARGA = 3 * 60
 # Tempo-limite de cada chamada ao Gemini. Sem ele a biblioteca espera para
 # sempre: em 01/10 a primeira chamada ficou 58 minutos sem resposta e o
 # workflow foi cancelado aos 60, sem edicao. Nas execucoes normais cada lote
@@ -128,8 +128,10 @@ TEMPO_CHAMADA = 180
 # Prazo da etapa da IA, contado do primeiro lote, e prazo do script inteiro,
 # para sobrar tempo de gravar a edicao dentro dos 60 minutos do workflow
 # mesmo quando a coleta demora. Vale o que vencer primeiro. O que a IA nao
-# classificou no prazo segue pelas regras sem IA (sugestao_sem_ia.py).
-PRAZO_IA = 25 * 60
+# classificou no prazo segue pelas regras sem IA (sugestao_sem_ia.py). Com 25
+# minutos, a execucao #82 levou 29,5; com 15, a coleta diaria fica perto de 20
+# no pior caso.
+PRAZO_IA = 15 * 60
 PRAZO_EXECUCAO = 45 * 60
 # Chamada que nao teria nem este tempo antes do prazo nem comeca.
 MINIMO_CHAMADA = 30
@@ -766,29 +768,52 @@ def restante(orcamento):
 ROTULO_ERRO = {"tempo": "sem resposta no tempo-limite", "cota": "cota esgotada (429)", "sobrecarga": "sobrecarga", "outro": "resposta inválida ou erro"}
 
 
+def ordem_da_cascata(orcamento):
+    """
+    Ordem dos modelos para o proximo lote e o modelo fixado, se houver.
+
+    O modelo abaixo do primeiro que respondeu um lote vale para o resto da
+    execucao: nos lotes seguintes, o primeiro ainda e tentado uma vez, sem
+    espera (pode ter voltado), e logo depois vem o que respondeu, os de baixo
+    dele e, por ultimo, os que ele pulou. Assim nenhum modelo deixa de ser
+    tentado antes de o lote falhar.
+    """
+    fixo = orcamento.get("modelo_que_respondeu")
+    if fixo not in MODELOS[1:]:
+        return list(MODELOS), None
+    i = MODELOS.index(fixo)
+    return [MODELOS[0]] + MODELOS[i:] + MODELOS[1:i], fixo
+
+
 def gemini(cliente, prompt, orcamento=None):
     """
     Passa um lote pela cascata de modelos. Cada erro tem sua resposta:
 
     - sobrecarga (503 e outros 5xx): o primeiro modelo espera e repete nos
-      intervalos de ESPERAS_SOBRECARGA, enquanto 'orcamento' deixar; os
-      outros repetem uma vez depois de 10 s, como sempre;
+      intervalos de ESPERAS_SOBRECARGA; os outros repetem uma vez depois de
+      10 s. Toda espera por sobrecarga conta contra TETO_ESPERA_SOBRECARGA;
     - cota (429): desce na hora. A mensagem vai inteira para o log, porque e
       ela que diz se a cota estourada e por minuto ou por dia;
     - tempo (passou de TEMPO_CHAMADA sem resposta): desce na hora;
     - outro: repete uma vez depois de 10 s, como sempre.
 
+    Com um modelo fixado ('ordem_da_cascata'), o primeiro modelo tem uma
+    tentativa so, sem espera nem repeticao.
+
     'orcamento' e compartilhado pelos lotes de uma execucao: soma quanto ja
-    se esperou por sobrecarga, contra TETO_ESPERA_SOBRECARGA, e guarda em
-    'limite' o prazo da etapa da IA (time.monotonic). Sem tempo para mais
-    uma chamada antes do prazo, devolve nada e marca 'esgotado'.
+    se esperou por sobrecarga, guarda em 'limite' o prazo da etapa da IA
+    (time.monotonic) e em 'modelo_que_respondeu' o modelo fixado. Sem tempo
+    para mais uma chamada antes do prazo, devolve nada e marca 'esgotado'.
     """
     if orcamento is None:
         orcamento = {"espera": 0}
     logs = []
-    for posicao, modelo in enumerate(MODELOS):
-        esperas_sobrecarga = list(ESPERAS_SOBRECARGA) if posicao == 0 else [10]
-        repeticoes = 1
+    ordem, fixo = ordem_da_cascata(orcamento)
+    for posicao, modelo in enumerate(ordem):
+        preferido = modelo == MODELOS[0]
+        sondagem = preferido and fixo is not None
+        esperas_sobrecarga = [] if sondagem else list(ESPERAS_SOBRECARGA) if preferido else [10]
+        repeticoes = 0 if sondagem else 1
         tentativa = 0
         while True:
             tentativa += 1
@@ -805,17 +830,23 @@ def gemini(cliente, prompt, orcamento=None):
                 if not isinstance(dados, dict) or not isinstance(dados.get("itens"), list):
                     raise ValueError("JSON sem itens")
                 duracao = round(time.monotonic() - comeco)
-                logs.append({"modelo": modelo, "tentativa": tentativa, "status": "sucesso", "duracao_s": duracao})
+                logs.append({"modelo": modelo, "tentativa": tentativa, "status": "sucesso", "duracao_s": duracao, **({"sondagem": True} if sondagem else {})})
                 print(f"  {modelo}: respondeu em {duracao} s")
+                if preferido:
+                    orcamento.pop("modelo_que_respondeu", None)
+                else:
+                    orcamento["modelo_que_respondeu"] = modelo
                 return dados, modelo, logs
             except Exception as erro:
                 duracao = round(time.monotonic() - comeco)
                 tipo = tipo_de_erro(erro)
                 registro = {"modelo": modelo, "tentativa": tentativa, "status": "erro", "tipo_erro": tipo, "duracao_s": duracao, "erro": erro_resumo(erro, 4000 if tipo == "cota" else 400)}
+                if sondagem:
+                    registro["sondagem"] = True
                 logs.append(registro)
                 espera = 0
                 if tipo == "sobrecarga" and esperas_sobrecarga:
-                    if posicao > 0 or orcamento["espera"] + esperas_sobrecarga[0] <= TETO_ESPERA_SOBRECARGA:
+                    if orcamento["espera"] + esperas_sobrecarga[0] <= TETO_ESPERA_SOBRECARGA:
                         espera = esperas_sobrecarga.pop(0)
                 elif tipo == "outro" and repeticoes:
                     repeticoes -= 1
@@ -823,9 +854,17 @@ def gemini(cliente, prompt, orcamento=None):
                 if espera + MINIMO_CHAMADA > restante(orcamento):
                     # Esperar e repetir passaria do prazo.
                     espera = 0
-                if espera and tipo == "sobrecarga" and posicao == 0:
+                if espera and tipo == "sobrecarga":
                     orcamento["espera"] += espera
-                seguinte = f"nova tentativa em {espera} s" if espera else "passa ao próximo modelo" if posicao + 1 < len(MODELOS) else "último modelo da cascata"
+                proximo = ordem[posicao + 1] if posicao + 1 < len(ordem) else ""
+                if espera:
+                    seguinte = f"nova tentativa em {espera} s"
+                elif not proximo:
+                    seguinte = "último modelo da cascata"
+                elif sondagem:
+                    seguinte = f"passa a {proximo}, que já respondeu nesta execução"
+                else:
+                    seguinte = "passa ao próximo modelo"
                 print(f"  {modelo}: {ROTULO_ERRO[tipo]} em {duracao} s; {seguinte}")
                 if not espera:
                     break
