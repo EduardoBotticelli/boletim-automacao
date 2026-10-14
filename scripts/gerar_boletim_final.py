@@ -814,6 +814,28 @@ def resolver_secao(fonte, slug, secoes, aliases):
     return None
 
 
+def corrigir_conectores_radar_tributario(html_template, slug):
+    """Mantém 'da' em minúsculas nos dois títulos do template Tributário."""
+    if slug != "direito-tributario":
+        return html_template
+
+    for ancora, trecho in (
+        ("MinisterioFazenda", "Da Fazenda"),
+        ("DiarioOficialUniao", "Da União"),
+    ):
+        padrao = re.compile(
+            r"(<a\b(?=[^>]*\bname=['\"]?" + re.escape(ancora) + r"['\"]?)[^>]*>)"
+            r"(.*?)</a>",
+            re.I | re.S,
+        )
+        html_template = padrao.sub(
+            lambda m, trecho=trecho: m.group(1) + m.group(2).replace(trecho, trecho[0].lower() + trecho[1:]) + "</a>",
+            html_template,
+            count=1,
+        )
+    return html_template
+
+
 def rotulo_da_fonte(fonte):
     """
     O nome da fonte como ele aparece para quem lê.
@@ -870,7 +892,9 @@ def agrupar_por_secao(
         return next((alvo for alvo in secoes if alvo.ancora == ancora), None)
 
     for item in itens:
-        secao = resolver_secao(item.get("fonte"), slug, secoes, aliases)
+        secao = resolver_secao(
+            item.get("secao_email") or item.get("fonte"), slug, secoes, aliases
+        )
         generica = False
 
         if (
@@ -1071,6 +1095,8 @@ def main():
                 f"ERRO ao ler o template {caminho_template.name}: {erro} "
                 "Os e-mails finais foram preservados."
             ) from erro
+        template.html = corrigir_conectores_radar_tributario(template.html, slug)
+        estrutura = templates_radar.analisar(template.html)
         carregados[slug] = (template, estrutura)
         ajustes_aplicados[slug] = ajustes
 

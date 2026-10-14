@@ -252,6 +252,36 @@ def exclusao_institucional(item):
     return next((m for m in marcadores if m in t), "")
 
 
+def excluir_avisos_agricultura(itens):
+    """Marca licitações e títulos repetidos da fonte MAPA para auditoria."""
+    fonte_alvo = " ".join(sem_acento("Ministério da Agricultura | Notícias").lower().split())
+    vistos = set()
+    excluidos = []
+    for item in itens:
+        fonte = " ".join(sem_acento(item.get("fonte", "")).lower().split())
+        if fonte != fonte_alvo:
+            continue
+
+        titulo = " ".join(sem_acento(item.get("titulo", "")).casefold().split())
+        if not titulo:
+            continue
+        chave = (fonte, titulo)
+        if re.search(r"\b(?:preg[aã]o|licita[cç][aã]o)\b", titulo, re.I):
+            motivo = "Aviso de licitação ou pregão do Ministério da Agricultura."
+        elif chave in vistos:
+            motivo = "Título repetido na mesma fonte do Ministério da Agricultura."
+        else:
+            vistos.add(chave)
+            continue
+
+        item["exclusao_editorial_automatica"] = motivo
+        excluidos.append(
+            {"fonte": item.get("fonte", ""), "titulo": item.get("titulo", ""),
+             "url": item.get("url", ""), "motivo": motivo}
+        )
+    return excluidos
+
+
 def estado(fonte, hoje):
     if not fonte.get("ativo", True):
         return "inativa"
@@ -1297,6 +1327,7 @@ def main():
     # Os atos do DOU entram depois da IA, com os Radares do filtro por orgao;
     # o Filtro 1 e a limpeza do resumo, abaixo, valem para eles como para os outros.
     itens.extend(itens_do_dou(material))
+    exclusoes_agricultura = excluir_avisos_agricultura(itens)
     log["dou"] = resumo_dou(material)
     if log["dou"] and args.reprocessar:
         # Os atos vem do dossier guardado: o credito foi gasto na coleta, nao agora.
@@ -1329,6 +1360,8 @@ def main():
         if exclusao_institucional(item):
             item["exclusao_editorial_automatica"] = "Comunicação institucional sem impacto jurídico externo concreto."
             finais = []
+        elif item.get("exclusao_editorial_automatica"):
+            finais = []
         rejs = [x for x in item.get("boletins_rejeitados", []) if isinstance(x, dict)]
         for slug in impedidos:
             bloqueios.setdefault(slug, []).append(item.get("titulo", ""))
@@ -1343,6 +1376,7 @@ def main():
             if r.get("boletim"):
                 rejeicoes[r["boletim"]] += 1
     log["resumos_limpos"] = resumos_limpos
+    log["exclusoes_editoriais_agricultura"] = exclusoes_agricultura
     distribuicao = distribuir_sem_ia(itens, ativas, modelo)
     log["distribuicao_sem_ia"] = distribuicao
     resgates = resgatar_por_escassez(itens, PISO_RESGATE)

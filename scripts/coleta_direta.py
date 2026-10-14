@@ -777,7 +777,6 @@ BCB_BUSCA = (
 )
 TITULO_B3 = re.compile(r"\[(\d{2})/(\d{2})/(\d{2}) ([^\]]+)\]\((https?://[^\s)]+)\)")
 PDF_B3 = re.compile(r"\[Download do Documento\]\((https?://[^\s)]+)\)")
-LINHA_RECEITA = re.compile(r"<tr[^>]*class=['\"]linhaResultados['\"][^>]*>", re.I)
 
 
 class FalhaColeta(Exception):
@@ -881,13 +880,22 @@ def api_bcb(cliente, fonte, inicio, fim):
 
 
 def ler_linhas_receita(html_texto):
-    """Uma publicacao por linha da tabela de resultados do SIJUT."""
+    """Uma publicacao por linha da tabela de resultados do SIJUT.
+
+    O SIJUT já alterou os atributos CSS das linhas. Identifique a estrutura
+    pelo conteúdo da linha e pelo identificador do ato, não pela classe
+    visual ``linhaResultados``.
+    """
     publicacoes = []
-    for pedaco in LINHA_RECEITA.split(html_texto)[1:]:
-        linha = re.sub(r"<!--.*?-->", "", pedaco.split("</tr>")[0], flags=re.S)
+    for linha_bruta in re.findall(r"<tr\b[^>]*>(.*?)</tr\s*>", html_texto or "", re.S | re.I):
+        linha = re.sub(r"<!--.*?-->", "", linha_bruta, flags=re.S)
         celulas = [" ".join(html.unescape(re.sub(r"<[^>]+>", " ", c)).split())
                    for c in re.findall(r"<td[^>]*>(.*?)</td>", linha, re.S | re.I)]
-        ato = re.search(r"consulta/externa/(\d+)", linha) or re.search(r"idAto=(\d+)", pedaco)
+        ato = (
+            re.search(r"consulta/externa/(\d+)", linha, re.I)
+            or re.search(r"[?&]idAto=(\d+)", html.unescape(linha), re.I)
+            or re.search(r"\bidAto=(\d+)", html.unescape(linha), re.I)
+        )
         if len(celulas) < 4 or not ato:
             continue
         tipo, numero, orgao = celulas[0], celulas[1], celulas[2]

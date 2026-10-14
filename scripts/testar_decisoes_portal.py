@@ -32,6 +32,9 @@ from pathlib import Path
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(BASE_DIR / "scripts"))
+import gerar_boletim_final as gerador_final  # noqa: E402
+
 SCRIPT = BASE_DIR / "scripts" / "gerar_boletim_final.py"
 MODULO_TEMPLATES = BASE_DIR / "scripts" / "templates_radar.py"
 MODULO_AJUSTES = BASE_DIR / "scripts" / "ajustes_templates.py"
@@ -316,6 +319,76 @@ def teste_fluxo_completo():
 
     # O .eml é o artefato de envio: precisa existir para os nove Radares.
     assert len(r.mensagens) == 9, f"esperava 9 .eml, veio {len(r.mensagens)}"
+
+
+def teste_atos_dou_do_regulatorio_entram_nas_secoes_cade_mec_mdic():
+    boletim = boletim_exemplo()
+    casos = [
+        ("Ato do CADE", "CADE"),
+        ("Ato do MEC", "MEC"),
+        ("Ato do MDIC", "MDIC"),
+    ]
+    boletim["itens"] = []
+    decisoes = []
+
+    for indice, (titulo, secao) in enumerate(casos):
+        url = f"https://www.in.gov.br/dou/ato-{indice}"
+        boletim["itens"].append(
+            {
+                "fonte": "Diário Oficial da União | Seção 1",
+                "secao_email": secao,
+                "categoria": "Diário Oficial da União",
+                "titulo": titulo,
+                "data_publicacao": "2026-10-14",
+                "resumo": "Ato normativo do órgão.",
+                "boletins_confirmados": ["regulatorio-oleo-gas"],
+                "boletins_rejeitados": [],
+                "url": url,
+                "boletins": ["regulatorio-oleo-gas"],
+            }
+        )
+        decisoes.append(
+            decisao(
+                titulo,
+                url,
+                "Diário Oficial da União | Seção 1",
+                "aprovado",
+                ["regulatorio-oleo-gas"],
+            )
+        )
+
+    r = executar(boletim, payload(decisoes))
+
+    assert r.codigo == 0, f"esperava sucesso, saída:\n{r.saida}"
+    arquivo = next(
+        item for item in r.resumo["arquivos_gerados"]
+        if item["slug"] == "regulatorio-oleo-gas"
+    )
+    assert set(arquivo["secoes_publicadas"]) == {"CADE", "MEC", "MDIC"}, arquivo
+    assert all(titulo in r.emails["regulatorio-oleo-gas"] for titulo, _ in casos)
+
+
+def teste_titulos_do_radar_tributario_preservam_da_em_minuscula():
+    templates_radar = gerador_final.templates_radar
+    template = templates_radar.carregar_template(
+        str(TEMPLATES_DIR / "Template_Radar Tributário.msg")
+    )
+    estrutura_original = templates_radar.analisar(template.html)
+    nomes_originais = {secao.ancora: secao.nome for secao in estrutura_original.secoes}
+    assert nomes_originais["MinisterioFazenda"] == "Ministério Da Fazenda"
+    assert nomes_originais["DiarioOficialUniao"] == "Diário Oficial Da União"
+
+    corrigido = gerador_final.corrigir_conectores_radar_tributario(
+        template.html, "direito-tributario"
+    )
+    estrutura_corrigida = templates_radar.analisar(corrigido)
+    nomes_corrigidos = {secao.ancora: secao.nome for secao in estrutura_corrigida.secoes}
+
+    assert nomes_corrigidos["MinisterioFazenda"] == "Ministério da Fazenda"
+    assert nomes_corrigidos["DiarioOficialUniao"] == "Diário Oficial da União"
+    assert gerador_final.corrigir_conectores_radar_tributario(
+        template.html, "regulatorio-oleo-gas"
+    ) == template.html
 
 
 def teste_edicoes_de_texto():
@@ -1875,6 +1948,8 @@ def teste_o_que_fica_fora_do_email_vai_para_o_resumo_com_o_motivo():
 
 TESTES = [
     teste_fluxo_completo,
+    teste_atos_dou_do_regulatorio_entram_nas_secoes_cade_mec_mdic,
+    teste_titulos_do_radar_tributario_preservam_da_em_minuscula,
     teste_edicoes_de_texto,
     teste_item_sem_decisao_bloqueia,
     teste_status_pendente_bloqueia,
