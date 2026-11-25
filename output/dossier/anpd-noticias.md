@@ -1,30 +1,536 @@
-2026-10-09 | ANPD publica 2º Relatório Parcial de Monitoramento do Sandbox Regulatório em Inteligência Artificial | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-2o-relatorio-parcial-de-monitoramento-do-sandbox-regulatorio-em-inteligencia-artificial | Documento apresenta os avanços das testagens de sistemas inovadores desenvolvidos por três empresas selecionadas no projeto-piloto da Agência
-2026-10-08 | ANPD promove webinário sobre o ECA Digital para marcar o Mês das Crianças | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-promove-webinario-sobre-o-eca-digital-para-marcar-o-mes-das-criancas | No evento virtual da próxima quinta (15), Agência fará balanço do primeiro ano de implementação da legislação
-2026-10-06 | ANPD divulga resultado final do 4º Prêmio Danilo Doneda | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-divulga-resultado-final-do-4o-premio-danilo-doneda | Artigos vencedores abordam inteligência artificial, criação automatizada de plataformas e privacidade desde a concepção como dever na LGPD
-2026-10-06 | ANPD abre consulta pública e inscrições para audiência sobre revisão do processo regulatório | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-abre-consulta-audiencia-publica-sobre-revisao-processo-regulatorio | Os interessados em falar na audiência do dia 22/10 podem se inscrever até 16/10. Já as contribuições por escrito podem ser enviadas até 23/11
-2026-10-05 | ANPD celebra memorando de entendimento com a autoridade de proteção de dados de Portugal | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-celebra-memorando-de-entendimento-com-a-autoridade-de-protecao-de-dados-de-portugal | Além de formalizar a parceria com o CNPD, em Lisboa, a Agência debateu governança de dados e inteligência artificial no 2º Diálogo Político de Alto Nível em Madri, na Espanha
-2026-10-05 | ANPD lança página específica para denúncias de infrações aos novos decretos do Marco Civil da Internet | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-lanca-pagina-especifica-para-denuncias-de-infracoes-aos-novos-decretos-do-marco-civil-da-internet | Novo canal permite comunicar à Agência possíveis descumprimentos das obrigações previstas nos Decretos nº 12.975/26 e nº 12.976/26 por plataformas digitais
-2026-09-22 | Audiência pública para discutir novo regulamento de fiscalização da ANPD será nesta quinta (24) | https://www.gov.br/anpd/pt-br/assuntos/noticias/audiencia-publica-para-discutir-novo-regulamento-de-fiscalizacao-da-anpd-sera-nesta-quinta-24 | Reunião será transmitida pelo Youtube e é parte das medidas para participação da sociedade civil na elaboração de normativos que vão balizar o trabalho da Agência
-2026-09-21 | ANPD divulga resultado preliminar do 4º Prêmio Danilo Doneda | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-divulga-resultado-preliminar-do-4o-premio-danilo-doneda | Os trabalhos vencedores abordam temas como inteligência artificial, os desafios da Agência diante da automatização das plataformas digitais e a governança de dados pela LGPD
-2026-09-16 | ECA Digital completa um ano e é marco na proteção de crianças e adolescentes na internet | https://www.gov.br/anpd/pt-br/assuntos/noticias/eca-digital-completa-um-ano-e-e-marco-na-protecao-de-criancas-e-adolescentes-na-internet | Lei abriu caminho para a ANPD regular e fiscalizar plataformas digitais para garantir segurança do público infantojuvenil na internet
-2026-09-16 | Projeto Sandbox Regulatório de IA da ANPD é finalista de prêmio internacional | https://www.gov.br/anpd/pt-br/assuntos/noticias/projeto-sandbox-regulatorio-de-ia-da-anpd-e-finalista-de-premio-internacional | Iniciativa pioneira da Agência concorre na edição 2026 do Global Privacy and Data Protection Awards e disputa também a categoria de voto popular
-2026-09-09 | ANPD abre inscrições para audiência e inicia consulta pública para atualização de Regulamento de Fiscalização | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-abre-audiencia-consulta-atualizacao-regulamento-fiscalizacao | As contribuições podem ser enviadas até 26/10, enquanto as inscrições para a audiência virtual do dia 24/09 podem ser feitas até 18/09
-2026-09-01 | ANPD abre tomadas de subsídios sobre próxima agenda regulatória e avaliação do resultado regulatório | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-abre-ts-agenda-regulatoria-e-avaliacao-de-resultado-regulatorio | As contribuições podem ser enviadas até 16/10 e ajudarão a orientar a atuação da Agência em temas como proteção de crianças e adolescentes, IA, biometria e direitos dos titulares de dados
-2026-08-25 | ANPD multa TikTok em R$ 153,7 milhões por falhas na proteção de dados de crianças e adolescentes | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-multa-tiktok-em-r-153-7-milhoes-por-falhas-na-protecao-de-dados-de-criancas-e-adolescentes | Rede social é multada por violações à LGPD. ByteDance também se comprometeu com plano de conformidade para correção das irregularidades e melhoria no tratamento de dados
-2026-08-21 | ANPD avalia como plataformas digitais atuam para prevenir conteúdos criminosos e proteger crianças e mulheres na internet | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-avalia-como-plataformas-digitais-atuam-para-prevenir-conteudos-criminosos-e-proteger-criancas-e-mulheres-na-internet | Monitoramento faz parte do planejamento anunciado pela Agência em junho, para avaliar ações para efetivação da atualização do Marco Civil da Internet e do ECA Digital
-2026-08-21 | ANPD e PNUD divulgam resultado da seleção de consultores que vão elaborar estudos sobre IA e proteção de dados | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-resultado-da-selecao-para-consultores-que-vao-elaborar-relatorios-em-protecao-de-dados | Aprovados serão comunicados por e-mail, mas também podem acessar a página do projeto e conferir o resultado
-2026-08-19 | ANPD publica metodologia de testagem do Sandbox Regulatório em IA e Proteção de Dados | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-metodologia-de-testagem-do-sandbox-regulatorio-em-inteligencia-artificial-e-protecao-de-dados | Documento apresenta as diferentes fases de testes do projeto-piloto e tem o foco na produção de evidências na gestão de riscos e no aprendizado regulatório
-2026-08-18 | ANPD publica relatório de acompanhamento e execução da agenda regulatória do 1º semestre deste ano | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-relatorio-de-acompanhamento-e-execucao-da-agenda-regulatoria-no-1o-semestre-deste-ano | Destaque ficou por conta das ações voltadas à regulamentação e implementação do ECA Digital e do decreto que atualiza o Marco Civil da Internet
-2026-08-14 | ANPD realiza consulta multissetorial sobre Sandbox Regulatório de Inteligência Artificial | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-realiza-consulta-multissetorial-sobre-sandbox-regulatorio-de-inteligencia-artificial | O encontro reuniu especialistas de diferentes áreas para avaliar e contribuir com o desenvolvimento do projeto
-2026-08-12 | ANPD realiza 3º Encontro de Encarregados na próxima quarta | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-realiza-encontro-anpd-de-encarregados-na-proxima-quarta | Inteligência artificial, incidentes de segurança e os desafios trazidos pelo ECA Digital estão entre os temas do evento, que destaca a atuação dos encarregados no fortalecimento da governança e da cultura de proteção de dados no Brasil
-2026-08-12 | Em medida preventiva, ANPD determina que Discord suspenda transmissões ao vivo no Brasil | https://www.gov.br/anpd/pt-br/assuntos/noticias/em-medida-preventiva-anpd-determina-que-discord-suspenda-transmissoes-ao-vivo-no-brasil | Foram identificadas falhas na implementação de medidas estruturais e procedimentos para prevenir e combater violações graves contra crianças e adolescentes
-2026-08-11 | Plataformas digitais acessadas por crianças e adolescentes precisam publicar relatório de transparência até 17/09 | https://www.gov.br/anpd/pt-br/assuntos/noticias/plataformas-digitais-acessadas-por-criancas-e-adolescentes-precisam-publicar-relatorio-de-transparencia-ate-17-de-setembro | Obrigatoriedade de publicação do documento está prevista no ECA Digital. ANPD esclarece que deve ser considerada data em que legislação completa um ano
-2026-08-07 | ANPD instaura processo de fiscalização contra o Discord para apurar falhas na proteção de crianças e adolescentes | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-instaura-processo-de-fiscalizacao-contra-o-discord-para-apurar-falhas-na-protecao-de-criancas-e-adolescentes | Agência investiga possível descumprimento de deveres previstos no ECA Digital relacionados à prevenção, detecção, interrupção e comunicação de violações graves no ambiente digital
-2026-07-29 | ANPD publica Radar Tecnológico sobre deepfakes | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-radar-tecnologico-sobre-deepfakes | Estudo analisa o funcionamento, as aplicações e os desafios desta tecnologia para a proteção de dados e a construção de ambientes digitais seguros
-2026-07-28 | ANPD e ANA assinam Acordo de Cooperação Técnica para proteção de dados pessoais | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-e-ana-assinam-acordo-de-cooperacao-tecnica-para-protecao-de-dados-pessoais | Acordo prevê ações educativas, reuniões técnicas e produção de estudos sobre a gestão de dados no setor regulado pela Agência Nacional de Águas
-2026-07-27 | ANPD releases English version of Technology Radar on Generative AI | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-releases-english-version | Translation of the third volume in the series brings technical insights from the Agency to the international data protection community
-2026-07-27 | Brasil se torna membro de rede global de reguladores de segurança no ambiente digital | https://www.gov.br/anpd/pt-br/assuntos/noticias/brasil-se-torna-membro-de-rede-global-de-reguladores-de-seguranca-no-ambiente-digital | ANPD é a primeira autoridade reguladora da América do Sul a integrar a GOSRN, ampliando a cooperação internacional para a proteção de direitos na internet
-2026-07-23 | ANPD lança versão em inglês do Radar Tecnológico sobre Inteligência Artificial Generativa | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-lanca-versao-ingles-rt-ingles | Tradução do terceiro volume da série amplia o conhecimento técnico produzido pela Agência para a comunidade internacional de proteção de dados
-2026-07-21 | ANPD divulga resultado final das inscrições do 4º Prêmio Danilo Doneda | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-divulga-resultado-final-das-inscricoes-do-4o-premio-danilo-doneda | Também foi publicado, no Diário Oficial, a composição da comissão julgadora desta edição da premiação. A análise técnica dos artigos vai até 17 de setembro
-2026-07-16 | Dia Nacional da Proteção de Dados é comemorado nesta sexta-feira (17) | https://www.gov.br/anpd/pt-br/assuntos/noticias/dia-nacional-da-protecao-de-dados-e-comemorado-nesta-sexta-feira-17 | Data foi estabelecida em 2025, em homenagem ao professor Danilo Doneda, que atuou na criação da LGPD. Neste mês, ANPD promove dois eventos alusivos à data
-2026-07-15 | Encerradas inscrições para participação presencial no 3º Encontro ANPD de Encarregados | https://www.gov.br/anpd/pt-br/assuntos/noticias/encerradas-inscricoes-para-o-3-encontro-anpd-encarregados | Evento será realizado presencialmente no dia 19 de agosto, no auditório do DNIT, em Brasília, e transmitido ao vivo pelo canal da Agência no Youtube
+# Notícias
+
+Publicado em 02/12/2020 14:35Modificado em 25/11/2026 06:44
+
+Compartilhe:
+
+[Compartilhe no  Whatsapp](https://api.whatsapp.com/send?text=https://www.gov.br/anpd/pt-br/assuntos/noticias "Compartilhe no  Whatsapp")[Compartilhe no  X](https://twitter.com/share?url=https://www.gov.br/anpd/pt-br/assuntos/noticias "Compartilhe no  X")[Compartilhe no  Facebook](http://www.facebook.com/sharer.php?u=https://www.gov.br/anpd/pt-br/assuntos/noticias "Compartilhe no  Facebook")[Compartilhe no  Linkedin](https://linkedin.com/shareArticle/?url=https://www.gov.br/anpd/pt-br/assuntos/noticias "Compartilhe no  Linkedin")
+
+Filtrar
+
+Pesquisar Notícias
+
+Data de Publicação
+
+Categoria
+
+Categoria
+
+## Resultados da pesquisa: 706
+
+- REGULAÇÃO
+
+
+
+### [ANPD e CGU lançam guia orientativo sobre a Lei de Acesso à Informação e a Proteção de Dados Pessoais](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-e-cgu-lancam-guia-orientativo-sobre-a-lei-de-acesso-a-informacao-e-a-protecao-de-dados-pessoais)
+
+
+
+[![guia LAI](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-e-cgu-lancam-guia-orientativo-sobre-a-lei-de-acesso-a-informacao-e-a-protecao-de-dados-pessoais/@@images/image-200-73410ce1aaddd0ea42ddf539ea94c8e5.png)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-e-cgu-lancam-guia-orientativo-sobre-a-lei-de-acesso-a-informacao-e-a-protecao-de-dados-pessoais)
+
+25/11/2026 06:44 \- Documento orienta órgãos e entidades do poder executivo federal a aplicar, de forma conjunta, a LAI e a LGPD
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [Autoridade Nacional de Proteção de Dados](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Autoridade%20Nacional%20de%20Prote%C3%A7%C3%A3o%20de%20Dados) [Guia Orientativo](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Guia%20Orientativo)
+
+- INTERNACIONAL
+
+
+
+### [ANPD é eleita para vice-presidência da rede global de reguladores de segurança no ambiente digital](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-e-eleita-para-vice-presidencia-da-rede-global-de-reguladores-de-seguranca-no-ambiente-digital)
+
+
+
+[![Reunião anual da Global Online Safety Regulators Network (GOSRN](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-e-eleita-para-vice-presidencia-da-rede-global-de-reguladores-de-seguranca-no-ambiente-digital/@@images/image-200-02f5e06592322aca6a7ef743c6f3a27d.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-e-eleita-para-vice-presidencia-da-rede-global-de-reguladores-de-seguranca-no-ambiente-digital)
+
+25/11/2026 06:32 \- Reunião anual da Global Online Safety Regulators Network (GOSRN) acontece em Sydney, na Austrália. Agência levará experiência do ECA Digital para membros da rede
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [Autoridade Nacional de Proteção de Dados](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Autoridade%20Nacional%20de%20Prote%C3%A7%C3%A3o%20de%20Dados) [ECA Digital](https://www.gov.br/anpd/search?origem=keyword&SearchableText=ECA%20Digital)
+
+- INTERNACIONALIZAÇÃO
+
+
+
+### [ANPD traduz para inglês o Guia de Fornecedores do ECA Digital e o Radar Tecnológico de Deepfakes](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-traduz-para-o-ingles-guia-orientativo-e-radar-tecnologico)
+
+
+
+[![post-publicações-inglês_carrossel-site.png](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-traduz-para-o-ingles-guia-orientativo-e-radar-tecnologico/@@images/image-200-6bbb098fca2bf12d1b04f761f7f9d1ee.png)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-traduz-para-o-ingles-guia-orientativo-e-radar-tecnologico)
+
+24/11/2026 15:40 \- Traduções de documentos técnicos sobre o Estatuto e a IA buscam ampliar a transparência regulatória, fortalecer a cooperação internacional e facilitar o acesso às orientações brasileiras
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [Guia Orientativo](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Guia%20Orientativo) [Radar Tecnológico](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Radar%20Tecnol%C3%B3gico) [Regulação](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Regula%C3%A7%C3%A3o) [Tradução](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Tradu%C3%A7%C3%A3o)
+
+- RELAÇÕES INTERNACIONAIS
+
+
+
+### [ANPD amplia cooperação internacional durante a 48ª Assembleia Global de Privacidade, em Bruxelas](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-amplia-cooperacao-internacional-durante-a-48a-assembleia-global-de-privacidade-em-bruxelas)
+
+
+
+[![carrossel-Lorena-GPA-Bruxelas.jpg](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-amplia-cooperacao-internacional-durante-a-48a-assembleia-global-de-privacidade-em-bruxelas/@@images/image-200-bf1381bb648a8d1719ba4cf5116a02ad.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-amplia-cooperacao-internacional-durante-a-48a-assembleia-global-de-privacidade-em-bruxelas)
+
+23/11/2026 16:52 \- Delegação da Agência participou de debates sobre IA, interoperabilidade regulatória, reuniões com autoridades e empresas de tecnologia, além de premiação internacional
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [ANPD](https://www.gov.br/anpd/search?origem=keyword&SearchableText=ANPD) [International Partnership](https://www.gov.br/anpd/search?origem=keyword&SearchableText=International%20Partnership)
+
+- EDUCAÇÃO
+
+
+
+### [ANPD lança programa para intercâmbio de estudantes na Agência](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-lanca-programa-para-intercambio-de-estudantes-na-agencia)
+
+
+
+[![carrossel_materia_programa_imersao_anpd.jpg](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-lanca-programa-para-intercambio-de-estudantes-na-agencia/@@images/image-200-169cdf37aa130b4c9ec09767fd5d2705.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-lanca-programa-para-intercambio-de-estudantes-na-agencia)
+
+23/11/2026 06:51 \- Inscrições para alunos de mestrado e doutorado abrem nesta segunda (23). Objetivo é o desenvolvimento de soluções inovadoras voltadas aos desafios da proteção de dados e IA
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [Imersao](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Imersao)
+
+- ECA DIGITAL
+
+
+
+### [Conselho Diretor da ANPD rejeita recurso do Discord e mantém interrupção das transmissões ao vivo no Brasil](https://www.gov.br/anpd/pt-br/assuntos/noticias/conselho-diretor-da-anpd-rejeita-recurso-do-discord-e-mantem-interrupcao-das-transmissoes-ao-vivo-no-brasil)
+
+
+
+[![carrossel-Discord.medida-preventiva.jpg](https://www.gov.br/anpd/pt-br/assuntos/noticias/conselho-diretor-da-anpd-rejeita-recurso-do-discord-e-mantem-interrupcao-das-transmissoes-ao-vivo-no-brasil/@@images/image-200-d33adb66ed98e6e5e87fd1760010d260.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/conselho-diretor-da-anpd-rejeita-recurso-do-discord-e-mantem-interrupcao-das-transmissoes-ao-vivo-no-brasil)
+
+19/11/2026 06:09 \- Decisão unânime mantém medida preventiva para proteger crianças e adolescentes de riscos graves na plataforma
+
+Categoria: Ciência e Tecnologia
+
+- INTERNACIONAL
+
+
+
+### [Rede Ibero-Americana de Proteção de Dados, presidida pela ANPD, aprova padrões para uso de IA](https://www.gov.br/anpd/pt-br/assuntos/noticias/rede-ibero-americana-de-protecao-de-dados-presidida-pela-anpd-aprova-padroes-para-uso-de-ia)
+
+
+
+[![carrossel-Padrões-Ibero-Americanos-sobre-o-Uso-de-Dados-Pessoais-em-IA.jpg](https://www.gov.br/anpd/pt-br/assuntos/noticias/rede-ibero-americana-de-protecao-de-dados-presidida-pela-anpd-aprova-padroes-para-uso-de-ia/@@images/image-200-84c6cf65f092b2fd07731ab949e4280f.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/rede-ibero-americana-de-protecao-de-dados-presidida-pela-anpd-aprova-padroes-para-uso-de-ia)
+
+18/11/2026 17:27 \- Documento traz orientações para uso responsável dos dados por sistemas de IA, incluindo regras sobre decisões automatizadas, IA generativa, biometria e transparência
+
+Categoria: Ciência e Tecnologia
+
+- PARTICIPAÇÃO SOCIAL
+
+
+
+### [ANPD prorroga tomada de subsídios do Plano de Dados Abertos até esta quinta (19)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-prorroga-tomada-de-subsidios-do-plano-de-dados-abertos-ate-esta-quinta-19)
+
+
+
+[![prorrogaca_TS_PDA](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-prorroga-tomada-de-subsidios-do-plano-de-dados-abertos-ate-esta-quinta-19/@@images/image-200-219f0fe8b330b256e4a46b5be573c54d.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-prorroga-tomada-de-subsidios-do-plano-de-dados-abertos-ate-esta-quinta-19)
+
+17/11/2026 05:55 \- População terá mais três dias para sugerir a abertura de até dez bases de dados da Agência, levando em conta sua utilidade para o cotidiano, para pesquisas e atividades profissionais
+
+Categoria: Ciência e Tecnologia
+
+- RECONHECIMENTO
+
+
+
+### [Sandbox Regulatório de IA da ANPD conquista prêmio internacional em Bruxelas](https://www.gov.br/anpd/pt-br/assuntos/noticias/sandbox-regulatorio-de-ia-da-anpd-conquista-premio-internacional-em-bruxelas)
+
+
+
+[![GPA](https://www.gov.br/anpd/pt-br/assuntos/noticias/sandbox-regulatorio-de-ia-da-anpd-conquista-premio-internacional-em-bruxelas/@@images/image-200-009330cf0ac5bc0625ce3ab3d043bbb3.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/sandbox-regulatorio-de-ia-da-anpd-conquista-premio-internacional-em-bruxelas)
+
+17/11/2026 05:42 \- Iniciativa brasileira vence o People's Choice Award no Global Privacy and Data Protection Awards 2026, promovido pela Assembleia Global de Privacidade (GPA)
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [Inteligência Artificial](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Intelig%C3%AAncia%20Artificial) [Proteção de dados](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Prote%C3%A7%C3%A3o%20de%20dados) [sandbox](https://www.gov.br/anpd/search?origem=keyword&SearchableText=sandbox)
+
+- RELAÇÕES INTERNACIONAIS
+
+
+
+### [ANPD assina memorando de entendimento com autoridade de proteção de dados da Coreia do Sul](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-assina-memorando-de-entendimento-com-autoridade-de-protecao-de-dados-da-coreia-do-sul)
+
+
+
+[![carrossel-Memorando-de-Entendimento-com-a-Autoridade-Coreana.jpg](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-assina-memorando-de-entendimento-com-autoridade-de-protecao-de-dados-da-coreia-do-sul/@@images/image-200-839de3c3e6d0a1316e24c72b552307f7.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-assina-memorando-de-entendimento-com-autoridade-de-protecao-de-dados-da-coreia-do-sul)
+
+16/11/2026 18:15 \- Parceria amplia a cooperação internacional em proteção de dados pessoais e prevê intercâmbio de experiências, capacitação e colaboração em atividades regulatórias e de fiscalização
+
+Categoria: Ciência e Tecnologia
+
+- BANCA
+
+
+
+### [ANPD seleciona Cebraspe para organizar 1º concurso público da Agência](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-seleciona-cebraspe-para-organizar-1o-concurso-publico-da-agencia)
+
+
+
+[![concurso_anpd_banca](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-seleciona-cebraspe-para-organizar-1o-concurso-publico-da-agencia/@@images/image-200-30c77be55e1b35755d89755d34bf1cb4.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-seleciona-cebraspe-para-organizar-1o-concurso-publico-da-agencia)
+
+16/11/2026 18:08 \- Certame prevê 50 vagas imediatas para Especialista em Regulação de Proteção de Dados e cadastro de reserva de até três vezes o número de vagas
+
+Categoria: Ciência e Tecnologia
+
+- INSTITUCIONAL
+
+
+
+### [Marcos Toscano é o novo superintendente de Relações Institucionais e Internacionais da ANPD](https://www.gov.br/anpd/pt-br/assuntos/noticias/marcos-toscano-e-o-novo-superintendente-de-relacoes-institucionais-e-internacionais-da-anpd)
+
+
+
+[![Marcos Toscano](https://www.gov.br/anpd/pt-br/assuntos/noticias/marcos-toscano-e-o-novo-superintendente-de-relacoes-institucionais-e-internacionais-da-anpd/@@images/image-200-e0f41f385a22cef3e897e4d80792e1fb.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/marcos-toscano-e-o-novo-superintendente-de-relacoes-institucionais-e-internacionais-da-anpd)
+
+11/11/2026 11:30 \- Novo gestor já passou pela Casa Civil da Presidência da República, dois ministérios e, agora, torna-se responsável pela articulação da Agência com organizações nacionais e internacionais
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [ANPD](https://www.gov.br/anpd/search?origem=keyword&SearchableText=ANPD)
+
+- RELAÇOES INTERNACIONAIS
+
+
+
+### [Brasil e Reino Unido avançam no diálogo sobre arranjos para transferências internacionais de dados](https://www.gov.br/anpd/pt-br/assuntos/noticias/brasil-e-reino-unido-avancam-no-dialogo-sobre-arranjos-para-transferencias-internacionais-de-dados)
+
+
+
+[![carrossel-Relação-UK-e-Brasil.jpg](https://www.gov.br/anpd/pt-br/assuntos/noticias/brasil-e-reino-unido-avancam-no-dialogo-sobre-arranjos-para-transferencias-internacionais-de-dados/@@images/image-200-cd8890af5d1a975294931af3acd59072.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/brasil-e-reino-unido-avancam-no-dialogo-sobre-arranjos-para-transferencias-internacionais-de-dados)
+
+06/11/2026 07:50 \- Países reafirmam compromisso com a promoção do fluxo internacional de dados e com a manutenção de elevados padrões de proteção de dados pessoais
+
+Categoria: Ciência e Tecnologia
+
+- SUBSTITUIÇÃO
+
+
+
+### [Iagê Miola assume interinamente a presidência do Conselho Diretor da ANPD](https://www.gov.br/anpd/pt-br/assuntos/noticias/iage-miola-assume-interinamente-a-presidencia-do-conselho-diretor-da-anpd)
+
+
+
+[![banner-presidente-interino](https://www.gov.br/anpd/pt-br/assuntos/noticias/iage-miola-assume-interinamente-a-presidencia-do-conselho-diretor-da-anpd/@@images/image-200-f495824fe5fdaaa68e185e04c735b780.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/iage-miola-assume-interinamente-a-presidencia-do-conselho-diretor-da-anpd)
+
+06/11/2026 07:09 \- Integrante do órgão máximo de decisão da instituição desde janeiro de 2025 e servidor público federal de carreira, diretor passa a exercer a função nesta sexta-feira (6)
+
+Categoria: Ciência e Tecnologia
+
+- INSTITUCIONAL
+
+
+
+### [Solenidade de balanço de seis anos da ANPD é marcada por despedida do 1º diretor-presidente da instituição](https://www.gov.br/anpd/pt-br/assuntos/noticias/solenidade-de-balanco-de-seis-anos-da-anpd-e-marcada-por-encerramento-do-mandato-do-1o-diretor-presidente-da-instituicao)
+
+
+
+[![opção-1-Carrossel-ANPD-6-anos.jpg](https://www.gov.br/anpd/pt-br/assuntos/noticias/solenidade-de-balanco-de-seis-anos-da-anpd-e-marcada-por-encerramento-do-mandato-do-1o-diretor-presidente-da-instituicao/@@images/image-200-867851d10b43d3d0a0d135c4c60d6510.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/solenidade-de-balanco-de-seis-anos-da-anpd-e-marcada-por-encerramento-do-mandato-do-1o-diretor-presidente-da-instituicao)
+
+06/11/2026 06:30 \- No evento, Waldemar Gonçalves da Agência se despediu dos servidores, e Prêmio Danilo Doneda foi entregue aos três estudantes vencedores
+
+Categoria: Ciência e Tecnologia
+
+- INOVAÇÃO TECNOLÓGICA
+
+
+
+### [ANPD conclui 1ª edição de Sandbox de IA e anuncia 2ª edição voltada a jogos digitais para crianças e adolescentes](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-conclui-1a-edicao-de-sandbox-de-ia-e-anuncia-2a-edicao-voltada-a-jogos-digitais-para-criancas-e-adolescentes)
+
+
+
+[![banner-sandbox-final](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-conclui-1a-edicao-de-sandbox-de-ia-e-anuncia-2a-edicao-voltada-a-jogos-digitais-para-criancas-e-adolescentes/@@images/image-200-1aee48841961b3781fdd1d7ed948751d.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-conclui-1a-edicao-de-sandbox-de-ia-e-anuncia-2a-edicao-voltada-a-jogos-digitais-para-criancas-e-adolescentes)
+
+05/11/2026 19:32 \- Balanço final consolida aprendizados a partir de três soluções de mercado, abrindo caminho para o 2º Sandbox, que focará no uso seguro da tecnologia pelo público infantojuvenil
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [Agência Nacional de Proteção de Dados](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Ag%C3%AAncia%20Nacional%20de%20Prote%C3%A7%C3%A3o%20de%20Dados) [sandbox](https://www.gov.br/anpd/search?origem=keyword&SearchableText=sandbox)
+
+- INSTITUCIONAL
+
+
+
+### [ANPD publica balanço de seis anos de atuação e o apresenta em evento nesta quinta-feira (05)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-balanco-de-seis-anos-de-atuacao)
+
+
+
+[![postagem-balanço-2026.png](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-balanco-de-seis-anos-de-atuacao/@@images/image-200-71719f2bc68e6728e04119371efc07de.png)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-balanco-de-seis-anos-de-atuacao)
+
+04/11/2026 16:08 \- Documento reúne os principais marcos da trajetória da Agência, com destaque para o fortalecimento institucional e a ampliação de suas competências
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [Agência Nacional de Proteção de Dados](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Ag%C3%AAncia%20Nacional%20de%20Prote%C3%A7%C3%A3o%20de%20Dados) [ANPD](https://www.gov.br/anpd/search?origem=keyword&SearchableText=ANPD) [ECA Digital](https://www.gov.br/anpd/search?origem=keyword&SearchableText=ECA%20Digital) [Marco Civil da Internet](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Marco%20Civil%20da%20Internet)
+
+- SANDBOX
+
+
+
+### [ANPD publica os três últimos Relatórios Parciais de Monitoramento do Sandbox em IA e proteção de dados](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-os-tres-ultimos-relatorios-parciais-de-monitoramento-do-sandbox-em-ia-e-protecao-de-dados)
+
+
+
+[![carrossel-sandbox-relatorios](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-os-tres-ultimos-relatorios-parciais-de-monitoramento-do-sandbox-em-ia-e-protecao-de-dados/@@images/image-200-bfdff0ba69c0c1edc546f5ed8fb143b3.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-os-tres-ultimos-relatorios-parciais-de-monitoramento-do-sandbox-em-ia-e-protecao-de-dados)
+
+03/11/2026 13:07 \- Documentos de nº 4, 5 e 6 consolidam os resultados das etapas avançadas de testagem das soluções tecnológicas e os destaques do workshop internacional promovido pela Agência.
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [sandbox](https://www.gov.br/anpd/search?origem=keyword&SearchableText=sandbox)
+
+- PARTICIPAÇÃO SOCIAL
+
+
+
+### [Classificação e cumulatividade de infrações são destaques em audiência pública sobre Regulamento de Dosimetria da ANPD](https://www.gov.br/anpd/pt-br/assuntos/noticias/classificacao-e-cumulatividade-de-infracoes-sao-destaques-em-audiencia-publica-sobre-regulamento-de-dosimetria-da-anpd)
+
+
+
+[![carrossel-Dosimetria-audiência-públicas-29-10](https://www.gov.br/anpd/pt-br/assuntos/noticias/classificacao-e-cumulatividade-de-infracoes-sao-destaques-em-audiencia-publica-sobre-regulamento-de-dosimetria-da-anpd/@@images/image-200-20faffbf1109ca372917dd99768b8043.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/classificacao-e-cumulatividade-de-infracoes-sao-destaques-em-audiencia-publica-sobre-regulamento-de-dosimetria-da-anpd)
+
+29/10/2026 18:50 \- O encontro virtual faz parte das ações de participação social para atualização do novo normativo, que também inclui uma consulta pública que está aberta a sugestões até 30 de novembro
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [ANPD](https://www.gov.br/anpd/search?origem=keyword&SearchableText=ANPD) [Audiência Pública](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Audi%C3%AAncia%20P%C3%BAblica) [ECA Digital](https://www.gov.br/anpd/search?origem=keyword&SearchableText=ECA%20Digital) [Marco Civil da Internet](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Marco%20Civil%20da%20Internet) [Participação Social](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Participa%C3%A7%C3%A3o%20Social)
+
+- PARTICIPAÇÃO SOCIAL
+
+
+
+### [ANPD abre tomada de subsídios para elaboração do Plano de Dados Abertos 2026–2028](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-abre-tomada-de-subsidios-para-elaboracao-do-plano-de-dados-abertos-2026-2028)
+
+
+
+[![carrossel-TS---Plano-de-Dados-Abertos](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-abre-tomada-de-subsidios-para-elaboracao-do-plano-de-dados-abertos-2026-2028/@@images/image-200-ce3852af630d77261330cf6c90019d70.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-abre-tomada-de-subsidios-para-elaboracao-do-plano-de-dados-abertos-2026-2028)
+
+29/10/2026 08:14 \- Os participantes poderão sugerir a abertura de até dez bases de dados, contribuindo para a construção do 1º Plano de Dados Abertos da Agência
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [Consulta Pública](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Consulta%20P%C3%BAblica) [Participação Social](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Participa%C3%A7%C3%A3o%20Social) [Tomada de Subsídios](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Tomada%20de%20Subs%C3%ADdios)
+
+- DIÁLOGO
+
+
+
+### [ANPD debate governança de dados durante conferência internacional que acontece na UnB](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-debate-governanca-de-dados-durante-conferencia-internacional-que-acontece-na-unb)
+
+
+
+[![ANPD debate governança de dados durante conferência internacional que acontece na UnB](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-debate-governanca-de-dados-durante-conferencia-internacional-que-acontece-na-unb/@@images/image-200-d06cae0d6bbae74756d2823a37648be1.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-debate-governanca-de-dados-durante-conferencia-internacional-que-acontece-na-unb)
+
+28/10/2026 18:00 \- Em sua 36ª edição, e primeira na América Latina, a Conferência Internacional da European Association for Research on Service colocou em pauta a regulação para governança segura e eficaz dos dados
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [ANPD](https://www.gov.br/anpd/search?origem=keyword&SearchableText=ANPD) [ECA Digital](https://www.gov.br/anpd/search?origem=keyword&SearchableText=ECA%20Digital) [Novos Decretos](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Novos%20Decretos)
+
+- INTERNACIONAL
+
+
+
+### [ANPD publica versões traduzidas para outros idiomas da LGPD e dos Decretos nº 12.975 e nº 12.976](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-versoes-traduzidas-para-outros-idiomas-dos-decretos-no-12-975-e-no-12-976-e-da-lgpd-atualizada)
+
+
+
+[![carrossel-Publicação-documentos-traduzidos.jpg](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-versoes-traduzidas-para-outros-idiomas-dos-decretos-no-12-975-e-no-12-976-e-da-lgpd-atualizada/@@images/image-200-571e39a9091b56a541d77f33fb5e6b63.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-versoes-traduzidas-para-outros-idiomas-dos-decretos-no-12-975-e-no-12-976-e-da-lgpd-atualizada)
+
+28/10/2026 16:41 \- Iniciativa objetiva ampliar alcance internacional do sistema regulatório brasileiro relacionado à proteção de dados, de crianças, adolescentes e mulheres no ambiente digital
+
+Categoria: Ciência e Tecnologia
+
+- REGULAÇÃO
+
+
+
+### [Guia esclarece quem deve cumprir o ECA Digital e quais são as responsabilidades das plataformas](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-guia-que-esclarece-quem-deve-cumprir-e-quais-sao-as-responsabilidades-das-plataformas-na-protecao-de-criancas-e-adolescentes)
+
+
+
+[![postagem guia fornecedores_carrossel-site.png](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-guia-que-esclarece-quem-deve-cumprir-e-quais-sao-as-responsabilidades-das-plataformas-na-protecao-de-criancas-e-adolescentes/@@images/image-200-74f0960c7aa09c8c7767f2beadadefd2.png)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-guia-que-esclarece-quem-deve-cumprir-e-quais-sao-as-responsabilidades-das-plataformas-na-protecao-de-criancas-e-adolescentes)
+
+28/10/2026 08:55 \- Documento explica quais produtos e serviços estão sujeitos ao ECA Digital e quais medidas os fornecedores devem adotar para garantir ambientes digitais mais seguros
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [Agência Nacional de Proteção de Dados](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Ag%C3%AAncia%20Nacional%20de%20Prote%C3%A7%C3%A3o%20de%20Dados) [ECA Digital](https://www.gov.br/anpd/search?origem=keyword&SearchableText=ECA%20Digital)
+
+- INSTITUCIONAL
+
+
+
+### [Confira programação do evento em que ANPD fará balanço dos seis anos de atuação](https://www.gov.br/anpd/pt-br/assuntos/noticias/programacao-evento-anpd-balanco-seis-anos)
+
+
+
+[![materia_carrossel_anpd_6_anos (1).jpg](https://www.gov.br/anpd/pt-br/assuntos/noticias/programacao-evento-anpd-balanco-seis-anos/@@images/image-200-02b0b46fc9f0f5c080bb09a4cf1c2185.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/programacao-evento-anpd-balanco-seis-anos)
+
+26/10/2026 15:08 \- Encontro será no próximo dia 05/11, em Brasília, com apresentação dos resultados da Agência, debates sobre sua trajetória institucional e entrega do 4º Prêmio Danilo Doneda
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [Agência Nacional de Proteção de Dados](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Ag%C3%AAncia%20Nacional%20de%20Prote%C3%A7%C3%A3o%20de%20Dados) [ANPD](https://www.gov.br/anpd/search?origem=keyword&SearchableText=ANPD)
+
+- FISCALIZAÇÃO
+
+
+
+### [ANPD estabelece medidas corretivas à Prefeitura de Feira de Santana pelo vazamento de dados médicos de 1.200 pessoas](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-estabelece-medidas-corretivas-a-prefeitura-de-feira-de-santana-pelo-vazamento-de-dados-medicos-de-1-200-pessoas)
+
+
+
+[![ANPD estabelece medidas corretivas à Prefeitura de Feira de Santana pelo vazamento de dados médicos de 1.200 pessoas](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-estabelece-medidas-corretivas-a-prefeitura-de-feira-de-santana-pelo-vazamento-de-dados-medicos-de-1-200-pessoas/@@images/image-200-9581e933853753d067d6a8a812024181.png)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-estabelece-medidas-corretivas-a-prefeitura-de-feira-de-santana-pelo-vazamento-de-dados-medicos-de-1-200-pessoas)
+
+26/10/2026 13:41 \- Decisão foi tomada após processo de fiscalização comprovar a exposição de informações de pacientes com HIV, anemia e fibromialgia no Diário Oficial do município baiano
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [ANPD](https://www.gov.br/anpd/search?origem=keyword&SearchableText=ANPD) [Fiscalização](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Fiscaliza%C3%A7%C3%A3o) [LGPD](https://www.gov.br/anpd/search?origem=keyword&SearchableText=LGPD)
+
+- PARTICIPAÇÃO SOCIAL
+
+
+
+### [ECA Digital é destaque em audiência pública que debateu a revisão do processo regulatório da ANPD](https://www.gov.br/anpd/pt-br/assuntos/noticias/eca-digital-e-destaque-em-audiencia-publica-que-debateu-a-revisao-do-processo-regulatorio-da-anpd)
+
+
+
+[![ECA Digital é destaque em audiência pública que debateu a revisão do processo regulatório da ANPD](https://www.gov.br/anpd/pt-br/assuntos/noticias/eca-digital-e-destaque-em-audiencia-publica-que-debateu-a-revisao-do-processo-regulatorio-da-anpd/@@images/image-200-bd761de310ad1f735d0c4ff3d431133b.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/eca-digital-e-destaque-em-audiencia-publica-que-debateu-a-revisao-do-processo-regulatorio-da-anpd)
+
+23/10/2026 09:24 \- Encontro virtual contou com a contribuição de diferentes atores para a atualização da Portaria nº 16/2021
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [Agenda Regulatória](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Agenda%20Regulat%C3%B3ria) [ANPD](https://www.gov.br/anpd/search?origem=keyword&SearchableText=ANPD) [Audiência Pública](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Audi%C3%AAncia%20P%C3%BAblica) [ECA Digital](https://www.gov.br/anpd/search?origem=keyword&SearchableText=ECA%20Digital)
+
+- INSTITUCIONAL
+
+
+
+### [Inscrições abertas para evento em que ANPD fará balanço dos seis anos de atuação](https://www.gov.br/anpd/pt-br/assuntos/noticias/inscricoes-abertas-anpd-balanco-6-anos)
+
+
+
+[![materia_carrossel_anpd_6_anos.jpg](https://www.gov.br/anpd/pt-br/assuntos/noticias/inscricoes-abertas-anpd-balanco-6-anos/@@images/image-200-7e391551c166a7093a54a0ad52c0caf1.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/inscricoes-abertas-anpd-balanco-6-anos)
+
+20/10/2026 12:50 \- Encontro será realizado no dia 05/11, em Brasília, com apresentação dos principais resultados da Agência, debates sobre os desafios futuros e entrega do Prêmio Danilo Doneda
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [Agência Nacional de Proteção de Dados](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Ag%C3%AAncia%20Nacional%20de%20Prote%C3%A7%C3%A3o%20de%20Dados) [ANPD](https://www.gov.br/anpd/search?origem=keyword&SearchableText=ANPD) [Distrito Federal](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Distrito%20Federal)
+
+- FISCALIZAÇÃO
+
+
+
+### [ANPD pede explicações à Meta sobre denúncias de violações na suspensão de contas e remoção de conteúdos](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-pede-explicacoes-a-meta-sobre-denuncias-de-violacoes-na-suspensao-de-contas-e-remocao-de-conteudos)
+
+
+
+[![carrossel-caso-meta.jpg](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-pede-explicacoes-a-meta-sobre-denuncias-de-violacoes-na-suspensao-de-contas-e-remocao-de-conteudos/@@images/image-200-bf1b6446eac3fe936be55abe4e8553c3.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-pede-explicacoes-a-meta-sobre-denuncias-de-violacoes-na-suspensao-de-contas-e-remocao-de-conteudos)
+
+19/10/2026 11:09 \- Relatos com potencial repercussão na legislação eleitoral foram encaminhados ao TSE. Procedimento administrativo foi aberto sexta (16), e os ofícios foram enviados nesta segunda (19)
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [LGPD](https://www.gov.br/anpd/search?origem=keyword&SearchableText=LGPD) [Marco Civil da Internet](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Marco%20Civil%20da%20Internet) [Plataformas Digitais](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Plataformas%20Digitais)
+
+- SANDBOX
+
+
+
+### [ANPD publica 3º Relatório Parcial de Monitoramento do Sandbox em IA e proteção de dados](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-3o-relatorio-parcial-de-monitoramento-do-sandbox-regulatorio-em-ia)
+
+
+
+[![Banner sandbox.jpeg](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-3o-relatorio-parcial-de-monitoramento-do-sandbox-regulatorio-em-ia/@@images/image-200-324de46b448934cca044a5951d557aa6.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-3o-relatorio-parcial-de-monitoramento-do-sandbox-regulatorio-em-ia)
+
+16/10/2026 16:51 \- Documento apresenta os resultados dos testes de segurança e proteção de dados de três soluções tecnológicas e os próximos passos do projeto-piloto
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [Inteligência Artificial](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Intelig%C3%AAncia%20Artificial) [sandbox](https://www.gov.br/anpd/search?origem=keyword&SearchableText=sandbox)
+
+- PARTICIPAÇÃO SOCIAL
+
+
+
+### [ANPD debate desafios do ECA Digital e apresenta novas entregas regulatórias durante Webinário](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-debate-desafios-ecadigital-webinar)
+
+
+
+[![Carrossel-webinario-dia-das-crianças.jpg](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-debate-desafios-ecadigital-webinar/@@images/image-200-7d6748e2dc1c08d93c1e3ba2c9acbf75.jpeg)](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-debate-desafios-ecadigital-webinar)
+
+15/10/2026 18:04 \- Apresentação on line reuniu especialistas para avaliar o primeiro ano da lei e marcou o pré-lançamento do Guia de Fornecedores, com publicação prevista até final de outubro
+
+Categoria: Ciência e Tecnologia
+
+
+
+Tags: [Consulta Pública](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Consulta%20P%C3%BAblica) [Dosimetria](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Dosimetria) [ECA Digital](https://www.gov.br/anpd/search?origem=keyword&SearchableText=ECA%20Digital) [Regulação](https://www.gov.br/anpd/search?origem=keyword&SearchableText=Regula%C3%A7%C3%A3o) [Sanção](https://www.gov.br/anpd/search?origem=keyword&SearchableText=San%C3%A7%C3%A3o)
+
+
+## Links de compartilhamento em redes sociais
+
+Compartilhe:
+
+[Compartilhe no  Whatsapp](https://api.whatsapp.com/send?text=https://www.gov.br/anpd/pt-br/assuntos/noticias "Compartilhe no  Whatsapp")[Compartilhe no  X](https://twitter.com/share?url=https://www.gov.br/anpd/pt-br/assuntos/noticias "Compartilhe no  X")[Compartilhe no  Facebook](http://www.facebook.com/sharer.php?u=https://www.gov.br/anpd/pt-br/assuntos/noticias "Compartilhe no  Facebook")[Compartilhe no  Linkedin](https://linkedin.com/shareArticle/?url=https://www.gov.br/anpd/pt-br/assuntos/noticias "Compartilhe no  Linkedin")
+
+Para melhorar a sua experiência na plataforma e prover serviços personalizados, utilizamos cookies. **Ao aceitar, você terá acesso a todas as funcionalidades do site. Se clicar em "Rejeitar Cookies", os cookies que não forem estritamente necessários serão desativados.** Para escolher quais quer autorizar, clique em "Gerenciar cookies". Saiba mais em nossa [Declaração de Cookies](https://www.gov.br/pt-br/termos-de-uso).
+
+Gerenciar cookiesRejeitar cookiesAceitar cookies
+
+![Acessível com VLibras](https://vlibras.gov.br/app/assets/images/vlibras-popup.webp)![](https://vlibras.gov.br/app/assets/images/vlibras-access.svg)

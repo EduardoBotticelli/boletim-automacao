@@ -64,98 +64,92 @@ Produtos/Publicações da EPE
 
 Filtrar
 
-[EPE publica pela primeira vez versão em inglês do Informe de Monitoramento sobre a Política de E&P de petróleo e gás e de seu Fact Sheet](https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-pela-primeira-vez-versao-em-ingles-do-informe-de-monitoramento-sobre-a-politica-de-e-p-de-petroleo-e-gas-e-de-seu-fact-sheet)
+[EPE participa de seminário sobre acesso ao cozimento limpo e combate à pobreza energética](https://www.epe.gov.br/pt/imprensa/noticias/epe-participa-de-seminario-sobre-acesso-ao-cozimento-limpo-e-combate-a-pobreza-energetica)
 
-13/10/2026 -
-Pela primeira vez, a Empresa de Pesquisa Energética (EPE) disponibiliza em inglês o Informe de Monitoramento sobre a Política de Exploração e Produção (E&P) de Petróleo e Gás, edição de 2026, e seu respectivo Fact Sheet.
-
-[Petróleo, Gás Natural e Biocombustíveis](https://www.epe.gov.br/pt/imprensa/noticias/area-4)
-[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
-[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
-
-[EPE publica estudo sobre iluminação pública como vetor de eficiência energética e transformação digital nas cidades em parceria com o Ministério das Cidades](https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-estudo-sobre-iluminacao-publica-como-vetor-de-eficiencia-energetica-e-transformacao-digital-nas-cidades-em-parceria-com-o-ministerio-das-cidades)
-
-13/10/2026 -
-A Empresa de Pesquisa Energética (EPE) publica o Informe Técnico “Iluminação Pública como Vetor de Transformação Digital e Eficiência Energética nas Cidades”, que apresenta um panorama do setor no Brasil e propõe caminhos para ampliar a eficiência, a qualidade dos serviços e a integração da iluminação pública ao planejamento urbano e energético.
-
-[Energia Elétrica](https://www.epe.gov.br/pt/imprensa/noticias/area-3)
-[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
-[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
-
-[Artigo da série Entenda o Cenário, publicada a cada dez dias apresentando trabalhos e discutindo temas relevantes para o planejamento energético nacional](https://www.epe.gov.br/pt/imprensa/noticias/artigo-da-serie-entenda-o-cenario-publicada-a-cada-dez-dias-apresentando-trabalhos-e-discutindo-temas-relevantes-para-o-planejamento-energetico-nacional)
-
-09/10/2026 -
-Estudo sobre fungibilidade e precificação de certificados de descarbonização, selecionado entre os três melhores trabalhos da ROG.e na categoria Diversificação Energética e Soluções de Baixo Carbono, ajuda a entender o que o mercado de biometano pode aprender com a experiência do CBIO
-
-[Petróleo, Gás Natural e Biocombustíveis](https://www.epe.gov.br/pt/imprensa/noticias/area-4)
-[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
-[Meio Ambiente](https://www.epe.gov.br/pt/imprensa/noticias/area-8)
-
-[Mais elétrico, mais renovável, mais flexível: PDE 2036 projeta a energia do Brasil nos próximos dez anos e abre Consulta Pública](https://www.epe.gov.br/pt/imprensa/noticias/mais-eletrico-mais-renovavel-mais-flexivel-pde-2036-projeta-a-energia-do-brasil-nos-proximos-dez-anos-e-abre-consulta-publica)
-
-08/10/2026 -
-Relatório Síntese do PDE 2036 aponta crescimento da demanda de energia, novas tecnologias e cerca de R$ 3,3 trilhões em investimentos até 2036. Sociedade poderá contribuir para o aprimoramento do planejamento.
-
-[Energia Elétrica](https://www.epe.gov.br/pt/imprensa/noticias/area-3)
-[Meio Ambiente](https://www.epe.gov.br/pt/imprensa/noticias/area-8)
-[Petróleo, Gás Natural e Biocombustíveis](https://www.epe.gov.br/pt/imprensa/noticias/area-4)
-[Planejamento Energético](https://www.epe.gov.br/pt/imprensa/noticias/area-6)
-[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
-[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
-
-[EPE publica edição de 2026 do Informe de Monitoramento sobre a política de E&P de petróleo e gás](https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-edicao-de-2026-do-informe-de-monitoramento-sobre-a-politica-de-e-p-de-petroleo-e-gas)
-
-07/10/2026 -
-Para proporcionar uma visão mais abrangente da evolução do setor de exploração e produção de petróleo e gás natural no Brasil, o documento também incorpora indicadores complementares relacionados à atividade exploratória, à eficiência operacional e à sustentabilidade das operações. Esses indicadores adicionais não substituem os indicadores estabelecidos pela resolução, mas complementam sua análise, refletindo transformações observadas no setor nos últimos anos.
-
-[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
-[Petróleo, Gás Natural e Biocombustíveis](https://www.epe.gov.br/pt/imprensa/noticias/area-4)
-[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
-
-[EPE é premiada com o Selo Ouro do Instituto ODS](https://www.epe.gov.br/pt/imprensa/noticias/epe-e-premiada-com-o-selo-ouro-do-instituto-ods)
-
-06/10/2026 -
-No dia 23 de setembro, a EPE foi premiada com o Selo ODS Ouro​, no âmbito do Programa de Certificação ODS. A premiação ocorreu na Conferência Nacional pela Paz e Sustentabilidade, realizada na Federação para a Paz Universal (UPF), em São Paulo. O processo de certificação ODS ocorreu ao longo do ano de 2026 e contou com a participação de todas as Diretorias e da Presidência da empresa.
-
-[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
-
-[EPE publica Fact Sheet “Leilão de Transmissão N° 04/2026: Estudos de Planejamento Setorial"](https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-fact-sheet-leilao-de-transmissao-n-04-2026-estudos-de-planejamento-setorial-)
-
-05/10/2026 -
-O próximo leilão de transmissão, previsto para 30 de outubro, contará com R$ 8,9 bilhões em investimentos na construção de 1.866 quilômetros de linhas de transmissão em sete estados do Brasil. Para explicar de onde vêm as obras dos leilões de transmissão, como se dá o processo de escolha dos empreendimentos, os grandes números envolvidos no certame, além de outras perguntas, a Empresa de Pesquisa Energética (EPE) preparou o Fact Sheet “O Leilão de Transmissão N° 04/2026: Estudos de Planejamento Setorial".
-
-[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
-[Energia Elétrica](https://www.epe.gov.br/pt/imprensa/noticias/area-3)
-[Leilões](https://www.epe.gov.br/pt/imprensa/noticias/area-2)
-[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
-
-[EPE publica Informe Trimestral de Setembro sobre os Estudos de Transmissão Previstos na Programação 2026](https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-informe-trimestral-de-setembro-sobre-os-estudos-de-transmissao-previstos-na-programacao-2026)
-
-05/10/2026 -
-Atendendo ao disposto no §4º do Art. 3º da Portaria nº 215, de 11 de maio de 2020, a Empresa de Pesquisa Energética (EPE)​​ divulga o Informe Trimestral de Setembro acerca do estágio de execução dos estudos de transmissão previstos de serem realizados sob a sua coordenação ao longo do ano de 2026, incluindo eventuais atualizações de cronograma, conforme previamente acordado com a Secretaria Nacional de Transição Energética e Planejamento.
-
-[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
-[Energia Elétrica](https://www.epe.gov.br/pt/imprensa/noticias/area-3)
-[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
-
-[EPE participa do CIGRE Energy Forum International Conference & Exhibition](https://www.epe.gov.br/pt/imprensa/noticias/epe-participa-do-cigre-energy-forum-international-conference-exhibition)
-
-05/10/2026 -
-A Empresa de Pesquisa Energética (EPE) participou do CIGRE Energy Forum International Conference & Exhibition, realizado entre os dias 21 e 24 de setembro de 2026, em Calgary, no Canadá. A EPE foi representada pelo Assessor da Presidência, Francisco Victer, e pelo Superintendente de Transmissão de Energia, Thiago Dourado.
-
-[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
-[Energia Elétrica](https://www.epe.gov.br/pt/imprensa/noticias/area-3)
-[Planejamento Energético](https://www.epe.gov.br/pt/imprensa/noticias/area-6)
-
-[EPE participa do 56º Cinase com discussões sobre desafios da transmissão, geração e da integração de recursos energéticos distribuídos](https://www.epe.gov.br/pt/imprensa/noticias/epe-participa-do-56-cinase-com-discussoes-sobre-desafios-da-transmissao-geracao-e-da-integracao-de-recursos-energeticos-distribuidos)
-
-05/10/2026 -
-Planejamento energético, desafios da transmissão e da geração de energia elétrica, operacionais e tarifários na integração de recursos energéticos distribuídos foram alguns dos temas discutidos por representantes da EPE no primeiro dia do 56º Circuito Nacional do Setor Elétrico (Cinase).
+25/11/2026 -
+O seminário “Cozinhar é um Direito”, realizado em 19 de novembro, no Rio de Janeiro, reuniu representantes do governo federal, da academia, da sociedade civil e do setor privado para discutir desafios e soluções voltados à ampliação do acesso ao cozimento limpo no Brasil. A Empresa de Pesquisa Energética (EPE) foi representada por Carla Achão, superintendente de Estudos Econômicos e Energéticos; Arnaldo Junior, superintendente-adjunto da área; e pelos analistas de pesquisa energética Mariana Weiss de Abreu e Yuri Vandresen Pinto.
 
 [Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
 [Economia de Energia](https://www.epe.gov.br/pt/imprensa/noticias/area-12)
+
+[EPE apresenta nova versão do PDGD com novas bases de dados e análises sobre a geração distribuída](https://www.epe.gov.br/pt/imprensa/noticias/epe-apresenta-nova-versao-do-pdgd-com-novas-bases-de-dados-e-analises-sobre-a-geracao-distribuida)
+
+25/11/2026 -
+A Empresa de Pesquisa Energética (EPE) apresenta a nova versão do Painel de Dados de Micro e Minigeração Distribuída (PDGD). A ferramenta passou por uma atualização que incorpora novas bases de dados e amplia as análises sobre a expansão da MMGD no Brasil, reunindo perspectivas sociais, territoriais, econômicas e técnicas. O painel também passará a ser atualizado com maior frequência, a cada quadrimestre.
+
+[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
+[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
+[Economia de Energia](https://www.epe.gov.br/pt/imprensa/noticias/area-12)
+
+[EPE publica factsheet sobre os impactos do El Niño sobre o setor elétrico brasileiro](https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-factsheet-sobre-os-impactos-do-el-nino-sobre-o-setor-eletrico-brasileiro)
+
+24/11/2026 -
+A EPE publica o factsheet “Efeitos do El Niño sobre o Sistema Interligado Nacional: bases conceituais e impactos potenciais para o SIN”, estudo que apresenta uma avaliação sistêmica dos potenciais impactos do El Niño sobre o sistema elétrico brasileiro.
+
+[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
 [Energia Elétrica](https://www.epe.gov.br/pt/imprensa/noticias/area-3)
+[Meio Ambiente](https://www.epe.gov.br/pt/imprensa/noticias/area-8)
+[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
+
+[EPE participa de evento sobre criptografia pós-quântica](https://www.epe.gov.br/pt/imprensa/noticias/epe-participa-de-evento-sobre-criptografia-pos-quantica)
+
+24/11/2026 -
+Em 18 de novembro, a Empresa de Pesquisa Energética (EPE) participou do evento “Criptografia Pós-Quântica: Recomendações para a Transição Segura", realizado pela Agência Brasileira de Inteligência (Abin), por meio do Centro de Pesquisa e Desenvolvimento para a Segurança das Comunicações (Cepesc), em Brasília.
+
+[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
+
+[EPE divulga Fact Sheet sobre os impactos da abertura do mercado livre para a baixa tensão](https://www.epe.gov.br/pt/imprensa/noticias/epe-divulga-fact-sheet-sobre-os-impactos-da-abertura-do-mercado-livre-para-a-baixa-tensao)
+
+23/11/2026 -
+A publicação apresenta uma reflexão sobre as transformações em curso no setor elétrico e os desafios para o planejamento de longo prazo em um ambiente de maior descentralização das decisões de investimento.
+
+[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
+[Economia de Energia](https://www.epe.gov.br/pt/imprensa/noticias/area-12)
+[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
+
+[EPE participa do 22º Congresso Brasileiro de Eficiência Energética](https://www.epe.gov.br/pt/imprensa/noticias/epe-participa-do-22-congresso-brasileiro-de-eficiencia-energetica)
+
+19/11/2026 -
+Durante o evento, a Superintendente de Estudos Econômicos e Energéticos da EPE, Carla Achão, participou dos painéis “O papel do Brasil no novo cenário da eficiência energética mundial" e “Mapa do caminho para as metas da eficiência energética de médio e longo prazo", contribuindo para as discussões sobre o papel da eficiência energética na transição energética.
+
+[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
+[Economia de Energia](https://www.epe.gov.br/pt/imprensa/noticias/area-12)
+
+[EPE publica Caderno “Como os Tributos Influenciam os Preços dos Combustíveis”](https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-caderno-como-os-tributos-influenciam-os-precos-dos-combustiveis-)
+
+18/11/2026 -
+A Empresa de Pesquisa Energética (EPE) publica o Caderno “Como os Tributos Influenciam os Preços dos Combustíveis | Panorama histórico: janeiro 2002 a setembro 2026", que apresenta uma visão objetiva sobre o histórico da tributação incidente sobre os combustíveis no Brasil. O caderno possui caráter inédito ao consolidar, de forma sistemática e comparável, séries históricas da tributação federal e estadual ao longo de mais de duas décadas.​
+
+[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
+[Petróleo, Gás Natural e Biocombustíveis](https://www.epe.gov.br/pt/imprensa/noticias/area-4)
+[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
+
+[Oferta potencial de gás natural nacional crescerá mais de 80% nos próximos dez anos, aponta PDE 2036](https://www.epe.gov.br/pt/imprensa/noticias/oferta-potencial-de-gas-natural-nacional-crescera-mais-de-80-nos-proximos-dez-anos-aponta-pde-2036)
+
+17/11/2026 -
+O MME e a EPE publicaram, nesta terça-feira (17/11), o Caderno de Gás Natural do PDE 2036. A publicação apresenta um panorama da infraestrutura existente e projetada, as perspectivas de evolução da oferta nacional e das importações, os balanços de gás natural e as projeções de demanda dos diferentes segmentos consumidores.
+
+[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
+[Economia de Energia](https://www.epe.gov.br/pt/imprensa/noticias/area-12)
+[Petróleo, Gás Natural e Biocombustíveis](https://www.epe.gov.br/pt/imprensa/noticias/area-4)
 [Planejamento Energético](https://www.epe.gov.br/pt/imprensa/noticias/area-6)
+[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
+
+[LRCAP Armazenamento 2026: habilitações técnicas](https://www.epe.gov.br/pt/imprensa/noticias/lrcap-armazenamento-2026-habilitacoes-tecnicas)
+
+17/11/2026 -
+Em atenção ao cronograma do Edital do Leilão, que prevê a entrega dos documentos de habilitação dos proponentes na CCEE até 18/11/2026, a EPE esclarece que emitirá as habilitações técnicas até o dia 17/11/2026.
+
+[Leilões](https://www.epe.gov.br/pt/imprensa/noticias/area-2)
+
+[EPE, CCEE e ONS lançam portal do Novo Modelo computacional do setor elétrico brasileiro](https://www.epe.gov.br/pt/imprensa/noticias/epe-ccee-e-ons-lancam-portal-do-novo-modelo-computacional-do-setor-eletrico-brasileiro)
+
+16/11/2026 -
+A Empresa de Pesquisa Energética (EPE), a Câmara de Comercialização de Energia Elétrica (CCEE) e o Operador Nacional do Sistema Elétrico (ONS) lançam um portal conjunto para ampliar a comunicação com os agentes do mercado e a sociedade sobre o desenvolvimento do Novo Modelo computacional do Setor Elétrico Brasileiro.
+
+[Energia Elétrica](https://www.epe.gov.br/pt/imprensa/noticias/area-3)
+[Comunicação e Imprensa (Clipping)](https://www.epe.gov.br/pt/imprensa/noticias/area-9)
+[Produtos/Publicações da EPE](https://www.epe.gov.br/pt/imprensa/noticias/area-1)
 
 «
 
@@ -598,5 +592,17 @@ Planejamento energético, desafios da transmissão e da geração de energia el�
 219
 
 220
+
+221
+
+222
+
+223
+
+224
+
+225
+
+226
 
 »

@@ -1,140 +1,439 @@
-id="content-core">
+[Ir para o\\
+ Conteúdo\\
+ 1](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica#wrapper) [Ir para a\\
+ Página Inicial\\
+ 2](https://www.gov.br/) [Ir para o menu de\\
+ Navegação\\
+ 3](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica#main-navigation) [Ir para a\\
+ Busca\\
+ 4](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica#govbr-busca-input) [Ir para o\\
+ Mapa do site\\
+ 5](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica#portal-footer)
 
-[Consulta e Audiência Públicas nº 21/2026](https://www.gov.br/anp/pt-br/acesso-a-informacao/agenda-eventos/consulta-e-audiencia-publicas-no-21-2026)
+[![Logomarca gov.br](https://barra.sistema.gov.br/v1/assets/govbr.webp)](https://www.gov.br/pt-br)[Ministério de Minas e Energia](http://www.mme.gov.br/)
 
-Objetivo: obter contribuições adicionais sobre a minuta de resolução que dispõe sobre o regime de segurança operacional para as instalações de exploração e produção de petróleo e gás natural e aprova o regulamento técnico do sistema de gestão da segurança operacional (SGSO)..
-Consulta Pública: 07/10/2026 a 05/01/2027
-Audiência Pública: 18/02/2027
+- Acesso Rápido
+- Institucional
+  - [Órgãos do Governo](https://www.gov.br/pt-br/orgaos-do-governo)
+  - [Acesso à Informação](https://www.gov.br/acessoainformacao/pt-br)
+  - [Legislação](https://www4.planalto.gov.br/legislacao)
+- [Acessibilidade](https://www.gov.br/governodigital/pt-br/acessibilidade-digital)
+- [Participe](https://www.gov.br/pt-br/participacao-social)
 
-[Consulta e Audiência Públicas nº 20/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-e-audiencia-publicas-no-20-2026)
+Atalhos gov.br
 
-Objetivo: obtenção de subsídios sobre a minuta de Resolução que altera as Resoluções ANP nº 852/2021, 935/2023, 936/2023, 948/2023, 950/2023 e 987/2025, para fins de adequação aos preceitos da Lei Complementar nº 225/2026 (Código de Defesa do Contribuinte), que alterou a Lei nº 9.478/1997 (Lei do Petróleo), relativamente à atualização do capital social mínimo integralizado, à exigência de comprovação da origem e licitude dos recursos financeiros utilizados para a integralização do capital social e à identificação do titular efetivo da pessoa jurídica interessada.
-Consulta Pública: 17/09/2026 a 03/11/2026
-Audiência Pública: 10/11/2026
+Para começar
 
-[Consulta e Audiência Públicas nº 19/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-e-audiencia-publicas-no-19-2026)
+Clique em Entrar
+para acessar sua conta gov.br
 
-Objetivo: obtenção de contribuições sobre minuta de resolução revisora da Resolução ANP nº 791/2019, que dispõe sobre a individualização das metas compulsórias anuais de redução de emissões de gases de efeito estufa associadas à comercialização de combustíveis, no âmbito do RenovaBio, com vistas à adequação de seus dispositivos às alterações introduzidas pela Lei nº 15.082/2024.
-Consulta Pública: 14/09/2026 a 28/10/2026
-Audiência Pública: 09/11/2026
+[Abrir menu principal de navegação](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica#)
 
-[Consulta e Audiência Públicas nº 18/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-e-audiencia-publicas-no-18-2026)
+[Agência Nacional do Petróleo, Gás Natural e Biocombustíveis](https://www.gov.br/anp/pt-br)
 
-Objetivo: obtenção de subsídios sobre minuta de Resolução que estabelece as regras para a constituição e o funcionamento de ambientes regulatórios experimentais no âmbito da ANP.
-Consulta Pública: 10/09/2026 a 26/10/2026
-Audiência Pública: 12/11/2026
+Termos mais buscados
 
-[Consulta e Audiência Públicas nº 17/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-e-audiencia-publicas-no-17-2026)
 
-Objetivo: obtenção de subsídios sobre a minuta de Resolução que altera as Resoluções ANP nº 857, de 2021, e nº 729, de 2018, para fins de implementação do art. 68-G da Lei nº 9.478, de 1997 (ação 4.12. Controle da Mistura Obrigatória de Biodiesel ao Diesel B).
-Consulta Pública: 28/08 a 13/10/2026
-Audiência Pública: 27/10/2026
+- [Desenrola Brasil](https://www.gov.br/anp/pt-br/search?origem=termos&SearchableText=Desenrola%20Brasil)
+- [mei](https://www.gov.br/anp/pt-br/search?origem=termos&SearchableText=mei)
+- [assinatura](https://www.gov.br/anp/pt-br/search?origem=termos&SearchableText=assinatura)
+- [enem](https://www.gov.br/anp/pt-br/search?origem=termos&SearchableText=enem)
+- [imposto de renda](https://www.gov.br/anp/pt-br/search?origem=termos&SearchableText=imposto%20de%20renda)
 
-[Consulta e Audiência Públicas nº 16/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-e-audiencia-publicas-no-16-2026)
+Termos mais buscados
 
-Objetivo: obtenção de subsídios sobre a minuta de resolução que dispõe sobre a regulamentação do Programa de Redução da Concentração no Mercado de Gás Natural (Programa de Gas Release), conforme Ação Regulatória nº 2.7 da Agenda Regulatória da ANP do Biênio 2025-2026.
-Consulta Pública: 14/08/2026 a 28/09/2026
-Audiência Pública: 21/10/2026
 
-[Consulta e Audiência Públicas nº 15/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-e-audiencia-publicas-no-15-2026)
+- [Desenrola Brasil](https://www.gov.br/anp/pt-br/search?origem=termos&SearchableText=Desenrola%20Brasil)
+- [mei](https://www.gov.br/anp/pt-br/search?origem=termos&SearchableText=mei)
+- [assinatura](https://www.gov.br/anp/pt-br/search?origem=termos&SearchableText=assinatura)
 
-Objetivo: obter contribuições sobre minuta de revisão da Resolução ANP nº 903, de 18 de novembro de 2022, que dispõe sobre as especificações dos combustíveis de uso aquaviário e suas regras de comercialização em território nacional.
-Consulta Pública: 28/7/2026 a 10/9/2026
-Audiência Pública: 23/9/2026
-
-[Consulta e Audiência Públicas nº 14/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-e-audiencia-publicas-no-14-2026)
-
-Objetivo: obter contribuições sobre a minuta de resolução que altera a Portaria Técnica ANP nº 29/2001, em decorrência da publicação do Decreto nº 12.849, de 12 de fevereiro de 2026, conforme Ação Regulatória 1.19 da Agenda Regulatória da ANP no Biênio 2025-2026.
-Consulta Pública: 16/7/2026 a 27/7/2026
-Audiência Pública: 30/7/2026
-
-[Consulta e Audiência Públicas nº 13/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-e-audiencia-publicas-no-13-2026)
-
-Objetivo: obtenção de subsídios sobre a minuta de resolução que dispõe sobre a regulamentação do acesso não discriminatório e negociado de terceiros interessados aos gasodutos de escoamento da produção e às instalações de tratamento ou processamento de gás natural.
-Consulta Pública: 16/07 a 14/09/2026 (prorrogada por 15 dias)
-Audiência Pública: 1/10/2026 (nova data)
-
-[Consulta e Audiência Públicas nº 12/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-e-audiencia-publicas-no-12-2026)
-
-Objetivo: obter contribuições da sociedade sobre as minutas de resolução que estabelecem os critérios para a caracterização da elevação abusiva dos preços de combustíveis.
-Consulta Pública: 08/06/2026 até 12/06/2026
-Audiência Pública:
-Primeira sessão - 15/06/2026
-Segunda sessão - 17/06/2026
-
-[Consulta Pública nº 11/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-publica-no-11-2026)
-
-Objetivo: obter subsídios sobre a aplicação do Método do Capital Recuperado (Recovered Capital Method - RCM) para valoração dos ativos referentes aos Contratos Legados das transportadoras Nova Transportadora do Sudeste S.A. - NTS (Malha Sudeste) e Transportadora Associada de Gás S.A. - TAG (Malha Nordeste), no âmbito da 2ª Fase do Plano de Ação para o Ciclo Tarifário 2026-2030.
-Consulta Pública: 8/6/2026 a 22/6/2026 ( prorrogada por 15 dias, até 7/7/2026 )
-
-[Consulta e Audiência Públicas nº 10/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-e-audiencia-publicas-no-10-2026)
-
-Objetivo: obter contribuições para a minuta de resolução que altera a Resolução ANP nº 946, de 5 de outubro de 2023, que dispõe sobre a comercialização de etanol anidro combustível e a formação de estoques para o período de entressafra da cana-de-açúcar (ação 4.10 da Agenda Regulatória 2025-2026).
-Consulta Pública : 27/05 a 10/07/2026
-Audiência Pública : 03/08/2026
-
-[Consulta e Audiência Públicas nº 09/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-e-audiencia-publicas-no-09-2026)
-
-Objetivo: Obtenção de subsídios sobre a minuta de resolução que altera as periodicidades de apresentação de garantias financeiras e termo que assegurem os recursos financeiros para o descomissionamento de instalações de produção em campos de petróleo e gás natural estabelecidas na Resolução ANP n° 854, de 2021, conforme Ação Regulatória n° 1.18 da Agenda Regulatória da ANP do Biênio 2025-2026.
-Consulta Pública: 25/05 a 08/07/2026
-Audiência Pública: 12/08/2026
-
-[Consulta e Audiência Públicas nº 08/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-e-audiencia-publicas-no-08-2026)
-
-Objetivo: Revisão regulatória para alteração da Resolução ANP nº 852/2021, que regulamenta o exercício da atividade de produção de derivados de petróleo e gás natural, seu armazenamento, sua comercialização e a prestação de serviço e dá outras providências, tal como consta na Agenda Regulatória da ANP 2025-2026, no item 3.3, das ações regulatórias (Serviços de armazenagem - Alteração da Resolução ANP nº852/2021).
-Consulta Pública: 13/05 a 26/06/2026
-Audiência Pública: 28/07/2026
-
-[Consulta Pública nº 07/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-publica-no-07-2026)
-
-Objetivo: obter contribuições sobre a metodologia de cálculo do preço de referência para o GLP de que trata o Art. 5º da Resolução ANP Nº 1000, de 30 de abril de 2026, que regulamenta a metodologia de cálculo do preço de referência para a concessão de subvenção econômica à comercialização de óleo diesel e à importação de GLP.
-Consulta Pública : 04/05 a 08/05/2026
-
-[Consulta e Audiência Públicas nº 06/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-e-audiencia-publicas-no-06-2026)
-
-Objetivo: revisão da Resolução ANP nº 759, de 2018 que estabelece os critérios para o tratamento diferenciado às microempresas e às empresas de pequeno porte em ações de fiscalização da ANP.
-Consulta Pública: 17/04 a 1/06/2026
-Audiência Pública: 16/06/2026
-
-[Audiência Pública nº 05/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/audiencia-publica-no-05-2026)
-
-Objetivo: Obter subsídios e informações adicionais sobre a atualização do edital de licitações da Oferta Permanente de Concessão, em razão da inclusão de 45 blocos exploratórios que obtiveram Manifestações Conjuntas MMA/MME favoráveis.
-Audiência Pública: 28/04/2026
-
-[Consulta Pública nº 04/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-publica-no-04-2026)
-
-Objetivo: Obter contribuições sobre a Resolução ANP nº 998/2026, que regulamenta a metodologia de cálculo do preço de referência para a concessão de subvenção econômica à comercialização de óleo diesel, instituída pela Medida Provisória nº 1.340, de 12 de março de 2026.
-Consulta Pública: 06/04/2026 a 10/04/2026 (5 dias)
-
-[Consulta Pública nº 03/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-publica-no-03-2026)
-
-Objetivo: Obter contribuições sobre as Determinações Regulatórias relativas à valoração da Base Regulatória de Ativos, aos Planos de Investimentos e aos custos operacionais das transportadoras de gás natural GOM, TSB, TBG, NTS e TAG, referentes ao Ciclo Tarifário 2026–2030, conforme aprovada sua realização pela Resolução de Diretoria no. 142/2026.
-Consulta Pública: 05/03/2026 a 19/03/2026 (15 dias)
-
-[Audiência Pública nº 02/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/audiencia-publica-no-02-2026)
-
-Objetivo: Obter subsídios e informações adicionais sobre a atualização do Edital de Licitações da Oferta Permanente de Partilha de Produção (OPP) para a outorga de contratos de exploração e produção de petróleo e gás natural, em razão da inclusão de 15 blocos exploratórios, que se somam aos 8 blocos já previstos no edital.
-Audiência Pública: 13/03/2026, às 14h
-
-[Consulta e Audiência Públicas nº 01/2026](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/consulta-e-audiencia-publicas-no-01-2026)
-
-Objetivo: Obter subsídios sobre a minuta de resolução que revisa e atualiza a Resolução ANP nº 785, de 2019, disciplinando os procedimentos aplicáveis à cessão de contratos de exploração e produção de petróleo e gás natural.
-Consulta Pública: 19/02/2026 a 06/04/2026 (45 dias)
-Audiência Pública: 16/04/2026, às 14h
-
-Compartilhe:
-
-[Compartilhe por Facebook](http://www.facebook.com/sharer.php?u=https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/2026)
-
-[Compartilhe por Twitter](https://twitter.com/share?text=2026&url=https://www.gov.br/anp/resolveuid/ede6a4490ab747af9cc9d64248052713)
-
-[Compartilhe por LinkedIn](https://www.linkedin.com/shareArticle?mini=true&url=https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/2026&title=2026)
-
-[Compartilhe por WhatsApp](https://api.whatsapp.com/send?text=https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/2026)
-
-[link para Copiar para área de transferência](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026/2026)
-
-Rejeitar
-
-Fale Agora
-[Refazer a busca](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica/2026)
+- [Assuntos](https://www.gov.br/anp/pt-br/assuntos)
+  - [Análise de Impacto Regulatório (AIR)](https://www.gov.br/anp/pt-br/assuntos/analise-de-impacto-regulatorio-air)
+  - [Armazenamento e movimentação de produtos líquidos](https://www.gov.br/anp/pt-br/assuntos/armazenamento-e-movimentacao-de-produtos-liquidos)    - [Comunicação e investigação de incidentes](https://www.gov.br/anp/pt-br/assuntos/armazenamento-e-movimentacao-de-produtos-liquidos/comunicacao-e-investigacao-de-incidentes)
+    - [Oleodutos de Transporte e Transferência](https://www.gov.br/anp/pt-br/assuntos/armazenamento-e-movimentacao-de-produtos-liquidos/oleodutos-de-transporte-e-transferencia)
+    - [Terminais de Petróleo e Combustíveis Líquidos](https://www.gov.br/anp/pt-br/assuntos/armazenamento-e-movimentacao-de-produtos-liquidos/terminais-de-petroleo-e-combustiveis-liquidos)
+    - [Transporte a granel por meio aquaviário](https://www.gov.br/anp/pt-br/assuntos/armazenamento-e-movimentacao-de-produtos-liquidos/transporte-granel-meio-aquaviario)
+  - [Comunicação de Incidentes](https://www.gov.br/anp/pt-br/assuntos/comunicacao-de-incidentes)    - [Relatórios de investigação de incidentes](https://www.gov.br/anp/pt-br/assuntos/comunicacao-de-incidentes/relatorios-de-investigacao-de-incidentes)
+  - [Consultas e Audiências Públicas](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas)    - [Consultas e Audiências Públicas](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica)
+    - [Consulta Prévia](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-previa)
+    - [Consulta de Interesse](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-de-interesse)
+    - [Tomada Pública de Contribuições](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/tomada-publica-de-contribuicoes)
+    - [Manuais para Audiências Públicas](https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/manuais-para-audiencias-publicas)
+  - [CCUS](https://www.gov.br/anp/pt-br/assuntos/ccs)
+  - [Dados de estoques de combustíveis](https://www.gov.br/anp/pt-br/assuntos/dados-estoques-combustiveis)
+  - [Distribuição e Revenda](https://www.gov.br/anp/pt-br/assuntos/distribuicao-e-revenda)    - [Distribuidor](https://www.gov.br/anp/pt-br/assuntos/distribuicao-e-revenda/distribuidor)
+    - [Revendedor](https://www.gov.br/anp/pt-br/assuntos/distribuicao-e-revenda/revendedor)
+    - [Transportador Revendedor Retalhista (TRR)](https://www.gov.br/anp/pt-br/assuntos/distribuicao-e-revenda/transportador-revendedor-retalhista-trr)
+    - [Transportador - Revendedor - Retalhista - TRRNI](https://www.gov.br/anp/pt-br/assuntos/distribuicao-e-revenda/transportador-revendedor-retalhista-trrni)
+    - [Lubrificantes](https://www.gov.br/anp/pt-br/assuntos/distribuicao-e-revenda/lubrificantes)
+    - [Comercialização de Biodiesel](https://www.gov.br/anp/pt-br/assuntos/distribuicao-e-revenda/comercializacao-de-biodiesel)
+    - [Comercialização de Etanol](https://www.gov.br/anp/pt-br/assuntos/distribuicao-e-revenda/comercializacao-de-etanol)
+    - [Ponto de abastecimento](https://www.gov.br/anp/pt-br/assuntos/distribuicao-e-revenda/ponto-de-abastecimento)
+    - [Painéis Dinâmicos do Abastecimento](https://www.gov.br/anp/pt-br/centrais-de-conteudo/paineis-dinamicos-da-anp/paineis-dinamicos-do-abastecimento)
+    - [Relatórios de Autorizações](https://www.gov.br/anp/pt-br/assuntos/distribuicao-e-revenda/relatorios-de-autorizacoes)
+    - [Transição para o Gov.br Nível Ouro a partir de 08/10/2026: Mais Segurança e Facilidade de Acesso – Sistema SPA](https://www.gov.br/anp/pt-br/assuntos/distribuicao-e-revenda/transicao-para-o-gov-br-nivel-ouro-a-partir-de-08-10-2026-mais-seguranca-e-facilidade-de-acesso-2013-sistema-spa)
+  - [Exploração e Produção de Óleo e Gás](https://www.gov.br/anp/pt-br/assuntos/exploracao-e-producao-de-oleo-e-gas)    - [Avaliação Geoeconômica de Bacias Sedimentares](https://www.gov.br/anp/pt-br/assuntos/exploracao-e-producao-de-oleo-e-gas/estudos-geologicos-e-geofisicos)
+    - [Dados Técnicos](https://www.gov.br/anp/pt-br/assuntos/exploracao-e-producao-de-oleo-e-gas/dados-tecnicos)
+    - [Exploração](https://www.gov.br/anp/pt-br/assuntos/exploracao-e-producao-de-oleo-e-gas/fase-de-exploracao)
+    - [Desenvolvimento e Produção](https://www.gov.br/anp/pt-br/assuntos/exploracao-e-producao-de-oleo-e-gas/desenvolvimento-e-producao)
+    - [Medição da Produção](https://www.gov.br/anp/pt-br/assuntos/exploracao-e-producao-de-oleo-e-gas/medicao-producao)
+    - [Conteúdo Local](https://www.gov.br/anp/pt-br/assuntos/exploracao-e-producao-de-oleo-e-gas/conteudo-local)
+    - [Segurança Operacional](https://www.gov.br/anp/pt-br/assuntos/exploracao-e-producao-de-oleo-e-gas/seguranca-operacional)
+    - [Cessão de Contratos](https://www.gov.br/anp/pt-br/assuntos/exploracao-e-producao-de-oleo-e-gas/cessao-de-contratos)
+    - [Orientações aos concessionários e contratados](https://www.gov.br/anp/pt-br/assuntos/exploracao-e-producao-de-oleo-e-gas/orientacoes-aos-concessionarios-e-contratados)
+    - [Dados de E&P](https://www.gov.br/anp/pt-br/assuntos/exploracao-e-producao-de-oleo-e-gas/dados-de-e-p)
+    - [Previsão de Atividades, Investimentos e Produção](https://www.gov.br/anp/pt-br/assuntos/exploracao-e-producao-de-oleo-e-gas/previsao-de-producao-e-atividades-investimentos-e-producao)
+    - [Painéis Dinâmicos de Produção de Petróleo e Gás Natural](https://www.gov.br/anp/pt-br/assuntos/exploracao-e-producao-de-oleo-e-gas/paineis-dinamicos-de-producao-de-petroleo-e-gas-natural)
+    - [Grupo de Trabalho Polo Bahia Terra](https://www.gov.br/anp/pt-br/assuntos/exploracao-e-producao-de-oleo-e-gas/grupo-de-trabalho-polo-bahia-terra)
+  - [Fiscalização](https://www.gov.br/anp/pt-br/assuntos/fiscalizacao)    - [Fiscalização do abastecimento](https://www.gov.br/anp/pt-br/assuntos/fiscalizacao/fiscalizacao-do-abastecimento)
+    - [Fiscalização da Segurança Operacional](https://www.gov.br/anp/pt-br/assuntos/exploracao-e-producao-de-oleo-e-gas/seguranca-operacional/auditorias)
+  - [Hidrogênio](https://www.gov.br/anp/pt-br/assuntos/hidrogenio)
+  - [Importações e Exportações](https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes)    - [Autorizações para Exercício da Atividade](https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/autorizacoes-para-exercicio-da-atividade)
+    - [Comercial Exportadora](https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/comercial-exportadora)
+    - [Comércio Exterior](https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/comercio-exterior)
+    - [Controle da qualidade nos produtos importados](https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/controle-da-qualidade-nos-produtos-importados)
+    - [Envio do DPMP](https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/envio-do-dpmp)
+    - [Relatórios de Comércio Exterior](https://www.gov.br/anp/pt-br/assuntos/importacoes-e-exportacoes/relatorios-de-comercio-exterior)
+  - [Investments Opportunities in Brazil](https://www.gov.br/anp/pt-br/assuntos/investments-opportunities-in-brazil)
+  - [Movimentação, estocagem e comercialização de gás natural](https://www.gov.br/anp/pt-br/assuntos/movimentacao-estocagem-e-comercializacao-de-gas-natural)    - [Acompanhamento do Mercado de Gás Natural](https://www.gov.br/anp/pt-br/assuntos/movimentacao-estocagem-e-comercializacao-de-gas-natural/acompanhamento-do-mercado-de-gas-natural)
+    - [Terminais de Gás Natural Liquefeito](https://www.gov.br/anp/pt-br/assuntos/movimentacao-estocagem-e-comercializacao-de-gas-natural/terminais-de-gas-natural-liquefeito-1)
+    - [Acondicionamento de Gás Natural](https://www.gov.br/anp/pt-br/assuntos/movimentacao-estocagem-e-comercializacao-de-gas-natural/acondicionamento-de-gas-natural)
+    - [Comunicação e investigação de incidentes](https://www.gov.br/anp/pt-br/assuntos/movimentacao-estocagem-e-comercializacao-de-gas-natural/comunicacao-e-investigacao-de-incidentes)
+    - [Estocagem Subterrânea de Gás Natural](https://www.gov.br/anp/pt-br/assuntos/movimentacao-estocagem-e-comercializacao-de-gas-natural/estocagem-subterranea-de-gas-natural)
+    - [Estudos e Notas Técnicas](https://www.gov.br/anp/pt-br/assuntos/movimentacao-estocagem-e-comercializacao-de-gas-natural/estudos-e-notas-tecnicas)
+    - [Transporte de Gás Natural](https://www.gov.br/anp/pt-br/assuntos/movimentacao-estocagem-e-comercializacao-de-gas-natural/transporte-de-gas-natural)
+    - [Autorização de instalações de abastecimento veicular com GNV e GNLV](https://www.gov.br/anp/pt-br/assuntos/movimentacao-estocagem-e-comercializacao-de-gas-natural/autorizacao-de-instalacoes-de-abastecimento-veicular-com-gnv-e-gnlv-1)
+  - [Preços e Defesa da Concorrência](https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia)    - [Preços](https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos)
+    - [Defesa da Concorrência](https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/defesa-da-concorrencia)
+    - [Estudos Econômicos](https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/estudos-economicos)
+    - [Subvenção ao diesel ,GLP e etanol - 2026](https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/subvencao-2026)
+    - [Subvenção à comercialização de óleo diesel - 2018](https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/subvencao-a-comercializacao-de-oleo-diesel-2018)
+    - [Histórico da liberação dos preços de combustíveis no mercado brasileiro](https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/historico-da-liberacao-dos-precos-de-combustiveis-no-mercado-brasileiro)
+    - [Instruções para envio de dados de comercialização](https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/instrucoes-para-envio-de-dados-de-comercializacao)
+    - [Painel Dinâmico Transparência na Distribuição](https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/transparencia-na-distribuicao)
+  - [Produção de derivados de petróleo e processamento de gás natural](https://www.gov.br/anp/pt-br/assuntos/producao-de-derivados-de-petroleo-e-processamento-de-gas-natural)    - [Formulador de combustível](https://www.gov.br/anp/pt-br/assuntos/producao-de-derivados-de-petroleo-e-processamento-de-gas-natural/formulador-de-combustivel)
+    - [Processamento de Gás Natural](https://www.gov.br/anp/pt-br/assuntos/producao-de-derivados-de-petroleo-e-processamento-de-gas-natural/processamento-de-gas-natural)
+    - [Produção por centrais de matérias-primas petroquímicas (CPQ)](https://www.gov.br/anp/pt-br/assuntos/producao-de-derivados-de-petroleo-e-processamento-de-gas-natural/producao-por-centrais-de-materias-primas-petroquimicas-cpq)
+    - [Produtor de solvente](https://www.gov.br/anp/pt-br/assuntos/producao-de-derivados-de-petroleo-e-processamento-de-gas-natural/produtor-de-solvente)
+    - [Refino de petróleo](https://www.gov.br/anp/pt-br/assuntos/producao-de-derivados-de-petroleo-e-processamento-de-gas-natural/producao-de-derivados-de-petroleo-e-processamento-de-gas-natural)
+    - [Contratante de Prestação de Serviço](https://www.gov.br/anp/pt-br/assuntos/producao-de-derivados-de-petroleo-e-processamento-de-gas-natural/contratante-de-prestacao-de-servico)
+    - [Paradas Programadas](https://www.gov.br/anp/pt-br/assuntos/producao-de-derivados-de-petroleo-e-processamento-de-gas-natural/paradas-programadas)
+  - [Produção e fornecimento de biocombustíveis](https://www.gov.br/anp/pt-br/assuntos/producao-e-fornecimento-de-biocombustiveis)    - [Autorização para produção de biocombustíveis](https://www.gov.br/anp/pt-br/assuntos/producao-e-fornecimento-de-biocombustiveis/autorizacao-para-producao-de-biocombustiveis)
+    - [Biodiesel](https://www.gov.br/anp/pt-br/assuntos/producao-e-fornecimento-de-biocombustiveis/biodiesel)
+    - [Biometano](https://www.gov.br/anp/pt-br/assuntos/producao-e-fornecimento-de-biocombustiveis/biometano)
+    - [Etanol](https://www.gov.br/anp/pt-br/assuntos/producao-e-fornecimento-de-biocombustiveis/etanol)
+    - [Mapa Dinâmico de Produtores de Biocombustíveis](https://www.gov.br/anp/pt-br/assuntos/producao-e-fornecimento-de-biocombustiveis/mapa-dinamico-de-produtores-de-biocombustiveis-1)
+    - [SIMP - Sistema de Informações de Movimentações de Produtos](https://www.gov.br/anp/pt-br/assuntos/producao-e-fornecimento-de-biocombustiveis/simp-sistema-de-informacoes-de-movimentacoes-de-produtos-1)
+  - [Programa de Incentivo ao Biometano](https://www.gov.br/anp/pt-br/assuntos/programa-incentivo-biometano)    - [Arquivos Programa de incentivo ao biometano](https://www.gov.br/anp/pt-br/assuntos/programa-incentivo-biometano/arquivos-programa-de-incentivo-ao-biometano)
+    - [Legislação](https://www.gov.br/anp/pt-br/assuntos/programa-incentivo-biometano/legislacao)
+    - [Consultas e Audiências Públicas](https://www.gov.br/anp/pt-br/assuntos/programa-incentivo-biometano/consultas-e-audiencias-publicas)
+    - [Comunicados, Notícias e Eventos](https://www.gov.br/anp/pt-br/assuntos/programa-incentivo-biometano/comunicados-noticias-e-eventos)
+    - [Agente Certificador de Origem (ACO)](https://www.gov.br/anp/pt-br/assuntos/programa-incentivo-biometano/agente-certificador-de-origem-aco)
+    - [Credenciamento de Agente Certificador de Origem (ACO)](https://www.gov.br/anp/pt-br/assuntos/programa-incentivo-biometano/credenciamento-de-agente-certificador-de-origem-aco)
+    - [Estudos, Relatórios e Seminários](https://www.gov.br/anp/pt-br/assuntos/programa-incentivo-biometano/estudos-relatorios-e-seminarios)
+    - [Certificação do produtor ou importador de biometano com vistas à emissão do CGOB](https://www.gov.br/anp/pt-br/assuntos/programa-incentivo-biometano/certificacao-do-produtor-ou-importador-de-biometano-com-vistas-a-emissao-do-cgob)
+    - [Plataforma CGOB](https://www.gov.br/anp/pt-br/assuntos/programa-incentivo-biometano/plataforma-cgob)
+  - [Qualidade de Produtos](https://www.gov.br/anp/pt-br/assuntos/qualidade-de-produtos)    - [Biocombustíveis](https://www.gov.br/anp/pt-br/assuntos/qualidade-de-produtos/biocombustiveis)
+    - [Centro de Pesquisas e Análises Tecnológicas (CPT)](https://www.gov.br/anp/pt-br/assuntos/qualidade-de-produtos/centro-de-pesquisas-e-analises-tecnologicas-cpt)
+    - [Combustíveis experimentais](https://www.gov.br/anp/pt-br/assuntos/qualidade-de-produtos/combustiveis-experimentais)
+    - [Controle de Qualidade nos Produtos Importados](https://www.gov.br/anp/pt-br/assuntos/qualidade-de-produtos/controle-da-qualidade-nos-produtos-importados)
+    - [Histórico](https://www.gov.br/anp/pt-br/assuntos/qualidade-de-produtos/historico)
+    - [Programas de Monitoramento](https://www.gov.br/anp/pt-br/assuntos/qualidade-de-produtos/programas-monitoramento)
+    - [Programas Interlaboratoriais](https://www.gov.br/anp/pt-br/assuntos/qualidade-de-produtos/programas-interlaboratoriais)
+    - [Registro de Produtos](https://www.gov.br/anp/pt-br/assuntos/qualidade-de-produtos/registro-de-produtos)
+    - [Solventes](https://www.gov.br/anp/pt-br/assuntos/producao-de-derivados-de-petroleo-e-processamento-de-gas-natural/producao-de-derivados-de-petroleo-e-processamento-de-gas-natural/solventes)
+    - [Formulários](https://www.gov.br/anp/pt-br/assuntos/qualidade-de-produtos/formularios)
+    - [Tabelas de conversão da densidade e conversão de volume (Resolução ANP nº 894/2022)](https://www.gov.br/anp/pt-br/assuntos/qualidade-de-produtos/tabelas-de-conversao-da-densidade-e-conversao-de-volume-resolucao-anp-no-894-2022)
+    - [Autorização para uso específico de biodiesel e de suas misturas com óleo diesel](https://www.gov.br/anp/pt-br/assuntos/qualidade-de-produtos/autorizacao-para-uso-especifico-de-biodiesel-e-de-suas-misturas-com-oleo-diesel)
+    - [Regras para usos voluntários de biodiesel](https://www.gov.br/anp/pt-br/assuntos/qualidade-de-produtos/regras-para-usos-voluntarios-de-biodiesel)
+    - [Gás Natural - regulamentação das especificações e controle de qualidade](https://www.gov.br/anp/pt-br/assuntos/qualidade-de-produtos/gas-natural-regulamentacao-das-especificacoes-e-controle-de-qualidade)
+  - [RenovaBio](https://www.gov.br/anp/pt-br/assuntos/renovabio)    - [Sobre o RenovaBio](https://www.gov.br/anp/pt-br/assuntos/renovabio/sobre-o-renovabio)
+    - [Certificados da Produção ou Importação Eficiente de Biocombustíveis](https://www.gov.br/anp/pt-br/assuntos/renovabio/certificados-producao-importacao-eficiente-biocombustiveis)
+    - [Lista de sanções](https://www.gov.br/anp/pt-br/assuntos/renovabio/lista-de-sancoes)
+    - [Plataforma CBIO](https://www.gov.br/anp/pt-br/assuntos/renovabio/plataforma-cbio)
+    - [Escrituradores](https://www.gov.br/anp/pt-br/assuntos/renovabio/escrituradores)
+    - [Legislação](https://www.gov.br/anp/pt-br/assuntos/renovabio/legislacao)
+    - [Credenciamento de Firma Inspetora](https://www.gov.br/anp/pt-br/assuntos/renovabio/credenciamento-de-firma-inspetora)
+    - [Guia CBIO](https://www.gov.br/anp/pt-br/assuntos/renovabio/guia-cbio)
+    - [Metas preliminares para 2026 de redução de emissão de gases causadores do efeito estufa](https://www.gov.br/anp/pt-br/assuntos/renovabio/metas-preliminares-para-2026-de-reducao-de-emissao-de-gases-causadores-do-efeito-estufa)
+    - [Cumprimento das metas individuais de 2025 por distribuidor de combustíveis](https://www.gov.br/anp/pt-br/assuntos/renovabio/cumprimento-das-metas-individuais-de-2025-por-distribuidor-de-combustiveis)
+    - [Metas individuais compulsórias definitivas de redução de emissões de gases causadores do efeito estufa para 2026](https://www.gov.br/anp/pt-br/assuntos/renovabio/metas-individuais-compulsorias-definitivas-de-reducao-de-emissoes-de-gases-causadores-do-efeito-estufa-para-2026)
+  - [Royalties e outras participações](https://www.gov.br/anp/pt-br/assuntos/royalties-e-outras-participacoes)    - [Concessionários: prazos e documentos](https://www.gov.br/anp/pt-br/assuntos/royalties-e-outras-participacoes/concessionarios-prazos-e-documentos)
+    - [Estimativa de Royalties e de Participação Especial](https://www.gov.br/anp/pt-br/assuntos/royalties-e-outras-participacoes/estimativa-de-royalties-e-participacao-especial)
+    - [Participação especial](https://www.gov.br/anp/pt-br/assuntos/royalties-e-outras-participacoes/participacao-especial)
+    - [Participação especial - anos anteriores](https://www.gov.br/anp/pt-br/assuntos/royalties-e-outras-participacoes/participacao-especial-anos-anteriores)
+    - [Participações governamentais consolidadas](https://www.gov.br/anp/pt-br/assuntos/royalties-e-outras-participacoes/participacoes-governamentais-consolidadas)
+    - [Preço de referência do gás natural](https://www.gov.br/anp/pt-br/assuntos/royalties-e-outras-participacoes/preco-de-referencia-do-gas-natural)
+    - [Preço de referência do petróleo](https://www.gov.br/anp/pt-br/assuntos/royalties-e-outras-participacoes/preco-de-referencia-do-petroleo)
+    - [Preço mínimo do petróleo](https://www.gov.br/anp/pt-br/assuntos/royalties-e-outras-participacoes/preco-minimo-do-petroleo)
+    - [Proprietários de Terra](https://www.gov.br/anp/pt-br/assuntos/royalties-e-outras-participacoes/proprietarios-de-terra)
+    - [Royalties](https://www.gov.br/anp/pt-br/assuntos/royalties-e-outras-participacoes/royalties)
+    - [Royalties: cálculo da produção incremental](https://www.gov.br/anp/pt-br/assuntos/royalties-e-outras-participacoes/royalties-calculo-da-producao-incremental)
+    - [Royalties: redução de alíquota para empresas de pequeno e médio portes](https://www.gov.br/anp/pt-br/assuntos/royalties-e-outras-participacoes/royalties-reducao-de-aliquota-para-empresas-de-pequeno-e-medio-portes)
+    - [Ocupação ou Retenção de Área](https://www.gov.br/anp/pt-br/assuntos/royalties-e-outras-participacoes/ocupacao-ou-retencao-de-area)
+  - [SAF](https://www.gov.br/anp/pt-br/assuntos/saf)
+  - [Sobreaviso no Abastecimento de Combustíveis](https://www.gov.br/anp/pt-br/assuntos/sobreaviso-do-abastecimento)
+  - [Tecnologia e Meio Ambiente](https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente)    - [Pesquisa, desenvolvimento e inovação](https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/pesquisa-desenvolvimento-inovacao)
+    - [Meio Ambiente](https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/meio-ambiente)
+    - [PRH-ANP - Programa de Formação de Recursos Humanos](https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos)
+    - [Prêmio ANP de Inovação Tecnológica](https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/premio-anp-inovacao-tecnologica)
+    - [Fórum de Tecnologia, Inovação e Programas da ANP – TIP ANP](https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/forum-de-tecnologia-inovacao-e-programas)
+    - [NAVE](https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/nave-1)
+    - [Relatório – Resolução CNPE no 5/2022](https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/arquivos/relatorio-resolucao-cnpe05-2022.pdf)
+    - [Relatório sobre a implementação do marco regulatório de CCUS no país](https://www.gov.br/anp/pt-br/centrais-de-conteudo/publicacoes/relatorios/relatorio-sobre-a-implementacao-do-marco-regulatorio-de-ccus-no-pais)
+- [Composição](https://www.gov.br/anp/pt-br/composicao)
+  - [Diretoria Colegiada](https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada)    - [Composição da Diretoria Colegiada](https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/composicao-diretoria-colegiada)
+    - [Galeria de ex-Diretores da ANP](https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/galeria-de-ex-diretores-da-anp)
+    - [Deliberações da Diretoria Colegiada](https://www.gov.br/anp/pt-br/composicao/diretoria-colegiada/reunioes-da-diretoria-colegiada)
+  - [Organograma/Quem é quem](https://www.gov.br/anp/pt-br/composicao/organograma)    - [Quem é quem](https://www.gov.br/anp/pt-br/composicao/organograma/quem-e-quem)
+  - [Agenda de Dirigentes](https://www.gov.br/anp/pt-br/composicao/agenda-dirigentes)    - [Diretoria-Geral e unidades vinculadas](https://www.gov.br/anp/pt-br/composicao/agenda-dirigentes/diretoria-geral)
+    - [Diretoria I](https://www.gov.br/anp/pt-br/composicao/agenda-dirigentes/diretoria-i)
+    - [Diretoria II](https://www.gov.br/anp/pt-br/composicao/agenda-dirigentes/diretoria-ii)
+    - [Diretoria III](https://www.gov.br/anp/pt-br/composicao/agenda-dirigentes/diretoria-iii)
+    - [Diretoria IV](https://www.gov.br/anp/pt-br/composicao/agenda-dirigentes/diretoria-iv)
+    - [Diretoria Colegiada - Uorgs vinculadas](https://www.gov.br/anp/pt-br/composicao/agenda-dirigentes/diretoria-colegiada)
+    - [Agendas Antigas](https://www.gov.br/anp/pt-br/acesso-a-informacao/institucional/agenda-dirigentes/agendadirigentesate2020.xlsx)
+  - [Modelo de Governança da ANP](https://www.gov.br/anp/pt-br/composicao/modelo-de-governanca-da-anp)
+  - [Corregedoria](https://www.gov.br/anp/pt-br/composicao/corregedoria)
+- [Acesso à Informação](https://www.gov.br/anp/pt-br/acesso-a-informacao)
+  - [Institucional](https://www.gov.br/anp/pt-br/acesso-a-informacao/institucional)    - [Modelo de Governança da ANP](https://www.gov.br/anp/pt-br/composicao/modelo-de-governanca-da-anp)
+    - [Regimento Interno](https://atosoficiais.com.br/lei/regimento-interno-anp-anp?origin=instituicao)
+    - [Organograma/Quem é quem](https://www.gov.br/anp/pt-br/composicao/organograma/organograma-quem-e-quem)
+    - [Telefones, endereços e horário de funcionamento da ANP](https://www.gov.br/anp/pt-br/acesso-a-informacao/telefones-enderecos-anp)
+    - [Linha do tempo ANP](https://www.gov.br/anp/pt-br/acesso-a-informacao/institucional/linha-do-tempo-anp)
+    - [Especial ANP 25 Anos](https://www.gov.br/anp/pt-br/acesso-a-informacao/institucional/especial-anp-25-anos)
+    - [Comissão de Ética da ANP](https://www.gov.br/anp/pt-br/acesso-a-informacao/institucional/comissao-de-etica-da-anp)
+    - [Coronavírus: ações tomadas pela ANP](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/coronavirus-acoes-tomadas-pela-anp)
+    - [Evolução do Setor de Petróleo, Gás Natural e Biocombustíveis](https://www.gov.br/anp/pt-br/acesso-a-informacao/institucional/evolucao-do-setor-de-petroleo-gas-natural-e-biocombustiveis)
+    - [Especial ANP 20 Anos](https://www.gov.br/anp/pt-br/acesso-a-informacao/institucional/especial-anp-20-anos)
+    - [Agenda de Dirigentes](https://www.gov.br/anp/pt-br/composicao/agenda-dirigentes)
+    - [A história do gás natural no Brasil](https://www.gov.br/anp/pt-br/acesso-a-informacao/institucional/historia-gn-brasil)
+    - [A história do petróleo no Brasil](https://www.gov.br/anp/pt-br/acesso-a-informacao/institucional/historia-petroleo-brasil)
+  - [Ações e Programas](https://www.gov.br/anp/pt-br/acesso-a-informacao/acoes-e-programas)    - [Metas Institucionais](https://www.gov.br/anp/pt-br/acesso-a-informacao/acoes-e-programas/metas-institucionais)
+    - [Plano de Comunicação](https://www.gov.br/anp/pt-br/acesso-a-informacao/acoes-e-programas/plano-de-comunicacao)
+    - [Plano de Gestão Anual](https://www.gov.br/anp/pt-br/acesso-a-informacao/acoes-e-programas/plano-de-gestao-anual)
+    - [Plano de Integridade](https://www.gov.br/anp/pt-br/acesso-a-informacao/gestao-de-riscos-e-integridade)
+    - [Plano Diretor de Tecnologia da Informação](https://www.gov.br/anp/pt-br/acesso-a-informacao/acoes-e-programas/plano-diretor-de-tecnologia-da-informacao)
+    - [Política de Diversidade, Equidade e Inclusão da ANP](https://www.gov.br/anp/pt-br/acesso-a-informacao/acoes-e-programas/politica-de-diversidade-equidade-e-inclusao-da-anp)
+    - [Programa de Governança em Privacidade da ANP](https://www.gov.br/anp/pt-br/acesso-a-informacao/acoes-e-programas/programa-de-governanca-em-privacidade-da-anp)
+  - [Agenda Regulatória](https://www.gov.br/anp/pt-br/acesso-a-informacao/agenda-regulatoria)
+  - [Agenda de Avaliação de Resultado Regulatório](https://www.gov.br/anp/pt-br/acesso-a-informacao/agenda-de-avaliacao-de-resultado-regulatorio)
+  - [Agenda de Eventos](https://www.gov.br/anp/pt-br/acesso-a-informacao/agenda-eventos)
+  - [Aquisições, Licitações e Contratos](https://www.gov.br/anp/pt-br/acesso-a-informacao/aquisicoes-licitacoes-contratos)    - [Licitações Administrativas](https://www.gov.br/anp/pt-br/acesso-a-informacao/aquisicoes-licitacoes-contratos/licitacoes-administrativas)
+    - [Diagnóstico de Gestão de Processos - Contratação de Bens e Serviços](https://www.gov.br/anp/pt-br/acesso-a-informacao/licitacoes-e-contratos/licitacoes-e-contratos#diagnostico-gestao-processo)
+    - [Painel de Compras](https://www.gov.br/anp/pt-br/acesso-a-informacao/licitacoes-e-contratos/licitacoes-e-contratos#painel-compras)
+  - [Procuradoria Federal na ANP - Arquivo de documentos públicos](https://www.gov.br/anp/pt-br/acesso-a-informacao/arquivo-de-documentos-publicos-procuradoria-federal-na-anp)
+  - [Auditoria Interna](https://www.gov.br/anp/pt-br/acesso-a-informacao/auditoria-interna)
+  - [Carta de Serviços](https://www.gov.br/anp/pt-br/canais_atendimento/ouvidoria/carta-de-servicos)
+  - [Comunicação de problemas no estoque regulatório da ANP](https://www.gov.br/anp/pt-br/acesso-a-informacao/comunicacao-de-problemas-no-estoque-regulatorio-da-anp)
+  - [Concursos ANP](https://www.gov.br/anp/pt-br/acesso-a-informacao/concursos-anp)    - [CPNU 2 - 2025](https://www.gov.br/anp/pt-br/acesso-a-informacao/concursos-anp/cpnu-2-2025)
+    - [Processo Seletivo Simplificado ANP - 2022](https://www.gov.br/anp/pt-br/acesso-a-informacao/concursos-anp/processo-seletivo-simplificado-anp-2022)
+    - [Concurso Público ANP - 2015](https://www.gov.br/anp/pt-br/acesso-a-informacao/concursos-anp/concurso-publico-anp-2015)
+    - [Concurso Público ANP - 2012](https://www.gov.br/anp/pt-br/acesso-a-informacao/concursos-anp/concurso-anp-2012)
+    - [Concurso Público ANP - 2008](https://www.gov.br/anp/pt-br/acesso-a-informacao/concursos-anp/concurso-publico-anp-2008)
+    - [Concurso Público ANP - 2005](https://www.gov.br/anp/pt-br/acesso-a-informacao/concursos-anp/concurso-publico-anp-2005)
+  - [Conselho de Usuários da ANP](https://www.gov.br/anp/pt-br/acesso-a-informacao/conselhodeusuariosda-anp)
+  - [Consumo de energia elétrica na ANP](https://www.gov.br/anp/pt-br/acesso-a-informacao/consumo-de-energia-eletrica-na-anp)
+  - [Convênios e transferências](https://www.gov.br/anp/pt-br/acesso-a-informacao/convenios-transferencias)
+  - [Dados abertos](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos)
+  - [Glossário](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario)    - [A](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/a)
+    - [B](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/b)
+    - [C](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/c)
+    - [D](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/d)
+    - [E](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/e)
+    - [F](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/f)
+    - [G](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/g)
+    - [H](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/h)
+    - [I](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/i)
+    - [J](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/j)
+    - [L](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/l)
+    - [M](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/m)
+    - [N](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/n)
+    - [O](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/o)
+    - [P](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/p)
+    - [Q](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/q)
+    - [R](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/r)
+    - [S](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/s)
+    - [T](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/t)
+    - [U](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/u)
+    - [V](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/v)
+    - [W](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/w)
+    - [X](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/x)
+    - [Z](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/z)
+    - [Referências - Glossário](https://www.gov.br/anp/pt-br/acesso-a-informacao/glossario/glossario)
+  - [Gestão da Estratégia](https://www.gov.br/anp/pt-br/acesso-a-informacao/gestao-da-estrategia)
+  - [Gestão de Riscos e Integridade](https://www.gov.br/anp/pt-br/acesso-a-informacao/gestao-de-riscos-e-integridade)
+  - [Informações classificadas](https://www.gov.br/anp/pt-br/acesso-a-informacao/informacoes-classificadas)
+  - [Multas e Regularizações](https://www.gov.br/anp/pt-br/acesso-a-informacao/multas-e-regularizacoes)    - [Informações Financeiras](https://www.gov.br/anp/pt-br/acesso-a-informacao/multas-e-regularizacoes/informacoes-financeiras)
+    - [Intimação](https://www.gov.br/anp/pt-br/acesso-a-informacao/multas-e-regularizacoes/intimacao)
+    - [Multas aplicadas com vencimento a partir de 2016](https://www.gov.br/anp/pt-br/acesso-a-informacao/multas-e-regularizacoes/multas-aplicadas-com-vencimento-a-partir-de-2016)
+    - [Pedido de cópias dos processos](https://www.gov.br/anp/pt-br/acesso-a-informacao/multas-e-regularizacoes/pedido-de-copias-dos-processos)
+    - [Relação de processos administrativos julgados pela ANP (de 2011 até 2015)](https://www.gov.br/anp/pt-br/acesso-a-informacao/multas-e-regularizacoes/relacao-de-processos-administrativos-julgados-pela-anp-de-2011-ate-2015)
+  - [Oportunidades de trabalho](https://www.gov.br/anp/pt-br/acesso-a-informacao/oportunidades-de-trabalho)    - [Movimentação Consensual – Portaria nº 8.471/2022](https://www.gov.br/anp/pt-br/acesso-a-informacao/oportunidades-de-trabalho/oportunidades-para-movimentacao-consensual)
+    - [Programa de Estágio da ANP](https://www.gov.br/anp/pt-br/acesso-a-informacao/oportunidades-de-trabalho/programa-de-estagio-da-anp)
+  - [Participação Social](https://www.gov.br/anp/pt-br/acesso-a-informacao/participacao-social)
+  - [Perguntas Frequentes](https://www.gov.br/anp/pt-br/acesso-a-informacao/perguntas-frequentes)
+  - [Política de relacionamento nas redes sociais](https://www.gov.br/anp/pt-br/acesso-a-informacao/politica-de-relacionamento-nas-redes-sociais)
+  - [Processo Eletrônico - SEI](https://www.gov.br/anp/pt-br/acesso-a-informacao/processo-eletronico-sei)
+  - [Processos sancionadores](https://www.gov.br/anp/pt-br/acesso-a-informacao/processos-sancionadores)    - [SIM](https://www.gov.br/anp/pt-br/acesso-a-informacao/processos-sancionadores/sim)
+  - [Produtos e Resultados Gerados](https://www.gov.br/anp/pt-br/acesso-a-informacao/produtos-e-resultados-gerados)
+  - [Programa de Estágio da ANP](https://www.gov.br/anp/pt-br/acesso-a-informacao/oportunidades-de-trabalho/programa-de-estagio-da-anp)
+  - [Qualidade Regulatória](https://www.gov.br/anp/pt-br/acesso-a-informacao/qualidade-regulatoria)
+  - [Receitas e Despesas](https://www.gov.br/anp/pt-br/acesso-a-informacao/receitas-e-despesas)    - [Demonstrações Contábeis](https://www.gov.br/anp/pt-br/acesso-a-informacao/receitas-e-despesas/demonstracoes-contabeis)
+  - [Relatórios de Correição](https://www.gov.br/anp/pt-br/acesso-a-informacao/relatorios-de-correicao)
+  - [Servidores](https://www.gov.br/anp/pt-br/acesso-a-informacao/servidores)
+  - [Serviço de informação ao cidadão (SIC)](https://www.gov.br/anp/pt-br/acesso-a-informacao/servico-de-informacao-ao-cidadao-sic)
+  - [Telefones, endereços e horário de funcionamento da ANP](https://www.gov.br/anp/pt-br/acesso-a-informacao/telefones-enderecos-anp)
+  - [Termos de uso do portal da ANP](https://www.gov.br/anp/pt-br/acesso-a-informacao/termos-de-uso-privacidade-e-seguranca-1)
+  - [Transparência e Prestação de Contas](https://www.gov.br/anp/pt-br/acesso-a-informacao/transparencia-prestacao-contas)
+  - [Tratamento de Dados Pessoais](https://www.gov.br/anp/pt-br/acesso-a-informacao/tratamento-dados-pessoais)    - [Leis e Guias](https://www.gov.br/anp/pt-br/acesso-a-informacao/tratamento-dados-pessoais/leis-e-guias)
+    - [Vídeos institucionais da ANPD](https://www.gov.br/anp/pt-br/acesso-a-informacao/tratamento-dados-pessoais/videos-institucionais-da-anpd)
+    - [Lei Geral de Proteção de Dados Pessoais – LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm)
+    - [Publicações da Autoridade Nacional de Proteção de Dados](https://www.gov.br/anpd/pt-br/documentos-e-publicacoes)
+    - [Guias e Modelos da Secretaria de Governo Digital](https://www.gov.br/governodigital/pt-br/seguranca-e-protecao-de-dados/guias-e-modelos)
+    - [Relatórios de Órgãos de Controle](https://www.gov.br/anp/pt-br/acesso-a-informacao/arquivos-lgpd/relatorio-tcu-lgpd.pdf)
+    - [Termo de Uso e Política de Privacidade](https://www.gov.br/anp/pt-br/acesso-a-informacao/termo-uso-politica-privacidade-lgpd.pdf)
+    - [Programa de Governança em Privacidade](https://www.gov.br/anp/pt-br/acesso-a-informacao/acoes-e-programas/governanca-privacidade.pdf)
+  - [Painel Dinâmico de Gestão de Deliberações de Diretoria Colegiada](https://app.powerbi.com/view?r=eyJrIjoiNDg2OGQ1NmMtNGIzYi00MWNlLWFhMmMtYWU5NmNjNzMwNDE4IiwidCI6IjQ0OTlmNGZmLTI0YTYtNGI0Mi1iN2VmLTEyNGFmY2FkYzkxMyJ9)
+- [Agenda de Dirigentes](https://www.gov.br/anp/pt-br/composicao/agenda-dirigentes)
+- [Central de Conteúdos](https://www.gov.br/anp/pt-br/centrais-de-conteudo)
+  - [Aplicativos](https://www.gov.br/anp/pt-br/centrais-de-conteudo/aplicativos)    - [ANP com Vc - Postos](https://www.gov.br/anp/pt-br/centrais-de-conteudo/aplicativos/anp-com-vc-postos)
+  - [Apresentações e Palestras](https://www.gov.br/anp/pt-br/centrais-de-conteudo/apresentacoes-palestras)    - [2026](https://www.gov.br/anp/pt-br/centrais-de-conteudo/apresentacoes-palestras/2026)
+    - [2025](https://www.gov.br/anp/pt-br/centrais-de-conteudo/apresentacoes-palestras/2025)
+    - [2024](https://www.gov.br/anp/pt-br/centrais-de-conteudo/apresentacoes-palestras/2024)
+    - [2023](https://www.gov.br/anp/pt-br/centrais-de-conteudo/apresentacoes-palestras/2023)
+    - [2022](https://www.gov.br/anp/pt-br/centrais-de-conteudo/apresentacoes-palestras/2022)
+    - [2021](https://www.gov.br/anp/pt-br/centrais-de-conteudo/apresentacoes-palestras/2021)
+    - [2020](https://www.gov.br/anp/pt-br/centrais-de-conteudo/apresentacoes-palestras/2020)
+    - [2019](https://www.gov.br/anp/pt-br/centrais-de-conteudo/apresentacoes-palestras/2019)
+    - [2018](https://www.gov.br/anp/pt-br/centrais-de-conteudo/apresentacoes-palestras/2018)
+    - [2017](https://www.gov.br/anp/pt-br/centrais-de-conteudo/apresentacoes-palestras/2017)
+  - [Dados abertos](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos)    - [Acervo de Dados Técnicos](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/acervo-de-dados-tecnicos)
+    - [Ações de Fiscalização do Abastecimento](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/acoes-de-fiscalizacao)
+    - [Aditamento de conteúdo local](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/aditamento-conteudo-local)
+    - [Amostras de Rochas e Fluidos](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/amostras-de-rochas-e-fluidos)
+    - [Aquisição, Processamento e Estudo de Dados](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/aquisicao-procedimento-e-estudo-de-dados)
+    - [Autorizações de gás natural](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/dados-abertos-autorizacoes-gas-natural)
+    - [Blocos com Fase Exploratória Encerrada](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/blocos-com-fase-exploratoria-encerrada)
+    - [Capacidade de Armazenagem de Terminais](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/capacidade-de-armazenagem-de-terminais)
+    - [Comercialização de Gás Natural](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/comercializacao-de-gas-natural)
+    - [Dados Cadastrais das Revendas de Gás Liquefeito de Petróleo (GLP)](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/dados-cadastrais-das-revendas-de-gas-liquefeito-de-petroleo)
+    - [Dados abertos - Distribuidores de Combustíveis Líquidos](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/dados-abertos-distribuidores-de-combustiveis-liquidos)
+    - [Fase de Exploração](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/fase-exploracao)
+    - [Fase de Desenvolvimento e Produção](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/fase-de-desenvolvimento-e-producao)
+    - [Dados abertos - Fiscalização de Conteúdo Local](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/dados-abertos-fiscalizacao-de-conteudo-local)
+    - [Dados Cadastrais dos Revendedores Varejistas de Combustíveis Automotivos](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/dados-cadastrais-dos-revendedores-varejistas-de-combustiveis-automotivos)
+    - [Dados Georreferenciados das Bacias Sedimentares Brasileiras](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/dados-georreferenciados-das-bacias-sedimentares-brasileiras)
+    - [Dados de E&P](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/gestao-contratos-exploracao-producao-dados-e-p)
+    - [Importações e exportações](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/importacoes-e-exportacoes)
+    - [Dados de Incidentes de Exploração e Produção de Petróleo e Gás Natural](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/incidentes-seguranca-operacional)
+    - [Dados abertos - Movimentação de derivados de petróleo e biocombustíveis](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/dados-abertos-movimentacao-de-derivados-de-petroleo)
+    - [Movimentação de Gás Natural em Gasodutos de Transporte](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/dados-consolidados-movimentacao-de-gas-natural-em-gasodutos-de-transporte)
+    - [Movimentação dos Terminais Aquaviários](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/movimentacao-dos-terminais-aquaviarios)
+    - [Multas aplicadas decorrentes de autuações em ações de fiscalização](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/multas-aplicadas-com-vencimento-a-partir-de-2016)
+    - [Participações Governamentais](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/participacoes-governamentais)
+    - [Pontos de Abastecimento Autorizados](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/pontos-de-abastecimento-autorizados)
+    - [Dados Abertos - Pesquisa, Desenvolvimento e Inovação (PD&I)](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/dados-abertos-pesquisa-e-desenvolvimento-e-inovacao-pd-i)
+    - [Programa de Monitoramento da Qualidade dos Combustíveis (PMQC)](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/pmqc-programa-de-monitoramento-da-qualidade-dos-combustiveis)
+    - [Prestadores de serviços de apoio administrativo](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/prestadores-de-servicos-de-apoio-administrativo)
+    - [Previsão de Atividades e Investimentos Exploratórios](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/previsao-de-exploracao)
+    - [Processamento de petróleo e produção de derivados](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/processamento-de-petroleo-e-producao-de-derivados)
+    - [Produção de biocombustíveis](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/producao-de-biocombustiveis)
+    - [Produção de petróleo e gás natural por estado e localização](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/producao-de-petroleo-e-gas-natural-por-estado-e-localizacao)
+    - [Produção de Petróleo e Gás Natural por Poço](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/producao-de-petroleo-e-gas-natural-por-poco)
+    - [Relação de Concessionários](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/relacao-de-concessionarios)
+    - [Resultado de poço](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/resultados-de-poco)
+    - [Rodadas de Licitações de Petróleo e Gás Natural](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/rodadas-de-licitacoes-de-petroleo-e-gas-natural)
+    - [Série Histórica de Preços de Combustíveis e de GLP](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/serie-historica-de-precos-de-combustiveis)
+    - [Tancagem do Abastecimento Nacional de Combustíveis](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/tancagem-do-abastecimento-nacional-de-combustiveis)
+    - [Vendas de derivados de petróleo e biocombustíveis](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/vendas-de-derivados-de-petroleo-e-biocombustiveis)
+    - [Programa de Monitoramento dos Lubrificantes (PML)](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/o-programa-de-monitoramento-dos-lubrificantes-pml)
+    - [Registro de Óleos e Graxas Lubrificantes](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/registro-de-oleos-e-graxas-lubrificantes)
+  - [Dados estatísticos](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-estatisticos)    - [Reservas nacionais de petróleo e gás natural](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-estatisticos/reservas-nacionais-de-petroleo-e-gas-natural)
+  - [Galeria de Fotos](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos)    - [Rio Innovation Week 2026](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/rio-innovation-week-2026)
+    - [ROG.e 2026](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/rog-e-2026)
+    - [6º Ciclo da Oferta Permanente de Concessão](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/6o-ciclo-da-oferta-permanente-de-concessao)
+    - [10/03/2026 - 1º Workshop do Programa de Redução da Concentração no Mercado de Gás Natural (Gas release)](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/1o-workshop-do-programa-de-reducao-da-concentracao-no-mercado-de-gas-natural-gas-release)
+    - [XIII SOMA – Seminário de Segurança Operacional e Meio Ambiente da ANP](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/xiii-soma-2013-seminario-de-seguranca-operacional-e-meio-ambiente-da-anp)
+    - [22/10/2025 - 3º Ciclo da Oferta Permanente de Partilha](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/22-10-2025-3o-ciclo-da-oferta-permanente-de-partilha)
+    - [OTC Brasil 2025](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/otc-brasil-2025)
+    - [5/9/2025 - Cerimônia de Posse - Artur Watt Neto e Pietro Mendes](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/5-9-2025-cerimonia-de-posse-diretor-geral-artur-watt-neto-e-diretor-tecnico-pietro-mendes)
+    - [3º Fórum de Tecnologia, Inovação e Programas da ANP – TIP ANP](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/3o-forum-de-tecnologia-inovacao-e-programas-da-anp-2013-tip-anp)
+    - [17/06/2025 - 5º Ciclo da Oferta Permanente – Concessão](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/17-06-2025-5o-ciclo-da-oferta-permanente-2013-concessao)
+    - [2/12/2024 - Cerimônia do Prêmio ANP de Inovação Tecnológica 2024](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/2-12-2024-cerimonia-do-premio-anp-de-inovacao-tecnologica-2024)
+    - [ROG.e 2024](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/rog-e-2024)
+    - [13 a 15/08/2024 - 2° Fórum de Tecnologia, Inovação e Programa de recursos humanos da ANP – TIP ANP](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/13-a-15-08-2024-2deg-forum-de-tecnologia-inovacao-e-programa-de-recursos-humanos-da-anp-2013-tip-anp)
+    - [13/12/2023 - 2º Ciclo da Oferta Permanente – Partilha](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/13-12-2023-2o-opp)
+    - [13/12/2023 - 4º Ciclo da Oferta Permanente – Concessão](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/13-12-2023-4o-opc)
+    - [30/11/2023 - Cerimônia do Prêmio ANP de Inovação Tecnológica 2023](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/30-11-2023-cerimonia-do-premio-anp-de-inovacao-tecnologica-2023)
+    - [29 a 30/11/2023 - 1º Fórum de Tecnologia e Inovação da ANP](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/29-a-30-11-2023-1o-forum-de-tecnologia-e-inovacao-da-anp)
+    - [26/10/2023 - XI Workshop de Segurança Operacional e Meio Ambiente (XI SOMA)](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/26-10-2023-xi-workshop-de-seguranca-operacional-e-meio-ambiente-xi-soma)
+    - [24 a 26/10/2023 - OTC Brasil 2023](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/24-a-26-10-2023-otc-brasil-2023)
+    - [06/06/2022 - Cerimônia de Posse de Diretores da ANP](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/06-06-2022-cerimonia-de-posse-diretores-anp)
+    - [13/04/2022 - 3º Ciclo da Oferta Permanente de Concessão](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/copy_of_13-04-2022-3o-ciclo-da-oferta-permanente-de-concessao)
+    - [16/12/2022 - 1º Ciclo de Oferta Permanente – Partilha](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/16-12-2022-1o-ciclo-oferta-permanente-2013-partilha)
+    - [08/12/2022 - Assinatura dos contratos de blocos arrematados no 3º Ciclo da Oferta Permanente de Concessão (OPC)](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/08-12-2022-assinatura-dos-contratos-de-blocos-arrematados-no-3o-ciclo-da-oferta-permanente-de-concessao-opc)
+    - [07/12/2022 - Prêmio ANP de Inovação Tecnológica 2022](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/07-12-2022-premio-anp-de-inovacao-tecnologica-2022)
+    - [26/09/2022 - X Workshop de Segurança Operacional e Meio Ambiente - SOMA](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/26-09-2022-x-workshop-de-seguranca-operacional-e-meio-ambiente-soma)
+    - [17/12/2021 - Segunda Rodada de Licitações dos Volumes Excedentes da Cessão Onerosa](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/17-12-2021-segunda-rodada-da-cessao-onerosa)
+    - [29/11/2021 - Prêmio ANP de Inovação Tecnológica 2020](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/29-11-2021-premio-anp)
+    - [07/10/2021 - 17ª Rodada de Licitações](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/07-10-2021-17a-rodada-de-licitacoes)
+    - [26 a 29/09 - Rio Oil & Gas 2022](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/rio-oil-gas-2022)
+    - [05/07/2023 - Assinatura dos contratos do 1º Ciclo da Oferta Permanente de Partilha (OPP)](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/05-07-2023-assinatura-dos-contratos-do-1o-ciclo-da-oferta-permanente-de-partilha-opp)
+    - [Encontro Nacional do PRH-ANP 2026](https://www.gov.br/anp/pt-br/centrais-de-conteudo/galeria-fotos/encontro-nacional-do-prh-anp-2026)
+  - [Notas e Estudos Técnicos](https://www.gov.br/anp/pt-br/centrais-de-conteudo/notas-e-estudos-tecnicos)    - [Estudos Técnicos](https://www.gov.br/anp/pt-br/centrais-de-conteudo/notas-e-estudos-tecnicos/estudos-tecnicos)
+    - [Notas Técnicas](https://www.gov.br/anp/pt-br/centrais-de-conteudo/notas-e-estudos-tecnicos/notas-tecnicas)
+  - [Painéis Dinâmicos da ANP](https://www.gov.br/anp/pt-br/centrais-de-conteudo/paineis-dinamicos-da-anp)    - [Painéis Dinâmicos sobre Exploração e Produção de Petróleo e Gás](https://www.gov.br/anp/pt-br/centrais-de-conteudo/paineis-dinamicos-da-anp/paineis-dinamicos-sobre-exploracao-e-producao-de-petroleo-e-gas)
+    - [Painel Dinâmico de Movimentação de Gás Natural em Gasodutos de Transporte](https://www.gov.br/anp/pt-br/centrais-de-conteudo/paineis-dinamicos-da-anp/painel-dinamico-de-movimentacao-de-gas-natural-em-gasodutos-de-transporte)
+    - [Painéis Dinâmicos sobre Combustíveis, Infraestrutura, Qualidade e RenovaBio](https://www.gov.br/anp/pt-br/centrais-de-conteudo/paineis-dinamicos-da-anp/paineis-dinamicos-sobre-combustiveis)
+    - [Painel Dinâmico da Agenda Regulatória](https://www.gov.br/anp/pt-br/centrais-de-conteudo/paineis-dinamicos-da-anp/painel-dinamico-da-agenda-regulatoria)
+    - [Painel Dinâmico da Ouvidoria](https://www.gov.br/anp/pt-br/centrais-de-conteudo/paineis-dinamicos-da-anp/painel-dinamico-da-ouvidoria)
+  - [Publicações](https://www.gov.br/anp/pt-br/centrais-de-conteudo/publicacoes)    - [Anuário Estatístico](https://www.gov.br/anp/pt-br/centrais-de-conteudo/publicacoes/anuario-estatistico)
+    - [Boletins ANP](https://www.gov.br/anp/pt-br/centrais-de-conteudo/publicacoes/boletins-anp)
+    - [Cartilhas e guias](https://www.gov.br/anp/pt-br/centrais-de-conteudo/publicacoes/cartilhas-e-guias)
+    - [Legislação ANP](https://www.gov.br/anp/pt-br/servicos/legislacao-da-anp)
+    - [Livros e revistas](https://www.gov.br/anp/pt-br/centrais-de-conteudo/publicacoes/livros-e-revistas)
+    - [Relatórios](https://www.gov.br/anp/pt-br/centrais-de-conteudo/publicacoes/relatorios)
+    - [Sínteses](https://www.gov.br/anp/pt-br/centrais-de-conteudo/publicacoes/sinteses)
+  - [Vídeos](https://www.gov.br/anp/pt-br/centrais-de-conteudo/videos)    - [Canal da ANP no Youtube](https://www.youtube.com/user/ANPgovbr/videos)
+  - [Videocast ANP](https://www.gov.br/anp/pt-br/centrais-de-conteudo/videocasts-anp)
+- [Canais de Atendimento](https://www.gov.br/anp/pt-br/canais_atendimento)
+  - [Ouvidoria](https://www.gov.br/anp/pt-br/canais_atendimento/ouvidoria)    - [Carta de Serviços](https://www.gov.br/anp/pt-br/canais_atendimento/ouvidoria/carta-de-servicos)
+  - [Reclamações/denúncias contra postos de combustíveis, revendas de GLP e outros agentes](https://www.gov.br/anp/pt-br/canais_atendimento/reclamacoes-e-denuncias-contra-postos-de-combustiveis-revendas-de-glp-inclusive-programa-gas-do-povo-e-outros-agentes-regulados)
+  - [Fale Conosco](https://www.gov.br/anp/pt-br/canais_atendimento/fale-conosco)
+  - [Consumidor](https://www.gov.br/anp/pt-br/canais_atendimento/consumidor)    - [Mês do Consumidor 2026](https://www.gov.br/anp/pt-br/canais_atendimento/consumidor/mes-do-consumidor-2026)
+    - [Como funciona a fiscalização da ANP](https://www.gov.br/anp/pt-br/canais_atendimento/consumidor/como-funciona-a-fiscalizacao-da-anp)
+    - [Dicas para o consumidor – combustíveis](https://www.gov.br/anp/pt-br/canais_atendimento/consumidor/dicas-para-o-consumidor-2013-combustiveis)
+    - [Dicas para o consumidor – GLP (gás de cozinha)](https://www.gov.br/anp/pt-br/canais_atendimento/consumidor/dicas-para-o-consumidor-2013-glp-gas-de-cozinha)
+  - [Imprensa](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa)    - [ANP esclarece](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/anp-esclarece)
+    - [ANP na mídia](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/anp-na-midia)
+    - [Cadastro de jornalistas](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/cadastro-de-jornalistas)
+    - [Kits de imprensa](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/kits-de-imprensa-1)
+    - [Newsletter](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/newsletter)
+    - [Notícias e comunicados](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados)
+    - [Painéis Dinâmicos da ANP](https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/paineis-dinamicos-da-anp)
+- [Serviços](https://www.gov.br/anp/pt-br/servicos)
+  - [Sistema de Legislação](https://leis.org/anp)
+  - [Legislação da ANP](https://www.gov.br/anp/pt-br/servicos/legislacao-da-anp)    - [Sistema de Legislação da ANP](https://leis.org/anp)
+  - [Processo Eletrônico - SEI](https://www.gov.br/anp/pt-br/servicos/processo-eletronico-sei)    - [Solicitar cadastro de usuário externo no SEI-ANP](https://www.gov.br/pt-br/servicos/cadastrar-usuario-externo-no-sei-anp)
+  - [Sistemas da ANP](https://www.gov.br/anp/pt-br/servicos/sistemas-anp)    - [Central de Sistemas da ANP - CSA](https://csa.anp.gov.br/)
+    - [Vídeos explicativos - i-Engine](https://www.gov.br/anp/pt-br/servicos/sistemas-anp/videos-explicativos-i-engine)
+    - [Vídeos explicativos - Sistema DPP](https://www.gov.br/anp/pt-br/servicos/sistemas-anp/videos-explicativos-sistema-dpp)
+  - [Webmail](https://outlook.office365.com/owa/anp.gov.br/)
+- [Rodadas ANP](https://www.gov.br/anp/pt-br/rodadas-anp)
+  - [Entenda as Rodadas](https://www.gov.br/anp/pt-br/rodadas-anp/entenda-as-rodadas)    - [Rodadas de Licitações](https://www.gov.br/anp/pt-br/rodadas-anp/entenda-as-rodadas/rodadas-de-licitacoes)
+    - [Os regimes de concessão e de partilha](https://www.gov.br/anp/pt-br/rodadas-anp/entenda-as-rodadas/os-regimes-de-concessao-e-de-partilha)
+  - [Cessão de Contratos](https://www.gov.br/anp/pt-br/assuntos/exploracao-e-producao-de-oleo-e-gas/gestao-de-contratos-de-e-p/cessao-de-contratos)
+  - [Oferta Permanente](https://www.gov.br/anp/pt-br/rodadas-anp/oferta-permanente)    - [Oferta Permanente sob o regime de Concessão](https://www.gov.br/anp/pt-br/rodadas-anp/oferta-permanente/opc)
+    - [Oferta Permanente de Partilha de Produção](https://www.gov.br/anp/pt-br/rodadas-anp/oferta-permanente/opp)
+    - [Recursos Administrativos](https://www.gov.br/anp/pt-br/rodadas-anp/oferta-permanente/recursos-administrativos)
+    - [Eventos](https://www.gov.br/anp/pt-br/rodadas-anp/oferta-permanente/eventos)
+    - [Resolução de Procedimentos Licitatórios](https://www.gov.br/anp/pt-br/rodadas-anp/oferta-permanente/resolucao-procedimentos-licitatorio)
+    - [Modelos de Seguro Garantia dos Editais – Consulta e Audiência Públicas nº 01/2024](https://www.gov.br/anp/pt-br/rodadas-anp/oferta-permanente/modelos-seguro-garantia-editais-2013-cap-01-2024)
+    - [Consultas e Audiências Públicas](https://www.gov.br/anp/pt-br/rodadas-anp/oferta-permanente/consultas-e-audiencias-publicas)
+    - [Resolução de procedimentos licitatórios do regime de concessão – Consulta e Audiência Públicas nº 01/2015 - Resolução nº 18/2015 (revogada pela Resolução ANP nº 969/2024)](https://www.gov.br/anp/pt-br/rodadas-anp/oferta-permanente/resolucao-de-procedimentos-licitatorios-do-regime-de-concessao-2013-consulta-e-audiencia-publicas-no-01-2015-resolucao-no-18-2015-revogada-pela-resolucao-anp-no-969-2024)
+    - [Resolução de procedimentos licitatórios do regime de partilha da produção – Consulta e Audiência Públicas nº 16/2013 – Resolução nº 24/2013 (revogada pela Resolução ANP nº 969/2024)](https://www.gov.br/anp/pt-br/rodadas-anp/oferta-permanente/resolucao-de-procedimentos-licitatorios-do-regime-de-partilha-da-producao-2013-consulta-e-audiencia-publicas-no-16-2013-2013-resolucao-no-24-2013-revogada-pela-resolucao-anp-no-969-2024)
+    - [Seminários e Workshops da Oferta Permanente](https://www.gov.br/anp/pt-br/rodadas-anp/oferta-permanente/seminarios-da-oferta-permanente)
+  - [Atividades em Andamento](https://www.gov.br/anp/pt-br/rodadas-anp/atividades-andamento)    - [6º Ciclo da Oferta Permanente de Concessão](https://www.gov.br/anp/pt-br/rodadas-anp/oferta-permanente/opc/6o-ciclo-da-oferta-permanente-de-concessao/6o-ciclo-da-oferta-permanente-de-concessao)
+    - [5º Ciclo da Oferta Permanente de Concessão](https://www.gov.br/anp/pt-br/rodadas-anp/oferta-permanente/opc/5o-ciclo-da-oferta-permanente-de-concessao/5o-ciclo-oferta-permanente-concessao)
+    - [4º Ciclo 

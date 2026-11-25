@@ -8,17 +8,17 @@ Busca Avançada
 
 Notícias
 
-Comercialização (1)
+Comercialização (3)
 
-Consumo (1)
+Consumo (3)
 
-Distribuição (1)
+Distribuição (3)
 
-Geração (1)
+Geração (3)
 
-Mercado (1)
+Mercado (3)
 
-1 Documentos listados
+4 Documentos listados
 
 Ordenados por
 
@@ -36,17 +36,41 @@ Resultados por página
 
 NOTICIAS
 
-[Confira a programação do 2º Fórum Análise Setorial CCEE e faça sua inscrição](https://www.ccee.org.br/-/confira-a-programacao-do-2-forum-analise-setorial-ccee-e-faca-sua-inscricao)
+[CCEE disponibiliza guia para orientar o processo de portabilidade de representação varejista](https://www.ccee.org.br/-/ccee-disponibiliza-guia-para-orientar-o-processo-de-portabilidade-de-representacao-varejista)
 
-Evento acontece no dia 17 de novembro, em São Paulo, e aborda os temais mais relevantes para o mercado
+Material reúne orientações sobre as etapas, os prazos e as responsabilidades envolvidos na troca de agente varejista
 
-Publicado em: 13/10/2026
+Publicado em: 25/11/2026
+
+NOTICIAS
+
+[Ainda dá tempo: Webinar sobre novo modelo liquidação e garantias financeiras acontece nesta sexta-feira (27). Inscreva-se](https://www.ccee.org.br/-/ainda-da-tempo-webinar-sobre-novo-modelo-liquidacao-e-garantias-financeiras-acontece-nesta-sexta-feira-27-.-inscreva-se)
+
+Encontro online apresentará estudos da CCEE para modernização dos processos e abrirá espaço para diálogo com os agentes do mercado
+
+Publicado em: 25/11/2026
+
+NOTICIAS
+
+[CCEE amplia prazo para inscrições no Ciclo Piloto 2026 do Hub de Inovação](https://www.ccee.org.br/-/ccee-amplia-prazo-para-inscricoes-no-ciclo-piloto-2026-do-hub-de-inovacao)
+
+Startups e empresas de tecnologia têm até 27 de novembro para apresentar projetos voltados à abertura do mercado livre de energia
+
+Publicado em: 24/11/2026
+
+NOTICIAS
+
+[CCEE acelera transformação tecnológica e avança na experiência dos agentes](https://www.ccee.org.br/-/ccee-acelera-transformacao-tecnologica-e-avanca-na-experiencia-dos-agentes)
+
+Terceiro trimestre registra avanços em inteligência artificial, novas ferramentas operacionais e 99,99% de disponibilidade dos sistemas
+
+Publicado em: 24/11/2026
 
 1 de 1
 
 Loading...
 
-[Mapa do site](https://www.ccee.org.br/busca-ccee?q=&dtIni=13%2F10%2F2026&dtFim=14%2F10%2F2026&structure=ccee-noticias&ordenacao=Mais%20recentes)
+[Mapa do site](https://www.ccee.org.br/busca-ccee?q=&dtIni=24%2F11%2F2026&dtFim=25%2F11%2F2026&structure=ccee-noticias&ordenacao=Mais%20recentes)
 
 Menu de Navegação
 

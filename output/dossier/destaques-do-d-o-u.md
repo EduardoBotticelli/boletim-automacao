@@ -87,19 +87,19 @@ PESQUISAR
 
 ## Leitura Jornal
 
-- [SEÇÃO 1](https://www.in.gov.br/leiturajornal?data=14-10-2026&secao=do1)
+- [SEÇÃO 1](https://www.in.gov.br/leiturajornal?data=25-11-2026&secao=do1)
 SUPLEMENTO
 
 EDIÇÃO EXTRA
 
 EDIÇÃO ESPECIAL
 ATOS NORMATIVOS
-- [SEÇÃO 2](https://www.in.gov.br/leiturajornal?data=14-10-2026&secao=do2)
+- [SEÇÃO 2](https://www.in.gov.br/leiturajornal?data=25-11-2026&secao=do2)
 EDIÇÃO EXTRA
 
 EDIÇÃO ESPECIAL
 ATOS DE PESSOAL
-- [SEÇÃO 3](https://www.in.gov.br/leiturajornal?data=14-10-2026&secao=do3)
+- [SEÇÃO 3](https://www.in.gov.br/leiturajornal?data=25-11-2026&secao=do3)
 EDIÇÃO EXTRA
 CONTRATOS, EDITAIS E AVISOS
 
@@ -107,31 +107,31 @@ Selecione o dia desejado
 
 ## Daypicker BuscaDOU
 
-- 11
+- 22
 
 dom.
 
-- 12
+- 23
 
 seg.
 
-- 13
+- 24
 
 ter.
 
-- 14
+- 25
 
 qua.
 
-- 15
+- 26
 
 qui.
 
-- 16
+- 27
 
 sex.
 
-- 17
+- 28
 
 sáb.
 
@@ -140,125 +140,117 @@ sáb.
 
 VOCÊ ESTÁ VENDO:
 
-Seção 1, dia 14 de outubro de 2026
+Seção 1, dia 25 de novembro de 2026
 
 VISUALIZAR EM LISTA
 VISUALIZAR EM SUMÁRIO
 VERSÃO CERTIFICADA DIÁRIO COMPLETO
 
-Selecionar Organização PrincipalTodosAtos do Poder JudiciárioMinistério da Agricultura e PecuáriaMinistério das ComunicaçõesMinistério da CulturaMinistério da DefesaMinistério do Desenvolvimento Agrário e Agricultura FamiliarMinistério do Desenvolvimento, Indústria, Comércio e ServiçosMinistério dos Direitos Humanos e da CidadaniaMinistério da EducaçãoMinistério do EsporteMinistério da FazendaMinistério da Gestão e da Inovação em Serviços PúblicosMinistério da Integração e do Desenvolvimento RegionalMinistério da Justiça e Segurança PúblicaMinistério de Minas e EnergiaMinistério da Pesca e AquiculturaMinistério de Portos e AeroportosMinistério da Previdência SocialMinistério das Relações ExterioresMinistério da SaúdeMinistério do Trabalho e EmpregoMinistério dos TransportesMinistério Público da UniãoTribunal de Contas da UniãoEntidades de Fiscalização do Exercício das Profissões Liberais
+Selecionar Organização PrincipalTodosPresidência da RepúblicaMinistério da Agricultura e PecuáriaMinistério da Ciência, Tecnologia e InovaçãoMinistério das ComunicaçõesMinistério da CulturaMinistério da DefesaMinistério do Desenvolvimento Agrário e Agricultura FamiliarMinistério do Desenvolvimento e Assistência Social, Família e Combate à FomeMinistério do Desenvolvimento, Indústria, Comércio e ServiçosMinistério da EducaçãoMinistério da FazendaMinistério da Gestão e da Inovação em Serviços PúblicosMinistério da Integração e do Desenvolvimento RegionalMinistério da Justiça e Segurança PúblicaMinistério do Meio Ambiente e Mudança do ClimaMinistério de Minas e EnergiaMinistério de Portos e AeroportosMinistério da Previdência SocialMinistério das Relações ExterioresMinistério da SaúdeMinistério do Trabalho e EmpregoMinistério dos TransportesControladoria-Geral da UniãoMinistério Público da UniãoTribunal de Contas da UniãoPoder JudiciárioEntidades de Fiscalização do Exercício das Profissões Liberais
 
-Selecionar Organização SubordinadaTodos2ª CâmaraAgência Nacional de Aviação CivilAgência Nacional de Energia ElétricaAgência Nacional de MineraçãoAgência Nacional de Saúde SuplementarAgência Nacional de Transportes AquaviáriosAgência Nacional de Transportes TerrestresAgência Nacional de Vigilância SanitáriaAgência Nacional do Petróleo, Gás Natural e BiocombustíveisAtos do Vice-Procurador-Geral da RepúblicaComando da MarinhaComissão Nacional de Segurança Pública nos Portos, Terminais e Vias NavegáveisConselho Administrativo de Defesa EconômicaConselho Administrativo de Recursos FiscaisConselho Federal de EnfermagemConselho Federal de Medicina VeterináriaConselho Monetário NacionalConselho Nacional de Política FazendáriaGabinete da MinistraGabinete do MinistroInstituto Benjamin ConstantInstituto Federal de Educação, Ciência e Tecnologia do AmazonasInstituto Federal de Educação, Ciência e Tecnologia do Rio Grande do NorteInstituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas GeraisInstituto Nacional de Colonização e Reforma AgráriaInstituto Nacional de Tecnologia da InformaçãoInstituto do Patrimônio Histórico e Artístico NacionalProcuradoria-Geral da Fazenda NacionalSecretaria Especial da Receita Federal do BrasilSecretaria ExecutivaSecretaria Nacional de JustiçaSecretaria Nacional de Proteção e Defesa CivilSecretaria Nacional de Registro, Monitoramento e Pesquisa da Pesca e AquiculturaSecretaria de Atenção Especializada à SaúdeSecretaria de Defesa AgropecuáriaSecretaria de Desenvolvimento Industrial, Inovação, Comércio e ServiçosSecretaria de Fomento e Incentivo à CulturaSecretaria de Inspeção do TrabalhoSecretaria de Proteção ao TrabalhadorSecretaria de RadiodifusãoSecretaria de Regime Geral de Previdência SocialSecretaria de Regulação e Supervisão da Educação SuperiorSecretaria de Relações do TrabalhoSecretaria do Patrimônio da UniãoSecretaria-Geral das Relações ExterioresSuperintendência Nacional de Previdência ComplementarSuperintendência da Zona Franca de ManausSuperintendência de FiscalizaçãoSuperintendência de Outorga e Recursos à PrestaçãoSuperintendência de Seguros PrivadosSuperintendência do Desenvolvimento da AmazôniaSuperintendência-GeralSupremo Tribunal FederalUniversidade Federal de ItajubáUniversidade Federal de Pernambuco
+Selecionar Organização SubordinadaTodos1ª CâmaraAdvocacia-Geral da UniãoAgência Nacional de Aviação CivilAgência Nacional de Energia ElétricaAgência Nacional de MineraçãoAgência Nacional de Saúde SuplementarAgência Nacional de TelecomunicaçõesAgência Nacional de Transportes AquaviáriosAgência Nacional de Transportes TerrestresAgência Nacional de Vigilância SanitáriaAgência Nacional do Petróleo, Gás Natural e BiocombustíveisComando da AeronáuticaComando da MarinhaComando do ExércitoComissão Técnica Nacional de BiossegurançaComissão de Valores MobiliáriosConselho Administrativo de Defesa EconômicaConselho Administrativo de Recursos FiscaisConselho Federal de EnfermagemConselho Federal de PsicologiaConselho Federal de QuímicaConselho Nacional de Controle de Experimentação AnimalConselho Nacional de Política FazendáriaConselho Regional de Medicina do Estado do TocantinsConselho Regional de Serviço Social da 6ª RegiãoCâmara de Comércio ExteriorEstado-Maior Conjunto das Forças ArmadasFundação Coordenação de Aperfeiçoamento de Pessoal de Nível SuperiorFundação Nacional de ArtesFundação Nacional de SaúdeFundação Universidade Federal do AcreGabinete de Segurança InstitucionalGabinete do MinistroInstituto Federal de Educação, Ciência e Tecnologia do TocantinsInstituto Nacional de Colonização e Reforma AgráriaInstituto Nacional de Tecnologia da InformaçãoInstituto do Patrimônio Histórico e Artístico NacionalMinistério Público do Distrito Federal e TerritóriosMinistério Público do TrabalhoProcuradoria Regional da Fazenda Nacional na 2ª RegiãoSecretaria Especial da Receita Federal do BrasilSecretaria ExecutivaSecretaria Nacional de Assistência SocialSecretaria Nacional de Direitos DigitaisSecretaria Nacional de Geologia, Mineração e Transformação MineralSecretaria Nacional de JustiçaSecretaria Nacional de Meio Ambiente Urbano, Recursos Hídricos e Qualidade AmbientalSecretaria Nacional de Proteção e Defesa CivilSecretaria Nacional de Transição Energética e PlanejamentoSecretaria de Atenção Especializada à SaúdeSecretaria de Comércio ExteriorSecretaria de Defesa AgropecuáriaSecretaria de Fomento e Incentivo à CulturaSecretaria de Gestão de PessoasSecretaria de Inspeção do TrabalhoSecretaria de RadiodifusãoSecretaria de Regulação e Supervisão da Educação SuperiorSecretaria do Patrimônio da UniãoSecretaria-Geral das Relações ExterioresSuperintendência Nacional de Previdência ComplementarSuperintendência da Zona Franca de ManausSuperior Tribunal MilitarSuperior Tribunal de JustiçaUniversidade Federal de Ciência e Inovação do Rio de JaneiroUniversidade Federal do Ceará
 
-Selecionar Tipo do AtoTodosAtaAtoAto DeclaratórioAto NormativoAção Direta de Inconstitucionalidade e Ação Declaratória de ConstitucionalidadeDecisãoDeliberaçãoDespachoExtrato da AtaPautaPortariaResoluçãoRetificaçãoSolução de Consulta
+Selecionar Tipo do AtoTodosAcórdãoAtaAtoAto DeclaratórioAto NormativoAviso de Consulta PúblicaCircularDecisãoDeliberaçãoDespachoExtrato de Parecer TécnicoMensagemPautaPortariaPortaria ConjuntaResoluçãoRetificaçãoSolução de Consulta
 
 LIMPAR TODOS OS FILTROSRETRAIR TUDO
 
 - 1. Seção 1
-2. Atos do Poder Judiciário
-3. Supremo Tribunal Federal
-4. Plenário
-5. Edição Nº 194 de 14/10/2026 - Pág. 1
+2. Presidência da República
+3. Edição Nº 221 de 25/11/2026 - Pág. 1
 
-##### [DECISÕES](https://www.in.gov.br/web/dou/-/decisoes-738066664)
+##### [DESPACHO DO PRESIDENTE DA REPÚBLICA](https://www.in.gov.br/web/dou/-/despacho-do-presidente-da-republica-745997638)
 
-DECISÕES Ação Direta de Inconstitucionalidade e Ação Declaratória de Constitucionalidade (PUBLICAÇÃO DETERMINADA PELA LEI Nº 9.868, DE 10.11.1999) ADI 7797 ADI-ED Relator(a):Min. Nunes Marques Público Plenário Seção Especial - ADIN/ADC Divulgação 09/10/2026 19:00 EMBARGANTE(S): Associacao dos Notarios e Registradores do Brasil ADVOGADO(A/S): Giordano Joele Alves de Moraes e Outro(a/s) \| OAB's (460...
+DESPACHO DO PRESIDENTE DA REPÚBLICA MENSAGEM Nº 891, de 24 de novembro de 2026. Encaminhamento ao Supremo Tribunal Federal de informações para instruir o julgamento da Ação Direta de Inconstitucionalidade nº 8.036-DF.
 
 - 1. Seção 1
-2. Ministério da Agricultura e Pecuária
-3. Gabinete do Ministro
-4. Edição Nº 194 de 14/10/2026 - Pág. 3
+2. Presidência da República
+3. Advocacia-Geral da União
+4. Edição Nº 221 de 25/11/2026 - Pág. 1
 
-##### [PORTARIA MAPA Nº 960, DE 13 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-mapa-n-960-de-13-de-outubro-de-2026-738053163)
+##### [RETIFICAÇÃO](https://www.in.gov.br/web/dou/-/retificacao-746092820)
 
-PORTARIA MAPA Nº 960, DE 13 DE OUTUBRO DE 2026 Delega competência ao Embaixador da República Federativa do Brasil em Daca para assinar o Memorando de Entendimento para Cooperação entre o Ministério da Agricultura e Pecuária da República Federativa do Brasil e o Ministério da Agricultura da República Popular de Bangladesh. O MINISTRO DE ESTADO DA AGRICULTURA E PECUÁRIA, no uso da atribuição que lhe...
-
-- 1. Seção 1
-2. Ministério da Agricultura e Pecuária
-3. Secretaria Executiva
-4. Subsecretaria de Governança das Superintendências
-5. Superintendência de Agricultura e Pecuária do Estado do Paraná
-6. Edição Nº 194 de 14/10/2026 - Pág. 3
-
-##### [PORTARIAS SFA-PR/MAPA DE 8 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/portarias-sfa-pr/mapa-de-8-de-outubro-de-2026-738049938)
-
-PORTARIAS SFA-PR/MAPA DE 8 DE OUTUBRO DE 2026 O SUPERINTENDENTE DE AGRICULTURA E PECUÁRIA NO PARANÁ, no uso das atribuições que lhe confere os artigos 40 e 49 do Anexo I do Decreto nº 12642, de 1º de outubro de 2025; o Art. 262 do Regimento Interno da Secretaria Executiva do Ministério da Agricultura e Pecuária, aprovado pela Portaria nº 561, de 11 de abril de 2018; e tendo em vista o disposto no ...
+RETIFICAÇÃO No Anexo I da Portaria Normativa AGU nº 237, de 29 de setembro de 2026, que estabelece critérios e orientações para a execução orçamentária e financeira, no âmbito da Advocacia-Geral da União, das programações oriundas de emendas parlamentares individuais, de bancada estadual ou do Distrito Federal, de comissão permanente da Câmara dos Deputados e do Senado Federal e de comissão mista ...
 
 - 1. Seção 1
-2. Ministério da Agricultura e Pecuária
-3. Secretaria Executiva
-4. Subsecretaria de Governança das Superintendências
-5. Superintendência de Agricultura e Pecuária do Estado do Paraná
-6. Edição Nº 194 de 14/10/2026 - Pág. 3
+2. Presidência da República
+3. Câmara de Comércio Exterior
+4. Comitê-Executivo de Gestão
+5. Edição Nº 221 de 25/11/2026 - Pág. 2
 
-##### [PORTARIA SFA-PR/MAPA Nº 1.271, DE 29 DE SETEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-pr/mapa-n-1.271-de-29-de-setembro-de-2026-738059696)
+##### [RESOLUÇÃO GECEX Nº 987, DE 24 DE NOVEMBRO DE 2026](https://www.in.gov.br/web/dou/-/resolucao-gecex-n-987-de-24-de-novembro-de-2026-746094023)
 
-PORTARIA SFA-PR/MAPA Nº 1.271, DE 29 DE SETEMBRO DE 2026 O SUPERINTENDENTE DE AGRICULTURA E PECUÁRIA NO PARANÁ, no uso das atribuições que lhe confere os artigos 40 e 49 do Anexo I do Decreto nº 12642, de 1º de outubro de 2025; o Art. 262 do Regimento Interno da Secretaria Executiva do Ministério da Agricultura e Pecuária, aprovado pela Portaria nº 561, de 11 de abril de 2018; e tendo em vista o d...
-
-- 1. Seção 1
-2. Ministério da Agricultura e Pecuária
-3. Secretaria Executiva
-4. Subsecretaria de Governança das Superintendências
-5. Superintendência de Agricultura e Pecuária do Estado do Paraná
-6. Edição Nº 194 de 14/10/2026 - Pág. 3
-
-##### [PORTARIAS SFA-PR/MAPA DE 9 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/portarias-sfa-pr/mapa-de-9-de-outubro-de-2026-738052026)
-
-PORTARIAS SFA-PR/MAPA DE 9 DE OUTUBRO DE 2026 O SUPERINTENDENTE DE AGRICULTURA E PECUÁRIA NO PARANÁ, no uso das atribuições que lhe confere os artigos 40 e 49 do Anexo I do Decreto nº 12642, de 1º de outubro de 2025; o Art. 262 do Regimento Interno da Secretaria Executiva do Ministério da Agricultura e Pecuária, aprovado pela Portaria nº 561, de 11 de abril de 2018; e tendo em vista o disposto no ...
+RESOLUÇÃO GECEX Nº 987, DE 24 DE NOVEMBRO DE 2026 Altera o Anexo IV Resolução Gecex nº 272, de 19 de novembro de 2021, para fins de inclusão de produtos na lista de Reduções Tarifárias por Razões de Abastecimento ao Amparo da Resolução Grupo Mercado Comum do Mercosul nº 49/19. O COMITÊ-EXECUTIVO DE GESTÃO DA CÂMARA DE COMÉRCIO EXTERIOR, no uso da atribuição que lhe confere o art. 6º,caput, inciso ...
 
 - 1. Seção 1
-2. Ministério da Agricultura e Pecuária
-3. Secretaria Executiva
-4. Subsecretaria de Governança das Superintendências
-5. Superintendência de Agricultura e Pecuária do Estado do Pernambuco
-6. Edição Nº 194 de 14/10/2026 - Pág. 3
+2. Presidência da República
+3. Gabinete de Segurança Institucional
+4. Edição Nº 221 de 25/11/2026 - Pág. 3
 
-##### [Portaria nº 176, dE 8 de outubro de 2026](https://www.in.gov.br/web/dou/-/portaria-n-176-de-8-de-outubro-de-2026-738068703)
+##### [PORTARIA GSI/PR Nº 36, DE 24 DE NOVEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-gsi/pr-n-36-de-24-de-novembro-de-2026-746074668)
 
-Portaria nº 176, dE 8 de outubro de 2026 O SUPERINTENDENTE FEDERAL DE AGRICULTURA E PECUÁRIA NO ESTADO DE PERNAMBUCO, no uso das atribuições que lhe confere o art. 262 do Regimento Interno da Secretaria Executiva do Ministério da Agricultura e Pecuária, aprovado pela Portaria Ministerial nº 561, de 11 de abril de 2018, os arts. 40 e 49, do Anexo I, do Decreto n° 12.642, de 1° de outubro de 2025, e...
+PORTARIA GSI/PR Nº 36, DE 24 DE NOVEMBRO DE 2026 O MINISTRO DE ESTADO CHEFE DO GABINETE DE SEGURANÇA INSTITUCIONAL DA PRESIDÊNCIA DA REPÚBLICA, no uso das atribuições que lhe confere o art. 87, parágrafo único, incisos I e IV, da Constituição, e tendo em vista o disposto no Decreto nº 9.502, de 12 de setembro de 2018; e no art. 2º,caput, inciso I, do Anexo I, da Portaria GSI-PR nº 99, de 3 de març...
+
+- 1. Seção 1
+2. Presidência da República
+3. Gabinete de Segurança Institucional
+4. Edição Nº 221 de 25/11/2026 - Pág. 3
+
+##### [PORTARIA GSI/PR Nº 35, DE 24 DE NOVEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-gsi/pr-n-35-de-24-de-novembro-de-2026-746077494)
+
+PORTARIA GSI/PR Nº 35, DE 24 DE NOVEMBRO DE 2026 O MINISTRO DE ESTADO CHEFE DO GABINETE DE SEGURANÇA INSTITUCIONAL DA PRESIDÊNCIA DA REPÚBLICA, no uso das atribuições que lhe confere o art. 87, parágrafo único, incisos I e IV, da Constituição, e tendo em vista o disposto no Decreto nº 9.502, de 12 de setembro de 2018; e no art. 2º,caput, inciso II, do Anexo I, da Portaria GSI-PR nº 99, de 3 de mar...
+
+- 1. Seção 1
+2. Presidência da República
+3. Gabinete de Segurança Institucional
+4. Edição Nº 221 de 25/11/2026 - Pág. 4
+
+##### [PORTARIA GSI/PR Nº 37, DE 24 DE NOVEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-gsi/pr-n-37-de-24-de-novembro-de-2026-746080847)
+
+PORTARIA GSI/PR Nº 37, DE 24 DE NOVEMBRO DE 2026 O MINISTRO DE ESTADO CHEFE DO GABINETE DE SEGURANÇA INSTITUCIONAL DA PRESIDÊNCIA DA REPÚBLICA, no uso das atribuições que lhe confere o art. 87, parágrafo único, incisos I e IV, da Constituição, e tendo em vista o disposto no Decreto nº 9.502, de 12 de setembro de 2018; e no art. 2º,caput, inciso I, do Anexo I, da Portaria GSI-PR nº 99, de 3 de març...
 
 - 1. Seção 1
 2. Ministério da Agricultura e Pecuária
 3. Secretaria Executiva
 4. Subsecretaria de Governança das Superintendências
-5. Superintendência de Agricultura e Pecuária do Estado do Piauí
-6. Edição Nº 194 de 14/10/2026 - Pág. 3
+5. Superintendência de Agricultura e Pecuária do Estado de Minas Gerais
+6. Edição Nº 221 de 25/11/2026 - Pág. 4
 
-##### [RETIFICAÇÃO](https://www.in.gov.br/web/dou/-/retificacao-738064479)
+##### [Portaria Nº 51, de 18 DE NOVEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-n-51-de-18-de-novembro-de-2026-746084277)
 
-RETIFICAÇÃO Na PORTARIA SFA-PI/SE/MAPA de Nº 171, DE 30/09/2026, publicada na Seção 1 do Diário Oficial da União, edição 186, página 8, de 01 de outubro de 2026, onde se lê: "...ELO AUGUSTO SANTIAGO ROCHA DE ARUJO NOGUEIRA...", leia-se "...ELO AUGUSTO SANTIAGO ROCHA DE ARAUJO NOGUEIRA...".
+Portaria Nº 51, de 18 DE NOVEMBRO DE 2026 O SUPERINTENDENTE FEDERAL DE AGRICULTURA E PECUÁRIA NO ESTADO DE MINAS GERAIS, no uso das atribuições que lhe confere o art. 262 do Regimento Interno da Secretaria Executiva do Ministério da Agricultura e Pecuária, aprovado pela Portaria nº 561, de 11 de abril de 2018, nos arts. 40 e 49 do Anexo I ao Decreto n° 12.642, de 1º de outubro de 2025, conforme di...
 
 - 1. Seção 1
 2. Ministério da Agricultura e Pecuária
-3. Secretaria de Defesa Agropecuária
-4. Departamento de Sanidade Vegetal e Insumos Agrícolas
-5. Coordenação do Serviço Nacional de Proteção de Cultivares
-6. Edição Nº 194 de 14/10/2026 - Pág. 3
+3. Secretaria Executiva
+4. Subsecretaria de Governança das Superintendências
+5. Superintendência de Agricultura e Pecuária do Estado de Sergipe
+6. Edição Nº 221 de 25/11/2026 - Pág. 4
 
-##### [DECISÃO Nº 68, DE 13 DE OUTUBRO DE 2026](https://www.in.gov.br/web/dou/-/decisao-n-68-de-13-de-outubro-de-2026-738051080)
+##### [PORTARIA SFA-SE/MAPA Nº 92, DE 24 DE NOVEMBRO DE 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-se/mapa-n-92-de-24-de-novembro-de-2026-746079179)
 
-DECISÃO Nº 68, DE 13 DE OUTUBRO DE 2026 O Serviço Nacional de Proteção de Cultivares, em cumprimento ao art. 46, da Lei nº 9456, de 25 de abril de 1997, resolve tornar público(a) o DEFERIMENTO dos pedidos de proteção de cultivar das espécies relacionadas: ESPÉCIE DENOMINAÇÃO PROTOCOLO Nº Glycine max (L.) Merr. NK8770IPRO 21806.000086/2022 Glycine max (L.) Merr. NS8440IPRO 21806.000331/2022 Glycine...
-
-- 1. Seção 1
-2. Ministério das Comunicações
-3. Secretaria de Radiodifusão
-4. Departamento de Inovação, Regulamentação e Fiscalização
-5. Coordenação-Geral de Fiscalização, Monitoramento e Apuração de Infrações
-6. Edição Nº 194 de 14/10/2026 - Pág. 4
-
-##### [RETIFICAÇÃO](https://www.in.gov.br/web/dou/-/retificacao-738048897)
-
-RETIFICAÇÃO Nas Portarias de 1º de outubro de 2026, da Coordenação-Geral De Fiscalização, Monitoramento e Apuração De Infrações, publicadas no D.O.U de 06 de outubro de 2026, seção 1, página 07, onde se lê: PORTARIA Nº 24.405, em razão da prática da infração capitulada no art. 6º, caput, do Decreto nº 10.405/2020, com redação dada pelo Decreto nº 10.775/2021., Leia-se: PORTARIA Nº 24.405, em razão...
+PORTARIA SFA-SE/MAPA Nº 92, DE 24 DE NOVEMBRO DE 2026 O SUPERINTENDENTE DE AGRICULTURA E PECUÁRIA DO ESTADO DE SERGIPE, no uso das atribuições que lhe confere o art. 262 do Regimento Interno da Secretaria Executiva do Ministério da Agricultura e Pecuária, aprovado da Portaria nº 561, de 11 de abril de 2018, os arts. 41 e 50 do Anexo I ao Decreto nº 11.332, de 1º de janeiro de 2023, e com base na I...
 
 - 1. Seção 1
-2. Ministério das Comunicações
-3. Secretaria de Radiodifusão
-4. Departamento de Radiodifusão Pública, Comunitária e Estatal
-5. Edição Nº 194 de 14/10/2026 - Pág. 4
+2. Ministério da Agricultura e Pecuária
+3. Secretaria Executiva
+4. Subsecretaria de Governança das Superintendências
+5. Superintendência de Agricultura e Pecuária do Estado do Mato Grosso
+6. Edição Nº 221 de 25/11/2026 - Pág. 5
 
-##### [PORTARIA MCOM Nº 18.024, de 27 de julho de 2026](https://www.in.gov.br/web/dou/-/portaria-mcom-n-18.024-de-27-de-julho-de-2026-738055351)
+##### [Portaria SFA-MT/MAPA nº 55, de 19 de novembro de 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-mt/mapa-n-55-de-19-de-novembro-de-2026-746073971)
 
-PORTARIA MCOM Nº 18.024, de 27 de julho de 2026 A DIRETORA DO DEPARTAMENTO DE RADIODIFUSÃO PÚBLICA, COMUNITÁRIA E ESTATAL, no uso das atribuições que lhe são conferidas pelo § 2º do artigo 502 da Portaria de Consolidação GM/MCOM nº 1, de 2 de junho de 2023, publicada no Diário Oficial da União de 5 de junho de 2023, que consolidou a Portaria nº 141, de 22 de julho de 2020, e tendo em vista o que c...
+Portaria SFA-MT/MAPA nº 55, de 19 de novembro de 2026 O SUPERINTENDENTE FEDERAL DE AGRICULTURA NO ESTADO DE MATO GROSSO, no uso das atribuições que lhe conferem o art. 40 e o art. 49 do Anexo I ao Decreto n° 12.642, de 1º de outubro de 2025, o art. 262, inciso VI, do Regimento Interno da Secretaria-Executiva do Ministério da Agricultura e Pecuária, aprovado pela Portaria n° 561, de 11 de abril de ...
+
+- 1. Seção 1
+2. Ministério da Agricultura e Pecuária
+3. Secretaria Executiva
+4. Subsecretaria de Governança das Superintendências
+5. Superintendência de Agricultura e Pecuária do Estado do Mato Grosso
+6. Edição Nº 221 de 25/11/2026 - Pág. 4
+
+##### [Portaria SFA-MT/MAPA nº 54, de 19 de novembro de 2026](https://www.in.gov.br/web/dou/-/portaria-sfa-mt/mapa-n-54-de-19-de-novembro-de-2026-746089386)
+
+Portaria SFA-MT/MAPA nº 54, de 19 de novembro de 2026 O SUPERINTENDENTE FEDERAL DE AGRICULTURA NO ESTADO DE MATO GROSSO, no uso das atribuições que lhe conferem o art. 40 e o art. 49 do Anexo I ao Decreto n° 12.642, de 1º de outubro de 2025, o art. 262, inciso VI, do Regimento Interno da Secretaria-Executiva do Ministério da Agricultura e Pecuária, aprovado pela Portaria n° 561, de 11 de abril de ...
 
 12345 **Próximo »**
 
@@ -269,12 +261,12 @@ REPORTAR ERRO
 
 <AnteriorPróximo>
 
-Out2026
+Nov2026
 
 | Dom | Seg | Ter | Qua | Qui | Sex | Sáb |
 | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  | [1](https://www.in.gov.br/leiturajornal#) | [2](https://www.in.gov.br/leiturajornal#) | [3](https://www.in.gov.br/leiturajornal#) |
-| [4](https://www.in.gov.br/leiturajornal#) | [5](https://www.in.gov.br/leiturajornal#) | [6](https://www.in.gov.br/leiturajornal#) | [7](https://www.in.gov.br/leiturajornal#) | [8](https://www.in.gov.br/leiturajornal#) | [9](https://www.in.gov.br/leiturajornal#) | [10](https://www.in.gov.br/leiturajornal#) |
-| [11](https://www.in.gov.br/leiturajornal#) | [12](https://www.in.gov.br/leiturajornal#) | [13](https://www.in.gov.br/leiturajornal#) | [14](https://www.in.gov.br/leiturajornal#) | [15](https://www.in.gov.br/leiturajornal#) | [16](https://www.in.gov.br/leiturajornal#) | [17](https://www.in.gov.br/leiturajornal#) |
-| [18](https://www.in.gov.br/leiturajornal#) | [19](https://www.in.gov.br/leiturajornal#) | [20](https://www.in.gov.br/leiturajornal#) | [21](https://www.in.gov.br/leiturajornal#) | [22](https://www.in.gov.br/leiturajornal#) | [23](https://www.in.gov.br/leiturajornal#) | [24](https://www.in.gov.br/leiturajornal#) |
-| [25](https://www.in.gov.br/leiturajornal#) | [26](https://www.in.gov.br/leiturajornal#) | [27](https://www.in.gov.br/leiturajornal#) | [28](https://www.in.gov.br/leiturajornal#) | [29](https://www.in.gov.br/leiturajornal#) | [30](https://www.in.gov.br/leiturajornal#) | [31](https://www.in.gov.br/leiturajornal#) |
+| [1](https://www.in.gov.br/leiturajornal#) | [2](https://www.in.gov.br/leiturajornal#) | [3](https://www.in.gov.br/leiturajornal#) | [4](https://www.in.gov.br/leiturajornal#) | [5](https://www.in.gov.br/leiturajornal#) | [6](https://www.in.gov.br/leiturajornal#) | [7](https://www.in.gov.br/leiturajornal#) |
+| [8](https://www.in.gov.br/leiturajornal#) | [9](https://www.in.gov.br/leiturajornal#) | [10](https://www.in.gov.br/leiturajornal#) | [11](https://www.in.gov.br/leiturajornal#) | [12](https://www.in.gov.br/leiturajornal#) | [13](https://www.in.gov.br/leiturajornal#) | [14](https://www.in.gov.br/leiturajornal#) |
+| [15](https://www.in.gov.br/leiturajornal#) | [16](https://www.in.gov.br/leiturajornal#) | [17](https://www.in.gov.br/leiturajornal#) | [18](https://www.in.gov.br/leiturajornal#) | [19](https://www.in.gov.br/leiturajornal#) | [20](https://www.in.gov.br/leiturajornal#) | [21](https://www.in.gov.br/leiturajornal#) |
+| [22](https://www.in.gov.br/leiturajornal#) | [23](https://www.in.gov.br/leiturajornal#) | [24](https://www.in.gov.br/leiturajornal#) | [25](https://www.in.gov.br/leiturajornal#) | [26](https://www.in.gov.br/leiturajornal#) | [27](https://www.in.gov.br/leiturajornal#) | [28](https://www.in.gov.br/leiturajornal#) |
+| [29](https://www.in.gov.br/leiturajornal#) | [30](https://www.in.gov.br/leiturajornal#) |  |  |  |  |  |
