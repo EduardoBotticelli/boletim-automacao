@@ -1,80 +1,143 @@
 {
   "status": "sucesso",
-  "data_execucao": "2026-10-14T11:59:07.734993+00:00",
-  "data_edicao": "2026-10-14",
-  "total_itens_boletim": 91,
-  "total_decisoes": 91,
-  "total_aprovados": 81,
+  "data_execucao": "2026-11-25T19:31:04.627900+00:00",
+  "data_edicao": "2026-11-25",
+  "total_itens_boletim": 114,
+  "total_decisoes": 114,
+  "total_aprovados": 95,
   "total_itens_manuais": 0,
-  "total_rejeitados": 10,
+  "total_rejeitados": 19,
   "fora_do_email": [
     {
-      "fonte": "Banco Central | Normas",
-      "titulo": "Instrução Normativa BCB N° 781",
-      "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Instrução%20Normativa%20BCB&numero=781",
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "RETIFICAÇÃO - Portaria Normativa AGU nº 237",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-746092820",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "PORTARIA GSI/PR Nº 36, DE 24 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gsi/pr-n-36-de-24-de-novembro-de-2026-746074668",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "PORTARIA GSI/PR Nº 37, DE 24 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gsi/pr-n-37-de-24-de-novembro-de-2026-746080847",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "Destaques do D.O.U.",
+      "titulo": "PORTARIA SFA-SE/MAPA Nº 92, DE 24 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sfa-se/mapa-n-92-de-24-de-novembro-de-2026-746079179",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "Ministério da Fazenda | Notícias",
+      "titulo": "Secretaria de Política Econômica projeta crescimento de 1,9% para o PIB em 2026 e de 1,8% em 2027",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/novembro/secretaria-de-politica-economica-projeta-crescimento-de-1-9-para-o-pib-em-2026-e-de-1-8-em-2027",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "CGU | Notícias",
+      "titulo": "CGU, PF e MPF realizam operação contra mineração ilegal e lavagem de dinheiro em Minas Gerais",
+      "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/2026/11/cgu-pf-e-mpf-realizam-operacao-contra-mineracao-ilegal-e-lavagem-de-dinheiro-em-minas-gerais",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "CGU | Notícias",
+      "titulo": "CGU e ANPD lançam Guia de Transparência e Proteção de Dados Pessoais",
+      "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/2026/11/cgu-e-anpd-lancam-guia-de-transparencia-e-protecao-de-dados-pessoais",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "CGU | Notícias",
+      "titulo": "Portal da Transparência facilita acesso a dados sobre emendas parlamentares executadas por parcerias fundo a fundo",
+      "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/2026/11/portal-da-transparencia-facilita-acesso-a-dados-sobre-emendas-parlamentares-executadas-por-parcerias-fundo-a-fundo",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "CGU | Notícias",
+      "titulo": "CGU recomenda medidas para ampliar a segurança e a transparência no uso de inteligência artificial no Governo Federal",
+      "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/2026/11/cgu-recomenda-medidas-para-ampliar-a-seguranca-e-a-transparencia-no-uso-de-inteligencia-artificial-no-governo-federal",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "CGU | Notícias",
+      "titulo": "CGU e PF apuram suspeitas de desvio de recursos da educação em Alagoas",
+      "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/2026/11/cgu-e-pf-apuram-suspeitas-de-desvio-de-recursos-da-educacao-em-alagoas",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
       "fonte": "Ministério da Agricultura | Notícias",
-      "titulo": "Notificação de suspeitas de doenças em animais",
-      "url": "https://www.gov.br/agricultura/pt-br/sisbravet/",
+      "titulo": "Ministro André de Paula destaca parceria institucional e papel das cooperativas na expansão das exportações do agro",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/2026/ministro-andre-de-paula-destaca-parceria-institucional-e-papel-das-cooperativas-na-expansao-das-exportacoes-do-agro",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
       "fonte": "Ministério da Agricultura | Notícias",
-      "titulo": "agroinsight animal 01/2025 — Ministério da Agricultura e Pecuária",
-      "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/angola/ANGOLAQUEIJOMUSSARELA_POTENCIALPARAOMERCADOANGOLANO.pdf/view",
+      "titulo": "Mapa e MPA assinam portaria que atualiza regras para produtos de peixe congelado",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/2026/mapa-e-mpa-assinam-portaria-que-atualiza-regras-para-produtos-de-peixe-congelado",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
-      "fonte": "Ministério da Agricultura | Notícias",
-      "titulo": "agroinsight animal 01/2025 — Ministério da Agricultura e Pecuária",
-      "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/nigeria/NIGRIAPANORAMADOSETORDECARNESNANIGRIA.pdf/view",
+      "fonte": "ANM | Notícias",
+      "titulo": "Sistema de Gestão de Segurança de Barragens (SIGBM) está temporariamente indisponível para adequações de segurança",
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/sistema-de-gestao-de-seguranca-de-barragens-sigbm-esta-temporariamente-indisponivel-para-adequacoes-de-seguranca",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
-      "fonte": "Ministério da Agricultura | Notícias",
-      "titulo": "agroinsight 01/2025 — Ministério da Agricultura e Pecuária - Portal Gov.br",
-      "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/ira/IRIMPACTODAINFLAOEDESVALORIZAOMONETRIANOIR.pdf/view",
+      "fonte": "ANM | Notícias",
+      "titulo": "Alunos da rede pública de João Pessoa se divertem e aprendem com fósseis",
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/alunos-da-rede-publica-de-joao-pessoa-se-divertem-e-aprendem-com-fosseis",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
-      "fonte": "Ministério da Agricultura | Notícias",
-      "titulo": "agroinsight vegetal 01/2025 — Ministério da Agricultura e Pecuária",
-      "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/nigeria/NIGRIAPANORAMADAPRODUODEARROZNANIGRIA.pdf/view",
-      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
-      "acao_revisao": "sem_radar"
-    },
-    {
-      "fonte": "Ministério da Agricultura | Notícias",
-      "titulo": "agroinsight animal 01/2025 — Ministério da Agricultura e Pecuária",
-      "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/india/NDIAPESCADOBRASILEIRONAINDIAMULTIPLICANDOPOSSIBILIDADES.pdf/view",
-      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
-      "acao_revisao": "sem_radar"
-    },
-    {
-      "fonte": "Ministério da Agricultura | Notícias",
-      "titulo": "agroinsight animal 01/2025 — Ministério da Agricultura e Pecuária",
-      "url": "https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/adidos-agricolas/alemanha/ALEMANHAFEBREAFTOSAAMEAAAPECURIAALEM.pdf/view",
+      "fonte": "EPE | Notícias",
+      "titulo": "EPE participa de evento sobre criptografia pós-quântica",
+      "url": "https://www.epe.gov.br/pt-br/imprensa/noticias/epe-participa-de-evento-sobre-criptografia-pos-quantica",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
       "fonte": "Kollemata | Decretos",
-      "titulo": "Os Cartórios do ES foram destaque na imprensa em setembro",
-      "url": "https://sinoreg-es.org.br/os-cartorios-do-es-foram-destaque-na-imprensa-em-setembro/",
+      "titulo": "Seis Cartórios capixabas conquistam a categoria Diamante no PQTA 2026",
+      "url": "https://sinoreg-es.org.br/seis-cartorios-capixabas-conquistam-a-categoria-diamante-no-pqta-2026/",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     },
     {
-      "fonte": "ANTT | Notícias - Defeso Eleitoral",
-      "titulo": "Operação Romaria Segura bate recorde de 53,6 mil peregrinos e termina sem mortes pelo segundo ano seguido na Via Dutra",
-      "url": "https://www.gov.br/antt/pt-br/assuntos/noticias-defeso-eleitoral/operacao-romaria-segura-bate-recorde-de-53-6-mil-peregrinos-e-termina-sem-mortes-pelo-segundo-ano-seguido-na-via-dutra",
+      "fonte": "Kollemata | Decretos",
+      "titulo": "Sinoreg/ES leva informação sobre os serviços dos Cartórios capixabas à CBN Vitória",
+      "url": "https://sinoreg-es.org.br/sinoreg-es-leva-informacao-sobre-os-servicos-dos-cartorios-capixabas-a-cbn-vitoria/",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "Kollemata | Decretos",
+      "titulo": "Corregedoria Nacional divulga calendário de inspeções para o primeiro semestre de 2027",
+      "url": "https://sinoreg-es.org.br/corregedoria-nacional-divulga-calendario-de-inspecoes-para-o-primeiro-semestre-de-2027/",
+      "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
+      "acao_revisao": "sem_radar"
+    },
+    {
+      "fonte": "Kollemata | Decretos",
+      "titulo": "Artigo – Regime de bens de casamento em Dubai e algumas reflexões para o Direito brasileiro – Escrito por Carlos Eduardo Elias de Oliveira",
+      "url": "https://sinoreg-es.org.br/artigo-regime-de-bens-de-casamento-em-dubai-e-algumas-reflexoes-para-o-direito-brasileiro-escrito-por-carlos-eduardo-elias-de-oliveira/",
       "motivo": "Chegou sem Radar definido e nenhum Radar foi atribuído na revisão.",
       "acao_revisao": "sem_radar"
     }
@@ -277,7 +340,24 @@
       }
     }
   },
-  "noticias_em_outras_publicacoes": [],
+  "noticias_em_outras_publicacoes": [
+    {
+      "radar": "direito-tributario",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "PORTARIA SUFRAMA Nº 2.824, DE 23 DE NOVEMBRO DE 2026 (Superintendência da Zona Franca de Manaus)",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-suframa-n-2.824-de-23-de-novembro-de-2026-746092500",
+      "origem": "scraper",
+      "publicada_em": "OutrasPublicacoes"
+    },
+    {
+      "radar": "societario-ma",
+      "fonte": "Diário Oficial da União | Seção 1",
+      "titulo": "ATA Nº 41, de 24 de novembro de 2026 (Conselho Administrativo de Defesa Econômica)",
+      "url": "https://www.in.gov.br/web/dou/-/ata-n-41-de-24-de-novembro-de-2026-746087051",
+      "origem": "scraper",
+      "publicada_em": "OutrasPublicacoes"
+    }
+  ],
   "radares_sem_conteudo": {
     "gerados_vazios": [],
     "confirmados_no_portal": [],
@@ -290,11 +370,10 @@
       "template": "Template_Radar Trabalhista.msg",
       "arquivo": "email_trabalhista-empresarial.eml",
       "previa": "email_trabalhista-empresarial.html",
-      "total_itens": 3,
+      "total_itens": 5,
       "secoes_publicadas": [
         "DiarioOficialDaUniao",
-        "MinisterioDaFazenda",
-        "Planalto"
+        "MinisterioDaFazenda"
       ]
     },
     {
@@ -303,10 +382,13 @@
       "template": "Template_Radar Tributário.msg",
       "arquivo": "email_direito-tributario.eml",
       "previa": "email_direito-tributario.html",
-      "total_itens": 7,
+      "total_itens": 11,
       "secoes_publicadas": [
+        "COAF",
+        "DestaquesDOU",
         "DiarioOficialUniao",
         "MinisterioFazenda",
+        "OutrasPublicacoes",
         "ReceitaFederal"
       ]
     },
@@ -316,10 +398,10 @@
       "template": "Template_Radar Societário_ Fusões e Aquisições.msg",
       "arquivo": "email_societario-ma.eml",
       "previa": "email_societario-ma.html",
-      "total_itens": 2,
+      "total_itens": 5,
       "secoes_publicadas": [
         "BancoCentral",
-        "MinisterioFazenda"
+        "OutrasPublicacoes"
       ]
     },
     {
@@ -328,13 +410,11 @@
       "template": "Template_Radar Mercado de Capitais e Fundos de Investimento.msg",
       "arquivo": "email_mercado-capitais-fundos.eml",
       "previa": "email_mercado-capitais-fundos.html",
-      "total_itens": 17,
+      "total_itens": 23,
       "secoes_publicadas": [
-        "B3",
         "BancoCentral",
-        "CVM",
-        "DiarioOficialUniao",
-        "SUSEP"
+        "COAF",
+        "DiarioOficialUniao"
       ]
     },
     {
@@ -343,18 +423,14 @@
       "template": "Template_Radar Regulatório e Óleo e Gás.msg",
       "arquivo": "email_regulatorio-oleo-gas.eml",
       "previa": "email_regulatorio-oleo-gas.html",
-      "total_itens": 39,
+      "total_itens": 22,
       "secoes_publicadas": [
-        "ANATEL",
-        "ANEEL",
-        "ANM",
-        "ANP",
-        "ANTT",
-        "ANVISA",
+        "CADE",
         "DiarioOficialUniao",
         "EPE",
-        "MME",
-        "Planalto"
+        "MDIC",
+        "MEC",
+        "MME"
       ]
     },
     {
@@ -363,16 +439,12 @@
       "template": "Template_Radar Negócios Imobiliários e Infraestrutura.msg",
       "arquivo": "email_imobiliario-infraestrutura.eml",
       "previa": "email_imobiliario-infraestrutura.html",
-      "total_itens": 15,
+      "total_itens": 14,
       "secoes_publicadas": [
-        "ANEEL",
-        "ANM",
-        "ANP",
-        "ANTT",
         "CCEE",
-        "CVM",
         "DiarioOficialUniao",
-        "MAPA",
+        "EPE",
+        "Kollemata",
         "MME"
       ]
     },
@@ -384,11 +456,9 @@
       "previa": "email_ambiental-esg.html",
       "total_itens": 5,
       "secoes_publicadas": [
-        "ANM",
-        "ANP",
-        "ANTT",
-        "CCEE",
-        "Planalto"
+        "EPE",
+        "MAPA",
+        "MinisterioFazenda"
       ]
     },
     {
@@ -397,11 +467,10 @@
       "template": "Template_Radar Propriedade Intelectual_ Tecnologia e Privacidade.msg",
       "arquivo": "email_propriedade-intelectual.eml",
       "previa": "email_propriedade-intelectual.html",
-      "total_itens": 5,
+      "total_itens": 10,
       "secoes_publicadas": [
-        "DiarioOficialUniao",
+        "ANPD",
         "INPI",
-        "Planalto",
         "SENACON"
       ]
     },
@@ -411,10 +480,9 @@
       "template": "Template_Radar Solução de Conflitos.msg",
       "arquivo": "email_contencioso-civel.eml",
       "previa": "email_contencioso-civel.html",
-      "total_itens": 5,
+      "total_itens": 3,
       "secoes_publicadas": [
-        "DiarioOficialUniao",
-        "Planalto",
+        "DestaquesDOU",
         "SENACON"
       ]
     }
